@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T21:13:50.199195",
-  "total_incidents": 86,
-  "new_incidents_today": 2,
+  "last_updated": "2025-09-23T21:27:32.041684",
+  "total_incidents": 89,
+  "new_incidents_today": 3,
   "incidents": [
     {
       "id": "0177",
@@ -864,6 +864,36 @@
       "location_desc": "1/2 MILE JNO",
       "area": "Oceanside",
       "scraped_at": "2025-09-23T21:13:50.199166",
+      "center": "BCCC"
+    },
+    {
+      "id": "0476",
+      "time": "2:24 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / French Valley No",
+      "location_desc": "I15 S FRENCH VALLEY NO",
+      "area": "Temecula",
+      "scraped_at": "2025-09-23T21:27:32.041651",
+      "center": "BCCC"
+    },
+    {
+      "id": "0471",
+      "time": "2:21 PM",
+      "type": "Traffic Break",
+      "location": "SR78 E / SAN MARCOS EO",
+      "location_desc": "",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T21:27:32.041655",
+      "center": "BCCC"
+    },
+    {
+      "id": "0184",
+      "time": "2:14 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / SEVERIN DR ONR",
+      "location_desc": "",
+      "area": "South FSP",
+      "scraped_at": "2025-09-23T21:27:32.041657",
       "center": "BCCC"
     }
   ]
