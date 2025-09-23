@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T18:53:53.584073",
-  "total_incidents": 54,
-  "new_incidents_today": 5,
+  "last_updated": "2025-09-23T19:00:45.513391",
+  "total_incidents": 55,
+  "new_incidents_today": 1,
   "incidents": [
     {
       "id": "0177",
@@ -544,6 +544,16 @@
       "location_desc": "3231 S. GRANADA AVE",
       "area": "El Cajon",
       "scraped_at": "2025-09-23T18:53:53.584050",
+      "center": "BCCC"
+    },
+    {
+      "id": "0342",
+      "time": "11:58 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Nobel So",
+      "location_desc": "I5 N NOBEL SO",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T19:00:45.513356",
       "center": "BCCC"
     }
   ]
