@@ -1,7 +1,7 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 22,
+  "incident_count": 20,
   "incidents": [
     {
       "id": "0622",
@@ -28,28 +28,12 @@
       "area": "North FSP"
     },
     {
-      "id": "0255",
-      "time": "4:32 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr52 E / Kearny Villa Rd Onr",
-      "location_desc": "",
-      "area": "North FSP"
-    },
-    {
       "id": "0254",
       "time": "4:32 PM",
       "type": "Traffic Hazard",
       "location": "I805 N / Sr56 Bypass",
       "location_desc": "",
       "area": "North FSP"
-    },
-    {
-      "id": "0613",
-      "time": "4:30 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr52 E / Kearny Villa Rd Onr",
-      "location_desc": "",
-      "area": "San Diego"
     },
     {
       "id": "0615",
@@ -180,5 +164,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-23T23:46:37.621687"
+  "last_updated": "2025-09-23T23:53:53.654057"
 }
