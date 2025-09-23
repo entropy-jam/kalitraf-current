@@ -1,0 +1,46 @@
+# Gmail API credentials
+gmail_credentials.json
+gmail_token.json
+gmail_credentials_base64.txt
+
+# API Keys
+.env
+*.key
+api_keys.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+*.log
+chp_scraper_debug.log
+
+# CSV files (keep JSON for GitHub Pages)
+*.csv
+
+# ChromeDriver (local)
+chromedriver*
+chromedriver-mac-arm64/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+temp/
+tmp/

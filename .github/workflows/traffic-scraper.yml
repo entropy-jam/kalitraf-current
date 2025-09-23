@@ -1,9 +1,9 @@
 name: CHP Traffic Incident Scraper
 
 on:
-  # Run every minute
+  # Run every 5 minutes (GitHub has limits on frequent cron jobs)
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
   
   # Manual trigger with parameters
   workflow_dispatch:

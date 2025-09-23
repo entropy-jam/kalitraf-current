@@ -26,11 +26,22 @@ SCOPES = ['https://www.googleapis.com/auth/gmail.send']
 
 class EmailNotifier:
     def __init__(self, credentials_file=None, token_file=None):
+        # Import config
+        try:
+            from config import get_gmail_config
+            config = get_gmail_config()
+            self.sender_email = config['sender_email']
+            self.recipient_email = config['recipient_email']
+            self.api_key = config['api_key']
+        except ImportError:
+            # Fallback to environment variables
+            self.sender_email = os.getenv('GMAIL_SENDER_EMAIL', 'jacearnoldmail@gmail.com')
+            self.recipient_email = os.getenv('GMAIL_RECIPIENT_EMAIL', 'jacearnoldmail@gmail.com')
+            self.api_key = os.getenv('GMAIL_API_KEY', '')
+        
         self.credentials_file = credentials_file or os.getenv('GMAIL_CREDENTIALS_FILE', 'gmail_credentials.json')
         self.token_file = token_file or os.getenv('GMAIL_TOKEN_FILE', 'gmail_token.json')
         self.service = None
-        self.sender_email = os.getenv('GMAIL_SENDER_EMAIL', 'jacearnoldmail@gmail.com')
-        self.recipient_email = os.getenv('GMAIL_RECIPIENT_EMAIL', 'jacearnoldmail@gmail.com')
         
     def authenticate(self):
         """Authenticate with Gmail API"""

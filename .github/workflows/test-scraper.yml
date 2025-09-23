@@ -1,0 +1,77 @@
+name: Test CHP Scraper
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  test-scraper:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Install Chrome
+      run: |
+        sudo apt-get update
+        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+
+    - name: Download ChromeDriver
+      run: |
+        python -c "
+        from webdriver_manager.chrome import ChromeDriverManager
+        from selenium.webdriver.chrome.service import Service
+        import os
+        
+        driver_path = ChromeDriverManager().install()
+        print(f'ChromeDriver installed at: {driver_path}')
+        os.chmod(driver_path, 0o755)
+        os.system(f'sudo ln -sf {driver_path} /usr/local/bin/chromedriver')
+        os.system('chromedriver --version')
+        "
+
+    - name: Test scraper
+      run: |
+        python chp_scraper.py --center BCCC --mode github_actions --iterations 1
+
+    - name: Check output files
+      run: |
+        echo "=== Checking for output files ==="
+        ls -la *.json
+        ls -la data/
+        
+        if [ -f "active_incidents.json" ]; then
+          echo "✅ active_incidents.json exists"
+          echo "Content preview:"
+          head -10 active_incidents.json
+        else
+          echo "❌ active_incidents.json not found"
+        fi
+
+    - name: Commit and push results
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add *.json data/
+        if [ -n "$(git status --porcelain)" ]; then
+          git commit -m "Test scraper run - $(date '+%Y-%m-%d %H:%M:%S')"
+          git push
+          echo "✅ Changes committed and pushed"
+        else
+          echo "ℹ️ No changes to commit"
+        fi
