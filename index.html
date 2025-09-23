@@ -153,6 +153,48 @@
             50% { opacity: 0.5; }
             100% { opacity: 1; }
         }
+        .differences-section {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .differences-section h3 {
+            margin: 0 0 15px 0;
+            color: #495057;
+            font-size: 18px;
+        }
+        .differences-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .difference-item {
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .difference-item.new {
+            background: #d4edda;
+            color: #155724;
+            border-left: 4px solid #28a745;
+        }
+        .difference-item.removed {
+            background: #f8d7da;
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+        }
+        .difference-icon {
+            font-size: 16px;
+        }
+        .difference-time {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-left: auto;
+        }
     </style>
 </head>
 <body>
@@ -189,6 +231,13 @@
             <div class="last-updated" id="lastUpdated">Last updated: Never</div>
         </div>
         
+        <div class="differences-section" id="differencesSection" style="display: none;">
+            <h3>🔄 Recent Changes (Last 5 Minutes)</h3>
+            <div class="differences-container" id="differencesContainer">
+                <!-- Differences will be populated here -->
+            </div>
+        </div>
+        
         <div class="incidents-container" id="incidentsContainer">
             <div class="loading">Loading incidents...</div>
         </div>
@@ -197,6 +246,8 @@
     <script>
         let autoRefreshInterval;
         let currentCenter = 'BCCC';
+        let previousIncidents = null;
+        let incidentHistory = [];
         
         // Load data on page load
         document.addEventListener('DOMContentLoaded', function() {
@@ -240,10 +291,24 @@
             if (!data.incidents || data.incidents.length === 0) {
                 container.innerHTML = '<div class="loading">No incidents reported at this time.</div>';
                 countElement.textContent = '0 incidents';
+                hideDifferences();
                 return;
             }
             
             countElement.textContent = `${data.incident_count} incidents`;
+            
+            // Check for differences if we have previous data
+            if (previousIncidents) {
+                const differences = findDifferences(previousIncidents, data.incidents);
+                if (differences.length > 0) {
+                    displayDifferences(differences);
+                } else {
+                    hideDifferences();
+                }
+            }
+            
+            // Update previous incidents for next comparison
+            previousIncidents = data.incidents;
             
             const incidentsHtml = data.incidents.map(incident => {
                 const typeClass = getTypeClass(incident.type);
@@ -335,6 +400,116 @@
         
         // Handle auto-refresh checkbox
         document.getElementById('autoRefresh').addEventListener('change', startAutoRefresh);
+        
+        function findDifferences(previous, current) {
+            const differences = [];
+            const now = new Date();
+            const fiveMinutesAgo = new Date(now.getTime() - 5 * 60 * 1000);
+            
+            // Create maps for easy lookup
+            const previousMap = new Map();
+            previous.forEach(incident => {
+                previousMap.set(incident.id, incident);
+            });
+            
+            const currentMap = new Map();
+            current.forEach(incident => {
+                currentMap.set(incident.id, incident);
+            });
+            
+            // Find new incidents
+            current.forEach(incident => {
+                if (!previousMap.has(incident.id)) {
+                    const incidentTime = parseIncidentTime(incident.time);
+                    if (incidentTime && incidentTime >= fiveMinutesAgo) {
+                        differences.push({
+                            type: 'new',
+                            incident: incident,
+                            time: incidentTime
+                        });
+                    }
+                }
+            });
+            
+            // Find removed incidents
+            previous.forEach(incident => {
+                if (!currentMap.has(incident.id)) {
+                    const incidentTime = parseIncidentTime(incident.time);
+                    if (incidentTime && incidentTime >= fiveMinutesAgo) {
+                        differences.push({
+                            type: 'removed',
+                            incident: incident,
+                            time: incidentTime
+                        });
+                    }
+                }
+            });
+            
+            // Sort by time (most recent first)
+            return differences.sort((a, b) => b.time - a.time);
+        }
+        
+        function parseIncidentTime(timeStr) {
+            try {
+                const now = new Date();
+                const [time, period] = timeStr.split(' ');
+                const [hours, minutes] = time.split(':');
+                let hour = parseInt(hours);
+                const mins = parseInt(minutes);
+                
+                if (period === 'PM' && hour !== 12) hour += 12;
+                if (period === 'AM' && hour === 12) hour = 0;
+                
+                const incidentTime = new Date(now);
+                incidentTime.setHours(hour, mins, 0, 0);
+                
+                // If the time is in the future, assume it's from yesterday
+                if (incidentTime > now) {
+                    incidentTime.setDate(incidentTime.getDate() - 1);
+                }
+                
+                return incidentTime;
+            } catch (e) {
+                return null;
+            }
+        }
+        
+        function displayDifferences(differences) {
+            const section = document.getElementById('differencesSection');
+            const container = document.getElementById('differencesContainer');
+            
+            const differencesHtml = differences.map(diff => {
+                const icon = diff.type === 'new' ? '🆕' : '❌';
+                const timeStr = formatTime(diff.time);
+                const className = diff.type === 'new' ? 'new' : 'removed';
+                
+                return `
+                    <div class="difference-item ${className}">
+                        <span class="difference-icon">${icon}</span>
+                        <span>#${diff.incident.id} - ${diff.incident.type} - ${diff.incident.location}</span>
+                        <span class="difference-time">${timeStr}</span>
+                    </div>
+                `;
+            }).join('');
+            
+            container.innerHTML = differencesHtml;
+            section.style.display = 'block';
+        }
+        
+        function hideDifferences() {
+            const section = document.getElementById('differencesSection');
+            section.style.display = 'none';
+        }
+        
+        function formatTime(date) {
+            const now = new Date();
+            const diffMs = now - date;
+            const diffMins = Math.floor(diffMs / 60000);
+            
+            if (diffMins < 1) return 'Just now';
+            if (diffMins === 1) return '1 minute ago';
+            return `${diffMins} minutes ago`;
+        }
     </script>
 </body>
 </html>
