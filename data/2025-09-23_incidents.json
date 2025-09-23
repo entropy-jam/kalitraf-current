@@ -2,8 +2,8 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T19:43:46.856344",
-  "total_incidents": 63,
+  "last_updated": "2025-09-23T19:50:43.344829",
+  "total_incidents": 65,
   "new_incidents_today": 2,
   "incidents": [
     {
@@ -634,6 +634,26 @@
       "location_desc": "I805 N UNIVERSITY SO",
       "area": "San Diego",
       "scraped_at": "2025-09-23T19:43:46.856315",
+      "center": "BCCC"
+    },
+    {
+      "id": "0381",
+      "time": "12:49 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Jamacha Rd / Willow Glen Dr",
+      "location_desc": "",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T19:50:43.344766",
+      "center": "BCCC"
+    },
+    {
+      "id": "0380",
+      "time": "12:48 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / Severin (fuerte)",
+      "location_desc": "I8 E SEVERIN (FUERTE)",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T19:50:43.344773",
       "center": "BCCC"
     }
   ]
