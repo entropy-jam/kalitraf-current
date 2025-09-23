@@ -1,7 +1,7 @@
 {
   "center": "BCCC",
   "center_name": "Border",
-  "last_updated": "2025-09-23T20:43:39.664129",
+  "last_updated": "2025-09-23T20:50:51.023489",
   "incident_count": 17,
   "incidents": [
     {
@@ -11,7 +11,7 @@
       "location": "I8 W / I15 Eo",
       "location_desc": "I8 W I15 EO",
       "area": "South FSP",
-      "scraped_at": "2025-09-23T20:43:39.664091",
+      "scraped_at": "2025-09-23T20:50:51.023453",
       "center": "BCCC"
     },
     {
@@ -21,7 +21,7 @@
       "location": "I8 W / I15 Eo",
       "location_desc": "I8 W I15 EO",
       "area": "San Diego",
-      "scraped_at": "2025-09-23T20:43:39.664105",
+      "scraped_at": "2025-09-23T20:50:51.023466",
       "center": "BCCC"
     },
     {
@@ -31,7 +31,7 @@
       "location": "I15 S / Rainbow Scales No (nb Scales)",
       "location_desc": "I15 S RAINBOW SCALES NO (NB SCALES)",
       "area": "Temecula",
-      "scraped_at": "2025-09-23T20:43:39.664107",
+      "scraped_at": "2025-09-23T20:50:51.023468",
       "center": "BCCC"
     },
     {
@@ -41,7 +41,7 @@
       "location": "I215 S / Mccall No",
       "location_desc": "SB 215 JNO MCCALL",
       "area": "Temecula",
-      "scraped_at": "2025-09-23T20:43:39.664109",
+      "scraped_at": "2025-09-23T20:50:51.023469",
       "center": "BCCC"
     },
     {
@@ -51,7 +51,7 @@
       "location": "Jonel Way / Proctor Valley Rd",
       "location_desc": "",
       "area": "San Diego",
-      "scraped_at": "2025-09-23T20:43:39.664110",
+      "scraped_at": "2025-09-23T20:50:51.023471",
       "center": "BCCC"
     },
     {
@@ -61,17 +61,17 @@
       "location": "I5 N / Plaza Blvd So",
       "location_desc": "I5 N PLAZA BLVD SO",
       "area": "San Diego",
-      "scraped_at": "2025-09-23T20:43:39.664112",
+      "scraped_at": "2025-09-23T20:50:51.023473",
       "center": "BCCC"
     },
     {
-      "id": "0393",
-      "time": "1:00 PM",
+      "id": "0330",
+      "time": "11:47 AM",
       "type": "Traffic Hazard",
-      "location": "I5 N / Carlsbad Village Dr Ofr",
+      "location": "I8 E / EL CAJON (LA MESA)",
       "location_desc": "",
-      "area": "Oceanside",
-      "scraped_at": "2025-09-23T20:43:39.664113",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T20:50:51.023474",
       "center": "BCCC"
     },
     {
@@ -81,7 +81,7 @@
       "location": "I5 N / VIEWPOINT NO",
       "location_desc": "",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T20:43:39.664115",
+      "scraped_at": "2025-09-23T20:50:51.023475",
       "center": "BCCC"
     },
     {
@@ -91,7 +91,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T20:43:39.664116",
+      "scraped_at": "2025-09-23T20:50:51.023476",
       "center": "BCCC"
     },
     {
@@ -101,7 +101,7 @@
       "location": "Ocn",
       "location_desc": "78 / COLLEGE TO SN MARCOS",
       "area": "",
-      "scraped_at": "2025-09-23T20:43:39.664117",
+      "scraped_at": "2025-09-23T20:50:51.023478",
       "center": "BCCC"
     },
     {
@@ -111,7 +111,7 @@
       "location": "Ocn",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T20:43:39.664119",
+      "scraped_at": "2025-09-23T20:50:51.023479",
       "center": "BCCC"
     },
     {
@@ -121,7 +121,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T20:43:39.664120",
+      "scraped_at": "2025-09-23T20:50:51.023481",
       "center": "BCCC"
     },
     {
@@ -131,7 +131,7 @@
       "location": "Ocn",
       "location_desc": "MZP2 MZP3 ENCAMPMENTS",
       "area": "",
-      "scraped_at": "2025-09-23T20:43:39.664121",
+      "scraped_at": "2025-09-23T20:50:51.023482",
       "center": "BCCC"
     },
     {
@@ -141,7 +141,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T20:43:39.664123",
+      "scraped_at": "2025-09-23T20:50:51.023483",
       "center": "BCCC"
     },
     {
@@ -151,7 +151,7 @@
       "location": "Hwy 76",
       "location_desc": "LAKE HENSHAW",
       "area": "El Cajon",
-      "scraped_at": "2025-09-23T20:43:39.664124",
+      "scraped_at": "2025-09-23T20:50:51.023484",
       "center": "BCCC"
     },
     {
@@ -161,7 +161,7 @@
       "location": "Sr76 / Pauma Valley Dr",
       "location_desc": "ATand T UNTIL APPROX 1000",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T20:43:39.664125",
+      "scraped_at": "2025-09-23T20:50:51.023486",
       "center": "BCCC"
     },
     {
@@ -171,7 +171,7 @@
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
       "area": "BC",
-      "scraped_at": "2025-09-23T20:43:39.664127",
+      "scraped_at": "2025-09-23T20:50:51.023487",
       "center": "BCCC"
     }
   ]
