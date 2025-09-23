@@ -38,10 +38,25 @@ jobs:
         from selenium.webdriver.chrome.service import Service
         import os
         
+        # Get the correct ChromeDriver path
         driver_path = ChromeDriverManager().install()
         print(f'ChromeDriver installed at: {driver_path}')
-        os.chmod(driver_path, 0o755)
-        os.system(f'sudo ln -sf {driver_path} /usr/local/bin/chromedriver')
+        
+        # Find the actual chromedriver executable (not the notices file)
+        import glob
+        driver_dir = os.path.dirname(driver_path)
+        actual_driver = glob.glob(os.path.join(driver_dir, 'chromedriver*'))[0]
+        if not actual_driver.endswith('chromedriver'):
+            # Look in subdirectories
+            for root, dirs, files in os.walk(driver_dir):
+                for file in files:
+                    if file == 'chromedriver':
+                        actual_driver = os.path.join(root, file)
+                        break
+        
+        print(f'Actual ChromeDriver at: {actual_driver}')
+        os.chmod(actual_driver, 0o755)
+        os.system(f'sudo ln -sf {actual_driver} /usr/local/bin/chromedriver')
         os.system('chromedriver --version')
         "
 

@@ -307,7 +307,6 @@ def scrape_chp_incidents(center_code="BCCC", mode="local"):
             # Save data based on mode
             if mode == "github_actions":
                 # GitHub Actions mode: save JSON files and check for changes
-                global previous_incidents
                 changes = compare_incidents(previous_incidents, incidents_data)
                 
                 save_active_incidents(incidents_data, center_code)
