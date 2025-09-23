@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "total_incidents": 172,
+  "total_incidents": 178,
   "incidents": [
     {
       "id": "0177",
@@ -1557,7 +1557,55 @@
       "location": "Tenaja Rd / Clinton Keith Rd",
       "location_desc": "",
       "area": "Temecula"
+    },
+    {
+      "id": "0252",
+      "time": "4:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Carmel Mountain",
+      "location_desc": "I5 N CARMEL MOUNTAIN",
+      "area": "North FSP"
+    },
+    {
+      "id": "0611",
+      "time": "4:27 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / Carmel Mountain",
+      "location_desc": "I5 N CARMEL MOUNTAIN",
+      "area": "San Diego"
+    },
+    {
+      "id": "0249",
+      "time": "4:25 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Balboa No (tierrasanta)",
+      "location_desc": "I15 S BALBOA NO (TIERRASANTA)",
+      "area": "North FSP"
+    },
+    {
+      "id": "0605",
+      "time": "4:24 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Balboa No (tierrasanta)",
+      "location_desc": "I15 S BALBOA NO (TIERRASANTA)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0604",
+      "time": "4:16 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "3225 Via Solana",
+      "location_desc": "OCCRD 1138 Felicita Ln",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0513",
+      "time": "3:13 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "17044 Ralphs Ranch Rd",
+      "location_desc": "",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-23T23:23:50.748862"
+  "last_updated": "2025-09-23T23:31:30.034397"
 }
