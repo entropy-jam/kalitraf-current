@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T15:25:58.325928",
-  "total_incidents": 25,
-  "new_incidents_today": 0,
+  "last_updated": "2025-09-23T15:52:00.332426",
+  "total_incidents": 31,
+  "new_incidents_today": 6,
   "incidents": [
     {
       "id": "0177",
@@ -254,6 +254,66 @@
       "location_desc": "NEWSWORTHY INCIDENTS",
       "area": "BC",
       "scraped_at": "2025-09-23T15:21:53.991136",
+      "center": "BCCC"
+    },
+    {
+      "id": "0205",
+      "time": "8:49 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Sr52 So (la Jolla Pkwy)",
+      "location_desc": "I5 N / SR52 SO (LA JOLLA PKWY)",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T15:52:00.332392",
+      "center": "BCCC"
+    },
+    {
+      "id": "0203",
+      "time": "8:45 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I215 S / Los Alamos No",
+      "location_desc": "SB 215 JNO LOS ALAMOS",
+      "area": "Temecula",
+      "scraped_at": "2025-09-23T15:52:00.332397",
+      "center": "BCCC"
+    },
+    {
+      "id": "0200",
+      "time": "8:40 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / NOBEL SO",
+      "location_desc": "I805 S NOBEL SO",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T15:52:00.332398",
+      "center": "BCCC"
+    },
+    {
+      "id": "0198",
+      "time": "8:37 AM",
+      "type": "Request CalTrans Notify",
+      "location": "Huffstatler St / 2nd St",
+      "location_desc": "",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T15:52:00.332400",
+      "center": "BCCC"
+    },
+    {
+      "id": "0187",
+      "time": "8:29 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I8 W / E Main",
+      "location_desc": "I8 W AT E MAIN O/C",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T15:52:00.332401",
+      "center": "BCCC"
+    },
+    {
+      "id": "0186",
+      "time": "8:28 AM",
+      "type": "Report of Fire",
+      "location": "I5 N / Sea World No (tecolote)",
+      "location_desc": "I5 N SEA WORLD NO (TECOLOTE)",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T15:52:00.332403",
       "center": "BCCC"
     }
   ]
