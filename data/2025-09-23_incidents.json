@@ -1,8 +1,8 @@
 {
-  "center_code": "BCCC",
-  "center_name": "Border",
+  "center_code": "SACC",
+  "center_name": "Sacramento",
   "date": "2025-09-23",
-  "total_incidents": 96,
+  "total_incidents": 166,
   "incidents": [
     {
       "id": "0177",
@@ -949,7 +949,567 @@
       "location": "I215 N / Mccall So",
       "location_desc": "I215 N MCCALL SO",
       "area": "Temecula"
+    },
+    {
+      "id": "1242",
+      "time": "2:57 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / N Cahuenga Blvd",
+      "location_desc": "SB 101 JNO N CAHUENGA BLVD",
+      "area": "Central LA"
+    },
+    {
+      "id": "1245",
+      "time": "2:56 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr91 E / S Central Ave",
+      "location_desc": "EB 91 JWO CENTRAL",
+      "area": "South LA"
+    },
+    {
+      "id": "0157",
+      "time": "2:55 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / Mulholland Dr",
+      "location_desc": "SB 405 JNO MULHOLLAND DR",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1240",
+      "time": "2:55 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Stocker St / S La Cienega Blvd",
+      "location_desc": "EB STOCKER JEO LA CIENEGA",
+      "area": "West LA"
+    },
+    {
+      "id": "1236",
+      "time": "2:52 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I710 N / Sr91 E I710 Con",
+      "location_desc": "NB 710 TO EB 91 CON",
+      "area": "South LA"
+    },
+    {
+      "id": "1227",
+      "time": "2:50 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Escondido Canyon Rd / Hubbard Rd",
+      "location_desc": "",
+      "area": "Newhall"
+    },
+    {
+      "id": "1213",
+      "time": "2:45 PM",
+      "type": "Live or Dead Animal",
+      "location": "I105 E / Wilmington Ave Ofr",
+      "location_desc": "EB 105 1MI JWO WILMINGTON",
+      "area": "South LA"
+    },
+    {
+      "id": "1215",
+      "time": "2:44 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Reis St / Du Page Ave",
+      "location_desc": "",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "1211",
+      "time": "2:40 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr57 N / Sr60 E",
+      "location_desc": "NB 57 JSO 60",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "0152",
+      "time": "2:35 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I210 W / Sunflower Ave Ofr",
+      "location_desc": "WB 210 JWO SUNFLOWER",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1196",
+      "time": "2:34 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "5076 Telford St",
+      "location_desc": "",
+      "area": "East LA"
+    },
+    {
+      "id": "1192",
+      "time": "2:34 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Rosemead Blvd / Duarte Rd",
+      "location_desc": "WB DUARTE",
+      "area": "Altadena"
+    },
+    {
+      "id": "1186",
+      "time": "2:34 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Osborne St",
+      "location_desc": "SB 5 JNO OSBORNE ST - HOV",
+      "area": "Altadena"
+    },
+    {
+      "id": "1188",
+      "time": "2:33 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "La091128 Sr91 E / Wo Cherry Av",
+      "location_desc": "LA091128 SR91 E / WO CHERRY AV",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "1185",
+      "time": "2:33 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I210 W / Sunflower Ave Ofr",
+      "location_desc": "WB 210 JWO SUNFLOWER",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "1182",
+      "time": "2:32 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I605 S / Sr60",
+      "location_desc": "SB 605 UNDER 60 FWY",
+      "area": "East LA"
+    },
+    {
+      "id": "0150",
+      "time": "2:31 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I710 S / Long Beach Blvd",
+      "location_desc": "SB 710 JNO LONG BEACH",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1175",
+      "time": "2:31 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I10 E / Eastern Ave Ofr",
+      "location_desc": "EB 10 JWO EASTERN",
+      "area": "East LA"
+    },
+    {
+      "id": "0149",
+      "time": "2:28 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 W / Via Verde",
+      "location_desc": "WB 10 JEO VIA VERDE",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1162",
+      "time": "2:24 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "W Redondo Beach Blvd / S Figueroa St",
+      "location_desc": "POI NB 110 JSO CARSON **77-120",
+      "area": "South LA"
+    },
+    {
+      "id": "0147",
+      "time": "2:22 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / I105 E",
+      "location_desc": "SB 405 AT 105",
+      "area": "LAFSP"
+    },
+    {
+      "id": "0146",
+      "time": "2:18 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr134 E / I210 E",
+      "location_desc": "EB 134 AT 210",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1141",
+      "time": "2:16 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I210 E Sr134 W Con / Sr134 W",
+      "location_desc": "EB 210 AT 134",
+      "area": "Altadena"
+    },
+    {
+      "id": "1131",
+      "time": "2:14 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr2 S / Mountain St Ofr",
+      "location_desc": "SB JNO",
+      "area": "Altadena"
+    },
+    {
+      "id": "1130",
+      "time": "2:13 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Lake Hughes Rd / Castaic Rd",
+      "location_desc": "",
+      "area": "Newhall"
+    },
+    {
+      "id": "1104",
+      "time": "2:01 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "11700 Wilmington Ave",
+      "location_desc": "Kenneth Hahn Plaza",
+      "area": "South LA"
+    },
+    {
+      "id": "1106",
+      "time": "1:59 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Bellflower Blvd / Foster Rd",
+      "location_desc": "13815 FLORINE AVE",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "1070",
+      "time": "1:41 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr2 / Vincent Gap",
+      "location_desc": "VINCENT GAP JEO BIG CREEK",
+      "area": "Antelope Valley"
+    },
+    {
+      "id": "1066",
+      "time": "1:40 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Angeles Vista Blvd / Hillcrest Dr",
+      "location_desc": "ANGELES VISTA and HILLCREST",
+      "area": "West LA"
+    },
+    {
+      "id": "0984",
+      "time": "1:09 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / So Chp Rd",
+      "location_desc": "NB 5 JSO CHP RD",
+      "area": "Newhall"
+    },
+    {
+      "id": "0917",
+      "time": "12:39 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Miramonte Blvd / E 82nd Pl",
+      "location_desc": "",
+      "area": "South LA"
+    },
+    {
+      "id": "0906",
+      "time": "12:32 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "SR57 S SR60 W CON / BREA CANYON RD OFR",
+      "location_desc": "SB57 TO WB60, BREA CYN ALTERNATE",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "0238",
+      "time": "6:30 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Caltrans-no Ho (moorpark)",
+      "location_desc": "11210 MOORPARK ST",
+      "area": "West Valley"
+    },
+    {
+      "id": "0236",
+      "time": "6:28 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Caltrans-north Hills",
+      "location_desc": "11930 BLUCHER AVE",
+      "area": "West Valley"
+    },
+    {
+      "id": "0217",
+      "time": "6:06 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "I710 N / E SLAUSON AVE",
+      "location_desc": "NB JNO",
+      "area": "East LA"
+    },
+    {
+      "id": "0211",
+      "time": "5:58 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Caltrans-la (apple St)",
+      "location_desc": "5700 APPLE ST",
+      "area": "Central LA"
+    },
+    {
+      "id": "0057",
+      "time": "1:07 AM",
+      "type": "Road/Weather Conditions",
+      "location": "2901 W Broadway",
+      "location_desc": "LACO ROAD WEATHER CONDITIONS",
+      "area": "LA"
+    },
+    {
+      "id": "0001",
+      "time": "11:59 PM",
+      "type": "Road/Weather Conditions",
+      "location": "Media Log",
+      "location_desc": "LOS ANGELES COUNTY",
+      "area": "LA"
+    },
+    {
+      "id": "0037",
+      "time": "3:00 PM",
+      "type": "Traffic Hazard",
+      "location": "Us50 E / 15th St Ofr",
+      "location_desc": "",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0597",
+      "time": "3:00 PM",
+      "type": "Traffic Hazard",
+      "location": "Us50 W / Jwo 65th St",
+      "location_desc": "JWO",
+      "area": "South Sac"
+    },
+    {
+      "id": "0036",
+      "time": "2:57 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 N / Jso Mack Rd",
+      "location_desc": "NB 99 JSO MACK",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0596",
+      "time": "2:56 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Walerga Rd / Elkhorn Blvd",
+      "location_desc": "SB JNO",
+      "area": "North Sac"
+    },
+    {
+      "id": "0595",
+      "time": "2:56 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us50 E / Howe Ave",
+      "location_desc": "EB 50 AT HOWE",
+      "area": "South Sac"
+    },
+    {
+      "id": "0585",
+      "time": "2:49 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr193 / Chili Bar Ct",
+      "location_desc": "",
+      "area": "Placerville"
+    },
+    {
+      "id": "0568",
+      "time": "2:29 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "5545 Marconi Ave",
+      "location_desc": "IN PLOT",
+      "area": "North Sac"
+    },
+    {
+      "id": "0552",
+      "time": "2:16 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Arden Way / Eastern Ave",
+      "location_desc": "WHOLE FOODS",
+      "area": "North Sac"
+    },
+    {
+      "id": "0543",
+      "time": "2:14 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Bypass",
+      "location_desc": "SB 5 AT BYPASS MIDSPAN",
+      "area": "Woodland"
+    },
+    {
+      "id": "0550",
+      "time": "2:13 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "4540 American River Dr",
+      "location_desc": "OCCRD NB WATT OVER 50 58-101",
+      "area": "North Sac"
+    },
+    {
+      "id": "0523",
+      "time": "2:08 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Cr23 / Cr87b",
+      "location_desc": "BTWN CR 87B / CR 89",
+      "area": "Woodland"
+    },
+    {
+      "id": "0509",
+      "time": "2:02 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Garfield Ave / Laurel Hills Dr",
+      "location_desc": "",
+      "area": "North Sac"
+    },
+    {
+      "id": "0517",
+      "time": "2:01 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Lincolnshire Dr / Florin Rd",
+      "location_desc": "OCCURD WB FLORIN JEO FRANKLIN",
+      "area": "South Sac"
+    },
+    {
+      "id": "0508",
+      "time": "1:56 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "4390 47th Ave",
+      "location_desc": "**OCCRD 44ST / 47 AVE",
+      "area": "South Sac"
+    },
+    {
+      "id": "0479",
+      "time": "1:39 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Grass Valley Hwy / Lone Star Rd",
+      "location_desc": "NB JNO",
+      "area": "Auburn"
+    },
+    {
+      "id": "0119",
+      "time": "6:14 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "11363 Mccourtney Rd",
+      "location_desc": "*ROLLING MZP*",
+      "area": "SA"
+    },
+    {
+      "id": "0899",
+      "time": "6:04 PM",
+      "type": "Assist with Construction",
+      "location": "Sr99 N / Florin Rd",
+      "location_desc": "NB 99 AT FLORIN",
+      "area": "South Sac"
+    },
+    {
+      "id": "1281",
+      "time": "3:10 PM",
+      "type": "Traffic Hazard",
+      "location": "Valley Circle Blvd / Lake Manor Dr",
+      "location_desc": "",
+      "area": "West Valley"
+    },
+    {
+      "id": "1272",
+      "time": "3:08 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 E / I10 E I710 Con",
+      "location_desc": "WB 10 JEO 710",
+      "area": "East LA"
+    },
+    {
+      "id": "1279",
+      "time": "3:08 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I105 W / Lakewood Blvd",
+      "location_desc": "WB 105 JEO LAKEWOOD",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "1271",
+      "time": "3:07 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr60 W / S Lorena St Ofr",
+      "location_desc": "WB 60 ON LORENA OFR",
+      "area": "Central LA"
+    },
+    {
+      "id": "1274",
+      "time": "3:07 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / ALLEN CANYON",
+      "location_desc": "SB 5 AT ALLEN CYN",
+      "area": "Newhall"
+    },
+    {
+      "id": "1266",
+      "time": "3:07 PM",
+      "type": "Traffic Hazard",
+      "location": "I105 W / Paramount Blvd Ofr",
+      "location_desc": "WB 105 JEO PARAMOUNT",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "1273",
+      "time": "3:05 PM",
+      "type": "Traffic Hazard",
+      "location": "I605 S / Firestone Blvd",
+      "location_desc": "SB 605 JNO FIRESTONE",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "1267",
+      "time": "3:05 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / I405 S I605 N Con",
+      "location_desc": "SB 405 TRANS TO NB 605",
+      "area": "South LA"
+    },
+    {
+      "id": "1261",
+      "time": "3:03 PM",
+      "type": "Traffic Hazard",
+      "location": "US101 W / REYES ADOBE RD",
+      "location_desc": "WB JEO",
+      "area": "West Valley"
+    },
+    {
+      "id": "1237",
+      "time": "2:51 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / Mulholland Dr",
+      "location_desc": "SB 405 JNO MULHOLLAND DR",
+      "area": "West Valley"
+    },
+    {
+      "id": "0613",
+      "time": "3:09 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Watt Ave / Tembrook Dr",
+      "location_desc": "",
+      "area": "North Sac"
+    },
+    {
+      "id": "0609",
+      "time": "3:07 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Grass Valley Hwy / Dry Creek Rd",
+      "location_desc": "NB 49 JSO DRY CREEK",
+      "area": "Auburn"
+    },
+    {
+      "id": "0608",
+      "time": "3:04 PM",
+      "type": "Report of Fire",
+      "location": "Stockton Blvd / Mcmahon Dr",
+      "location_desc": "",
+      "area": "South Sac"
+    },
+    {
+      "id": "0038",
+      "time": "3:03 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us50 E / Howe Ave",
+      "location_desc": "EB 50 AT HOWE",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0601",
+      "time": "3:00 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "S Watt Ave / Jackson Rd",
+      "location_desc": "SB JNO",
+      "area": "East Sac"
     }
   ],
-  "last_updated": "2025-09-23T21:56:08.837510"
+  "last_updated": "2025-09-23T18:12:40.039573"
 }

@@ -132,7 +132,7 @@ def main():
     """Main function for local scraper"""
     parser = argparse.ArgumentParser(description='CHP Traffic Scraper (Local)')
     parser.add_argument('--center', default='BCCC', 
-                       choices=['BCCC', 'CCC', 'NCCC', 'SCCC'],
+                       choices=['BFCC', 'BSCC', 'BICC', 'BCCC', 'CCCC', 'CHCC', 'ECCC', 'FRCC', 'GGCC', 'HMCC', 'ICCC', 'INCC', 'LACC', 'MRCC', 'MYCC', 'OCCC', 'RDCC', 'SACC', 'SLCC', 'SKCCSTCC', 'SUCC', 'TKCC', 'UKCC', 'VTCC', 'YKCC'],
                        help='Communication center to scrape')
     parser.add_argument('--interval', type=int, default=60,
                        help='Scraping interval in seconds')
@@ -146,10 +146,31 @@ def main():
     setup_logging()
     
     center_name = {
+        "BFCC": "Bakersfield",
+        "BSCC": "Barstow", 
+        "BICC": "Bishop",
         "BCCC": "Border",
-        "CCC": "Central", 
-        "NCCC": "Northern",
-        "SCCC": "Southern"
+        "CCCC": "Capitol",
+        "CHCC": "Chico",
+        "ECCC": "El Centro",
+        "FRCC": "Fresno",
+        "GGCC": "Golden Gate",
+        "HMCC": "Humboldt",
+        "ICCC": "Indio",
+        "INCC": "Inland",
+        "LACC": "Los Angeles",
+        "MRCC": "Merced",
+        "MYCC": "Monterey",
+        "OCCC": "Orange",
+        "RDCC": "Redding",
+        "SACC": "Sacramento",
+        "SLCC": "San Luis Obispo",
+        "SKCCSTCC": "Stockton",
+        "SUCC": "Susanville",
+        "TKCC": "Truckee",
+        "UKCC": "Ukiah",
+        "VTCC": "Ventura",
+        "YKCC": "Yreka"
     }.get(args.center, args.center)
     
     print(f"🚨 CHP {center_name} Traffic Monitor (Local)")

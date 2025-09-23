@@ -101,10 +101,31 @@ def main():
     # Get center from environment variable
     center_code = os.getenv('COMMUNICATION_CENTER', 'BCCC')
     center_name = {
+        "BFCC": "Bakersfield",
+        "BSCC": "Barstow", 
+        "BICC": "Bishop",
         "BCCC": "Border",
-        "CCC": "Central", 
-        "NCCC": "Northern",
-        "SCCC": "Southern"
+        "CCCC": "Capitol",
+        "CHCC": "Chico",
+        "ECCC": "El Centro",
+        "FRCC": "Fresno",
+        "GGCC": "Golden Gate",
+        "HMCC": "Humboldt",
+        "ICCC": "Indio",
+        "INCC": "Inland",
+        "LACC": "Los Angeles",
+        "MRCC": "Merced",
+        "MYCC": "Monterey",
+        "OCCC": "Orange",
+        "RDCC": "Redding",
+        "SACC": "Sacramento",
+        "SLCC": "San Luis Obispo",
+        "SKCCSTCC": "Stockton",
+        "SUCC": "Susanville",
+        "TKCC": "Truckee",
+        "UKCC": "Ukiah",
+        "VTCC": "Ventura",
+        "YKCC": "Yreka"
     }.get(center_code, center_code)
     
     print(f"🚨 CHP {center_name} Traffic Monitor (GitHub Actions)")

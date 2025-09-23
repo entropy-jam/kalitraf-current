@@ -89,9 +89,30 @@ class IncidentExtractor:
     def _get_center_name(self, center_code: str) -> str:
         """Get human-readable center name"""
         centers = {
+            "BFCC": "Bakersfield",
+            "BSCC": "Barstow", 
+            "BICC": "Bishop",
             "BCCC": "Border",
-            "CCC": "Central", 
-            "NCCC": "Northern",
-            "SCCC": "Southern"
+            "CCCC": "Capitol",
+            "CHCC": "Chico",
+            "ECCC": "El Centro",
+            "FRCC": "Fresno",
+            "GGCC": "Golden Gate",
+            "HMCC": "Humboldt",
+            "ICCC": "Indio",
+            "INCC": "Inland",
+            "LACC": "Los Angeles",
+            "MRCC": "Merced",
+            "MYCC": "Monterey",
+            "OCCC": "Orange",
+            "RDCC": "Redding",
+            "SACC": "Sacramento",
+            "SLCC": "San Luis Obispo",
+            "SKCCSTCC": "Stockton",
+            "SUCC": "Susanville",
+            "TKCC": "Truckee",
+            "UKCC": "Ukiah",
+            "VTCC": "Ventura",
+            "YKCC": "Yreka"
         }
         return centers.get(center_code, center_code)

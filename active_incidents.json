@@ -1,136 +1,160 @@
 {
-  "center_code": "BCCC",
-  "center_name": "Border",
-  "incident_count": 16,
+  "center_code": "SACC",
+  "center_name": "Sacramento",
+  "incident_count": 19,
   "incidents": [
     {
-      "id": "0207",
-      "time": "2:55 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Main",
-      "location_desc": "I15 N MAIN (TWI)",
-      "area": "Temecula FSP"
-    },
-    {
-      "id": "0498",
-      "time": "2:52 PM",
+      "id": "0613",
+      "time": "3:09 PM",
       "type": "Trfc Collision-Unkn Inj",
-      "location": "I215 N / Mccall So",
-      "location_desc": "I215 N MCCALL SO",
-      "area": "Temecula"
-    },
-    {
-      "id": "0200",
-      "time": "2:42 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "SR54 W / WOODMAN WO",
-      "location_desc": "SR54 W WOODMAN WO",
-      "area": "South FSP"
-    },
-    {
-      "id": "0490",
-      "time": "2:41 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "4054 Kenwood Dr",
+      "location": "Watt Ave / Tembrook Dr",
       "location_desc": "",
-      "area": "El Cajon"
+      "area": "North Sac"
     },
     {
-      "id": "0487",
-      "time": "2:41 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / E St (southbay)",
-      "location_desc": "NB 5 NEAR E ST",
-      "area": "San Diego"
+      "id": "0609",
+      "time": "3:07 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Grass Valley Hwy / Dry Creek Rd",
+      "location_desc": "NB 49 JSO DRY CREEK",
+      "area": "Auburn"
     },
     {
-      "id": "0486",
-      "time": "2:38 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "SR54 W / WOODMAN WO",
-      "location_desc": "SR54 W WOODMAN WO",
-      "area": "San Diego"
-    },
-    {
-      "id": "0480",
-      "time": "2:29 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Balboa (garnet) So",
-      "location_desc": "I5 N BALBOA (GARNET) SO",
-      "area": "San Diego"
-    },
-    {
-      "id": "0482",
-      "time": "2:29 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / I805 No (southbay)",
+      "id": "0608",
+      "time": "3:04 PM",
+      "type": "Report of Fire",
+      "location": "Stockton Blvd / Mcmahon Dr",
       "location_desc": "",
-      "area": "San Diego"
+      "area": "South Sac"
     },
     {
-      "id": "0456",
-      "time": "2:03 PM",
-      "type": "Aircraft Emergency",
-      "location": "S Mission Rd / S Stagecoach Ln",
-      "location_desc": "1/2 MILE JNO",
-      "area": "Oceanside"
+      "id": "0038",
+      "time": "3:03 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us50 E / Howe Ave",
+      "location_desc": "EB 50 AT HOWE",
+      "area": "South Sac FSP"
     },
     {
-      "id": "0421",
-      "time": "1:30 PM",
-      "type": "Traffic Hazard",
-      "location": "I215 S / Mccall No",
-      "location_desc": "SB 215 JNO MCCALL",
-      "area": "Temecula"
-    },
-    {
-      "id": "0282",
-      "time": "10:59 AM",
+      "id": "0601",
+      "time": "3:00 PM",
       "type": "Trfc Collision-No Inj",
-      "location": "I5 N / VIEWPOINT NO",
-      "location_desc": "",
-      "area": "Oceanside"
+      "location": "S Watt Ave / Jackson Rd",
+      "location_desc": "SB JNO",
+      "area": "East Sac"
     },
     {
-      "id": "0084",
-      "time": "6:32 AM",
+      "id": "0037",
+      "time": "3:00 PM",
+      "type": "Traffic Hazard",
+      "location": "Us50 E / 15th St Ofr",
+      "location_desc": "",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0597",
+      "time": "3:00 PM",
+      "type": "Traffic Hazard",
+      "location": "Us50 W / Jwo 65th St",
+      "location_desc": "JWO",
+      "area": "South Sac"
+    },
+    {
+      "id": "0036",
+      "time": "2:57 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 N / Jso Mack Rd",
+      "location_desc": "NB 99 JSO MACK",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0595",
+      "time": "2:56 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us50 E / Howe Ave",
+      "location_desc": "EB 50 AT HOWE",
+      "area": "South Sac"
+    },
+    {
+      "id": "0585",
+      "time": "2:49 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr193 / Chili Bar Ct",
+      "location_desc": "",
+      "area": "Placerville"
+    },
+    {
+      "id": "0568",
+      "time": "2:29 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "5545 Marconi Ave",
+      "location_desc": "IN PLOT",
+      "area": "North Sac"
+    },
+    {
+      "id": "0552",
+      "time": "2:16 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Arden Way / Eastern Ave",
+      "location_desc": "WHOLE FOODS",
+      "area": "North Sac"
+    },
+    {
+      "id": "0543",
+      "time": "2:14 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Bypass",
+      "location_desc": "SB 5 AT BYPASS MIDSPAN",
+      "area": "Woodland"
+    },
+    {
+      "id": "0523",
+      "time": "2:08 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Cr23 / Cr87b",
+      "location_desc": "BTWN CR 87B / CR 89",
+      "area": "Woodland"
+    },
+    {
+      "id": "0517",
+      "time": "2:01 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Lincolnshire Dr / Florin Rd",
+      "location_desc": "OCCURD WB FLORIN JEO FRANKLIN",
+      "area": "South Sac"
+    },
+    {
+      "id": "0479",
+      "time": "1:39 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Grass Valley Hwy / Lone Star Rd",
+      "location_desc": "NB JNO",
+      "area": "Auburn"
+    },
+    {
+      "id": "0119",
+      "time": "6:14 AM",
       "type": "Assist CT with Maintenance",
-      "location": "Ocn",
-      "location_desc": "MZP2 MZP3 ENCAMPMENTS",
+      "location": "11363 Mccourtney Rd",
+      "location_desc": "*ROLLING MZP*",
+      "area": "SA"
+    },
+    {
+      "id": "0113",
+      "time": "6:11 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Blairs Ln",
+      "location_desc": "CALTRANS PLACERVILLE YARD",
       "area": ""
     },
     {
-      "id": "0061",
-      "time": "5:50 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Santee Ct",
-      "location_desc": "",
-      "area": ""
-    },
-    {
-      "id": "0056",
-      "time": "4:42 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Hwy 76",
-      "location_desc": "LAKE HENSHAW",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0023",
-      "time": "1:17 AM",
-      "type": "SIG Alert",
-      "location": "Sr76 / Pauma Valley Dr",
-      "location_desc": "ATand T UNTIL APPROX 1000",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0002",
-      "time": "12:00 AM",
-      "type": "Road/Weather Conditions",
-      "location": "Media Log",
-      "location_desc": "NEWSWORTHY INCIDENTS",
-      "area": "BC"
+      "id": "0899",
+      "time": "6:04 PM",
+      "type": "Assist with Construction",
+      "location": "Sr99 N / Florin Rd",
+      "location_desc": "NB 99 AT FLORIN",
+      "area": "South Sac"
     }
   ],
-  "last_updated": "2025-09-23T21:56:08.836703"
+  "last_updated": "2025-09-23T18:12:40.037777"
 }
