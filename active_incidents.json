@@ -1,8 +1,48 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 12,
+  "incident_count": 17,
   "incidents": [
+    {
+      "id": "0252",
+      "time": "4:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Carmel Mountain",
+      "location_desc": "I5 N CARMEL MOUNTAIN",
+      "area": "North FSP"
+    },
+    {
+      "id": "0611",
+      "time": "4:27 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / Carmel Mountain",
+      "location_desc": "I5 N CARMEL MOUNTAIN",
+      "area": "San Diego"
+    },
+    {
+      "id": "0249",
+      "time": "4:25 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Balboa No (tierrasanta)",
+      "location_desc": "I15 S BALBOA NO (TIERRASANTA)",
+      "area": "North FSP"
+    },
+    {
+      "id": "0605",
+      "time": "4:24 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Balboa No (tierrasanta)",
+      "location_desc": "I15 S BALBOA NO (TIERRASANTA)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0609",
+      "time": "4:23 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / I8 So",
+      "location_desc": "NB 5 JSO I8",
+      "area": "San Diego"
+    },
     {
       "id": "0247",
       "time": "4:21 PM",
@@ -26,6 +66,14 @@
       "location": "Sr15 S / I805 No",
       "location_desc": "",
       "area": "San Diego"
+    },
+    {
+      "id": "0604",
+      "time": "4:16 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "3225 Via Solana",
+      "location_desc": "OCCRD 1138 Felicita Ln",
+      "area": "Oceanside"
     },
     {
       "id": "0592",
@@ -60,28 +108,20 @@
       "area": "Temecula"
     },
     {
+      "id": "0513",
+      "time": "3:13 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "17044 Ralphs Ranch Rd",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
       "id": "0456",
       "time": "2:03 PM",
       "type": "Aircraft Emergency",
       "location": "S Mission Rd / S Stagecoach Ln",
       "location_desc": "1/2 MILE JNO",
       "area": "Oceanside"
-    },
-    {
-      "id": "0282",
-      "time": "10:59 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 N / VIEWPOINT NO",
-      "location_desc": "",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0061",
-      "time": "5:50 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Santee Ct",
-      "location_desc": "",
-      "area": ""
     },
     {
       "id": "0023",
@@ -100,5 +140,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-23T23:23:50.747072"
+  "last_updated": "2025-09-23T23:31:30.032537"
 }
