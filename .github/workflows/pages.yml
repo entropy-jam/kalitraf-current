@@ -3,6 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main, master ]
+    paths:
+      - 'index.html'
+      - 'active_incidents.json'
+      - 'data/**'
   workflow_dispatch:
 
 permissions:
@@ -12,7 +16,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -20,15 +24,25 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 2
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      - name: Optimize for deployment
+        run: |
+          # Remove unnecessary files to reduce upload size
+          rm -rf .git .github .gitignore README.md requirements.txt
+          rm -rf src/ __pycache__/ *.py
+          echo "Optimization complete - files removed"
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: '.'
       

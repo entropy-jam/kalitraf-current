@@ -1,0 +1,33 @@
+# Jekyll configuration for faster GitHub Pages deployment
+title: "CHP Traffic Monitor"
+description: "Real-time California Highway Patrol traffic incident monitoring"
+
+# Jekyll settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Build settings
+exclude:
+  - README.md
+  - requirements.txt
+  - src/
+  - .github/
+  - .gitignore
+  - *.py
+
+# Include only necessary files
+include:
+  - index.html
+  - active_incidents.json
+  - data/
+
+# Performance optimizations
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: [html, head, body]
+
+# Disable Jekyll processing for JSON files
+data_dir: data

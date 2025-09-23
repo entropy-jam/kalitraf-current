@@ -52,6 +52,7 @@ on:
 jobs:
   scrape-traffic:
     runs-on: ubuntu-latest
+    timeout-minutes: 3
     
     steps:
     - name: Checkout repository
@@ -69,35 +70,38 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-${{ github.run_id }}
         restore-keys: |
+          ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           ${{ runner.os }}-pip-
 
     - name: Cache Chrome installation
       uses: actions/cache@v3
       with:
         path: /opt/google/chrome
-        key: ${{ runner.os }}-chrome-${{ hashFiles('**/requirements.txt') }}
+        key: ${{ runner.os }}-chrome-${{ hashFiles('**/requirements.txt') }}-${{ github.run_id }}
         restore-keys: |
+          ${{ runner.os }}-chrome-${{ hashFiles('**/requirements.txt') }}
           ${{ runner.os }}-chrome-
 
     - name: Cache ChromeDriver
       uses: actions/cache@v3
       with:
         path: ~/.wdm
-        key: ${{ runner.os }}-chromedriver-${{ hashFiles('**/requirements.txt') }}
+        key: ${{ runner.os }}-chromedriver-${{ hashFiles('**/requirements.txt') }}-${{ github.run_id }}
         restore-keys: |
+          ${{ runner.os }}-chromedriver-${{ hashFiles('**/requirements.txt') }}
           ${{ runner.os }}-chromedriver-
 
     - name: Install system dependencies
       run: |
         # Only install if Chrome not cached
         if [ ! -d "/opt/google/chrome" ]; then
-          sudo apt-get update
+          sudo apt-get update -qq
           sudo apt-get install -y wget gnupg
           wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
           echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-          sudo apt-get update
+          sudo apt-get update -qq
           sudo apt-get install -y google-chrome-stable
         else
           echo "Chrome already installed (cached)"
@@ -106,9 +110,9 @@ jobs:
     - name: Install Python dependencies
       run: |
         # Only upgrade pip if needed
-        python -m pip install --upgrade pip --quiet
+        python -m pip install --upgrade pip --quiet --no-warn-script-location
         # Install packages (will use cache if available)
-        pip install -r requirements.txt --quiet
+        pip install -r requirements.txt --quiet --no-warn-script-location --cache-dir ~/.cache/pip
 
     - name: Setup ChromeDriver
       run: |
