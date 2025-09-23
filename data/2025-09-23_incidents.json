@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T16:58:57.983290",
-  "total_incidents": 40,
-  "new_incidents_today": 2,
+  "last_updated": "2025-09-23T17:27:53.240371",
+  "total_incidents": 41,
+  "new_incidents_today": 1,
   "incidents": [
     {
       "id": "0177",
@@ -404,6 +404,16 @@
       "location_desc": "I15 S SR76 SO",
       "area": "Oceanside",
       "scraped_at": "2025-09-23T16:58:57.983259",
+      "center": "BCCC"
+    },
+    {
+      "id": "0265",
+      "time": "10:16 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Birmingham Dr Ofr",
+      "location_desc": "",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T17:27:53.240343",
       "center": "BCCC"
     }
   ]
