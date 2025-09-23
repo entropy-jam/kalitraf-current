@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHP Traffic Incidents Monitor</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .controls {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .controls select, .controls button {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .controls button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .controls button:hover {
+            background: #0056b3;
+        }
+        .controls button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        .status {
+            padding: 15px 20px;
+            background: #e9ecef;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .incident-count {
+            font-size: 18px;
+            font-weight: bold;
+            color: #495057;
+        }
+        .last-updated {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .incidents-container {
+            padding: 20px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .incident {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .incident:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .incident-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .incident-id {
+            font-weight: bold;
+            color: #007bff;
+            font-size: 16px;
+        }
+        .incident-time {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .incident-type {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .type-traffic-hazard { background: #fff3cd; color: #856404; }
+        .type-collision { background: #f8d7da; color: #721c24; }
+        .type-sig-alert { background: #d1ecf1; color: #0c5460; }
+        .type-animal-hazard { background: #d4edda; color: #155724; }
+        .type-weather { background: #e2e3e5; color: #383d41; }
+        .incident-location {
+            font-weight: 500;
+            color: #495057;
+            margin-bottom: 4px;
+        }
+        .incident-area {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px;
+        }
+        .refresh-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #28a745;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚨 CHP Traffic Incidents Monitor</h1>
+            <p>Real-time traffic incident data from California Highway Patrol</p>
+        </div>
+        
+        <div class="controls">
+            <label for="centerSelect">Communication Center:</label>
+            <select id="centerSelect">
+                <option value="BCCC">Border (BCCC)</option>
+                <option value="CCC">Central (CCC)</option>
+                <option value="NCCC">Northern (NCCC)</option>
+                <option value="SCCC">Southern (SCCC)</option>
+            </select>
+            
+            <button id="refreshBtn" onclick="refreshData()">🔄 Refresh Now</button>
+            <button id="triggerBtn" onclick="triggerScrape()">⚡ Trigger Scrape</button>
+            
+            <div style="margin-left: auto;">
+                <label>
+                    <input type="checkbox" id="autoRefresh" checked> Auto-refresh every 30s
+                </label>
+            </div>
+        </div>
+        
+        <div class="status">
+            <div>
+                <span class="incident-count" id="incidentCount">Loading...</span>
+                <span id="refreshIndicator" class="refresh-indicator" style="display: none;"></span>
+            </div>
+            <div class="last-updated" id="lastUpdated">Last updated: Never</div>
+        </div>
+        
+        <div class="incidents-container" id="incidentsContainer">
+            <div class="loading">Loading incidents...</div>
+        </div>
+    </div>
+
+    <script>
+        let autoRefreshInterval;
+        let currentCenter = 'BCCC';
+        
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+            startAutoRefresh();
+            
+            // Handle center selection change
+            document.getElementById('centerSelect').addEventListener('change', function() {
+                currentCenter = this.value;
+                loadData();
+            });
+        });
+        
+        function loadData() {
+            showRefreshIndicator();
+            
+            fetch('active_incidents.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load data');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayIncidents(data);
+                    updateLastUpdated(data.last_updated);
+                })
+                .catch(error => {
+                    console.error('Error loading data:', error);
+                    showError('Failed to load incident data. Please try again.');
+                })
+                .finally(() => {
+                    hideRefreshIndicator();
+                });
+        }
+        
+        function displayIncidents(data) {
+            const container = document.getElementById('incidentsContainer');
+            const countElement = document.getElementById('incidentCount');
+            
+            if (!data.incidents || data.incidents.length === 0) {
+                container.innerHTML = '<div class="loading">No incidents reported at this time.</div>';
+                countElement.textContent = '0 incidents';
+                return;
+            }
+            
+            countElement.textContent = `${data.incident_count} incidents`;
+            
+            const incidentsHtml = data.incidents.map(incident => {
+                const typeClass = getTypeClass(incident.type);
+                return `
+                    <div class="incident">
+                        <div class="incident-header">
+                            <span class="incident-id">#${incident.id}</span>
+                            <span class="incident-time">${incident.time}</span>
+                        </div>
+                        <div class="incident-type ${typeClass}">${incident.type}</div>
+                        <div class="incident-location">${incident.location}</div>
+                        ${incident.location_desc ? `<div class="incident-location">${incident.location_desc}</div>` : ''}
+                        <div class="incident-area">${incident.area}</div>
+                    </div>
+                `;
+            }).join('');
+            
+            container.innerHTML = incidentsHtml;
+        }
+        
+        function getTypeClass(type) {
+            const typeMap = {
+                'Traffic Hazard': 'type-traffic-hazard',
+                'Trfc Collision': 'type-collision',
+                'SIG Alert': 'type-sig-alert',
+                'Animal Hazard': 'type-animal-hazard',
+                'Road/Weather': 'type-weather'
+            };
+            
+            for (const [key, className] of Object.entries(typeMap)) {
+                if (type.includes(key)) {
+                    return className;
+                }
+            }
+            return 'type-traffic-hazard';
+        }
+        
+        function updateLastUpdated(timestamp) {
+            const lastUpdatedElement = document.getElementById('lastUpdated');
+            const date = new Date(timestamp);
+            lastUpdatedElement.textContent = `Last updated: ${date.toLocaleString()}`;
+        }
+        
+        function showError(message) {
+            const container = document.getElementById('incidentsContainer');
+            container.innerHTML = `<div class="error">${message}</div>`;
+        }
+        
+        function showRefreshIndicator() {
+            document.getElementById('refreshIndicator').style.display = 'inline-block';
+        }
+        
+        function hideRefreshIndicator() {
+            document.getElementById('refreshIndicator').style.display = 'none';
+        }
+        
+        function refreshData() {
+            loadData();
+        }
+        
+        function triggerScrape() {
+            const button = document.getElementById('triggerBtn');
+            button.disabled = true;
+            button.textContent = 'Triggering...';
+            
+            // Trigger GitHub Actions workflow
+            fetch('https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/dispatches', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'token YOUR_GITHUB_TOKEN',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    event_type: 'manual-scrape',
+                    client_payload: {
+                        communication_center: currentCenter
+                    }
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Scrape triggered successfully! Data will be updated in a few minutes.');
+                } else {
+                    throw new Error('Failed to trigger scrape');
+                }
+            })
+            .catch(error => {
+                console.error('Error triggering scrape:', error);
+                alert('Failed to trigger scrape. Please check your GitHub token configuration.');
+            })
+            .finally(() => {
+                button.disabled = false;
+                button.textContent = '⚡ Trigger Scrape';
+            });
+        }
+        
+        function startAutoRefresh() {
+            if (autoRefreshInterval) {
+                clearInterval(autoRefreshInterval);
+            }
+            
+            if (document.getElementById('autoRefresh').checked) {
+                autoRefreshInterval = setInterval(loadData, 30000); // 30 seconds
+            }
+        }
+        
+        // Handle auto-refresh checkbox
+        document.getElementById('autoRefresh').addEventListener('change', startAutoRefresh);
+    </script>
+</body>
+</html>

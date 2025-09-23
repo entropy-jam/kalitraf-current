@@ -1,0 +1,100 @@
+{
+  "center": "BCCC",
+  "center_name": "Border",
+  "date": "2025-09-22",
+  "last_updated": "2025-09-22T21:17:32.558447",
+  "total_incidents": 9,
+  "new_incidents_today": 9,
+  "incidents": [
+    {
+      "id": "0273",
+      "time": "6:00 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N I8 W Con / I8 W",
+      "location_desc": "NB TO WB",
+      "area": "South FSP",
+      "scraped_at": "2025-09-22T21:17:32.558436",
+      "center": "BCCC"
+    },
+    {
+      "id": "0692",
+      "time": "5:57 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N I8 W Con / I8 W",
+      "location_desc": "NB TO WB",
+      "area": "San Diego",
+      "scraped_at": "2025-09-22T21:17:32.558437",
+      "center": "BCCC"
+    },
+    {
+      "id": "0266",
+      "time": "5:33 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Carmel Mountain",
+      "location_desc": "",
+      "area": "North FSP",
+      "scraped_at": "2025-09-22T21:17:32.558439",
+      "center": "BCCC"
+    },
+    {
+      "id": "0641",
+      "time": "5:16 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Cannon",
+      "location_desc": "I5 N CANNON",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-22T21:17:32.558440",
+      "center": "BCCC"
+    },
+    {
+      "id": "0627",
+      "time": "5:04 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Deer Springs So (mountain Meadow)",
+      "location_desc": "92-23C",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-22T21:17:32.558441",
+      "center": "BCCC"
+    },
+    {
+      "id": "0626",
+      "time": "5:02 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "E Vista Way / Gopher Canyon Rd",
+      "location_desc": "",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-22T21:17:32.558441",
+      "center": "BCCC"
+    },
+    {
+      "id": "0620",
+      "time": "4:55 PM",
+      "type": "SIG Alert",
+      "location": "Sr94 / Lucky Six Truck Trl",
+      "location_desc": "",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-22T21:17:32.558442",
+      "center": "BCCC"
+    },
+    {
+      "id": "0574",
+      "time": "4:14 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr94 / Lucky Six Truck Trl",
+      "location_desc": "JEO NEAR ROMO",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-22T21:17:32.558443",
+      "center": "BCCC"
+    },
+    {
+      "id": "0011",
+      "time": "12:16 AM",
+      "type": "Road/Weather Conditions",
+      "location": "Media Log",
+      "location_desc": "NEWSWORTHY INCIDENTS",
+      "area": "BC",
+      "scraped_at": "2025-09-22T21:17:32.558444",
+      "center": "BCCC"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+name: CHP Traffic Incident Scraper
+
+on:
+  # Run every minute
+  schedule:
+    - cron: '* * * * *'
+  
+  # Manual trigger with parameters
+  workflow_dispatch:
+    inputs:
+      communication_center:
+        description: 'Communication Center to scrape'
+        required: false
+        default: 'BCCC'
+        type: choice
+        options:
+          - BCCC  # Border
+          - CCC   # Central
+          - NCCC  # Northern
+          - SCCC  # Southern
+      run_once:
+        description: 'Run once and exit (no continuous monitoring)'
+        required: false
+        default: false
+        type: boolean
+
+  # Allow manual trigger from API
+  repository_dispatch:
+    types: [manual-scrape]
+
+jobs:
+  scrape-traffic:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Cache Python dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget gnupg
+        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Download ChromeDriver
+      run: |
+        CHROME_VERSION=$(google-chrome --version | cut -d " " -f3 | cut -d "." -f1-3)
+        CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}")
+        wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+        unzip /tmp/chromedriver.zip -d /tmp/
+        sudo mv /tmp/chromedriver /usr/local/bin/
+        sudo chmod +x /usr/local/bin/chromedriver
+
+    - name: Set environment variables
+      run: |
+        echo "COMMUNICATION_CENTER=${{ github.event.inputs.communication_center || 'BCCC' }}" >> $GITHUB_ENV
+        echo "RUN_ONCE=${{ github.event.inputs.run_once || 'false' }}" >> $GITHUB_ENV
+        echo "SCRAPER_MODE=github_actions" >> $GITHUB_ENV
+
+    - name: Run traffic scraper
+      run: |
+        python chp_scraper.py --center $COMMUNICATION_CENTER --mode $SCRAPER_MODE
+
+    - name: Check for changes
+      id: changes
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Commit and push changes
+      if: steps.changes.outputs.changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/
+        git add *.json
+        git commit -m "Update traffic incidents - $(date '+%Y-%m-%d %H:%M:%S')"
+        git push
+
+    - name: Update GitHub Pages
+      if: steps.changes.outputs.changes == 'true'
+      run: |
+        # Update the data timestamp for auto-refresh
+        echo "{\"last_updated\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > data/timestamp.json
+
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "Traffic scraper failed at $(date)"
+        # You can add webhook notifications here if needed
