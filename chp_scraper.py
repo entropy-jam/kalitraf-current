@@ -77,7 +77,9 @@ def extract_incidents_from_table(driver):
     try:
         # Find the incidents table
         table = driver.find_element(By.TAG_NAME, "table")
+        print(f"Found table with class: {table.get_attribute('class')}")
         rows = table.find_elements(By.TAG_NAME, "tr")
+        print(f"Found {len(rows)} rows in table")
         
         incidents_data = []
         
@@ -89,9 +91,11 @@ def extract_incidents_from_table(driver):
             
             if cells and i > 0:  # Skip header row
                 cell_texts = [cell.text.strip() for cell in cells]
+                print(f"Row {i}: {len(cell_texts)} cells - {cell_texts[:3]}...")  # Show first 3 cells
                 if len(cell_texts) >= 7:  # Ensure we have all columns
                     incidents_data.append(cell_texts)
         
+        print(f"Extracted {len(incidents_data)} incidents")
         return incidents_data
     except Exception as e:
         logging.error(f"Error extracting incidents: {str(e)}")
@@ -252,15 +256,20 @@ def scrape_chp_incidents(center_code="BCCC", mode="local"):
             # Option 2: Use Chrome with proper ARM64 driver
             print("Using Chrome WebDriver...")
             if mode == "github_actions":
-                # In GitHub Actions, use webdriver-manager for reliable ChromeDriver
+                # In GitHub Actions, ChromeDriver is already installed and in PATH
                 try:
-                    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-                    logging.info("Chrome WebDriver initialized with webdriver-manager (GitHub Actions)")
-                except Exception as e:
-                    print(f"Webdriver-manager failed in GitHub Actions: {e}")
-                    # Fallback to system ChromeDriver
+                    # Try direct Chrome first (ChromeDriver should be in PATH)
                     driver = webdriver.Chrome()
-                    logging.info("Chrome WebDriver initialized with system driver (GitHub Actions fallback)")
+                    logging.info("Chrome WebDriver initialized directly (GitHub Actions)")
+                except Exception as e:
+                    print(f"Direct Chrome failed: {e}")
+                    # Fallback to webdriver-manager
+                    try:
+                        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+                        logging.info("Chrome WebDriver initialized with webdriver-manager (GitHub Actions fallback)")
+                    except Exception as e2:
+                        print(f"Webdriver-manager also failed: {e2}")
+                        raise Exception("Both Chrome WebDriver methods failed")
             else:
                 try:
                     # Try using webdriver-manager first (auto-downloads correct driver)
@@ -293,6 +302,14 @@ def scrape_chp_incidents(center_code="BCCC", mode="local"):
         # Wait for page update AFTER selection
         time.sleep(5)
 
+        # Debug: Check what's on the page
+        print(f"Current URL: {driver.current_url}")
+        print(f"Page title: {driver.title}")
+        
+        # Check for tables on the page
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        print(f"Found {len(tables)} tables on page")
+        
         page_source = driver.page_source
 
         # Extract incident data
