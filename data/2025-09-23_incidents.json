@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "total_incidents": 93,
+  "total_incidents": 94,
   "incidents": [
     {
       "id": "0177",
@@ -925,7 +925,15 @@
       "location": "I5 N / I805 No (southbay)",
       "location_desc": "",
       "area": "San Diego"
+    },
+    {
+      "id": "0490",
+      "time": "2:41 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "4054 Kenwood Dr",
+      "location_desc": "",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-23T17:45:19.640415"
+  "last_updated": "2025-09-23T21:49:38.227383"
 }

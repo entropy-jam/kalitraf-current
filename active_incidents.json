@@ -12,6 +12,14 @@
       "area": "South FSP"
     },
     {
+      "id": "0490",
+      "time": "2:41 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "4054 Kenwood Dr",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
       "id": "0487",
       "time": "2:41 PM",
       "type": "Trfc Collision-Unkn Inj",
@@ -66,14 +74,6 @@
       "location": "S Mission Rd / S Stagecoach Ln",
       "location_desc": "1/2 MILE JNO",
       "area": "Oceanside"
-    },
-    {
-      "id": "0439",
-      "time": "1:49 PM",
-      "type": "Report of Fire",
-      "location": "I15 N / Clinton Keith Rd Ofr",
-      "location_desc": "",
-      "area": "Temecula"
     },
     {
       "id": "0421",
@@ -148,5 +148,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-23T17:45:19.638952"
+  "last_updated": "2025-09-23T21:49:38.226417"
 }
