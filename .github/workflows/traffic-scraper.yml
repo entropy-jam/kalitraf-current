@@ -147,7 +147,7 @@ jobs:
 
     - name: Run traffic scraper
       run: |
-        python chp_scraper.py --center $COMMUNICATION_CENTER --mode $SCRAPER_MODE
+        python src/scrapers/github_scraper.py
 
     - name: Check for changes
       id: changes

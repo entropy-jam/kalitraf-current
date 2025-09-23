@@ -1,18 +1,55 @@
 {
-  "center": "BCCC",
+  "center_code": "BCCC",
   "center_name": "Border",
-  "last_updated": "2025-09-23T21:35:41.191791",
-  "incident_count": 16,
+  "incident_count": 18,
   "incidents": [
+    {
+      "id": "0200",
+      "time": "2:42 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "SR54 W / WOODMAN WO",
+      "location_desc": "SR54 W WOODMAN WO",
+      "area": "South FSP"
+    },
+    {
+      "id": "0487",
+      "time": "2:41 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / E St (southbay)",
+      "location_desc": "NB 5 NEAR E ST",
+      "area": "San Diego"
+    },
+    {
+      "id": "0486",
+      "time": "2:38 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "SR54 W / WOODMAN WO",
+      "location_desc": "SR54 W WOODMAN WO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0480",
+      "time": "2:29 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Balboa (garnet) So",
+      "location_desc": "I5 N BALBOA (GARNET) SO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0482",
+      "time": "2:29 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / I805 No (southbay)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0184",
       "time": "2:14 PM",
       "type": "Traffic Hazard",
       "location": "I8 E / SEVERIN DR ONR",
       "location_desc": "",
-      "area": "South FSP",
-      "scraped_at": "2025-09-23T21:35:41.191758",
-      "center": "BCCC"
+      "area": "South FSP"
     },
     {
       "id": "0463",
@@ -20,9 +57,7 @@
       "type": "Traffic Hazard",
       "location": "Sr125 S / I8 No",
       "location_desc": "SB 125 JNO 8",
-      "area": "El Cajon",
-      "scraped_at": "2025-09-23T21:35:41.191770",
-      "center": "BCCC"
+      "area": "El Cajon"
     },
     {
       "id": "0456",
@@ -30,9 +65,7 @@
       "type": "Aircraft Emergency",
       "location": "S Mission Rd / S Stagecoach Ln",
       "location_desc": "1/2 MILE JNO",
-      "area": "Oceanside",
-      "scraped_at": "2025-09-23T21:35:41.191772",
-      "center": "BCCC"
+      "area": "Oceanside"
     },
     {
       "id": "0439",
@@ -40,19 +73,7 @@
       "type": "Report of Fire",
       "location": "I15 N / Clinton Keith Rd Ofr",
       "location_desc": "",
-      "area": "Temecula",
-      "scraped_at": "2025-09-23T21:35:41.191773",
-      "center": "BCCC"
-    },
-    {
-      "id": "0443",
-      "time": "1:47 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "Sr94 W / Kenwood Wo",
-      "location_desc": "WB SR94 JWO KENWOOD",
-      "area": "El Cajon",
-      "scraped_at": "2025-09-23T21:35:41.191775",
-      "center": "BCCC"
+      "area": "Temecula"
     },
     {
       "id": "0421",
@@ -60,9 +81,7 @@
       "type": "Traffic Hazard",
       "location": "I215 S / Mccall No",
       "location_desc": "SB 215 JNO MCCALL",
-      "area": "Temecula",
-      "scraped_at": "2025-09-23T21:35:41.191776",
-      "center": "BCCC"
+      "area": "Temecula"
     },
     {
       "id": "0330",
@@ -70,9 +89,7 @@
       "type": "Traffic Hazard",
       "location": "I8 E / SEVERIN DR ONR",
       "location_desc": "",
-      "area": "El Cajon",
-      "scraped_at": "2025-09-23T21:35:41.191777",
-      "center": "BCCC"
+      "area": "El Cajon"
     },
     {
       "id": "0282",
@@ -80,19 +97,7 @@
       "type": "Trfc Collision-No Inj",
       "location": "I5 N / VIEWPOINT NO",
       "location_desc": "",
-      "area": "Oceanside",
-      "scraped_at": "2025-09-23T21:35:41.191779",
-      "center": "BCCC"
-    },
-    {
-      "id": "0113",
-      "time": "7:06 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Santee Ct",
-      "location_desc": "",
-      "area": "",
-      "scraped_at": "2025-09-23T21:35:41.191780",
-      "center": "BCCC"
+      "area": "Oceanside"
     },
     {
       "id": "0105",
@@ -100,19 +105,7 @@
       "type": "Assist CT with Maintenance",
       "location": "Ocn",
       "location_desc": "78 / COLLEGE TO SN MARCOS",
-      "area": "",
-      "scraped_at": "2025-09-23T21:35:41.191781",
-      "center": "BCCC"
-    },
-    {
-      "id": "0102",
-      "time": "6:52 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Santee Ct",
-      "location_desc": "",
-      "area": "",
-      "scraped_at": "2025-09-23T21:35:41.191783",
-      "center": "BCCC"
+      "area": ""
     },
     {
       "id": "0084",
@@ -120,9 +113,7 @@
       "type": "Assist CT with Maintenance",
       "location": "Ocn",
       "location_desc": "MZP2 MZP3 ENCAMPMENTS",
-      "area": "",
-      "scraped_at": "2025-09-23T21:35:41.191784",
-      "center": "BCCC"
+      "area": ""
     },
     {
       "id": "0061",
@@ -130,9 +121,7 @@
       "type": "Assist CT with Maintenance",
       "location": "Santee Ct",
       "location_desc": "",
-      "area": "",
-      "scraped_at": "2025-09-23T21:35:41.191785",
-      "center": "BCCC"
+      "area": ""
     },
     {
       "id": "0056",
@@ -140,9 +129,7 @@
       "type": "Assist CT with Maintenance",
       "location": "Hwy 76",
       "location_desc": "LAKE HENSHAW",
-      "area": "El Cajon",
-      "scraped_at": "2025-09-23T21:35:41.191786",
-      "center": "BCCC"
+      "area": "El Cajon"
     },
     {
       "id": "0023",
@@ -150,9 +137,7 @@
       "type": "SIG Alert",
       "location": "Sr76 / Pauma Valley Dr",
       "location_desc": "ATand T UNTIL APPROX 1000",
-      "area": "Oceanside",
-      "scraped_at": "2025-09-23T21:35:41.191788",
-      "center": "BCCC"
+      "area": "Oceanside"
     },
     {
       "id": "0002",
@@ -160,9 +145,8 @@
       "type": "Road/Weather Conditions",
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
-      "area": "BC",
-      "scraped_at": "2025-09-23T21:35:41.191789",
-      "center": "BCCC"
+      "area": "BC"
     }
-  ]
+  ],
+  "last_updated": "2025-09-23T17:45:19.638952"
 }
