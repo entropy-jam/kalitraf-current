@@ -136,7 +136,8 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add data/
-        git add *.json
+        git add active_incidents.json
+        git add 2025-*.json
         git commit -m "Update traffic incidents - $(date '+%Y-%m-%d %H:%M:%S')"
         git push
 
