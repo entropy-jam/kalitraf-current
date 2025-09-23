@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T20:50:51.024245",
-  "total_incidents": 81,
-  "new_incidents_today": 0,
+  "last_updated": "2025-09-23T20:57:43.391404",
+  "total_incidents": 84,
+  "new_incidents_today": 3,
   "incidents": [
     {
       "id": "0177",
@@ -814,6 +814,36 @@
       "location_desc": "I15 S RAINBOW SCALES NO (NB SCALES)",
       "area": "Temecula",
       "scraped_at": "2025-09-23T20:43:39.664872",
+      "center": "BCCC"
+    },
+    {
+      "id": "0444",
+      "time": "1:51 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Carlsbad Village Dr Onr",
+      "location_desc": "",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T20:57:43.391369",
+      "center": "BCCC"
+    },
+    {
+      "id": "0439",
+      "time": "1:49 PM",
+      "type": "Report of Fire",
+      "location": "I15 N / Clinton Keith Rd Ofr",
+      "location_desc": "",
+      "area": "Temecula",
+      "scraped_at": "2025-09-23T20:57:43.391374",
+      "center": "BCCC"
+    },
+    {
+      "id": "0443",
+      "time": "1:47 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr94 W / Kenwood Wo",
+      "location_desc": "WB SR94 JWO KENWOOD",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T20:57:43.391376",
       "center": "BCCC"
     }
   ]
