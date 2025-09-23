@@ -13,6 +13,14 @@ from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
+# Import email notifier
+try:
+    from email_notifier import EmailNotifier
+    EMAIL_AVAILABLE = True
+except ImportError:
+    EMAIL_AVAILABLE = False
+    print("Email notification not available. Install Gmail API dependencies.")
+
 # Option 1: Safari WebDriver (macOS built-in)
 # Option 2: Chrome WebDriver with proper ARM64 driver
 CHROMEDRIVER_PATH = "/Users/jace/Desktop/nick traffic/chromedriver-mac-arm64/chromedriver"  # Correct ARM64 driver
@@ -144,6 +152,43 @@ def save_active_incidents(incidents_data, center_code):
     except Exception as e:
         logging.error(f"Error saving active incidents: {str(e)}")
 
+def send_email_alert(changes, center_code, center_name):
+    """Send email alert for incident changes"""
+    if not EMAIL_AVAILABLE:
+        logging.info("Email notifications not available - skipping email alert")
+        return False
+    
+    try:
+        # Check if email notifications are enabled
+        if not os.getenv('ENABLE_EMAIL_NOTIFICATIONS', 'false').lower() == 'true':
+            logging.info("Email notifications disabled - skipping email alert")
+            return False
+        
+        # Check if there are actual changes
+        has_changes = (len(changes.get('new_incidents', [])) > 0 or 
+                      len(changes.get('removed_incidents', [])) > 0)
+        
+        if not has_changes:
+            logging.info("No changes detected - skipping email alert")
+            return False
+        
+        # Initialize email notifier
+        notifier = EmailNotifier()
+        
+        # Send alert
+        success = notifier.send_incident_alert(changes, center_name, center_code)
+        
+        if success:
+            logging.info(f"Email alert sent successfully for {center_name} center")
+        else:
+            logging.error("Failed to send email alert")
+        
+        return success
+        
+    except Exception as e:
+        logging.error(f"Error sending email alert: {str(e)}")
+        return False
+
 def append_daily_incidents(incidents_data, center_code):
     """Append unique incidents to daily JSON file"""
     try:
@@ -261,11 +306,22 @@ def scrape_chp_incidents(center_code="BCCC", mode="local"):
             
             # Save data based on mode
             if mode == "github_actions":
-                # GitHub Actions mode: save JSON files
+                # GitHub Actions mode: save JSON files and check for changes
+                global previous_incidents
+                changes = compare_incidents(previous_incidents, incidents_data)
+                
                 save_active_incidents(incidents_data, center_code)
                 append_daily_incidents(incidents_data, center_code)
                 print(f"✅ Saved {len(incidents_data)} incidents to JSON files")
                 logging.info(f"Found {len(incidents_data)} incidents - saved to JSON files")
+                
+                # Send email alert if there are changes
+                if changes and (len(changes.get('new_incidents', [])) > 0 or len(changes.get('removed_incidents', [])) > 0):
+                    print("📧 Sending email alert for changes...")
+                    send_email_alert(changes, center_code, center_name)
+                
+                # Update previous incidents for next comparison
+                previous_incidents = incidents_data.copy()
             else:
                 # Local mode: save CSV and show diff
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -287,6 +343,10 @@ def scrape_chp_incidents(center_code="BCCC", mode="local"):
                         print("🔄 CHANGES DETECTED:")
                         print_incident_summary(changes["new_incidents"], "New Incidents")
                         print_incident_summary(changes["removed_incidents"], "Resolved Incidents")
+                        
+                        # Send email alert for changes
+                        print("📧 Sending email alert for changes...")
+                        send_email_alert(changes, center_code, center_name)
                     else:
                         print("✅ No changes detected - same incidents as previous scrape")
                 

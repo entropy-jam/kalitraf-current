@@ -88,11 +88,20 @@ jobs:
         os.system('chromedriver --version')
         "
 
+    - name: Set up Gmail credentials
+      run: |
+        # Decode Gmail credentials from GitHub secret
+        echo "${{ secrets.GMAIL_CREDENTIALS }}" | base64 -d > gmail_credentials.json
+        echo "Gmail credentials set up successfully"
+
     - name: Set environment variables
       run: |
         echo "COMMUNICATION_CENTER=${{ github.event.inputs.communication_center || 'BCCC' }}" >> $GITHUB_ENV
         echo "RUN_ONCE=${{ github.event.inputs.run_once || 'false' }}" >> $GITHUB_ENV
         echo "SCRAPER_MODE=github_actions" >> $GITHUB_ENV
+        echo "ENABLE_EMAIL_NOTIFICATIONS=true" >> $GITHUB_ENV
+        echo "GMAIL_SENDER_EMAIL=${{ secrets.GMAIL_SENDER_EMAIL || 'jacearnoldmail@gmail.com' }}" >> $GITHUB_ENV
+        echo "GMAIL_RECIPIENT_EMAIL=${{ secrets.GMAIL_RECIPIENT_EMAIL || 'jacearnoldmail@gmail.com' }}" >> $GITHUB_ENV
 
     - name: Run traffic scraper
       run: |
