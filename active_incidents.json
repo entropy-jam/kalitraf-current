@@ -1,19 +1,9 @@
 {
   "center": "BCCC",
   "center_name": "Border",
-  "last_updated": "2025-09-23T17:36:26.750784",
-  "incident_count": 16,
+  "last_updated": "2025-09-23T17:43:39.241603",
+  "incident_count": 15,
   "incidents": [
-    {
-      "id": "0122",
-      "time": "10:33 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Carlsbad Village Dr Onr",
-      "location_desc": "",
-      "area": "North FSP",
-      "scraped_at": "2025-09-23T17:36:26.750749",
-      "center": "BCCC"
-    },
     {
       "id": "0271",
       "time": "10:26 AM",
@@ -21,7 +11,7 @@
       "location": "I8 E / Buckman Springs Wo",
       "location_desc": "EB 8 JWO BUCKMAN SPRINGS",
       "area": "El Cajon",
-      "scraped_at": "2025-09-23T17:36:26.750762",
+      "scraped_at": "2025-09-23T17:43:39.241567",
       "center": "BCCC"
     },
     {
@@ -31,7 +21,7 @@
       "location": "I5 N / Birmingham Dr Ofr",
       "location_desc": "",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T17:36:26.750764",
+      "scraped_at": "2025-09-23T17:43:39.241581",
       "center": "BCCC"
     },
     {
@@ -41,7 +31,7 @@
       "location": "Sr78 W / College Wo",
       "location_desc": "SR78 W COLLEGE WO (PLAZA)",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T17:36:26.750766",
+      "scraped_at": "2025-09-23T17:43:39.241583",
       "center": "BCCC"
     },
     {
@@ -51,7 +41,7 @@
       "location": "Old Hwy 395 / 5th St",
       "location_desc": "NB OLD 395 APPROX 1/4 MILE JNO 5TH",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T17:36:26.750767",
+      "scraped_at": "2025-09-23T17:43:39.241586",
       "center": "BCCC"
     },
     {
@@ -61,7 +51,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:36:26.750769",
+      "scraped_at": "2025-09-23T17:43:39.241587",
       "center": "BCCC"
     },
     {
@@ -71,7 +61,7 @@
       "location": "Ocn",
       "location_desc": "78 / COLLEGE TO SN MARCOS",
       "area": "",
-      "scraped_at": "2025-09-23T17:36:26.750770",
+      "scraped_at": "2025-09-23T17:43:39.241589",
       "center": "BCCC"
     },
     {
@@ -81,7 +71,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:36:26.750771",
+      "scraped_at": "2025-09-23T17:43:39.241590",
       "center": "BCCC"
     },
     {
@@ -91,7 +81,7 @@
       "location": "Ocn",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:36:26.750773",
+      "scraped_at": "2025-09-23T17:43:39.241592",
       "center": "BCCC"
     },
     {
@@ -101,7 +91,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:36:26.750774",
+      "scraped_at": "2025-09-23T17:43:39.241593",
       "center": "BCCC"
     },
     {
@@ -111,7 +101,7 @@
       "location": "Ocn",
       "location_desc": "MZP2 MZP3 ENCAMPMENTS",
       "area": "",
-      "scraped_at": "2025-09-23T17:36:26.750775",
+      "scraped_at": "2025-09-23T17:43:39.241594",
       "center": "BCCC"
     },
     {
@@ -121,7 +111,7 @@
       "location": "5902 Kearny Villa Rd",
       "location_desc": "STRIPING DETAIL W/KM CT",
       "area": "San Diego",
-      "scraped_at": "2025-09-23T17:36:26.750777",
+      "scraped_at": "2025-09-23T17:43:39.241596",
       "center": "BCCC"
     },
     {
@@ -131,7 +121,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:36:26.750778",
+      "scraped_at": "2025-09-23T17:43:39.241597",
       "center": "BCCC"
     },
     {
@@ -141,7 +131,7 @@
       "location": "Hwy 76",
       "location_desc": "LAKE HENSHAW",
       "area": "El Cajon",
-      "scraped_at": "2025-09-23T17:36:26.750779",
+      "scraped_at": "2025-09-23T17:43:39.241599",
       "center": "BCCC"
     },
     {
@@ -151,7 +141,7 @@
       "location": "Sr76 / Pauma Valley Dr",
       "location_desc": "ATand T UNTIL APPROX 1000",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T17:36:26.750780",
+      "scraped_at": "2025-09-23T17:43:39.241600",
       "center": "BCCC"
     },
     {
@@ -161,7 +151,7 @@
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
       "area": "BC",
-      "scraped_at": "2025-09-23T17:36:26.750782",
+      "scraped_at": "2025-09-23T17:43:39.241602",
       "center": "BCCC"
     }
   ]
