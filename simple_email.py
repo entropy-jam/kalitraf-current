@@ -1,117 +1,55 @@
 #!/usr/bin/env python3
 """
-Email notification system for CHP traffic incidents using Gmail API
+Simple SMTP email notification system (no OAuth required)
+Uses Gmail's App Password instead of OAuth
 """
+import smtplib
 import os
-import json
-import base64
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 import logging
 
-try:
-    from google.auth.transport.requests import Request
-    from google.oauth2.credentials import Credentials
-    from google_auth_oauthlib.flow import InstalledAppFlow
-    from googleapiclient.discovery import build
-    from googleapiclient.errors import HttpError
-    GMAIL_AVAILABLE = True
-except ImportError:
-    GMAIL_AVAILABLE = False
-    print("Gmail API libraries not installed. Install with: pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client")
-
-# Gmail API scopes
-SCOPES = ['https://www.googleapis.com/auth/gmail.send']
-
-class EmailNotifier:
-    def __init__(self, credentials_file=None, token_file=None):
-        # Import config
-        try:
-            from config import get_gmail_config
-            config = get_gmail_config()
-            self.sender_email = config['sender_email']
-            self.recipient_email = config['recipient_email']
-            self.api_key = config['api_key']
-        except ImportError:
-            # Fallback to environment variables
-            self.sender_email = os.getenv('GMAIL_SENDER_EMAIL', 'jacearnoldmail@gmail.com')
-            self.recipient_email = os.getenv('GMAIL_RECIPIENT_EMAIL', 'jacearnoldmail@gmail.com')
-            self.api_key = os.getenv('GMAIL_API_KEY', '')
+class SimpleEmailNotifier:
+    def __init__(self):
+        self.sender_email = os.getenv('GMAIL_SENDER_EMAIL', 'jacearnoldmail@gmail.com')
+        self.recipient_email = os.getenv('GMAIL_RECIPIENT_EMAIL', 'jacearnoldmail@gmail.com')
+        # Use App Password instead of regular password
+        self.app_password = os.getenv('GMAIL_APP_PASSWORD', '')
         
-        self.credentials_file = credentials_file or os.getenv('GMAIL_CREDENTIALS_FILE', 'gmail_credentials.json')
-        self.token_file = token_file or os.getenv('GMAIL_TOKEN_FILE', 'gmail_token.json')
-        self.service = None
-        
-    def authenticate(self):
-        """Authenticate with Gmail API"""
-        if not GMAIL_AVAILABLE:
-            logging.error("Gmail API libraries not available")
-            return False
-            
-        creds = None
-        
-        # Load existing token
-        if os.path.exists(self.token_file):
-            creds = Credentials.from_authorized_user_file(self.token_file, SCOPES)
-        
-        # If no valid credentials, try to get new ones
-        if not creds or not creds.valid:
-            if creds and creds.expired and creds.refresh_token:
-                creds.refresh(Request())
-            else:
-                if not os.path.exists(self.credentials_file):
-                    logging.error(f"Credentials file not found: {self.credentials_file}")
-                    return False
-                    
-                flow = InstalledAppFlow.from_client_secrets_file(
-                    self.credentials_file, SCOPES)
-                creds = flow.run_local_server(port=0)
-            
-            # Save credentials for next run
-            with open(self.token_file, 'w') as token:
-                token.write(creds.to_json())
-        
-        try:
-            self.service = build('gmail', 'v1', credentials=creds)
-            logging.info("Gmail API authenticated successfully")
-            return True
-        except Exception as e:
-            logging.error(f"Failed to authenticate with Gmail API: {e}")
-            return False
-    
-    def create_message(self, subject, body, to_email):
-        """Create email message"""
-        message = MIMEMultipart()
-        message['to'] = to_email
-        message['from'] = self.sender_email
-        message['subject'] = subject
-        
-        # Add HTML body
-        message.attach(MIMEText(body, 'html'))
-        
-        # Encode message
-        raw_message = base64.urlsafe_b64encode(message.as_bytes()).decode('utf-8')
-        return {'raw': raw_message}
-    
     def send_email(self, subject, body, to_email=None):
-        """Send email notification"""
-        if not self.service:
-            if not self.authenticate():
-                logging.error("Failed to authenticate with Gmail API")
-                return False
-        
+        """Send email using SMTP"""
+        if not self.app_password:
+            logging.error("Gmail App Password not set")
+            return False
+            
         to_email = to_email or self.recipient_email
         
         try:
-            message = self.create_message(subject, body, to_email)
-            self.service.users().messages().send(
-                userId='me', body=message
-            ).execute()
+            # Create message
+            msg = MIMEMultipart()
+            msg['From'] = self.sender_email
+            msg['To'] = to_email
+            msg['Subject'] = subject
+            
+            # Add body
+            msg.attach(MIMEText(body, 'html'))
+            
+            # Connect to Gmail SMTP
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(self.sender_email, self.app_password)
+            
+            # Send email
+            text = msg.as_string()
+            server.sendmail(self.sender_email, to_email, text)
+            server.quit()
+            
             logging.info(f"Email sent successfully to {to_email}")
             return True
-        except HttpError as error:
-            logging.error(f"Failed to send email: {error}")
+            
+        except Exception as e:
+            logging.error(f"Failed to send email: {e}")
             return False
     
     def send_incident_alert(self, changes, center_name, center_code):
@@ -225,20 +163,15 @@ class EmailNotifier:
         return self.send_email(subject, body)
 
 def main():
-    """Test the email notification system"""
-    notifier = EmailNotifier()
+    """Test the simple email notification system"""
+    notifier = SimpleEmailNotifier()
     
-    # Test authentication
-    if notifier.authenticate():
-        print("✅ Gmail API authentication successful")
-        
-        # Send test email
-        if notifier.send_test_email():
-            print("✅ Test email sent successfully")
-        else:
-            print("❌ Failed to send test email")
+    # Send test email
+    if notifier.send_test_email():
+        print("✅ Test email sent successfully")
     else:
-        print("❌ Gmail API authentication failed")
+        print("❌ Failed to send test email")
+        print("Make sure you have set GMAIL_APP_PASSWORD environment variable")
 
 if __name__ == "__main__":
     main()

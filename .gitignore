@@ -1,12 +1,11 @@
-# Gmail API credentials
+# Gmail credentials and sensitive files
 gmail_credentials.json
 gmail_token.json
 gmail_credentials_base64.txt
-
-# API Keys
-.env
+config.py
 *.key
 api_keys.txt
+.env
 
 # Python
 __pycache__/

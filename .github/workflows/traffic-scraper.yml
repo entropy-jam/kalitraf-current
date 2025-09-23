@@ -133,9 +133,7 @@ jobs:
 
     - name: Set up Gmail credentials
       run: |
-        # Decode Gmail credentials from GitHub secret
-        echo "${{ secrets.GMAIL_CREDENTIALS }}" | base64 -d > gmail_credentials.json
-        echo "Gmail credentials set up successfully"
+        echo "Gmail App Password configured via GitHub Secrets"
 
     - name: Set environment variables
       run: |
@@ -145,6 +143,7 @@ jobs:
         echo "ENABLE_EMAIL_NOTIFICATIONS=true" >> $GITHUB_ENV
         echo "GMAIL_SENDER_EMAIL=${{ secrets.GMAIL_SENDER_EMAIL || 'jacearnoldmail@gmail.com' }}" >> $GITHUB_ENV
         echo "GMAIL_RECIPIENT_EMAIL=${{ secrets.GMAIL_RECIPIENT_EMAIL || 'jacearnoldmail@gmail.com' }}" >> $GITHUB_ENV
+        echo "GMAIL_APP_PASSWORD=${{ secrets.GMAIL_APP_PASSWORD }}" >> $GITHUB_ENV
 
     - name: Run traffic scraper
       run: |

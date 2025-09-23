@@ -1,5 +1,4 @@
 import time
-import csv
 import json
 import os
 import argparse
@@ -7,7 +6,6 @@ import logging
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.safari.service import Service as SafariService
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -15,11 +13,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # Import email notifier
 try:
-    from email_notifier import EmailNotifier
+    from simple_email import SimpleEmailNotifier
     EMAIL_AVAILABLE = True
 except ImportError:
     EMAIL_AVAILABLE = False
-    print("Email notification not available. Install Gmail API dependencies.")
+    print("Email notifications not available - simple_email module not found")
 
 # Option 1: Safari WebDriver (macOS built-in)
 # Option 2: Chrome WebDriver with proper ARM64 driver
@@ -101,21 +99,6 @@ def extract_incidents_from_table(driver):
         logging.error(f"Error extracting incidents: {str(e)}")
         return []
 
-def save_incidents_to_csv(incidents_data, filename):
-    """Save incident data to CSV file"""
-    try:
-        headers = ['Details', 'No.', 'Time', 'Type', 'Location', 'Location Desc.', 'Area']
-        
-        with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
-            writer = csv.writer(csvfile)
-            writer.writerow(headers)
-            
-            for row in incidents_data:
-                writer.writerow(row)
-        
-        logging.info(f"Saved {len(incidents_data)} incidents to {filename}")
-    except Exception as e:
-        logging.error(f"Error saving to CSV: {str(e)}")
 
 def incidents_to_json(incidents_data, center_code):
     """Convert incidents data to JSON format"""
@@ -177,7 +160,7 @@ def send_email_alert(changes, center_code, center_name):
             return False
         
         # Initialize email notifier
-        notifier = EmailNotifier()
+        notifier = SimpleEmailNotifier()
         
         # Send alert
         success = notifier.send_incident_alert(changes, center_name, center_code)
@@ -340,12 +323,7 @@ def scrape_chp_incidents(center_code="BCCC", mode="local"):
                 # Update previous incidents for next comparison
                 previous_incidents = incidents_data.copy()
             else:
-                # Local mode: save CSV and show diff
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                csv_filename = f"chp_{center_code.lower()}_incidents_{timestamp}.csv"
-                save_incidents_to_csv(incidents_data, csv_filename)
-                
-                # Print status and changes
+                # Local mode: show diff and save JSON
                 print(f"\n🕐 [{datetime.now().strftime('%H:%M:%S')}] Scrape - {len(incidents_data)} incidents found")
                 
                 if previous_incidents is None:
@@ -367,8 +345,11 @@ def scrape_chp_incidents(center_code="BCCC", mode="local"):
                     else:
                         print("✅ No changes detected - same incidents as previous scrape")
                 
-                print(f"💾 Data saved to: {csv_filename}")
-                logging.info(f"Found {len(incidents_data)} incidents - saved to {csv_filename}")
+                # Save JSON files
+                save_active_incidents(incidents_data, center_code)
+                append_daily_incidents(incidents_data, center_code)
+                print(f"✅ Saved {len(incidents_data)} incidents to JSON files")
+                logging.info(f"Found {len(incidents_data)} incidents - saved to JSON files")
                 
                 # Update previous incidents for next comparison
                 previous_incidents = incidents_data.copy()
