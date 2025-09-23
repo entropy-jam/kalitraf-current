@@ -1,8 +1,48 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 17,
+  "incident_count": 22,
   "incidents": [
+    {
+      "id": "0256",
+      "time": "4:35 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr78 W / Vista Village Dr Ofr",
+      "location_desc": "WB SR78 ON VISTA VILLAGE DR OFR",
+      "area": "North FSP"
+    },
+    {
+      "id": "0255",
+      "time": "4:32 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr52 E / Kearny Villa Rd Onr",
+      "location_desc": "",
+      "area": "North FSP"
+    },
+    {
+      "id": "0254",
+      "time": "4:32 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / Sr56 Bypass",
+      "location_desc": "",
+      "area": "North FSP"
+    },
+    {
+      "id": "0613",
+      "time": "4:30 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr52 E / Kearny Villa Rd Onr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0615",
+      "time": "4:29 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I805 N / Sr56 Bypass",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0252",
       "time": "4:29 PM",
@@ -20,20 +60,20 @@
       "area": "San Diego"
     },
     {
+      "id": "0617",
+      "time": "4:27 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr78 W / Vista Village Dr Ofr",
+      "location_desc": "WB SR78 ON VISTA VILLAGE DR OFR",
+      "area": "Oceanside"
+    },
+    {
       "id": "0249",
       "time": "4:25 PM",
       "type": "Traffic Hazard",
       "location": "I15 S / Balboa No (tierrasanta)",
       "location_desc": "I15 S BALBOA NO (TIERRASANTA)",
       "area": "North FSP"
-    },
-    {
-      "id": "0605",
-      "time": "4:24 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Balboa No (tierrasanta)",
-      "location_desc": "I15 S BALBOA NO (TIERRASANTA)",
-      "area": "San Diego"
     },
     {
       "id": "0609",
@@ -140,5 +180,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-23T23:31:30.032537"
+  "last_updated": "2025-09-23T23:39:44.424669"
 }
