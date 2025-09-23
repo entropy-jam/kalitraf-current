@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T19:57:26.067111",
-  "total_incidents": 65,
-  "new_incidents_today": 0,
+  "last_updated": "2025-09-23T20:16:56.001760",
+  "total_incidents": 71,
+  "new_incidents_today": 6,
   "incidents": [
     {
       "id": "0177",
@@ -654,6 +654,66 @@
       "location_desc": "I8 E SEVERIN (FUERTE)",
       "area": "El Cajon",
       "scraped_at": "2025-09-23T19:50:43.344773",
+      "center": "BCCC"
+    },
+    {
+      "id": "0165",
+      "time": "1:13 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Plaza Blvd So",
+      "location_desc": "I5 N PLAZA BLVD SO",
+      "area": "BCFSP",
+      "scraped_at": "2025-09-23T20:16:56.001719",
+      "center": "BCCC"
+    },
+    {
+      "id": "0403",
+      "time": "1:10 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Plaza Blvd So",
+      "location_desc": "I5 N PLAZA BLVD SO",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T20:16:56.001724",
+      "center": "BCCC"
+    },
+    {
+      "id": "0405",
+      "time": "1:09 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / Main_division No (national City)",
+      "location_desc": "I5 N MAIN_DIVISION NO (NATIONAL CITY)",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T20:16:56.001726",
+      "center": "BCCC"
+    },
+    {
+      "id": "0399",
+      "time": "1:07 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr52 W / Cuyamaca Wo",
+      "location_desc": "SR52 W CUYAMACA WO",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T20:16:56.001727",
+      "center": "BCCC"
+    },
+    {
+      "id": "0393",
+      "time": "1:00 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Carlsbad Village Dr Ofr",
+      "location_desc": "",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T20:16:56.001732",
+      "center": "BCCC"
+    },
+    {
+      "id": "0391",
+      "time": "12:53 PM",
+      "type": "Traffic Hazard",
+      "location": "Reche Rd / Gird Rd",
+      "location_desc": "WB RECHE 1 MILE JEO GIRD",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T20:16:56.001734",
       "center": "BCCC"
     }
   ]
