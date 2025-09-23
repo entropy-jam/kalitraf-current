@@ -1,9 +1,29 @@
 {
   "center": "BCCC",
   "center_name": "Border",
-  "last_updated": "2025-09-23T17:27:53.239698",
-  "incident_count": 15,
+  "last_updated": "2025-09-23T17:36:26.750784",
+  "incident_count": 16,
   "incidents": [
+    {
+      "id": "0122",
+      "time": "10:33 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Carlsbad Village Dr Onr",
+      "location_desc": "",
+      "area": "North FSP",
+      "scraped_at": "2025-09-23T17:36:26.750749",
+      "center": "BCCC"
+    },
+    {
+      "id": "0271",
+      "time": "10:26 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / Buckman Springs Wo",
+      "location_desc": "EB 8 JWO BUCKMAN SPRINGS",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T17:36:26.750762",
+      "center": "BCCC"
+    },
     {
       "id": "0265",
       "time": "10:16 AM",
@@ -11,7 +31,7 @@
       "location": "I5 N / Birmingham Dr Ofr",
       "location_desc": "",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T17:27:53.239664",
+      "scraped_at": "2025-09-23T17:36:26.750764",
       "center": "BCCC"
     },
     {
@@ -21,17 +41,7 @@
       "location": "Sr78 W / College Wo",
       "location_desc": "SR78 W COLLEGE WO (PLAZA)",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T17:27:53.239676",
-      "center": "BCCC"
-    },
-    {
-      "id": "0224",
-      "time": "9:15 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "SR56 E / CARMEL VALLEY EO",
-      "location_desc": "BIKE TRAIL",
-      "area": "San Diego",
-      "scraped_at": "2025-09-23T17:27:53.239678",
+      "scraped_at": "2025-09-23T17:36:26.750766",
       "center": "BCCC"
     },
     {
@@ -41,7 +51,7 @@
       "location": "Old Hwy 395 / 5th St",
       "location_desc": "NB OLD 395 APPROX 1/4 MILE JNO 5TH",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T17:27:53.239680",
+      "scraped_at": "2025-09-23T17:36:26.750767",
       "center": "BCCC"
     },
     {
@@ -51,7 +61,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:27:53.239681",
+      "scraped_at": "2025-09-23T17:36:26.750769",
       "center": "BCCC"
     },
     {
@@ -61,7 +71,7 @@
       "location": "Ocn",
       "location_desc": "78 / COLLEGE TO SN MARCOS",
       "area": "",
-      "scraped_at": "2025-09-23T17:27:53.239683",
+      "scraped_at": "2025-09-23T17:36:26.750770",
       "center": "BCCC"
     },
     {
@@ -71,7 +81,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:27:53.239684",
+      "scraped_at": "2025-09-23T17:36:26.750771",
       "center": "BCCC"
     },
     {
@@ -81,7 +91,7 @@
       "location": "Ocn",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:27:53.239686",
+      "scraped_at": "2025-09-23T17:36:26.750773",
       "center": "BCCC"
     },
     {
@@ -91,7 +101,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:27:53.239687",
+      "scraped_at": "2025-09-23T17:36:26.750774",
       "center": "BCCC"
     },
     {
@@ -101,7 +111,7 @@
       "location": "Ocn",
       "location_desc": "MZP2 MZP3 ENCAMPMENTS",
       "area": "",
-      "scraped_at": "2025-09-23T17:27:53.239689",
+      "scraped_at": "2025-09-23T17:36:26.750775",
       "center": "BCCC"
     },
     {
@@ -111,7 +121,7 @@
       "location": "5902 Kearny Villa Rd",
       "location_desc": "STRIPING DETAIL W/KM CT",
       "area": "San Diego",
-      "scraped_at": "2025-09-23T17:27:53.239690",
+      "scraped_at": "2025-09-23T17:36:26.750777",
       "center": "BCCC"
     },
     {
@@ -121,7 +131,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T17:27:53.239692",
+      "scraped_at": "2025-09-23T17:36:26.750778",
       "center": "BCCC"
     },
     {
@@ -131,7 +141,7 @@
       "location": "Hwy 76",
       "location_desc": "LAKE HENSHAW",
       "area": "El Cajon",
-      "scraped_at": "2025-09-23T17:27:53.239693",
+      "scraped_at": "2025-09-23T17:36:26.750779",
       "center": "BCCC"
     },
     {
@@ -141,7 +151,7 @@
       "location": "Sr76 / Pauma Valley Dr",
       "location_desc": "ATand T UNTIL APPROX 1000",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T17:27:53.239694",
+      "scraped_at": "2025-09-23T17:36:26.750780",
       "center": "BCCC"
     },
     {
@@ -151,7 +161,7 @@
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
       "area": "BC",
-      "scraped_at": "2025-09-23T17:27:53.239696",
+      "scraped_at": "2025-09-23T17:36:26.750782",
       "center": "BCCC"
     }
   ]
