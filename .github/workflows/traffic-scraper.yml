@@ -1,7 +1,7 @@
 name: CHP Traffic Incident Scraper
 
 on:
-  # Run every minute for real-time monitoring
+  # Run every minute for real-time monitoring (GitHub Actions minimum)
   schedule:
     - cron: '* * * * *'
   
