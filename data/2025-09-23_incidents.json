@@ -1,8 +1,8 @@
 {
-  "center_code": "SACC",
-  "center_name": "Sacramento",
+  "center_code": "BCCC",
+  "center_name": "Border",
   "date": "2025-09-23",
-  "total_incidents": 166,
+  "total_incidents": 172,
   "incidents": [
     {
       "id": "0177",
@@ -1509,7 +1509,55 @@
       "location": "S Watt Ave / Jackson Rd",
       "location_desc": "SB JNO",
       "area": "East Sac"
+    },
+    {
+      "id": "0600",
+      "time": "4:19 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "16100 Via De Santa Fe",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0602",
+      "time": "4:18 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr15 S / I805 No",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0592",
+      "time": "4:09 PM",
+      "type": "Traffic Hazard",
+      "location": "150 Mmwildcat Canyon Rd 1.50",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0584",
+      "time": "4:09 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Calle Verde / Avocado Blvd",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0583",
+      "time": "4:06 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Woodside Ave / Maine Ave",
+      "location_desc": "12419 WOODSIDE -PLANET FITNESS",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0571",
+      "time": "3:54 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Tenaja Rd / Clinton Keith Rd",
+      "location_desc": "",
+      "area": "Temecula"
     }
   ],
-  "last_updated": "2025-09-23T18:12:40.039573"
+  "last_updated": "2025-09-23T23:23:50.748862"
 }

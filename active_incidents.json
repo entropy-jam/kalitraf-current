@@ -1,160 +1,104 @@
 {
-  "center_code": "SACC",
-  "center_name": "Sacramento",
-  "incident_count": 19,
+  "center_code": "BCCC",
+  "center_name": "Border",
+  "incident_count": 12,
   "incidents": [
     {
-      "id": "0613",
-      "time": "3:09 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Watt Ave / Tembrook Dr",
+      "id": "0247",
+      "time": "4:21 PM",
+      "type": "Trfc Collision-1141Enrt",
+      "location": "Sr15 S / I805 No",
       "location_desc": "",
-      "area": "North Sac"
+      "area": "North FSP"
     },
     {
-      "id": "0609",
-      "time": "3:07 PM",
+      "id": "0600",
+      "time": "4:19 PM",
       "type": "Trfc Collision-1141 Enrt",
-      "location": "Grass Valley Hwy / Dry Creek Rd",
-      "location_desc": "NB 49 JSO DRY CREEK",
-      "area": "Auburn"
-    },
-    {
-      "id": "0608",
-      "time": "3:04 PM",
-      "type": "Report of Fire",
-      "location": "Stockton Blvd / Mcmahon Dr",
+      "location": "16100 Via De Santa Fe",
       "location_desc": "",
-      "area": "South Sac"
+      "area": "Oceanside"
     },
     {
-      "id": "0038",
-      "time": "3:03 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Us50 E / Howe Ave",
-      "location_desc": "EB 50 AT HOWE",
-      "area": "South Sac FSP"
-    },
-    {
-      "id": "0601",
-      "time": "3:00 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "S Watt Ave / Jackson Rd",
-      "location_desc": "SB JNO",
-      "area": "East Sac"
-    },
-    {
-      "id": "0037",
-      "time": "3:00 PM",
-      "type": "Traffic Hazard",
-      "location": "Us50 E / 15th St Ofr",
-      "location_desc": "",
-      "area": "South Sac FSP"
-    },
-    {
-      "id": "0597",
-      "time": "3:00 PM",
-      "type": "Traffic Hazard",
-      "location": "Us50 W / Jwo 65th St",
-      "location_desc": "JWO",
-      "area": "South Sac"
-    },
-    {
-      "id": "0036",
-      "time": "2:57 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr99 N / Jso Mack Rd",
-      "location_desc": "NB 99 JSO MACK",
-      "area": "South Sac FSP"
-    },
-    {
-      "id": "0595",
-      "time": "2:56 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Us50 E / Howe Ave",
-      "location_desc": "EB 50 AT HOWE",
-      "area": "South Sac"
-    },
-    {
-      "id": "0585",
-      "time": "2:49 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr193 / Chili Bar Ct",
-      "location_desc": "",
-      "area": "Placerville"
-    },
-    {
-      "id": "0568",
-      "time": "2:29 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "5545 Marconi Ave",
-      "location_desc": "IN PLOT",
-      "area": "North Sac"
-    },
-    {
-      "id": "0552",
-      "time": "2:16 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Arden Way / Eastern Ave",
-      "location_desc": "WHOLE FOODS",
-      "area": "North Sac"
-    },
-    {
-      "id": "0543",
-      "time": "2:14 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Bypass",
-      "location_desc": "SB 5 AT BYPASS MIDSPAN",
-      "area": "Woodland"
-    },
-    {
-      "id": "0523",
-      "time": "2:08 PM",
+      "id": "0602",
+      "time": "4:18 PM",
       "type": "Trfc Collision-1141 Enrt",
-      "location": "Cr23 / Cr87b",
-      "location_desc": "BTWN CR 87B / CR 89",
-      "area": "Woodland"
+      "location": "Sr15 S / I805 No",
+      "location_desc": "",
+      "area": "San Diego"
     },
     {
-      "id": "0517",
-      "time": "2:01 PM",
+      "id": "0592",
+      "time": "4:09 PM",
+      "type": "Traffic Hazard",
+      "location": "150 Mmwildcat Canyon Rd 1.50",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0584",
+      "time": "4:09 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Calle Verde / Avocado Blvd",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0583",
+      "time": "4:06 PM",
       "type": "Hit and Run No Injuries",
-      "location": "Lincolnshire Dr / Florin Rd",
-      "location_desc": "OCCURD WB FLORIN JEO FRANKLIN",
-      "area": "South Sac"
+      "location": "Woodside Ave / Maine Ave",
+      "location_desc": "12419 WOODSIDE -PLANET FITNESS",
+      "area": "El Cajon"
     },
     {
-      "id": "0479",
-      "time": "1:39 PM",
+      "id": "0571",
+      "time": "3:54 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Tenaja Rd / Clinton Keith Rd",
+      "location_desc": "",
+      "area": "Temecula"
+    },
+    {
+      "id": "0456",
+      "time": "2:03 PM",
+      "type": "Aircraft Emergency",
+      "location": "S Mission Rd / S Stagecoach Ln",
+      "location_desc": "1/2 MILE JNO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0282",
+      "time": "10:59 AM",
       "type": "Trfc Collision-No Inj",
-      "location": "Grass Valley Hwy / Lone Star Rd",
-      "location_desc": "NB JNO",
-      "area": "Auburn"
+      "location": "I5 N / VIEWPOINT NO",
+      "location_desc": "",
+      "area": "Oceanside"
     },
     {
-      "id": "0119",
-      "time": "6:14 AM",
+      "id": "0061",
+      "time": "5:50 AM",
       "type": "Assist CT with Maintenance",
-      "location": "11363 Mccourtney Rd",
-      "location_desc": "*ROLLING MZP*",
-      "area": "SA"
-    },
-    {
-      "id": "0113",
-      "time": "6:11 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Blairs Ln",
-      "location_desc": "CALTRANS PLACERVILLE YARD",
+      "location": "Santee Ct",
+      "location_desc": "",
       "area": ""
     },
     {
-      "id": "0899",
-      "time": "6:04 PM",
-      "type": "Assist with Construction",
-      "location": "Sr99 N / Florin Rd",
-      "location_desc": "NB 99 AT FLORIN",
-      "area": "South Sac"
+      "id": "0023",
+      "time": "1:17 AM",
+      "type": "SIG Alert",
+      "location": "Sr76 / Pauma Valley Dr",
+      "location_desc": "ATand T UNTIL APPROX 1000",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0002",
+      "time": "12:00 AM",
+      "type": "Road/Weather Conditions",
+      "location": "Media Log",
+      "location_desc": "NEWSWORTHY INCIDENTS",
+      "area": "BC"
     }
   ],
-  "last_updated": "2025-09-23T18:12:40.037777"
+  "last_updated": "2025-09-23T23:23:50.747072"
 }
