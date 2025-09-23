@@ -373,7 +373,19 @@
         function updateLastUpdated(timestamp) {
             const lastUpdatedElement = document.getElementById('lastUpdated');
             const date = new Date(timestamp);
-            lastUpdatedElement.textContent = `Last updated: ${date.toLocaleString()}`;
+            // Convert to PST timezone and add PST suffix
+            const pstDate = new Date(date.toLocaleString("en-US", {timeZone: "America/Los_Angeles"}));
+            const timeString = pstDate.toLocaleString("en-US", {
+                timeZone: "America/Los_Angeles",
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+            lastUpdatedElement.textContent = `Last updated: ${timeString} PST`;
         }
         
         function showError(message) {
