@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T19:00:45.513391",
-  "total_incidents": 55,
-  "new_incidents_today": 1,
+  "last_updated": "2025-09-23T19:18:44.279806",
+  "total_incidents": 57,
+  "new_incidents_today": 2,
   "incidents": [
     {
       "id": "0177",
@@ -554,6 +554,26 @@
       "location_desc": "I5 N NOBEL SO",
       "area": "San Diego",
       "scraped_at": "2025-09-23T19:00:45.513356",
+      "center": "BCCC"
+    },
+    {
+      "id": "0360",
+      "time": "12:09 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I805 S / Home No",
+      "location_desc": "I805 S HOME NO",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T19:18:44.279777",
+      "center": "BCCC"
+    },
+    {
+      "id": "0361",
+      "time": "12:08 PM",
+      "type": "Provide Traffic Control",
+      "location": "I5 S / Cannon So",
+      "location_desc": "SB 5 JSO CANNON",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T19:18:44.279781",
       "center": "BCCC"
     }
   ]
