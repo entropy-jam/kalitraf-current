@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "total_incidents": 183,
+  "total_incidents": 185,
   "incidents": [
     {
       "id": "0177",
@@ -1645,7 +1645,23 @@
       "location": "Sr78 W / Vista Village Dr Ofr",
       "location_desc": "WB SR78 ON VISTA VILLAGE DR OFR",
       "area": "Oceanside"
+    },
+    {
+      "id": "0622",
+      "time": "4:41 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr67 S / I8 No",
+      "location_desc": "SB 67 JNO 8",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0623",
+      "time": "4:40 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr125 S / I8 So",
+      "location_desc": "SB 125 JSO I8",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-23T23:39:44.426644"
+  "last_updated": "2025-09-23T23:46:37.623769"
 }

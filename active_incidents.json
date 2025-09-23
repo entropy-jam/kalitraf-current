@@ -4,6 +4,22 @@
   "incident_count": 22,
   "incidents": [
     {
+      "id": "0622",
+      "time": "4:41 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr67 S / I8 No",
+      "location_desc": "SB 67 JNO 8",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0623",
+      "time": "4:40 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr125 S / I8 So",
+      "location_desc": "SB 125 JSO I8",
+      "area": "El Cajon"
+    },
+    {
       "id": "0256",
       "time": "4:35 PM",
       "type": "Traffic Hazard",
@@ -66,22 +82,6 @@
       "location": "Sr78 W / Vista Village Dr Ofr",
       "location_desc": "WB SR78 ON VISTA VILLAGE DR OFR",
       "area": "Oceanside"
-    },
-    {
-      "id": "0249",
-      "time": "4:25 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Balboa No (tierrasanta)",
-      "location_desc": "I15 S BALBOA NO (TIERRASANTA)",
-      "area": "North FSP"
-    },
-    {
-      "id": "0609",
-      "time": "4:23 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 N / I8 So",
-      "location_desc": "NB 5 JSO I8",
-      "area": "San Diego"
     },
     {
       "id": "0247",
@@ -180,5 +180,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-23T23:39:44.424669"
+  "last_updated": "2025-09-23T23:46:37.621687"
 }
