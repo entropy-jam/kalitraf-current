@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T20:16:56.001760",
-  "total_incidents": 71,
-  "new_incidents_today": 6,
+  "last_updated": "2025-09-23T20:33:35.742666",
+  "total_incidents": 78,
+  "new_incidents_today": 7,
   "incidents": [
     {
       "id": "0177",
@@ -714,6 +714,76 @@
       "location_desc": "WB RECHE 1 MILE JEO GIRD",
       "area": "Oceanside",
       "scraped_at": "2025-09-23T20:16:56.001734",
+      "center": "BCCC"
+    },
+    {
+      "id": "0421",
+      "time": "1:30 PM",
+      "type": "Traffic Hazard",
+      "location": "I215 S / Mccall No",
+      "location_desc": "SB 215 JNO MCCALL",
+      "area": "Temecula",
+      "scraped_at": "2025-09-23T20:33:35.742631",
+      "center": "BCCC"
+    },
+    {
+      "id": "0419",
+      "time": "1:25 PM",
+      "type": "Traffic Hazard",
+      "location": "Jonel Way / Proctor Valley Rd",
+      "location_desc": "",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T20:33:35.742636",
+      "center": "BCCC"
+    },
+    {
+      "id": "0414",
+      "time": "1:24 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / Lake Jennings Park Wo",
+      "location_desc": "I8 W LAKE JENNINGS PARK WO",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T20:33:35.742637",
+      "center": "BCCC"
+    },
+    {
+      "id": "0413",
+      "time": "1:23 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr52 W / Santo Eo",
+      "location_desc": "SR52 W SANTO EO",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T20:33:35.742639",
+      "center": "BCCC"
+    },
+    {
+      "id": "0415",
+      "time": "1:22 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I215 N / Clinton Keith Rd Ofr",
+      "location_desc": "NB 215 ON CLINTON KEITH OFR",
+      "area": "Temecula",
+      "scraped_at": "2025-09-23T20:33:35.742640",
+      "center": "BCCC"
+    },
+    {
+      "id": "0166",
+      "time": "1:18 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Adams No",
+      "location_desc": "I805 S ADAMS NO",
+      "area": "South FSP",
+      "scraped_at": "2025-09-23T20:33:35.742642",
+      "center": "BCCC"
+    },
+    {
+      "id": "0408",
+      "time": "1:16 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Adams No",
+      "location_desc": "I805 S ADAMS NO",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T20:33:35.742643",
       "center": "BCCC"
     }
   ]
