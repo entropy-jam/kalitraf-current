@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T18:44:00.018935",
-  "total_incidents": 49,
-  "new_incidents_today": 1,
+  "last_updated": "2025-09-23T18:53:53.584073",
+  "total_incidents": 54,
+  "new_incidents_today": 5,
   "incidents": [
     {
       "id": "0177",
@@ -494,6 +494,56 @@
       "location_desc": "HARBOR ONR TO SB 5",
       "area": "San Diego",
       "scraped_at": "2025-09-23T18:44:00.018902",
+      "center": "BCCC"
+    },
+    {
+      "id": "0334",
+      "time": "11:52 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N Sr52 E Con / Sr52 E",
+      "location_desc": "NB 5 TO EB 52",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T18:53:53.584040",
+      "center": "BCCC"
+    },
+    {
+      "id": "0333",
+      "time": "11:51 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr125 S / Jamacha No (blvd)(paradise Vly)",
+      "location_desc": "SR125 S JAMACHA NO (BLVD)(PARADISE VLY)",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T18:53:53.584046",
+      "center": "BCCC"
+    },
+    {
+      "id": "0330",
+      "time": "11:47 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / El Cajon Blvd Ofr",
+      "location_desc": "",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T18:53:53.584047",
+      "center": "BCCC"
+    },
+    {
+      "id": "0329",
+      "time": "11:46 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / I805 (north)",
+      "location_desc": "SB 5 AT 805",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T18:53:53.584049",
+      "center": "BCCC"
+    },
+    {
+      "id": "0328",
+      "time": "11:39 AM",
+      "type": "Traffic Hazard",
+      "location": "S Granada Ave / View Crest Ct",
+      "location_desc": "3231 S. GRANADA AVE",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T18:53:53.584050",
       "center": "BCCC"
     }
   ]

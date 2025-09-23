@@ -1,37 +1,67 @@
 {
   "center": "BCCC",
   "center_name": "Border",
-  "last_updated": "2025-09-23T18:44:00.018254",
-  "incident_count": 15,
+  "last_updated": "2025-09-23T18:53:53.583309",
+  "incident_count": 18,
   "incidents": [
     {
-      "id": "0322",
-      "time": "11:23 AM",
-      "type": "Report of Fire",
-      "location": "I5 S / CIVIC CENTER DR ONR",
-      "location_desc": "HARBOR ONR TO SB 5",
-      "area": "San Diego",
-      "scraped_at": "2025-09-23T18:44:00.018219",
-      "center": "BCCC"
-    },
-    {
-      "id": "0310",
-      "time": "11:14 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr54 W / Woodman Eo",
-      "location_desc": "SR54 W WOODMAN EO",
-      "area": "San Diego",
-      "scraped_at": "2025-09-23T18:44:00.018232",
-      "center": "BCCC"
-    },
-    {
-      "id": "0303",
-      "time": "11:14 AM",
+      "id": "0334",
+      "time": "11:52 AM",
       "type": "Traffic Hazard",
-      "location": "Sr54 W / Briarwood Eo",
-      "location_desc": "SR54 W BRIARWOOD EO",
+      "location": "I5 N Sr52 E Con / Sr52 E",
+      "location_desc": "NB 5 TO EB 52",
       "area": "San Diego",
-      "scraped_at": "2025-09-23T18:44:00.018234",
+      "scraped_at": "2025-09-23T18:53:53.583267",
+      "center": "BCCC"
+    },
+    {
+      "id": "0144",
+      "time": "11:51 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / I805 (north)",
+      "location_desc": "SB 5 AT 805",
+      "area": "North FSP",
+      "scraped_at": "2025-09-23T18:53:53.583282",
+      "center": "BCCC"
+    },
+    {
+      "id": "0333",
+      "time": "11:51 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr125 S / Jamacha No (blvd)(paradise Vly)",
+      "location_desc": "SR125 S JAMACHA NO (BLVD)(PARADISE VLY)",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T18:53:53.583284",
+      "center": "BCCC"
+    },
+    {
+      "id": "0330",
+      "time": "11:47 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / El Cajon Blvd Ofr",
+      "location_desc": "",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T18:53:53.583286",
+      "center": "BCCC"
+    },
+    {
+      "id": "0329",
+      "time": "11:46 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / I805 (north)",
+      "location_desc": "SB 5 AT 805",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T18:53:53.583288",
+      "center": "BCCC"
+    },
+    {
+      "id": "0328",
+      "time": "11:39 AM",
+      "type": "Traffic Hazard",
+      "location": "S Granada Ave / View Crest Ct",
+      "location_desc": "3231 S. GRANADA AVE",
+      "area": "El Cajon",
+      "scraped_at": "2025-09-23T18:53:53.583290",
       "center": "BCCC"
     },
     {
@@ -41,7 +71,7 @@
       "location": "I5 N / VIEWPOINT NO",
       "location_desc": "",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T18:44:00.018236",
+      "scraped_at": "2025-09-23T18:53:53.583291",
       "center": "BCCC"
     },
     {
@@ -51,7 +81,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T18:44:00.018238",
+      "scraped_at": "2025-09-23T18:53:53.583293",
       "center": "BCCC"
     },
     {
@@ -61,7 +91,7 @@
       "location": "Ocn",
       "location_desc": "78 / COLLEGE TO SN MARCOS",
       "area": "",
-      "scraped_at": "2025-09-23T18:44:00.018240",
+      "scraped_at": "2025-09-23T18:53:53.583294",
       "center": "BCCC"
     },
     {
@@ -71,7 +101,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T18:44:00.018241",
+      "scraped_at": "2025-09-23T18:53:53.583296",
       "center": "BCCC"
     },
     {
@@ -81,7 +111,7 @@
       "location": "Ocn",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T18:44:00.018243",
+      "scraped_at": "2025-09-23T18:53:53.583297",
       "center": "BCCC"
     },
     {
@@ -91,7 +121,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T18:44:00.018244",
+      "scraped_at": "2025-09-23T18:53:53.583299",
       "center": "BCCC"
     },
     {
@@ -101,7 +131,7 @@
       "location": "Ocn",
       "location_desc": "MZP2 MZP3 ENCAMPMENTS",
       "area": "",
-      "scraped_at": "2025-09-23T18:44:00.018246",
+      "scraped_at": "2025-09-23T18:53:53.583300",
       "center": "BCCC"
     },
     {
@@ -111,7 +141,7 @@
       "location": "5902 Kearny Villa Rd",
       "location_desc": "STRIPING DETAIL W/KM CT",
       "area": "San Diego",
-      "scraped_at": "2025-09-23T18:44:00.018247",
+      "scraped_at": "2025-09-23T18:53:53.583301",
       "center": "BCCC"
     },
     {
@@ -121,7 +151,7 @@
       "location": "Santee Ct",
       "location_desc": "",
       "area": "",
-      "scraped_at": "2025-09-23T18:44:00.018248",
+      "scraped_at": "2025-09-23T18:53:53.583303",
       "center": "BCCC"
     },
     {
@@ -131,7 +161,7 @@
       "location": "Hwy 76",
       "location_desc": "LAKE HENSHAW",
       "area": "El Cajon",
-      "scraped_at": "2025-09-23T18:44:00.018250",
+      "scraped_at": "2025-09-23T18:53:53.583304",
       "center": "BCCC"
     },
     {
@@ -141,7 +171,7 @@
       "location": "Sr76 / Pauma Valley Dr",
       "location_desc": "ATand T UNTIL APPROX 1000",
       "area": "Oceanside",
-      "scraped_at": "2025-09-23T18:44:00.018251",
+      "scraped_at": "2025-09-23T18:53:53.583305",
       "center": "BCCC"
     },
     {
@@ -151,7 +181,7 @@
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
       "area": "BC",
-      "scraped_at": "2025-09-23T18:44:00.018252",
+      "scraped_at": "2025-09-23T18:53:53.583307",
       "center": "BCCC"
     }
   ]
