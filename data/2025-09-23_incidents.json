@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T20:33:35.742666",
-  "total_incidents": 78,
-  "new_incidents_today": 7,
+  "last_updated": "2025-09-23T20:43:39.664901",
+  "total_incidents": 81,
+  "new_incidents_today": 3,
   "incidents": [
     {
       "id": "0177",
@@ -784,6 +784,36 @@
       "location_desc": "I805 S ADAMS NO",
       "area": "San Diego",
       "scraped_at": "2025-09-23T20:33:35.742643",
+      "center": "BCCC"
+    },
+    {
+      "id": "0171",
+      "time": "1:41 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / I15 Eo",
+      "location_desc": "I8 W I15 EO",
+      "area": "South FSP",
+      "scraped_at": "2025-09-23T20:43:39.664866",
+      "center": "BCCC"
+    },
+    {
+      "id": "0430",
+      "time": "1:40 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / I15 Eo",
+      "location_desc": "I8 W I15 EO",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T20:43:39.664871",
+      "center": "BCCC"
+    },
+    {
+      "id": "0424",
+      "time": "1:33 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Rainbow Scales No (nb Scales)",
+      "location_desc": "I15 S RAINBOW SCALES NO (NB SCALES)",
+      "area": "Temecula",
+      "scraped_at": "2025-09-23T20:43:39.664872",
       "center": "BCCC"
     }
   ]
