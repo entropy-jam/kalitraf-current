@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T16:19:49.182584",
-  "total_incidents": 32,
-  "new_incidents_today": 0,
+  "last_updated": "2025-09-23T16:41:31.464753",
+  "total_incidents": 38,
+  "new_incidents_today": 6,
   "incidents": [
     {
       "id": "0177",
@@ -324,6 +324,66 @@
       "location_desc": "NB OLD 395 APPROX 1/4 MILE JNO 5TH",
       "area": "Oceanside",
       "scraped_at": "2025-09-23T15:57:38.135889",
+      "center": "BCCC"
+    },
+    {
+      "id": "0235",
+      "time": "9:35 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr78 E / Las Posas Rd Ofr",
+      "location_desc": "",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T16:41:31.464718",
+      "center": "BCCC"
+    },
+    {
+      "id": "0228",
+      "time": "9:26 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Grand So (garnet So)",
+      "location_desc": "I5 N GRAND SO (GARNET SO)",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T16:41:31.464721",
+      "center": "BCCC"
+    },
+    {
+      "id": "0227",
+      "time": "9:24 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Pomerado Rd Ofr",
+      "location_desc": "NB 15 ON MIRAMAR / POM OFR",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T16:41:31.464722",
+      "center": "BCCC"
+    },
+    {
+      "id": "0226",
+      "time": "9:22 AM",
+      "type": "Traffic Hazard",
+      "location": "2000 Reche Rd",
+      "location_desc": "",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T16:41:31.464724",
+      "center": "BCCC"
+    },
+    {
+      "id": "0225",
+      "time": "9:20 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / La Costa No",
+      "location_desc": "I5 N LA COSTA NO",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T16:41:31.464725",
+      "center": "BCCC"
+    },
+    {
+      "id": "0224",
+      "time": "9:15 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr56 E / Carmel Valley Wo",
+      "location_desc": "BIKE TRAIL",
+      "area": "San Diego",
+      "scraped_at": "2025-09-23T16:41:31.464727",
       "center": "BCCC"
     }
   ]
