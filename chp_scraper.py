@@ -255,30 +255,26 @@ def scrape_chp_incidents(center_code="BCCC", mode="local"):
         else:
             # Option 2: Use Chrome with proper ARM64 driver
             print("Using Chrome WebDriver...")
+            # Use Chrome with appropriate options for the environment
+            options = webdriver.ChromeOptions()
+            
             if mode == "github_actions":
-                # In GitHub Actions, ChromeDriver is already installed and in PATH
-                try:
-                    # Try direct Chrome first (ChromeDriver should be in PATH)
-                    driver = webdriver.Chrome()
-                    logging.info("Chrome WebDriver initialized directly (GitHub Actions)")
-                except Exception as e:
-                    print(f"Direct Chrome failed: {e}")
-                    # Fallback to webdriver-manager
-                    try:
-                        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-                        logging.info("Chrome WebDriver initialized with webdriver-manager (GitHub Actions fallback)")
-                    except Exception as e2:
-                        print(f"Webdriver-manager also failed: {e2}")
-                        raise Exception("Both Chrome WebDriver methods failed")
+                # GitHub Actions: headless mode with server-friendly options
+                options.add_argument("--headless")
+                options.add_argument("--no-sandbox")
+                options.add_argument("--disable-dev-shm-usage")
+                options.add_argument("--disable-gpu")
+                options.add_argument("--remote-debugging-port=9222")
+                driver = webdriver.Chrome(options=options)
+                logging.info("Chrome WebDriver initialized (GitHub Actions)")
             else:
+                # Local: try webdriver-manager first, fallback to local
                 try:
-                    # Try using webdriver-manager first (auto-downloads correct driver)
                     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
                     logging.info("Chrome WebDriver initialized with webdriver-manager")
                 except Exception as e:
                     print(f"Webdriver-manager failed: {e}")
                     print("Falling back to local chromedriver...")
-                    # Fallback to local chromedriver
                     driver = webdriver.Chrome(service=Service(CHROMEDRIVER_PATH))
                     logging.info("Chrome WebDriver initialized with local driver")
         
