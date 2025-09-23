@@ -235,7 +235,6 @@
             </select>
             
             <button id="refreshBtn" onclick="refreshData()">🔄 Refresh Now</button>
-            <button id="triggerBtn" onclick="triggerScrape()">⚡ Trigger Scrape</button>
             
             <div style="margin-left: auto;">
                 <label>
@@ -390,24 +389,6 @@
             loadData();
         }
         
-        function triggerScrape() {
-            const button = document.getElementById('triggerBtn');
-            button.disabled = true;
-            button.textContent = 'Triggering...';
-            
-            // For now, just refresh the data since manual trigger requires GitHub token
-            // In a real implementation, you'd need to set up a GitHub token
-            setTimeout(() => {
-                button.textContent = '⚠️ Manual trigger requires GitHub token setup';
-                setTimeout(() => {
-                    button.disabled = false;
-                    button.textContent = '⚡ Trigger Scrape';
-                }, 3000);
-            }, 1000);
-            
-            // Alternative: Just refresh the data
-            refreshData();
-        }
         
         function startAutoRefresh() {
             if (autoRefreshInterval) {
