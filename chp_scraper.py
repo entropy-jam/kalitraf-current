@@ -207,9 +207,15 @@ def scrape_chp_incidents(center_code="BCCC", mode="local"):
             # Option 2: Use Chrome with proper ARM64 driver
             print("Using Chrome WebDriver...")
             if mode == "github_actions":
-                # In GitHub Actions, use system ChromeDriver
-                driver = webdriver.Chrome()
-                logging.info("Chrome WebDriver initialized (GitHub Actions)")
+                # In GitHub Actions, use webdriver-manager for reliable ChromeDriver
+                try:
+                    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+                    logging.info("Chrome WebDriver initialized with webdriver-manager (GitHub Actions)")
+                except Exception as e:
+                    print(f"Webdriver-manager failed in GitHub Actions: {e}")
+                    # Fallback to system ChromeDriver
+                    driver = webdriver.Chrome()
+                    logging.info("Chrome WebDriver initialized with system driver (GitHub Actions fallback)")
             else:
                 try:
                     # Try using webdriver-manager first (auto-downloads correct driver)

@@ -68,12 +68,25 @@ jobs:
 
     - name: Download ChromeDriver
       run: |
-        CHROME_VERSION=$(google-chrome --version | cut -d " " -f3 | cut -d "." -f1-3)
-        CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}")
-        wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
-        unzip /tmp/chromedriver.zip -d /tmp/
-        sudo mv /tmp/chromedriver /usr/local/bin/
-        sudo chmod +x /usr/local/bin/chromedriver
+        # Use webdriver-manager to download the correct ChromeDriver
+        python -c "
+        from webdriver_manager.chrome import ChromeDriverManager
+        from selenium.webdriver.chrome.service import Service
+        import os
+        
+        # Download and get the path to ChromeDriver
+        driver_path = ChromeDriverManager().install()
+        print(f'ChromeDriver installed at: {driver_path}')
+        
+        # Make it executable
+        os.chmod(driver_path, 0o755)
+        
+        # Create symlink for easy access
+        os.system(f'sudo ln -sf {driver_path} /usr/local/bin/chromedriver')
+        
+        # Verify installation
+        os.system('chromedriver --version')
+        "
 
     - name: Set environment variables
       run: |
