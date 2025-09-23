@@ -2,9 +2,9 @@
   "center": "BCCC",
   "center_name": "Border",
   "date": "2025-09-23",
-  "last_updated": "2025-09-23T15:52:00.332426",
-  "total_incidents": 31,
-  "new_incidents_today": 6,
+  "last_updated": "2025-09-23T15:57:38.135919",
+  "total_incidents": 32,
+  "new_incidents_today": 1,
   "incidents": [
     {
       "id": "0177",
@@ -314,6 +314,16 @@
       "location_desc": "I5 N SEA WORLD NO (TECOLOTE)",
       "area": "San Diego",
       "scraped_at": "2025-09-23T15:52:00.332403",
+      "center": "BCCC"
+    },
+    {
+      "id": "0213",
+      "time": "8:49 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Old Hwy 395 / 5th St",
+      "location_desc": "NB OLD 395 APPROX 1/4 MILE JNO 5TH",
+      "area": "Oceanside",
+      "scraped_at": "2025-09-23T15:57:38.135889",
       "center": "BCCC"
     }
   ]
