@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-24",
-  "total_incidents": 21,
+  "total_incidents": 29,
   "incidents": [
     {
       "id": "0446",
@@ -171,7 +171,71 @@
       "location": "Watt Ave / Arden Way",
       "location_desc": "ARDEN MIDDLE SCHOOL PLOT",
       "area": "North Sac"
+    },
+    {
+      "id": "0605",
+      "time": "1:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr16 / County Rd 45",
+      "location_desc": "",
+      "area": "Woodland"
+    },
+    {
+      "id": "0601",
+      "time": "1:41 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "National Dr / Striker Ave",
+      "location_desc": "",
+      "area": "North Sac"
+    },
+    {
+      "id": "0589",
+      "time": "1:32 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I80 E / Watt Ave Ofr",
+      "location_desc": "EB JEO",
+      "area": "North Sac"
+    },
+    {
+      "id": "0583",
+      "time": "1:28 PM",
+      "type": "Traffic Hazard",
+      "location": "Douglas Blvd / Barton Rd",
+      "location_desc": "EB",
+      "area": "Auburn"
+    },
+    {
+      "id": "0582",
+      "time": "1:27 PM",
+      "type": "Animal Hazard",
+      "location": "Northgate Blvd N Onr / I80 W",
+      "location_desc": "ONR",
+      "area": "North Sac"
+    },
+    {
+      "id": "0573",
+      "time": "1:17 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "8523 Sunrise Blvd",
+      "location_desc": "Sunrise Ave",
+      "area": "SA"
+    },
+    {
+      "id": "0572",
+      "time": "1:14 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "4321 Madison Ave",
+      "location_desc": "STOP AND SHOP PLOT",
+      "area": "North Sac"
+    },
+    {
+      "id": "0556",
+      "time": "1:02 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Bell St / Lansing Way",
+      "location_desc": "SB I/S",
+      "area": "North Sac"
     }
   ],
-  "last_updated": "2025-09-24T19:57:34.925487"
+  "last_updated": "2025-09-24T20:48:32.177099"
 }

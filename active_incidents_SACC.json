@@ -1,47 +1,71 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "incident_count": 13,
+  "incident_count": 16,
   "incidents": [
     {
-      "id": "0544",
-      "time": "12:53 PM",
+      "id": "0605",
+      "time": "1:44 PM",
       "type": "Traffic Hazard",
-      "location": "Sr51 S / Jno Marconi Ave",
-      "location_desc": "SB 51 JNO MARCONI",
-      "area": "North Sac"
-    },
-    {
-      "id": "0538",
-      "time": "12:48 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Arena Blvd E Onr",
-      "location_desc": "SB JSO",
-      "area": "North Sac"
-    },
-    {
-      "id": "0523",
-      "time": "12:32 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Us50 W / Jefferson Blvd",
-      "location_desc": "WB 50 AT JEFFERSON",
+      "location": "Sr16 / County Rd 45",
+      "location_desc": "",
       "area": "Woodland"
     },
     {
-      "id": "0522",
-      "time": "12:32 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Watt Ave / Arden Way",
-      "location_desc": "ARDEN MIDDLE SCHOOL PLOT",
+      "id": "0601",
+      "time": "1:41 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "National Dr / Striker Ave",
+      "location_desc": "",
       "area": "North Sac"
     },
     {
-      "id": "0501",
-      "time": "12:11 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Pleasant Valley Rd / Larkin Mine Rd",
-      "location_desc": "",
-      "area": "Placerville"
+      "id": "0589",
+      "time": "1:32 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I80 E / Watt Ave Ofr",
+      "location_desc": "EB JEO",
+      "area": "North Sac"
+    },
+    {
+      "id": "0583",
+      "time": "1:28 PM",
+      "type": "Traffic Hazard",
+      "location": "Douglas Blvd / Barton Rd",
+      "location_desc": "EB",
+      "area": "Auburn"
+    },
+    {
+      "id": "0582",
+      "time": "1:27 PM",
+      "type": "Animal Hazard",
+      "location": "Northgate Blvd N Onr / I80 W",
+      "location_desc": "ONR",
+      "area": "North Sac"
+    },
+    {
+      "id": "0573",
+      "time": "1:17 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "8523 Sunrise Blvd",
+      "location_desc": "Sunrise Ave",
+      "area": "SA"
+    },
+    {
+      "id": "0572",
+      "time": "1:14 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "4321 Madison Ave",
+      "location_desc": "STOP AND SHOP PLOT",
+      "area": "North Sac"
+    },
+    {
+      "id": "0556",
+      "time": "1:02 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Bell St / Lansing Way",
+      "location_desc": "SB I/S",
+      "area": "North Sac"
     },
     {
       "id": "0499",
@@ -108,5 +132,5 @@
       "area": ""
     }
   ],
-  "last_updated": "2025-09-24T19:57:34.924477"
+  "last_updated": "2025-09-24T20:48:32.176121"
 }
