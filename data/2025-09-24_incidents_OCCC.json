@@ -1,0 +1,129 @@
+{
+  "center_code": "OCCC",
+  "center_name": "Orange",
+  "date": "2025-09-24",
+  "total_incidents": 15,
+  "incidents": [
+    {
+      "id": "0050",
+      "time": "11:25 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr22 W / Harbor Blvd",
+      "location_desc": "WB 22 JWO HARBOR, REV GP",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0217",
+      "time": "11:24 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr22 W / Harbor Blvd",
+      "location_desc": "WB 22 JWO HARBOR, REV GP",
+      "area": "Westminster"
+    },
+    {
+      "id": "0209",
+      "time": "10:57 AM",
+      "type": "Live or Dead Animal",
+      "location": "I405 N / Euclid",
+      "location_desc": "NB 405 JNO EUCLID",
+      "area": "Westminster"
+    },
+    {
+      "id": "0200",
+      "time": "10:35 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr73 S / Macarthur Blvd",
+      "location_desc": "SB 73 JNO MAC",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0195",
+      "time": "10:30 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr55 N / Edinger Ave",
+      "location_desc": "NB 55 JSO EDINGER",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0139",
+      "time": "8:52 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 W Eo / Coal Canyon Rd",
+      "location_desc": "SR91 W EO COAL CANYON RD",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0030",
+      "time": "8:49 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 W Eo / Coal Canyon Rd",
+      "location_desc": "SR91 W EO COAL CANYON RD",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0114",
+      "time": "8:19 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "32951 Camino Capistrano",
+      "location_desc": "CAPISTRANO CHP",
+      "area": "Capistrano"
+    },
+    {
+      "id": "0110",
+      "time": "8:14 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "13200 Goldenwest St",
+      "location_desc": "WESTMINSTER CHP",
+      "area": "Westminster"
+    },
+    {
+      "id": "0093",
+      "time": "7:37 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "E Santa Clara Ave",
+      "location_desc": "SANTA ANA CHP",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0092",
+      "time": "7:35 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "E Santa Clara Ave",
+      "location_desc": "SANTA ANA CHP",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0064",
+      "time": "6:44 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "E Santa Clara Ave",
+      "location_desc": "*BATAVIA YARD*",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0061",
+      "time": "6:42 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "13200 Goldenwest St",
+      "location_desc": "WESTMINSTER CHP",
+      "area": "Westminster"
+    },
+    {
+      "id": "0004",
+      "time": "12:05 AM",
+      "type": "CLOSURE of a Road",
+      "location": "6681 Marine Way",
+      "location_desc": "OCCC",
+      "area": "OC"
+    },
+    {
+      "id": "0003",
+      "time": "12:05 AM",
+      "type": "Road/Weather Conditions",
+      "location": "6681 Marine Way",
+      "location_desc": "OC MEDIA LOG",
+      "area": "OC"
+    }
+  ],
+  "last_updated": "2025-09-24T18:29:36.329674"
+}
