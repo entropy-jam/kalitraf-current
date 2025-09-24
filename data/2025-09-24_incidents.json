@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 121,
+  "total_incidents": 124,
   "incidents": [
     {
       "id": "0623",
@@ -971,7 +971,31 @@
       "location": "I5 N / Cesar E Chavez So",
       "location_desc": "I5 N CESAR E CHAVEZ SO",
       "area": "San Diego"
+    },
+    {
+      "id": "0179",
+      "time": "8:47 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Cannon Rd",
+      "location_desc": "1/2 MI JSO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0177",
+      "time": "8:45 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Mira Mesa No",
+      "location_desc": "I805 S MIRA MESA NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0174",
+      "time": "8:40 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Main St / 7th St",
+      "location_desc": "IFO LA COCINA",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-24T15:42:44.227539"
+  "last_updated": "2025-09-24T15:50:18.761063"
 }

@@ -1,8 +1,32 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 26,
+  "incident_count": 28,
   "incidents": [
+    {
+      "id": "0179",
+      "time": "8:47 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Cannon Rd",
+      "location_desc": "1/2 MI JSO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0177",
+      "time": "8:45 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Mira Mesa No",
+      "location_desc": "I805 S MIRA MESA NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0174",
+      "time": "8:40 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Main St / 7th St",
+      "location_desc": "IFO LA COCINA",
+      "area": "El Cajon"
+    },
     {
       "id": "0171",
       "time": "8:31 AM",
@@ -132,14 +156,6 @@
       "area": "Oceanside"
     },
     {
-      "id": "0096",
-      "time": "6:38 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "E Mission Rd / N Vine St",
-      "location_desc": "",
-      "area": "Oceanside"
-    },
-    {
       "id": "0092",
       "time": "6:29 AM",
       "type": "Assist CT with Maintenance",
@@ -183,9 +199,9 @@
       "id": "0076",
       "time": "5:46 AM",
       "type": "Assist CT with Maintenance",
-      "location": "1780 W Mission Rd - Caltrans Escondido",
-      "location_desc": "CT ESCONDIDO",
-      "area": "Oceanside"
+      "location": "I15 N / SR56",
+      "location_desc": "15 FROM 56 TO VRP - POTHOLE REPAIR",
+      "area": "San Diego"
     },
     {
       "id": "0058",
@@ -212,5 +228,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T15:42:44.225257"
+  "last_updated": "2025-09-24T15:50:18.758723"
 }
