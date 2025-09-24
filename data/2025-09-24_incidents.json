@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 67,
+  "total_incidents": 69,
   "incidents": [
     {
       "id": "0623",
@@ -539,7 +539,23 @@
       "location": "Sr94 E / Jamacha Bl",
       "location_desc": "SR94 E JAMACHA BL",
       "area": "El Cajon"
+    },
+    {
+      "id": "0926",
+      "time": "10:51 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr94 W / 28th Eo",
+      "location_desc": "SR94 W 28TH EO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0922",
+      "time": "10:48 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / I8 No",
+      "location_desc": "I805 N I8 NO",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T05:49:17.592163"
+  "last_updated": "2025-09-24T05:56:22.873543"
 }
