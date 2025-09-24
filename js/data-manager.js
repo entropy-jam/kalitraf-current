@@ -175,34 +175,6 @@ class DataManager {
         
         // Update previous incidents for next comparison
         this.previousIncidents = data.incidents;
-        
-        // Use virtual scrolling for better performance
-        if (data.incidents.length > 10) {
-            const virtualScroll = new VirtualScroll();
-            virtualScroll.initVirtualScroll(container, data.incidents);
-        } else {
-            // For small lists, use regular rendering
-            const incidentsHtml = data.incidents.map(incident => {
-                const typeClass = this.getTypeClass(incident.type);
-                const isNew = this.previousIncidents && !this.previousIncidents.find(prev => prev.id === incident.id);
-                const newClass = isNew ? ' new' : '';
-                
-                return `
-                    <div class="incident${newClass}">
-                        <div class="incident-header">
-                            <span class="incident-id">#${incident.id}</span>
-                            <span class="incident-time">${incident.time}</span>
-                        </div>
-                        <div class="incident-type ${typeClass}">${incident.type}</div>
-                        <div class="incident-location">${incident.location}</div>
-                        ${incident.location_desc ? `<div class="incident-location">${incident.location_desc}</div>` : ''}
-                        <div class="incident-area">${incident.area}</div>
-                    </div>
-                `;
-            }).join('');
-            
-            container.innerHTML = incidentsHtml;
-        }
     }
 
     /**

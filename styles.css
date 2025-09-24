@@ -153,6 +153,7 @@ body {
 
 .virtual-scroll-viewport {
     height: 100%;
+    max-height: 600px;
     overflow-y: auto;
     position: relative;
 }
@@ -176,6 +177,11 @@ body {
     margin-bottom: 10px;
     transition: all 0.3s ease;
     animation: slideIn 0.4s ease;
+}
+
+/* Virtual scroll items should not have margins */
+.virtual-scroll-item.incident {
+    margin-bottom: 0;
 }
 
 .incident:hover {

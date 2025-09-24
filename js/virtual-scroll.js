@@ -37,6 +37,11 @@ class VirtualScroll {
         const viewport = document.getElementById('virtualViewport');
         const content = document.getElementById('virtualContent');
         
+        if (!viewport || !content) {
+            console.error('Virtual scroll viewport or content not found');
+            return;
+        }
+        
         // Add scroll listener
         viewport.addEventListener('scroll', () => {
             this.scrollTop = viewport.scrollTop;

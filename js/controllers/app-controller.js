@@ -94,8 +94,10 @@ class AppController {
             // Render incidents
             const container = document.getElementById('incidentsContainer');
             if (data.incidents && data.incidents.length > 10) {
+                // Use virtual scrolling for large lists
                 this.virtualScroll.initVirtualScroll(container, data.incidents);
             } else {
+                // Use regular rendering for small lists
                 this.renderer.renderIncidents(data.incidents, container, this.previousIncidents);
             }
 
