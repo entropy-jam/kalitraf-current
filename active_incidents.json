@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 15,
+  "incident_count": 16,
   "incidents": [
+    {
+      "id": "0263",
+      "time": "10:43 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Palm No (southbay)(sr75)",
+      "location_desc": "NB 5 JNO PALM",
+      "area": "San Diego"
+    },
     {
       "id": "0259",
       "time": "10:27 AM",
@@ -124,5 +132,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T17:39:04.413717"
+  "last_updated": "2025-09-24T17:46:27.209575"
 }
