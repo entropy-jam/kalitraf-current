@@ -211,10 +211,10 @@ body {
 .copy-button {
     background: none;
     border: none;
-    font-size: 14px;
+    font-size: 21px;
     color: #6c757d;
     cursor: pointer;
-    padding: 4px 6px;
+    padding: 6px 8px;
     border-radius: 4px;
     transition: all 0.2s ease;
     opacity: 0.7;
@@ -276,6 +276,8 @@ body {
     bottom: 8px;
     right: 8px;
     font-weight: 500;
+    opacity: 1;
+    visibility: visible;
 }
 
 .incident-id {

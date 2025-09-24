@@ -51,7 +51,7 @@ class IncidentRenderer extends IUIRenderer {
             <div class="incident${newClass}">
                 <div class="incident-header">
                     <span class="incident-id">#${incident.id}</span>
-                    <button class="copy-button" data-incident-id="${incident.id}" title="Copy incident details to clipboard">📋</button>
+                    <button class="copy-button" data-incident-id="${incident.id}" title="Copy incident details to clipboard">⧉</button>
                 </div>
                 <div class="incident-type ${typeClass}">${incident.type}</div>
                 <div class="incident-location">${incident.location}</div>
