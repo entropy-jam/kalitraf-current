@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-24",
-  "total_incidents": 97,
+  "total_incidents": 111,
   "incidents": [
     {
       "id": "0111",
@@ -779,7 +779,119 @@
       "location": "Sr57 N / Temple Ave Ofr",
       "location_desc": "POI NB 57 JSO GRAND BT81-602",
       "area": "Baldwin Park"
+    },
+    {
+      "id": "1383",
+      "time": "3:47 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us101 N / Liberty Canyon Rd Ofr",
+      "location_desc": "WB 101 JEO LIBERTY CYN RD",
+      "area": "West Valley"
+    },
+    {
+      "id": "1380",
+      "time": "3:47 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr14 S / Sr14 W I5 Con",
+      "location_desc": "SB 14 JSO 5",
+      "area": "Newhall"
+    },
+    {
+      "id": "1377",
+      "time": "3:45 PM",
+      "type": "Traffic Hazard",
+      "location": "I605 N / Valley Blvd",
+      "location_desc": "NB 605 JSO VALLEY",
+      "area": "East LA"
+    },
+    {
+      "id": "1369",
+      "time": "3:39 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "28101 Chiquito Canyon Rd",
+      "location_desc": "",
+      "area": "Newhall"
+    },
+    {
+      "id": "1368",
+      "time": "3:38 PM",
+      "type": "Traffic Hazard",
+      "location": "La11024 I110 N / So Harry Bridges Blvd",
+      "location_desc": "LA11024 I110 N / SO HARRY BRIDGES BLVD",
+      "area": "South LA"
+    },
+    {
+      "id": "1371",
+      "time": "3:38 PM",
+      "type": "Traffic Hazard",
+      "location": "I110 N / N Gaffey St Onr",
+      "location_desc": "GAFFEY ST ONR TO NB 110",
+      "area": "South LA"
+    },
+    {
+      "id": "0174",
+      "time": "3:38 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "SR110 N / SR110 N US101 S CON",
+      "location_desc": "NB 110 JNO 101",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1364",
+      "time": "3:38 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 N / Sr90 W",
+      "location_desc": "NB 405 JSO 90",
+      "area": "West LA"
+    },
+    {
+      "id": "1366",
+      "time": "3:37 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I10 E / Vincent Ave Ofr",
+      "location_desc": "EB 10 JWO VINCENT AVE",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "1359",
+      "time": "3:36 PM",
+      "type": "Traffic Hazard",
+      "location": "W Gage Ave Onr / I110 S",
+      "location_desc": "ONR",
+      "area": "Central LA"
+    },
+    {
+      "id": "0171",
+      "time": "3:33 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Tampa Ave Ofr",
+      "location_desc": "SB 101 JNO TAMPA",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1347",
+      "time": "3:30 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 W / Overland Ave Ofr",
+      "location_desc": "WB JEO",
+      "area": "West LA"
+    },
+    {
+      "id": "1346",
+      "time": "3:28 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / IMPERIAL HWY",
+      "location_desc": "NB JSO",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "0168",
+      "time": "3:24 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I405 S / Carson St Ofr",
+      "location_desc": "SB 405 JNO CARSON ST",
+      "area": "LAFSP"
     }
   ],
-  "last_updated": "2025-09-24T22:23:03.667688"
+  "last_updated": "2025-09-24T22:54:11.127158"
 }
