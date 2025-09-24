@@ -2,7 +2,7 @@
   "center_code": "OCCC",
   "center_name": "Orange",
   "date": "2025-09-24",
-  "total_incidents": 41,
+  "total_incidents": 56,
   "incidents": [
     {
       "id": "0050",
@@ -331,7 +331,127 @@
       "location": "Sr55 N / Katella Ave",
       "location_desc": "NB 55 JSO KAT",
       "area": "Santa Ana"
+    },
+    {
+      "id": "0085",
+      "time": "2:21 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Lincoln Ave",
+      "location_desc": "JSO",
+      "area": "OCFSP"
+    },
+    {
+      "id": "0306",
+      "time": "2:18 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Lincoln Ave",
+      "location_desc": "JSO",
+      "area": "Westminster"
+    },
+    {
+      "id": "0084",
+      "time": "2:17 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr55 N To / I5 N Con",
+      "location_desc": "NB 55 TRANS TO NB 5",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0305",
+      "time": "2:16 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr55 N To / I5 N Con",
+      "location_desc": "NB 55 TRANS TO NB 5",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0083",
+      "time": "2:15 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Harbor Blvd",
+      "location_desc": "NB 5 JNO HARBOR",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0304",
+      "time": "2:13 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Harbor Blvd",
+      "location_desc": "NB 5 JNO HARBOR",
+      "area": "Westminster"
+    },
+    {
+      "id": "0081",
+      "time": "2:11 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 S / Lincoln",
+      "location_desc": "JNO",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0080",
+      "time": "2:03 PM",
+      "type": "Traffic Hazard",
+      "location": "Lake Forest Dr E Onr / I5 S",
+      "location_desc": "EB LF ONR TO SB 5",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0079",
+      "time": "2:03 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr22 E / Harbor Blvd",
+      "location_desc": "EB 22 JWO HARBOR",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0300",
+      "time": "2:02 PM",
+      "type": "Traffic Hazard",
+      "location": "Lake Forest Dr E Onr / I5 S",
+      "location_desc": "EB LF ONR TO SB 5",
+      "area": "Capistrano"
+    },
+    {
+      "id": "0298",
+      "time": "2:01 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I405 N / I405 N I605 N CON",
+      "location_desc": "NB 405 TRANS TO 605",
+      "area": "Westminster"
+    },
+    {
+      "id": "0077",
+      "time": "1:57 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr73 S / Macarthur Blvd Ofr",
+      "location_desc": "SB 73 ON MAC OFR",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0294",
+      "time": "1:55 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr73 S / Macarthur Blvd Ofr",
+      "location_desc": "SB 73 ON MAC OFR",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0075",
+      "time": "1:48 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 W Eo / Euclid St",
+      "location_desc": "WB JEO EUCLID",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0289",
+      "time": "1:46 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 W Eo / Euclid St",
+      "location_desc": "WB JEO EUCLID",
+      "area": "Westminster"
     }
   ],
-  "last_updated": "2025-09-24T20:18:06.144908"
+  "last_updated": "2025-09-24T21:25:31.525789"
 }
