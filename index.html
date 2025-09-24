@@ -50,14 +50,70 @@
             color: white;
             border: none;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
         }
         .controls button:hover {
             background: #0056b3;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+        }
+        .controls button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0,123,255,0.2);
         }
         .controls button:disabled {
             background: #6c757d;
             cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Button loading animation */
+        .controls button.loading {
+            position: relative;
+            color: transparent;
+        }
+        .controls button.loading::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            left: 50%;
+            margin-left: -8px;
+            margin-top: -8px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Success/Error states */
+        .controls button.success {
+            background: #28a745;
+            animation: successPulse 0.6s ease;
+        }
+        .controls button.error {
+            background: #dc3545;
+            animation: errorShake 0.6s ease;
+        }
+        
+        @keyframes successPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes errorShake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
         }
         .status {
             padding: 15px 20px;
@@ -88,11 +144,36 @@
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 10px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
+            animation: slideIn 0.4s ease;
         }
         .incident:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* New incident highlight */
+        .incident.new {
+            border-left: 4px solid #28a745;
+            background: linear-gradient(90deg, #d4edda 0%, #f8f9fa 10%);
+            animation: newIncidentPulse 2s ease;
+        }
+        
+        @keyframes newIncidentPulse {
+            0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
         }
         .incident-header {
             display: flex;
@@ -151,6 +232,39 @@
             background: #28a745;
             margin-right: 8px;
             animation: pulse 2s infinite;
+        }
+        
+        /* Status notifications */
+        .status-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            animation: slideInRight 0.3s ease;
+        }
+        
+        .status-notification.error {
+            background: #dc3545;
+        }
+        
+        .status-notification.info {
+            background: #17a2b8;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
         @keyframes pulse {
             0% { opacity: 1; }
@@ -288,7 +402,7 @@
         function loadData() {
             showRefreshIndicator();
             
-            fetch(`active_incidents.json?t=${Date.now()}`, { cache: 'no-store' })
+            return fetch(`active_incidents.json?t=${Date.now()}`, { cache: 'no-store' })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to load data');
@@ -298,10 +412,12 @@
                 .then(data => {
                     displayIncidents(data);
                     updateLastUpdated(data.last_updated);
+                    return data;
                 })
                 .catch(error => {
                     console.error('Error loading data:', error);
                     showError('Failed to load incident data. Please try again.');
+                    throw error;
                 })
                 .finally(() => {
                     hideRefreshIndicator();
@@ -336,8 +452,11 @@
             
             const incidentsHtml = data.incidents.map(incident => {
                 const typeClass = getTypeClass(incident.type);
+                const isNew = previousIncidents && !previousIncidents.find(prev => prev.id === incident.id);
+                const newClass = isNew ? ' new' : '';
+                
                 return `
-                    <div class="incident">
+                    <div class="incident${newClass}">
                         <div class="incident-header">
                             <span class="incident-id">#${incident.id}</span>
                             <span class="incident-time">${incident.time}</span>
@@ -393,6 +512,28 @@
             container.innerHTML = `<div class="error">${message}</div>`;
         }
         
+        function showNotification(message, type = 'success') {
+            // Remove existing notifications
+            const existing = document.querySelector('.status-notification');
+            if (existing) {
+                existing.remove();
+            }
+            
+            // Create new notification
+            const notification = document.createElement('div');
+            notification.className = `status-notification ${type}`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 3 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 3000);
+        }
+        
         function showRefreshIndicator() {
             document.getElementById('refreshIndicator').style.display = 'inline-block';
         }
@@ -402,7 +543,44 @@
         }
         
         function refreshData() {
-            loadData();
+            const button = document.getElementById('refreshBtn');
+            const originalText = button.textContent;
+            
+            // Show loading state
+            button.classList.add('loading');
+            button.disabled = true;
+            button.textContent = 'Refreshing...';
+            
+            // Load data
+            loadData()
+                .then(() => {
+                    // Show success state
+                    button.classList.remove('loading');
+                    button.classList.add('success');
+                    button.textContent = '✓ Refreshed!';
+                    showNotification('Data refreshed successfully!', 'success');
+                    
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        button.classList.remove('success');
+                        button.disabled = false;
+                        button.textContent = originalText;
+                    }, 2000);
+                })
+                .catch(() => {
+                    // Show error state
+                    button.classList.remove('loading');
+                    button.classList.add('error');
+                    button.textContent = '✗ Failed';
+                    showNotification('Failed to refresh data. Please try again.', 'error');
+                    
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        button.classList.remove('error');
+                        button.disabled = false;
+                        button.textContent = originalText;
+                    }, 2000);
+                });
         }
         
         
