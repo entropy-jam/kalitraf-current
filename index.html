@@ -426,6 +426,11 @@
             endIndex: 0
         };
         
+        // Request debouncing
+        let refreshTimeout = null;
+        let pendingRequest = null;
+        let isRefreshing = false;
+        
         // Cache functions
         function getCachedData(center) {
             try {
@@ -523,7 +528,20 @@
             // No cache or force refresh - fetch from server
             showRefreshIndicator();
             
-            return fetch(`active_incidents.json?t=${Date.now()}`, { cache: 'no-store' })
+            // Create abortable request
+            const controller = new AbortController();
+            const signal = controller.signal;
+            
+            // Store controller for potential cancellation
+            if (pendingRequest) {
+                pendingRequest.abort();
+            }
+            pendingRequest = controller;
+            
+            return fetch(`active_incidents.json?t=${Date.now()}`, { 
+                cache: 'no-store',
+                signal: signal
+            })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to load data');
@@ -540,6 +558,11 @@
                     return data;
                 })
                 .catch(error => {
+                    // Don't handle aborted requests as errors
+                    if (error.name === 'AbortError') {
+                        throw error;
+                    }
+                    
                     console.error('Error loading data:', error);
                     
                     // Try to fall back to cache on error
@@ -557,6 +580,7 @@
                 })
                 .finally(() => {
                     hideRefreshIndicator();
+                    pendingRequest = null;
                 });
         }
         
@@ -826,8 +850,33 @@
         }
         
         function refreshData() {
+            // Debounce rapid clicks
+            if (isRefreshing) {
+                showNotification('Refresh already in progress...', 'info');
+                return;
+            }
+            
+            // Cancel any pending timeout
+            if (refreshTimeout) {
+                clearTimeout(refreshTimeout);
+            }
+            
+            // Cancel any pending request
+            if (pendingRequest) {
+                pendingRequest.abort();
+            }
+            
+            // Debounce the actual refresh
+            refreshTimeout = setTimeout(() => {
+                performRefresh();
+            }, 300); // Wait 300ms after last click
+        }
+        
+        function performRefresh() {
             const button = document.getElementById('refreshBtn');
             const originalText = button.textContent;
+            
+            isRefreshing = true;
             
             // Show loading state
             button.classList.add('loading');
@@ -835,7 +884,7 @@
             button.textContent = 'Refreshing...';
             
             // Force refresh from server
-            loadData(true)
+            pendingRequest = loadData(true)
                 .then(() => {
                     // Show success state
                     button.classList.remove('loading');
@@ -847,9 +896,16 @@
                         button.classList.remove('success');
                         button.disabled = false;
                         button.textContent = originalText;
+                        isRefreshing = false;
                     }, 2000);
                 })
-                .catch(() => {
+                .catch((error) => {
+                    // Don't show error if request was aborted
+                    if (error.name === 'AbortError') {
+                        console.log('Request aborted');
+                        return;
+                    }
+                    
                     // Show error state
                     button.classList.remove('loading');
                     button.classList.add('error');
@@ -861,6 +917,7 @@
                         button.classList.remove('error');
                         button.disabled = false;
                         button.textContent = originalText;
+                        isRefreshing = false;
                     }, 2000);
                 });
         }
