@@ -1,8 +1,32 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 23,
+  "incident_count": 19,
   "incidents": [
+    {
+      "id": "0240",
+      "time": "10:04 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Sr54 No",
+      "location_desc": "SB 5 JNO 54",
+      "area": "San Diego"
+    },
+    {
+      "id": "0239",
+      "time": "10:03 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / I5 So (north)",
+      "location_desc": "NB 805 JSO 5 - NORTH",
+      "area": "San Diego"
+    },
+    {
+      "id": "0229",
+      "time": "9:54 AM",
+      "type": "Report of Fire",
+      "location": "I805 S / Palm Ave Onr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0223",
       "time": "9:50 AM",
@@ -18,62 +42,6 @@
       "location": "I5 N / Washington So",
       "location_desc": "NB 5 JSO WASHINGTON",
       "area": "San Diego"
-    },
-    {
-      "id": "0221",
-      "time": "9:44 AM",
-      "type": "Animal Hazard",
-      "location": "Sr52 W / Genesee Eo",
-      "location_desc": "SR52 W GENESEE EO",
-      "area": "San Diego"
-    },
-    {
-      "id": "0213",
-      "time": "9:30 AM",
-      "type": "Object Flying From Veh",
-      "location": "I215 S / Clinton Keith So",
-      "location_desc": "I215 S CLINTON KEITH SO",
-      "area": "Temecula"
-    },
-    {
-      "id": "0182",
-      "time": "8:44 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "52nd St / Towle Ct",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0168",
-      "time": "8:23 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr94 W / Checkpoint Eo",
-      "location_desc": "WB SR94 JEO CHECKPOINT",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0153",
-      "time": "8:12 AM",
-      "type": "Trfc Collision-Minor Inj",
-      "location": "I5 N / Genesee Ave Onr",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0145",
-      "time": "7:50 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "N Coast Hwy / Harbor Dr",
-      "location_desc": "",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0142",
-      "time": "7:49 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Las Pulgas So",
-      "location_desc": "",
-      "area": "Oceanside"
     },
     {
       "id": "0137",
@@ -188,5 +156,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T16:54:11.316130"
+  "last_updated": "2025-09-24T13:07:34.379171"
 }
