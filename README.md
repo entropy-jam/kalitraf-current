@@ -4,6 +4,7 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 
 ## 🏗️ Project Structure
 
+### Backend (Python)
 ```
 ├── src/
 │   ├── core/                    # Core modules
@@ -17,8 +18,31 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 │   └── utils/                   # Utility modules
 ├── data/                        # JSON data storage
 ├── scrape_local.py             # Local scraper entry point
-├── scrape_github.py           # GitHub Actions entry point
-└── index.html                  # GitHub Pages frontend
+└── scrape_github.py           # GitHub Actions entry point
+```
+
+### Frontend (JavaScript - SOLID Architecture)
+```
+├── js/
+│   ├── interfaces.js           # Interface definitions (SOLID)
+│   ├── config-manager.js       # Configuration management
+│   ├── storage/                # Storage implementations
+│   │   └── local-storage.js    # localStorage adapter
+│   ├── fetchers/               # Data fetching implementations
+│   │   └── http-fetcher.js     # HTTP client
+│   ├── renderers/              # UI rendering implementations
+│   │   └── incident-renderer.js # Incident display logic
+│   ├── services/               # Business logic services
+│   │   └── incident-service.js # Incident data operations
+│   ├── controllers/            # Application controllers
+│   │   └── app-controller.js   # Main application controller
+│   ├── cache.js               # Legacy cache module
+│   ├── virtual-scroll.js      # Virtual scrolling implementation
+│   ├── data-manager.js        # Legacy data management
+│   ├── ui-controller.js       # Legacy UI controller
+│   └── app.js                 # Application entry point
+├── styles.css                 # Separated CSS styles
+└── index.html                 # Clean HTML structure
 ```
 
 ## 🚀 Quick Start
