@@ -1,39 +1,15 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 18,
+  "incident_count": 15,
   "incidents": [
     {
-      "id": "0247",
-      "time": "10:13 AM",
-      "type": "Report of Fire",
-      "location": "SR54 W / HIGHLAND EO (4TH)",
-      "location_desc": "SR54 W HIGHLAND EO (4TH)",
-      "area": "San Diego"
-    },
-    {
-      "id": "0245",
-      "time": "10:09 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 N / La Costa So",
-      "location_desc": "NB 5 JSO LA COSTA",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0239",
-      "time": "10:03 AM",
+      "id": "0259",
+      "time": "10:27 AM",
       "type": "Traffic Hazard",
-      "location": "I805 N / I5 So (north)",
-      "location_desc": "NB 805 JSO 5 - NORTH",
-      "area": "San Diego"
-    },
-    {
-      "id": "0222",
-      "time": "9:49 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "I5 N / Washington So",
-      "location_desc": "NB 5 JSO WASHINGTON",
-      "area": "San Diego"
+      "location": "I5 N / Encinitas So",
+      "location_desc": "NB 5 JSO ENCINITAS",
+      "area": "Oceanside"
     },
     {
       "id": "0137",
@@ -148,5 +124,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T17:27:46.634155"
+  "last_updated": "2025-09-24T17:39:04.413717"
 }
