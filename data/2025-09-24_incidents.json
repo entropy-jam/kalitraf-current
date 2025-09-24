@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 63,
+  "total_incidents": 66,
   "incidents": [
     {
       "id": "0623",
@@ -507,7 +507,31 @@
       "location": "I805 S / 43rd No",
       "location_desc": "",
       "area": "San Diego"
+    },
+    {
+      "id": "0899",
+      "time": "10:05 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I5 N / Via De La Valle",
+      "location_desc": "FLASH TIL 0500 NB and SB I-5 AT VDV",
+      "area": "San Diego"
+    },
+    {
+      "id": "0900",
+      "time": "10:03 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I5 S / Palm Ave Ofr",
+      "location_desc": "**WITNESS ONLY",
+      "area": "San Diego"
+    },
+    {
+      "id": "0896",
+      "time": "10:00 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr78 W / San Marcos Blvd Ofr",
+      "location_desc": "",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T04:57:40.868061"
+  "last_updated": "2025-09-24T05:15:29.321690"
 }

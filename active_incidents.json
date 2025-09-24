@@ -1,8 +1,32 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 22,
+  "incident_count": 23,
   "incidents": [
+    {
+      "id": "0899",
+      "time": "10:05 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I5 N / Via De La Valle",
+      "location_desc": "FLASH TIL 0500 NB and SB I-5 AT VDV",
+      "area": "San Diego"
+    },
+    {
+      "id": "0900",
+      "time": "10:03 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I5 S / Palm Ave Ofr",
+      "location_desc": "**WITNESS ONLY",
+      "area": "San Diego"
+    },
+    {
+      "id": "0896",
+      "time": "10:00 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr78 W / San Marcos Blvd Ofr",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
     {
       "id": "0891",
       "time": "9:53 PM",
@@ -10,22 +34,6 @@
       "location": "I15 N / Rancho California",
       "location_desc": "I15 N RANCHO CALIFORNIA",
       "area": "Temecula"
-    },
-    {
-      "id": "0890",
-      "time": "9:49 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I805 S / 43rd No",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0884",
-      "time": "9:44 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr52 W / Mast Eo",
-      "location_desc": "",
-      "area": "San Diego"
     },
     {
       "id": "0870",
@@ -180,5 +188,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T04:57:40.866827"
+  "last_updated": "2025-09-24T05:15:29.320469"
 }
