@@ -1,8 +1,48 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T12:33:00.657532",
+  "timestamp": "2025-09-24T13:06:28.764632",
   "new_incidents": [
+    {
+      "id": "0084",
+      "time": "6:01 AM",
+      "type": "Assist with Construction",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "STREET SWEEPING - VARIOUS LOC",
+      "area": "San Diego"
+    },
+    {
+      "id": "0085",
+      "time": "5:59 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "VARIOUS LOCATIONS",
+      "area": "San Diego"
+    },
+    {
+      "id": "0079",
+      "time": "5:52 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Descanso Ct",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "0078",
+      "time": "5:48 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr11 E / Enrico Fermi Dr",
+      "location_desc": "EB SR11 JWO ERICO FERMI",
+      "area": "San Diego"
+    },
+    {
+      "id": "0076",
+      "time": "5:46 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "1780 W Mission Rd - Caltrans Escondido",
+      "location_desc": "CT ESCONDIDO",
+      "area": "Oceanside"
+    },
     {
       "id": "0058",
       "time": "5:18 AM",
@@ -17,14 +57,6 @@
       "type": "Assist CT with Maintenance",
       "location": "2550 Mccain Valley Rd",
       "location_desc": "MCCAIN VALLEY FIRE CAMP",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0043",
-      "time": "5:10 AM",
-      "type": "Report of Fire",
-      "location": "I8 W / Second (2nd)",
-      "location_desc": "I8 W SECOND (2ND)",
       "area": "El Cajon"
     },
     {
@@ -50,25 +82,9 @@
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
       "area": "BC"
-    },
-    {
-      "id": "0858",
-      "time": "9:06 PM",
-      "type": "Defective Traffic Signals",
-      "location": "Sr15 S / Main",
-      "location_desc": "FLASH TIL 0500 NB",
-      "area": "San Diego"
-    },
-    {
-      "id": "0857",
-      "time": "9:04 PM",
-      "type": "Defective Traffic Signals",
-      "location": "I5 S / Main_division (national City)",
-      "location_desc": "FLASH TIL 0500",
-      "area": "San Diego"
     }
   ],
   "removed_incidents": [],
-  "new_count": 8,
+  "new_count": 10,
   "removed_count": 0
 }
