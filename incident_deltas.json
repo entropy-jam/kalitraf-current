@@ -1,8 +1,32 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T11:57:37.019316",
+  "timestamp": "2025-09-24T12:33:00.657532",
   "new_incidents": [
+    {
+      "id": "0058",
+      "time": "5:18 AM",
+      "type": "Assist with Construction",
+      "location": "Sr79 / Sage Rd",
+      "location_desc": "BTWN SAGE AND PAUBA",
+      "area": "Temecula"
+    },
+    {
+      "id": "0053",
+      "time": "5:16 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "2550 Mccain Valley Rd",
+      "location_desc": "MCCAIN VALLEY FIRE CAMP",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0043",
+      "time": "5:10 AM",
+      "type": "Report of Fire",
+      "location": "I8 W / Second (2nd)",
+      "location_desc": "I8 W SECOND (2ND)",
+      "area": "El Cajon"
+    },
     {
       "id": "0035",
       "time": "4:38 AM",
@@ -28,22 +52,6 @@
       "area": "BC"
     },
     {
-      "id": "0899",
-      "time": "10:05 PM",
-      "type": "Defective Traffic Signals",
-      "location": "I5 N / Via De La Valle",
-      "location_desc": "FLASH TIL 0500 NB and SB I-5 AT VDV",
-      "area": "San Diego"
-    },
-    {
-      "id": "0870",
-      "time": "9:28 PM",
-      "type": "Assist with Construction",
-      "location": "Sr74 / (mm 7.8) Lookout Point Store",
-      "location_desc": "SR74 (MM 7.8) LOOKOUT POINT STORE",
-      "area": "Temecula"
-    },
-    {
       "id": "0858",
       "time": "9:06 PM",
       "type": "Defective Traffic Signals",
@@ -58,41 +66,9 @@
       "location": "I5 S / Main_division (national City)",
       "location_desc": "FLASH TIL 0500",
       "area": "San Diego"
-    },
-    {
-      "id": "0851",
-      "time": "8:47 PM",
-      "type": "Defective Traffic Signals",
-      "location": "I8 E / Lake Murray (70th)",
-      "location_desc": "I8 E LAKE MURRAY (70TH)",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0835",
-      "time": "8:29 PM",
-      "type": "Assist with Construction",
-      "location": "I805 N / 47th",
-      "location_desc": "I805 N 47TH",
-      "area": "San Diego"
-    },
-    {
-      "id": "0822",
-      "time": "8:06 PM",
-      "type": "Assist with Construction",
-      "location": "Sr76 / I15",
-      "location_desc": "TIL 0400 16684",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0780",
-      "time": "7:30 PM",
-      "type": "Assist with Construction",
-      "location": "I5 S / Las Pulgas",
-      "location_desc": "I5 S LAS PULGAS",
-      "area": "Oceanside"
     }
   ],
   "removed_incidents": [],
-  "new_count": 11,
+  "new_count": 8,
   "removed_count": 0
 }

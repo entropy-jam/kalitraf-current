@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 78,
+  "total_incidents": 81,
   "incidents": [
     {
       "id": "0623",
@@ -627,7 +627,31 @@
       "location": "I8 E / Sunset Cliffs Blvd",
       "location_desc": "",
       "area": "San Diego"
+    },
+    {
+      "id": "0058",
+      "time": "5:18 AM",
+      "type": "Assist with Construction",
+      "location": "Sr79 / Sage Rd",
+      "location_desc": "BTWN SAGE AND PAUBA",
+      "area": "Temecula"
+    },
+    {
+      "id": "0053",
+      "time": "5:16 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "2550 Mccain Valley Rd",
+      "location_desc": "MCCAIN VALLEY FIRE CAMP",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0043",
+      "time": "5:10 AM",
+      "type": "Report of Fire",
+      "location": "I8 W / Second (2nd)",
+      "location_desc": "I8 W SECOND (2ND)",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-24T11:43:39.647188"
+  "last_updated": "2025-09-24T12:33:00.658032"
 }
