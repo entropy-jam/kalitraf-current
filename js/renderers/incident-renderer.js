@@ -51,12 +51,13 @@ class IncidentRenderer extends IUIRenderer {
             <div class="incident${newClass}">
                 <div class="incident-header">
                     <span class="incident-id">#${incident.id}</span>
-                    <span class="incident-time">${incident.time}</span>
+                    ${window.copyToClipboard ? window.copyToClipboard.createCopyButton(incident.id, incident) : ''}
                 </div>
                 <div class="incident-type ${typeClass}">${incident.type}</div>
                 <div class="incident-location">${incident.location}</div>
                 ${incident.location_desc ? `<div class="incident-location">${incident.location_desc}</div>` : ''}
                 <div class="incident-area">${incident.area}</div>
+                <div class="incident-time">${incident.time}</div>
             </div>
         `;
     }

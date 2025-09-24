@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHP Traffic Incident Alert</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .email-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .email-header {
+            background: #dc3545;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .email-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .incident-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .incident-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .incident-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .incident-id {
+            font-weight: bold;
+            color: #007bff;
+            font-size: 16px;
+        }
+        
+        .incident-time {
+            font-size: 0.85em;
+            color: #6c757d;
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            font-weight: 500;
+        }
+        
+        .copy-button {
+            background: none;
+            border: none;
+            font-size: 14px;
+            color: #6c757d;
+            cursor: pointer;
+            padding: 4px 6px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            opacity: 0.7;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            z-index: 10;
+        }
+        
+        .copy-button:hover {
+            color: #495057;
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            opacity: 1;
+            transform: translateY(-1px);
+        }
+        
+        .incident-type {
+            font-weight: bold;
+            margin: 8px 0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .type-traffic-hazard { background-color: #fff3cd; color: #856404; }
+        .type-collision { background-color: #f8d7da; color: #721c24; }
+        .type-sig-alert { background-color: #d1ecf1; color: #0c5460; }
+        .type-animal-hazard { background-color: #d4edda; color: #155724; }
+        .type-weather { background-color: #e2e3e5; color: #383d41; }
+        
+        .incident-location {
+            margin: 4px 0;
+            font-weight: 500;
+        }
+        
+        .incident-area {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 8px;
+        }
+        
+        .email-footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .new-incident {
+            border-left: 4px solid #28a745;
+            background: linear-gradient(90deg, #d4edda 0%, #f8f9fa 10%);
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h1>🚨 CHP Traffic Incident Alert</h1>
+            <p>Real-time traffic incident updates</p>
+        </div>
+        
+        <div class="email-content">
+            <h2>Recent Incidents</h2>
+            
+            <!-- Incident cards will be populated here -->
+            <div class="incident-card new-incident">
+                <div class="incident-header">
+                    <span class="incident-id">#0240</span>
+                    <button class="copy-button" onclick="copyIncident('0240')" title="Copy incident details to clipboard">📋</button>
+                </div>
+                <div class="incident-type type-traffic-hazard">Traffic Hazard</div>
+                <div class="incident-location">I5 S / Sr54 No</div>
+                <div class="incident-area">San Diego</div>
+                <div class="incident-time">10:04 AM</div>
+            </div>
+            
+            <div class="incident-card">
+                <div class="incident-header">
+                    <span class="incident-id">#0239</span>
+                    <button class="copy-button" onclick="copyIncident('0239')" title="Copy incident details to clipboard">📋</button>
+                </div>
+                <div class="incident-type type-traffic-hazard">Traffic Hazard</div>
+                <div class="incident-location">I805 N / I5 So (north)</div>
+                <div class="incident-area">San Diego</div>
+                <div class="incident-time">10:03 AM</div>
+            </div>
+        </div>
+        
+        <div class="email-footer">
+            <p>Source: CHP Traffic Incidents Monitor</p>
+            <p>This is an automated alert. Please verify information with official sources.</p>
+        </div>
+    </div>
+
+    <script>
+        // Copy functionality for email (simplified version)
+        function copyIncident(incidentId) {
+            // Get incident data (in real implementation, this would be passed from server)
+            const incidentData = {
+                '0240': {
+                    id: '0240',
+                    time: '10:04 AM',
+                    type: 'Traffic Hazard',
+                    location: 'I5 S / Sr54 No',
+                    area: 'San Diego'
+                },
+                '0239': {
+                    id: '0239',
+                    time: '10:03 AM',
+                    type: 'Traffic Hazard',
+                    location: 'I805 N / I5 So (north)',
+                    area: 'San Diego'
+                }
+            };
+            
+            const incident = incidentData[incidentId];
+            if (!incident) return;
+            
+            const copyText = `CHP Incident #${incident.id}
+Time: ${incident.time}
+Type: ${incident.type}
+Location: ${incident.location}
+Area: ${incident.area}
+
+Source: CHP Traffic Incidents Monitor`;
+            
+            // Copy to clipboard
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(copyText).then(() => {
+                    showCopySuccess(incidentId);
+                }).catch(() => {
+                    showCopyError(incidentId);
+                });
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = copyText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showCopySuccess(incidentId);
+                } catch (err) {
+                    showCopyError(incidentId);
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+        
+        function showCopySuccess(incidentId) {
+            const button = document.querySelector(`[onclick="copyIncident('${incidentId}')"]`);
+            if (button) {
+                const originalContent = button.innerHTML;
+                button.innerHTML = '✓';
+                button.style.color = '#28a745';
+                button.style.backgroundColor = '#d4edda';
+                setTimeout(() => {
+                    button.innerHTML = originalContent;
+                    button.style.color = '#6c757d';
+                    button.style.backgroundColor = 'transparent';
+                }, 1000);
+            }
+        }
+        
+        function showCopyError(incidentId) {
+            const button = document.querySelector(`[onclick="copyIncident('${incidentId}')"]`);
+            if (button) {
+                const originalContent = button.innerHTML;
+                button.innerHTML = '✗';
+                button.style.color = '#dc3545';
+                button.style.backgroundColor = '#f8d7da';
+                setTimeout(() => {
+                    button.innerHTML = originalContent;
+                    button.style.color = '#6c757d';
+                    button.style.backgroundColor = 'transparent';
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>
