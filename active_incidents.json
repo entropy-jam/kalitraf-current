@@ -1,23 +1,15 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 28,
+  "incident_count": 26,
   "incidents": [
     {
-      "id": "0170",
-      "time": "8:25 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Basilone Rd Onr",
-      "location_desc": "SB JSO BASILONE",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0078",
-      "time": "8:25 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Railroad Canyon (diamond)",
-      "location_desc": "I15 S RAILROAD CANYON (DIAMOND)",
-      "area": "Temecula FSP"
+      "id": "0171",
+      "time": "8:31 AM",
+      "type": "Request CalTrans Notify",
+      "location": "I5 N / Cesar E Chavez So",
+      "location_desc": "I5 N CESAR E CHAVEZ SO",
+      "area": "San Diego"
     },
     {
       "id": "0168",
@@ -31,16 +23,8 @@
       "id": "0166",
       "time": "8:19 AM",
       "type": "Trfc Collision-1141 Enrt",
-      "location": "I8 W / Texas Eo (qualcomm)",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0156",
-      "time": "8:15 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Carroll Canyon So",
-      "location_desc": "",
+      "location": "I8 W / TAYLOR EO (HOTEL CIR EO)",
+      "location_desc": "I8 W TAYLOR EO (HOTEL CIR EO)",
       "area": "San Diego"
     },
     {
@@ -228,5 +212,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T15:31:16.391848"
+  "last_updated": "2025-09-24T15:42:44.225257"
 }
