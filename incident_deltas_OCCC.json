@@ -1,16 +1,8 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "timestamp": "2025-09-24T22:33:15.561936",
+  "timestamp": "2025-09-24T22:40:24.086603",
   "new_incidents": [
-    {
-      "id": "0096",
-      "time": "3:29 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr22 E / Euclid St",
-      "location_desc": "SR22 E EUCLID ST",
-      "area": "Orange County FSP"
-    },
     {
       "id": "0348",
       "time": "3:29 PM",
@@ -20,27 +12,11 @@
       "area": "Capistrano"
     },
     {
-      "id": "0350",
-      "time": "3:26 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "Sr57 N / Orangethorpe Ave Ot",
-      "location_desc": "NB 57 JNO OT *BC ONLY*",
-      "area": "Santa Ana"
-    },
-    {
       "id": "0339",
       "time": "3:14 PM",
       "type": "Hit and Run No Injuries",
       "location": "I5 N / Crown Valley Pkwy Ofr",
       "location_desc": "POI: NB 5 ON CV OFR",
-      "area": "Capistrano"
-    },
-    {
-      "id": "0318",
-      "time": "2:36 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / La Paz Rd",
-      "location_desc": "NB 5 JSO LP",
       "area": "Capistrano"
     },
     {
@@ -77,6 +53,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 9,
+  "new_count": 6,
   "removed_count": 0
 }
