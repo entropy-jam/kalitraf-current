@@ -1,102 +1,94 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "incident_count": 20,
+  "incident_count": 16,
   "incidents": [
     {
-      "id": "0060",
-      "time": "12:35 PM",
+      "id": "0071",
+      "time": "1:16 PM",
       "type": "Traffic Hazard",
-      "location": "Sr57 N / Imperial Hwy",
-      "location_desc": "NB 57 JSO IMPERIAL",
+      "location": "Sr91 W Eo / Brookhurst St Bh",
+      "location_desc": "WB 91 JEO BH",
       "area": "Orange County FSP"
     },
     {
-      "id": "0251",
-      "time": "12:33 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "I405 N / Seal Beach Blvd Sbb",
-      "location_desc": "NB 405 JSO SBB",
+      "id": "0279",
+      "time": "1:15 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 W Eo / Brookhurst St Bh",
+      "location_desc": "WB 91 JEO BH",
       "area": "Westminster"
     },
     {
-      "id": "0252",
-      "time": "12:33 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr57 N / Imperial Hwy",
-      "location_desc": "NB 57 JSO IMPERIAL",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0059",
-      "time": "12:28 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr57 S / Katella Ave",
-      "location_desc": "SB 57 JNO KATELLA",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0246",
-      "time": "12:26 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr57 S / Katella Ave",
-      "location_desc": "SB 57 JNO KATELLA",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0239",
-      "time": "12:10 PM",
+      "id": "0275",
+      "time": "1:12 PM",
       "type": "Report of Fire",
-      "location": "Sr91 E Wo / Green River (sna)",
-      "location_desc": "EB 3 MILES JWO",
+      "location": "Sr22 E / Magnolia",
+      "location_desc": "EB 22 ON MAG OFR",
+      "area": "Westminster"
+    },
+    {
+      "id": "0069",
+      "time": "1:05 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr55 N To / I5 N Hov Flyover",
+      "location_desc": "NB 55 TO NB 5 FLYOVER",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0273",
+      "time": "1:02 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr55 N To / I5 N Hov Flyover",
+      "location_desc": "NB 55 TRANS TO NB 5 - HOV",
       "area": "Santa Ana"
     },
     {
-      "id": "0056",
-      "time": "12:03 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Red Hill Ave Rh",
-      "location_desc": "NB 5 JSO RH",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0233",
-      "time": "11:59 AM",
-      "type": "SIG Alert",
-      "location": "I405 N / Bolsa Chica Rd Bc",
-      "location_desc": "NB 405 JSO",
+      "id": "0270",
+      "time": "1:01 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Seal Beach Blvd Ofr / I405 N",
+      "location_desc": "AYRES HOTEL : SBB JNO 405",
       "area": "Westminster"
     },
     {
-      "id": "0054",
-      "time": "11:44 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr55 N / I405",
-      "location_desc": "NB 55 JSO 405",
+      "id": "0065",
+      "time": "1:01 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Oso Pkwy",
+      "location_desc": "SB 5 JSO OSO",
       "area": "Orange County FSP"
     },
     {
-      "id": "0053",
-      "time": "11:43 AM",
+      "id": "0261",
+      "time": "12:47 PM",
       "type": "Traffic Hazard",
-      "location": "I405 N / Bolsa Chica Rd Bc",
-      "location_desc": "NB 405 JSO",
+      "location": "Sr91 E Wo / Kraemer Blvd",
+      "location_desc": "EB 91 AT KRAEMER",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0257",
+      "time": "12:43 PM",
+      "type": "Defective Traffic Signals",
+      "location": "Sr57 S / Lambert Rd Ofr",
+      "location_desc": "SB 57 ON LAMB OFR",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0061",
+      "time": "12:42 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr55 N / Katella Ave",
+      "location_desc": "NB 55 JSO KAT",
       "area": "Orange County FSP"
     },
     {
-      "id": "0221",
-      "time": "11:42 AM",
-      "type": "Traffic Hazard",
-      "location": "I405 N / Bolsa Chica Rd Bc",
-      "location_desc": "NB 405 JSO",
-      "area": "Westminster"
-    },
-    {
-      "id": "0222",
-      "time": "11:41 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr55 N / I405",
-      "location_desc": "NB 55 JSO 405",
+      "id": "0256",
+      "time": "12:41 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr55 N / Katella Ave",
+      "location_desc": "NB 55 JSO KAT",
       "area": "Santa Ana"
     },
     {
@@ -108,35 +100,11 @@
       "area": "Capistrano"
     },
     {
-      "id": "0110",
-      "time": "8:14 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "13200 Goldenwest St",
-      "location_desc": "WESTMINSTER CHP",
-      "area": "Westminster"
-    },
-    {
-      "id": "0093",
-      "time": "7:37 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "E Santa Clara Ave",
-      "location_desc": "SANTA ANA CHP",
-      "area": "Santa Ana"
-    },
-    {
       "id": "0092",
       "time": "7:35 AM",
       "type": "Assist CT with Maintenance",
       "location": "E Santa Clara Ave",
       "location_desc": "SANTA ANA CHP",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0064",
-      "time": "6:44 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "E Santa Clara Ave",
-      "location_desc": "*BATAVIA YARD*",
       "area": "Santa Ana"
     },
     {
@@ -164,5 +132,5 @@
       "area": "OC"
     }
   ],
-  "last_updated": "2025-09-24T19:36:32.320467"
+  "last_updated": "2025-09-24T20:18:06.143896"
 }
