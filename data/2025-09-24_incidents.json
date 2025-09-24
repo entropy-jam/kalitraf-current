@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 43,
+  "total_incidents": 50,
   "incidents": [
     {
       "id": "0623",
@@ -347,7 +347,63 @@
       "location": "I5 S / Nobel So",
       "location_desc": "TILL 0300",
       "area": "San Diego"
+    },
+    {
+      "id": "0847",
+      "time": "8:41 PM",
+      "type": "Assist with Construction",
+      "location": "I805 S / Balboa So",
+      "location_desc": "I805 S BALBOA SO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0841",
+      "time": "8:32 PM",
+      "type": "Traffic Hazard",
+      "location": "Via Puerta Del Sol / Rose Ln",
+      "location_desc": "NB JNO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0837",
+      "time": "8:30 PM",
+      "type": "Assist with Construction",
+      "location": "Sr78 W / I5",
+      "location_desc": "SR78 W I5",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0835",
+      "time": "8:29 PM",
+      "type": "Assist with Construction",
+      "location": "I805 N / 47th",
+      "location_desc": "I805 N 47TH",
+      "area": "San Diego"
+    },
+    {
+      "id": "0832",
+      "time": "8:28 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I15 S / Friars",
+      "location_desc": "FLASH TIL 0330 SB",
+      "area": "San Diego"
+    },
+    {
+      "id": "0836",
+      "time": "8:28 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 E / I805 Eo",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0839",
+      "time": "8:26 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Bonita No (e St)",
+      "location_desc": "",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T03:23:41.473899"
+  "last_updated": "2025-09-24T03:44:58.337396"
 }
