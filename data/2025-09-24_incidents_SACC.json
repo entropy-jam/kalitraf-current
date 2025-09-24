@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-24",
-  "total_incidents": 56,
+  "total_incidents": 61,
   "incidents": [
     {
       "id": "0446",
@@ -451,7 +451,47 @@
       "location": "Morse Ave / Marconi Ave",
       "location_desc": "NB JNO",
       "area": "North Sac"
+    },
+    {
+      "id": "0855",
+      "time": "4:42 PM",
+      "type": "Report of Fire",
+      "location": "I80 W / Marysville Blvd",
+      "location_desc": "WB 80 AT MARYSVILLE",
+      "area": "North Sac"
+    },
+    {
+      "id": "0847",
+      "time": "4:38 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Old River Rd / Cr128a",
+      "location_desc": "SB JSO",
+      "area": "Woodland"
+    },
+    {
+      "id": "0838",
+      "time": "4:36 PM",
+      "type": "Report of Fire",
+      "location": "Roseville Rd / Winters St Onr",
+      "location_desc": "",
+      "area": "North Sac"
+    },
+    {
+      "id": "0828",
+      "time": "4:30 PM",
+      "type": "Hit and Run w/Injuries",
+      "location": "El Camino Ave / Watt Ave",
+      "location_desc": "I/S",
+      "area": "North Sac"
+    },
+    {
+      "id": "0797",
+      "time": "4:06 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr51 S / Exposition Blvd",
+      "location_desc": "SB JSO",
+      "area": "North Sac"
     }
   ],
-  "last_updated": "2025-09-24T23:31:52.398155"
+  "last_updated": "2025-09-24T23:54:09.778372"
 }

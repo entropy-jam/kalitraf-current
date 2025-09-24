@@ -1,8 +1,40 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-24T23:31:52.397577",
+  "timestamp": "2025-09-24T23:54:09.777875",
   "new_incidents": [
+    {
+      "id": "0855",
+      "time": "4:42 PM",
+      "type": "Report of Fire",
+      "location": "I80 W / Marysville Blvd",
+      "location_desc": "WB 80 AT MARYSVILLE",
+      "area": "North Sac"
+    },
+    {
+      "id": "0847",
+      "time": "4:38 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Old River Rd / Cr128a",
+      "location_desc": "SB JSO",
+      "area": "Woodland"
+    },
+    {
+      "id": "0838",
+      "time": "4:36 PM",
+      "type": "Report of Fire",
+      "location": "Roseville Rd / Winters St Onr",
+      "location_desc": "",
+      "area": "North Sac"
+    },
+    {
+      "id": "0828",
+      "time": "4:30 PM",
+      "type": "Hit and Run w/Injuries",
+      "location": "El Camino Ave / Watt Ave",
+      "location_desc": "I/S",
+      "area": "North Sac"
+    },
     {
       "id": "0815",
       "time": "4:20 PM",
@@ -10,46 +42,6 @@
       "location": "3248 Auburn Blvd",
       "location_desc": "IFO EU TECH",
       "area": "North Sac"
-    },
-    {
-      "id": "0067",
-      "time": "4:20 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I80 E / Mace Blvd N Onr",
-      "location_desc": "",
-      "area": "Woodland FSP"
-    },
-    {
-      "id": "0066",
-      "time": "4:18 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr99 S / Jso 12th Ave",
-      "location_desc": "SB 99 JSO 12TH",
-      "area": "South Sac FSP"
-    },
-    {
-      "id": "0065",
-      "time": "4:16 PM",
-      "type": "Traffic Hazard",
-      "location": "Us50 W / Stockton Blvd",
-      "location_desc": "WB 50 AT STOCKTON",
-      "area": "South Sac FSP"
-    },
-    {
-      "id": "0811",
-      "time": "4:15 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I80 E / Mace Blvd N Onr",
-      "location_desc": "EB JEO",
-      "area": "Woodland"
-    },
-    {
-      "id": "0810",
-      "time": "4:14 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "Sr51 S / J St",
-      "location_desc": "SB JSO",
-      "area": "South Sac"
     },
     {
       "id": "0807",
@@ -60,12 +52,12 @@
       "area": "SA"
     },
     {
-      "id": "0806",
-      "time": "4:09 PM",
-      "type": "Traffic Hazard",
-      "location": "Oxford Rd / Fairway Dr",
-      "location_desc": "NB JNO",
-      "area": "Placerville"
+      "id": "0797",
+      "time": "4:06 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr51 S / Exposition Blvd",
+      "location_desc": "SB JSO",
+      "area": "North Sac"
     },
     {
       "id": "0785",
@@ -76,25 +68,9 @@
       "area": "Placerville"
     },
     {
-      "id": "0780",
-      "time": "4:00 PM",
-      "type": "Car Fire",
-      "location": "I80 E / Greenback Ln E Onr",
-      "location_desc": "EB AT **46-184**",
-      "area": "North Sac"
-    },
-    {
-      "id": "0765",
-      "time": "3:48 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Folsom Blvd / Starfire Dr",
-      "location_desc": "EB JWO",
-      "area": "East Sac"
-    },
-    {
       "id": "0757",
       "time": "3:45 PM",
-      "type": "Trfc Collision-No Inj",
+      "type": "Trfc Collision-Minor Inj",
       "location": "Morse Ave / Marconi Ave",
       "location_desc": "NB JNO",
       "area": "North Sac"
@@ -108,31 +84,15 @@
       "area": ""
     },
     {
-      "id": "0150",
-      "time": "6:52 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "US50 W / MISSOURI FLAT RD",
-      "location_desc": "***1700*** PVL CT YARD",
-      "area": "Placerville"
-    },
-    {
       "id": "0105",
       "time": "5:57 AM",
       "type": "Assist CT with Maintenance",
       "location": "Northgate Ct Yard",
       "location_desc": "",
       "area": ""
-    },
-    {
-      "id": "0090",
-      "time": "5:29 AM",
-      "type": "Assist with Construction",
-      "location": "Baxter",
-      "location_desc": "***1600***",
-      "area": ""
     }
   ],
   "removed_incidents": [],
-  "new_count": 16,
+  "new_count": 11,
   "removed_count": 0
 }
