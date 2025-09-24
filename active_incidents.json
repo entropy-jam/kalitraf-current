@@ -1,22 +1,54 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 18,
+  "incident_count": 20,
   "incidents": [
     {
-      "id": "0347",
-      "time": "12:13 PM",
+      "id": "0377",
+      "time": "12:47 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Benjamin Ct / Palm Tree Ln",
+      "location_desc": "",
+      "area": "BC"
+    },
+    {
+      "id": "0374",
+      "time": "12:44 PM",
       "type": "Traffic Hazard",
-      "location": "I805 S / Orange No (olympic No)",
-      "location_desc": "I805 S ORANGE NO (OLYMPIC NO)",
+      "location": "Sr125 N / Sr94 So",
+      "location_desc": "SR125 N SR94 SO",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0369",
+      "time": "12:42 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "29115 Valley Center Rd",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0363",
+      "time": "12:31 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Via De La Valle So",
+      "location_desc": "I5 N VIA DE LA VALLE SO",
       "area": "San Diego"
     },
     {
-      "id": "0344",
-      "time": "12:10 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / W Bernardo So (pomerado)",
-      "location_desc": "I15 N W BERNARDO SO (POMERADO)",
+      "id": "0135",
+      "time": "12:24 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Sr163 So",
+      "location_desc": "I5 N SR163 SO",
+      "area": "South FSP"
+    },
+    {
+      "id": "0353",
+      "time": "12:22 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / CESAR E CHAVEZ SO",
+      "location_desc": "I5 N CESAR E CHAVEZ SO",
       "area": "San Diego"
     },
     {
@@ -26,22 +58,6 @@
       "location": "Lyons Valley Rd / Honey Springs Rd",
       "location_desc": "JEO",
       "area": "El Cajon"
-    },
-    {
-      "id": "0323",
-      "time": "11:44 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Winter Gardens Blvd / Lemon Crest Dr",
-      "location_desc": "",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0318",
-      "time": "11:35 AM",
-      "type": "Request CalTrans Notify",
-      "location": "I5 S / J St No (southbay)",
-      "location_desc": "ADJACENT TO 630 BAY BLVD",
-      "area": "San Diego"
     },
     {
       "id": "0023",
@@ -148,5 +164,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T19:18:19.071542"
+  "last_updated": "2025-09-24T19:50:48.344049"
 }

@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 18,
+  "total_incidents": 24,
   "incidents": [
     {
       "id": "0347",
@@ -147,7 +147,55 @@
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
       "area": "BC"
+    },
+    {
+      "id": "0377",
+      "time": "12:47 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Benjamin Ct / Palm Tree Ln",
+      "location_desc": "",
+      "area": "BC"
+    },
+    {
+      "id": "0374",
+      "time": "12:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr125 N / Sr94 So",
+      "location_desc": "SR125 N SR94 SO",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0369",
+      "time": "12:42 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "29115 Valley Center Rd",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0363",
+      "time": "12:31 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Via De La Valle So",
+      "location_desc": "I5 N VIA DE LA VALLE SO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0135",
+      "time": "12:24 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Sr163 So",
+      "location_desc": "I5 N SR163 SO",
+      "area": "South FSP"
+    },
+    {
+      "id": "0353",
+      "time": "12:22 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / CESAR E CHAVEZ SO",
+      "location_desc": "I5 N CESAR E CHAVEZ SO",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T19:18:19.072908"
+  "last_updated": "2025-09-24T19:50:48.345949"
 }
