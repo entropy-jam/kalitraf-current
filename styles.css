@@ -182,8 +182,13 @@ body {
 /* All incident items should not have margins when in containers */
 .incidents-container .incident {
     margin-bottom: 0 !important;
-    /* Debug: Add a visible border to see if this rule is applied */
-    border: 2px solid red !important;
+}
+
+/* Virtual scroll items - DEPRECATED (not in use) */
+.incidents-container .incident.virtual-scroll-item {
+    margin-bottom: 0 !important;
+    animation: none !important;
+    position: absolute !important;
 }
 
 .incident:hover {

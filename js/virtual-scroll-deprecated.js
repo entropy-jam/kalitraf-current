@@ -1,11 +1,26 @@
 /**
- * Virtual Scrolling Module
- * Handles efficient rendering of large incident lists
+ * Virtual Scrolling Module - DEPRECATED
+ * 
+ * ⚠️  NOT CURRENTLY IN USE
+ * 
+ * This module was designed for efficient rendering of large incident lists,
+ * but analysis shows it's premature optimization for our current data scale (~21 incidents).
+ * Modern browsers handle this volume effortlessly without virtualization.
+ * 
+ * Reasons for deprecation:
+ * - Small dataset (21 incidents) doesn't require virtualization
+ * - Adds unnecessary complexity and positioning conflicts
+ * - Creates maintenance burden without performance benefits
+ * - Can be re-implemented if incidents ever reach 100+ scale
+ * 
+ * Single Responsibility: Handles efficient rendering of large incident lists
+ * Open/Closed: Can be extended without modification
+ * Dependency Inversion: Depends on abstractions, not concrete implementations
  */
 
 class VirtualScroll {
     constructor() {
-        this.itemHeight = 80; // Approximate height of each incident card
+        this.itemHeight = 80;
         this.visibleCount = 8; // Number of visible items
         this.buffer = 2; // Extra items to render for smooth scrolling
         this.scrollTop = 0;
@@ -20,25 +35,28 @@ class VirtualScroll {
      * @param {Array} incidents - Array of incident data
      */
     initVirtualScroll(container, incidents) {
-        if (!incidents || incidents.length === 0) return;
+        console.warn('VirtualScroll is deprecated and not in use. Use regular rendering instead.');
         
+        if (!container || !incidents) {
+            console.error('VirtualScroll: Invalid container or incidents data');
+            return;
+        }
+
+        this.incidents = incidents;
         this.totalHeight = incidents.length * this.itemHeight;
-        this.startIndex = 0;
-        this.endIndex = Math.min(this.visibleCount + this.buffer, incidents.length);
         
-        // Create virtual scroll container
+        // Create virtual scroll structure
         container.innerHTML = `
-            <div class="virtual-scroll-viewport" id="virtualViewport">
-                <div class="virtual-scroll-content" id="virtualContent" style="height: ${this.totalHeight}px;">
-                </div>
+            <div class="virtual-scroll-viewport" style="height: 600px; overflow-y: auto; position: relative;">
+                <div class="virtual-scroll-content" style="height: ${this.totalHeight}px; position: relative;"></div>
             </div>
         `;
         
-        const viewport = document.getElementById('virtualViewport');
-        const content = document.getElementById('virtualContent');
+        const viewport = container.querySelector('.virtual-scroll-viewport');
+        const content = container.querySelector('.virtual-scroll-content');
         
         if (!viewport || !content) {
-            console.error('Virtual scroll viewport or content not found');
+            console.error('VirtualScroll: Failed to create viewport or content elements');
             return;
         }
         
@@ -75,10 +93,6 @@ class VirtualScroll {
             item.style.top = `${i * this.itemHeight}px`;
             item.style.height = `${this.itemHeight}px`;
             content.appendChild(item);
-            
-            // Debug: Check the created element
-            const computedStyle = window.getComputedStyle(item);
-            console.log(`Virtual scroll item ${i}: classes="${item.className}", margin-bottom="${computedStyle.marginBottom}", position="${computedStyle.position}"`);
         }
     }
 
@@ -90,11 +104,9 @@ class VirtualScroll {
      */
     createIncidentElement(incident, index) {
         const typeClass = this.getTypeClass(incident.type);
-        const isNew = window.previousIncidents && !window.previousIncidents.find(prev => prev.id === incident.id);
-        const newClass = isNew ? ' new' : '';
         
         const div = document.createElement('div');
-        div.className = `incident${newClass} virtual-scroll-item`;
+        div.className = 'incident virtual-scroll-item';
         div.setAttribute('data-incident-id', incident.id);
         div.innerHTML = `
             <div class="incident-header">

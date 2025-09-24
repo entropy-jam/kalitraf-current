@@ -14,7 +14,6 @@ class AppController {
         this.deltaService = new DeltaService();
         
         this.uiController = null;
-        this.virtualScroll = null;
         this.previousIncidents = null;
         this.isInitialized = false;
     }
@@ -93,27 +92,7 @@ class AppController {
 
             // Render incidents
             const container = document.getElementById('incidentsContainer');
-            console.log(`Rendering ${data.incidents.length} incidents`);
-            
-            if (data.incidents && data.incidents.length > 10) {
-                // Use virtual scrolling for large lists
-                console.log('Using virtual scroll rendering');
-                this.virtualScroll.initVirtualScroll(container, data.incidents);
-            } else {
-                // Use regular rendering for small lists
-                console.log('Using regular rendering');
-                this.renderer.renderIncidents(data.incidents, container, this.previousIncidents);
-            }
-            
-            // Debug: Check rendered elements
-            setTimeout(() => {
-                const incidents = container.querySelectorAll('.incident');
-                console.log(`Found ${incidents.length} incident elements after rendering`);
-                incidents.forEach((incident, index) => {
-                    const computedStyle = window.getComputedStyle(incident);
-                    console.log(`Incident ${index}: classes="${incident.className}", margin-bottom="${computedStyle.marginBottom}"`);
-                });
-            }, 100);
+            this.renderer.renderIncidents(data.incidents, container, this.previousIncidents);
 
             return data;
         } catch (error) {

@@ -120,7 +120,7 @@ class DeltaService {
     addIncidents(incidents) {
         const container = document.getElementById('incidentsContainer');
         if (!container) return;
-        
+
         incidents.forEach(incident => {
             const element = this.createIncidentElement(incident);
             element.classList.add('new'); // Mark as new for animation
@@ -134,7 +134,7 @@ class DeltaService {
      * @returns {HTMLElement} Created incident element
      */
     createIncidentElement(incident) {
-        const typeClass = this.getTypeClass(incident.type);
+        const typeClass = this.renderer.getTypeClass(incident.type);
         
         const div = document.createElement('div');
         div.className = 'incident new';
@@ -151,28 +151,6 @@ class DeltaService {
         `;
         
         return div;
-    }
-
-    /**
-     * Get CSS class for incident type
-     * @param {string} type - Incident type
-     * @returns {string} CSS class name
-     */
-    getTypeClass(type) {
-        const typeMap = {
-            'Traffic Hazard': 'type-traffic-hazard',
-            'Trfc Collision': 'type-collision',
-            'SIG Alert': 'type-sig-alert',
-            'Animal Hazard': 'type-animal-hazard',
-            'Road/Weather': 'type-weather'
-        };
-        
-        for (const [key, className] of Object.entries(typeMap)) {
-            if (type.includes(key)) {
-                return className;
-            }
-        }
-        return 'type-traffic-hazard';
     }
 
     /**
