@@ -1,8 +1,24 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 21,
+  "incident_count": 22,
   "incidents": [
+    {
+      "id": "0144",
+      "time": "7:53 AM",
+      "type": "Report of Fire",
+      "location": "14000-14089 Wildcat Canyon Rd",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0142",
+      "time": "7:49 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Las Pulgas So",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
     {
       "id": "0137",
       "time": "7:34 AM",
@@ -50,14 +66,6 @@
       "location": "Ct",
       "location_desc": "",
       "area": ""
-    },
-    {
-      "id": "0120",
-      "time": "7:12 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr78 W / I15 Wo",
-      "location_desc": "SR78 W I15 WO",
-      "area": "Oceanside"
     },
     {
       "id": "0112",
@@ -172,5 +180,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T14:42:01.009395"
+  "last_updated": "2025-09-24T14:56:06.188833"
 }
