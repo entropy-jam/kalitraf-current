@@ -1,63 +1,111 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T21:09:36.276293",
+  "timestamp": "2025-09-24T23:24:25.019270",
   "new_incidents": [
     {
-      "id": "0442",
-      "time": "1:58 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 S / Imperial No",
-      "location_desc": "I5 S IMPERIAL NO",
-      "area": "San Diego"
-    },
-    {
-      "id": "0440",
-      "time": "1:56 PM",
+      "id": "0589",
+      "time": "4:16 PM",
       "type": "Traffic Hazard",
-      "location": "I805 S I8 Con / I805 S I8 E Con",
-      "location_desc": "SB 805 TO EB 8 CON",
+      "location": "Sr56 W / Carmel Creek Eo",
+      "location_desc": "SR56 W CARMEL CREEK EO",
       "area": "San Diego"
     },
     {
-      "id": "0427",
-      "time": "1:47 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Pourroy Rd / Encanto Rd",
+      "id": "0225",
+      "time": "4:14 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / S Curves (sdi)",
+      "location_desc": "I5 S S CURVES (SDI)",
+      "area": "South FSP"
+    },
+    {
+      "id": "0579",
+      "time": "4:14 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / S Curves (sdi)",
+      "location_desc": "I5 S S CURVES (SDI)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0588",
+      "time": "4:11 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Valley Center Rd / N Lake Wohlford Rd",
+      "location_desc": "4637 VALLEY CENTER RD",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0574",
+      "time": "4:11 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Dairy Mart No",
+      "location_desc": "I5 S DAIRY MART NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0571",
+      "time": "4:09 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 N / BERNARDO CENTER (HOV)",
       "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0218",
+      "time": "4:08 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 N / BERNARDO CENTER (HOV)",
+      "location_desc": "",
+      "area": "North FSP"
+    },
+    {
+      "id": "0564",
+      "time": "4:00 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "4552 Felton St",
+      "location_desc": "",
+      "area": "BC"
+    },
+    {
+      "id": "0554",
+      "time": "3:52 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "9805 Carroll Canyon Rd",
+      "location_desc": "Carl's Jr.",
+      "area": "San Diego"
+    },
+    {
+      "id": "0538",
+      "time": "3:40 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "El Camino Del Norte / Del Dios Hwy",
+      "location_desc": "I/S",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0524",
+      "time": "3:16 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "De Luz Rd / Via Medeiros",
+      "location_desc": "WB DE LUZ RD JWO VIA MEDEIROS",
       "area": "Temecula"
     },
     {
-      "id": "0404",
-      "time": "1:21 PM",
-      "type": "Traffic Break",
-      "location": "I5 S / B St",
-      "location_desc": "",
-      "area": "BC"
-    },
-    {
-      "id": "0399",
-      "time": "1:16 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr15 S / Adams No",
-      "location_desc": "SR15 S ADAMS NO",
-      "area": "San Diego"
-    },
-    {
-      "id": "0377",
-      "time": "12:47 PM",
+      "id": "0452",
+      "time": "2:11 PM",
       "type": "Trfc Collision-No Inj",
-      "location": "Benjamin Ct / Palm Tree Ln",
+      "location": "2055 Arnold Way",
       "location_desc": "",
-      "area": "BC"
+      "area": "El Cajon"
     },
     {
-      "id": "0369",
-      "time": "12:42 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "29115 Valley Center Rd",
+      "id": "0412",
+      "time": "1:29 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I8 E / Mission Gorge Wo (fairmount)",
       "location_desc": "",
-      "area": "Oceanside"
+      "area": "San Diego"
     },
     {
       "id": "0128",
@@ -66,54 +114,6 @@
       "location": "Ct",
       "location_desc": "",
       "area": ""
-    },
-    {
-      "id": "0127",
-      "time": "7:18 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Santee Ct",
-      "location_desc": "",
-      "area": ""
-    },
-    {
-      "id": "0121",
-      "time": "7:13 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Ct",
-      "location_desc": "",
-      "area": ""
-    },
-    {
-      "id": "0084",
-      "time": "6:01 AM",
-      "type": "Assist with Construction",
-      "location": "5902 Kearny Villa Rd",
-      "location_desc": "STREET SWEEPING - VARIOUS LOC",
-      "area": "San Diego"
-    },
-    {
-      "id": "0079",
-      "time": "5:52 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Descanso Ct",
-      "location_desc": "",
-      "area": ""
-    },
-    {
-      "id": "0076",
-      "time": "5:46 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "I15 N / SR56",
-      "location_desc": "15 FROM 56 TO VRP - POTHOLE REPAIR",
-      "area": "San Diego"
-    },
-    {
-      "id": "0058",
-      "time": "5:18 AM",
-      "type": "Assist with Construction",
-      "location": "Sr79 / Sage Rd",
-      "location_desc": "BTWN SAGE AND PAUBA",
-      "area": "Temecula"
     },
     {
       "id": "0033",

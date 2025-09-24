@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 39,
+  "total_incidents": 51,
   "incidents": [
     {
       "id": "0347",
@@ -315,7 +315,103 @@
       "location": "Pourroy Rd / Encanto Rd",
       "location_desc": "",
       "area": "Temecula"
+    },
+    {
+      "id": "0589",
+      "time": "4:16 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr56 W / Carmel Creek Eo",
+      "location_desc": "SR56 W CARMEL CREEK EO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0225",
+      "time": "4:14 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / S Curves (sdi)",
+      "location_desc": "I5 S S CURVES (SDI)",
+      "area": "South FSP"
+    },
+    {
+      "id": "0579",
+      "time": "4:14 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / S Curves (sdi)",
+      "location_desc": "I5 S S CURVES (SDI)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0588",
+      "time": "4:11 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Valley Center Rd / N Lake Wohlford Rd",
+      "location_desc": "4637 VALLEY CENTER RD",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0574",
+      "time": "4:11 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Dairy Mart No",
+      "location_desc": "I5 S DAIRY MART NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0571",
+      "time": "4:09 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 N / BERNARDO CENTER (HOV)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0218",
+      "time": "4:08 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 N / BERNARDO CENTER (HOV)",
+      "location_desc": "",
+      "area": "North FSP"
+    },
+    {
+      "id": "0564",
+      "time": "4:00 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "4552 Felton St",
+      "location_desc": "",
+      "area": "BC"
+    },
+    {
+      "id": "0554",
+      "time": "3:52 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "9805 Carroll Canyon Rd",
+      "location_desc": "Carl's Jr.",
+      "area": "San Diego"
+    },
+    {
+      "id": "0538",
+      "time": "3:40 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "El Camino Del Norte / Del Dios Hwy",
+      "location_desc": "I/S",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0524",
+      "time": "3:16 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "De Luz Rd / Via Medeiros",
+      "location_desc": "WB DE LUZ RD JWO VIA MEDEIROS",
+      "area": "Temecula"
+    },
+    {
+      "id": "0452",
+      "time": "2:11 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "2055 Arnold Way",
+      "location_desc": "",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-24T21:09:36.276798"
+  "last_updated": "2025-09-24T23:24:25.019861"
 }
