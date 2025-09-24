@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-24",
-  "total_incidents": 44,
+  "total_incidents": 56,
   "incidents": [
     {
       "id": "0446",
@@ -355,7 +355,103 @@
       "location": "I80 E / Jwo Norwood Ave",
       "location_desc": "EB 80 JWO NORWOOD",
       "area": "North Sac FSP"
+    },
+    {
+      "id": "0815",
+      "time": "4:20 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "3248 Auburn Blvd",
+      "location_desc": "IFO EU TECH",
+      "area": "North Sac"
+    },
+    {
+      "id": "0067",
+      "time": "4:20 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I80 E / Mace Blvd N Onr",
+      "location_desc": "",
+      "area": "Woodland FSP"
+    },
+    {
+      "id": "0066",
+      "time": "4:18 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Jso 12th Ave",
+      "location_desc": "SB 99 JSO 12TH",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0065",
+      "time": "4:16 PM",
+      "type": "Traffic Hazard",
+      "location": "Us50 W / Stockton Blvd",
+      "location_desc": "WB 50 AT STOCKTON",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0811",
+      "time": "4:15 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I80 E / Mace Blvd N Onr",
+      "location_desc": "EB JEO",
+      "area": "Woodland"
+    },
+    {
+      "id": "0810",
+      "time": "4:14 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr51 S / J St",
+      "location_desc": "SB JSO",
+      "area": "South Sac"
+    },
+    {
+      "id": "0807",
+      "time": "4:12 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "5251 Valley Hi Dr",
+      "location_desc": "WB IFO",
+      "area": "SA"
+    },
+    {
+      "id": "0806",
+      "time": "4:09 PM",
+      "type": "Traffic Hazard",
+      "location": "Oxford Rd / Fairway Dr",
+      "location_desc": "NB JNO",
+      "area": "Placerville"
+    },
+    {
+      "id": "0785",
+      "time": "4:01 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Green Valley Rd / Salmon Falls Rd",
+      "location_desc": "",
+      "area": "Placerville"
+    },
+    {
+      "id": "0780",
+      "time": "4:00 PM",
+      "type": "Car Fire",
+      "location": "I80 E / Greenback Ln E Onr",
+      "location_desc": "EB AT **46-184**",
+      "area": "North Sac"
+    },
+    {
+      "id": "0765",
+      "time": "3:48 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Folsom Blvd / Starfire Dr",
+      "location_desc": "EB JWO",
+      "area": "East Sac"
+    },
+    {
+      "id": "0757",
+      "time": "3:45 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Morse Ave / Marconi Ave",
+      "location_desc": "NB JNO",
+      "area": "North Sac"
     }
   ],
-  "last_updated": "2025-09-24T22:01:36.951385"
+  "last_updated": "2025-09-24T23:31:52.398155"
 }

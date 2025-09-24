@@ -1,110 +1,102 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "incident_count": 19,
+  "incident_count": 16,
   "incidents": [
     {
-      "id": "0045",
-      "time": "2:53 PM",
+      "id": "0815",
+      "time": "4:20 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "3248 Auburn Blvd",
+      "location_desc": "IFO EU TECH",
+      "area": "North Sac"
+    },
+    {
+      "id": "0067",
+      "time": "4:20 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I80 E / Mace Blvd N Onr",
+      "location_desc": "",
+      "area": "Woodland FSP"
+    },
+    {
+      "id": "0066",
+      "time": "4:18 PM",
       "type": "Traffic Hazard",
-      "location": "Sr99 S / Fruitridge Rd Ofr",
-      "location_desc": "SB OFR TO WB",
+      "location": "Sr99 S / Jso 12th Ave",
+      "location_desc": "SB 99 JSO 12TH",
       "area": "South Sac FSP"
     },
     {
-      "id": "0693",
-      "time": "2:49 PM",
+      "id": "0065",
+      "time": "4:16 PM",
       "type": "Traffic Hazard",
-      "location": "Sr99 S / Fruitridge Rd Ofr",
-      "location_desc": "SB OFR TO WB",
-      "area": "South Sac"
+      "location": "Us50 W / Stockton Blvd",
+      "location_desc": "WB 50 AT STOCKTON",
+      "area": "South Sac FSP"
     },
     {
-      "id": "0680",
-      "time": "2:42 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I80 E / Jwo Norwood Ave",
-      "location_desc": "EB 80 JWO NORWOOD",
-      "area": "North Sac"
+      "id": "0811",
+      "time": "4:15 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I80 E / Mace Blvd N Onr",
+      "location_desc": "EB JEO",
+      "area": "Woodland"
     },
     {
-      "id": "0681",
-      "time": "2:42 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "College Oak Dr / Auburn Blvd",
-      "location_desc": "WB",
-      "area": "North Sac"
-    },
-    {
-      "id": "0040",
-      "time": "2:41 PM",
-      "type": "Trfc Collision-1141Enrt",
-      "location": "I80 E / Jwo Norwood Ave",
-      "location_desc": "EB 80 JWO NORWOOD",
-      "area": "North Sac FSP"
-    },
-    {
-      "id": "0672",
-      "time": "2:37 PM",
-      "type": "Traffic Hazard",
-      "location": "1972 Ethan Way",
-      "location_desc": "",
-      "area": "North Sac"
-    },
-    {
-      "id": "0671",
-      "time": "2:35 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Cosumnes River Blvd E Onr",
+      "id": "0810",
+      "time": "4:14 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr51 S / J St",
       "location_desc": "SB JSO",
       "area": "South Sac"
     },
     {
-      "id": "0673",
-      "time": "2:33 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "8750 La Riviera Dr",
-      "location_desc": "OCCURD Salmon Falls Dr / La Riviera Dr",
+      "id": "0807",
+      "time": "4:12 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "5251 Valley Hi Dr",
+      "location_desc": "WB IFO",
+      "area": "SA"
+    },
+    {
+      "id": "0806",
+      "time": "4:09 PM",
+      "type": "Traffic Hazard",
+      "location": "Oxford Rd / Fairway Dr",
+      "location_desc": "NB JNO",
+      "area": "Placerville"
+    },
+    {
+      "id": "0785",
+      "time": "4:01 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Green Valley Rd / Salmon Falls Rd",
+      "location_desc": "",
+      "area": "Placerville"
+    },
+    {
+      "id": "0780",
+      "time": "4:00 PM",
+      "type": "Car Fire",
+      "location": "I80 E / Greenback Ln E Onr",
+      "location_desc": "EB AT **46-184**",
+      "area": "North Sac"
+    },
+    {
+      "id": "0765",
+      "time": "3:48 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Folsom Blvd / Starfire Dr",
+      "location_desc": "EB JWO",
       "area": "East Sac"
     },
     {
-      "id": "0038",
-      "time": "2:15 PM",
-      "type": "Traffic Hazard",
-      "location": "I80 E / Jwo Norwood Ave",
-      "location_desc": "EB 80 JWO NORWOOD",
-      "area": "North Sac FSP"
-    },
-    {
-      "id": "0641",
-      "time": "2:14 PM",
-      "type": "Traffic Hazard",
-      "location": "I80 E / Jwo Norwood Ave",
-      "location_desc": "EB 80 JWO NORWOOD",
-      "area": "North Sac"
-    },
-    {
-      "id": "0615",
-      "time": "1:59 PM",
+      "id": "0757",
+      "time": "3:45 PM",
       "type": "Trfc Collision-No Inj",
-      "location": "I80 E / Marysville Blvd",
-      "location_desc": "EB JWO",
-      "area": "North Sac"
-    },
-    {
-      "id": "0582",
-      "time": "1:27 PM",
-      "type": "Animal Hazard",
-      "location": "Northgate Blvd N Onr / I80 W",
-      "location_desc": "ONR",
-      "area": "North Sac"
-    },
-    {
-      "id": "0499",
-      "time": "12:08 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Roseville Rd / Antelope Rd",
-      "location_desc": "HOME DEPOT PLOT",
+      "location": "Morse Ave / Marconi Ave",
+      "location_desc": "NB JNO",
       "area": "North Sac"
     },
     {
@@ -124,22 +116,6 @@
       "area": "Placerville"
     },
     {
-      "id": "0124",
-      "time": "6:25 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "3031 Lo Hi Way",
-      "location_desc": "***1630***PLACERVILLE CT YARD",
-      "area": "Placerville"
-    },
-    {
-      "id": "0121",
-      "time": "6:19 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Wsac Ct Yard",
-      "location_desc": "",
-      "area": ""
-    },
-    {
       "id": "0105",
       "time": "5:57 AM",
       "type": "Assist CT with Maintenance",
@@ -156,5 +132,5 @@
       "area": ""
     }
   ],
-  "last_updated": "2025-09-24T22:01:36.950296"
+  "last_updated": "2025-09-24T23:31:52.397021"
 }
