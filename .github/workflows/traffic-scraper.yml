@@ -53,6 +53,10 @@ jobs:
   scrape-traffic:
     runs-on: ubuntu-latest
     timeout-minutes: 3
+    strategy:
+      matrix:
+        center: [BCCC, LACC, SACC, OCCC]
+      max-parallel: 4
     
     steps:
     - name: Checkout repository
@@ -162,7 +166,7 @@ jobs:
 
     - name: Set environment variables
       run: |
-        echo "COMMUNICATION_CENTER=${{ github.event.inputs.communication_center || 'BCCC' }}" >> $GITHUB_ENV
+        echo "COMMUNICATION_CENTER=${{ matrix.center }}" >> $GITHUB_ENV
         echo "RUN_ONCE=${{ github.event.inputs.run_once || 'false' }}" >> $GITHUB_ENV
         echo "SCRAPER_MODE=github_actions" >> $GITHUB_ENV
         echo "ENABLE_EMAIL_NOTIFICATIONS=false" >> $GITHUB_ENV
@@ -191,9 +195,10 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add data/
-        git add active_incidents.json
-        git add incident_deltas.json
-        git commit -m "Update traffic incidents - $(date '+%Y-%m-%d %H:%M:%S')"
+        git add active_incidents_${{ matrix.center }}.json
+        git add incident_deltas_${{ matrix.center }}.json
+        git add active_incidents.json  # For backward compatibility (BCCC only)
+        git commit -m "Update traffic incidents for ${{ matrix.center }} - $(date '+%Y-%m-%d %H:%M:%S')"
         git push
 
     - name: Update GitHub Pages

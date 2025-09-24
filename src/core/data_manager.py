@@ -14,8 +14,8 @@ class DataManager:
     def __init__(self, center_code="BCCC"):
         self.center_code = center_code
         self.data_dir = "data"
-        self.active_file = "active_incidents.json"
-        self.delta_file = "incident_deltas.json"
+        self.active_file = f"active_incidents_{center_code}.json"
+        self.delta_file = f"incident_deltas_{center_code}.json"
         self.previous_incidents = None
         
         # Ensure data directory exists
@@ -66,6 +66,13 @@ class DataManager:
             json.dump(json_data, f, indent=2)
         
         logging.info(f"Saved {len(incidents_data)} incidents to {self.active_file}")
+        
+        # Maintain backward compatibility: also save to active_incidents.json if this is BCCC
+        if self.center_code == "BCCC":
+            with open("active_incidents.json", 'w') as f:
+                json.dump(json_data, f, indent=2)
+            logging.info("Also saved to active_incidents.json for backward compatibility")
+        
         return True
     
     def _data_equals(self, data1: Dict, data2: Dict) -> bool:
@@ -141,7 +148,7 @@ class DataManager:
     def append_daily_incidents(self, incidents_data: List[List[str]]) -> None:
         """Append unique incidents to daily JSON file"""
         today = datetime.now().strftime("%Y-%m-%d")
-        daily_file = f"{self.data_dir}/{today}_incidents.json"
+        daily_file = f"{self.data_dir}/{today}_incidents_{self.center_code}.json"
         
         # Load existing daily incidents
         existing_incidents = []

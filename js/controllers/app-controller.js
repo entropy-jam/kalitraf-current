@@ -11,6 +11,7 @@ class AppController {
         this.fetcher = new HttpFetcher();
         this.renderer = new IncidentRenderer();
         this.incidentService = new IncidentService(this.storage, this.fetcher, this.config);
+        this.multiCenterService = new MultiCenterService(this.fetcher, this.storage, this.config);
         this.deltaService = new DeltaService();
         
         this.uiController = null;
@@ -61,12 +62,14 @@ class AppController {
      */
     async loadData(forceRefresh = false) {
         try {
-            const data = await this.incidentService.loadIncidents(forceRefresh);
+            // Load multi-center data
+            const data = await this.multiCenterService.loadMultiCenterData(forceRefresh);
             
             // Update status
             this.renderer.updateStatus({
-                count: data.incident_count || 0,
-                lastUpdated: data.last_updated
+                count: data.total_incidents || 0,
+                lastUpdated: data.last_updated,
+                centers: data.centers
             });
 
             // Check for differences
@@ -122,6 +125,16 @@ class AppController {
      */
     setCurrentCenter(center) {
         this.incidentService.setCurrentCenter(center);
+        // Also update multi-center service
+        this.multiCenterService.setSelectedCenters([center]);
+    }
+
+    /**
+     * Set selected centers for multi-center view
+     * @param {string[]} centers - Array of center codes
+     */
+    setSelectedCenters(centers) {
+        this.multiCenterService.setSelectedCenters(centers);
     }
 
     /**

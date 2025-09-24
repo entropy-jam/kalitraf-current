@@ -57,6 +57,7 @@ class IncidentRenderer extends IUIRenderer {
                 <div class="incident-location">${incident.location}</div>
                 ${incident.location_desc ? `<div class="incident-location">${incident.location_desc}</div>` : ''}
                 <div class="incident-area">${incident.area}</div>
+                ${incident.center_name ? `<div class="incident-center">${incident.center_name} (${incident.center_code})</div>` : ''}
                 <div class="incident-time">${incident.time}</div>
             </div>
         `;
