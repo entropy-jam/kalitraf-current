@@ -179,9 +179,9 @@ body {
     animation: slideIn 0.4s ease;
 }
 
-/* Virtual scroll items should not have margins */
-.virtual-scroll-item.incident {
-    margin-bottom: 0;
+/* All incident items should not have margins when in containers */
+.incidents-container .incident {
+    margin-bottom: 0 !important;
 }
 
 .incident:hover {
@@ -212,6 +212,7 @@ body {
     70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
     100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
 }
+
 
 .incident-header {
     display: flex;

@@ -91,6 +91,7 @@ class VirtualScroll {
         
         const div = document.createElement('div');
         div.className = `incident${newClass} virtual-scroll-item`;
+        div.setAttribute('data-incident-id', incident.id);
         div.innerHTML = `
             <div class="incident-header">
                 <span class="incident-id">#${incident.id}</span>
