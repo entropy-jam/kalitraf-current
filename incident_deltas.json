@@ -1,15 +1,23 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T13:35:58.374255",
+  "timestamp": "2025-09-24T13:48:05.351058",
   "new_incidents": [
     {
-      "id": "0093",
-      "time": "6:31 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr163 N / Clairemont Mesa",
-      "location_desc": "SR163 N CLAIREMONT MESA",
-      "area": "San Diego"
+      "id": "0098",
+      "time": "6:38 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Scales No",
+      "location_desc": "NB 5 JNO SCALES",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0096",
+      "time": "6:38 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "E Fallbrook St / S Vine St",
+      "location_desc": "",
+      "area": "Oceanside"
     },
     {
       "id": "0092",
@@ -82,14 +90,6 @@
       "location": "Descanso Ct",
       "location_desc": "",
       "area": ""
-    },
-    {
-      "id": "0078",
-      "time": "5:48 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr11 E / Enrico Fermi Dr",
-      "location_desc": "EB SR11 JWO ERICO FERMI",
-      "area": "San Diego"
     },
     {
       "id": "0076",
