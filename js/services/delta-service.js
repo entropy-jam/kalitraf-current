@@ -68,7 +68,6 @@ class DeltaService {
         this.isProcessing = true;
         
         try {
-            console.log(`Processing delta: ${deltaData.new_count} new, ${deltaData.removed_count} removed`);
             
             // Remove resolved incidents
             if (deltaData.removed_incidents && deltaData.removed_incidents.length > 0) {
