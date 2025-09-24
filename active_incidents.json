@@ -1,8 +1,32 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 16,
+  "incident_count": 18,
   "incidents": [
+    {
+      "id": "0044",
+      "time": "6:51 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 W / I805 Eo",
+      "location_desc": "SR94 W I805 EO",
+      "area": "South FSP"
+    },
+    {
+      "id": "0104",
+      "time": "6:48 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 W / I805 Eo",
+      "location_desc": "SR94 W I805 EO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0101",
+      "time": "6:47 AM",
+      "type": "Defective Traffic Signals",
+      "location": "I8 E / DUNBAR LN OFR",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
     {
       "id": "0098",
       "time": "6:38 AM",
@@ -34,14 +58,6 @@
       "location": "I8 W / I5",
       "location_desc": "WB I8 AT I5",
       "area": "San Diego"
-    },
-    {
-      "id": "0095",
-      "time": "6:29 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "1069 Elkelton Blvd",
-      "location_desc": "FOSTERS FREEZE PLOT",
-      "area": "El Cajon"
     },
     {
       "id": "0020",
@@ -132,5 +148,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T13:48:05.350446"
+  "last_updated": "2025-09-24T13:54:46.517269"
 }

@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 95,
+  "total_incidents": 98,
   "incidents": [
     {
       "id": "0623",
@@ -763,7 +763,31 @@
       "location": "E Fallbrook St / S Vine St",
       "location_desc": "",
       "area": "Oceanside"
+    },
+    {
+      "id": "0044",
+      "time": "6:51 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 W / I805 Eo",
+      "location_desc": "SR94 W I805 EO",
+      "area": "South FSP"
+    },
+    {
+      "id": "0104",
+      "time": "6:48 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 W / I805 Eo",
+      "location_desc": "SR94 W I805 EO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0101",
+      "time": "6:47 AM",
+      "type": "Defective Traffic Signals",
+      "location": "I8 E / DUNBAR LN OFR",
+      "location_desc": "",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-24T13:48:05.351745"
+  "last_updated": "2025-09-24T13:54:46.519477"
 }
