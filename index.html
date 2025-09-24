@@ -137,6 +137,30 @@
             padding: 20px;
             max-height: 600px;
             overflow-y: auto;
+            position: relative;
+        }
+        
+        /* Virtual scrolling container */
+        .virtual-scroll-container {
+            position: relative;
+            height: 100%;
+        }
+        
+        .virtual-scroll-viewport {
+            height: 100%;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .virtual-scroll-content {
+            position: relative;
+            will-change: transform;
+        }
+        
+        .virtual-scroll-item {
+            position: absolute;
+            width: 100%;
+            transition: transform 0.1s ease;
         }
         .incident {
             background: #f8f9fa;
@@ -391,6 +415,17 @@
         const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
         const CACHE_PREFIX = 'chp_data_';
         
+        // Virtual scrolling
+        let virtualScroll = {
+            itemHeight: 80, // Approximate height of each incident card
+            visibleCount: 8, // Number of visible items
+            buffer: 2, // Extra items to render for smooth scrolling
+            scrollTop: 0,
+            totalHeight: 0,
+            startIndex: 0,
+            endIndex: 0
+        };
+        
         // Cache functions
         function getCachedData(center) {
             try {
@@ -595,6 +630,77 @@
             }
         }
         
+        // Virtual scrolling functions
+        function initVirtualScroll(container, incidents) {
+            if (!incidents || incidents.length === 0) return;
+            
+            virtualScroll.totalHeight = incidents.length * virtualScroll.itemHeight;
+            virtualScroll.startIndex = 0;
+            virtualScroll.endIndex = Math.min(virtualScroll.visibleCount + virtualScroll.buffer, incidents.length);
+            
+            // Create virtual scroll container
+            container.innerHTML = `
+                <div class="virtual-scroll-viewport" id="virtualViewport">
+                    <div class="virtual-scroll-content" id="virtualContent" style="height: ${virtualScroll.totalHeight}px;">
+                    </div>
+                </div>
+            `;
+            
+            const viewport = document.getElementById('virtualViewport');
+            const content = document.getElementById('virtualContent');
+            
+            // Add scroll listener
+            viewport.addEventListener('scroll', () => {
+                virtualScroll.scrollTop = viewport.scrollTop;
+                updateVirtualScroll(incidents, content);
+            });
+            
+            // Initial render
+            updateVirtualScroll(incidents, content);
+        }
+        
+        function updateVirtualScroll(incidents, content) {
+            const startIndex = Math.floor(virtualScroll.scrollTop / virtualScroll.itemHeight);
+            const endIndex = Math.min(startIndex + virtualScroll.visibleCount + virtualScroll.buffer, incidents.length);
+            
+            virtualScroll.startIndex = startIndex;
+            virtualScroll.endIndex = endIndex;
+            
+            // Clear existing items
+            content.innerHTML = '';
+            
+            // Render visible items
+            for (let i = startIndex; i < endIndex; i++) {
+                const incident = incidents[i];
+                const item = createIncidentElement(incident, i);
+                item.style.position = 'absolute';
+                item.style.top = `${i * virtualScroll.itemHeight}px`;
+                item.style.height = `${virtualScroll.itemHeight}px`;
+                content.appendChild(item);
+            }
+        }
+        
+        function createIncidentElement(incident, index) {
+            const typeClass = getTypeClass(incident.type);
+            const isNew = previousIncidents && !previousIncidents.find(prev => prev.id === incident.id);
+            const newClass = isNew ? ' new' : '';
+            
+            const div = document.createElement('div');
+            div.className = `incident${newClass} virtual-scroll-item`;
+            div.innerHTML = `
+                <div class="incident-header">
+                    <span class="incident-id">#${incident.id}</span>
+                    <span class="incident-time">${incident.time}</span>
+                </div>
+                <div class="incident-type ${typeClass}">${incident.type}</div>
+                <div class="incident-location">${incident.location}</div>
+                ${incident.location_desc ? `<div class="incident-location">${incident.location_desc}</div>` : ''}
+                <div class="incident-area">${incident.area}</div>
+            `;
+            
+            return div;
+        }
+        
         function displayIncidents(data) {
             const container = document.getElementById('incidentsContainer');
             const countElement = document.getElementById('incidentCount');
@@ -621,26 +727,32 @@
             // Update previous incidents for next comparison
             previousIncidents = data.incidents;
             
-            const incidentsHtml = data.incidents.map(incident => {
-                const typeClass = getTypeClass(incident.type);
-                const isNew = previousIncidents && !previousIncidents.find(prev => prev.id === incident.id);
-                const newClass = isNew ? ' new' : '';
-                
-                return `
-                    <div class="incident${newClass}">
-                        <div class="incident-header">
-                            <span class="incident-id">#${incident.id}</span>
-                            <span class="incident-time">${incident.time}</span>
+            // Use virtual scrolling for better performance
+            if (data.incidents.length > 10) {
+                initVirtualScroll(container, data.incidents);
+            } else {
+                // For small lists, use regular rendering
+                const incidentsHtml = data.incidents.map(incident => {
+                    const typeClass = getTypeClass(incident.type);
+                    const isNew = previousIncidents && !previousIncidents.find(prev => prev.id === incident.id);
+                    const newClass = isNew ? ' new' : '';
+                    
+                    return `
+                        <div class="incident${newClass}">
+                            <div class="incident-header">
+                                <span class="incident-id">#${incident.id}</span>
+                                <span class="incident-time">${incident.time}</span>
+                            </div>
+                            <div class="incident-type ${typeClass}">${incident.type}</div>
+                            <div class="incident-location">${incident.location}</div>
+                            ${incident.location_desc ? `<div class="incident-location">${incident.location_desc}</div>` : ''}
+                            <div class="incident-area">${incident.area}</div>
                         </div>
-                        <div class="incident-type ${typeClass}">${incident.type}</div>
-                        <div class="incident-location">${incident.location}</div>
-                        ${incident.location_desc ? `<div class="incident-location">${incident.location_desc}</div>` : ''}
-                        <div class="incident-area">${incident.area}</div>
-                    </div>
-                `;
-            }).join('');
-            
-            container.innerHTML = incidentsHtml;
+                    `;
+                }).join('');
+                
+                container.innerHTML = incidentsHtml;
+            }
         }
         
         function getTypeClass(type) {
