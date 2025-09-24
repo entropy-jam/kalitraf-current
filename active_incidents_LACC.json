@@ -1,239 +1,207 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "incident_count": 45,
+  "incident_count": 35,
   "incidents": [
     {
-      "id": "0111",
-      "time": "12:41 PM",
+      "id": "1266",
+      "time": "2:52 PM",
       "type": "Traffic Hazard",
-      "location": "I405 N / Lakewood Blvd Ofr",
-      "location_desc": "NB 405 ON LAKEWOOD OFR",
-      "area": "LAFSP"
+      "location": "I405 S / Valley Vista Blvd",
+      "location_desc": "SB 405 AT VALLEY VISTA BLVD",
+      "area": "West Valley"
     },
     {
-      "id": "0973",
-      "time": "12:40 PM",
-      "type": "Traffic Hazard",
-      "location": "I405 N / Lakewood Blvd Ofr",
-      "location_desc": "NB 405 ON LAKEWOOD OFR",
-      "area": "South LA"
-    },
-    {
-      "id": "0972",
-      "time": "12:40 PM",
-      "type": "Traffic Hazard",
-      "location": "I405 S / I10 W I405 S Con",
-      "location_desc": "SB 405 JNO 10",
-      "area": "West LA"
-    },
-    {
-      "id": "0110",
-      "time": "12:39 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / Van Nuys Blvd",
-      "location_desc": "5 N AT VAN NUYS BLVD",
-      "area": "LAFSP"
-    },
-    {
-      "id": "0109",
-      "time": "12:39 PM",
-      "type": "Traffic Hazard",
-      "location": "I710 S / I710 S I10 Con",
-      "location_desc": "SB 710 AT 10",
-      "area": "LAFSP"
-    },
-    {
-      "id": "0969",
-      "time": "12:38 PM",
-      "type": "Traffic Hazard",
-      "location": "I405 S / Wilshire Blvd Onr",
-      "location_desc": "SB JSO",
-      "area": "West LA"
-    },
-    {
-      "id": "0968",
-      "time": "12:38 PM",
-      "type": "Traffic Hazard",
-      "location": "I710 S / I710 S I10 Con",
-      "location_desc": "SB 710 AT 10",
-      "area": "East LA"
-    },
-    {
-      "id": "0970",
-      "time": "12:38 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "19077 Colima Rd",
-      "location_desc": "",
-      "area": "Santa Fe Springs"
-    },
-    {
-      "id": "0962",
-      "time": "12:35 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / N Broadway",
-      "location_desc": "NB 5 JSO BROADWAY",
-      "area": "Central LA"
-    },
-    {
-      "id": "0963",
-      "time": "12:35 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / Van Nuys Blvd",
-      "location_desc": "5 N AT VAN NUYS BLVD",
-      "area": "Altadena"
-    },
-    {
-      "id": "0961",
-      "time": "12:31 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr60 W / Fairway Dr Ofr",
-      "location_desc": "POI WB 60 AT FAIRWAY DR OFR",
-      "area": "Baldwin Park"
-    },
-    {
-      "id": "0107",
-      "time": "12:30 PM",
-      "type": "Traffic Hazard",
-      "location": "SR2 N / VERDUGO RD",
-      "location_desc": "NB JNO",
-      "area": "LAFSP"
-    },
-    {
-      "id": "0954",
-      "time": "12:27 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Garfield Ave",
-      "location_desc": "NB 5 JSO GARFIELD",
-      "area": "East LA"
-    },
-    {
-      "id": "0952",
-      "time": "12:27 PM",
+      "id": "1263",
+      "time": "2:51 PM",
       "type": "Report of Fire",
-      "location": "I710 N / W Wardlow Rd",
-      "location_desc": "WB WARDLOW ONR TO NB 710",
-      "area": "South LA"
-    },
-    {
-      "id": "0945",
-      "time": "12:25 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "US101 S / WOODMAN AVE",
-      "location_desc": "SB AT",
-      "area": "West Valley"
-    },
-    {
-      "id": "0106",
-      "time": "12:24 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "US101 S / WOODMAN AVE",
-      "location_desc": "SB AT",
-      "area": "LAFSP"
-    },
-    {
-      "id": "0937",
-      "time": "12:21 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr91 E / Wo I605",
-      "location_desc": "SR91 E / WO I605",
-      "area": "Santa Fe Springs"
-    },
-    {
-      "id": "0103",
-      "time": "12:21 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr91 E / Wo I605",
-      "location_desc": "SR91 E / WO I605",
-      "area": "LAFSP"
-    },
-    {
-      "id": "0929",
-      "time": "12:17 PM",
-      "type": "Traffic Break",
-      "location": "Sr60 E / Garey Ave",
-      "location_desc": "EB 60 AT GAREY",
-      "area": "Baldwin Park"
-    },
-    {
-      "id": "0909",
-      "time": "12:07 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "19130 E Walnut Dr N",
-      "location_desc": "STE B",
-      "area": "Santa Fe Springs"
-    },
-    {
-      "id": "0907",
-      "time": "12:05 PM",
-      "type": "Traffic Hazard",
-      "location": "S Western Ave Col Onr / I10 W",
+      "location": "I710 S / E Del Amo Blvd",
       "location_desc": "",
-      "area": "Central LA"
-    },
-    {
-      "id": "0099",
-      "time": "12:02 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr57 N / Diamond Bar Blvd",
-      "location_desc": "SR57 N / DIAMOND BAR BLVD",
-      "area": "LAFSP"
-    },
-    {
-      "id": "0890",
-      "time": "12:00 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr57 N / Diamond Bar Blvd",
-      "location_desc": "SR57 N / DIAMOND BAR BLVD",
-      "area": "Baldwin Park"
-    },
-    {
-      "id": "0882",
-      "time": "11:58 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Us101 S / Vineland Ave",
-      "location_desc": "JNO",
-      "area": "West Valley"
-    },
-    {
-      "id": "0876",
-      "time": "11:53 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "SR91 W / WO ATLANTIC AVE",
-      "location_desc": "WB 91 JWO ATLANTIC AVE",
       "area": "South LA"
     },
     {
-      "id": "0866",
-      "time": "11:45 AM",
+      "id": "1253",
+      "time": "2:47 PM",
       "type": "Traffic Hazard",
-      "location": "I210 E I210 E Con / N Marengo Ave",
-      "location_desc": "EB 210 JWO MARENGO",
+      "location": "I210 E Sr2 Con / Sr2 S",
+      "location_desc": "EB 210 TRANS TO SB 2",
       "area": "Altadena"
     },
     {
-      "id": "0855",
-      "time": "11:35 AM",
-      "type": "Traffic Hazard",
-      "location": "I110 N / W Anaheim St Ofr",
-      "location_desc": "NB JSO",
+      "id": "1246",
+      "time": "2:45 PM",
+      "type": "Traffic Break",
+      "location": "I405 N / Avalon Blvd",
+      "location_desc": "AT",
       "area": "South LA"
     },
     {
-      "id": "0743",
-      "time": "10:47 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "SR60 E / GRAND AVE OFR",
-      "location_desc": "JEO",
-      "area": "Baldwin Park"
+      "id": "0146",
+      "time": "2:44 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 N / Santa Monica Blvd",
+      "location_desc": "JSO",
+      "area": "LAFSP"
     },
     {
-      "id": "0726",
-      "time": "10:40 AM",
+      "id": "1242",
+      "time": "2:43 PM",
+      "type": "Hit and Run w/Injuries",
+      "location": "I710 N / Del Amo Blvd",
+      "location_desc": "NB 710 JNO DEL AMO BLVD",
+      "area": "South LA"
+    },
+    {
+      "id": "1241",
+      "time": "2:42 PM",
       "type": "Traffic Hazard",
-      "location": "I605 N / Washington Blvd",
-      "location_desc": "NB JSO",
+      "location": "I405 N / Santa Monica Blvd",
+      "location_desc": "JSO",
+      "area": "West LA"
+    },
+    {
+      "id": "1239",
+      "time": "2:42 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 N / I405 N Us101 Con",
+      "location_desc": "NB 405 AT 101",
+      "area": "West Valley"
+    },
+    {
+      "id": "0145",
+      "time": "2:42 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / I5 N Sr14 Con",
+      "location_desc": "NB 5 JSO 14",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1234",
+      "time": "2:40 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / I210 W",
+      "location_desc": "NB 5 JNO 210",
+      "area": "Newhall"
+    },
+    {
+      "id": "1223",
+      "time": "2:36 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 E I710 Con / I710 N",
+      "location_desc": "EB 10 JWO 710",
+      "area": "East LA"
+    },
+    {
+      "id": "1221",
+      "time": "2:35 PM",
+      "type": "Report of Fire",
+      "location": "I110 S / W Florence Ave",
+      "location_desc": "SB 110 JNO",
+      "area": "Central LA"
+    },
+    {
+      "id": "1217",
+      "time": "2:33 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Woodman Ave Ofr",
+      "location_desc": "EB 101 JWO WOODMAN",
+      "area": "West Valley"
+    },
+    {
+      "id": "1214",
+      "time": "2:33 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "W El Segundo Blvd / Denker Ave",
+      "location_desc": "EB JEO DENKER",
+      "area": "West LA"
+    },
+    {
+      "id": "1213",
+      "time": "2:32 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 W / I110 N Sr91 Con",
+      "location_desc": "WB 91 JEO 110",
+      "area": "South LA"
+    },
+    {
+      "id": "1201",
+      "time": "2:19 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Flower St / Justin Ave",
+      "location_desc": "NB 5 JSO WESTERN",
+      "area": "Altadena"
+    },
+    {
+      "id": "1170",
+      "time": "2:00 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Livingston Ave / Avenue Paine",
+      "location_desc": "",
+      "area": "Newhall"
+    },
+    {
+      "id": "1147",
+      "time": "1:53 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Marine Ave / Crenshaw Blvd",
+      "location_desc": "",
+      "area": "South LA"
+    },
+    {
+      "id": "1153",
+      "time": "1:52 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Whittier Blvd / Sorensen Ave",
+      "location_desc": "",
       "area": "Santa Fe Springs"
+    },
+    {
+      "id": "1100",
+      "time": "1:42 PM",
+      "type": "Traffic Hazard",
+      "location": "I210 W / Madre St",
+      "location_desc": "WB 210 JEO MADRE",
+      "area": "Altadena"
+    },
+    {
+      "id": "1094",
+      "time": "1:40 PM",
+      "type": "Report of Fire",
+      "location": "I10 W / Arlington Ave",
+      "location_desc": "WB AT ARLINGTON AVE",
+      "area": "Central LA"
+    },
+    {
+      "id": "0131",
+      "time": "1:34 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I110 N / W Vernon Ave",
+      "location_desc": "NB 110 JSO VERNON",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1081",
+      "time": "1:32 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I110 N / W SLAUSON AVE",
+      "location_desc": "NB 110 JNO SLAUSON",
+      "area": "Central LA"
+    },
+    {
+      "id": "1080",
+      "time": "1:32 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr2 N / Colorado Blvd",
+      "location_desc": "NB JSO",
+      "area": "Central LA"
+    },
+    {
+      "id": "1017",
+      "time": "1:00 PM",
+      "type": "Hit and Run w/Injuries",
+      "location": "SR138 / 96th St E",
+      "location_desc": "PEARBLOSSOM HWY JEO 96TH ST E",
+      "area": "Antelope Valley"
     },
     {
       "id": "0317",
@@ -252,22 +220,6 @@
       "area": "Altadena"
     },
     {
-      "id": "0282",
-      "time": "6:31 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-no Ho (moorpark)",
-      "location_desc": "",
-      "area": "West Valley"
-    },
-    {
-      "id": "0274",
-      "time": "6:27 AM",
-      "type": "Assist with Construction",
-      "location": "Caltrans-la-riverside Dr",
-      "location_desc": "2187 RIVERSIDE DR",
-      "area": "Central LA"
-    },
-    {
       "id": "0269",
       "time": "6:25 AM",
       "type": "Assist CT with Maintenance",
@@ -276,27 +228,11 @@
       "area": "Newhall"
     },
     {
-      "id": "0258",
-      "time": "6:15 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-altadena",
-      "location_desc": "2122 WINDSOR",
-      "area": "Altadena"
-    },
-    {
       "id": "0257",
       "time": "6:14 AM",
       "type": "Assist CT with Maintenance",
       "location": "CALTRANS-NORTH HILLS",
       "location_desc": "11930 BLUCHER AVE",
-      "area": "Newhall"
-    },
-    {
-      "id": "0256",
-      "time": "6:14 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Sr14 N / Newhall Ave",
-      "location_desc": "SR14 N / NEWHALL AVE",
       "area": "Newhall"
     },
     {
@@ -314,22 +250,6 @@
       "location": "Caltrans-wla-s Sepulveda",
       "location_desc": "2723 S SEPULVEDA BLVD",
       "area": "West LA"
-    },
-    {
-      "id": "0217",
-      "time": "5:46 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-long Beach (santa Fe)",
-      "location_desc": "22101 S SANTA FE AVE",
-      "area": "South LA"
-    },
-    {
-      "id": "0209",
-      "time": "5:39 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "6300 Bristol Pkwy",
-      "location_desc": "5753 ELECTRIC DRIVE",
-      "area": "LA"
     },
     {
       "id": "0056",
@@ -364,5 +284,5 @@
       "area": "Altadena"
     }
   ],
-  "last_updated": "2025-09-24T19:43:28.157422"
+  "last_updated": "2025-09-24T21:54:12.821021"
 }
