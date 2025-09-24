@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-24",
-  "total_incidents": 35,
+  "total_incidents": 39,
   "incidents": [
     {
       "id": "0446",
@@ -283,7 +283,39 @@
       "location": "I80 E / Marysville Blvd",
       "location_desc": "EB JWO",
       "area": "North Sac"
+    },
+    {
+      "id": "0676",
+      "time": "2:40 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 E / Northgate Blvd",
+      "location_desc": "JWO",
+      "area": "North Sac"
+    },
+    {
+      "id": "0672",
+      "time": "2:37 PM",
+      "type": "Traffic Hazard",
+      "location": "1972 Ethan Way",
+      "location_desc": "",
+      "area": "North Sac"
+    },
+    {
+      "id": "0671",
+      "time": "2:35 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Cosumnes River Blvd E Onr",
+      "location_desc": "SB JSO",
+      "area": "South Sac"
+    },
+    {
+      "id": "0673",
+      "time": "2:33 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "8750 La Riviera Dr",
+      "location_desc": "OCCURD Salmon Falls Dr / La Riviera Dr",
+      "area": "East Sac"
     }
   ],
-  "last_updated": "2025-09-24T21:33:21.508952"
+  "last_updated": "2025-09-24T21:40:50.709924"
 }

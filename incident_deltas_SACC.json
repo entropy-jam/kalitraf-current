@@ -1,8 +1,40 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-24T21:33:21.508407",
+  "timestamp": "2025-09-24T21:40:50.709477",
   "new_incidents": [
+    {
+      "id": "0676",
+      "time": "2:40 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 E / Northgate Blvd",
+      "location_desc": "JWO",
+      "area": "North Sac"
+    },
+    {
+      "id": "0672",
+      "time": "2:37 PM",
+      "type": "Traffic Hazard",
+      "location": "1972 Ethan Way",
+      "location_desc": "",
+      "area": "North Sac"
+    },
+    {
+      "id": "0671",
+      "time": "2:35 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Cosumnes River Blvd E Onr",
+      "location_desc": "SB JSO",
+      "area": "South Sac"
+    },
+    {
+      "id": "0673",
+      "time": "2:33 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "8750 La Riviera Dr",
+      "location_desc": "OCCURD Salmon Falls Dr / La Riviera Dr",
+      "area": "East Sac"
+    },
     {
       "id": "0656",
       "time": "2:24 PM",
@@ -36,28 +68,12 @@
       "area": "North Sac"
     },
     {
-      "id": "0633",
-      "time": "2:08 PM",
-      "type": "JUMPER",
-      "location": "Sr51 N / P St",
-      "location_desc": "NB 51 AT P STREET",
-      "area": "South Sac"
-    },
-    {
       "id": "0615",
       "time": "1:59 PM",
       "type": "Trfc Collision-No Inj",
       "location": "I80 E / Marysville Blvd",
       "location_desc": "EB JWO",
       "area": "North Sac"
-    },
-    {
-      "id": "0605",
-      "time": "1:44 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr16 / County Rd 45",
-      "location_desc": "",
-      "area": "Woodland"
     },
     {
       "id": "0582",
@@ -125,6 +141,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 15,
+  "new_count": 17,
   "removed_count": 0
 }
