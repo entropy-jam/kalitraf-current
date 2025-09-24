@@ -1,8 +1,24 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T00:10:42.061677",
+  "timestamp": "2025-09-24T04:29:10.884696",
   "new_incidents": [
+    {
+      "id": "0870",
+      "time": "9:28 PM",
+      "type": "Assist with Construction",
+      "location": "Sr74 / (mm 7.8) Lookout Point Store",
+      "location_desc": "SR74 (MM 7.8) LOOKOUT POINT STORE",
+      "area": "Temecula"
+    },
+    {
+      "id": "0865",
+      "time": "9:16 PM",
+      "type": "Traffic Break",
+      "location": "I15 S / Miramar Rd No (pomerado)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0861",
       "time": "9:08 PM",
@@ -20,19 +36,11 @@
       "area": "Temecula"
     },
     {
-      "id": "0859",
-      "time": "9:06 PM",
-      "type": "Traffic Hazard",
-      "location": "I805 N / Adams So",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
       "id": "0858",
       "time": "9:06 PM",
       "type": "Defective Traffic Signals",
       "location": "Sr15 S / Main",
-      "location_desc": "NB",
+      "location_desc": "FLASH TIL 0500 NB",
       "area": "San Diego"
     },
     {
@@ -185,14 +193,6 @@
       "type": "Trfc Collision-No Inj",
       "location": "Sunset Dr / Bear Valley Pkwy",
       "location_desc": "I/S",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0023",
-      "time": "1:17 AM",
-      "type": "SIG Alert",
-      "location": "Sr76 / Pauma Valley Dr",
-      "location_desc": "ATand T UNTIL APPROX 1000",
       "area": "Oceanside"
     },
     {

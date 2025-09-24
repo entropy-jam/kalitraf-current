@@ -1,8 +1,56 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 21,
+  "incident_count": 25,
   "incidents": [
+    {
+      "id": "0870",
+      "time": "9:28 PM",
+      "type": "Assist with Construction",
+      "location": "Sr74 / (mm 7.8) Lookout Point Store",
+      "location_desc": "SR74 (MM 7.8) LOOKOUT POINT STORE",
+      "area": "Temecula"
+    },
+    {
+      "id": "0865",
+      "time": "9:16 PM",
+      "type": "Traffic Break",
+      "location": "I15 S / Miramar Rd No (pomerado)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0861",
+      "time": "9:08 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Las Pulgas No",
+      "location_desc": "I5 S LAS PULGAS NO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0860",
+      "time": "9:07 PM",
+      "type": "Assist with Construction",
+      "location": "I15 N / Rainbow Scales No (nb Scales)",
+      "location_desc": "JNO TO JSO RANCHO CAL",
+      "area": "Temecula"
+    },
+    {
+      "id": "0858",
+      "time": "9:06 PM",
+      "type": "Defective Traffic Signals",
+      "location": "Sr15 S / Main",
+      "location_desc": "FLASH TIL 0500 NB",
+      "area": "San Diego"
+    },
+    {
+      "id": "0857",
+      "time": "9:04 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I5 S / Main_division (national City)",
+      "location_desc": "FLASH TIL 0500",
+      "area": "San Diego"
+    },
     {
       "id": "0851",
       "time": "8:47 PM",
@@ -132,14 +180,6 @@
       "area": "Oceanside"
     },
     {
-      "id": "0707",
-      "time": "6:35 PM",
-      "type": "Traffic Hazard",
-      "location": "Linea Del Cielo / El Cielito",
-      "location_desc": "",
-      "area": "Oceanside"
-    },
-    {
       "id": "0704",
       "time": "6:31 PM",
       "type": "Assist with Construction",
@@ -156,14 +196,6 @@
       "area": "Oceanside"
     },
     {
-      "id": "0023",
-      "time": "1:17 AM",
-      "type": "SIG Alert",
-      "location": "Sr76 / Pauma Valley Dr",
-      "location_desc": "ATand T UNTIL APPROX 1000",
-      "area": "Oceanside"
-    },
-    {
       "id": "0002",
       "time": "12:00 AM",
       "type": "Road/Weather Conditions",
@@ -172,5 +204,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T04:01:44.101762"
+  "last_updated": "2025-09-24T04:29:10.884076"
 }
