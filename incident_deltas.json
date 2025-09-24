@@ -1,15 +1,15 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T11:00:20.413761",
+  "timestamp": "2025-09-24T11:18:01.677180",
   "new_incidents": [
     {
-      "id": "0030",
-      "time": "3:45 AM",
-      "type": "Traffic Break",
-      "location": "I15 S / Miramar Rd No (pomerado)",
-      "location_desc": "I15 S MIRAMAR RD NO (POMERADO)",
-      "area": "San Diego"
+      "id": "0031",
+      "time": "4:14 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / French Valley Pkwy Ofr",
+      "location_desc": "",
+      "area": "Temecula"
     },
     {
       "id": "0002",
@@ -26,14 +26,6 @@
       "location": "I5 N / Via De La Valle",
       "location_desc": "FLASH TIL 0500 NB and SB I-5 AT VDV",
       "area": "San Diego"
-    },
-    {
-      "id": "0891",
-      "time": "9:53 PM",
-      "type": "Assist with Construction",
-      "location": "I15 N / Rancho California",
-      "location_desc": "I15 N RANCHO CALIFORNIA",
-      "area": "Temecula"
     },
     {
       "id": "0870",
@@ -125,6 +117,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 15,
+  "new_count": 14,
   "removed_count": 0
 }

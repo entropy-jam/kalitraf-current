@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 75,
+  "total_incidents": 76,
   "incidents": [
     {
       "id": "0623",
@@ -603,7 +603,15 @@
       "location": "I15 S / Miramar Rd No (pomerado)",
       "location_desc": "I15 S MIRAMAR RD NO (POMERADO)",
       "area": "San Diego"
+    },
+    {
+      "id": "0031",
+      "time": "4:14 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / French Valley Pkwy Ofr",
+      "location_desc": "",
+      "area": "Temecula"
     }
   ],
-  "last_updated": "2025-09-24T10:53:31.031232"
+  "last_updated": "2025-09-24T11:18:01.677745"
 }
