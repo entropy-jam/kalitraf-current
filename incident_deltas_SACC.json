@@ -1,0 +1,82 @@
+{
+  "center_code": "SACC",
+  "center_name": "Sacramento",
+  "timestamp": "2025-09-24T18:46:22.300855",
+  "new_incidents": [
+    {
+      "id": "0446",
+      "time": "11:32 AM",
+      "type": "Traffic Hazard",
+      "location": "Us50 W / Stockton Blvd",
+      "location_desc": "WB 50 JEO STOCKTON",
+      "area": "South Sac"
+    },
+    {
+      "id": "0311",
+      "time": "9:51 AM",
+      "type": "ESCORT for Road Conditions",
+      "location": "Folsom To Los Banos",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "0288",
+      "time": "9:29 AM",
+      "type": "Fatality",
+      "location": "Us50 E / Howe Ave",
+      "location_desc": "EB JWO",
+      "area": "South Sac"
+    },
+    {
+      "id": "0150",
+      "time": "6:52 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "US50 W / MISSOURI FLAT RD",
+      "location_desc": "***1700*** PVL CT YARD",
+      "area": "Placerville"
+    },
+    {
+      "id": "0124",
+      "time": "6:25 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "3031 Lo Hi Way",
+      "location_desc": "***1630***PLACERVILLE CT YARD",
+      "area": "Placerville"
+    },
+    {
+      "id": "0121",
+      "time": "6:19 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Wsac Ct Yard",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "0120",
+      "time": "6:17 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "6 Massie Ct",
+      "location_desc": "South Sacramento CHP Office",
+      "area": "South Sac"
+    },
+    {
+      "id": "0105",
+      "time": "5:57 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Northgate Ct Yard",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "0090",
+      "time": "5:29 AM",
+      "type": "Assist with Construction",
+      "location": "Baxter",
+      "location_desc": "***1600***",
+      "area": ""
+    }
+  ],
+  "removed_incidents": [],
+  "new_count": 9,
+  "removed_count": 0
+}
