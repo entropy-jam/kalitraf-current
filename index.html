@@ -387,8 +387,75 @@
         let previousIncidents = null;
         let incidentHistory = [];
         
+        // Cache management
+        const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+        const CACHE_PREFIX = 'chp_data_';
+        
+        // Cache functions
+        function getCachedData(center) {
+            try {
+                const cacheKey = `${CACHE_PREFIX}${center}`;
+                const cached = localStorage.getItem(cacheKey);
+                if (!cached) return null;
+                
+                const data = JSON.parse(cached);
+                const now = Date.now();
+                
+                // Check if cache is still valid
+                if (now - data.timestamp > CACHE_DURATION) {
+                    localStorage.removeItem(cacheKey);
+                    return null;
+                }
+                
+                return data;
+            } catch (error) {
+                console.error('Error reading cache:', error);
+                return null;
+            }
+        }
+        
+        function setCachedData(center, data) {
+            try {
+                const cacheKey = `${CACHE_PREFIX}${center}`;
+                const cacheData = {
+                    ...data,
+                    timestamp: Date.now(),
+                    center: center
+                };
+                localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+            } catch (error) {
+                console.error('Error saving cache:', error);
+            }
+        }
+        
+        function isCacheValid(timestamp) {
+            return Date.now() - timestamp < CACHE_DURATION;
+        }
+        
+        function clearOldCache() {
+            try {
+                const keys = Object.keys(localStorage);
+                keys.forEach(key => {
+                    if (key.startsWith(CACHE_PREFIX)) {
+                        const data = JSON.parse(localStorage.getItem(key));
+                        if (!isCacheValid(data.timestamp)) {
+                            localStorage.removeItem(key);
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error clearing cache:', error);
+            }
+        }
+        
         // Load data on page load
         document.addEventListener('DOMContentLoaded', function() {
+            // Clean up old cache entries
+            clearOldCache();
+            
+            // Set up offline detection
+            setupOfflineDetection();
+            
             loadData();
             startAutoRefresh();
             
@@ -399,7 +466,26 @@
             });
         });
         
-        function loadData() {
+        function loadData(forceRefresh = false) {
+            // Check cache first
+            if (!forceRefresh) {
+                const cachedData = getCachedData(currentCenter);
+                if (cachedData) {
+                    console.log('Loading from cache');
+                    displayIncidents(cachedData);
+                    updateLastUpdated(cachedData.last_updated);
+                    showNotification('Loaded from cache', 'info');
+                    
+                    // Still refresh in background if cache is getting old
+                    const cacheAge = Date.now() - cachedData.timestamp;
+                    if (cacheAge > CACHE_DURATION * 0.8) { // Refresh when 80% expired
+                        refreshInBackground();
+                    }
+                    return Promise.resolve(cachedData);
+                }
+            }
+            
+            // No cache or force refresh - fetch from server
             showRefreshIndicator();
             
             return fetch(`active_incidents.json?t=${Date.now()}`, { cache: 'no-store' })
@@ -410,18 +496,103 @@
                     return response.json();
                 })
                 .then(data => {
+                    // Save to cache
+                    setCachedData(currentCenter, data);
+                    
                     displayIncidents(data);
                     updateLastUpdated(data.last_updated);
+                    showNotification('Data refreshed', 'success');
                     return data;
                 })
                 .catch(error => {
                     console.error('Error loading data:', error);
-                    showError('Failed to load incident data. Please try again.');
-                    throw error;
+                    
+                    // Try to fall back to cache on error
+                    const cachedData = getCachedData(currentCenter);
+                    if (cachedData) {
+                        console.log('Falling back to cache');
+                        displayIncidents(cachedData);
+                        updateLastUpdated(cachedData.last_updated);
+                        showNotification('Using cached data (offline)', 'info');
+                        return cachedData;
+                    } else {
+                        showError('Failed to load incident data. Please try again.');
+                        throw error;
+                    }
                 })
                 .finally(() => {
                     hideRefreshIndicator();
                 });
+        }
+        
+        function refreshInBackground() {
+            fetch(`active_incidents.json?t=${Date.now()}`, { cache: 'no-store' })
+                .then(response => response.json())
+                .then(data => {
+                    // Check if data actually changed
+                    const currentData = getCachedData(currentCenter);
+                    if (currentData && hasDataChanged(currentData, data)) {
+                        console.log('Data changed - updating UI');
+                        setCachedData(currentCenter, data);
+                        displayIncidents(data);
+                        updateLastUpdated(data.last_updated);
+                        showNotification('New incidents detected!', 'info');
+                    } else {
+                        console.log('No changes detected - updating cache silently');
+                        setCachedData(currentCenter, data);
+                    }
+                })
+                .catch(error => {
+                    console.log('Background refresh failed:', error);
+                });
+        }
+        
+        function hasDataChanged(oldData, newData) {
+            if (!oldData || !newData) return true;
+            if (!oldData.incidents || !newData.incidents) return true;
+            
+            // Compare incident counts
+            if (oldData.incident_count !== newData.incident_count) return true;
+            
+            // Compare incident IDs
+            const oldIds = oldData.incidents.map(i => i.id).sort();
+            const newIds = newData.incidents.map(i => i.id).sort();
+            
+            if (oldIds.length !== newIds.length) return true;
+            
+            for (let i = 0; i < oldIds.length; i++) {
+                if (oldIds[i] !== newIds[i]) return true;
+            }
+            
+            return false;
+        }
+        
+        function setupOfflineDetection() {
+            // Check initial online status
+            updateOnlineStatus();
+            
+            // Listen for online/offline events
+            window.addEventListener('online', () => {
+                updateOnlineStatus();
+                showNotification('Connection restored', 'success');
+                // Try to refresh data when back online
+                loadData();
+            });
+            
+            window.addEventListener('offline', () => {
+                updateOnlineStatus();
+                showNotification('You are offline - using cached data', 'info');
+            });
+        }
+        
+        function updateOnlineStatus() {
+            const statusElement = document.getElementById('lastUpdated');
+            if (navigator.onLine) {
+                statusElement.style.color = '';
+            } else {
+                statusElement.style.color = '#dc3545';
+                statusElement.textContent = statusElement.textContent.replace('Last updated:', 'Last updated (OFFLINE):');
+            }
         }
         
         function displayIncidents(data) {
@@ -551,14 +722,13 @@
             button.disabled = true;
             button.textContent = 'Refreshing...';
             
-            // Load data
-            loadData()
+            // Force refresh from server
+            loadData(true)
                 .then(() => {
                     // Show success state
                     button.classList.remove('loading');
                     button.classList.add('success');
                     button.textContent = '✓ Refreshed!';
-                    showNotification('Data refreshed successfully!', 'success');
                     
                     // Reset after 2 seconds
                     setTimeout(() => {
