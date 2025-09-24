@@ -4,6 +4,30 @@
   "incident_count": 23,
   "incidents": [
     {
+      "id": "0223",
+      "time": "9:50 AM",
+      "type": "Report of Fire",
+      "location": "Sr54 W / Highland (4th)",
+      "location_desc": "SR54 W HIGHLAND (4TH)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0222",
+      "time": "9:49 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "I5 N / Washington So",
+      "location_desc": "NB 5 JSO WASHINGTON",
+      "area": "San Diego"
+    },
+    {
+      "id": "0221",
+      "time": "9:44 AM",
+      "type": "Animal Hazard",
+      "location": "Sr52 W / Genesee Eo",
+      "location_desc": "SR52 W GENESEE EO",
+      "area": "San Diego"
+    },
+    {
       "id": "0213",
       "time": "9:30 AM",
       "type": "Object Flying From Veh",
@@ -12,28 +36,12 @@
       "area": "Temecula"
     },
     {
-      "id": "0207",
-      "time": "9:19 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Carmel Mountain So",
-      "location_desc": "NB 5 JSO CARMEL MOUNTAIN",
-      "area": "San Diego"
-    },
-    {
       "id": "0182",
       "time": "8:44 AM",
       "type": "Trfc Collision-No Inj",
       "location": "52nd St / Towle Ct",
       "location_desc": "",
       "area": "San Diego"
-    },
-    {
-      "id": "0174",
-      "time": "8:40 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Main St / 7th St",
-      "location_desc": "IFO LA COCINA",
-      "area": "El Cajon"
     },
     {
       "id": "0168",
@@ -108,14 +116,6 @@
       "area": ""
     },
     {
-      "id": "0098",
-      "time": "6:38 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / Scales No",
-      "location_desc": "NB 5 JNO SCALES",
-      "area": "Oceanside"
-    },
-    {
       "id": "0092",
       "time": "6:29 AM",
       "type": "Assist CT with Maintenance",
@@ -188,5 +188,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T16:42:44.483693"
+  "last_updated": "2025-09-24T16:54:11.316130"
 }

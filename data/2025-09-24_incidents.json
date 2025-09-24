@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 130,
+  "total_incidents": 133,
   "incidents": [
     {
       "id": "0623",
@@ -1043,7 +1043,31 @@
       "location": "I5 N / Carmel Mountain So",
       "location_desc": "NB 5 JSO CARMEL MOUNTAIN",
       "area": "San Diego"
+    },
+    {
+      "id": "0223",
+      "time": "9:50 AM",
+      "type": "Report of Fire",
+      "location": "Sr54 W / Highland (4th)",
+      "location_desc": "SR54 W HIGHLAND (4TH)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0222",
+      "time": "9:49 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "I5 N / Washington So",
+      "location_desc": "NB 5 JSO WASHINGTON",
+      "area": "San Diego"
+    },
+    {
+      "id": "0221",
+      "time": "9:44 AM",
+      "type": "Animal Hazard",
+      "location": "Sr52 W / Genesee Eo",
+      "location_desc": "SR52 W GENESEE EO",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T16:42:44.485942"
+  "last_updated": "2025-09-24T16:54:11.318629"
 }
