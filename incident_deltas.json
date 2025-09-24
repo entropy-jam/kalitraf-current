@@ -1,7 +1,7 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T11:28:13.063464",
+  "timestamp": "2025-09-24T11:36:55.983642",
   "new_incidents": [
     {
       "id": "0033",
@@ -84,14 +84,6 @@
       "area": "San Diego"
     },
     {
-      "id": "0832",
-      "time": "8:28 PM",
-      "type": "Defective Traffic Signals",
-      "location": "I15 S / Friars",
-      "location_desc": "FLASH TIL 0330 SB",
-      "area": "San Diego"
-    },
-    {
       "id": "0828",
       "time": "8:20 PM",
       "type": "Assist with Construction",
@@ -108,14 +100,6 @@
       "area": "Oceanside"
     },
     {
-      "id": "0803",
-      "time": "7:41 PM",
-      "type": "Assist with Construction",
-      "location": "I215 N / Newport So",
-      "location_desc": "I215 N NEWPORT SO (TWI)",
-      "area": "Temecula"
-    },
-    {
       "id": "0780",
       "time": "7:30 PM",
       "type": "Assist with Construction",
@@ -125,6 +109,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 15,
+  "new_count": 13,
   "removed_count": 0
 }
