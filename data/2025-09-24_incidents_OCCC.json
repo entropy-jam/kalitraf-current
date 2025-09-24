@@ -2,7 +2,7 @@
   "center_code": "OCCC",
   "center_name": "Orange",
   "date": "2025-09-24",
-  "total_incidents": 85,
+  "total_incidents": 99,
   "incidents": [
     {
       "id": "0050",
@@ -683,7 +683,119 @@
       "location": "I405 N / Sand Canyon Ave",
       "location_desc": "JSO",
       "area": "Santa Ana"
+    },
+    {
+      "id": "0118",
+      "time": "4:38 PM",
+      "type": "Trfc Collision-1141Enrt",
+      "location": "Sr55 N / Macarthur Blvd",
+      "location_desc": "NB JNO",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0410",
+      "time": "4:38 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr55 N / Macarthur Blvd",
+      "location_desc": "NB JNO",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0117",
+      "time": "4:37 PM",
+      "type": "Traffic Hazard",
+      "location": "0 Sr91 E I5 S Con",
+      "location_desc": "",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0409",
+      "time": "4:36 PM",
+      "type": "Traffic Hazard",
+      "location": "0 Sr91 E I5 S Con",
+      "location_desc": "91 E TO 5 SB",
+      "area": "Westminster"
+    },
+    {
+      "id": "0408",
+      "time": "4:35 PM",
+      "type": "Traffic Break",
+      "location": "Tl405 N / Goldenwest Gw",
+      "location_desc": "TL405 N / GOLDENWEST",
+      "area": "Westminster"
+    },
+    {
+      "id": "0116",
+      "time": "4:35 PM",
+      "type": "Traffic Hazard",
+      "location": "Tl405 N / Goldenwest Gw",
+      "location_desc": "TL405 N / GOLDENWEST",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0398",
+      "time": "4:28 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Katella Ave / Barclay Dr",
+      "location_desc": "NB BARCLAY AT KAT",
+      "area": "Westminster"
+    },
+    {
+      "id": "0115",
+      "time": "4:26 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Harbor Blvd Ofr",
+      "location_desc": "NB 5 HARBOR OFR",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0393",
+      "time": "4:25 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "0 Harbor Blvd Ofr",
+      "location_desc": "NB 5 HARBOR OFR",
+      "area": "Westminster"
+    },
+    {
+      "id": "0113",
+      "time": "4:25 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Alicia Pkwy",
+      "location_desc": "JSO",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0392",
+      "time": "4:24 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Junipero Serra Rd Js",
+      "location_desc": "SB 1 MI JNO",
+      "area": "Capistrano"
+    },
+    {
+      "id": "0391",
+      "time": "4:23 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Alicia Pkwy",
+      "location_desc": "JSO",
+      "area": "Capistrano"
+    },
+    {
+      "id": "0112",
+      "time": "4:21 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr55 N / Katella Ave",
+      "location_desc": "JNO",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0385",
+      "time": "4:13 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr55 N / Katella Ave",
+      "location_desc": "JNO",
+      "area": "Santa Ana"
     }
   ],
-  "last_updated": "2025-09-24T23:07:59.200027"
+  "last_updated": "2025-09-24T23:40:18.794407"
 }
