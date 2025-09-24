@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 100,
+  "total_incidents": 108,
   "incidents": [
     {
       "id": "0623",
@@ -803,7 +803,71 @@
       "location": "Sr125 N / Jamacha So (road)",
       "location_desc": "SR125 N JAMACHA SO (ROAD)",
       "area": "El Cajon"
+    },
+    {
+      "id": "0130",
+      "time": "7:22 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 W / Kenwood Eo",
+      "location_desc": "WB 94 JEO KENWOOD",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0057",
+      "time": "7:21 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Centre City Pkwy No",
+      "location_desc": "I15 N CENTRE CITY PKWY NO (NORTH)",
+      "area": "North FSP"
+    },
+    {
+      "id": "0128",
+      "time": "7:19 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Ct",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "0127",
+      "time": "7:18 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Santee Ct",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "0054",
+      "time": "7:14 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr78 W / I15 Wo",
+      "location_desc": "SR78 W I15 WO",
+      "area": "North FSP"
+    },
+    {
+      "id": "0121",
+      "time": "7:13 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Ct",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "0120",
+      "time": "7:12 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr78 W / I15 Wo",
+      "location_desc": "SR78 W I15 WO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0114",
+      "time": "7:08 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Centre City Pkwy No",
+      "location_desc": "I15 N CENTRE CITY PKWY NO (NORTH)",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T14:09:06.614453"
+  "last_updated": "2025-09-24T14:30:04.478634"
 }
