@@ -132,7 +132,17 @@ class MultiCenterService {
      */
     async fetchCenterData(centerCode) {
         const filename = `active_incidents_${centerCode}.json`;
-        return await this.fetcher.fetchJson(`${filename}?t=${Date.now()}`);
+        
+        try {
+            return await this.fetcher.fetchJson(`${filename}?t=${Date.now()}`);
+        } catch (error) {
+            // If center-specific file doesn't exist, fall back to active_incidents.json for BCCC
+            if (centerCode === 'BCCC') {
+                console.log('Center-specific file not found, falling back to active_incidents.json');
+                return await this.fetcher.fetchJson(`active_incidents.json?t=${Date.now()}`);
+            }
+            throw error;
+        }
     }
 
     /**

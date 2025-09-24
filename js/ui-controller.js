@@ -4,8 +4,8 @@
  */
 
 class UIController {
-    constructor(dataManager) {
-        this.dataManager = dataManager;
+    constructor(appController) {
+        this.appController = appController;
         this.autoRefreshInterval = null;
         this.refreshTimeout = null;
         this.isRefreshing = false;
@@ -20,8 +20,8 @@ class UIController {
         
         // Handle center selection change
         document.getElementById('centerSelect').addEventListener('change', (e) => {
-            this.dataManager.setCurrentCenter(e.target.value);
-            this.dataManager.loadData();
+            this.appController.setCurrentCenter(e.target.value);
+            this.appController.loadData();
         });
         
         // Handle auto-refresh checkbox
@@ -30,7 +30,7 @@ class UIController {
         });
         
         // Initial data load
-        this.dataManager.loadData();
+        this.appController.loadData();
         this.startAutoRefresh();
     }
 
@@ -40,18 +40,12 @@ class UIController {
     refreshData() {
         // Debounce rapid clicks
         if (this.isRefreshing) {
-            this.dataManager.showNotification('Refresh already in progress...', 'info');
             return;
         }
         
         // Cancel any pending timeout
         if (this.refreshTimeout) {
             clearTimeout(this.refreshTimeout);
-        }
-        
-        // Cancel any pending request
-        if (this.dataManager.pendingRequest) {
-            this.dataManager.pendingRequest.abort();
         }
         
         // Debounce the actual refresh
@@ -76,7 +70,7 @@ class UIController {
         
         try {
             // Force refresh from server
-            await this.dataManager.loadData(true);
+            await this.appController.loadData(true);
             
             // Show success state
             button.classList.remove('loading');
