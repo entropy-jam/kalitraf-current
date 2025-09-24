@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 66,
+  "total_incidents": 67,
   "incidents": [
     {
       "id": "0623",
@@ -531,7 +531,15 @@
       "location": "Sr78 W / San Marcos Blvd Ofr",
       "location_desc": "",
       "area": "Oceanside"
+    },
+    {
+      "id": "0920",
+      "time": "10:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 E / Jamacha Bl",
+      "location_desc": "SR94 E JAMACHA BL",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-24T05:15:29.321690"
+  "last_updated": "2025-09-24T05:49:17.592163"
 }

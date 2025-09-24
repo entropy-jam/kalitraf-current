@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 23,
+  "incident_count": 24,
   "incidents": [
+    {
+      "id": "0920",
+      "time": "10:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 E / Jamacha Bl",
+      "location_desc": "SR94 E JAMACHA BL",
+      "area": "El Cajon"
+    },
     {
       "id": "0899",
       "time": "10:05 PM",
@@ -188,5 +196,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T05:15:29.320469"
+  "last_updated": "2025-09-24T05:49:17.590960"
 }
