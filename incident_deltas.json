@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T11:36:55.983642",
+  "timestamp": "2025-09-24T11:43:39.646545",
   "new_incidents": [
+    {
+      "id": "0035",
+      "time": "4:38 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I8 E / Sunset Cliffs Blvd",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0033",
       "time": "4:27 AM",
@@ -41,14 +49,6 @@
       "type": "Assist with Construction",
       "location": "Sr74 / (mm 7.8) Lookout Point Store",
       "location_desc": "SR74 (MM 7.8) LOOKOUT POINT STORE",
-      "area": "Temecula"
-    },
-    {
-      "id": "0860",
-      "time": "9:07 PM",
-      "type": "Assist with Construction",
-      "location": "I15 N / Rainbow Scales No (nb Scales)",
-      "location_desc": "JNO TO JSO RANCHO CAL",
       "area": "Temecula"
     },
     {
