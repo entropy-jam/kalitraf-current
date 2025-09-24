@@ -1,15 +1,23 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 19,
+  "incident_count": 18,
   "incidents": [
     {
-      "id": "0240",
-      "time": "10:04 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Sr54 No",
-      "location_desc": "SB 5 JNO 54",
+      "id": "0247",
+      "time": "10:13 AM",
+      "type": "Report of Fire",
+      "location": "SR54 W / HIGHLAND EO (4TH)",
+      "location_desc": "SR54 W HIGHLAND EO (4TH)",
       "area": "San Diego"
+    },
+    {
+      "id": "0245",
+      "time": "10:09 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / La Costa So",
+      "location_desc": "NB 5 JSO LA COSTA",
+      "area": "Oceanside"
     },
     {
       "id": "0239",
@@ -17,22 +25,6 @@
       "type": "Traffic Hazard",
       "location": "I805 N / I5 So (north)",
       "location_desc": "NB 805 JSO 5 - NORTH",
-      "area": "San Diego"
-    },
-    {
-      "id": "0229",
-      "time": "9:54 AM",
-      "type": "Report of Fire",
-      "location": "I805 S / Palm Ave Onr",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0223",
-      "time": "9:50 AM",
-      "type": "Report of Fire",
-      "location": "Sr54 W / Highland (4th)",
-      "location_desc": "SR54 W HIGHLAND (4TH)",
       "area": "San Diego"
     },
     {
@@ -156,5 +148,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T17:08:24.305851"
+  "last_updated": "2025-09-24T17:27:46.634155"
 }

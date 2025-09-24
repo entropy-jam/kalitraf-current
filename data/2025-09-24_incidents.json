@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 136,
+  "total_incidents": 138,
   "incidents": [
     {
       "id": "0623",
@@ -1091,7 +1091,23 @@
       "location": "I805 S / Palm Ave Onr",
       "location_desc": "",
       "area": "San Diego"
+    },
+    {
+      "id": "0247",
+      "time": "10:13 AM",
+      "type": "Report of Fire",
+      "location": "SR54 W / HIGHLAND EO (4TH)",
+      "location_desc": "SR54 W HIGHLAND EO (4TH)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0245",
+      "time": "10:09 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / La Costa So",
+      "location_desc": "NB 5 JSO LA COSTA",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T17:08:24.308302"
+  "last_updated": "2025-09-24T17:27:46.636490"
 }
