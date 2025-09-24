@@ -1,8 +1,72 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "timestamp": "2025-09-24T18:53:45.117481",
+  "timestamp": "2025-09-24T19:36:32.320996",
   "new_incidents": [
+    {
+      "id": "0060",
+      "time": "12:35 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 N / Imperial Hwy",
+      "location_desc": "NB 57 JSO IMPERIAL",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0251",
+      "time": "12:33 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I405 N / Seal Beach Blvd Sbb",
+      "location_desc": "NB 405 JSO SBB",
+      "area": "Westminster"
+    },
+    {
+      "id": "0252",
+      "time": "12:33 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 N / Imperial Hwy",
+      "location_desc": "NB 57 JSO IMPERIAL",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0059",
+      "time": "12:28 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 S / Katella Ave",
+      "location_desc": "SB 57 JNO KATELLA",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0246",
+      "time": "12:26 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 S / Katella Ave",
+      "location_desc": "SB 57 JNO KATELLA",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0239",
+      "time": "12:10 PM",
+      "type": "Report of Fire",
+      "location": "Sr91 E Wo / Green River (sna)",
+      "location_desc": "EB 3 MILES JWO",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0056",
+      "time": "12:03 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Red Hill Ave Rh",
+      "location_desc": "NB 5 JSO RH",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0233",
+      "time": "11:59 AM",
+      "type": "SIG Alert",
+      "location": "I405 N / Bolsa Chica Rd Bc",
+      "location_desc": "NB 405 JSO",
+      "area": "Westminster"
+    },
     {
       "id": "0054",
       "time": "11:44 AM",
@@ -34,54 +98,6 @@
       "location": "Sr55 N / I405",
       "location_desc": "NB 55 JSO 405",
       "area": "Santa Ana"
-    },
-    {
-      "id": "0052",
-      "time": "11:37 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr57 N / Chapman Ave",
-      "location_desc": "NB JSO CHAPMAN AVE - FUL",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0051",
-      "time": "11:35 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Alton Pkwy",
-      "location_desc": "SB 5 JNO ALTON",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0219",
-      "time": "11:35 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Alton Pkwy",
-      "location_desc": "SB 5 JNO ALTON",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0220",
-      "time": "11:34 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr57 N / Chapman Ave",
-      "location_desc": "NB JSO CHAPMAN AVE - FUL",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0200",
-      "time": "10:35 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr73 S / Macarthur Blvd",
-      "location_desc": "SB 73 JNO MAC",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0030",
-      "time": "8:49 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr91 W Eo / Coal Canyon Rd",
-      "location_desc": "SR91 W EO COAL CANYON RD",
-      "area": "Orange County FSP"
     },
     {
       "id": "0114",
@@ -149,6 +165,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 18,
+  "new_count": 20,
   "removed_count": 0
 }
