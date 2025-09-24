@@ -1,7 +1,7 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T20:32:55.635796",
+  "timestamp": "2025-09-24T20:41:16.611879",
   "new_incidents": [
     {
       "id": "0151",
@@ -14,7 +14,7 @@
     {
       "id": "0412",
       "time": "1:29 PM",
-      "type": "Trfc Collision-Unkn Inj",
+      "type": "Trfc Collision-1141 Enrt",
       "location": "I8 E / Mission Gorge Wo (fairmount)",
       "location_desc": "",
       "area": "San Diego"
@@ -34,14 +34,6 @@
       "location": "Sr94 E / Sr94 E Sr125 S Con",
       "location_desc": "EB TO SB",
       "area": "El Cajon"
-    },
-    {
-      "id": "0408",
-      "time": "1:27 PM",
-      "type": "Request CalTrans Notify",
-      "location": "I5 N / Poinsettia Ln Ofr",
-      "location_desc": "",
-      "area": "Oceanside"
     },
     {
       "id": "0404",
@@ -76,28 +68,12 @@
       "area": "San Diego"
     },
     {
-      "id": "0400",
-      "time": "1:15 PM",
-      "type": "Traffic Hazard",
-      "location": "I8 E / Texas Wo (qualcomm)",
-      "location_desc": "EB 8 JWO TEXAS",
-      "area": "San Diego"
-    },
-    {
       "id": "0388",
       "time": "1:03 PM",
       "type": "Trfc Collision-1141 Enrt",
       "location": "Sweetwater Rd / Lamar St",
       "location_desc": "",
       "area": "El Cajon"
-    },
-    {
-      "id": "0143",
-      "time": "1:03 PM",
-      "type": "Traffic Hazard",
-      "location": "I805 N / I8 So",
-      "location_desc": "NB 805 JSO 8",
-      "area": "South FSP"
     },
     {
       "id": "0377",
@@ -213,6 +189,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 26,
+  "new_count": 23,
   "removed_count": 0
 }
