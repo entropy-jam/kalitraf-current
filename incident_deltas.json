@@ -1,7 +1,7 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T11:43:39.646545",
+  "timestamp": "2025-09-24T11:50:48.051935",
   "new_incidents": [
     {
       "id": "0035",
@@ -18,14 +18,6 @@
       "location": "Hwy 76",
       "location_desc": "LAKE HENSHAW",
       "area": "El Cajon"
-    },
-    {
-      "id": "0031",
-      "time": "4:14 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / French Valley Pkwy Ofr",
-      "location_desc": "",
-      "area": "Temecula"
     },
     {
       "id": "0002",
@@ -109,6 +101,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 13,
+  "new_count": 12,
   "removed_count": 0
 }
