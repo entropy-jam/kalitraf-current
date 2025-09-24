@@ -1,7 +1,7 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T10:15:36.386153",
+  "timestamp": "2025-09-24T10:35:27.388478",
   "new_incidents": [
     {
       "id": "0002",
@@ -68,14 +68,6 @@
       "area": "El Cajon"
     },
     {
-      "id": "0837",
-      "time": "8:30 PM",
-      "type": "Assist with Construction",
-      "location": "Sr78 W / I5",
-      "location_desc": "SR78 W I5",
-      "area": "Oceanside"
-    },
-    {
       "id": "0835",
       "time": "8:29 PM",
       "type": "Assist with Construction",
@@ -133,6 +125,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 16,
+  "new_count": 15,
   "removed_count": 0
 }
