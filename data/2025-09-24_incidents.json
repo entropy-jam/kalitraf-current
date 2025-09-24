@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 74,
+  "total_incidents": 75,
   "incidents": [
     {
       "id": "0623",
@@ -595,7 +595,15 @@
       "location": "I5 S / Las Flores Dr Ofr",
       "location_desc": "",
       "area": "Oceanside"
+    },
+    {
+      "id": "0030",
+      "time": "3:45 AM",
+      "type": "Traffic Break",
+      "location": "I15 S / Miramar Rd No (pomerado)",
+      "location_desc": "I15 S MIRAMAR RD NO (POMERADO)",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T09:50:13.916334"
+  "last_updated": "2025-09-24T10:53:31.031232"
 }

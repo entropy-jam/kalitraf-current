@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 15,
+  "incident_count": 16,
   "incidents": [
+    {
+      "id": "0030",
+      "time": "3:45 AM",
+      "type": "Traffic Break",
+      "location": "I15 S / Miramar Rd No (pomerado)",
+      "location_desc": "I15 S MIRAMAR RD NO (POMERADO)",
+      "area": "San Diego"
+    },
     {
       "id": "0002",
       "time": "12:00 AM",
@@ -124,5 +132,5 @@
       "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T10:35:27.387968"
+  "last_updated": "2025-09-24T10:53:31.030194"
 }
