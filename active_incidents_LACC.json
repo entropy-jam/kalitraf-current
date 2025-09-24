@@ -1,23 +1,223 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "incident_count": 35,
+  "incident_count": 45,
   "incidents": [
     {
-      "id": "1266",
-      "time": "2:52 PM",
+      "id": "0167",
+      "time": "3:21 PM",
       "type": "Traffic Hazard",
-      "location": "I405 S / Valley Vista Blvd",
-      "location_desc": "SB 405 AT VALLEY VISTA BLVD",
+      "location": "Sr57 N / Diamond Bar Blvd",
+      "location_desc": "SR57 N / DIAMOND BAR BLVD",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1335",
+      "time": "3:20 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I405 S / Carson St Ofr",
+      "location_desc": "SB 405 JNO CARSON ST",
+      "area": "South LA"
+    },
+    {
+      "id": "0166",
+      "time": "3:18 PM",
+      "type": "Traffic Hazard",
+      "location": "SR91 E / ATLANTIC AVE",
+      "location_desc": "EB 91 AT ATLANTIC",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1331",
+      "time": "3:18 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 N Sr60 W Con / Brea Canyon Rd Ofr",
+      "location_desc": "NB 57 BREA CANYON OFR",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "0164",
+      "time": "3:16 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I10 E / Sr57",
+      "location_desc": "I10 E / SR57",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1326",
+      "time": "3:15 PM",
+      "type": "Report of Fire",
+      "location": "Us101 S / N Alvarado St Ofr",
+      "location_desc": "SB JNO",
+      "area": "Central LA"
+    },
+    {
+      "id": "0163",
+      "time": "3:14 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr118 E / Sr118 E I210 Con",
+      "location_desc": "EB 118 JWO 210 -- 1/2 MILE",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1318",
+      "time": "3:13 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr118 E / Sr118 E I210 Con",
+      "location_desc": "EB 118 JWO 210 -- 1/2 MILE",
+      "area": "Altadena"
+    },
+    {
+      "id": "1316",
+      "time": "3:12 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr110 N / Sr110 N Us101 S Con",
+      "location_desc": "NB 110 JNO 101 SPLIT",
+      "area": "Central LA"
+    },
+    {
+      "id": "0160",
+      "time": "3:10 PM",
+      "type": "Traffic Hazard",
+      "location": "I605 N / Arrow Hwy",
+      "location_desc": "JNO",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1309",
+      "time": "3:10 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 W / I10 W I5 S Con",
+      "location_desc": "WB 10 TRANS SB 5",
+      "area": "Central LA"
+    },
+    {
+      "id": "0161",
+      "time": "3:10 PM",
+      "type": "Traffic Hazard",
+      "location": "I710 S / Willow St",
+      "location_desc": "SB JNO",
+      "area": "LAFSP"
+    },
+    {
+      "id": "0159",
+      "time": "3:10 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Vineland Ave",
+      "location_desc": "JSO",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1312",
+      "time": "3:09 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I105 W / Alameda St",
+      "location_desc": "WB 105 JEO ALAMEDA ST",
+      "area": "South LA"
+    },
+    {
+      "id": "1301",
+      "time": "3:09 PM",
+      "type": "Traffic Hazard",
+      "location": "US101 N / VINELAND AVE OFR",
+      "location_desc": "JSO",
       "area": "West Valley"
     },
     {
-      "id": "1263",
-      "time": "2:51 PM",
-      "type": "Report of Fire",
-      "location": "I710 S / E Del Amo Blvd",
+      "id": "0156",
+      "time": "3:07 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I10 E / City Terrace Dr Ofr",
+      "location_desc": "EB 10 JWO CITY TERRACE",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1298",
+      "time": "3:07 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I10 E / Sr57",
+      "location_desc": "I10 E AT SR57",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "0154",
+      "time": "3:07 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Lyons Ave",
+      "location_desc": "SB 5 JNO LYONS - CD",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1292",
+      "time": "3:06 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Lyons Ave",
+      "location_desc": "SB 5 JNO LYONS - CD",
+      "area": "Newhall"
+    },
+    {
+      "id": "1296",
+      "time": "3:04 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I10 E / S Normandie Ave",
+      "location_desc": "EB 10 JWO NORMANDIE",
+      "area": "Central LA"
+    },
+    {
+      "id": "1290",
+      "time": "3:03 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I10 E / City Terrace Dr Ofr",
+      "location_desc": "EB 10 JWO CITY TERRACE",
+      "area": "East LA"
+    },
+    {
+      "id": "1286",
+      "time": "3:03 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 W / Crenshaw Blvd",
+      "location_desc": "WB JEO",
+      "area": "Central LA"
+    },
+    {
+      "id": "0152",
+      "time": "3:02 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I710 N / Del Amo Blvd",
+      "location_desc": "NB JNO",
+      "area": "LAFSP"
+    },
+    {
+      "id": "1284",
+      "time": "3:01 PM",
+      "type": "Live or Dead Animal",
+      "location": "I105 E / ROSECRANS AVE OFR",
+      "location_desc": "EB 105 NEAR EXIT 9 and 10",
+      "area": "East LA"
+    },
+    {
+      "id": "1281",
+      "time": "2:58 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / No Lankershim Blvd",
+      "location_desc": "SB JNO",
+      "area": "West Valley"
+    },
+    {
+      "id": "1278",
+      "time": "2:57 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "E Del Amo Blvd / S Santa Fe Ave",
       "location_desc": "",
       "area": "South LA"
+    },
+    {
+      "id": "1276",
+      "time": "2:52 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr57 N / Temple Ave Ofr",
+      "location_desc": "POI NB 57 JSO GRAND BT81-602",
+      "area": "Baldwin Park"
     },
     {
       "id": "1253",
@@ -26,14 +226,6 @@
       "location": "I210 E Sr2 Con / Sr2 S",
       "location_desc": "EB 210 TRANS TO SB 2",
       "area": "Altadena"
-    },
-    {
-      "id": "1246",
-      "time": "2:45 PM",
-      "type": "Traffic Break",
-      "location": "I405 N / Avalon Blvd",
-      "location_desc": "AT",
-      "area": "South LA"
     },
     {
       "id": "0146",
@@ -52,46 +244,6 @@
       "area": "South LA"
     },
     {
-      "id": "1241",
-      "time": "2:42 PM",
-      "type": "Traffic Hazard",
-      "location": "I405 N / Santa Monica Blvd",
-      "location_desc": "JSO",
-      "area": "West LA"
-    },
-    {
-      "id": "1239",
-      "time": "2:42 PM",
-      "type": "Traffic Hazard",
-      "location": "I405 N / I405 N Us101 Con",
-      "location_desc": "NB 405 AT 101",
-      "area": "West Valley"
-    },
-    {
-      "id": "0145",
-      "time": "2:42 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / I5 N Sr14 Con",
-      "location_desc": "NB 5 JSO 14",
-      "area": "LAFSP"
-    },
-    {
-      "id": "1234",
-      "time": "2:40 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / I210 W",
-      "location_desc": "NB 5 JNO 210",
-      "area": "Newhall"
-    },
-    {
-      "id": "1223",
-      "time": "2:36 PM",
-      "type": "Traffic Hazard",
-      "location": "I10 E I710 Con / I710 N",
-      "location_desc": "EB 10 JWO 710",
-      "area": "East LA"
-    },
-    {
       "id": "1221",
       "time": "2:35 PM",
       "type": "Report of Fire",
@@ -100,44 +252,12 @@
       "area": "Central LA"
     },
     {
-      "id": "1217",
-      "time": "2:33 PM",
-      "type": "Traffic Hazard",
-      "location": "Us101 S / Woodman Ave Ofr",
-      "location_desc": "EB 101 JWO WOODMAN",
-      "area": "West Valley"
-    },
-    {
-      "id": "1214",
-      "time": "2:33 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "W El Segundo Blvd / Denker Ave",
-      "location_desc": "EB JEO DENKER",
-      "area": "West LA"
-    },
-    {
-      "id": "1213",
-      "time": "2:32 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr91 W / I110 N Sr91 Con",
-      "location_desc": "WB 91 JEO 110",
-      "area": "South LA"
-    },
-    {
       "id": "1201",
       "time": "2:19 PM",
       "type": "Trfc Collision-No Inj",
       "location": "Flower St / Justin Ave",
       "location_desc": "NB 5 JSO WESTERN",
       "area": "Altadena"
-    },
-    {
-      "id": "1170",
-      "time": "2:00 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Livingston Ave / Avenue Paine",
-      "location_desc": "",
-      "area": "Newhall"
     },
     {
       "id": "1147",
@@ -154,46 +274,6 @@
       "location": "Whittier Blvd / Sorensen Ave",
       "location_desc": "",
       "area": "Santa Fe Springs"
-    },
-    {
-      "id": "1100",
-      "time": "1:42 PM",
-      "type": "Traffic Hazard",
-      "location": "I210 W / Madre St",
-      "location_desc": "WB 210 JEO MADRE",
-      "area": "Altadena"
-    },
-    {
-      "id": "1094",
-      "time": "1:40 PM",
-      "type": "Report of Fire",
-      "location": "I10 W / Arlington Ave",
-      "location_desc": "WB AT ARLINGTON AVE",
-      "area": "Central LA"
-    },
-    {
-      "id": "0131",
-      "time": "1:34 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I110 N / W Vernon Ave",
-      "location_desc": "NB 110 JSO VERNON",
-      "area": "LAFSP"
-    },
-    {
-      "id": "1081",
-      "time": "1:32 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I110 N / W SLAUSON AVE",
-      "location_desc": "NB 110 JNO SLAUSON",
-      "area": "Central LA"
-    },
-    {
-      "id": "1080",
-      "time": "1:32 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr2 N / Colorado Blvd",
-      "location_desc": "NB JSO",
-      "area": "Central LA"
     },
     {
       "id": "1017",
@@ -284,5 +364,5 @@
       "area": "Altadena"
     }
   ],
-  "last_updated": "2025-09-24T21:54:12.821021"
+  "last_updated": "2025-09-24T22:23:03.665999"
 }
