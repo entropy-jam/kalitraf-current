@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 60,
+  "total_incidents": 61,
   "incidents": [
     {
       "id": "0623",
@@ -483,7 +483,15 @@
       "location": "I15 S / Miramar Rd No (pomerado)",
       "location_desc": "",
       "area": "San Diego"
+    },
+    {
+      "id": "0884",
+      "time": "9:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr52 W / Mast Eo",
+      "location_desc": "",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T04:29:10.885300"
+  "last_updated": "2025-09-24T04:50:29.575753"
 }

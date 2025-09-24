@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T04:42:48.720820",
+  "timestamp": "2025-09-24T04:50:29.575066",
   "new_incidents": [
+    {
+      "id": "0884",
+      "time": "9:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr52 W / Mast Eo",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0870",
       "time": "9:28 PM",
@@ -10,14 +18,6 @@
       "location": "Sr74 / (mm 7.8) Lookout Point Store",
       "location_desc": "SR74 (MM 7.8) LOOKOUT POINT STORE",
       "area": "Temecula"
-    },
-    {
-      "id": "0865",
-      "time": "9:16 PM",
-      "type": "Traffic Break",
-      "location": "I15 S / Miramar Rd No (pomerado)",
-      "location_desc": "",
-      "area": "San Diego"
     },
     {
       "id": "0860",
