@@ -1,54 +1,14 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T06:20:09.913130",
+  "timestamp": "2025-09-24T06:45:24.360707",
   "new_incidents": [
-    {
-      "id": "0938",
-      "time": "11:18 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Santa Fe Dr Ofr",
-      "location_desc": "",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0933",
-      "time": "11:07 PM",
-      "type": "Request CalTrans Notify",
-      "location": "I5 S / Sr76 (coast Hwy)",
-      "location_desc": "I5 S SR76 (COAST HWY)",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0926",
-      "time": "10:51 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr94 W / 28th Eo",
-      "location_desc": "SR94 W 28TH EO",
-      "area": "San Diego"
-    },
-    {
-      "id": "0922",
-      "time": "10:48 PM",
-      "type": "Traffic Hazard",
-      "location": "I805 N / I8 No",
-      "location_desc": "",
-      "area": "San Diego"
-    },
     {
       "id": "0899",
       "time": "10:05 PM",
       "type": "Defective Traffic Signals",
       "location": "I5 N / Via De La Valle",
       "location_desc": "FLASH TIL 0500 NB and SB I-5 AT VDV",
-      "area": "San Diego"
-    },
-    {
-      "id": "0900",
-      "time": "10:03 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "I5 S / Palm Ave Ofr",
-      "location_desc": "**WITNESS ONLY",
       "area": "San Diego"
     },
     {
@@ -98,14 +58,6 @@
       "location": "I8 E / Lake Murray (70th)",
       "location_desc": "I8 E LAKE MURRAY (70TH)",
       "area": "El Cajon"
-    },
-    {
-      "id": "0850",
-      "time": "8:46 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 S / Scales So",
-      "location_desc": "I5 S SCALES SO",
-      "area": "Oceanside"
     },
     {
       "id": "0847",
@@ -213,6 +165,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 26,
+  "new_count": 20,
   "removed_count": 0
 }
