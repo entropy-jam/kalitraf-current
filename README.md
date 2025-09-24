@@ -158,6 +158,16 @@ python scrape_local.py --once --center BCCC
 COMMUNICATION_CENTER=BCCC python scrape_github.py
 ```
 
+## 🗺️ Roadmap: Dynamic Hosting
+
+**Current**: GitHub Pages (30-60s update delay)  
+**Planned**: Vercel/Netlify with WebSockets (<1s updates)
+
+- **1**: API backend + real-time frontend
+- **2**: Advanced features + mobile app
+
+**Benefits**: 10x faster updates, real-time notifications, better scalability
+
 ## 📄 License
 
 MIT License - see LICENSE file for details.
