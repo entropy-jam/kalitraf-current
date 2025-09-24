@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 14,
+  "incident_count": 15,
   "incidents": [
+    {
+      "id": "0033",
+      "time": "4:27 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Hwy 76",
+      "location_desc": "LAKE HENSHAW",
+      "area": "El Cajon"
+    },
     {
       "id": "0031",
       "time": "4:14 AM",
@@ -116,5 +124,5 @@
       "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T11:18:01.676649"
+  "last_updated": "2025-09-24T11:28:13.062957"
 }

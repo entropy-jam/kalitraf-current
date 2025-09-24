@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T11:18:01.677180",
+  "timestamp": "2025-09-24T11:28:13.063464",
   "new_incidents": [
+    {
+      "id": "0033",
+      "time": "4:27 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Hwy 76",
+      "location_desc": "LAKE HENSHAW",
+      "area": "El Cajon"
+    },
     {
       "id": "0031",
       "time": "4:14 AM",
@@ -117,6 +125,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 14,
+  "new_count": 15,
   "removed_count": 0
 }
