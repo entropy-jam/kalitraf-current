@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-24",
-  "total_incidents": 14,
+  "total_incidents": 17,
   "incidents": [
     {
       "id": "0446",
@@ -115,7 +115,31 @@
       "location": "7245 Mccourtney Rd",
       "location_desc": "",
       "area": "Auburn"
+    },
+    {
+      "id": "0507",
+      "time": "12:15 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr160 / Richards Blvd Onr",
+      "location_desc": "SB SR160 X RICHARDS",
+      "area": "North Sac"
+    },
+    {
+      "id": "0501",
+      "time": "12:11 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Pleasant Valley Rd / Larkin Mine Rd",
+      "location_desc": "",
+      "area": "Placerville"
+    },
+    {
+      "id": "0499",
+      "time": "12:08 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Roseville Rd / Antelope Rd",
+      "location_desc": "HOME DEPOT PLOT",
+      "area": "North Sac"
     }
   ],
-  "last_updated": "2025-09-24T19:00:33.456969"
+  "last_updated": "2025-09-24T19:27:46.100049"
 }
