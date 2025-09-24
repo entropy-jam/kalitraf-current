@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 17,
+  "total_incidents": 27,
   "incidents": [
     {
       "id": "0623",
@@ -139,7 +139,87 @@
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
       "area": "BC"
+    },
+    {
+      "id": "0737",
+      "time": "6:48 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Murrieta Hot Springs",
+      "location_desc": "I15 S MURRIETA HOT SPRINGS",
+      "area": "Temecula"
+    },
+    {
+      "id": "0710",
+      "time": "6:39 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Lomas Santa Fe So",
+      "location_desc": "I5 N LOMAS SANTA FE SO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0707",
+      "time": "6:35 PM",
+      "type": "Traffic Hazard",
+      "location": "Linea Del Cielo / El Cielito",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0704",
+      "time": "6:31 PM",
+      "type": "Assist with Construction",
+      "location": "Sr52 W / Convoy",
+      "location_desc": "SR52 W CONVOY",
+      "area": "San Diego"
+    },
+    {
+      "id": "0700",
+      "time": "6:20 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "344 Main St",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0692",
+      "time": "6:10 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Frontage Rd / Rainbow Canyon Rd",
+      "location_desc": "I/S",
+      "area": "Temecula"
+    },
+    {
+      "id": "0679",
+      "time": "6:03 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I805 N / Plaza",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0675",
+      "time": "5:53 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Mission (fallbrook) No",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0653",
+      "time": "5:28 PM",
+      "type": "Traffic Hazard",
+      "location": "Bear Valley Pkwy / Idaho Ave",
+      "location_desc": "NB BEAR VALLEY PKWY JSO IDAHO AVE",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0651",
+      "time": "5:27 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sunset Dr / Bear Valley Pkwy",
+      "location_desc": "I/S",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T00:01:04.398281"
+  "last_updated": "2025-09-24T01:49:14.297467"
 }
