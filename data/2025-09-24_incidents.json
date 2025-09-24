@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 133,
+  "total_incidents": 136,
   "incidents": [
     {
       "id": "0623",
@@ -1067,7 +1067,31 @@
       "location": "Sr52 W / Genesee Eo",
       "location_desc": "SR52 W GENESEE EO",
       "area": "San Diego"
+    },
+    {
+      "id": "0240",
+      "time": "10:04 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Sr54 No",
+      "location_desc": "SB 5 JNO 54",
+      "area": "San Diego"
+    },
+    {
+      "id": "0239",
+      "time": "10:03 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / I5 So (north)",
+      "location_desc": "NB 805 JSO 5 - NORTH",
+      "area": "San Diego"
+    },
+    {
+      "id": "0229",
+      "time": "9:54 AM",
+      "type": "Report of Fire",
+      "location": "I805 S / Palm Ave Onr",
+      "location_desc": "",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T16:54:11.318629"
+  "last_updated": "2025-09-24T17:08:24.308302"
 }
