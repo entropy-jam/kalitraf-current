@@ -1,8 +1,24 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 22,
+  "incident_count": 21,
   "incidents": [
+    {
+      "id": "0075",
+      "time": "8:10 AM",
+      "type": "Traffic Hazard",
+      "location": "I215 S / Clinton Keith So",
+      "location_desc": "I215 S CLINTON KEITH SO",
+      "area": "Temecula FSP"
+    },
+    {
+      "id": "0152",
+      "time": "8:08 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr52 E / Sr125 Wo",
+      "location_desc": "SR52 E SR125 WO",
+      "area": "El Cajon"
+    },
     {
       "id": "0144",
       "time": "7:53 AM",
@@ -10,6 +26,14 @@
       "location": "14000-14089 Wildcat Canyon Rd",
       "location_desc": "",
       "area": "El Cajon"
+    },
+    {
+      "id": "0145",
+      "time": "7:50 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "N Coast Hwy / Harbor Dr",
+      "location_desc": "",
+      "area": "Oceanside"
     },
     {
       "id": "0142",
@@ -52,36 +76,12 @@
       "area": ""
     },
     {
-      "id": "0054",
-      "time": "7:14 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr78 W / I15 Wo",
-      "location_desc": "SR78 W I15 WO",
-      "area": "North FSP"
-    },
-    {
       "id": "0121",
       "time": "7:13 AM",
       "type": "Assist CT with Maintenance",
       "location": "Ct",
       "location_desc": "",
       "area": ""
-    },
-    {
-      "id": "0112",
-      "time": "7:04 AM",
-      "type": "Traffic Hazard",
-      "location": "Etcheverry St / Main St",
-      "location_desc": "",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0104",
-      "time": "6:48 AM",
-      "type": "Traffic Hazard",
-      "location": "SR94 W / EUCLID",
-      "location_desc": "SR94 W EUCLID",
-      "area": "San Diego"
     },
     {
       "id": "0098",
@@ -156,14 +156,6 @@
       "area": "Temecula"
     },
     {
-      "id": "0053",
-      "time": "5:16 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "2550 Mccain Valley Rd",
-      "location_desc": "MCCAIN VALLEY FIRE CAMP",
-      "area": "El Cajon"
-    },
-    {
       "id": "0033",
       "time": "4:27 AM",
       "type": "Assist CT with Maintenance",
@@ -180,5 +172,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T14:56:06.188833"
+  "last_updated": "2025-09-24T15:13:18.500529"
 }

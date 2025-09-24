@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 111,
+  "total_incidents": 114,
   "incidents": [
     {
       "id": "0623",
@@ -891,7 +891,31 @@
       "location": "I5 S / Las Pulgas So",
       "location_desc": "",
       "area": "Oceanside"
+    },
+    {
+      "id": "0075",
+      "time": "8:10 AM",
+      "type": "Traffic Hazard",
+      "location": "I215 S / Clinton Keith So",
+      "location_desc": "I215 S CLINTON KEITH SO",
+      "area": "Temecula FSP"
+    },
+    {
+      "id": "0152",
+      "time": "8:08 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr52 E / Sr125 Wo",
+      "location_desc": "SR52 E SR125 WO",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0145",
+      "time": "7:50 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "N Coast Hwy / Harbor Dr",
+      "location_desc": "",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T14:56:06.191267"
+  "last_updated": "2025-09-24T15:13:18.502686"
 }
