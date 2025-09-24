@@ -1,0 +1,353 @@
+{
+  "center_code": "BCCC",
+  "center_name": "Border",
+  "date": "2025-09-24",
+  "total_incidents": 43,
+  "incidents": [
+    {
+      "id": "0623",
+      "time": "4:40 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr125 S / I8 So",
+      "location_desc": "SB 125 JSO I8",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0256",
+      "time": "4:35 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr78 W / Vista Village Dr Ofr",
+      "location_desc": "WB SR78 ON VISTA VILLAGE DR OFR",
+      "area": "North FSP"
+    },
+    {
+      "id": "0254",
+      "time": "4:32 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / Sr56 Bypass",
+      "location_desc": "",
+      "area": "North FSP"
+    },
+    {
+      "id": "0615",
+      "time": "4:29 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I805 N / Sr56 Bypass",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0252",
+      "time": "4:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Carmel Mountain",
+      "location_desc": "I5 N CARMEL MOUNTAIN",
+      "area": "North FSP"
+    },
+    {
+      "id": "0611",
+      "time": "4:27 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / Carmel Mountain",
+      "location_desc": "I5 N CARMEL MOUNTAIN",
+      "area": "San Diego"
+    },
+    {
+      "id": "0600",
+      "time": "4:19 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "16100 Via De Santa Fe",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0602",
+      "time": "4:18 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr15 S / I805 No",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0604",
+      "time": "4:16 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "3225 Via Solana",
+      "location_desc": "OCCRD 1138 Felicita Ln",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0592",
+      "time": "4:09 PM",
+      "type": "Traffic Hazard",
+      "location": "150 Mmwildcat Canyon Rd 1.50",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0584",
+      "time": "4:09 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Calle Verde / Avocado Blvd",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0583",
+      "time": "4:06 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Woodside Ave / Maine Ave",
+      "location_desc": "12419 WOODSIDE -PLANET FITNESS",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0571",
+      "time": "3:54 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Tenaja Rd / Clinton Keith Rd",
+      "location_desc": "",
+      "area": "Temecula"
+    },
+    {
+      "id": "0513",
+      "time": "3:13 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "17044 Ralphs Ranch Rd",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0456",
+      "time": "2:03 PM",
+      "type": "Aircraft Emergency",
+      "location": "S Mission Rd / S Stagecoach Ln",
+      "location_desc": "1/2 MILE JNO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0023",
+      "time": "1:17 AM",
+      "type": "SIG Alert",
+      "location": "Sr76 / Pauma Valley Dr",
+      "location_desc": "ATand T UNTIL APPROX 1000",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0002",
+      "time": "12:00 AM",
+      "type": "Road/Weather Conditions",
+      "location": "Media Log",
+      "location_desc": "NEWSWORTHY INCIDENTS",
+      "area": "BC"
+    },
+    {
+      "id": "0737",
+      "time": "6:48 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Murrieta Hot Springs",
+      "location_desc": "I15 S MURRIETA HOT SPRINGS",
+      "area": "Temecula"
+    },
+    {
+      "id": "0710",
+      "time": "6:39 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Lomas Santa Fe So",
+      "location_desc": "I5 N LOMAS SANTA FE SO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0707",
+      "time": "6:35 PM",
+      "type": "Traffic Hazard",
+      "location": "Linea Del Cielo / El Cielito",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0704",
+      "time": "6:31 PM",
+      "type": "Assist with Construction",
+      "location": "Sr52 W / Convoy",
+      "location_desc": "SR52 W CONVOY",
+      "area": "San Diego"
+    },
+    {
+      "id": "0700",
+      "time": "6:20 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "344 Main St",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0692",
+      "time": "6:10 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Frontage Rd / Rainbow Canyon Rd",
+      "location_desc": "I/S",
+      "area": "Temecula"
+    },
+    {
+      "id": "0679",
+      "time": "6:03 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I805 N / Plaza",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0675",
+      "time": "5:53 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Mission (fallbrook) No",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0653",
+      "time": "5:28 PM",
+      "type": "Traffic Hazard",
+      "location": "Bear Valley Pkwy / Idaho Ave",
+      "location_desc": "NB BEAR VALLEY PKWY JSO IDAHO AVE",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0651",
+      "time": "5:27 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sunset Dr / Bear Valley Pkwy",
+      "location_desc": "I/S",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0808",
+      "time": "7:43 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr163 N / Clairemont Mesa",
+      "location_desc": "SR163 N CLAIREMONT MESA",
+      "area": "San Diego"
+    },
+    {
+      "id": "0803",
+      "time": "7:41 PM",
+      "type": "Assist with Construction",
+      "location": "I215 N / Newport So",
+      "location_desc": "I215 N NEWPORT SO (TWI)",
+      "area": "Temecula"
+    },
+    {
+      "id": "0802",
+      "time": "7:40 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr78 W / Barham Eo",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0788",
+      "time": "7:36 PM",
+      "type": "Car Fire",
+      "location": "Sr52 W / Summit Eo",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0786",
+      "time": "7:33 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 S / Manchester So",
+      "location_desc": "I5 S MANCHESTER SO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0780",
+      "time": "7:30 PM",
+      "type": "Assist with Construction",
+      "location": "I5 S / Las Pulgas",
+      "location_desc": "I5 S LAS PULGAS",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0777",
+      "time": "7:24 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / Main St Ofr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0773",
+      "time": "7:21 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Aero Dr Ofr",
+      "location_desc": "17B CPY INFO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0761",
+      "time": "7:00 PM",
+      "type": "Traffic Hazard",
+      "location": "Alturas Rd / W Fallbrook St",
+      "location_desc": "730 ALTURAS RD",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0693",
+      "time": "6:11 PM",
+      "type": "Traffic Hazard",
+      "location": "Mountain Meadow Rd / Oak Spur Way",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0828",
+      "time": "8:20 PM",
+      "type": "Assist with Construction",
+      "location": "I805 S / Mira Mesa",
+      "location_desc": "TIL 0330 20161 0330",
+      "area": "San Diego"
+    },
+    {
+      "id": "0827",
+      "time": "8:18 PM",
+      "type": "Wrong Way Driver",
+      "location": "Jamacha Blvd / Paradise Valley Rd",
+      "location_desc": "REST TRFC",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0822",
+      "time": "8:06 PM",
+      "type": "Assist with Construction",
+      "location": "Sr76 / I15",
+      "location_desc": "TIL 0400 16684",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0821",
+      "time": "8:04 PM",
+      "type": "Animal Hazard",
+      "location": "I15 S / Centre City No (north)",
+      "location_desc": "I15 S CENTRE CITY NO (NORTH)",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0817",
+      "time": "8:03 PM",
+      "type": "Assist with Construction",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "VARIOUS LOCATIONS TILL 0230",
+      "area": "San Diego"
+    },
+    {
+      "id": "0812",
+      "time": "7:57 PM",
+      "type": "Assist with Construction",
+      "location": "I5 S / Nobel So",
+      "location_desc": "TILL 0300",
+      "area": "San Diego"
+    }
+  ],
+  "last_updated": "2025-09-24T03:23:41.473899"
+}
