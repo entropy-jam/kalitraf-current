@@ -1,14 +1,54 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 17,
+  "incident_count": 18,
   "incidents": [
     {
-      "id": "0808",
-      "time": "7:43 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr163 N / Clairemont Mesa",
-      "location_desc": "SR163 N CLAIREMONT MESA",
+      "id": "0828",
+      "time": "8:20 PM",
+      "type": "Assist with Construction",
+      "location": "I805 S / Mira Mesa",
+      "location_desc": "TIL 0330 20161 0330",
+      "area": "San Diego"
+    },
+    {
+      "id": "0827",
+      "time": "8:18 PM",
+      "type": "Wrong Way Driver",
+      "location": "Jamacha Blvd / Paradise Valley Rd",
+      "location_desc": "REST TRFC",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0822",
+      "time": "8:06 PM",
+      "type": "Assist with Construction",
+      "location": "Sr76 / I15",
+      "location_desc": "TIL 0400 16684",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0821",
+      "time": "8:04 PM",
+      "type": "Animal Hazard",
+      "location": "I15 S / Centre City No (north)",
+      "location_desc": "I15 S CENTRE CITY NO (NORTH)",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0817",
+      "time": "8:03 PM",
+      "type": "Assist with Construction",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "VARIOUS LOCATIONS TILL 0230",
+      "area": "San Diego"
+    },
+    {
+      "id": "0812",
+      "time": "7:57 PM",
+      "type": "Assist with Construction",
+      "location": "I5 S / Nobel So",
+      "location_desc": "TILL 0300",
       "area": "San Diego"
     },
     {
@@ -18,14 +58,6 @@
       "location": "I215 N / Newport So",
       "location_desc": "I215 N NEWPORT SO (TWI)",
       "area": "Temecula"
-    },
-    {
-      "id": "0802",
-      "time": "7:40 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr78 W / Barham Eo",
-      "location_desc": "",
-      "area": "Oceanside"
     },
     {
       "id": "0788",
@@ -38,7 +70,7 @@
     {
       "id": "0786",
       "time": "7:33 PM",
-      "type": "Trfc Collision-Unkn Inj",
+      "type": "Trfc Collision-Minor Inj",
       "location": "I5 S / Manchester So",
       "location_desc": "I5 S MANCHESTER SO",
       "area": "Oceanside"
@@ -52,14 +84,6 @@
       "area": "Oceanside"
     },
     {
-      "id": "0777",
-      "time": "7:24 PM",
-      "type": "Traffic Hazard",
-      "location": "I805 N / Main St Ofr",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
       "id": "0773",
       "time": "7:21 PM",
       "type": "Traffic Hazard",
@@ -68,19 +92,19 @@
       "area": "San Diego"
     },
     {
-      "id": "0761",
-      "time": "7:00 PM",
-      "type": "Traffic Hazard",
-      "location": "Alturas Rd / W Fallbrook St",
-      "location_desc": "730 ALTURAS RD",
+      "id": "0710",
+      "time": "6:39 PM",
+      "type": "Trfc Collision-Minor Inj",
+      "location": "I5 N / VIA DE LA VALLE NO",
+      "location_desc": "I5 N VIA DE LA VALLE NO",
       "area": "Oceanside"
     },
     {
-      "id": "0710",
-      "time": "6:39 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / VIA DE LA VALLE NO",
-      "location_desc": "I5 N VIA DE LA VALLE NO",
+      "id": "0707",
+      "time": "6:35 PM",
+      "type": "Traffic Hazard",
+      "location": "Linea Del Cielo / El Cielito",
+      "location_desc": "",
       "area": "Oceanside"
     },
     {
@@ -90,22 +114,6 @@
       "location": "Sr52 W / Convoy",
       "location_desc": "SR52 W CONVOY",
       "area": "San Diego"
-    },
-    {
-      "id": "0700",
-      "time": "6:20 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "344 Main St",
-      "location_desc": "",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0693",
-      "time": "6:11 PM",
-      "type": "Traffic Hazard",
-      "location": "Mountain Meadow Rd / Oak Spur Way",
-      "location_desc": "",
-      "area": "Oceanside"
     },
     {
       "id": "0679",
@@ -140,5 +148,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T02:50:27.877109"
+  "last_updated": "2025-09-24T03:23:41.473196"
 }

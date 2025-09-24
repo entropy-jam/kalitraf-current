@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 37,
+  "total_incidents": 43,
   "incidents": [
     {
       "id": "0623",
@@ -299,7 +299,55 @@
       "location": "Mountain Meadow Rd / Oak Spur Way",
       "location_desc": "",
       "area": "Oceanside"
+    },
+    {
+      "id": "0828",
+      "time": "8:20 PM",
+      "type": "Assist with Construction",
+      "location": "I805 S / Mira Mesa",
+      "location_desc": "TIL 0330 20161 0330",
+      "area": "San Diego"
+    },
+    {
+      "id": "0827",
+      "time": "8:18 PM",
+      "type": "Wrong Way Driver",
+      "location": "Jamacha Blvd / Paradise Valley Rd",
+      "location_desc": "REST TRFC",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0822",
+      "time": "8:06 PM",
+      "type": "Assist with Construction",
+      "location": "Sr76 / I15",
+      "location_desc": "TIL 0400 16684",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0821",
+      "time": "8:04 PM",
+      "type": "Animal Hazard",
+      "location": "I15 S / Centre City No (north)",
+      "location_desc": "I15 S CENTRE CITY NO (NORTH)",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0817",
+      "time": "8:03 PM",
+      "type": "Assist with Construction",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "VARIOUS LOCATIONS TILL 0230",
+      "area": "San Diego"
+    },
+    {
+      "id": "0812",
+      "time": "7:57 PM",
+      "type": "Assist with Construction",
+      "location": "I5 S / Nobel So",
+      "location_desc": "TILL 0300",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T02:50:27.877781"
+  "last_updated": "2025-09-24T03:23:41.473899"
 }
