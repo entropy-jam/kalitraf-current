@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T08:46:23.797490",
+  "timestamp": "2025-09-24T08:56:13.509105",
   "new_incidents": [
+    {
+      "id": "0014",
+      "time": "1:43 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I15 S I8 E CON / FAIRMOUNT AVE OFR",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0002",
       "time": "12:00 AM",
@@ -149,6 +157,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 18,
+  "new_count": 19,
   "removed_count": 0
 }

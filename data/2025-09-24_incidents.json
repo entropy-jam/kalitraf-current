@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 72,
+  "total_incidents": 73,
   "incidents": [
     {
       "id": "0623",
@@ -579,7 +579,15 @@
       "location": "I215 N So / Newport Rd",
       "location_desc": "I215 N SO NEWPORT RD",
       "area": "Temecula"
+    },
+    {
+      "id": "0014",
+      "time": "1:43 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I15 S I8 E CON / FAIRMOUNT AVE OFR",
+      "location_desc": "",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T07:29:13.339467"
+  "last_updated": "2025-09-24T08:56:13.509730"
 }
