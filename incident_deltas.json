@@ -1,15 +1,71 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T15:13:18.501079",
+  "timestamp": "2025-09-24T15:31:16.392502",
   "new_incidents": [
     {
-      "id": "0075",
-      "time": "8:10 AM",
+      "id": "0170",
+      "time": "8:25 AM",
       "type": "Traffic Hazard",
-      "location": "I215 S / Clinton Keith So",
-      "location_desc": "I215 S CLINTON KEITH SO",
+      "location": "I5 S / Basilone Rd Onr",
+      "location_desc": "SB JSO BASILONE",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0078",
+      "time": "8:25 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Railroad Canyon (diamond)",
+      "location_desc": "I15 S RAILROAD CANYON (DIAMOND)",
       "area": "Temecula FSP"
+    },
+    {
+      "id": "0168",
+      "time": "8:23 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr94 W / Checkpoint Eo",
+      "location_desc": "WB SR94 JEO CHECKPOINT",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0166",
+      "time": "8:19 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I8 W / Texas Eo (qualcomm)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0156",
+      "time": "8:15 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Carroll Canyon So",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0076",
+      "time": "8:13 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Genesee Ave Onr",
+      "location_desc": "",
+      "area": "North FSP"
+    },
+    {
+      "id": "0153",
+      "time": "8:12 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / Genesee Ave Onr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0157",
+      "time": "8:11 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Green Canyon Rd / Calmin Dr",
+      "location_desc": "",
+      "area": "Oceanside"
     },
     {
       "id": "0152",
@@ -173,6 +229,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 21,
+  "new_count": 28,
   "removed_count": 0
 }

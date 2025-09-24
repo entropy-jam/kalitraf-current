@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 114,
+  "total_incidents": 120,
   "incidents": [
     {
       "id": "0623",
@@ -915,7 +915,55 @@
       "location": "N Coast Hwy / Harbor Dr",
       "location_desc": "",
       "area": "Oceanside"
+    },
+    {
+      "id": "0170",
+      "time": "8:25 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Basilone Rd Onr",
+      "location_desc": "SB JSO BASILONE",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0168",
+      "time": "8:23 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr94 W / Checkpoint Eo",
+      "location_desc": "WB SR94 JEO CHECKPOINT",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0166",
+      "time": "8:19 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I8 W / Texas Eo (qualcomm)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0156",
+      "time": "8:15 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Carroll Canyon So",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0153",
+      "time": "8:12 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / Genesee Ave Onr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0157",
+      "time": "8:11 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Green Canyon Rd / Calmin Dr",
+      "location_desc": "",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T15:13:18.502686"
+  "last_updated": "2025-09-24T15:31:16.394181"
 }
