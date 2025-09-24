@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T06:55:33.697078",
+  "timestamp": "2025-09-24T07:12:25.144116",
   "new_incidents": [
+    {
+      "id": "0002",
+      "time": "12:00 AM",
+      "type": "Road/Weather Conditions",
+      "location": "Media Log",
+      "location_desc": "NEWSWORTHY INCIDENTS",
+      "area": "BC"
+    },
     {
       "id": "0899",
       "time": "10:05 PM",
@@ -146,25 +154,9 @@
       "location": "Sr52 W / Convoy",
       "location_desc": "SR52 W CONVOY",
       "area": "San Diego"
-    },
-    {
-      "id": "0651",
-      "time": "5:27 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sunset Dr / Bear Valley Pkwy",
-      "location_desc": "I/S",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0002",
-      "time": "12:00 AM",
-      "type": "Road/Weather Conditions",
-      "location": "Media Log",
-      "location_desc": "NEWSWORTHY INCIDENTS",
-      "area": "BC"
     }
   ],
   "removed_incidents": [],
-  "new_count": 20,
+  "new_count": 19,
   "removed_count": 0
 }
