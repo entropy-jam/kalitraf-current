@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 27,
+  "total_incidents": 37,
   "incidents": [
     {
       "id": "0623",
@@ -219,7 +219,87 @@
       "location": "Sunset Dr / Bear Valley Pkwy",
       "location_desc": "I/S",
       "area": "Oceanside"
+    },
+    {
+      "id": "0808",
+      "time": "7:43 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr163 N / Clairemont Mesa",
+      "location_desc": "SR163 N CLAIREMONT MESA",
+      "area": "San Diego"
+    },
+    {
+      "id": "0803",
+      "time": "7:41 PM",
+      "type": "Assist with Construction",
+      "location": "I215 N / Newport So",
+      "location_desc": "I215 N NEWPORT SO (TWI)",
+      "area": "Temecula"
+    },
+    {
+      "id": "0802",
+      "time": "7:40 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr78 W / Barham Eo",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0788",
+      "time": "7:36 PM",
+      "type": "Car Fire",
+      "location": "Sr52 W / Summit Eo",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0786",
+      "time": "7:33 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 S / Manchester So",
+      "location_desc": "I5 S MANCHESTER SO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0780",
+      "time": "7:30 PM",
+      "type": "Assist with Construction",
+      "location": "I5 S / Las Pulgas",
+      "location_desc": "I5 S LAS PULGAS",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0777",
+      "time": "7:24 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / Main St Ofr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0773",
+      "time": "7:21 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Aero Dr Ofr",
+      "location_desc": "17B CPY INFO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0761",
+      "time": "7:00 PM",
+      "type": "Traffic Hazard",
+      "location": "Alturas Rd / W Fallbrook St",
+      "location_desc": "730 ALTURAS RD",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0693",
+      "time": "6:11 PM",
+      "type": "Traffic Hazard",
+      "location": "Mountain Meadow Rd / Oak Spur Way",
+      "location_desc": "",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T01:49:14.297467"
+  "last_updated": "2025-09-24T02:50:27.877781"
 }
