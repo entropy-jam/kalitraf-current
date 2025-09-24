@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 126,
+  "total_incidents": 128,
   "incidents": [
     {
       "id": "0623",
@@ -1011,7 +1011,23 @@
       "location": "52nd St / Towle Ct",
       "location_desc": "",
       "area": "San Diego"
+    },
+    {
+      "id": "0192",
+      "time": "9:01 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "8856 Innsdale Ave",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0188",
+      "time": "8:58 AM",
+      "type": "Defective Traffic Signals",
+      "location": "I805 N / Governor Dr Ofr",
+      "location_desc": "",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T15:57:29.046894"
+  "last_updated": "2025-09-24T16:20:26.424502"
 }
