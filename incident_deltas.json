@@ -1,8 +1,24 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T04:50:29.575066",
+  "timestamp": "2025-09-24T04:57:40.867471",
   "new_incidents": [
+    {
+      "id": "0891",
+      "time": "9:53 PM",
+      "type": "Assist with Construction",
+      "location": "I15 N / Rancho California",
+      "location_desc": "I15 N RANCHO CALIFORNIA",
+      "area": "Temecula"
+    },
+    {
+      "id": "0890",
+      "time": "9:49 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I805 S / 43rd No",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0884",
       "time": "9:44 PM",
@@ -165,6 +181,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 20,
+  "new_count": 22,
   "removed_count": 0
 }
