@@ -1,8 +1,48 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "incident_count": 9,
+  "incident_count": 14,
   "incidents": [
+    {
+      "id": "0489",
+      "time": "11:56 AM",
+      "type": "Object Flying From Veh",
+      "location": "I80 E / Madison Ave",
+      "location_desc": "EB 80 AT MADISON",
+      "area": "North Sac"
+    },
+    {
+      "id": "0481",
+      "time": "11:54 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "9448-9464 Madison Ave",
+      "location_desc": "",
+      "area": "East Sac"
+    },
+    {
+      "id": "0478",
+      "time": "11:52 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "1657-1693 Eastern Ave",
+      "location_desc": "",
+      "area": "North Sac"
+    },
+    {
+      "id": "0475",
+      "time": "11:51 AM",
+      "type": "Traffic Hazard",
+      "location": "Us50 E / Hazel Ave",
+      "location_desc": "EB ON OFR",
+      "area": "East Sac"
+    },
+    {
+      "id": "0467",
+      "time": "11:45 AM",
+      "type": "Traffic Hazard",
+      "location": "7245 Mccourtney Rd",
+      "location_desc": "",
+      "area": "Auburn"
+    },
     {
       "id": "0446",
       "time": "11:32 AM",
@@ -76,5 +116,5 @@
       "area": ""
     }
   ],
-  "last_updated": "2025-09-24T18:46:22.300419"
+  "last_updated": "2025-09-24T19:00:33.456049"
 }
