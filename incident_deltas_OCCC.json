@@ -1,8 +1,32 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "timestamp": "2025-09-24T22:40:24.086603",
+  "timestamp": "2025-09-24T22:47:23.928241",
   "new_incidents": [
+    {
+      "id": "0099",
+      "time": "3:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr22 E / Harbor Blvd",
+      "location_desc": "JWO",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0098",
+      "time": "3:43 PM",
+      "type": "Trfc Collision-1141Enrt",
+      "location": "Sr55 S / I405",
+      "location_desc": "SB 55 JNO 405",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0354",
+      "time": "3:42 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr22 E / Harbor Blvd",
+      "location_desc": "JWO",
+      "area": "Westminster"
+    },
     {
       "id": "0348",
       "time": "3:29 PM",
@@ -28,14 +52,6 @@
       "area": "Santa Ana"
     },
     {
-      "id": "0081",
-      "time": "2:11 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr57 S / Lincoln",
-      "location_desc": "JNO",
-      "area": "Orange County FSP"
-    },
-    {
       "id": "0004",
       "time": "12:05 AM",
       "type": "CLOSURE of a Road",
@@ -53,6 +69,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 6,
+  "new_count": 8,
   "removed_count": 0
 }

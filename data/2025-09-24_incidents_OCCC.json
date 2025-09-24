@@ -2,7 +2,7 @@
   "center_code": "OCCC",
   "center_name": "Orange",
   "date": "2025-09-24",
-  "total_incidents": 64,
+  "total_incidents": 67,
   "incidents": [
     {
       "id": "0050",
@@ -515,7 +515,31 @@
       "location": "I5 N / Crown Valley Pkwy Ofr",
       "location_desc": "POI: NB 5 ON CV OFR",
       "area": "Capistrano"
+    },
+    {
+      "id": "0099",
+      "time": "3:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr22 E / Harbor Blvd",
+      "location_desc": "JWO",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0098",
+      "time": "3:43 PM",
+      "type": "Trfc Collision-1141Enrt",
+      "location": "Sr55 S / I405",
+      "location_desc": "SB 55 JNO 405",
+      "area": "Orange County FSP"
+    },
+    {
+      "id": "0354",
+      "time": "3:42 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr22 E / Harbor Blvd",
+      "location_desc": "JWO",
+      "area": "Westminster"
     }
   ],
-  "last_updated": "2025-09-24T22:33:15.562540"
+  "last_updated": "2025-09-24T22:47:23.928750"
 }
