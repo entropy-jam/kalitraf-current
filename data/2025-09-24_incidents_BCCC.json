@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 36,
+  "total_incidents": 39,
   "incidents": [
     {
       "id": "0347",
@@ -291,7 +291,31 @@
       "location": "I805 N / I8 So",
       "location_desc": "NB 805 JSO 8",
       "area": "South FSP"
+    },
+    {
+      "id": "0442",
+      "time": "1:58 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / Imperial No",
+      "location_desc": "I5 S IMPERIAL NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0440",
+      "time": "1:56 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S I8 Con / I805 S I8 E Con",
+      "location_desc": "SB 805 TO EB 8 CON",
+      "area": "San Diego"
+    },
+    {
+      "id": "0427",
+      "time": "1:47 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Pourroy Rd / Encanto Rd",
+      "location_desc": "",
+      "area": "Temecula"
     }
   ],
-  "last_updated": "2025-09-24T20:32:55.636353"
+  "last_updated": "2025-09-24T21:09:36.276798"
 }

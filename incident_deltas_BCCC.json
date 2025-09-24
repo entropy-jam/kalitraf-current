@@ -1,39 +1,31 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T20:41:16.611879",
+  "timestamp": "2025-09-24T21:09:36.276293",
   "new_incidents": [
     {
-      "id": "0151",
-      "time": "1:30 PM",
-      "type": "Traffic Hazard",
-      "location": "I805 S / Home Ave Ofr",
-      "location_desc": "SB 805 ON HOME OFR",
-      "area": "South FSP"
+      "id": "0442",
+      "time": "1:58 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / Imperial No",
+      "location_desc": "I5 S IMPERIAL NO",
+      "area": "San Diego"
     },
     {
-      "id": "0412",
-      "time": "1:29 PM",
+      "id": "0440",
+      "time": "1:56 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S I8 Con / I805 S I8 E Con",
+      "location_desc": "SB 805 TO EB 8 CON",
+      "area": "San Diego"
+    },
+    {
+      "id": "0427",
+      "time": "1:47 PM",
       "type": "Trfc Collision-1141 Enrt",
-      "location": "I8 E / Mission Gorge Wo (fairmount)",
+      "location": "Pourroy Rd / Encanto Rd",
       "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0413",
-      "time": "1:28 PM",
-      "type": "Traffic Hazard",
-      "location": "I805 S / Home Ave Ofr",
-      "location_desc": "SB 805 ON HOME OFR",
-      "area": "San Diego"
-    },
-    {
-      "id": "0414",
-      "time": "1:27 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr94 E / Sr94 E Sr125 S Con",
-      "location_desc": "EB TO SB",
-      "area": "El Cajon"
+      "area": "Temecula"
     },
     {
       "id": "0404",
@@ -44,36 +36,12 @@
       "area": "BC"
     },
     {
-      "id": "0402",
-      "time": "1:20 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr75 W / Toll Plaza",
-      "location_desc": "SR75 W TOLL PLAZA (BRIDGE)",
-      "area": "San Diego"
-    },
-    {
-      "id": "0147",
-      "time": "1:16 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr15 S / Adams No",
-      "location_desc": "SR15 S ADAMS NO",
-      "area": "North FSP"
-    },
-    {
       "id": "0399",
       "time": "1:16 PM",
       "type": "Traffic Hazard",
       "location": "Sr15 S / Adams No",
       "location_desc": "SR15 S ADAMS NO",
       "area": "San Diego"
-    },
-    {
-      "id": "0388",
-      "time": "1:03 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Sweetwater Rd / Lamar St",
-      "location_desc": "",
-      "area": "El Cajon"
     },
     {
       "id": "0377",
@@ -84,36 +52,12 @@
       "area": "BC"
     },
     {
-      "id": "0374",
-      "time": "12:44 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr125 N / Sr94 So",
-      "location_desc": "SR125 N SR94 SO",
-      "area": "El Cajon"
-    },
-    {
       "id": "0369",
       "time": "12:42 PM",
       "type": "Trfc Collision-1141 Enrt",
       "location": "29115 Valley Center Rd",
       "location_desc": "",
       "area": "Oceanside"
-    },
-    {
-      "id": "0337",
-      "time": "11:58 AM",
-      "type": "Trfc Collision-Minor Inj",
-      "location": "Lyons Valley Rd / Honey Springs Rd",
-      "location_desc": "JEO",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0023",
-      "time": "7:22 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "SR74 / Menifee Rd",
-      "location_desc": "",
-      "area": "BC"
     },
     {
       "id": "0128",
@@ -189,6 +133,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 23,
+  "new_count": 16,
   "removed_count": 0
 }
