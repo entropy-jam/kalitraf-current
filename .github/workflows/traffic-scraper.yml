@@ -171,8 +171,10 @@ jobs:
         echo "GMAIL_APP_PASSWORD=${{ secrets.GMAIL_APP_PASSWORD }}" >> $GITHUB_ENV
 
     - name: Run traffic scraper
+      id: scraper
       run: |
         python src/scrapers/github_scraper.py
+        echo "file_updated=$?" >> $GITHUB_OUTPUT
 
     - name: Check for changes
       id: changes
@@ -190,6 +192,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add data/
         git add active_incidents.json
+        git add incident_deltas.json
         git commit -m "Update traffic incidents - $(date '+%Y-%m-%d %H:%M:%S')"
         git push
 

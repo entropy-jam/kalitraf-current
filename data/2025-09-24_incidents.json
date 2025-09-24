@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 53,
+  "total_incidents": 58,
   "incidents": [
     {
       "id": "0623",
@@ -427,7 +427,47 @@
       "location": "I5 S / Scales So",
       "location_desc": "I5 S SCALES SO",
       "area": "Oceanside"
+    },
+    {
+      "id": "0861",
+      "time": "9:08 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Las Pulgas No",
+      "location_desc": "I5 S LAS PULGAS NO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0860",
+      "time": "9:07 PM",
+      "type": "Assist with Construction",
+      "location": "I15 N / Rainbow Scales No (nb Scales)",
+      "location_desc": "JNO TO JSO RANCHO CAL",
+      "area": "Temecula"
+    },
+    {
+      "id": "0859",
+      "time": "9:06 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / Adams So",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0858",
+      "time": "9:06 PM",
+      "type": "Defective Traffic Signals",
+      "location": "Sr15 S / Main",
+      "location_desc": "NB",
+      "area": "San Diego"
+    },
+    {
+      "id": "0857",
+      "time": "9:04 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I5 S / Main_division (national City)",
+      "location_desc": "FLASH TIL 0500",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T03:54:03.593792"
+  "last_updated": "2025-09-24T00:10:31.363004"
 }

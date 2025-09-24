@@ -1,0 +1,210 @@
+{
+  "center_code": "BCCC",
+  "center_name": "Border",
+  "timestamp": "2025-09-24T00:10:42.061677",
+  "new_incidents": [
+    {
+      "id": "0861",
+      "time": "9:08 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Las Pulgas No",
+      "location_desc": "I5 S LAS PULGAS NO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0860",
+      "time": "9:07 PM",
+      "type": "Assist with Construction",
+      "location": "I15 N / Rainbow Scales No (nb Scales)",
+      "location_desc": "JNO TO JSO RANCHO CAL",
+      "area": "Temecula"
+    },
+    {
+      "id": "0859",
+      "time": "9:06 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / Adams So",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0858",
+      "time": "9:06 PM",
+      "type": "Defective Traffic Signals",
+      "location": "Sr15 S / Main",
+      "location_desc": "NB",
+      "area": "San Diego"
+    },
+    {
+      "id": "0857",
+      "time": "9:04 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I5 S / Main_division (national City)",
+      "location_desc": "FLASH TIL 0500",
+      "area": "San Diego"
+    },
+    {
+      "id": "0851",
+      "time": "8:47 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I8 E / Lake Murray (70th)",
+      "location_desc": "I8 E LAKE MURRAY (70TH)",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0850",
+      "time": "8:46 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 S / Scales So",
+      "location_desc": "I5 S SCALES SO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0847",
+      "time": "8:41 PM",
+      "type": "Assist with Construction",
+      "location": "I805 S / Balboa So",
+      "location_desc": "I805 S BALBOA SO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0837",
+      "time": "8:30 PM",
+      "type": "Assist with Construction",
+      "location": "Sr78 W / I5",
+      "location_desc": "SR78 W I5",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0835",
+      "time": "8:29 PM",
+      "type": "Assist with Construction",
+      "location": "I805 N / 47th",
+      "location_desc": "I805 N 47TH",
+      "area": "San Diego"
+    },
+    {
+      "id": "0832",
+      "time": "8:28 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I15 S / Friars",
+      "location_desc": "FLASH TIL 0330 SB",
+      "area": "San Diego"
+    },
+    {
+      "id": "0836",
+      "time": "8:28 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 E / I805 Eo",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0839",
+      "time": "8:26 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Bonita No (e St)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0828",
+      "time": "8:20 PM",
+      "type": "Assist with Construction",
+      "location": "I805 S / Mira Mesa",
+      "location_desc": "TIL 0330 20161 0330",
+      "area": "San Diego"
+    },
+    {
+      "id": "0822",
+      "time": "8:06 PM",
+      "type": "Assist with Construction",
+      "location": "Sr76 / I15",
+      "location_desc": "TIL 0400 16684",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0817",
+      "time": "8:03 PM",
+      "type": "Assist with Construction",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "VARIOUS LOCATIONS TILL 0230",
+      "area": "San Diego"
+    },
+    {
+      "id": "0812",
+      "time": "7:57 PM",
+      "type": "Assist with Construction",
+      "location": "I5 S / Nobel So",
+      "location_desc": "TILL 0300",
+      "area": "San Diego"
+    },
+    {
+      "id": "0803",
+      "time": "7:41 PM",
+      "type": "Assist with Construction",
+      "location": "I215 N / Newport So",
+      "location_desc": "I215 N NEWPORT SO (TWI)",
+      "area": "Temecula"
+    },
+    {
+      "id": "0780",
+      "time": "7:30 PM",
+      "type": "Assist with Construction",
+      "location": "I5 S / Las Pulgas",
+      "location_desc": "I5 S LAS PULGAS",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0773",
+      "time": "7:21 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Aero Dr Ofr",
+      "location_desc": "17B CPY INFO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0710",
+      "time": "6:39 PM",
+      "type": "Trfc Collision-Minor Inj",
+      "location": "I5 N / VIA DE LA VALLE NO",
+      "location_desc": "I5 N VIA DE LA VALLE NO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0704",
+      "time": "6:31 PM",
+      "type": "Assist with Construction",
+      "location": "Sr52 W / Convoy",
+      "location_desc": "SR52 W CONVOY",
+      "area": "San Diego"
+    },
+    {
+      "id": "0651",
+      "time": "5:27 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sunset Dr / Bear Valley Pkwy",
+      "location_desc": "I/S",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0023",
+      "time": "1:17 AM",
+      "type": "SIG Alert",
+      "location": "Sr76 / Pauma Valley Dr",
+      "location_desc": "ATand T UNTIL APPROX 1000",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0002",
+      "time": "12:00 AM",
+      "type": "Road/Weather Conditions",
+      "location": "Media Log",
+      "location_desc": "NEWSWORTHY INCIDENTS",
+      "area": "BC"
+    }
+  ],
+  "removed_incidents": [],
+  "new_count": 25,
+  "removed_count": 0
+}

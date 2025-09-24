@@ -11,6 +11,7 @@ class AppController {
         this.fetcher = new HttpFetcher();
         this.renderer = new IncidentRenderer();
         this.incidentService = new IncidentService(this.storage, this.fetcher, this.config);
+        this.deltaService = new DeltaService();
         
         this.uiController = null;
         this.virtualScroll = null;
@@ -43,6 +44,9 @@ class AppController {
 
             // Initialize UI
             this.uiController.initialize();
+
+            // Start delta monitoring for real-time updates
+            this.deltaService.startDeltaMonitoring();
 
             this.isInitialized = true;
             console.log('CHP Traffic Monitor initialized successfully');

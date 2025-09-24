@@ -71,20 +71,36 @@ def scrape_incidents(center_code="BCCC"):
             # Compare with previous incidents
             changes = data_manager.compare_incidents(incidents_data)
             
-            # Save JSON files
-            data_manager.save_active_incidents(incidents_data)
+            # Check if there are actual changes
+            has_changes = (len(changes.get('new_incidents', [])) > 0 or 
+                          len(changes.get('removed_incidents', [])) > 0)
+            
+            # Save active incidents only if changed
+            file_updated = data_manager.save_active_incidents(incidents_data)
+            
+            # Save delta updates if there are changes
+            delta_saved = data_manager.save_delta_updates(changes)
+            
+            # Always append to daily file (for historical tracking)
             data_manager.append_daily_incidents(incidents_data)
-            print(f"✅ Saved {len(incidents_data)} incidents to JSON files")
-            logging.info(f"Found {len(incidents_data)} incidents - saved to JSON files")
+            
+            if file_updated:
+                print(f"✅ Updated active incidents: {len(incidents_data)} incidents")
+                logging.info(f"Found {len(incidents_data)} incidents - updated active_incidents.json")
+            else:
+                print("ℹ️ No changes detected - skipped file updates")
+                logging.info("No changes detected - skipped file updates")
             
             # Send email alert if there are changes
-            if changes and (len(changes.get('new_incidents', [])) > 0 or len(changes.get('removed_incidents', [])) > 0):
+            if has_changes:
                 print("📧 Sending email alert for changes...")
                 center_name = data_manager._get_center_name(center_code)
                 send_email_alert(changes, center_code, center_name)
             
             # Update previous incidents for next comparison
             data_manager.update_previous_incidents(incidents_data)
+            
+            return file_updated  # Return whether files were updated
         else:
             print("⚠️ No incidents found or extracted.")
             logging.warning("No incidents found or extracted.")
@@ -133,13 +149,16 @@ def main():
     print("=" * 60)
     
     try:
-        incidents_data = scrape_incidents(center_code)
-        print(f"✅ Scraping complete. Found {len(incidents_data)} incidents.")
-        return incidents_data
+        file_updated = scrape_incidents(center_code)
+        if file_updated:
+            print(f"✅ Scraping complete. Files updated.")
+        else:
+            print(f"ℹ️ Scraping complete. No changes detected.")
+        return file_updated
     except Exception as e:
         logging.error(f"Error during scraping for {center_name} ({center_code}): {str(e)}")
         print(f"❌ Scraping failed for {center_name} ({center_code}): {str(e)}")
-        return []
+        return False
 
 if __name__ == "__main__":
     main()

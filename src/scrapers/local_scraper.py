@@ -89,6 +89,10 @@ def scrape_once(center_code="BCCC"):
             # Compare with previous incidents
             changes = data_manager.compare_incidents(incidents_data)
             
+            # Check if there are actual changes
+            has_changes = (len(changes.get('new_incidents', [])) > 0 or 
+                          len(changes.get('removed_incidents', [])) > 0)
+            
             # Print status and changes
             print(f"\n🕐 [{datetime.now().strftime('%H:%M:%S')}] Scrape - {len(incidents_data)} incidents found")
             
@@ -96,10 +100,6 @@ def scrape_once(center_code="BCCC"):
                 print("📊 Initial scrape - all incidents are new:")
                 print_incident_summary(incidents_data, "All Incidents")
             else:
-                # Check if there are any changes
-                has_changes = (len(changes["new_incidents"]) > 0 or 
-                             len(changes["removed_incidents"]) > 0)
-                
                 if has_changes:
                     print("🔄 CHANGES DETECTED:")
                     print_incident_summary(changes["new_incidents"], "New Incidents")
@@ -112,14 +112,26 @@ def scrape_once(center_code="BCCC"):
                 else:
                     print("✅ No changes detected - same incidents as previous scrape")
             
-            # Save JSON files
-            data_manager.save_active_incidents(incidents_data)
+            # Save active incidents only if changed
+            file_updated = data_manager.save_active_incidents(incidents_data)
+            
+            # Save delta updates if there are changes
+            delta_saved = data_manager.save_delta_updates(changes)
+            
+            # Always append to daily file (for historical tracking)
             data_manager.append_daily_incidents(incidents_data)
-            print(f"✅ Saved {len(incidents_data)} incidents to JSON files")
-            logging.info(f"Found {len(incidents_data)} incidents - saved to JSON files")
+            
+            if file_updated:
+                print(f"✅ Updated active incidents: {len(incidents_data)} incidents")
+                logging.info(f"Found {len(incidents_data)} incidents - updated active_incidents.json")
+            else:
+                print("ℹ️ No changes detected - skipped file updates")
+                logging.info("No changes detected - skipped file updates")
             
             # Update previous incidents for next comparison
             data_manager.update_previous_incidents(incidents_data)
+            
+            return file_updated
         else:
             print(f"\n🕐 [{datetime.now().strftime('%H:%M:%S')}] No incidents found for {center_code} center.")
         
