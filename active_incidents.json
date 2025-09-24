@@ -1,8 +1,32 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 20,
+  "incident_count": 23,
   "incidents": [
+    {
+      "id": "0852",
+      "time": "8:48 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 S / Checkpoint So",
+      "location_desc": "I5 S CHECKPOINT SO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0851",
+      "time": "8:47 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I8 E / Lake Murray (70th)",
+      "location_desc": "I8 E LAKE MURRAY (70TH)",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0850",
+      "time": "8:46 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 S / Scales So",
+      "location_desc": "I5 S SCALES SO",
+      "area": "Oceanside"
+    },
     {
       "id": "0847",
       "time": "8:41 PM",
@@ -164,5 +188,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T03:44:58.336573"
+  "last_updated": "2025-09-24T03:54:03.593016"
 }
