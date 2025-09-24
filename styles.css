@@ -177,6 +177,7 @@ body {
     margin-bottom: 10px;
     transition: all 0.3s ease;
     animation: slideIn 0.4s ease;
+    position: relative;
 }
 
 /* All incident items should not have margins when in containers */
@@ -274,7 +275,7 @@ body {
     color: #6c757d;
     position: absolute;
     bottom: 8px;
-    right: 8px;
+    left: 8px;
     font-weight: 500;
     opacity: 1;
     visibility: visible;
