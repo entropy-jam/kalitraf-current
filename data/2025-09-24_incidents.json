@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 108,
+  "total_incidents": 109,
   "incidents": [
     {
       "id": "0623",
@@ -867,7 +867,15 @@
       "location": "I15 N / Centre City Pkwy No",
       "location_desc": "I15 N CENTRE CITY PKWY NO (NORTH)",
       "area": "Oceanside"
+    },
+    {
+      "id": "0137",
+      "time": "7:34 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / Birmingham So",
+      "location_desc": "I5 S BIRMINGHAM SO",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T14:30:04.478634"
+  "last_updated": "2025-09-24T14:42:01.011696"
 }

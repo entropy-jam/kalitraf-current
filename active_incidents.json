@@ -1,23 +1,23 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 22,
+  "incident_count": 21,
   "incidents": [
     {
-      "id": "0130",
-      "time": "7:22 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr94 W / Kenwood Eo",
-      "location_desc": "WB 94 JEO KENWOOD",
-      "area": "El Cajon"
+      "id": "0137",
+      "time": "7:34 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / Birmingham So",
+      "location_desc": "I5 S BIRMINGHAM SO",
+      "area": "Oceanside"
     },
     {
-      "id": "0057",
-      "time": "7:21 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Centre City Pkwy No",
-      "location_desc": "I15 N CENTRE CITY PKWY NO (NORTH)",
-      "area": "North FSP"
+      "id": "0023",
+      "time": "7:22 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "SR74 / Menifee Rd",
+      "location_desc": "",
+      "area": "BC"
     },
     {
       "id": "0128",
@@ -57,14 +57,6 @@
       "type": "Traffic Hazard",
       "location": "Sr78 W / I15 Wo",
       "location_desc": "SR78 W I15 WO",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0114",
-      "time": "7:08 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Centre City Pkwy No",
-      "location_desc": "I15 N CENTRE CITY PKWY NO (NORTH)",
       "area": "Oceanside"
     },
     {
@@ -180,5 +172,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T14:30:04.476200"
+  "last_updated": "2025-09-24T14:42:01.009395"
 }
