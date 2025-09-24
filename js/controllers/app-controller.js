@@ -34,8 +34,7 @@ class AppController {
             // Initialize UI controller
             this.uiController = new UIController(this);
             
-            // Initialize virtual scroll
-            this.virtualScroll = new VirtualScroll();
+            // Virtual scroll removed - using regular rendering
 
             // Set up global references for backward compatibility
             window.previousIncidents = null;
