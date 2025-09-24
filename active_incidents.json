@@ -1,16 +1,8 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 23,
+  "incident_count": 21,
   "incidents": [
-    {
-      "id": "0852",
-      "time": "8:48 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 S / Checkpoint So",
-      "location_desc": "I5 S CHECKPOINT SO",
-      "area": "Oceanside"
-    },
     {
       "id": "0851",
       "time": "8:47 PM",
@@ -34,14 +26,6 @@
       "location": "I805 S / Balboa So",
       "location_desc": "I805 S BALBOA SO",
       "area": "San Diego"
-    },
-    {
-      "id": "0841",
-      "time": "8:32 PM",
-      "type": "Traffic Hazard",
-      "location": "Via Puerta Del Sol / Rose Ln",
-      "location_desc": "NB JNO",
-      "area": "Oceanside"
     },
     {
       "id": "0837",
@@ -188,5 +172,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T03:54:03.593016"
+  "last_updated": "2025-09-24T04:01:44.101762"
 }
