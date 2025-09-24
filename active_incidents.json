@@ -1,8 +1,24 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 25,
+  "incident_count": 26,
   "incidents": [
+    {
+      "id": "0938",
+      "time": "11:18 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Santa Fe Dr Ofr",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0933",
+      "time": "11:07 PM",
+      "type": "Request CalTrans Notify",
+      "location": "I5 S / Sr76 (coast Hwy)",
+      "location_desc": "I5 S SR76 (COAST HWY)",
+      "area": "Oceanside"
+    },
     {
       "id": "0926",
       "time": "10:51 PM",
@@ -16,16 +32,8 @@
       "time": "10:48 PM",
       "type": "Traffic Hazard",
       "location": "I805 N / I8 No",
-      "location_desc": "I805 N I8 NO",
+      "location_desc": "",
       "area": "San Diego"
-    },
-    {
-      "id": "0920",
-      "time": "10:44 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr94 E / Jamacha Bl",
-      "location_desc": "SR94 E JAMACHA BL",
-      "area": "El Cajon"
     },
     {
       "id": "0899",
@@ -204,5 +212,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T05:56:22.872367"
+  "last_updated": "2025-09-24T06:20:09.912395"
 }
