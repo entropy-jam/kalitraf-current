@@ -1,8 +1,56 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "incident_count": 16,
+  "incident_count": 15,
   "incidents": [
+    {
+      "id": "0656",
+      "time": "2:24 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Jno Elkhorn Blvd",
+      "location_desc": "SB 99 JNO ELKHORN",
+      "area": "North Sac"
+    },
+    {
+      "id": "0643",
+      "time": "2:17 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "4300 Golden Center Dr",
+      "location_desc": "",
+      "area": "Placerville"
+    },
+    {
+      "id": "0038",
+      "time": "2:15 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 E / Jwo Norwood Ave",
+      "location_desc": "EB 80 JWO NORWOOD",
+      "area": "North Sac FSP"
+    },
+    {
+      "id": "0641",
+      "time": "2:14 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 E / Jwo Norwood Ave",
+      "location_desc": "EB 80 JWO NORWOOD",
+      "area": "North Sac"
+    },
+    {
+      "id": "0633",
+      "time": "2:08 PM",
+      "type": "JUMPER",
+      "location": "Sr51 N / P St",
+      "location_desc": "NB 51 AT P STREET",
+      "area": "South Sac"
+    },
+    {
+      "id": "0615",
+      "time": "1:59 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I80 E / Marysville Blvd",
+      "location_desc": "EB JWO",
+      "area": "North Sac"
+    },
     {
       "id": "0605",
       "time": "1:44 PM",
@@ -12,59 +60,11 @@
       "area": "Woodland"
     },
     {
-      "id": "0601",
-      "time": "1:41 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "National Dr / Striker Ave",
-      "location_desc": "",
-      "area": "North Sac"
-    },
-    {
-      "id": "0589",
-      "time": "1:32 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I80 E / Watt Ave Ofr",
-      "location_desc": "EB JEO",
-      "area": "North Sac"
-    },
-    {
-      "id": "0583",
-      "time": "1:28 PM",
-      "type": "Traffic Hazard",
-      "location": "Douglas Blvd / Barton Rd",
-      "location_desc": "EB",
-      "area": "Auburn"
-    },
-    {
       "id": "0582",
       "time": "1:27 PM",
       "type": "Animal Hazard",
       "location": "Northgate Blvd N Onr / I80 W",
       "location_desc": "ONR",
-      "area": "North Sac"
-    },
-    {
-      "id": "0573",
-      "time": "1:17 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "8523 Sunrise Blvd",
-      "location_desc": "Sunrise Ave",
-      "area": "SA"
-    },
-    {
-      "id": "0572",
-      "time": "1:14 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "4321 Madison Ave",
-      "location_desc": "STOP AND SHOP PLOT",
-      "area": "North Sac"
-    },
-    {
-      "id": "0556",
-      "time": "1:02 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Bell St / Lansing Way",
-      "location_desc": "SB I/S",
       "area": "North Sac"
     },
     {
@@ -82,14 +82,6 @@
       "location": "Folsom To Los Banos",
       "location_desc": "",
       "area": ""
-    },
-    {
-      "id": "0288",
-      "time": "9:29 AM",
-      "type": "Fatality",
-      "location": "Us50 E / Howe Ave",
-      "location_desc": "EB JWO",
-      "area": "South Sac"
     },
     {
       "id": "0150",
@@ -132,5 +124,5 @@
       "area": ""
     }
   ],
-  "last_updated": "2025-09-24T20:48:32.176121"
+  "last_updated": "2025-09-24T21:33:21.507885"
 }

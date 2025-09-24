@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-24",
-  "total_incidents": 29,
+  "total_incidents": 35,
   "incidents": [
     {
       "id": "0446",
@@ -235,7 +235,55 @@
       "location": "Bell St / Lansing Way",
       "location_desc": "SB I/S",
       "area": "North Sac"
+    },
+    {
+      "id": "0656",
+      "time": "2:24 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Jno Elkhorn Blvd",
+      "location_desc": "SB 99 JNO ELKHORN",
+      "area": "North Sac"
+    },
+    {
+      "id": "0643",
+      "time": "2:17 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "4300 Golden Center Dr",
+      "location_desc": "",
+      "area": "Placerville"
+    },
+    {
+      "id": "0038",
+      "time": "2:15 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 E / Jwo Norwood Ave",
+      "location_desc": "EB 80 JWO NORWOOD",
+      "area": "North Sac FSP"
+    },
+    {
+      "id": "0641",
+      "time": "2:14 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 E / Jwo Norwood Ave",
+      "location_desc": "EB 80 JWO NORWOOD",
+      "area": "North Sac"
+    },
+    {
+      "id": "0633",
+      "time": "2:08 PM",
+      "type": "JUMPER",
+      "location": "Sr51 N / P St",
+      "location_desc": "NB 51 AT P STREET",
+      "area": "South Sac"
+    },
+    {
+      "id": "0615",
+      "time": "1:59 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I80 E / Marysville Blvd",
+      "location_desc": "EB JWO",
+      "area": "North Sac"
     }
   ],
-  "last_updated": "2025-09-24T20:48:32.177099"
+  "last_updated": "2025-09-24T21:33:21.508952"
 }
