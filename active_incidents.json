@@ -4,6 +4,14 @@
   "incident_count": 28,
   "incidents": [
     {
+      "id": "0184",
+      "time": "8:52 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr94 W / I5 Eo",
+      "location_desc": "SR94 W I5 EO",
+      "area": "San Diego"
+    },
+    {
       "id": "0179",
       "time": "8:47 AM",
       "type": "Traffic Hazard",
@@ -17,6 +25,14 @@
       "type": "Traffic Hazard",
       "location": "I805 S / Mira Mesa No",
       "location_desc": "I805 S MIRA MESA NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0182",
+      "time": "8:44 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "52nd St / Towle Ct",
+      "location_desc": "",
       "area": "San Diego"
     },
     {
@@ -52,28 +68,12 @@
       "area": "San Diego"
     },
     {
-      "id": "0076",
-      "time": "8:13 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / Genesee Ave Onr",
-      "location_desc": "",
-      "area": "North FSP"
-    },
-    {
       "id": "0153",
       "time": "8:12 AM",
       "type": "Trfc Collision-1141 Enrt",
       "location": "I5 N / Genesee Ave Onr",
       "location_desc": "",
       "area": "San Diego"
-    },
-    {
-      "id": "0157",
-      "time": "8:11 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "Green Canyon Rd / Calmin Dr",
-      "location_desc": "",
-      "area": "Oceanside"
     },
     {
       "id": "0152",
@@ -228,5 +228,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T15:50:18.758723"
+  "last_updated": "2025-09-24T15:57:29.044530"
 }

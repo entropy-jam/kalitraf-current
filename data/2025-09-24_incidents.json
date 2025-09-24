@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 124,
+  "total_incidents": 126,
   "incidents": [
     {
       "id": "0623",
@@ -995,7 +995,23 @@
       "location": "Main St / 7th St",
       "location_desc": "IFO LA COCINA",
       "area": "El Cajon"
+    },
+    {
+      "id": "0184",
+      "time": "8:52 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr94 W / I5 Eo",
+      "location_desc": "SR94 W I5 EO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0182",
+      "time": "8:44 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "52nd St / Towle Ct",
+      "location_desc": "",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-24T15:50:18.761063"
+  "last_updated": "2025-09-24T15:57:29.046894"
 }
