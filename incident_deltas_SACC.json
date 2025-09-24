@@ -1,15 +1,47 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-24T21:40:50.709477",
+  "timestamp": "2025-09-24T22:01:36.950857",
   "new_incidents": [
     {
-      "id": "0676",
-      "time": "2:40 PM",
+      "id": "0045",
+      "time": "2:53 PM",
       "type": "Traffic Hazard",
-      "location": "I80 E / Northgate Blvd",
-      "location_desc": "JWO",
+      "location": "Sr99 S / Fruitridge Rd Ofr",
+      "location_desc": "SB OFR TO WB",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0693",
+      "time": "2:49 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Fruitridge Rd Ofr",
+      "location_desc": "SB OFR TO WB",
+      "area": "South Sac"
+    },
+    {
+      "id": "0680",
+      "time": "2:42 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I80 E / Jwo Norwood Ave",
+      "location_desc": "EB 80 JWO NORWOOD",
       "area": "North Sac"
+    },
+    {
+      "id": "0681",
+      "time": "2:42 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "College Oak Dr / Auburn Blvd",
+      "location_desc": "WB",
+      "area": "North Sac"
+    },
+    {
+      "id": "0040",
+      "time": "2:41 PM",
+      "type": "Trfc Collision-1141Enrt",
+      "location": "I80 E / Jwo Norwood Ave",
+      "location_desc": "EB 80 JWO NORWOOD",
+      "area": "North Sac FSP"
     },
     {
       "id": "0672",
@@ -34,22 +66,6 @@
       "location": "8750 La Riviera Dr",
       "location_desc": "OCCURD Salmon Falls Dr / La Riviera Dr",
       "area": "East Sac"
-    },
-    {
-      "id": "0656",
-      "time": "2:24 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr99 S / Jno Elkhorn Blvd",
-      "location_desc": "SB 99 JNO ELKHORN",
-      "area": "North Sac"
-    },
-    {
-      "id": "0643",
-      "time": "2:17 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "4300 Golden Center Dr",
-      "location_desc": "",
-      "area": "Placerville"
     },
     {
       "id": "0038",
@@ -141,6 +157,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 17,
+  "new_count": 19,
   "removed_count": 0
 }

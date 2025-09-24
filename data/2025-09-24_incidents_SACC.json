@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-24",
-  "total_incidents": 39,
+  "total_incidents": 44,
   "incidents": [
     {
       "id": "0446",
@@ -315,7 +315,47 @@
       "location": "8750 La Riviera Dr",
       "location_desc": "OCCURD Salmon Falls Dr / La Riviera Dr",
       "area": "East Sac"
+    },
+    {
+      "id": "0045",
+      "time": "2:53 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Fruitridge Rd Ofr",
+      "location_desc": "SB OFR TO WB",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0693",
+      "time": "2:49 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Fruitridge Rd Ofr",
+      "location_desc": "SB OFR TO WB",
+      "area": "South Sac"
+    },
+    {
+      "id": "0680",
+      "time": "2:42 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I80 E / Jwo Norwood Ave",
+      "location_desc": "EB 80 JWO NORWOOD",
+      "area": "North Sac"
+    },
+    {
+      "id": "0681",
+      "time": "2:42 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "College Oak Dr / Auburn Blvd",
+      "location_desc": "WB",
+      "area": "North Sac"
+    },
+    {
+      "id": "0040",
+      "time": "2:41 PM",
+      "type": "Trfc Collision-1141Enrt",
+      "location": "I80 E / Jwo Norwood Ave",
+      "location_desc": "EB 80 JWO NORWOOD",
+      "area": "North Sac FSP"
     }
   ],
-  "last_updated": "2025-09-24T21:40:50.709924"
+  "last_updated": "2025-09-24T22:01:36.951385"
 }
