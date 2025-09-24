@@ -1,8 +1,104 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T19:50:48.345350",
+  "timestamp": "2025-09-24T20:32:55.635796",
   "new_incidents": [
+    {
+      "id": "0151",
+      "time": "1:30 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Home Ave Ofr",
+      "location_desc": "SB 805 ON HOME OFR",
+      "area": "South FSP"
+    },
+    {
+      "id": "0412",
+      "time": "1:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I8 E / Mission Gorge Wo (fairmount)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0413",
+      "time": "1:28 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Home Ave Ofr",
+      "location_desc": "SB 805 ON HOME OFR",
+      "area": "San Diego"
+    },
+    {
+      "id": "0414",
+      "time": "1:27 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 E / Sr94 E Sr125 S Con",
+      "location_desc": "EB TO SB",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0408",
+      "time": "1:27 PM",
+      "type": "Request CalTrans Notify",
+      "location": "I5 N / Poinsettia Ln Ofr",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0404",
+      "time": "1:21 PM",
+      "type": "Traffic Break",
+      "location": "I5 S / B St",
+      "location_desc": "",
+      "area": "BC"
+    },
+    {
+      "id": "0402",
+      "time": "1:20 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr75 W / Toll Plaza",
+      "location_desc": "SR75 W TOLL PLAZA (BRIDGE)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0147",
+      "time": "1:16 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr15 S / Adams No",
+      "location_desc": "SR15 S ADAMS NO",
+      "area": "North FSP"
+    },
+    {
+      "id": "0399",
+      "time": "1:16 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr15 S / Adams No",
+      "location_desc": "SR15 S ADAMS NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0400",
+      "time": "1:15 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / Texas Wo (qualcomm)",
+      "location_desc": "EB 8 JWO TEXAS",
+      "area": "San Diego"
+    },
+    {
+      "id": "0388",
+      "time": "1:03 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sweetwater Rd / Lamar St",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0143",
+      "time": "1:03 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / I8 So",
+      "location_desc": "NB 805 JSO 8",
+      "area": "South FSP"
+    },
     {
       "id": "0377",
       "time": "12:47 PM",
@@ -28,33 +124,9 @@
       "area": "Oceanside"
     },
     {
-      "id": "0363",
-      "time": "12:31 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Via De La Valle So",
-      "location_desc": "I5 N VIA DE LA VALLE SO",
-      "area": "San Diego"
-    },
-    {
-      "id": "0135",
-      "time": "12:24 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / Sr163 So",
-      "location_desc": "I5 N SR163 SO",
-      "area": "South FSP"
-    },
-    {
-      "id": "0353",
-      "time": "12:22 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / CESAR E CHAVEZ SO",
-      "location_desc": "I5 N CESAR E CHAVEZ SO",
-      "area": "San Diego"
-    },
-    {
       "id": "0337",
       "time": "11:58 AM",
-      "type": "Trfc Collision-1141 Enrt",
+      "type": "Trfc Collision-Minor Inj",
       "location": "Lyons Valley Rd / Honey Springs Rd",
       "location_desc": "JEO",
       "area": "El Cajon"
@@ -92,35 +164,11 @@
       "area": ""
     },
     {
-      "id": "0092",
-      "time": "6:29 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "5902 Kearny Villa Rd",
-      "location_desc": "SOUTH BAY ENCAMPMENTS",
-      "area": "San Diego"
-    },
-    {
-      "id": "0090",
-      "time": "6:17 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Kearny Mesa Yard",
-      "location_desc": "",
-      "area": ""
-    },
-    {
       "id": "0084",
       "time": "6:01 AM",
       "type": "Assist with Construction",
       "location": "5902 Kearny Villa Rd",
       "location_desc": "STREET SWEEPING - VARIOUS LOC",
-      "area": "San Diego"
-    },
-    {
-      "id": "0085",
-      "time": "5:59 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "5902 Kearny Villa Rd",
-      "location_desc": "STRIPING - VARIOUS LOC",
       "area": "San Diego"
     },
     {
@@ -165,6 +213,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 20,
+  "new_count": 26,
   "removed_count": 0
 }

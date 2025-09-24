@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 24,
+  "total_incidents": 36,
   "incidents": [
     {
       "id": "0347",
@@ -195,7 +195,103 @@
       "location": "I5 N / CESAR E CHAVEZ SO",
       "location_desc": "I5 N CESAR E CHAVEZ SO",
       "area": "San Diego"
+    },
+    {
+      "id": "0151",
+      "time": "1:30 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Home Ave Ofr",
+      "location_desc": "SB 805 ON HOME OFR",
+      "area": "South FSP"
+    },
+    {
+      "id": "0412",
+      "time": "1:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I8 E / Mission Gorge Wo (fairmount)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0413",
+      "time": "1:28 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Home Ave Ofr",
+      "location_desc": "SB 805 ON HOME OFR",
+      "area": "San Diego"
+    },
+    {
+      "id": "0414",
+      "time": "1:27 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 E / Sr94 E Sr125 S Con",
+      "location_desc": "EB TO SB",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0408",
+      "time": "1:27 PM",
+      "type": "Request CalTrans Notify",
+      "location": "I5 N / Poinsettia Ln Ofr",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0404",
+      "time": "1:21 PM",
+      "type": "Traffic Break",
+      "location": "I5 S / B St",
+      "location_desc": "",
+      "area": "BC"
+    },
+    {
+      "id": "0402",
+      "time": "1:20 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr75 W / Toll Plaza",
+      "location_desc": "SR75 W TOLL PLAZA (BRIDGE)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0147",
+      "time": "1:16 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr15 S / Adams No",
+      "location_desc": "SR15 S ADAMS NO",
+      "area": "North FSP"
+    },
+    {
+      "id": "0399",
+      "time": "1:16 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr15 S / Adams No",
+      "location_desc": "SR15 S ADAMS NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0400",
+      "time": "1:15 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / Texas Wo (qualcomm)",
+      "location_desc": "EB 8 JWO TEXAS",
+      "area": "San Diego"
+    },
+    {
+      "id": "0388",
+      "time": "1:03 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sweetwater Rd / Lamar St",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0143",
+      "time": "1:03 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / I8 So",
+      "location_desc": "NB 805 JSO 8",
+      "area": "South FSP"
     }
   ],
-  "last_updated": "2025-09-24T19:50:48.345949"
+  "last_updated": "2025-09-24T20:32:55.636353"
 }
