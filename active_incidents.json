@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 16,
+  "incident_count": 17,
   "incidents": [
+    {
+      "id": "0266",
+      "time": "10:45 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / El Cajon Eo (la Mesa)",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
     {
       "id": "0263",
       "time": "10:43 AM",
@@ -132,5 +140,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T17:46:27.209575"
+  "last_updated": "2025-09-24T17:53:40.128722"
 }

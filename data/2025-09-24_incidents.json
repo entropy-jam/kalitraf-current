@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 140,
+  "total_incidents": 141,
   "incidents": [
     {
       "id": "0623",
@@ -1123,7 +1123,15 @@
       "location": "I5 N / Palm No (southbay)(sr75)",
       "location_desc": "NB 5 JNO PALM",
       "area": "San Diego"
+    },
+    {
+      "id": "0266",
+      "time": "10:45 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / El Cajon Eo (la Mesa)",
+      "location_desc": "",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-24T17:46:27.211989"
+  "last_updated": "2025-09-24T17:53:40.130843"
 }
