@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 73,
+  "total_incidents": 74,
   "incidents": [
     {
       "id": "0623",
@@ -587,7 +587,15 @@
       "location": "I15 S I8 E CON / FAIRMOUNT AVE OFR",
       "location_desc": "",
       "area": "San Diego"
+    },
+    {
+      "id": "0026",
+      "time": "2:45 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Las Flores Dr Ofr",
+      "location_desc": "",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-24T08:56:13.509730"
+  "last_updated": "2025-09-24T09:50:13.916334"
 }
