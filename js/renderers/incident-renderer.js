@@ -33,6 +33,16 @@ class IncidentRenderer extends IUIRenderer {
         }).join('');
 
         container.innerHTML = incidentsHtml;
+        
+        // Debug: Check rendered elements
+        setTimeout(() => {
+            const renderedIncidents = container.querySelectorAll('.incident');
+            console.log(`Regular renderer: Found ${renderedIncidents.length} incident elements`);
+            renderedIncidents.forEach((incident, index) => {
+                const computedStyle = window.getComputedStyle(incident);
+                console.log(`Regular incident ${index}: classes="${incident.className}", margin-bottom="${computedStyle.marginBottom}"`);
+            });
+        }, 50);
     }
 
     /**

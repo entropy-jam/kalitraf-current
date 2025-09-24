@@ -182,6 +182,8 @@ body {
 /* All incident items should not have margins when in containers */
 .incidents-container .incident {
     margin-bottom: 0 !important;
+    /* Debug: Add a visible border to see if this rule is applied */
+    border: 2px solid red !important;
 }
 
 .incident:hover {

@@ -75,6 +75,10 @@ class VirtualScroll {
             item.style.top = `${i * this.itemHeight}px`;
             item.style.height = `${this.itemHeight}px`;
             content.appendChild(item);
+            
+            // Debug: Check the created element
+            const computedStyle = window.getComputedStyle(item);
+            console.log(`Virtual scroll item ${i}: classes="${item.className}", margin-bottom="${computedStyle.marginBottom}", position="${computedStyle.position}"`);
         }
     }
 
