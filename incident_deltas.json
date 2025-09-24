@@ -1,8 +1,40 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T17:53:40.129222",
+  "timestamp": "2025-09-24T18:00:30.391992",
   "new_incidents": [
+    {
+      "id": "0280",
+      "time": "10:59 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 W / Sr15 Eo",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0276",
+      "time": "10:58 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 W / I5 Eo",
+      "location_desc": "SR94 W I5 EO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0272",
+      "time": "10:54 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr52 E / Regents Rd Onr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0274",
+      "time": "10:54 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr125 S / Grossmont College No",
+      "location_desc": "SR125 S GROSSMONT NO",
+      "area": "El Cajon"
+    },
     {
       "id": "0266",
       "time": "10:45 AM",
@@ -141,6 +173,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 17,
+  "new_count": 21,
   "removed_count": 0
 }
