@@ -68,11 +68,16 @@ class CopyToClipboard {
                 return;
             }
 
-            const copyText = button.getAttribute('data-copy-text');
-            if (!copyText) {
-                console.error('Copy text not found for incident:', incidentId);
+            // Find the incident card and extract data
+            const incidentCard = button.closest('.incident');
+            if (!incidentCard) {
+                console.error('Incident card not found for:', incidentId);
                 return;
             }
+
+            // Extract incident data from DOM
+            const incidentData = this.extractIncidentFromDOM(incidentCard);
+            const copyText = this.formatIncidentForCopy(incidentData);
 
             // Use modern clipboard API if available
             if (navigator.clipboard && window.isSecureContext) {
@@ -89,6 +94,27 @@ class CopyToClipboard {
             console.error('Failed to copy incident to clipboard:', error);
             this.showCopyError(button);
         }
+    }
+
+    /**
+     * Extract incident data from DOM element
+     * @param {HTMLElement} incidentCard - The incident card DOM element
+     * @returns {Object} Incident data object
+     */
+    extractIncidentFromDOM(incidentCard) {
+        const id = incidentCard.querySelector('.incident-id')?.textContent?.replace('#', '') || '';
+        const time = incidentCard.querySelector('.incident-time')?.textContent || '';
+        const type = incidentCard.querySelector('.incident-type')?.textContent || '';
+        const location = incidentCard.querySelector('.incident-location')?.textContent || '';
+        const area = incidentCard.querySelector('.incident-area')?.textContent || '';
+        
+        return {
+            id,
+            time,
+            type,
+            location,
+            area
+        };
     }
 
     /**
@@ -174,7 +200,15 @@ class CopyToClipboard {
         const copyButtons = document.querySelectorAll('.copy-button');
         copyButtons.forEach(button => {
             // Remove any existing click listeners to prevent duplicates
-            button.replaceWith(button.cloneNode(true));
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            
+            // Add click event listener
+            newButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                const incidentId = newButton.getAttribute('data-incident-id');
+                this.copyIncident(incidentId);
+            });
         });
     }
 }

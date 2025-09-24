@@ -284,10 +284,6 @@ body {
     font-size: 16px;
 }
 
-.incident-time {
-    color: #6c757d;
-    font-size: 14px;
-}
 
 .incident-type {
     display: inline-block;

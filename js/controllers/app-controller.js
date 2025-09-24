@@ -93,6 +93,11 @@ class AppController {
             // Render incidents
             const container = document.getElementById('incidentsContainer');
             this.renderer.renderIncidents(data.incidents, container, this.previousIncidents);
+            
+            // Initialize copy buttons after rendering
+            if (window.copyToClipboard) {
+                window.copyToClipboard.initializeCopyButtons();
+            }
 
             return data;
         } catch (error) {

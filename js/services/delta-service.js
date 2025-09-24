@@ -141,7 +141,7 @@ class DeltaService {
         div.innerHTML = `
             <div class="incident-header">
                 <span class="incident-id">#${incident.id}</span>
-                ${window.copyToClipboard ? window.copyToClipboard.createCopyButton(incident.id, incident) : ''}
+                <button class="copy-button" data-incident-id="${incident.id}" title="Copy incident details to clipboard">📋</button>
             </div>
             <div class="incident-type ${typeClass}">${incident.type}</div>
             <div class="incident-location">${incident.location}</div>
