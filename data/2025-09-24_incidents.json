@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 98,
+  "total_incidents": 100,
   "incidents": [
     {
       "id": "0623",
@@ -787,7 +787,23 @@
       "location": "I8 E / DUNBAR LN OFR",
       "location_desc": "",
       "area": "El Cajon"
+    },
+    {
+      "id": "0112",
+      "time": "7:04 AM",
+      "type": "Traffic Hazard",
+      "location": "Etcheverry St / Main St",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0111",
+      "time": "7:03 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr125 N / Jamacha So (road)",
+      "location_desc": "SR125 N JAMACHA SO (ROAD)",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-24T13:54:46.519477"
+  "last_updated": "2025-09-24T14:09:06.614453"
 }

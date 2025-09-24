@@ -1,8 +1,24 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 18,
+  "incident_count": 17,
   "incidents": [
+    {
+      "id": "0112",
+      "time": "7:04 AM",
+      "type": "Traffic Hazard",
+      "location": "Etcheverry St / Main St",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0111",
+      "time": "7:03 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr125 N / Jamacha So (road)",
+      "location_desc": "SR125 N JAMACHA SO (ROAD)",
+      "area": "El Cajon"
+    },
     {
       "id": "0044",
       "time": "6:51 AM",
@@ -15,17 +31,9 @@
       "id": "0104",
       "time": "6:48 AM",
       "type": "Traffic Hazard",
-      "location": "Sr94 W / I805 Eo",
-      "location_desc": "SR94 W I805 EO",
+      "location": "SR94 W / EUCLID",
+      "location_desc": "SR94 W EUCLID",
       "area": "San Diego"
-    },
-    {
-      "id": "0101",
-      "time": "6:47 AM",
-      "type": "Defective Traffic Signals",
-      "location": "I8 E / DUNBAR LN OFR",
-      "location_desc": "",
-      "area": "El Cajon"
     },
     {
       "id": "0098",
@@ -48,24 +56,8 @@
       "time": "6:29 AM",
       "type": "Assist CT with Maintenance",
       "location": "5902 Kearny Villa Rd",
-      "location_desc": "ENCAMPMENTS",
+      "location_desc": "SOUTH BAY ENCAMPMENTS",
       "area": "San Diego"
-    },
-    {
-      "id": "0094",
-      "time": "6:29 AM",
-      "type": "Traffic Hazard",
-      "location": "I8 W / I5",
-      "location_desc": "WB I8 AT I5",
-      "area": "San Diego"
-    },
-    {
-      "id": "0020",
-      "time": "6:18 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Del Mar Heights So",
-      "location_desc": "I5 N DEL MAR HEIGHTS SO",
-      "area": "North FSP"
     },
     {
       "id": "0091",
@@ -148,5 +140,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T13:54:46.517269"
+  "last_updated": "2025-09-24T14:09:06.612280"
 }
