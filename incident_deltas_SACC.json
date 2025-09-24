@@ -1,14 +1,38 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-24T19:27:46.099618",
+  "timestamp": "2025-09-24T19:57:34.925044",
   "new_incidents": [
     {
-      "id": "0507",
-      "time": "12:15 PM",
+      "id": "0544",
+      "time": "12:53 PM",
       "type": "Traffic Hazard",
-      "location": "Sr160 / Richards Blvd Onr",
-      "location_desc": "SB SR160 X RICHARDS",
+      "location": "Sr51 S / Jno Marconi Ave",
+      "location_desc": "SB 51 JNO MARCONI",
+      "area": "North Sac"
+    },
+    {
+      "id": "0538",
+      "time": "12:48 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Arena Blvd E Onr",
+      "location_desc": "SB JSO",
+      "area": "North Sac"
+    },
+    {
+      "id": "0523",
+      "time": "12:32 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us50 W / Jefferson Blvd",
+      "location_desc": "WB 50 AT JEFFERSON",
+      "area": "Woodland"
+    },
+    {
+      "id": "0522",
+      "time": "12:32 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Watt Ave / Arden Way",
+      "location_desc": "ARDEN MIDDLE SCHOOL PLOT",
       "area": "North Sac"
     },
     {
@@ -26,22 +50,6 @@
       "location": "Roseville Rd / Antelope Rd",
       "location_desc": "HOME DEPOT PLOT",
       "area": "North Sac"
-    },
-    {
-      "id": "0475",
-      "time": "11:51 AM",
-      "type": "Traffic Hazard",
-      "location": "Us50 E / Hazel Ave",
-      "location_desc": "EB ON OFR",
-      "area": "East Sac"
-    },
-    {
-      "id": "0467",
-      "time": "11:45 AM",
-      "type": "Traffic Hazard",
-      "location": "7245 Mccourtney Rd",
-      "location_desc": "",
-      "area": "Auburn"
     },
     {
       "id": "0311",
@@ -82,14 +90,6 @@
       "location": "Wsac Ct Yard",
       "location_desc": "",
       "area": ""
-    },
-    {
-      "id": "0120",
-      "time": "6:17 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "6 Massie Ct",
-      "location_desc": "South Sacramento CHP Office",
-      "area": "South Sac"
     },
     {
       "id": "0105",
