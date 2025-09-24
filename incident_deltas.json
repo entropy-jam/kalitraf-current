@@ -1,8 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T07:12:25.144116",
+  "timestamp": "2025-09-24T07:29:13.338844",
   "new_incidents": [
+    {
+      "id": "0005",
+      "time": "12:22 AM",
+      "type": "Traffic Hazard",
+      "location": "I215 N So / Newport Rd",
+      "location_desc": "I215 N SO NEWPORT RD",
+      "area": "Temecula"
+    },
     {
       "id": "0002",
       "time": "12:00 AM",
@@ -66,14 +74,6 @@
       "location": "I8 E / Lake Murray (70th)",
       "location_desc": "I8 E LAKE MURRAY (70TH)",
       "area": "El Cajon"
-    },
-    {
-      "id": "0847",
-      "time": "8:41 PM",
-      "type": "Assist with Construction",
-      "location": "I805 S / Balboa So",
-      "location_desc": "I805 S BALBOA SO",
-      "area": "San Diego"
     },
     {
       "id": "0837",
