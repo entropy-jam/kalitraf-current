@@ -1,8 +1,64 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-24T13:06:28.764632",
+  "timestamp": "2025-09-24T13:35:58.374255",
   "new_incidents": [
+    {
+      "id": "0093",
+      "time": "6:31 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr163 N / Clairemont Mesa",
+      "location_desc": "SR163 N CLAIREMONT MESA",
+      "area": "San Diego"
+    },
+    {
+      "id": "0092",
+      "time": "6:29 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "ENCAMPMENTS",
+      "area": "San Diego"
+    },
+    {
+      "id": "0094",
+      "time": "6:29 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / I5",
+      "location_desc": "WB I8 AT I5",
+      "area": "San Diego"
+    },
+    {
+      "id": "0095",
+      "time": "6:29 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "1069 Elkelton Blvd",
+      "location_desc": "FOSTERS FREEZE PLOT",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0020",
+      "time": "6:18 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Del Mar Heights So",
+      "location_desc": "I5 N DEL MAR HEIGHTS SO",
+      "area": "North FSP"
+    },
+    {
+      "id": "0091",
+      "time": "6:17 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Del Mar Heights So",
+      "location_desc": "I5 N DEL MAR HEIGHTS SO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0090",
+      "time": "6:17 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Kearny Mesa Yard",
+      "location_desc": "",
+      "area": ""
+    },
     {
       "id": "0084",
       "time": "6:01 AM",
@@ -16,7 +72,7 @@
       "time": "5:59 AM",
       "type": "Assist CT with Maintenance",
       "location": "5902 Kearny Villa Rd",
-      "location_desc": "VARIOUS LOCATIONS",
+      "location_desc": "STRIPING - VARIOUS LOC",
       "area": "San Diego"
     },
     {
@@ -60,14 +116,6 @@
       "area": "El Cajon"
     },
     {
-      "id": "0035",
-      "time": "4:38 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I8 E / Sunset Cliffs Blvd",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
       "id": "0033",
       "time": "4:27 AM",
       "type": "Assist CT with Maintenance",
@@ -85,6 +133,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 10,
+  "new_count": 16,
   "removed_count": 0
 }

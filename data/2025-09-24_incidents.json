@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-24",
-  "total_incidents": 86,
+  "total_incidents": 93,
   "incidents": [
     {
       "id": "0623",
@@ -691,7 +691,63 @@
       "location": "1780 W Mission Rd - Caltrans Escondido",
       "location_desc": "CT ESCONDIDO",
       "area": "Oceanside"
+    },
+    {
+      "id": "0093",
+      "time": "6:31 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr163 N / Clairemont Mesa",
+      "location_desc": "SR163 N CLAIREMONT MESA",
+      "area": "San Diego"
+    },
+    {
+      "id": "0092",
+      "time": "6:29 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "ENCAMPMENTS",
+      "area": "San Diego"
+    },
+    {
+      "id": "0094",
+      "time": "6:29 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / I5",
+      "location_desc": "WB I8 AT I5",
+      "area": "San Diego"
+    },
+    {
+      "id": "0095",
+      "time": "6:29 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "1069 Elkelton Blvd",
+      "location_desc": "FOSTERS FREEZE PLOT",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0020",
+      "time": "6:18 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Del Mar Heights So",
+      "location_desc": "I5 N DEL MAR HEIGHTS SO",
+      "area": "North FSP"
+    },
+    {
+      "id": "0091",
+      "time": "6:17 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Del Mar Heights So",
+      "location_desc": "I5 N DEL MAR HEIGHTS SO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0090",
+      "time": "6:17 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Kearny Mesa Yard",
+      "location_desc": "",
+      "area": ""
     }
   ],
-  "last_updated": "2025-09-24T13:06:28.765178"
+  "last_updated": "2025-09-24T13:35:58.374929"
 }
