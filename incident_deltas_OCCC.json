@@ -1,15 +1,39 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "timestamp": "2025-09-24T21:47:39.114996",
+  "timestamp": "2025-09-24T22:33:15.561936",
   "new_incidents": [
     {
-      "id": "0089",
-      "time": "2:37 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / La Paz Rd",
-      "location_desc": "NB 5 JSO LP",
+      "id": "0096",
+      "time": "3:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr22 E / Euclid St",
+      "location_desc": "SR22 E EUCLID ST",
       "area": "Orange County FSP"
+    },
+    {
+      "id": "0348",
+      "time": "3:29 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Antonio Pkwy / Oso Pkwy",
+      "location_desc": "",
+      "area": "Capistrano"
+    },
+    {
+      "id": "0350",
+      "time": "3:26 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr57 N / Orangethorpe Ave Ot",
+      "location_desc": "NB 57 JNO OT *BC ONLY*",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0339",
+      "time": "3:14 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I5 N / Crown Valley Pkwy Ofr",
+      "location_desc": "POI: NB 5 ON CV OFR",
+      "area": "Capistrano"
     },
     {
       "id": "0318",
@@ -20,14 +44,6 @@
       "area": "Capistrano"
     },
     {
-      "id": "0087",
-      "time": "2:29 PM",
-      "type": "Trfc Collision-1141Enrt",
-      "location": "Sr55 S / I405",
-      "location_desc": "SB 55 JNO 405",
-      "area": "Orange County FSP"
-    },
-    {
       "id": "0312",
       "time": "2:25 PM",
       "type": "Trfc Collision-1141 Enrt",
@@ -36,68 +52,12 @@
       "area": "Santa Ana"
     },
     {
-      "id": "0085",
-      "time": "2:21 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / LINCOLN AVE",
-      "location_desc": "JSO",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0306",
-      "time": "2:18 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Lincoln Ave",
-      "location_desc": "JSO",
-      "area": "Westminster"
-    },
-    {
-      "id": "0084",
-      "time": "2:17 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr55 N To / I5 N Con",
-      "location_desc": "NB 55 TRANS TO NB 5",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0305",
-      "time": "2:16 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr55 N To / I5 N Con",
-      "location_desc": "NB 55 TRANS TO NB 5",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0083",
-      "time": "2:15 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Harbor Blvd",
-      "location_desc": "NB 5 JNO HARBOR",
-      "area": "Orange County FSP"
-    },
-    {
       "id": "0081",
       "time": "2:11 PM",
       "type": "Traffic Hazard",
       "location": "Sr57 S / Lincoln",
       "location_desc": "JNO",
       "area": "Orange County FSP"
-    },
-    {
-      "id": "0080",
-      "time": "2:03 PM",
-      "type": "Traffic Hazard",
-      "location": "Lake Forest Dr E Onr / I5 S",
-      "location_desc": "EB LF ONR TO SB 5",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0298",
-      "time": "2:01 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "I405 N / I405 N I605 N CON",
-      "location_desc": "NB 405 TRANS TO 605",
-      "area": "Westminster"
     },
     {
       "id": "0004",
@@ -117,6 +77,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 14,
+  "new_count": 9,
   "removed_count": 0
 }
