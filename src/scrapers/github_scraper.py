@@ -62,7 +62,11 @@ def scrape_incidents(center_code="BCCC"):
     
     try:
         driver = webdriver_manager.get_driver()
-        extractor = IncidentExtractor(driver, center_code)
+        
+        # Load previous incidents for smart processing
+        previous_incidents = data_manager.load_previous_incidents()
+        print(f"📊 Loaded {len(previous_incidents)} previous incidents for {center_code}")
+        extractor = IncidentExtractor(driver, center_code, previous_incidents)
         
         # Extract incidents
         incidents_data = extractor.extract_incidents()

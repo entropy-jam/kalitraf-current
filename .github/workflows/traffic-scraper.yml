@@ -52,7 +52,7 @@ on:
 jobs:
   scrape-traffic:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 5
     strategy:
       matrix:
         center: [BCCC, LACC, SACC, OCCC]
