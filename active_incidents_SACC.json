@@ -1,8 +1,56 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "incident_count": 9,
+  "incident_count": 12,
   "incidents": [
+    {
+      "id": "1079",
+      "time": "8:18 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Golden Gate Ave / Hazel Ave",
+      "location_desc": "AT I/S",
+      "area": "East Sac"
+    },
+    {
+      "id": "1045",
+      "time": "7:39 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "15694 Allison Ranch Rd",
+      "location_desc": "PLOT",
+      "area": "Grass Valley"
+    },
+    {
+      "id": "1034",
+      "time": "7:25 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Grass Valley Hwy / Lone Star Rd",
+      "location_desc": "NB 49 AT LONE START **180",
+      "area": "Auburn"
+    },
+    {
+      "id": "1030",
+      "time": "7:23 PM",
+      "type": "Assist with Construction",
+      "location": "Sr12 / Sr160",
+      "location_desc": "",
+      "area": "South Sac"
+    },
+    {
+      "id": "1025",
+      "time": "7:17 PM",
+      "type": "Assist with Construction",
+      "location": "Grass Valley Hwy / Cramer Rd",
+      "location_desc": "",
+      "area": "Auburn"
+    },
+    {
+      "id": "1020",
+      "time": "7:13 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr65 N / Jso Pleasant Grove Blvd",
+      "location_desc": "NB 65 AT PLEASANT GROVE OFR",
+      "area": "Auburn"
+    },
     {
       "id": "1017",
       "time": "7:12 PM",
@@ -36,22 +84,6 @@
       "area": ""
     },
     {
-      "id": "1011",
-      "time": "6:51 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Howe Ave / Meadowlark Ln",
-      "location_desc": "OCRRD HOWE / MARCONI",
-      "area": "North Sac"
-    },
-    {
-      "id": "0984",
-      "time": "6:39 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "Us50 E / Watt Ave S Onr",
-      "location_desc": "ONR TO EB",
-      "area": "East Sac"
-    },
-    {
       "id": "0949",
       "time": "5:56 PM",
       "type": "Assist with Construction",
@@ -66,15 +98,7 @@
       "location": "0 Sr12",
       "location_desc": "Rio Vista Bridge",
       "area": "South Sac"
-    },
-    {
-      "id": "0938",
-      "time": "5:50 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Greenback Ln / Walnut Ave",
-      "location_desc": "EB JEO",
-      "area": "East Sac"
     }
   ],
-  "last_updated": "2025-09-25T02:13:36.015367"
+  "last_updated": "2025-09-25T03:39:58.221222"
 }

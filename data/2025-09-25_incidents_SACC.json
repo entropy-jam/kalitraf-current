@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-25",
-  "total_incidents": 9,
+  "total_incidents": 15,
   "incidents": [
     {
       "id": "1017",
@@ -75,7 +75,55 @@
       "location": "Greenback Ln / Walnut Ave",
       "location_desc": "EB JEO",
       "area": "East Sac"
+    },
+    {
+      "id": "1079",
+      "time": "8:18 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Golden Gate Ave / Hazel Ave",
+      "location_desc": "AT I/S",
+      "area": "East Sac"
+    },
+    {
+      "id": "1045",
+      "time": "7:39 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "15694 Allison Ranch Rd",
+      "location_desc": "PLOT",
+      "area": "Grass Valley"
+    },
+    {
+      "id": "1034",
+      "time": "7:25 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Grass Valley Hwy / Lone Star Rd",
+      "location_desc": "NB 49 AT LONE START **180",
+      "area": "Auburn"
+    },
+    {
+      "id": "1030",
+      "time": "7:23 PM",
+      "type": "Assist with Construction",
+      "location": "Sr12 / Sr160",
+      "location_desc": "",
+      "area": "South Sac"
+    },
+    {
+      "id": "1025",
+      "time": "7:17 PM",
+      "type": "Assist with Construction",
+      "location": "Grass Valley Hwy / Cramer Rd",
+      "location_desc": "",
+      "area": "Auburn"
+    },
+    {
+      "id": "1020",
+      "time": "7:13 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr65 N / Jso Pleasant Grove Blvd",
+      "location_desc": "NB 65 AT PLEASANT GROVE OFR",
+      "area": "Auburn"
     }
   ],
-  "last_updated": "2025-09-25T02:13:36.016152"
+  "last_updated": "2025-09-25T03:39:58.222155"
 }
