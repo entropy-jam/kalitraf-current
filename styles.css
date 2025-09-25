@@ -215,11 +215,6 @@ body {
     font-size: 18px;
     padding: 8px 12px;
     min-width: 44px;
-    transition: transform 0.2s ease;
-}
-
-#themeToggle:hover {
-    transform: rotate(180deg);
 }
 
 /* Button loading animation */
