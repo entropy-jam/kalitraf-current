@@ -161,7 +161,7 @@ class UIController {
         if (navigator.onLine) {
             statusElement.style.color = '';
         } else {
-            statusElement.style.color = '#dc3545';
+            statusElement.style.color = 'var(--accent-danger)';
             statusElement.textContent = statusElement.textContent.replace('Last updated:', 'Last updated (OFFLINE):');
         }
     }
