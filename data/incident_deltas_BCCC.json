@@ -1,8 +1,23 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T19:53:55.277332",
+  "timestamp": "2025-09-25T20:00:50.459537",
   "new_incidents": [
+    {
+      "id": "0359",
+      "time": "12:54 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 W / Bancroft Wo",
+      "location_desc": "",
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
     {
       "id": "0337",
       "time": "12:18 PM",
@@ -305,6 +320,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 20,
+  "new_count": 21,
   "removed_count": 0
 }
