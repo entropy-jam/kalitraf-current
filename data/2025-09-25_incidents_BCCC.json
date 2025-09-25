@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 179,
+  "total_incidents": 183,
   "incidents": [
     {
       "id": "0262",
@@ -2023,7 +2023,67 @@
       },
       "is_new": true,
       "is_relevant": false
+    },
+    {
+      "id": "0240",
+      "time": "4:11 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr78 W / Nordahl Rd Ofr",
+      "location_desc": "",
+      "area": "North FSP",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0552",
+      "time": "4:09 PM",
+      "type": "Defective Traffic Signals",
+      "location": "Tavern Rd / Alpine Blvd",
+      "location_desc": "SB Tavern Rd / Alpine Blvd",
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0551",
+      "time": "4:07 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr78 W / Nordahl Rd Ofr",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0537",
+      "time": "3:55 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Clairemont Mesa Blvd / Shawline St",
+      "location_desc": "MCDONALDS PLOT",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T22:59:45.207763"
+  "last_updated": "2025-09-25T23:18:12.077528"
 }
