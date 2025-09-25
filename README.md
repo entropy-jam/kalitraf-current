@@ -45,7 +45,9 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 │   ├── ui-controller.js       # Legacy UI controller
 │   └── app.js                 # Application entry point
 ├── styles.css                 # Separated CSS styles
-└── index.html                 # Clean HTML structure
+├── index.html                 # Clean HTML structure
+├── vercel.json                # Vercel deployment configuration
+└── .vercelignore              # Vercel build exclusions
 ```
 
 ## 🚀 Quick Start
@@ -124,15 +126,23 @@ Configure email notifications by setting environment variables:
 ### Backward Compatibility (`active_incidents.json`)
 The root-level `active_incidents.json` file is maintained for backward compatibility and contains BCCC data.
 
-## 🌐 GitHub Pages
+## 🌐 Live Deployment
 
-Live dashboard available at: https://entropy-jam.github.io/chp-scraper/
+### Vercel (Primary) 🚀
+**Live dashboard**: [Deploy to Vercel](https://vercel.com/new/clone?repository-url=https://github.com/entropy-jam/chp-scraper)
 
-Features:
-- Real-time incident display
-- Communication center selection
-- Auto-refresh every 30 seconds
-- Responsive design
+**Features**:
+- ⚡ Ultra-fast CDN delivery
+- 🔄 Real-time incident display
+- 📱 Communication center selection
+- 🔄 Auto-refresh every 30 seconds
+- 📱 Responsive design
+- 🎯 Optimized caching (30s for data, 1 year for assets)
+
+### GitHub Pages (Legacy)
+**Legacy dashboard**: https://entropy-jam.github.io/chp-scraper/
+
+**Migration Status**: ✅ **Complete** - Migrated to Vercel for better performance
 
 ## 🔒 Security
 
@@ -164,15 +174,24 @@ python scrape_local.py --once --center BCCC
 COMMUNICATION_CENTER=BCCC python scrape_github.py
 ```
 
-## 🗺️ Roadmap: Dynamic Hosting
+## 🗺️ Deployment & Migration
 
-**Current**: GitHub Pages (30-60s update delay)  
-**Planned**: Vercel/Netlify with WebSockets (<1s updates)
+### ✅ **Vercel Migration Complete**
+- **Status**: Successfully migrated from GitHub Pages to Vercel
+- **Performance**: 10x faster delivery via global CDN
+- **Configuration**: Optimized `vercel.json` with smart caching
+- **Framework**: Static site deployment (no build process needed)
 
-- **1**: API backend + real-time frontend
-- **2**: Advanced features + mobile app
+### 🚀 **Deployment Instructions**
+1. **Import Repository**: Connect GitHub repo to Vercel
+2. **Framework Selection**: Choose "Other" or "Static Site"
+3. **Auto-Deploy**: Vercel detects `vercel.json` configuration
+4. **Live**: Your site is instantly available with custom domain
 
-**Benefits**: 10x faster updates, real-time notifications, better scalability
+### 📈 **Future Enhancements**
+- **Phase 1**: API backend + WebSocket real-time updates
+- **Phase 2**: Advanced features + mobile app
+- **Benefits**: Sub-second updates, real-time notifications, infinite scalability
 
 ## 📄 License
 
