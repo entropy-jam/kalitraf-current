@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 114,
+  "total_incidents": 117,
   "incidents": [
     {
       "id": "0262",
@@ -1048,7 +1048,52 @@
       },
       "is_new": true,
       "is_relevant": false
+    },
+    {
+      "id": "0289",
+      "time": "10:56 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / 8th",
+      "location_desc": "I5 S 8TH",
+      "area": "San Diego",
+      "details": "10:57 AM: 2 | 10:56 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0288",
+      "time": "10:55 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Cassidy",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0274",
+      "time": "10:49 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Murray Ridge No",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "10:58 AM: 5 | 10:54 AM: 4 | 10:50 AM: 3 | 10:50 AM: 2 | 10:50 AM: 1 | 10:52 AM: 2 | 10:52 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T17:52:09.562325"
+  "last_updated": "2025-09-25T17:59:40.542092"
 }
