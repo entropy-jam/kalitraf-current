@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 141,
+  "total_incidents": 144,
   "incidents": [
     {
       "id": "0262",
@@ -1453,7 +1453,52 @@
       },
       "is_new": true,
       "is_relevant": true
+    },
+    {
+      "id": "0413",
+      "time": "1:50 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Mast Blvd / Pebble Beach Dr",
+      "location_desc": "",
+      "area": "BC",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0406",
+      "time": "1:45 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / I805 Wo",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "1:47 PM: 4 | 1:47 PM: 3 | 1:46 PM: 2 | 1:46 PM: 1 | 1:47 PM: 2 | 1:47 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0405",
+      "time": "1:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr54 W / Sr125 Wo",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T20:44:07.521790"
+  "last_updated": "2025-09-25T20:51:26.411609"
 }
