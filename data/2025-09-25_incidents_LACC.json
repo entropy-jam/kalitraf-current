@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 87,
+  "total_incidents": 90,
   "incidents": [
     {
       "id": "1878",
@@ -699,7 +699,31 @@
       "location": "I5 N / I605 N",
       "location_desc": "NB 5 JSO 605",
       "area": "Santa Fe Springs"
+    },
+    {
+      "id": "0176",
+      "time": "4:39 AM",
+      "type": "Traffic Hazard",
+      "location": "I110 S / Sepulveda Blvd",
+      "location_desc": "SB JNO SEPULVEDA BLVD",
+      "area": "South LA"
+    },
+    {
+      "id": "0172",
+      "time": "4:23 AM",
+      "type": "Traffic Hazard",
+      "location": "I405 N / W Imperial Hwy",
+      "location_desc": "IMPERIAL HWY ONR TO NB 405",
+      "area": "West LA"
+    },
+    {
+      "id": "0169",
+      "time": "4:18 AM",
+      "type": "SIG Alert",
+      "location": "I10 W / I110 S Con",
+      "location_desc": "WB 10 TO 110",
+      "area": "Central LA"
     }
   ],
-  "last_updated": "2025-09-25T10:53:52.220976"
+  "last_updated": "2025-09-25T11:45:07.555981"
 }

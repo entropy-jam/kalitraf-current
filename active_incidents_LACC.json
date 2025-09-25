@@ -1,39 +1,31 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "incident_count": 19,
+  "incident_count": 13,
   "incidents": [
     {
-      "id": "0158",
-      "time": "3:48 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I10 E / VINCENT AVE ONR",
-      "location_desc": "EB 10 AT VINCENT",
-      "area": "Baldwin Park"
-    },
-    {
-      "id": "0164",
-      "time": "3:47 AM",
-      "type": "Report of Fire",
-      "location": "Holmes Ave / Randolph St",
-      "location_desc": "",
+      "id": "0176",
+      "time": "4:39 AM",
+      "type": "Traffic Hazard",
+      "location": "I110 S / Sepulveda Blvd",
+      "location_desc": "SB JNO SEPULVEDA BLVD",
       "area": "South LA"
     },
     {
-      "id": "0160",
-      "time": "3:46 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / I605 N",
-      "location_desc": "NB 5 JSO 605",
-      "area": "Santa Fe Springs"
+      "id": "0172",
+      "time": "4:23 AM",
+      "type": "Traffic Hazard",
+      "location": "I405 N / W Imperial Hwy",
+      "location_desc": "IMPERIAL HWY ONR TO NB 405",
+      "area": "West LA"
     },
     {
-      "id": "0156",
-      "time": "3:40 AM",
-      "type": "Traffic Break",
-      "location": "Sr60 W / Phillips Ranch Rd",
-      "location_desc": "WB 60 JWO PHILLIPS RANCH",
-      "area": "Baldwin Park"
+      "id": "0169",
+      "time": "4:18 AM",
+      "type": "SIG Alert",
+      "location": "I10 W / I110 S Con",
+      "location_desc": "WB 10 TO 110",
+      "area": "Central LA"
     },
     {
       "id": "0139",
@@ -58,14 +50,6 @@
       "location": "I10 W / I110 S",
       "location_desc": "WB 10 JEO 110",
       "area": "Central LA"
-    },
-    {
-      "id": "0098",
-      "time": "1:49 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr170 S / Victory Blvd Onr",
-      "location_desc": "VICTORY ONR TO SB 170",
-      "area": "West Valley"
     },
     {
       "id": "0094",
@@ -100,36 +84,12 @@
       "area": "LA"
     },
     {
-      "id": "2079",
-      "time": "10:07 PM",
-      "type": "Assist with Construction",
-      "location": "I110 S / W Florence Ave Onr",
-      "location_desc": "FLORANCE ONR TO SB 110",
-      "area": "Central LA"
-    },
-    {
       "id": "2028",
       "time": "9:30 PM",
       "type": "Assist with Construction",
       "location": "I405 S / Mulholland Dr",
       "location_desc": "SB 405 FRM MULHOLLAND",
       "area": "West LA"
-    },
-    {
-      "id": "1998",
-      "time": "9:08 PM",
-      "type": "Assist with Construction",
-      "location": "I5 N / 4th St",
-      "location_desc": "NB 5 AT 4TH ST",
-      "area": "Central LA"
-    },
-    {
-      "id": "1976",
-      "time": "8:59 PM",
-      "type": "Assist with Construction",
-      "location": "I405 S / Long Beach Blvd",
-      "location_desc": "JSO",
-      "area": "South LA"
     },
     {
       "id": "1973",
@@ -140,14 +100,6 @@
       "area": "Newhall"
     },
     {
-      "id": "1959",
-      "time": "8:43 PM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-la (15th St)",
-      "location_desc": "1740 E 15TH ST",
-      "area": "Central LA"
-    },
-    {
       "id": "1817",
       "time": "7:27 PM",
       "type": "Assist with Construction",
@@ -156,5 +108,5 @@
       "area": "West LA"
     }
   ],
-  "last_updated": "2025-09-25T10:53:52.219845"
+  "last_updated": "2025-09-25T11:45:07.554886"
 }
