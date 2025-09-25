@@ -1,15 +1,15 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "timestamp": "2025-09-25T10:35:52.758544",
+  "timestamp": "2025-09-25T10:46:36.634186",
   "new_incidents": [
     {
-      "id": "0149",
-      "time": "3:33 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr14 S / Golden Valley Rd",
-      "location_desc": "SB 14 JSO GOLDEN VALLEY",
-      "area": "Newhall"
+      "id": "0156",
+      "time": "3:40 AM",
+      "type": "Traffic Break",
+      "location": "Sr60 W / Phillips Ranch Rd",
+      "location_desc": "WB 60 JWO PHILLIPS RANCH",
+      "area": "Baldwin Park"
     },
     {
       "id": "0139",
@@ -34,14 +34,6 @@
       "location": "I10 W / I110 S",
       "location_desc": "WB 10 JEO 110",
       "area": "Central LA"
-    },
-    {
-      "id": "0116",
-      "time": "2:43 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr60 E Wo / Sr71",
-      "location_desc": "SR60 E EO SR71",
-      "area": "Baldwin Park"
     },
     {
       "id": "0098",
@@ -149,6 +141,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 18,
+  "new_count": 17,
   "removed_count": 0
 }
