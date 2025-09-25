@@ -1,47 +1,39 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "incident_count": 13,
+  "incident_count": 11,
   "incidents": [
     {
-      "id": "1123",
-      "time": "9:36 PM",
+      "id": "0018",
+      "time": "12:46 AM",
       "type": "Trfc Collision-Unkn Inj",
-      "location": "Us50 E / Jwo 99",
-      "location_desc": "JWO",
-      "area": "South Sac"
-    },
-    {
-      "id": "1125",
-      "time": "9:35 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "7700 - 8481 Sr16",
-      "location_desc": "",
-      "area": "Woodland"
-    },
-    {
-      "id": "1122",
-      "time": "9:35 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr51 S / Jso Marconi Ave",
-      "location_desc": "SB 51 JSO MARCONI",
+      "location": "Rio Linda Blvd / E St",
+      "location_desc": "A I/S",
       "area": "North Sac"
     },
     {
-      "id": "1119",
-      "time": "9:24 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "10371-10471 Combie Rd",
-      "location_desc": "RAPID - COMBIE RD JEO 49",
-      "area": "Grass Valley"
+      "id": "1188",
+      "time": "11:54 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Melrose Dr / Channing Dr",
+      "location_desc": "",
+      "area": "North Sac"
     },
     {
-      "id": "1045",
-      "time": "7:39 PM",
+      "id": "1186",
+      "time": "11:50 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 E / Greenback Ln",
+      "location_desc": "EB 80 ON GB OFF",
+      "area": "North Sac"
+    },
+    {
+      "id": "1176",
+      "time": "11:43 PM",
       "type": "Trfc Collision-No Inj",
-      "location": "15694 Allison Ranch Rd",
-      "location_desc": "PLOT",
-      "area": "Grass Valley"
+      "location": "Manzanita Ave / Madison Ave",
+      "location_desc": "IN I/S",
+      "area": "North Sac"
     },
     {
       "id": "1030",
@@ -57,14 +49,6 @@
       "type": "Assist with Construction",
       "location": "Grass Valley Hwy / Cramer Rd",
       "location_desc": "",
-      "area": "Auburn"
-    },
-    {
-      "id": "1020",
-      "time": "7:13 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr65 N / Jso Pleasant Grove Blvd",
-      "location_desc": "NB 65 AT PLEASANT GROVE OFR",
       "area": "Auburn"
     },
     {
@@ -108,5 +92,5 @@
       "area": "South Sac"
     }
   ],
-  "last_updated": "2025-09-25T04:39:58.019716"
+  "last_updated": "2025-09-25T07:54:05.220421"
 }
