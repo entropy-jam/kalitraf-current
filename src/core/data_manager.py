@@ -21,20 +21,29 @@ class DataManager:
         # Ensure data directory exists
         os.makedirs(self.data_dir, exist_ok=True)
     
-    def incidents_to_json(self, incidents_data: List[List[str]]) -> Dict[str, Any]:
+    def incidents_to_json(self, incidents_data: List[Dict]) -> Dict[str, Any]:
         """Convert incidents data to JSON format"""
-        incidents = []
-        for row in incidents_data:
-            if len(row) >= 7:
-                incident = {
-                    "id": row[1],
-                    "time": row[2],
-                    "type": row[3],
-                    "location": row[4],
-                    "location_desc": row[5] if len(row) > 5 else "",
-                    "area": row[6] if len(row) > 6 else ""
-                }
-                incidents.append(incident)
+        # If incidents_data is already structured (Dict), use it directly
+        if incidents_data and isinstance(incidents_data[0], dict):
+            incidents = incidents_data
+        else:
+            # Convert from old format (List[List[str]]) to new format
+            incidents = []
+            for row in incidents_data:
+                if len(row) >= 7:
+                    incident = {
+                        "id": row[1],
+                        "time": row[2],
+                        "type": row[3],
+                        "location": row[4],
+                        "location_desc": row[5] if len(row) > 5 else "",
+                        "area": row[6] if len(row) > 6 else "",
+                        "details": "",
+                        "lane_blockage": {"status": "unknown", "details": []},
+                        "is_new": False,
+                        "is_relevant": False
+                    }
+                    incidents.append(incident)
         
         return {
             "center_code": self.center_code,
@@ -44,7 +53,7 @@ class DataManager:
             "last_updated": datetime.now().isoformat()
         }
     
-    def save_active_incidents(self, incidents_data: List[List[str]]) -> bool:
+    def save_active_incidents(self, incidents_data: List[Dict]) -> bool:
         """Save current incidents to active_incidents.json only if data changed"""
         json_data = self.incidents_to_json(incidents_data)
         
@@ -104,29 +113,45 @@ class DataManager:
             logging.info("No changes detected - skipping delta file write")
             return False
         
-        # Convert raw incident data to JSON format for deltas
+        # Convert incident data to JSON format for deltas
         new_incidents_json = []
         for incident in changes.get('new_incidents', []):
-            if len(incident) >= 7:
+            if isinstance(incident, dict):
+                # Already in structured format
+                new_incidents_json.append(incident)
+            elif len(incident) >= 7:
+                # Convert from old format
                 new_incidents_json.append({
                     "id": incident[1],
                     "time": incident[2],
                     "type": incident[3],
                     "location": incident[4],
                     "location_desc": incident[5] if len(incident) > 5 else "",
-                    "area": incident[6] if len(incident) > 6 else ""
+                    "area": incident[6] if len(incident) > 6 else "",
+                    "details": "",
+                    "lane_blockage": {"status": "unknown", "details": []},
+                    "is_new": True,
+                    "is_relevant": False
                 })
         
         removed_incidents_json = []
         for incident in changes.get('removed_incidents', []):
-            if len(incident) >= 7:
+            if isinstance(incident, dict):
+                # Already in structured format
+                removed_incidents_json.append(incident)
+            elif len(incident) >= 7:
+                # Convert from old format
                 removed_incidents_json.append({
                     "id": incident[1],
                     "time": incident[2],
                     "type": incident[3],
                     "location": incident[4],
                     "location_desc": incident[5] if len(incident) > 5 else "",
-                    "area": incident[6] if len(incident) > 6 else ""
+                    "area": incident[6] if len(incident) > 6 else "",
+                    "details": "",
+                    "lane_blockage": {"status": "unknown", "details": []},
+                    "is_new": False,
+                    "is_relevant": False
                 })
         
         delta_data = {
@@ -183,32 +208,53 @@ class DataManager:
             
             logging.info(f"Appended {len(unique_incidents)} unique incidents to {daily_file}")
     
-    def compare_incidents(self, current_incidents: List[List[str]]) -> Dict[str, List]:
+    def compare_incidents(self, current_incidents: List[Dict]) -> Dict[str, List]:
         """Compare current incidents with previous ones"""
         if self.previous_incidents is None:
             return {"new_incidents": current_incidents, "removed_incidents": []}
         
         # Convert to sets for comparison (using incident ID + time as unique identifier)
-        current_set = {f"{incident[1]}_{incident[2]}" for incident in current_incidents}
-        previous_set = {f"{incident[1]}_{incident[2]}" for incident in self.previous_incidents}
-        
-        # Find new and removed incidents
-        new_ids = current_set - previous_set
-        removed_ids = previous_set - current_set
-        
-        new_incidents = [incident for incident in current_incidents 
-                        if f"{incident[1]}_{incident[2]}" in new_ids]
-        removed_incidents = [incident for incident in self.previous_incidents 
-                           if f"{incident[1]}_{incident[2]}" in removed_ids]
+        if current_incidents and isinstance(current_incidents[0], dict):
+            # New structured format
+            current_set = {f"{incident['id']}_{incident['time']}" for incident in current_incidents}
+            previous_set = {f"{incident['id']}_{incident['time']}" for incident in self.previous_incidents}
+            
+            new_incidents = [incident for incident in current_incidents 
+                            if f"{incident['id']}_{incident['time']}" not in previous_set]
+            removed_incidents = [incident for incident in self.previous_incidents 
+                               if f"{incident['id']}_{incident['time']}" not in current_set]
+        else:
+            # Old format (List[List[str]])
+            current_set = {f"{incident[1]}_{incident[2]}" for incident in current_incidents}
+            previous_set = {f"{incident[1]}_{incident[2]}" for incident in self.previous_incidents}
+            
+            new_incidents = [incident for incident in current_incidents 
+                            if f"{incident[1]}_{incident[2]}" not in previous_set]
+            removed_incidents = [incident for incident in self.previous_incidents 
+                               if f"{incident[1]}_{incident[2]}" not in current_set]
         
         return {
             "new_incidents": new_incidents,
             "removed_incidents": removed_incidents
         }
     
-    def update_previous_incidents(self, incidents_data: List[List[str]]) -> None:
+    def update_previous_incidents(self, incidents_data: List[Dict]) -> None:
         """Update the previous incidents for next comparison"""
         self.previous_incidents = incidents_data.copy()
+    
+    def load_previous_incidents(self) -> List[Dict]:
+        """Load previous incidents from active incidents file"""
+        if os.path.exists(self.active_file):
+            try:
+                with open(self.active_file, 'r') as f:
+                    data = json.load(f)
+                    incidents = data.get('incidents', [])
+                    logging.info(f"Loaded {len(incidents)} previous incidents")
+                    return incidents
+            except Exception as e:
+                logging.error(f"Error loading previous incidents: {e}")
+                return []
+        return []
     
     def _get_center_name(self, center_code: str) -> str:
         """Get human-readable center name"""

@@ -1,7 +1,7 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T16:43:36.859262",
+  "timestamp": "2025-09-25T12:44:01.409909",
   "new_incidents": [
     {
       "id": "0230",
@@ -9,7 +9,14 @@
       "type": "Traffic Hazard",
       "location": "I8 W / I805 Wo",
       "location_desc": "I8 W I805 WO",
-      "area": "San Diego"
+      "area": "San Diego",
+      "details": "9:40 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     },
     {
       "id": "0229",
@@ -17,7 +24,14 @@
       "type": "Traffic Hazard",
       "location": "I5 N / Oceanside Blvd Ofr",
       "location_desc": "",
-      "area": "Oceanside"
+      "area": "Oceanside",
+      "details": "9:41 AM: 3 | 9:38 AM: 2 | 9:37 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     },
     {
       "id": "0227",
@@ -25,7 +39,14 @@
       "type": "Traffic Hazard",
       "location": "I5 S / Civic Center No (front)",
       "location_desc": "I5 S CIVIC CENTER NO (FRONT)",
-      "area": "San Diego"
+      "area": "San Diego",
+      "details": "9:36 AM: 1 | 9:38 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     },
     {
       "id": "0214",
@@ -33,7 +54,14 @@
       "type": "Trfc Collision-1141 Enrt",
       "location": "3956 Rogers Rd",
       "location_desc": "",
-      "area": "El Cajon"
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
     },
     {
       "id": "0206",
@@ -41,7 +69,14 @@
       "type": "Traffic Hazard",
       "location": "I5 N / Las Pulgas So",
       "location_desc": "I5 N LAS PULGAS SO",
-      "area": "Oceanside"
+      "area": "Oceanside",
+      "details": "9:19 AM: 3 | 9:17 AM: 2 | 9:13 AM: 1 | 9:15 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     },
     {
       "id": "0192",
@@ -49,7 +84,14 @@
       "type": "Trfc Collision-No Inj",
       "location": "I5 S / Leucadia No",
       "location_desc": "I5 S LEUCADIA NO",
-      "area": "Oceanside"
+      "area": "Oceanside",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": true
     },
     {
       "id": "0179",
@@ -57,7 +99,14 @@
       "type": "Trfc Collision-1141 Enrt",
       "location": "Sr56 W / Camino Del Sur Wo",
       "location_desc": "",
-      "area": "San Diego"
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0150",
@@ -65,7 +114,14 @@
       "type": "Trfc Collision-1141 Enrt",
       "location": "Alpine Blvd / E Victoria Dr",
       "location_desc": "",
-      "area": "El Cajon"
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0137",
@@ -73,7 +129,14 @@
       "type": "Assist CT with Maintenance",
       "location": "I8 W / Johnson",
       "location_desc": "",
-      "area": "El Cajon"
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0118",
@@ -81,7 +144,14 @@
       "type": "Assist CT with Maintenance",
       "location": "8502 Railroad Ave",
       "location_desc": "CALTRANS SANTEE",
-      "area": "El Cajon"
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0105",
@@ -89,7 +159,14 @@
       "type": "Assist CT with Maintenance",
       "location": "I15 S / California Oaks (kalmia)",
       "location_desc": "TIL 1400",
-      "area": "Temecula"
+      "area": "Temecula",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0097",
@@ -97,7 +174,14 @@
       "type": "Assist CT with Maintenance",
       "location": "5902 Kearny Villa Rd",
       "location_desc": "SAN DIEGO CHP OFFICE",
-      "area": "San Diego"
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0096",
@@ -105,7 +189,14 @@
       "type": "Assist CT with Maintenance",
       "location": "7181 Opportunity Rd",
       "location_desc": "CALTRANS KEARNY MESA MAINTENANCE YARD",
-      "area": "BC"
+      "area": "BC",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0092",
@@ -113,7 +204,14 @@
       "type": "Assist CT with Maintenance",
       "location": "5902 Kearny Villa Rd",
       "location_desc": "",
-      "area": "San Diego"
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0091",
@@ -121,7 +219,14 @@
       "type": "Assist with Construction",
       "location": "Sr79 / Sage Rd",
       "location_desc": "PAUBA TILL 1600",
-      "area": "Temecula"
+      "area": "Temecula",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0077",
@@ -129,7 +234,14 @@
       "type": "Assist CT with Maintenance",
       "location": "24171 Japatul Valley Rd",
       "location_desc": "CALTRANS DESCANSO STATION",
-      "area": "El Cajon"
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0072",
@@ -137,7 +249,14 @@
       "type": "Assist CT with Maintenance",
       "location": "Sr76 / Pauma Valley Dr",
       "location_desc": "",
-      "area": "Oceanside"
+      "area": "Oceanside",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0012",
@@ -145,7 +264,14 @@
       "type": "Assist CT with Maintenance",
       "location": "6100 MM8 E SD R61.00",
       "location_desc": "",
-      "area": "El Cajon"
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0062",
@@ -153,7 +279,14 @@
       "type": "Assist CT with Maintenance",
       "location": "27174 SR79",
       "location_desc": "CALTRANS LAKE HENSHAW STATION",
-      "area": "El Cajon"
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0060",
@@ -161,7 +294,14 @@
       "type": "Assist CT with Maintenance",
       "location": "78/15",
       "location_desc": "ENCAMPMENT CLEANUPS",
-      "area": ""
+      "area": "",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0002",
@@ -169,7 +309,14 @@
       "type": "Road/Weather Conditions",
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
-      "area": "BC"
+      "area": "BC",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     },
     {
       "id": "0818",
@@ -177,7 +324,14 @@
       "type": "Request CalTrans Notify",
       "location": "Sr75 / Adella Ave",
       "location_desc": "NB SR-75 BTWN ADELLA and B ST",
-      "area": "BC"
+      "area": "BC",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": false,
+      "is_relevant": false
     }
   ],
   "removed_incidents": [],

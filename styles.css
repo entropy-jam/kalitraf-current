@@ -616,3 +616,202 @@ body {
         transform: translateX(-100%);
     }
 }
+
+/* Enhanced Incident Display Styles */
+
+/* Incident Header with Status */
+.incident-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.incident-status {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-badge.new {
+    background: #ff6b6b;
+    color: white;
+}
+
+.status-badge.relevant {
+    background: #4ecdc4;
+    color: white;
+}
+
+/* Lane Status Indicators */
+.lane-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.lane-status.blocking {
+    background: #ff6b6b;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.lane-status.resolved {
+    background: #51cf66;
+    color: white;
+}
+
+.lane-status.no-blockage {
+    background: #69db7c;
+    color: white;
+}
+
+.lane-status.unknown {
+    background: #868e96;
+    color: white;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Lane Blockage Details */
+.lane-blockage {
+    margin: 8px 0;
+    padding: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    border-left: 3px solid #ff6b6b;
+}
+
+.lane-blockage-header {
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.lane-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lane-detail {
+    padding: 2px 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Incident Details (Collapsible) */
+.incident-details {
+    margin: 8px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.details-header {
+    background: var(--bg-tertiary);
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.details-header:hover {
+    background: var(--bg-hover);
+}
+
+.details-title {
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.details-toggle {
+    transition: transform 0.2s ease;
+    color: var(--text-secondary);
+}
+
+.incident-details.expanded .details-toggle {
+    transform: rotate(180deg);
+}
+
+.details-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.incident-details.expanded .details-content {
+    max-height: 300px;
+}
+
+.detail-timeline {
+    list-style: none;
+    padding: 8px 12px;
+    margin: 0;
+    background: var(--bg-primary);
+}
+
+.detail-timeline-item {
+    padding: 4px 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.detail-timeline-item:last-child {
+    border-bottom: none;
+}
+
+/* Enhanced Copy Button */
+.copy-button {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+    background: var(--bg-hover);
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Enhanced Elements */
+@media (max-width: 768px) {
+    .incident-status {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .status-badge, .lane-status {
+        font-size: 9px;
+        padding: 2px 4px;
+    }
+    
+    .details-header {
+        padding: 6px 8px;
+    }
+    
+    .detail-timeline {
+        padding: 6px 8px;
+    }
+}

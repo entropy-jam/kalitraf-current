@@ -47,10 +47,22 @@ class IncidentRenderer extends IUIRenderer {
                      !previousIncidents.find(prev => prev.id === incident.id);
         const newClass = isNew ? ' new' : '';
 
+        // Lane blockage status indicator
+        const laneBlockageStatus = this.getLaneBlockageStatus(incident.lane_blockage);
+        const laneBlockageHtml = this.renderLaneBlockage(incident.lane_blockage);
+        
+        // Details section (collapsible)
+        const detailsHtml = this.renderDetails(incident.details);
+
         return `
             <div class="incident${newClass}">
                 <div class="incident-header">
                     <span class="incident-id">#${incident.id}</span>
+                    <div class="incident-status">
+                        ${laneBlockageStatus}
+                        ${incident.is_new ? '<span class="status-badge new">NEW</span>' : ''}
+                        ${incident.is_relevant ? '<span class="status-badge relevant">RELEVANT</span>' : ''}
+                    </div>
                     <button class="copy-button" data-incident-id="${incident.id}" title="Copy incident details to clipboard">⧉</button>
                 </div>
                 <div class="incident-type ${typeClass}">${incident.type}</div>
@@ -59,6 +71,8 @@ class IncidentRenderer extends IUIRenderer {
                 <div class="incident-area">${incident.area}</div>
                 ${incident.center_name ? `<div class="incident-center">${incident.center_name} (${incident.center_code})</div>` : ''}
                 <div class="incident-time">${incident.time}</div>
+                ${laneBlockageHtml}
+                ${detailsHtml}
             </div>
         `;
     }
@@ -75,6 +89,84 @@ class IncidentRenderer extends IUIRenderer {
             }
         }
         return 'type-traffic-hazard';
+    }
+
+    /**
+     * Get lane blockage status indicator
+     * @param {Object} laneBlockage - Lane blockage data
+     * @returns {string} Status indicator HTML
+     */
+    getLaneBlockageStatus(laneBlockage) {
+        if (!laneBlockage || !laneBlockage.status) return '';
+        
+        const status = laneBlockage.status;
+        const statusClass = status === 'blocking' ? 'blocking' : 
+                           status === 'resolved' ? 'resolved' : 
+                           status === 'no_blockage' ? 'no-blockage' : 'unknown';
+        
+        const statusText = status === 'blocking' ? '🚧 BLOCKING' :
+                          status === 'resolved' ? '✅ CLEARED' :
+                          status === 'no_blockage' ? '🟢 NO BLOCKAGE' : '❓ UNKNOWN';
+        
+        return `<span class="lane-status ${statusClass}">${statusText}</span>`;
+    }
+
+    /**
+     * Render lane blockage details
+     * @param {Object} laneBlockage - Lane blockage data
+     * @returns {string} Lane blockage HTML
+     */
+    renderLaneBlockage(laneBlockage) {
+        if (!laneBlockage || !laneBlockage.details || laneBlockage.details.length === 0) {
+            return '';
+        }
+
+        const detailsList = laneBlockage.details.map(detail => 
+            `<li class="lane-detail">${detail}</li>`
+        ).join('');
+
+        return `
+            <div class="lane-blockage">
+                <div class="lane-blockage-header">
+                    <span class="lane-blockage-title">Lane Information</span>
+                </div>
+                <ul class="lane-details">${detailsList}</ul>
+            </div>
+        `;
+    }
+
+    /**
+     * Render incident details (collapsible)
+     * @param {string} details - Incident details text
+     * @returns {string} Details HTML
+     */
+    renderDetails(details) {
+        if (!details || details.trim() === '') {
+            return '';
+        }
+
+        // Split details by " | " and format as timeline
+        const detailLines = details.split(' | ').map(line => line.trim()).filter(line => line);
+        
+        if (detailLines.length === 0) {
+            return '';
+        }
+
+        const timelineItems = detailLines.map(line => 
+            `<li class="detail-timeline-item">${line}</li>`
+        ).join('');
+
+        return `
+            <div class="incident-details">
+                <div class="details-header" onclick="this.parentElement.classList.toggle('expanded')">
+                    <span class="details-title">Incident Timeline</span>
+                    <span class="details-toggle">▼</span>
+                </div>
+                <div class="details-content">
+                    <ul class="detail-timeline">${timelineItems}</ul>
+                </div>
+            </div>
+        `;
     }
 
     /**
