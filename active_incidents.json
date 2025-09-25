@@ -1,8 +1,38 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 22,
+  "incident_count": 23,
   "incidents": [
+    {
+      "id": "0326",
+      "time": "11:59 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr125 S / Otay Lakes No",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0327",
+      "time": "11:58 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Sorrento Valley No (mira Mesa)",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "12:00 PM: 1 | 12:03 PM: 2 | 12:03 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
     {
       "id": "0318",
       "time": "11:41 AM",
@@ -19,28 +49,13 @@
       "is_relevant": true
     },
     {
-      "id": "0314",
-      "time": "11:31 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Palomar Airport Rd / I5 S",
-      "location_desc": "OCC'D I5 S / PALOMAR AIRPORT RD OFR",
-      "area": "Oceanside",
-      "details": "11:34 AM: 2 | 11:33 AM: 1 | 11:47 AM: 3 | 11:47 AM: 2 | 11:39 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
       "id": "0273",
       "time": "10:49 AM",
       "type": "Traffic Hazard",
       "location": "I5 N / Santa Fe So",
       "location_desc": "I5 N SANTA FE SO",
       "area": "Oceanside",
-      "details": "10:54 AM: 3 | 10:53 AM: 2 | 10:50 AM: 1",
+      "details": "10:54 AM: 3 | 10:53 AM: 2 | 10:50 AM: 1 | 12:07 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -334,5 +349,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T18:48:46.925993"
+  "last_updated": "2025-09-25T19:11:24.716046"
 }
