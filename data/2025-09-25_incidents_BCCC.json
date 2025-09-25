@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 38,
+  "total_incidents": 40,
   "incidents": [
     {
       "id": "0262",
@@ -307,7 +307,23 @@
       "location": "Highland Valley Rd / Sr67",
       "location_desc": "WB",
       "area": "El Cajon"
+    },
+    {
+      "id": "0006",
+      "time": "12:04 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N Sr78 E Con / I15 S Sr78 E Con",
+      "location_desc": "NB TO EB",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0894",
+      "time": "11:08 PM",
+      "type": "Trfc Collision-Minor Inj",
+      "location": "I15 N / El Norte So",
+      "location_desc": "I15 N EL NORTE SO",
+      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-25T05:50:00.336835"
+  "last_updated": "2025-09-25T07:14:21.008731"
 }

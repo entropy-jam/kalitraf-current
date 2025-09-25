@@ -1,8 +1,32 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T05:50:00.336214",
+  "timestamp": "2025-09-25T07:14:21.007204",
   "new_incidents": [
+    {
+      "id": "0006",
+      "time": "12:04 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N Sr78 E Con / I15 S Sr78 E Con",
+      "location_desc": "NB TO EB",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0002",
+      "time": "12:00 AM",
+      "type": "Road/Weather Conditions",
+      "location": "Media Log",
+      "location_desc": "NEWSWORTHY INCIDENTS",
+      "area": "BC"
+    },
+    {
+      "id": "0894",
+      "time": "11:08 PM",
+      "type": "Trfc Collision-Minor Inj",
+      "location": "I15 N / El Norte So",
+      "location_desc": "I15 N EL NORTE SO",
+      "area": "Oceanside"
+    },
     {
       "id": "0887",
       "time": "10:46 PM",
@@ -84,14 +108,6 @@
       "area": "Oceanside"
     },
     {
-      "id": "0814",
-      "time": "8:52 PM",
-      "type": "Assist with Construction",
-      "location": "I805 S / Balboa",
-      "location_desc": "I805 S BALBOA",
-      "area": "San Diego"
-    },
-    {
       "id": "0818",
       "time": "8:48 PM",
       "type": "Request CalTrans Notify",
@@ -170,17 +186,9 @@
       "location": "Sr52 E / Convoy",
       "location_desc": "TIL 0330",
       "area": "San Diego"
-    },
-    {
-      "id": "0002",
-      "time": "12:00 AM",
-      "type": "Road/Weather Conditions",
-      "location": "Media Log",
-      "location_desc": "NEWSWORTHY INCIDENTS",
-      "area": "BC"
     }
   ],
   "removed_incidents": [],
-  "new_count": 22,
+  "new_count": 23,
   "removed_count": 0
 }
