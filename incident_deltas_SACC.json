@@ -1,48 +1,8 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-25T08:57:51.446109",
+  "timestamp": "2025-09-25T11:01:18.628114",
   "new_incidents": [
-    {
-      "id": "0044",
-      "time": "1:52 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr99 S / Twin Cities Rd",
-      "location_desc": "TWIN CITIES OFR",
-      "area": "South Sac"
-    },
-    {
-      "id": "0039",
-      "time": "1:44 AM",
-      "type": "Report of Fire",
-      "location": "Watt Ave / Roseville Rd",
-      "location_desc": "NB JNO",
-      "area": "North Sac"
-    },
-    {
-      "id": "1188",
-      "time": "11:54 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "Melrose Dr / Channing Dr",
-      "location_desc": "",
-      "area": "North Sac"
-    },
-    {
-      "id": "1176",
-      "time": "11:43 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Manzanita Ave / Madison Ave",
-      "location_desc": "IN I/S **180**",
-      "area": "North Sac"
-    },
-    {
-      "id": "1030",
-      "time": "7:23 PM",
-      "type": "Assist with Construction",
-      "location": "Sr12 / Sr160",
-      "location_desc": "",
-      "area": "South Sac"
-    },
     {
       "id": "1025",
       "time": "7:17 PM",
@@ -68,31 +28,15 @@
       "area": ""
     },
     {
-      "id": "0996",
-      "time": "6:52 PM",
-      "type": "Assist with Construction",
-      "location": "80 Paving",
-      "location_desc": "",
-      "area": ""
-    },
-    {
       "id": "0949",
       "time": "5:56 PM",
       "type": "Assist with Construction",
       "location": "99 Project",
       "location_desc": "",
       "area": ""
-    },
-    {
-      "id": "0947",
-      "time": "5:55 PM",
-      "type": "Assist with Construction",
-      "location": "0 Sr12",
-      "location_desc": "Rio Vista Bridge",
-      "area": "South Sac"
     }
   ],
   "removed_incidents": [],
-  "new_count": 11,
+  "new_count": 4,
   "removed_count": 0
 }
