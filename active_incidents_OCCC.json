@@ -1,7 +1,7 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "incident_count": 4,
+  "incident_count": 3,
   "incidents": [
     {
       "id": "0002",
@@ -26,15 +26,7 @@
       "location": "E Santa Clara Ave",
       "location_desc": "- 405 -",
       "area": "Santa Ana"
-    },
-    {
-      "id": "0547",
-      "time": "8:27 PM",
-      "type": "Assist with Construction",
-      "location": "13200 Goldenwest St",
-      "location_desc": "405",
-      "area": "Westminster"
     }
   ],
-  "last_updated": "2025-09-25T11:20:44.250957"
+  "last_updated": "2025-09-25T13:17:39.239193"
 }
