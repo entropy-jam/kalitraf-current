@@ -357,18 +357,16 @@ body {
 
 /* Copy button styling */
 .copy-button {
-    background: none;
-    border: none;
-    font-size: 21px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    font-size: 14px;
     color: var(--text-secondary);
     cursor: pointer;
-    padding: 6px 8px;
+    padding: 4px 8px;
     border-radius: 4px;
     transition: all 0.2s ease;
-    opacity: 0.7;
-    position: absolute;
-    top: 4px;
-    right: 4px;
+    opacity: 0.8;
+    position: relative;
     z-index: 10;
 }
 
@@ -624,6 +622,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4px;
+}
+
+.incident-actions {
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 8px;
 }
 
@@ -778,24 +782,28 @@ body {
     border-bottom: none;
 }
 
-/* Enhanced Copy Button */
-.copy-button {
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    padding: 4px 8px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: all 0.2s ease;
+/* Responsive copy button behavior */
+@media (max-width: 768px) {
+    .copy-button {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
 }
 
-.copy-button:hover {
-    background: var(--bg-hover);
-    transform: scale(1.05);
+@media (max-width: 480px) {
+    .copy-button {
+        font-size: 11px;
+        padding: 2px 4px;
+    }
 }
 
 /* Responsive Design for Enhanced Elements */
 @media (max-width: 768px) {
+    .incident-actions {
+        justify-content: center;
+        margin-bottom: 6px;
+    }
+    
     .incident-status {
         flex-direction: column;
         align-items: flex-start;

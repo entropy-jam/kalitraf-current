@@ -63,6 +63,8 @@ class IncidentRenderer extends IUIRenderer {
                         ${incident.is_new ? '<span class="status-badge new">NEW</span>' : ''}
                         ${incident.is_relevant ? '<span class="status-badge relevant">RELEVANT</span>' : ''}
                     </div>
+                </div>
+                <div class="incident-actions">
                     <button class="copy-button" data-incident-id="${incident.id}" title="Copy incident details to clipboard">⧉</button>
                 </div>
                 <div class="incident-type ${typeClass}">${incident.type}</div>
