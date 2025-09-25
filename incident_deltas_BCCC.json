@@ -1,22 +1,22 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T05:42:38.100479",
+  "timestamp": "2025-09-25T05:50:00.336214",
   "new_incidents": [
+    {
+      "id": "0887",
+      "time": "10:46 PM",
+      "type": "Traffic Hazard",
+      "location": "Highland Valley Rd / Sr67",
+      "location_desc": "WB",
+      "area": "El Cajon"
+    },
     {
       "id": "0881",
       "time": "10:31 PM",
       "type": "Assist with Construction",
       "location": "I5 N / CLAIREMONT NO (E MISSION BAY)",
       "location_desc": "TIL 0500",
-      "area": "San Diego"
-    },
-    {
-      "id": "0878",
-      "time": "10:25 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Balboa No (tierrasanta)",
-      "location_desc": "",
       "area": "San Diego"
     },
     {

@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 37,
+  "total_incidents": 38,
   "incidents": [
     {
       "id": "0262",
@@ -299,7 +299,15 @@
       "location": "I15 N / Friars",
       "location_desc": "I15 N FRIARS",
       "area": "San Diego"
+    },
+    {
+      "id": "0887",
+      "time": "10:46 PM",
+      "type": "Traffic Hazard",
+      "location": "Highland Valley Rd / Sr67",
+      "location_desc": "WB",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-25T05:42:38.101002"
+  "last_updated": "2025-09-25T05:50:00.336835"
 }
