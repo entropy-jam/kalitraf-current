@@ -1,7 +1,7 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T19:24:50.328568",
+  "timestamp": "2025-09-25T19:31:56.813456",
   "new_incidents": [
     {
       "id": "0337",
@@ -10,7 +10,7 @@
       "location": "I8 E / College Wo",
       "location_desc": "",
       "area": "San Diego",
-      "details": "12:20 PM: 11 | 12:20 PM: 10 | 12:20 PM: 9 | 12:19 PM: 8 | 12:19 PM: 7 | 12:19 PM: 6 | 12:19 PM: 5 | 12:19 PM: 4 | 12:19 PM: 3 | 12:18 PM: 2 | 12:18 PM: 1 | 12:23 PM: 1",
+      "details": "12:28 PM: 12 | 12:20 PM: 11 | 12:20 PM: 10 | 12:20 PM: 9 | 12:19 PM: 8 | 12:19 PM: 7 | 12:19 PM: 6 | 12:19 PM: 5 | 12:19 PM: 4 | 12:19 PM: 3 | 12:18 PM: 2 | 12:18 PM: 1 | 12:23 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -25,52 +25,7 @@
       "location": "I15 S / Carroll Canyon No",
       "location_desc": "I15 S CARROLL CANYON NO",
       "area": "San Diego",
-      "details": "12:18 PM: 1 | 12:21 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0340",
-      "time": "12:13 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "I215 N So / Newport Rd",
-      "location_desc": "I215 N SO NEWPORT RD",
-      "area": "Temecula",
-      "details": "12:20 PM: 2 | 12:14 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0326",
-      "time": "11:59 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr125 S / Otay Lakes No",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": false
-    },
-    {
-      "id": "0327",
-      "time": "11:58 AM",
-      "type": "Traffic Hazard",
-      "location": "I805 S / Sorrento Valley No (mira Mesa)",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "12:00 PM: 1 | 12:03 PM: 2 | 12:03 PM: 1",
+      "details": "12:27 PM: 3 | 12:25 PM: 2 | 12:18 PM: 1 | 12:21 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -85,22 +40,7 @@
       "location": "I5 N / Sr78 No (vista Wy)",
       "location_desc": "I5 N SR78 NO (VISTA WY)",
       "area": "Oceanside",
-      "details": "11:47 AM: 3 | 11:42 AM: 2 | 11:42 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0273",
-      "time": "10:49 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Santa Fe So",
-      "location_desc": "I5 N SANTA FE SO",
-      "area": "Oceanside",
-      "details": "10:54 AM: 3 | 10:53 AM: 2 | 10:50 AM: 1 | 12:07 PM: 1",
+      "details": "11:47 AM: 3 | 11:42 AM: 2 | 11:42 AM: 1 | 12:30 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -116,21 +56,6 @@
       "location_desc": "SR78 W I5",
       "area": "Oceanside",
       "details": "10:41 AM: 2 | 10:40 AM: 1 | 11:46 AM: 3 | 11:39 AM: 2 | 11:38 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0260",
-      "time": "10:22 AM",
-      "type": "SIG Alert",
-      "location": "I5 N / Sr78 No (vista Wy)",
-      "location_desc": "",
-      "area": "Oceanside",
-      "details": "10:26 AM: 3 | 10:24 AM: 2 | 10:24 AM: 1 | 10:24 AM: 3 | 10:24 AM: 2 | 10:24 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -395,6 +320,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 26,
+  "new_count": 21,
   "removed_count": 0
 }
