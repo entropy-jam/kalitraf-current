@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "chp-traffic-scraper",
   "builds": [
     {
       "src": "index.html",
@@ -21,12 +20,6 @@
     {
       "src": "active_incidents.json",
       "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
     }
   ],
   "headers": [
