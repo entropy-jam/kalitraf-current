@@ -1,23 +1,8 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 22,
+  "incident_count": 20,
   "incidents": [
-    {
-      "id": "0357",
-      "time": "12:42 PM",
-      "type": "Request CalTrans Notify",
-      "location": "Sr78 W / El Camino Real Wo",
-      "location_desc": "",
-      "area": "Oceanside",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": false
-    },
     {
       "id": "0337",
       "time": "12:18 PM",
@@ -30,7 +15,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -45,7 +30,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -60,7 +45,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -75,7 +60,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -90,7 +75,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -105,7 +90,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -120,7 +105,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -135,7 +120,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -150,7 +135,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -165,7 +150,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -180,7 +165,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -195,7 +180,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -210,7 +195,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -225,7 +210,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -240,22 +225,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
-      "is_relevant": false
-    },
-    {
-      "id": "0072",
-      "time": "5:21 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Sr76 / Pauma Valley Dr",
-      "location_desc": "",
-      "area": "Oceanside",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -270,7 +240,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -285,7 +255,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -300,7 +270,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -315,7 +285,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -330,9 +300,9 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T19:46:59.775893"
+  "last_updated": "2025-09-25T19:53:55.275961"
 }
