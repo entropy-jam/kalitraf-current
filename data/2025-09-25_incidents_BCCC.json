@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 156,
+  "total_incidents": 158,
   "incidents": [
     {
       "id": "0262",
@@ -1678,7 +1678,37 @@
       },
       "is_new": true,
       "is_relevant": true
+    },
+    {
+      "id": "0466",
+      "time": "2:48 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / College Eo",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "2:50 PM: 3 | 2:50 PM: 2",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0464",
+      "time": "2:45 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Nutmeg No",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "2:46 PM: 1 | 2:49 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T21:48:24.458868"
+  "last_updated": "2025-09-25T21:55:26.922290"
 }

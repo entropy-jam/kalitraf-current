@@ -1,22 +1,37 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T21:48:24.457871",
+  "timestamp": "2025-09-25T21:55:26.921332",
   "new_incidents": [
     {
-      "id": "0460",
-      "time": "2:44 PM",
-      "type": "SPINOUT",
-      "location": "I8 E / Mollison",
-      "location_desc": "I8 E MOLLISON",
-      "area": "El Cajon",
-      "details": "",
+      "id": "0466",
+      "time": "2:48 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / College Eo",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "2:50 PM: 3 | 2:50 PM: 2",
       "lane_blockage": {
-        "status": "unknown",
+        "status": "no_blockage",
         "details": []
       },
       "is_new": true,
-      "is_relevant": false
+      "is_relevant": true
+    },
+    {
+      "id": "0464",
+      "time": "2:45 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Nutmeg No",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "2:46 PM: 1 | 2:49 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     },
     {
       "id": "0455",
@@ -26,36 +41,6 @@
       "location_desc": "",
       "area": "San Diego",
       "details": "2:47 PM: 2 | 2:41 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0188",
-      "time": "2:36 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Sr163",
-      "location_desc": "I15 S SR163",
-      "area": "North FSP",
-      "details": "2:36 PM: 1 | 2:36 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
-      "id": "0450",
-      "time": "2:35 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Sr163",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "2:36 PM: 1 | 2:38 PM: 2 | 2:38 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -167,6 +152,21 @@
       },
       "is_new": false,
       "is_relevant": false
+    },
+    {
+      "id": "0393",
+      "time": "1:34 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Cannon No",
+      "location_desc": "I5 N CANNON NO",
+      "area": "Oceanside",
+      "details": "2:48 PM: 8 | 1:50 PM: 7 | 1:48 PM: 6 | 1:38 PM: 5 | 1:37 PM: 4 | 1:36 PM: 3 | 1:36 PM: 2 | 1:36 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     },
     {
       "id": "0246",
