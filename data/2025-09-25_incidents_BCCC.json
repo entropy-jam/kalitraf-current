@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 31,
+  "total_incidents": 37,
   "incidents": [
     {
       "id": "0262",
@@ -251,7 +251,55 @@
       "location": "Dehesa Rd / Harbison Canyon Rd",
       "location_desc": "I/S",
       "area": "El Cajon"
+    },
+    {
+      "id": "0881",
+      "time": "10:31 PM",
+      "type": "Assist with Construction",
+      "location": "I5 N / CLAIREMONT NO (E MISSION BAY)",
+      "location_desc": "TIL 0500",
+      "area": "San Diego"
+    },
+    {
+      "id": "0878",
+      "time": "10:25 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Balboa No (tierrasanta)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0866",
+      "time": "9:53 PM",
+      "type": "Assist with Construction",
+      "location": "I15 S / Rancho California So",
+      "location_desc": "I15 S RANCHO CALIFORNIA SO",
+      "area": "Temecula"
+    },
+    {
+      "id": "0860",
+      "time": "9:49 PM",
+      "type": "Assist with Construction",
+      "location": "I15 N / Rancho California No",
+      "location_desc": "I15 N RANCHO CALIFORNIA NO",
+      "area": "Temecula"
+    },
+    {
+      "id": "0850",
+      "time": "9:44 PM",
+      "type": "Fatality",
+      "location": "San Vicente Rd / Gunn Stage Rd",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0842",
+      "time": "9:29 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I15 N / Friars",
+      "location_desc": "I15 N FRIARS",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-25T04:24:33.513175"
+  "last_updated": "2025-09-25T05:42:38.101002"
 }
