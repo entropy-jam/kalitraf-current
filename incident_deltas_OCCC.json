@@ -1,14 +1,22 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "timestamp": "2025-09-25T07:47:25.465324",
+  "timestamp": "2025-09-25T08:49:38.132715",
   "new_incidents": [
     {
-      "id": "0017",
-      "time": "12:21 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "2323 N Broadway",
-      "location_desc": "RANCHO SANTIAGO COMM COLLEGE PLOT",
+      "id": "0037",
+      "time": "1:41 AM",
+      "type": "Traffic Hazard",
+      "location": "Tl91 W At / Sr55",
+      "location_desc": "WB 91 AT SB 55 - FT LNS",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0025",
+      "time": "1:13 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I405 S / Harbor Blvd",
+      "location_desc": "JNO",
       "area": "Santa Ana"
     },
     {
@@ -61,6 +69,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 7,
+  "new_count": 8,
   "removed_count": 0
 }
