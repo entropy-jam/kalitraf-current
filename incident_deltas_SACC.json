@@ -1,8 +1,32 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-25T14:49:13.785226",
+  "timestamp": "2025-09-25T14:56:25.250078",
   "new_incidents": [
+    {
+      "id": "0022",
+      "time": "7:48 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr51 N / Jso Arb",
+      "location_desc": "NB 51 JSO AMERICAN RIVER BRIDGE",
+      "area": "South Sac FSP"
+    },
+    {
+      "id": "0194",
+      "time": "7:47 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr51 N / Jso Arb",
+      "location_desc": "NB 51 JSO AMERICAN RIVER BRIDGE",
+      "area": "South Sac"
+    },
+    {
+      "id": "0195",
+      "time": "7:46 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "College Oak Dr / Willow Rock Way",
+      "location_desc": "SB JMO",
+      "area": "North Sac"
+    },
     {
       "id": "0191",
       "time": "7:40 AM",
@@ -101,6 +125,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 12,
+  "new_count": 15,
   "removed_count": 0
 }
