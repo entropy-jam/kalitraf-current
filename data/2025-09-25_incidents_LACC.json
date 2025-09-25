@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 80,
+  "total_incidents": 83,
   "incidents": [
     {
       "id": "1878",
@@ -643,7 +643,31 @@
       "location": "E Avenue M / 50th St E",
       "location_desc": "50TH JSO AVENUE M",
       "area": "Antelope Valley"
+    },
+    {
+      "id": "0149",
+      "time": "3:33 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr14 S / Golden Valley Rd",
+      "location_desc": "SB 14 JSO GOLDEN VALLEY",
+      "area": "Newhall"
+    },
+    {
+      "id": "0139",
+      "time": "3:26 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "SR14 S / Placerita Canyon Rd",
+      "location_desc": "SB JNO PLACERITA",
+      "area": "Newhall"
+    },
+    {
+      "id": "0127",
+      "time": "2:55 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "SR14 S / ESCONDIDO CANYON RD",
+      "location_desc": "SB 14 JNO ESCONDIDO",
+      "area": "Newhall"
     }
   ],
-  "last_updated": "2025-09-25T09:50:17.183024"
+  "last_updated": "2025-09-25T10:35:52.760393"
 }
