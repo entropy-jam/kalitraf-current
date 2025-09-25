@@ -1,16 +1,8 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "incident_count": 11,
+  "incident_count": 9,
   "incidents": [
-    {
-      "id": "0018",
-      "time": "12:46 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Rio Linda Blvd / E St",
-      "location_desc": "A I/S",
-      "area": "North Sac"
-    },
     {
       "id": "1188",
       "time": "11:54 PM",
@@ -20,19 +12,11 @@
       "area": "North Sac"
     },
     {
-      "id": "1186",
-      "time": "11:50 PM",
-      "type": "Traffic Hazard",
-      "location": "I80 E / Greenback Ln",
-      "location_desc": "EB 80 ON GB OFF",
-      "area": "North Sac"
-    },
-    {
       "id": "1176",
       "time": "11:43 PM",
       "type": "Trfc Collision-No Inj",
       "location": "Manzanita Ave / Madison Ave",
-      "location_desc": "IN I/S",
+      "location_desc": "IN I/S **180**",
       "area": "North Sac"
     },
     {
@@ -92,5 +76,5 @@
       "area": "South Sac"
     }
   ],
-  "last_updated": "2025-09-25T07:54:05.220421"
+  "last_updated": "2025-09-25T08:33:38.925713"
 }
