@@ -1,16 +1,8 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "incident_count": 6,
+  "incident_count": 5,
   "incidents": [
-    {
-      "id": "0025",
-      "time": "1:13 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I405 S / Harbor Blvd",
-      "location_desc": "JNO",
-      "area": "Santa Ana"
-    },
     {
       "id": "0002",
       "time": "12:00 AM",
@@ -52,5 +44,5 @@
       "area": "Westminster"
     }
   ],
-  "last_updated": "2025-09-25T09:43:43.864920"
+  "last_updated": "2025-09-25T09:57:19.210530"
 }
