@@ -1,15 +1,87 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 17,
+  "incident_count": 22,
   "incidents": [
     {
-      "id": "0109",
-      "time": "6:55 AM",
+      "id": "0158",
+      "time": "8:12 AM",
       "type": "Trfc Collision-No Inj",
-      "location": "I5 N / Harbor So (ocn)",
-      "location_desc": "I5 N HARBOR SO (OCN)",
+      "location": "Sr15 N / Sr15 N I805 N Con",
+      "location_desc": "15 NB CON TO NB 805",
+      "area": "San Diego"
+    },
+    {
+      "id": "0156",
+      "time": "8:08 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / W Bernardo So (pomerado)",
+      "location_desc": "NB 15 JSO LAKE HODGES",
+      "area": "San Diego"
+    },
+    {
+      "id": "0150",
+      "time": "8:00 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Alpine Blvd / E Victoria Dr",
+      "location_desc": "I/S",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0144",
+      "time": "7:56 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sandia Creek Dr / Corte Vonnie",
+      "location_desc": "APPROX 500' JSO",
+      "area": "Temecula"
+    },
+    {
+      "id": "0142",
+      "time": "7:56 AM",
+      "type": "Traffic Break",
+      "location": "I15 S / CITRACADO (FELICITA)",
+      "location_desc": "Citracado Pkwy and Miller Ave",
       "area": "Oceanside"
+    },
+    {
+      "id": "0137",
+      "time": "7:53 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "I8 W / Johnson",
+      "location_desc": "TIL 1530",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0140",
+      "time": "7:51 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I8 E / Williams",
+      "location_desc": "EB 8 AT WILLIAMS",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0069",
+      "time": "7:43 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Clairemont So (e Mission Bay)",
+      "location_desc": "I5 N CLAIREMONT SO (E MISSION BAY)",
+      "area": "North FSP"
+    },
+    {
+      "id": "0134",
+      "time": "7:41 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Clairemont So (e Mission Bay)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0118",
+      "time": "7:08 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "8502 Railroad Ave",
+      "location_desc": "CALTRANS SANTEE",
+      "area": "El Cajon"
     },
     {
       "id": "0105",
@@ -18,30 +90,6 @@
       "location": "I15 S / California Oaks (kalmia)",
       "location_desc": "TIL 1400",
       "area": "Temecula"
-    },
-    {
-      "id": "0106",
-      "time": "6:47 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I805 N / MARKET ST OFR",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0039",
-      "time": "6:35 AM",
-      "type": "Trfc Collision-1141Enrt",
-      "location": "I5 N / 28th St",
-      "location_desc": "",
-      "area": "South FSP"
-    },
-    {
-      "id": "0098",
-      "time": "6:33 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I5 N / 28th St",
-      "location_desc": "",
-      "area": "San Diego"
     },
     {
       "id": "0097",
@@ -130,15 +178,7 @@
       "location": "Sr75 / Adella Ave",
       "location_desc": "NB SR-75 BTWN ADELLA and B ST",
       "area": "BC"
-    },
-    {
-      "id": "0780",
-      "time": "7:37 PM",
-      "type": "Assist with Construction",
-      "location": "Sr76 / I15 Wo",
-      "location_desc": "TIL 0500",
-      "area": "Oceanside"
     }
   ],
-  "last_updated": "2025-09-25T13:57:49.922208"
+  "last_updated": "2025-09-25T15:14:32.750297"
 }
