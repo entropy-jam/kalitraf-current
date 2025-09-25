@@ -1,14 +1,86 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "timestamp": "2025-09-25T04:55:52.675833",
+  "timestamp": "2025-09-25T05:12:28.190434",
   "new_incidents": [
+    {
+      "id": "2079",
+      "time": "10:07 PM",
+      "type": "Assist with Construction",
+      "location": "I110 S / W Florence Ave Onr",
+      "location_desc": "FLORANCE ONR TO SB 110",
+      "area": "Central LA"
+    },
+    {
+      "id": "2078",
+      "time": "10:05 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Alvarado St Onr",
+      "location_desc": "ALVARADO ST ONR TO NB 101",
+      "area": "Central LA"
+    },
+    {
+      "id": "2081",
+      "time": "10:04 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us101 W / Colfax Ave",
+      "location_desc": "LAUREL CANYON JNO 101 -",
+      "area": "West Valley"
+    },
+    {
+      "id": "2070",
+      "time": "10:01 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "E Palmdale Blvd / 70th St E",
+      "location_desc": "",
+      "area": "Antelope Valley"
+    },
+    {
+      "id": "2072",
+      "time": "10:00 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I405 S / Avalon Blvd Onr",
+      "location_desc": "AVALON ONR TO SB 405",
+      "area": "South LA"
+    },
+    {
+      "id": "2073",
+      "time": "9:58 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "W Avenue G / William Barnes Ave",
+      "location_desc": "JNO",
+      "area": "LA"
+    },
+    {
+      "id": "2069",
+      "time": "9:58 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "18506 Mescal St",
+      "location_desc": "",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "2067",
+      "time": "9:58 PM",
+      "type": "Report of Fire",
+      "location": "I110 N / W El Segundo Blvd Ofr",
+      "location_desc": "",
+      "area": "South LA"
+    },
+    {
+      "id": "2065",
+      "time": "9:56 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "1601 Corporate Center Dr",
+      "location_desc": "EAST LOS ANGELES CHP",
+      "area": "LA"
+    },
     {
       "id": "2063",
       "time": "9:53 PM",
       "type": "Traffic Hazard",
-      "location": "I405 S / Wilmington Ave Ofr",
-      "location_desc": "SB JNO",
+      "location": "I405 S / AVALON BLVD OFR",
+      "location_desc": "SB 405 AT AVALON",
       "area": "South LA"
     },
     {
@@ -32,7 +104,7 @@
       "time": "9:49 PM",
       "type": "Trfc Collision-Unkn Inj",
       "location": "I110 N / W 3rd St",
-      "location_desc": "I110 N / W 3RD ST",
+      "location_desc": "NB 110 JSO 7TH",
       "area": "Central LA"
     },
     {
@@ -55,8 +127,8 @@
       "id": "2049",
       "time": "9:44 PM",
       "type": "Traffic Hazard",
-      "location": "Sr110 N / W 6th St",
-      "location_desc": "NB 110 JSO 6TH",
+      "location": "SR110 N / 8TH ST ONR",
+      "location_desc": "NB 110 AT 6TH ST",
       "area": "Central LA"
     },
     {
@@ -96,7 +168,7 @@
       "time": "9:31 PM",
       "type": "Assist with Construction",
       "location": "SR110 S / YORK BLVD",
-      "location_desc": "EAST LOS ANGELES CHP",
+      "location_desc": "SB 110 AT YORK TO AVENUE 52",
       "area": "Central LA"
     },
     {
@@ -124,28 +196,12 @@
       "area": "South LA"
     },
     {
-      "id": "2019",
-      "time": "9:22 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "750 W Doran St",
-      "location_desc": "POI NB 5 JSO 134 BT 98-50",
-      "area": "Altadena"
-    },
-    {
       "id": "2005",
       "time": "9:12 PM",
       "type": "Assist CT with Maintenance",
       "location": "I5 N / I5 N Sr14 Con",
       "location_desc": "",
       "area": "Newhall"
-    },
-    {
-      "id": "2007",
-      "time": "9:11 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "W Washington Blvd / Sawtelle Blvd",
-      "location_desc": "7/11 P/LOT",
-      "area": "West LA"
     },
     {
       "id": "1998",
@@ -212,22 +268,6 @@
       "area": "Baldwin Park"
     },
     {
-      "id": "1901",
-      "time": "8:16 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr91 W I710 Con / I710 S",
-      "location_desc": "WB 91 TO SB 710 CON",
-      "area": "South LA"
-    },
-    {
-      "id": "1893",
-      "time": "8:10 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Angeles Forest Hwy / Mm 23.46",
-      "location_desc": "ANGELES FOREST HWY / MM 23.46",
-      "area": "Altadena"
-    },
-    {
       "id": "1817",
       "time": "7:27 PM",
       "type": "Assist with Construction",
@@ -277,6 +317,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 34,
+  "new_count": 39,
   "removed_count": 0
 }

@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 54,
+  "total_incidents": 63,
   "incidents": [
     {
       "id": "1878",
@@ -435,7 +435,79 @@
       "location": "I405 S / Rinaldi St",
       "location_desc": "SB 405 JSO RINALDI",
       "area": "Newhall"
+    },
+    {
+      "id": "2079",
+      "time": "10:07 PM",
+      "type": "Assist with Construction",
+      "location": "I110 S / W Florence Ave Onr",
+      "location_desc": "FLORANCE ONR TO SB 110",
+      "area": "Central LA"
+    },
+    {
+      "id": "2078",
+      "time": "10:05 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Alvarado St Onr",
+      "location_desc": "ALVARADO ST ONR TO NB 101",
+      "area": "Central LA"
+    },
+    {
+      "id": "2081",
+      "time": "10:04 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us101 W / Colfax Ave",
+      "location_desc": "LAUREL CANYON JNO 101 -",
+      "area": "West Valley"
+    },
+    {
+      "id": "2070",
+      "time": "10:01 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "E Palmdale Blvd / 70th St E",
+      "location_desc": "",
+      "area": "Antelope Valley"
+    },
+    {
+      "id": "2072",
+      "time": "10:00 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I405 S / Avalon Blvd Onr",
+      "location_desc": "AVALON ONR TO SB 405",
+      "area": "South LA"
+    },
+    {
+      "id": "2073",
+      "time": "9:58 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "W Avenue G / William Barnes Ave",
+      "location_desc": "JNO",
+      "area": "LA"
+    },
+    {
+      "id": "2069",
+      "time": "9:58 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "18506 Mescal St",
+      "location_desc": "",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "2067",
+      "time": "9:58 PM",
+      "type": "Report of Fire",
+      "location": "I110 N / W El Segundo Blvd Ofr",
+      "location_desc": "",
+      "area": "South LA"
+    },
+    {
+      "id": "2065",
+      "time": "9:56 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "1601 Corporate Center Dr",
+      "location_desc": "EAST LOS ANGELES CHP",
+      "area": "LA"
     }
   ],
-  "last_updated": "2025-09-25T04:55:52.676490"
+  "last_updated": "2025-09-25T05:12:28.191202"
 }
