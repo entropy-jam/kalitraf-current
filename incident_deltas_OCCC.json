@@ -1,7 +1,7 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "timestamp": "2025-09-25T07:40:30.441849",
+  "timestamp": "2025-09-25T07:47:25.465324",
   "new_incidents": [
     {
       "id": "0017",
@@ -10,14 +10,6 @@
       "location": "2323 N Broadway",
       "location_desc": "RANCHO SANTIAGO COMM COLLEGE PLOT",
       "area": "Santa Ana"
-    },
-    {
-      "id": "0015",
-      "time": "12:18 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "0 Euclid St Ofr",
-      "location_desc": "MAPPING WB 22 JWO NEWHOPE",
-      "area": "Westminster"
     },
     {
       "id": "0010",
@@ -69,6 +61,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 8,
+  "new_count": 7,
   "removed_count": 0
 }
