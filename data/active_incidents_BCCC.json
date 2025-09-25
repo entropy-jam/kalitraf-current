@@ -1,8 +1,38 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 25,
+  "incident_count": 26,
   "incidents": [
+    {
+      "id": "0273",
+      "time": "10:49 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Santa Fe So",
+      "location_desc": "I5 N SANTA FE SO",
+      "area": "Oceanside",
+      "details": "10:50 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0271",
+      "time": "10:42 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr905 E / Picador Blvd Onr",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
     {
       "id": "0270",
       "time": "10:38 AM",
@@ -19,28 +49,13 @@
       "is_relevant": true
     },
     {
-      "id": "0265",
-      "time": "10:30 AM",
-      "type": "Traffic Hazard",
-      "location": "I8 E / Sunset Cliffs Eo (nimitz)",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "10:33 AM: 2 | 10:31 AM: 1 | 10:32 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
       "id": "0263",
       "time": "10:25 AM",
       "type": "Hit and Run No Injuries",
       "location": "SR15 S / I805",
       "location_desc": "",
       "area": "San Diego",
-      "details": "10:31 AM: 3 | 10:31 AM: 2",
+      "details": "10:49 AM: 4 | 10:31 AM: 3 | 10:31 AM: 2",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -70,7 +85,7 @@
       "location": "I5 N / Oceanside Blvd Ofr",
       "location_desc": "",
       "area": "North FSP",
-      "details": "10:20 AM: 5 | 10:01 AM: 4 | 9:55 AM: 3 | 9:41 AM: 2 | 9:37 AM: 1 | 10:16 AM: 1",
+      "details": "10:20 AM: 5 | 10:01 AM: 4 | 9:55 AM: 3 | 9:41 AM: 2 | 9:37 AM: 1 | 10:49 AM: 3 | 10:49 AM: 2 | 10:16 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -100,7 +115,7 @@
       "location": "Sr15 S / I805 S Sr15 S Con",
       "location_desc": "SB TO SB CON",
       "area": "South FSP",
-      "details": "10:29 AM: 2 | 10:10 AM: 1 | 10:41 AM: 7 | 10:29 AM: 6 | 10:21 AM: 5 | 10:20 AM: 4 | 10:20 AM: 3 | 10:19 AM: 2 | 10:18 AM: 1",
+      "details": "10:29 AM: 2 | 10:10 AM: 1 | 10:50 AM: 9 | 10:46 AM: 8 | 10:41 AM: 7 | 10:29 AM: 6 | 10:21 AM: 5 | 10:20 AM: 4 | 10:20 AM: 3 | 10:19 AM: 2 | 10:18 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -379,5 +394,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T17:45:16.290235"
+  "last_updated": "2025-09-25T17:52:09.559831"
 }

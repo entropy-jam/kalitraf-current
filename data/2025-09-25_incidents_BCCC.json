@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 112,
+  "total_incidents": 114,
   "incidents": [
     {
       "id": "0262",
@@ -1018,7 +1018,37 @@
       },
       "is_new": true,
       "is_relevant": true
+    },
+    {
+      "id": "0273",
+      "time": "10:49 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Santa Fe So",
+      "location_desc": "I5 N SANTA FE SO",
+      "area": "Oceanside",
+      "details": "10:50 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0271",
+      "time": "10:42 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr905 E / Picador Blvd Onr",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T17:45:16.292530"
+  "last_updated": "2025-09-25T17:52:09.562325"
 }
