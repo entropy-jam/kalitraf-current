@@ -1,8 +1,53 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 24,
+  "incident_count": 26,
   "incidents": [
+    {
+      "id": "0172",
+      "time": "1:39 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Centre City Pkwy Ofr",
+      "location_desc": "CCP SOUTH OFR",
+      "area": "North FSP",
+      "details": "1:39 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0400",
+      "time": "1:38 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Santa Margarita River No",
+      "location_desc": "*1125R*",
+      "area": "Oceanside",
+      "details": "1:41 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0398",
+      "time": "1:38 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Centre City Pkwy Ofr",
+      "location_desc": "CCP SOUTH OFR",
+      "area": "Oceanside",
+      "details": "1:39 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
     {
       "id": "0170",
       "time": "1:36 PM",
@@ -15,7 +60,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -30,7 +75,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -38,14 +83,14 @@
       "time": "1:34 PM",
       "type": "Traffic Hazard",
       "location": "I15 S / Camino Del Norte No",
-      "location_desc": "I15 S CAMINO DEL NORTE NO",
+      "location_desc": "",
       "area": "San Diego",
       "details": "1:36 PM: 2 | 1:34 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -60,7 +105,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -75,7 +120,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -90,7 +135,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -116,21 +161,6 @@
       "location_desc": "ONE MILE NO",
       "area": "San Diego",
       "details": "1:19 PM: 1 | 1:19 PM: 2 | 1:19 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
-      "id": "0364",
-      "time": "1:00 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I15 N / Friars So",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "1:02 PM: 5 | 1:02 PM: 4 | 1:02 PM: 3 | 1:02 PM: 2 | 1:01 PM: 1 | 1:23 PM: 3 | 1:23 PM: 2 | 1:05 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -364,5 +394,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T20:37:45.875596"
+  "last_updated": "2025-09-25T20:44:07.519171"
 }

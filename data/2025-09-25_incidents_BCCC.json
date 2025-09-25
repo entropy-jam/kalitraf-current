@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 139,
+  "total_incidents": 141,
   "incidents": [
     {
       "id": "0262",
@@ -1423,7 +1423,37 @@
       },
       "is_new": true,
       "is_relevant": true
+    },
+    {
+      "id": "0400",
+      "time": "1:38 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Santa Margarita River No",
+      "location_desc": "*1125R*",
+      "area": "Oceanside",
+      "details": "1:41 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0398",
+      "time": "1:38 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Centre City Pkwy Ofr",
+      "location_desc": "CCP SOUTH OFR",
+      "area": "Oceanside",
+      "details": "1:39 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T20:37:45.877953"
+  "last_updated": "2025-09-25T20:44:07.521790"
 }
