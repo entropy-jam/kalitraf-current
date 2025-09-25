@@ -1,8 +1,23 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 21,
+  "incident_count": 22,
   "incidents": [
+    {
+      "id": "0357",
+      "time": "12:42 PM",
+      "type": "Request CalTrans Notify",
+      "location": "Sr78 W / El Camino Real Wo",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
     {
       "id": "0337",
       "time": "12:18 PM",
@@ -40,7 +55,7 @@
       "location": "I5 N / Sr78 No (vista Wy)",
       "location_desc": "I5 N SR78 NO (VISTA WY)",
       "area": "Oceanside",
-      "details": "11:47 AM: 3 | 11:42 AM: 2 | 11:42 AM: 1 | 12:30 PM: 1",
+      "details": "12:40 PM: 4 | 11:47 AM: 3 | 11:42 AM: 2 | 11:42 AM: 1 | 12:30 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -319,5 +334,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T19:31:56.807081"
+  "last_updated": "2025-09-25T19:46:59.775893"
 }
