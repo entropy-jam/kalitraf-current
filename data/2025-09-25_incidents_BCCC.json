@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 88,
+  "total_incidents": 92,
   "incidents": [
     {
       "id": "0262",
@@ -707,7 +707,39 @@
       "location": "I5 S / Leucadia No",
       "location_desc": "I5 S LEUCADIA NO",
       "area": "Oceanside"
+    },
+    {
+      "id": "0214",
+      "time": "9:18 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "3956 Rogers Rd",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0206",
+      "time": "9:12 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Las Pulgas So",
+      "location_desc": "I5 N LAS PULGAS SO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0207",
+      "time": "9:12 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Central Ave Ofr",
+      "location_desc": "I15 N / CENTRAL AVE OFR",
+      "area": "Temecula"
+    },
+    {
+      "id": "0111",
+      "time": "9:12 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Rancho Bernardo",
+      "location_desc": "I15 N RANCHO BERNARDO SO",
+      "area": "North FSP"
     }
   ],
-  "last_updated": "2025-09-25T15:59:20.698860"
+  "last_updated": "2025-09-25T16:24:51.869798"
 }

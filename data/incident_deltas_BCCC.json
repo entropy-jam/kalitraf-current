@@ -1,22 +1,38 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T15:59:20.696990",
+  "timestamp": "2025-09-25T16:24:51.868112",
   "new_incidents": [
     {
-      "id": "0196",
-      "time": "8:54 AM",
+      "id": "0214",
+      "time": "9:18 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "3956 Rogers Rd",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0206",
+      "time": "9:12 AM",
       "type": "Traffic Hazard",
-      "location": "25721 Jesmond Dene Rd",
-      "location_desc": "1/2 TO 1 MILE JWO",
+      "location": "I5 N / Las Pulgas So",
+      "location_desc": "I5 N LAS PULGAS SO",
       "area": "Oceanside"
     },
     {
-      "id": "0102",
-      "time": "8:53 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 S / Leucadia No",
-      "location_desc": "I5 S LEUCADIA NO",
+      "id": "0207",
+      "time": "9:12 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Central Ave Ofr",
+      "location_desc": "I15 N / CENTRAL AVE OFR",
+      "area": "Temecula"
+    },
+    {
+      "id": "0111",
+      "time": "9:12 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Rancho Bernardo",
+      "location_desc": "I15 N RANCHO BERNARDO SO",
       "area": "North FSP"
     },
     {
@@ -31,8 +47,8 @@
       "id": "0187",
       "time": "8:45 AM",
       "type": "Trfc Collision-1141 Enrt",
-      "location": "3558 La Posta Truck Trl",
-      "location_desc": "",
+      "location": "La Posta Truck Trl / Old Highway 80",
+      "location_desc": "La Posta Truck Trl APPROX 2 MI JNO Old Highway 80",
       "area": "El Cajon"
     },
     {
@@ -40,62 +56,6 @@
       "time": "8:37 AM",
       "type": "Trfc Collision-1141 Enrt",
       "location": "Sr56 W / Camino Del Sur Wo",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0178",
-      "time": "8:36 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Carmel Mountain So (bypass)",
-      "location_desc": "NB 5 JSO CARMEL MTN - IN BYPASS",
-      "area": "San Diego"
-    },
-    {
-      "id": "0177",
-      "time": "8:35 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / H St",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0094",
-      "time": "8:30 AM",
-      "type": "Traffic Hazard",
-      "location": "I805 S / El Cajon No",
-      "location_desc": "I805 S EL CAJON NO",
-      "area": "South FSP"
-    },
-    {
-      "id": "0172",
-      "time": "8:30 AM",
-      "type": "Traffic Hazard",
-      "location": "I805 S / El Cajon No",
-      "location_desc": "I805 S EL CAJON NO",
-      "area": "San Diego"
-    },
-    {
-      "id": "0174",
-      "time": "8:27 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "16055 Winecreek Rd",
-      "location_desc": "OAK VALLEY MIDDLE SCHOOL",
-      "area": "San Diego"
-    },
-    {
-      "id": "0167",
-      "time": "8:25 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I215 S / Clinton Keith So",
-      "location_desc": "I215 S CLINTON KEITH SO",
-      "area": "Temecula"
-    },
-    {
-      "id": "0158",
-      "time": "8:12 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr15 N / Sr15 N I805 N Con",
       "location_desc": "",
       "area": "San Diego"
     },
@@ -221,6 +181,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 27,
+  "new_count": 22,
   "removed_count": 0
 }
