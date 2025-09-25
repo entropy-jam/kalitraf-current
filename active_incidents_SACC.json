@@ -4,20 +4,36 @@
   "incident_count": 13,
   "incidents": [
     {
-      "id": "1102",
-      "time": "8:49 PM",
+      "id": "1123",
+      "time": "9:36 PM",
       "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr174 / Brunswick Rd",
-      "location_desc": "SB 174 AT",
-      "area": "Grass Valley"
+      "location": "Us50 E / Jwo 99",
+      "location_desc": "JWO",
+      "area": "South Sac"
     },
     {
-      "id": "1079",
-      "time": "8:18 PM",
+      "id": "1125",
+      "time": "9:35 PM",
       "type": "Trfc Collision-Unkn Inj",
-      "location": "Golden Gate Ave / Hazel Ave",
-      "location_desc": "AT I/S",
-      "area": "East Sac"
+      "location": "7700 - 8481 Sr16",
+      "location_desc": "",
+      "area": "Woodland"
+    },
+    {
+      "id": "1122",
+      "time": "9:35 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr51 S / Jso Marconi Ave",
+      "location_desc": "SB 51 JSO MARCONI",
+      "area": "North Sac"
+    },
+    {
+      "id": "1119",
+      "time": "9:24 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "10371-10471 Combie Rd",
+      "location_desc": "RAPID - COMBIE RD JEO 49",
+      "area": "Grass Valley"
     },
     {
       "id": "1045",
@@ -26,14 +42,6 @@
       "location": "15694 Allison Ranch Rd",
       "location_desc": "PLOT",
       "area": "Grass Valley"
-    },
-    {
-      "id": "1034",
-      "time": "7:25 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Grass Valley Hwy / Lone Star Rd",
-      "location_desc": "NB 49 AT LONE START **180",
-      "area": "Auburn"
     },
     {
       "id": "1030",
@@ -68,14 +76,6 @@
       "area": ""
     },
     {
-      "id": "1016",
-      "time": "7:10 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr51 S / Jno Exposition Blvd",
-      "location_desc": "SB 51 JNO EXPOSITION",
-      "area": "North Sac"
-    },
-    {
       "id": "1012",
       "time": "7:02 PM",
       "type": "Assist with Construction",
@@ -108,5 +108,5 @@
       "area": "South Sac"
     }
   ],
-  "last_updated": "2025-09-25T03:52:50.553245"
+  "last_updated": "2025-09-25T04:39:58.019716"
 }

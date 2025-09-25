@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-25",
-  "total_incidents": 16,
+  "total_incidents": 20,
   "incidents": [
     {
       "id": "1017",
@@ -131,7 +131,39 @@
       "location": "Sr174 / Brunswick Rd",
       "location_desc": "SB 174 AT",
       "area": "Grass Valley"
+    },
+    {
+      "id": "1123",
+      "time": "9:36 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us50 E / Jwo 99",
+      "location_desc": "JWO",
+      "area": "South Sac"
+    },
+    {
+      "id": "1125",
+      "time": "9:35 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "7700 - 8481 Sr16",
+      "location_desc": "",
+      "area": "Woodland"
+    },
+    {
+      "id": "1122",
+      "time": "9:35 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr51 S / Jso Marconi Ave",
+      "location_desc": "SB 51 JSO MARCONI",
+      "area": "North Sac"
+    },
+    {
+      "id": "1119",
+      "time": "9:24 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "10371-10471 Combie Rd",
+      "location_desc": "RAPID - COMBIE RD JEO 49",
+      "area": "Grass Valley"
     }
   ],
-  "last_updated": "2025-09-25T03:52:50.554146"
+  "last_updated": "2025-09-25T04:39:58.020806"
 }
