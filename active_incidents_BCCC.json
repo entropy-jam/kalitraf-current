@@ -1,103 +1,151 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 13,
+  "incident_count": 19,
   "incidents": [
     {
-      "id": "0262",
-      "time": "5:39 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / OLD HWY 395",
-      "location_desc": "IN GP",
-      "area": "BCFSP"
+      "id": "0837",
+      "time": "9:18 PM",
+      "type": "Traffic Break",
+      "location": "I15 S / Miramar Way",
+      "location_desc": "I15 S MIRAMAR WAY",
+      "area": "San Diego"
     },
     {
-      "id": "0669",
-      "time": "5:36 PM",
+      "id": "0834",
+      "time": "9:14 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I8 E / Lake Murray Eo (70th)",
+      "location_desc": "I8 E LAKE MURRAY EO (70TH)",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0833",
+      "time": "9:13 PM",
+      "type": "Defective Traffic Signals",
+      "location": "Sr15 S / Main",
+      "location_desc": "NB",
+      "area": "San Diego"
+    },
+    {
+      "id": "0831",
+      "time": "9:12 PM",
       "type": "Traffic Hazard",
-      "location": "I15 S / Old Hwy 395",
-      "location_desc": "IN GP",
+      "location": "4044 N Bonita St",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0829",
+      "time": "9:11 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I5 S / Main_division (national City)",
+      "location_desc": "I5 S MAIN_DIVISION (NATIONAL CITY)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0822",
+      "time": "9:02 PM",
+      "type": "Assist with Construction",
+      "location": "Sr78 E / I5",
+      "location_desc": "BTWN 5 AND 15",
       "area": "Oceanside"
     },
     {
-      "id": "0667",
-      "time": "5:30 PM",
-      "type": "Provide Traffic Control",
-      "location": "I8 W / Fletcher Wo (baltimore)",
-      "location_desc": "",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0655",
-      "time": "5:27 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Cesar E Chavez No",
-      "location_desc": "I5 N CESAR E CHAVEZ NO",
+      "id": "0814",
+      "time": "8:52 PM",
+      "type": "Assist with Construction",
+      "location": "I805 S / Balboa",
+      "location_desc": "I805 S BALBOA",
       "area": "San Diego"
     },
     {
-      "id": "0649",
-      "time": "5:21 PM",
-      "type": "Report of Fire",
-      "location": "Sr15 N / University",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0654",
-      "time": "5:20 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "12170 Rockcrest Rd",
-      "location_desc": "",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0652",
-      "time": "5:20 PM",
-      "type": "Traffic Hazard",
-      "location": "I805 N / Orange So (olympic So)",
-      "location_desc": "I805 N ORANGE SO (OLYMPIC SO)",
-      "area": "San Diego"
-    },
-    {
-      "id": "0636",
-      "time": "5:09 PM",
-      "type": "Traffic Hazard",
-      "location": "I8 E / Kitchen Creek Eo",
-      "location_desc": "",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0614",
-      "time": "4:44 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I15 N / CITRACADO NO (FELICITA)",
-      "location_desc": "",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0608",
-      "time": "4:24 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "6945 Linda Vista Rd",
-      "location_desc": "McDonald's",
-      "area": "San Diego"
-    },
-    {
-      "id": "0564",
-      "time": "4:00 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "4552 Felton St",
-      "location_desc": "",
+      "id": "0818",
+      "time": "8:48 PM",
+      "type": "Request CalTrans Notify",
+      "location": "Sr75 / Adella Ave",
+      "location_desc": "NB SR-75 BTWN ADELLA and B ST",
       "area": "BC"
     },
     {
-      "id": "0565",
-      "time": "3:59 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "I15 N / Winchester So (sr79)",
-      "location_desc": "I15 N WINCHESTER SO (SR79)",
+      "id": "0811",
+      "time": "8:43 PM",
+      "type": "Defective Traffic Signals",
+      "location": "I5 N / Via De La Valle",
+      "location_desc": "NB and SB I-5 AT VIA DE LA VALLE",
+      "area": "San Diego"
+    },
+    {
+      "id": "0810",
+      "time": "8:41 PM",
+      "type": "Assist with Construction",
+      "location": "I5 N / Cannon",
+      "location_desc": "TIL 0430",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0799",
+      "time": "8:12 PM",
+      "type": "Assist with Construction",
+      "location": "I805 S / Mira Mesa",
+      "location_desc": "I805 S MIRA MESA",
+      "area": "San Diego"
+    },
+    {
+      "id": "0794",
+      "time": "7:56 PM",
+      "type": "Assist with Construction",
+      "location": "I5 N / Las Pulgas Rd Onr",
+      "location_desc": "TIL 0530",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0780",
+      "time": "7:37 PM",
+      "type": "Assist with Construction",
+      "location": "Sr76 / I15 Wo",
+      "location_desc": "TIL 0500",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0762",
+      "time": "7:21 PM",
+      "type": "Assist with Construction",
+      "location": "SR78 E / TWIN OAKS VALLEY RD OFR",
+      "location_desc": "I15 N SR78 SO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0749",
+      "time": "7:03 PM",
+      "type": "Assist with Construction",
+      "location": "I215 N / Newport So",
+      "location_desc": "JSO TIL 0500",
       "area": "Temecula"
+    },
+    {
+      "id": "0746",
+      "time": "6:56 PM",
+      "type": "Assist with Construction",
+      "location": "32107 Sr74",
+      "location_desc": "LOOKOUT - ORTEGA",
+      "area": "Temecula"
+    },
+    {
+      "id": "0739",
+      "time": "6:46 PM",
+      "type": "Assist with Construction",
+      "location": "Sr52 E / Convoy",
+      "location_desc": "TIL 0330",
+      "area": "San Diego"
+    },
+    {
+      "id": "0700",
+      "time": "5:48 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Dehesa Rd / Harbison Canyon Rd",
+      "location_desc": "I/S",
+      "area": "El Cajon"
     },
     {
       "id": "0002",
@@ -108,5 +156,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-25T00:40:20.704244"
+  "last_updated": "2025-09-25T04:24:33.511796"
 }
