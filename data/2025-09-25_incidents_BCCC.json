@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 144,
+  "total_incidents": 148,
   "incidents": [
     {
       "id": "0262",
@@ -1498,7 +1498,67 @@
       },
       "is_new": true,
       "is_relevant": false
+    },
+    {
+      "id": "0427",
+      "time": "2:06 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Sweetwater No",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "2:13 PM: 2",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0423",
+      "time": "2:02 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Cannon So",
+      "location_desc": "I5 N CANNON SO",
+      "area": "Oceanside",
+      "details": "2:07 PM: 9 | 2:06 PM: 8 | 2:06 PM: 7 | 2:04 PM: 6 | 2:04 PM: 5 | 2:04 PM: 4 | 2:03 PM: 3 | 2:03 PM: 2 | 2:02 PM: 1 | 2:10 PM: 3 | 2:10 PM: 2 | 2:05 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0422",
+      "time": "2:00 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Miramar Rd So (pomerado)",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "2:03 PM: 2 | 2:03 PM: 1 | 2:05 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0421",
+      "time": "1:59 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "43800 Wilson Valley Rd",
+      "location_desc": "",
+      "area": "Temecula",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T20:51:26.411609"
+  "last_updated": "2025-09-25T21:14:55.156031"
 }

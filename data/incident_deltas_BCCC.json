@@ -1,8 +1,83 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T20:58:08.180430",
+  "timestamp": "2025-09-25T21:14:55.155137",
   "new_incidents": [
+    {
+      "id": "0427",
+      "time": "2:06 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / Sweetwater No",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "2:13 PM: 2",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0179",
+      "time": "2:04 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Cannon So",
+      "location_desc": "I5 N CANNON SO",
+      "area": "North FSP",
+      "details": "2:07 PM: 9 | 2:06 PM: 8 | 2:06 PM: 7 | 2:04 PM: 6 | 2:04 PM: 5 | 2:04 PM: 4 | 2:03 PM: 3 | 2:03 PM: 2 | 2:02 PM: 1 | 2:05 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0423",
+      "time": "2:02 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Cannon So",
+      "location_desc": "I5 N CANNON SO",
+      "area": "Oceanside",
+      "details": "2:07 PM: 9 | 2:06 PM: 8 | 2:06 PM: 7 | 2:04 PM: 6 | 2:04 PM: 5 | 2:04 PM: 4 | 2:03 PM: 3 | 2:03 PM: 2 | 2:02 PM: 1 | 2:10 PM: 3 | 2:10 PM: 2 | 2:05 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0422",
+      "time": "2:00 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Miramar Rd So (pomerado)",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "2:03 PM: 2 | 2:03 PM: 1 | 2:05 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0421",
+      "time": "1:59 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "43800 Wilson Valley Rd",
+      "location_desc": "",
+      "area": "Temecula",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
     {
       "id": "0413",
       "time": "1:50 PM",
@@ -49,36 +124,6 @@
       "is_relevant": false
     },
     {
-      "id": "0172",
-      "time": "1:39 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Centre City Pkwy Ofr",
-      "location_desc": "CCP SOUTH OFR",
-      "area": "North FSP",
-      "details": "1:39 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
-      "id": "0398",
-      "time": "1:38 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Centre City Pkwy Ofr",
-      "location_desc": "CCP SOUTH OFR",
-      "area": "Oceanside",
-      "details": "1:39 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
       "id": "0387",
       "time": "1:29 PM",
       "type": "Traffic Hazard",
@@ -86,21 +131,6 @@
       "location_desc": "",
       "area": "San Diego",
       "details": "1:30 PM: 1 | 1:33 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
-      "id": "0380",
-      "time": "1:18 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Carmel Mountain No",
-      "location_desc": "ONE MILE NO",
-      "area": "San Diego",
-      "details": "1:19 PM: 1 | 1:19 PM: 2 | 1:19 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -160,21 +190,6 @@
       "location": "8502 Railroad Ave",
       "location_desc": "CALTRANS SANTEE",
       "area": "El Cajon",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": false
-    },
-    {
-      "id": "0105",
-      "time": "6:49 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "I15 S / California Oaks (kalmia)",
-      "location_desc": "TIL 1400",
-      "area": "Temecula",
       "details": "",
       "lane_blockage": {
         "status": "unknown",
@@ -305,6 +320,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 20,
+  "new_count": 21,
   "removed_count": 0
 }
