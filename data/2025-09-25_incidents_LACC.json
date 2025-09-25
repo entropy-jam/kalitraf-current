@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 84,
+  "total_incidents": 87,
   "incidents": [
     {
       "id": "1878",
@@ -675,7 +675,31 @@
       "location": "Sr60 W / Phillips Ranch Rd",
       "location_desc": "WB 60 JWO PHILLIPS RANCH",
       "area": "Baldwin Park"
+    },
+    {
+      "id": "0158",
+      "time": "3:48 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I10 E / VINCENT AVE ONR",
+      "location_desc": "EB 10 AT VINCENT",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "0164",
+      "time": "3:47 AM",
+      "type": "Report of Fire",
+      "location": "Holmes Ave / Randolph St",
+      "location_desc": "",
+      "area": "South LA"
+    },
+    {
+      "id": "0160",
+      "time": "3:46 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / I605 N",
+      "location_desc": "NB 5 JSO 605",
+      "area": "Santa Fe Springs"
     }
   ],
-  "last_updated": "2025-09-25T10:46:36.634848"
+  "last_updated": "2025-09-25T10:53:52.220976"
 }

@@ -1,8 +1,32 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "incident_count": 17,
+  "incident_count": 19,
   "incidents": [
+    {
+      "id": "0158",
+      "time": "3:48 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I10 E / VINCENT AVE ONR",
+      "location_desc": "EB 10 AT VINCENT",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "0164",
+      "time": "3:47 AM",
+      "type": "Report of Fire",
+      "location": "Holmes Ave / Randolph St",
+      "location_desc": "",
+      "area": "South LA"
+    },
+    {
+      "id": "0160",
+      "time": "3:46 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / I605 N",
+      "location_desc": "NB 5 JSO 605",
+      "area": "Santa Fe Springs"
+    },
     {
       "id": "0156",
       "time": "3:40 AM",
@@ -116,14 +140,6 @@
       "area": "Newhall"
     },
     {
-      "id": "1962",
-      "time": "8:45 PM",
-      "type": "Assist CT with Maintenance",
-      "location": "777 W Washington Blvd",
-      "location_desc": "CENTRAL LOS ANGELES CHP",
-      "area": "LA"
-    },
-    {
       "id": "1959",
       "time": "8:43 PM",
       "type": "Assist CT with Maintenance",
@@ -140,5 +156,5 @@
       "area": "West LA"
     }
   ],
-  "last_updated": "2025-09-25T10:46:36.633611"
+  "last_updated": "2025-09-25T10:53:52.219845"
 }
