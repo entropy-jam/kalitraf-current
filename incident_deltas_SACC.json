@@ -1,58 +1,106 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-25T11:38:33.815702",
+  "timestamp": "2025-09-25T14:49:13.785226",
   "new_incidents": [
     {
-      "id": "0080",
-      "time": "4:33 AM",
+      "id": "0191",
+      "time": "7:40 AM",
       "type": "Traffic Hazard",
-      "location": "Us50 W / Forni Rd Ofr",
-      "location_desc": "WB 50 JEO FORNI",
-      "area": "Placerville"
+      "location": "Us50 E I5 N Con / I5 N",
+      "location_desc": "CON",
+      "area": "South Sac"
     },
     {
-      "id": "0075",
-      "time": "4:13 AM",
+      "id": "0182",
+      "time": "7:31 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "1258-1299 W Elverta Rd",
+      "location_desc": "",
+      "area": "North Sac"
+    },
+    {
+      "id": "0181",
+      "time": "7:27 AM",
       "type": "Traffic Hazard",
-      "location": "S Watt Ave / Jackson Rd",
-      "location_desc": "NB JSO",
+      "location": "E Levee Rd / W Elkhorn Blvd",
+      "location_desc": "SB JNO",
+      "area": "North Sac"
+    },
+    {
+      "id": "0180",
+      "time": "7:21 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "8848 Apricot Woods Way",
+      "location_desc": "OCCD ELK GROVE FLORIN X GERBER 112-73",
+      "area": "SA"
+    },
+    {
+      "id": "0148",
+      "time": "6:51 AM",
+      "type": "Defective Traffic Signals",
+      "location": "Hazel Ave / Central Ave",
+      "location_desc": "",
       "area": "East Sac"
     },
     {
-      "id": "1025",
-      "time": "7:17 PM",
-      "type": "Assist with Construction",
-      "location": "Grass Valley Hwy / Cramer Rd",
-      "location_desc": "",
-      "area": "Auburn"
+      "id": "0144",
+      "time": "6:45 AM",
+      "type": "Trfc Collision-Minor Inj",
+      "location": "I5 N / J St Ofr",
+      "location_desc": "JSO **180and144**",
+      "area": "South Sac"
     },
     {
-      "id": "1017",
-      "time": "7:12 PM",
-      "type": "Assist with Construction",
-      "location": "50 Project",
-      "location_desc": "",
-      "area": ""
+      "id": "0127",
+      "time": "6:27 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "5109 Tyler St",
+      "location_desc": "****WSAC CT YARD",
+      "area": "North Sac"
     },
     {
-      "id": "1012",
-      "time": "7:02 PM",
-      "type": "Assist with Construction",
-      "location": "80 Project",
-      "location_desc": "",
-      "area": ""
+      "id": "0125",
+      "time": "6:22 AM",
+      "type": "Defective Traffic Signals",
+      "location": "Sr12 / Sr160",
+      "location_desc": "WB AT",
+      "area": "South Sac"
     },
     {
-      "id": "0949",
-      "time": "5:56 PM",
-      "type": "Assist with Construction",
-      "location": "99 Project",
-      "location_desc": "",
-      "area": ""
+      "id": "0123",
+      "time": "6:19 AM",
+      "type": "Animal Hazard",
+      "location": "Big Branch Rd / S Shingle Rd",
+      "location_desc": "NB JSO",
+      "area": "Placerville"
+    },
+    {
+      "id": "0122",
+      "time": "6:19 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "6 Massie Ct",
+      "location_desc": "RIO VISTA",
+      "area": "South Sac"
+    },
+    {
+      "id": "0114",
+      "time": "6:07 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "3031 Lo Hi Way",
+      "location_desc": "Placerville CHP Office",
+      "area": "Placerville"
+    },
+    {
+      "id": "0094",
+      "time": "5:32 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "11363 Mccourtney Rd",
+      "location_desc": "GOLD FLAT CT YARD",
+      "area": "SA"
     }
   ],
   "removed_incidents": [],
-  "new_count": 6,
+  "new_count": 12,
   "removed_count": 0
 }
