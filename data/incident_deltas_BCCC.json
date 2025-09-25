@@ -1,8 +1,32 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T15:51:59.602328",
+  "timestamp": "2025-09-25T15:59:20.696990",
   "new_incidents": [
+    {
+      "id": "0196",
+      "time": "8:54 AM",
+      "type": "Traffic Hazard",
+      "location": "25721 Jesmond Dene Rd",
+      "location_desc": "1/2 TO 1 MILE JWO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0102",
+      "time": "8:53 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 S / Leucadia No",
+      "location_desc": "I5 S LEUCADIA NO",
+      "area": "North FSP"
+    },
+    {
+      "id": "0192",
+      "time": "8:51 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 S / Leucadia No",
+      "location_desc": "I5 S LEUCADIA NO",
+      "area": "Oceanside"
+    },
     {
       "id": "0187",
       "time": "8:45 AM",
@@ -10,14 +34,6 @@
       "location": "3558 La Posta Truck Trl",
       "location_desc": "",
       "area": "El Cajon"
-    },
-    {
-      "id": "0189",
-      "time": "8:43 AM",
-      "type": "Request CalTrans Notify",
-      "location": "Sr163 S / 10th Ave Ofr",
-      "location_desc": "",
-      "area": "San Diego"
     },
     {
       "id": "0179",
@@ -76,30 +92,6 @@
       "area": "Temecula"
     },
     {
-      "id": "0089",
-      "time": "8:19 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Mira Mesa So (hov)",
-      "location_desc": "I15 S MIRA MESA SO (HOV)",
-      "area": "North FSP"
-    },
-    {
-      "id": "0163",
-      "time": "8:17 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Mira Mesa So (hov)",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0088",
-      "time": "8:15 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr15 N / Sr15 N I805 N Con",
-      "location_desc": "",
-      "area": "North FSP"
-    },
-    {
       "id": "0158",
       "time": "8:12 AM",
       "type": "Trfc Collision-No Inj",
@@ -122,22 +114,6 @@
       "location": "I8 W / Johnson",
       "location_desc": "",
       "area": "El Cajon"
-    },
-    {
-      "id": "0140",
-      "time": "7:51 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I8 E / Williams",
-      "location_desc": "WILLIAMS COUPLE OF HUNDRED YARDS JSO 8",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0134",
-      "time": "7:41 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 N / Clairemont So (e Mission Bay)",
-      "location_desc": "",
-      "area": "San Diego"
     },
     {
       "id": "0118",
@@ -245,6 +221,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 30,
+  "new_count": 27,
   "removed_count": 0
 }
