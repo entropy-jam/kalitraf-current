@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 117,
+  "total_incidents": 119,
   "incidents": [
     {
       "id": "0262",
@@ -1093,7 +1093,37 @@
       },
       "is_new": true,
       "is_relevant": true
+    },
+    {
+      "id": "0133",
+      "time": "11:01 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / I805 So (north)",
+      "location_desc": "I5 N I805 SO (NORTH)",
+      "area": "North FSP",
+      "details": "11:01 AM: 1 | 11:04 AM: 2 | 11:04 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0294",
+      "time": "11:00 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / I805 So (north)",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "11:01 AM: 1 | 11:02 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T17:59:40.542092"
+  "last_updated": "2025-09-25T18:28:57.096568"
 }
