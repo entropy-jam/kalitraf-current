@@ -3,8 +3,9 @@
  * Integrates Pusher for real-time incident updates
  */
 
-// Import the real-time service
+// Import the real-time service and configuration
 import RealtimeIncidentService from './services/realtime-service.js';
+import { WEBSOCKET_CONFIG, getAllCenterCodes } from './config/websocket-config.js';
 
 // Theme management
 class ThemeManager {
@@ -96,13 +97,15 @@ class ConnectionStatusManager {
     }
 }
 
-// Enhanced App Controller with Real-time Support
+// Enhanced App Controller with Multi-Center Real-time Support
 class RealtimeAppController {
     constructor() {
         this.realtimeService = new RealtimeIncidentService();
         this.connectionManager = new ConnectionStatusManager();
         this.appController = null; // Will be initialized with existing AppController
         this.isInitialized = false;
+        this.subscribedCenters = new Set();
+        this.centerStatuses = new Map();
     }
 
     async initialize() {
@@ -131,12 +134,12 @@ class RealtimeAppController {
     async setupRealtimeService() {
         // Set up event handlers
         this.realtimeService.onIncidentUpdate((data) => {
-            console.log('📡 Real-time incident update received:', data);
+            console.log(`📡 [${data.center}] Real-time incident update received:`, data);
             this.handleIncidentUpdate(data);
         });
 
         this.realtimeService.onError((error) => {
-            console.error('❌ Real-time service error:', error);
+            console.error(`❌ [${error.center || 'Unknown'}] Real-time service error:`, error);
             this.connectionManager.showError(error.error || 'Connection error');
         });
 
@@ -145,8 +148,18 @@ class RealtimeAppController {
             this.connectionManager.updateStatus(status.connected);
         });
 
-        // Initialize the real-time service
-        await this.realtimeService.initialize();
+        this.realtimeService.onCenterStatusChange((data) => {
+            console.log(`📊 [${data.center}] Center status update:`, data);
+            this.handleCenterStatusUpdate(data);
+        });
+
+        // Initialize the real-time service with all centers
+        const allCenters = getAllCenterCodes();
+        await this.realtimeService.initialize(allCenters);
+        
+        // Track subscribed centers
+        this.subscribedCenters = new Set(allCenters);
+        console.log(`📡 Subscribed to ${allCenters.length} communication centers:`, allCenters);
     }
 
     setupRealtimeUI() {
@@ -169,12 +182,39 @@ class RealtimeAppController {
         realtimeToggle.className = 'realtime-toggle';
         realtimeToggle.innerHTML = `
             <input type="checkbox" id="realtimeToggle" checked>
-            <span>🔴 Real-time Updates</span>
+            <span>🔴 Multi-Center Real-time</span>
         `;
         
         controlsDiv.appendChild(realtimeToggle);
 
-        // Add event listener for real-time toggle
+        // Add center status container
+        const statusContainer = document.createElement('div');
+        statusContainer.id = 'center-status-container';
+        statusContainer.className = 'center-status-container';
+        statusContainer.innerHTML = `
+            <h4>Communication Centers Status</h4>
+            <div class="centers-grid"></div>
+        `;
+        
+        controlsDiv.appendChild(statusContainer);
+
+        // Add center-specific controls
+        const centerControls = document.createElement('div');
+        centerControls.className = 'center-controls';
+        centerControls.innerHTML = `
+            <h4>Center Controls</h4>
+            <div class="center-buttons">
+                <button id="scrapeAllCenters" class="btn btn-primary">🔄 Scrape All Centers</button>
+                <button id="scrapeBCCC" class="btn btn-secondary">📡 BCCC</button>
+                <button id="scrapeLACC" class="btn btn-secondary">📡 LACC</button>
+                <button id="scrapeOCCC" class="btn btn-secondary">📡 OCCC</button>
+                <button id="scrapeSACC" class="btn btn-secondary">📡 SACC</button>
+            </div>
+        `;
+        
+        controlsDiv.appendChild(centerControls);
+
+        // Add event listeners
         const toggle = realtimeToggle.querySelector('input');
         toggle.addEventListener('change', (e) => {
             if (e.target.checked) {
@@ -182,6 +222,27 @@ class RealtimeAppController {
             } else {
                 this.disableRealtime();
             }
+        });
+
+        // Add center-specific button listeners
+        document.getElementById('scrapeAllCenters')?.addEventListener('click', () => {
+            this.triggerScrapingAllCenters();
+        });
+
+        document.getElementById('scrapeBCCC')?.addEventListener('click', () => {
+            this.triggerScrapingCenter('BCCC');
+        });
+
+        document.getElementById('scrapeLACC')?.addEventListener('click', () => {
+            this.triggerScrapingCenter('LACC');
+        });
+
+        document.getElementById('scrapeOCCC')?.addEventListener('click', () => {
+            this.triggerScrapingCenter('OCCC');
+        });
+
+        document.getElementById('scrapeSACC')?.addEventListener('click', () => {
+            this.triggerScrapingCenter('SACC');
         });
     }
 
@@ -265,6 +326,130 @@ class RealtimeAppController {
             .realtime-toggle input {
                 margin-right: 8px;
             }
+            
+            .center-status-container {
+                margin: 16px 0;
+                padding: 16px;
+                background: #f8f9fa;
+                border-radius: 8px;
+                border: 1px solid #dee2e6;
+            }
+            
+            .center-status-container h4 {
+                margin: 0 0 12px 0;
+                color: #495057;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            
+            .centers-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 12px;
+            }
+            
+            .center-status-indicator {
+                display: flex;
+                align-items: center;
+                padding: 8px 12px;
+                background: white;
+                border-radius: 6px;
+                border: 1px solid #e9ecef;
+                font-size: 12px;
+                transition: all 0.2s ease;
+            }
+            
+            .center-status-indicator:hover {
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            
+            .center-code {
+                font-weight: 600;
+                color: #495057;
+                margin-right: 8px;
+                min-width: 40px;
+            }
+            
+            .center-name {
+                flex: 1;
+                color: #6c757d;
+                margin-right: 8px;
+            }
+            
+            .status-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                margin-right: 8px;
+                transition: background-color 0.2s ease;
+            }
+            
+            .status-dot.active {
+                background-color: #28a745;
+            }
+            
+            .status-dot.inactive {
+                background-color: #dc3545;
+            }
+            
+            .status-dot.warning {
+                background-color: #ffc107;
+            }
+            
+            .incident-count {
+                font-size: 11px;
+                color: #6c757d;
+                font-weight: 500;
+            }
+            
+            .center-controls {
+                margin: 16px 0;
+                padding: 16px;
+                background: #f8f9fa;
+                border-radius: 8px;
+                border: 1px solid #dee2e6;
+            }
+            
+            .center-controls h4 {
+                margin: 0 0 12px 0;
+                color: #495057;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            
+            .center-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .center-buttons .btn {
+                padding: 6px 12px;
+                border: none;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+            
+            .center-buttons .btn-primary {
+                background-color: #007bff;
+                color: white;
+            }
+            
+            .center-buttons .btn-primary:hover {
+                background-color: #0056b3;
+            }
+            
+            .center-buttons .btn-secondary {
+                background-color: #6c757d;
+                color: white;
+            }
+            
+            .center-buttons .btn-secondary:hover {
+                background-color: #545b62;
+            }
         `;
         document.head.appendChild(style);
     }
@@ -272,11 +457,56 @@ class RealtimeAppController {
     handleIncidentUpdate(data) {
         // Update the existing app with new data
         if (this.appController && this.appController.updateIncidents) {
-            this.appController.updateIncidents(data.data);
+            this.appController.updateIncidents(data);
         }
         
         // Show notification
         this.showUpdateNotification(data);
+    }
+
+    handleCenterStatusUpdate(data) {
+        // Store center status
+        this.centerStatuses.set(data.center, {
+            status: data.status,
+            lastUpdate: data.lastUpdate,
+            incidentCount: data.incidentCount,
+            health: data.health
+        });
+
+        // Update center status indicator in UI
+        this.updateCenterStatusIndicator(data);
+    }
+
+    updateCenterStatusIndicator(data) {
+        // Find or create center status indicator
+        let indicator = document.getElementById(`center-status-${data.center}`);
+        if (!indicator) {
+            indicator = document.createElement('div');
+            indicator.id = `center-status-${data.center}`;
+            indicator.className = 'center-status-indicator';
+            indicator.innerHTML = `
+                <span class="center-code">${data.center}</span>
+                <span class="center-name">${data.centerName}</span>
+                <span class="status-dot"></span>
+                <span class="incident-count">${data.incidentCount} incidents</span>
+            `;
+            
+            // Add to status container
+            const statusContainer = document.getElementById('center-status-container');
+            if (statusContainer) {
+                statusContainer.appendChild(indicator);
+            }
+        }
+
+        // Update status
+        const statusDot = indicator.querySelector('.status-dot');
+        const incidentCount = indicator.querySelector('.incident-count');
+        
+        statusDot.className = `status-dot ${data.status}`;
+        incidentCount.textContent = `${data.incidentCount} incidents`;
+        
+        // Add timestamp
+        indicator.title = `Last update: ${new Date(data.lastUpdate).toLocaleString()}`;
     }
 
     showUpdateNotification(data) {
@@ -315,9 +545,48 @@ class RealtimeAppController {
         }, 3000);
     }
 
+    async triggerScrapingAllCenters() {
+        try {
+            console.log('🔄 Triggering scraping for all centers...');
+            const results = await this.realtimeService.triggerScrapingAllCenters();
+            console.log('✅ All centers scraping completed:', results);
+            
+            // Show notification
+            this.showUpdateNotification({
+                center: 'ALL',
+                centerName: 'All Centers',
+                timestamp: new Date().toISOString(),
+                eventType: 'scrape-all-complete'
+            });
+        } catch (error) {
+            console.error('❌ Failed to scrape all centers:', error);
+            this.connectionManager.showError(`Failed to scrape all centers: ${error.message}`);
+        }
+    }
+
+    async triggerScrapingCenter(centerCode) {
+        try {
+            console.log(`🔄 Triggering scraping for ${centerCode}...`);
+            const result = await this.realtimeService.triggerScraping(centerCode);
+            console.log(`✅ ${centerCode} scraping completed:`, result);
+            
+            // Show notification
+            this.showUpdateNotification({
+                center: centerCode,
+                centerName: WEBSOCKET_CONFIG.centers[centerCode]?.name || centerCode,
+                timestamp: new Date().toISOString(),
+                eventType: 'scrape-complete'
+            });
+        } catch (error) {
+            console.error(`❌ Failed to scrape ${centerCode}:`, error);
+            this.connectionManager.showError(`Failed to scrape ${centerCode}: ${error.message}`);
+        }
+    }
+
     enableRealtime() {
-        console.log('🔴 Enabling real-time updates');
-        this.realtimeService.initialize();
+        console.log('🔴 Enabling multi-center real-time updates');
+        const allCenters = getAllCenterCodes();
+        this.realtimeService.initialize(allCenters);
     }
 
     disableRealtime() {

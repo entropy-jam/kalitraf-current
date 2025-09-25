@@ -1,57 +1,84 @@
 /**
- * Real-time WebSocket Service using Pusher
- * Replaces file-based data fetching with real-time updates
+ * Multi-Center Real-time WebSocket Service using Pusher
+ * Handles all CHP Communication Centers: BCCC, LACC, OCCC, SACC
  */
+
+import { WEBSOCKET_CONFIG, getAllChannels, getCenterInfo } from '../config/websocket-config.js';
 
 class RealtimeIncidentService {
   constructor() {
     this.pusher = null;
-    this.channel = null;
+    this.channels = new Map(); // Map of center codes to channels
     this.isConnected = false;
     this.reconnectAttempts = 0;
-    this.maxReconnectAttempts = 5;
-    this.reconnectDelay = 1000; // 1 second
+    this.maxReconnectAttempts = WEBSOCKET_CONFIG.reconnection.maxAttempts;
+    this.reconnectDelay = WEBSOCKET_CONFIG.reconnection.interval;
+    this.subscribedCenters = new Set();
     
     this.eventHandlers = {
       onIncidentUpdate: null,
       onError: null,
-      onConnectionChange: null
+      onConnectionChange: null,
+      onCenterStatusChange: null
     };
   }
 
   /**
-   * Initialize Pusher connection
+   * Initialize Pusher connection for all communication centers
    */
-  async initialize() {
+  async initialize(centers = ['BCCC', 'LACC', 'OCCC', 'SACC']) {
     try {
       // Dynamic import of Pusher to avoid loading issues
       const Pusher = await import('pusher-js');
       
-      this.pusher = new Pusher.default(process.env.PUSHER_KEY || 'your-pusher-key', {
-        cluster: process.env.PUSHER_CLUSTER || 'us2',
-        encrypted: true,
+      this.pusher = new Pusher.default(WEBSOCKET_CONFIG.pusher.key, {
+        cluster: WEBSOCKET_CONFIG.pusher.cluster,
+        encrypted: WEBSOCKET_CONFIG.pusher.useTLS,
         authEndpoint: '/api/pusher-auth' // Optional: for private channels
       });
 
       // Set up connection event handlers
       this.setupConnectionHandlers();
       
-      // Subscribe to incidents channel
-      this.channel = this.pusher.subscribe('chp-incidents');
-      
-      // Set up message handlers
-      this.setupMessageHandlers();
+      // Subscribe to all communication center channels
+      await this.subscribeToCenters(centers);
       
       this.isConnected = true;
       this.reconnectAttempts = 0;
       
       this.notifyConnectionChange(true);
       
-      console.log('✅ Pusher connected successfully');
+      console.log('✅ Pusher connected successfully to all centers:', centers);
       
     } catch (error) {
       console.error('❌ Failed to initialize Pusher:', error);
       this.handleConnectionError(error);
+    }
+  }
+
+  /**
+   * Subscribe to specific communication center channels
+   */
+  async subscribeToCenters(centers) {
+    for (const centerCode of centers) {
+      const centerInfo = getCenterInfo(centerCode);
+      if (!centerInfo) {
+        console.warn(`⚠️ Unknown center code: ${centerCode}`);
+        continue;
+      }
+
+      try {
+        const channel = this.pusher.subscribe(centerInfo.channel);
+        this.channels.set(centerCode, channel);
+        this.subscribedCenters.add(centerCode);
+        
+        // Set up message handlers for this center
+        this.setupCenterMessageHandlers(centerCode, channel);
+        
+        console.log(`📡 Subscribed to ${centerInfo.name} (${centerCode}) channel`);
+      } catch (error) {
+        console.error(`❌ Failed to subscribe to ${centerCode}:`, error);
+      }
     }
   }
 
@@ -80,31 +107,77 @@ class RealtimeIncidentService {
   }
 
   /**
-   * Set up message event handlers
+   * Set up message event handlers for a specific center
    */
-  setupMessageHandlers() {
-    // Handle incident updates
-    this.channel.bind('incident-update', (data) => {
-      console.log('📡 Received incident update:', data);
+  setupCenterMessageHandlers(centerCode, channel) {
+    const centerInfo = getCenterInfo(centerCode);
+    
+    // Handle new incidents
+    channel.bind(WEBSOCKET_CONFIG.events.NEW_INCIDENT, (data) => {
+      console.log(`📡 [${centerCode}] New incident:`, data);
       
       if (this.eventHandlers.onIncidentUpdate) {
-        this.eventHandlers.onIncidentUpdate(data);
+        this.eventHandlers.onIncidentUpdate({
+          ...data,
+          center: centerCode,
+          centerInfo: centerInfo,
+          eventType: 'new-incident'
+        });
+      }
+    });
+
+    // Handle updated incidents
+    channel.bind(WEBSOCKET_CONFIG.events.UPDATED_INCIDENT, (data) => {
+      console.log(`📡 [${centerCode}] Updated incident:`, data);
+      
+      if (this.eventHandlers.onIncidentUpdate) {
+        this.eventHandlers.onIncidentUpdate({
+          ...data,
+          center: centerCode,
+          centerInfo: centerInfo,
+          eventType: 'updated-incident'
+        });
+      }
+    });
+
+    // Handle resolved incidents
+    channel.bind(WEBSOCKET_CONFIG.events.RESOLVED_INCIDENT, (data) => {
+      console.log(`📡 [${centerCode}] Resolved incident:`, data);
+      
+      if (this.eventHandlers.onIncidentUpdate) {
+        this.eventHandlers.onIncidentUpdate({
+          ...data,
+          center: centerCode,
+          centerInfo: centerInfo,
+          eventType: 'resolved-incident'
+        });
+      }
+    });
+
+    // Handle center status updates
+    channel.bind(WEBSOCKET_CONFIG.events.CENTER_STATUS, (data) => {
+      console.log(`📊 [${centerCode}] Center status:`, data);
+      
+      if (this.eventHandlers.onCenterStatusChange) {
+        this.eventHandlers.onCenterStatusChange({
+          ...data,
+          center: centerCode,
+          centerInfo: centerInfo
+        });
       }
     });
 
     // Handle errors
-    this.channel.bind('error', (data) => {
-      console.error('❌ Received error:', data);
+    channel.bind('error', (data) => {
+      console.error(`❌ [${centerCode}] Received error:`, data);
       
       if (this.eventHandlers.onError) {
-        this.eventHandlers.onError(data);
+        this.eventHandlers.onError({
+          ...data,
+          center: centerCode,
+          centerInfo: centerInfo
+        });
       }
-    });
-
-    // Handle connection status updates
-    this.channel.bind('connection-status', (data) => {
-      console.log('📊 Connection status:', data);
-      this.notifyConnectionChange(data.connected);
     });
   }
 
@@ -123,12 +196,79 @@ class RealtimeIncidentService {
     this.eventHandlers.onConnectionChange = handler;
   }
 
+  onCenterStatusChange(handler) {
+    this.eventHandlers.onCenterStatusChange = handler;
+  }
+
   /**
-   * Trigger manual scraping
+   * Subscribe to additional center
    */
-  async triggerScraping(center = 'BCCC') {
+  async subscribeToCenter(centerCode) {
+    if (this.subscribedCenters.has(centerCode)) {
+      console.log(`📡 Already subscribed to ${centerCode}`);
+      return;
+    }
+
+    const centerInfo = getCenterInfo(centerCode);
+    if (!centerInfo) {
+      console.warn(`⚠️ Unknown center code: ${centerCode}`);
+      return;
+    }
+
     try {
-      const response = await fetch(`/api/scrape?center=${center}`, {
+      const channel = this.pusher.subscribe(centerInfo.channel);
+      this.channels.set(centerCode, channel);
+      this.subscribedCenters.add(centerCode);
+      
+      this.setupCenterMessageHandlers(centerCode, channel);
+      
+      console.log(`📡 Subscribed to ${centerInfo.name} (${centerCode}) channel`);
+    } catch (error) {
+      console.error(`❌ Failed to subscribe to ${centerCode}:`, error);
+    }
+  }
+
+  /**
+   * Unsubscribe from center
+   */
+  unsubscribeFromCenter(centerCode) {
+    if (!this.subscribedCenters.has(centerCode)) {
+      console.log(`📡 Not subscribed to ${centerCode}`);
+      return;
+    }
+
+    const channel = this.channels.get(centerCode);
+    if (channel) {
+      this.pusher.unsubscribe(channel.name);
+      this.channels.delete(centerCode);
+      this.subscribedCenters.delete(centerCode);
+      
+      const centerInfo = getCenterInfo(centerCode);
+      console.log(`📡 Unsubscribed from ${centerInfo?.name} (${centerCode}) channel`);
+    }
+  }
+
+  /**
+   * Get subscribed centers
+   */
+  getSubscribedCenters() {
+    return Array.from(this.subscribedCenters);
+  }
+
+  /**
+   * Get center channel
+   */
+  getCenterChannel(centerCode) {
+    return this.channels.get(centerCode);
+  }
+
+  /**
+   * Trigger manual scraping for specific center or all centers
+   */
+  async triggerScraping(center = null) {
+    try {
+      const url = center ? `/api/scrape?center=${center}` : '/api/scrape';
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -140,13 +280,32 @@ class RealtimeIncidentService {
       }
 
       const result = await response.json();
-      console.log('✅ Scraping triggered:', result);
+      console.log(`✅ Scraping triggered for ${center || 'all centers'}:`, result);
       
       return result;
     } catch (error) {
       console.error('❌ Failed to trigger scraping:', error);
       throw error;
     }
+  }
+
+  /**
+   * Trigger scraping for all subscribed centers
+   */
+  async triggerScrapingAllCenters() {
+    const results = [];
+    
+    for (const centerCode of this.subscribedCenters) {
+      try {
+        const result = await this.triggerScraping(centerCode);
+        results.push({ center: centerCode, result });
+      } catch (error) {
+        console.error(`❌ Failed to scrape ${centerCode}:`, error);
+        results.push({ center: centerCode, error: error.message });
+      }
+    }
+    
+    return results;
   }
 
   /**
@@ -212,14 +371,21 @@ class RealtimeIncidentService {
    */
   disconnect() {
     if (this.pusher) {
+      // Unsubscribe from all channels
+      for (const [centerCode, channel] of this.channels) {
+        this.pusher.unsubscribe(channel.name);
+        console.log(`📡 Unsubscribed from ${centerCode}`);
+      }
+      
       this.pusher.disconnect();
       this.pusher = null;
     }
     
-    this.channel = null;
+    this.channels.clear();
+    this.subscribedCenters.clear();
     this.isConnected = false;
     
-    console.log('🔌 Pusher disconnected');
+    console.log('🔌 Pusher disconnected from all centers');
   }
 }
 
