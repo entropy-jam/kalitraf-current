@@ -1,8 +1,9 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-25T02:13:36.015802",
-  "new_incidents": [
+  "date": "2025-09-25",
+  "total_incidents": 9,
+  "incidents": [
     {
       "id": "1017",
       "time": "7:12 PM",
@@ -76,7 +77,5 @@
       "area": "East Sac"
     }
   ],
-  "removed_incidents": [],
-  "new_count": 9,
-  "removed_count": 0
+  "last_updated": "2025-09-25T02:13:36.016152"
 }

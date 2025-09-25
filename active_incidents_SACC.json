@@ -1,96 +1,80 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "incident_count": 11,
+  "incident_count": 9,
   "incidents": [
     {
-      "id": "0855",
-      "time": "4:42 PM",
-      "type": "Report of Fire",
-      "location": "I80 W / Marysville Blvd",
-      "location_desc": "WB 80 AT MARYSVILLE",
-      "area": "North Sac"
-    },
-    {
-      "id": "0847",
-      "time": "4:38 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Old River Rd / Cr128a",
-      "location_desc": "SB JSO",
-      "area": "Woodland"
-    },
-    {
-      "id": "0838",
-      "time": "4:36 PM",
-      "type": "Report of Fire",
-      "location": "Roseville Rd / Winters St Onr",
+      "id": "1017",
+      "time": "7:12 PM",
+      "type": "Assist with Construction",
+      "location": "50 Project",
       "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "1016",
+      "time": "7:10 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr51 S / Jno Exposition Blvd",
+      "location_desc": "SB 51 JNO EXPOSITION",
       "area": "North Sac"
     },
     {
-      "id": "0828",
-      "time": "4:30 PM",
-      "type": "Hit and Run w/Injuries",
-      "location": "El Camino Ave / Watt Ave",
-      "location_desc": "I/S",
+      "id": "1012",
+      "time": "7:02 PM",
+      "type": "Assist with Construction",
+      "location": "80 Project",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "0996",
+      "time": "6:52 PM",
+      "type": "Assist with Construction",
+      "location": "80 Paving",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "1011",
+      "time": "6:51 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Howe Ave / Meadowlark Ln",
+      "location_desc": "OCRRD HOWE / MARCONI",
       "area": "North Sac"
     },
     {
-      "id": "0815",
-      "time": "4:20 PM",
+      "id": "0984",
+      "time": "6:39 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Us50 E / Watt Ave S Onr",
+      "location_desc": "ONR TO EB",
+      "area": "East Sac"
+    },
+    {
+      "id": "0949",
+      "time": "5:56 PM",
+      "type": "Assist with Construction",
+      "location": "99 Project",
+      "location_desc": "",
+      "area": ""
+    },
+    {
+      "id": "0947",
+      "time": "5:55 PM",
+      "type": "Assist with Construction",
+      "location": "0 Sr12",
+      "location_desc": "Rio Vista Bridge",
+      "area": "South Sac"
+    },
+    {
+      "id": "0938",
+      "time": "5:50 PM",
       "type": "Trfc Collision-1141 Enrt",
-      "location": "3248 Auburn Blvd",
-      "location_desc": "IFO EU TECH",
-      "area": "North Sac"
-    },
-    {
-      "id": "0807",
-      "time": "4:12 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "5251 Valley Hi Dr",
-      "location_desc": "WB IFO",
-      "area": "SA"
-    },
-    {
-      "id": "0797",
-      "time": "4:06 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr51 S / Exposition Blvd",
-      "location_desc": "SB JSO",
-      "area": "North Sac"
-    },
-    {
-      "id": "0785",
-      "time": "4:01 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Green Valley Rd / Salmon Falls Rd",
-      "location_desc": "",
-      "area": "Placerville"
-    },
-    {
-      "id": "0757",
-      "time": "3:45 PM",
-      "type": "Trfc Collision-Minor Inj",
-      "location": "Morse Ave / Marconi Ave",
-      "location_desc": "NB JNO",
-      "area": "North Sac"
-    },
-    {
-      "id": "0311",
-      "time": "9:51 AM",
-      "type": "ESCORT for Road Conditions",
-      "location": "Folsom To Los Banos",
-      "location_desc": "",
-      "area": ""
-    },
-    {
-      "id": "0105",
-      "time": "5:57 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Northgate Ct Yard",
-      "location_desc": "",
-      "area": ""
+      "location": "Greenback Ln / Walnut Ave",
+      "location_desc": "EB JEO",
+      "area": "East Sac"
     }
   ],
-  "last_updated": "2025-09-24T23:54:09.777422"
+  "last_updated": "2025-09-25T02:13:36.015367"
 }
