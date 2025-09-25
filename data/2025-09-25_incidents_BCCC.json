@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 97,
+  "total_incidents": 103,
   "incidents": [
     {
       "id": "0262",
@@ -793,7 +793,97 @@
       },
       "is_new": true,
       "is_relevant": false
+    },
+    {
+      "id": "0250",
+      "time": "10:04 AM",
+      "type": "Request CalTrans Notify",
+      "location": "Sr78 W / El Camino Real Onr",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0246",
+      "time": "10:00 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Oceanside",
+      "location_desc": "I5 N OCEANSIDE",
+      "area": "Oceanside",
+      "details": "10:07 AM: 4 | 10:05 AM: 3 | 10:03 AM: 2 | 10:00 AM: 1 | 10:00 AM: 3 | 10:00 AM: 2 | 10:00 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0247",
+      "time": "9:57 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I805 N / Balboa E Onr",
+      "location_desc": "I805 N BALBOA E ONR",
+      "area": "San Diego",
+      "details": "10:01 AM: 4 | 10:01 AM: 3 | 9:59 AM: 2 | 9:58 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0245",
+      "time": "9:57 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / Balboa So",
+      "location_desc": "I805 N BALBOA SO",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0243",
+      "time": "9:54 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / University No (north Park)",
+      "location_desc": "I805 S UNIVERSITY NO (NORTH PARK)",
+      "area": "San Diego",
+      "details": "9:56 AM: 2 | 9:56 AM: 1 | 9:59 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0239",
+      "time": "9:53 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr52 E / Genesee Wo",
+      "location_desc": "SR52 E GENESEE WO",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T16:54:54.723472"
+  "last_updated": "2025-09-25T17:08:51.153458"
 }
