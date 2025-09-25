@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 52,
+  "total_incidents": 63,
   "incidents": [
     {
       "id": "0262",
@@ -419,7 +419,95 @@
       "location": "I8 W / I15 Eo",
       "location_desc": "",
       "area": "San Diego"
+    },
+    {
+      "id": "0109",
+      "time": "6:55 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Harbor So (ocn)",
+      "location_desc": "I5 N HARBOR SO (OCN)",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0105",
+      "time": "6:49 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "I15 S / California Oaks (kalmia)",
+      "location_desc": "TIL 1400",
+      "area": "Temecula"
+    },
+    {
+      "id": "0106",
+      "time": "6:47 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I805 N / MARKET ST OFR",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0039",
+      "time": "6:35 AM",
+      "type": "Trfc Collision-1141Enrt",
+      "location": "I5 N / 28th St",
+      "location_desc": "",
+      "area": "South FSP"
+    },
+    {
+      "id": "0098",
+      "time": "6:33 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / 28th St",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0097",
+      "time": "6:33 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "SAN DIEGO CHP OFFICE",
+      "area": "San Diego"
+    },
+    {
+      "id": "0096",
+      "time": "6:31 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "7181 Opportunity Rd",
+      "location_desc": "CALTRANS KEARNY MESA MAINTENANCE YARD",
+      "area": "BC"
+    },
+    {
+      "id": "0092",
+      "time": "6:25 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "5902 Kearny Villa Rd",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0091",
+      "time": "6:22 AM",
+      "type": "Assist with Construction",
+      "location": "Sr79 / Sage Rd",
+      "location_desc": "PAUBA TILL 1600",
+      "area": "Temecula"
+    },
+    {
+      "id": "0077",
+      "time": "5:45 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "24171 Japatul Valley Rd",
+      "location_desc": "CALTRANS DESCANSO STATION",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0012",
+      "time": "4:56 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "6100 MM8 E SD R61.00",
+      "location_desc": "TIL 1730",
+      "area": "El Cajon"
     }
   ],
-  "last_updated": "2025-09-25T12:42:22.415892"
+  "last_updated": "2025-09-25T13:57:49.923555"
 }
