@@ -1,8 +1,53 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T19:11:24.717509",
+  "timestamp": "2025-09-25T19:24:50.328568",
   "new_incidents": [
+    {
+      "id": "0337",
+      "time": "12:18 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I8 E / College Wo",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "12:20 PM: 11 | 12:20 PM: 10 | 12:20 PM: 9 | 12:19 PM: 8 | 12:19 PM: 7 | 12:19 PM: 6 | 12:19 PM: 5 | 12:19 PM: 4 | 12:19 PM: 3 | 12:18 PM: 2 | 12:18 PM: 1 | 12:23 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0334",
+      "time": "12:17 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Carroll Canyon No",
+      "location_desc": "I15 S CARROLL CANYON NO",
+      "area": "San Diego",
+      "details": "12:18 PM: 1 | 12:21 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0340",
+      "time": "12:13 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I215 N So / Newport Rd",
+      "location_desc": "I215 N SO NEWPORT RD",
+      "area": "Temecula",
+      "details": "12:20 PM: 2 | 12:14 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
     {
       "id": "0326",
       "time": "11:59 AM",
@@ -350,6 +395,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 23,
+  "new_count": 26,
   "removed_count": 0
 }
