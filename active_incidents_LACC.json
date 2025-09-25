@@ -1,15 +1,31 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "incident_count": 21,
+  "incident_count": 17,
   "incidents": [
     {
-      "id": "0104",
-      "time": "2:12 AM",
-      "type": "Report of Fire",
-      "location": "Sr110 N / Hill St Onr",
-      "location_desc": "",
+      "id": "0117",
+      "time": "2:45 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I10 W / I110 S",
+      "location_desc": "WB JEO",
       "area": "Central LA"
+    },
+    {
+      "id": "0116",
+      "time": "2:43 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr60 E Wo / Sr71",
+      "location_desc": "SR60 E EO SR71",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "0111",
+      "time": "2:31 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "E Avenue M / 50th St E",
+      "location_desc": "50TH JSO AVENUE M",
+      "area": "Antelope Valley"
     },
     {
       "id": "0098",
@@ -26,22 +42,6 @@
       "location": "I10 E / Garfield Ave",
       "location_desc": "JEO",
       "area": "East LA"
-    },
-    {
-      "id": "0083",
-      "time": "1:20 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "SR110 S / Stadium Way",
-      "location_desc": "SB 110 JSO STADIUM WAY",
-      "area": "Central LA"
-    },
-    {
-      "id": "0029",
-      "time": "12:15 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I5 N / I5 N Ca134 W Con",
-      "location_desc": "nb jso",
-      "area": "Altadena"
     },
     {
       "id": "0001",
@@ -76,36 +76,12 @@
       "area": "Central LA"
     },
     {
-      "id": "2069",
-      "time": "9:58 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "18506 Mescal St",
-      "location_desc": "",
-      "area": "Santa Fe Springs"
-    },
-    {
-      "id": "2027",
-      "time": "9:31 PM",
-      "type": "Assist with Construction",
-      "location": "SR110 S / YORK BLVD",
-      "location_desc": "SB 110 AT YORK TO AVENUE 52",
-      "area": "Central LA"
-    },
-    {
       "id": "2028",
       "time": "9:30 PM",
       "type": "Assist with Construction",
       "location": "I405 S / Mulholland Dr",
       "location_desc": "SB 405 FRM MULHOLLAND",
       "area": "West LA"
-    },
-    {
-      "id": "2005",
-      "time": "9:12 PM",
-      "type": "Assist CT with Maintenance",
-      "location": "I5 N / I5 N Sr14 Con",
-      "location_desc": "",
-      "area": "Newhall"
     },
     {
       "id": "1998",
@@ -148,14 +124,6 @@
       "area": "Central LA"
     },
     {
-      "id": "1935",
-      "time": "8:33 PM",
-      "type": "Assist with Construction",
-      "location": "SR60 W / N Diamond Bar Blvd",
-      "location_desc": "WB 60 FRM DIAMOND BAR TO GRAND",
-      "area": "Baldwin Park"
-    },
-    {
       "id": "1817",
       "time": "7:27 PM",
       "type": "Assist with Construction",
@@ -172,5 +140,5 @@
       "area": "Antelope Valley"
     }
   ],
-  "last_updated": "2025-09-25T09:17:58.255126"
+  "last_updated": "2025-09-25T09:50:17.181895"
 }

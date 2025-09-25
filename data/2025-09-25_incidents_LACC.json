@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 77,
+  "total_incidents": 80,
   "incidents": [
     {
       "id": "1878",
@@ -619,7 +619,31 @@
       "location": "I605 N / Beverly Blvd Ofr",
       "location_desc": "",
       "area": "LA"
+    },
+    {
+      "id": "0117",
+      "time": "2:45 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I10 W / I110 S",
+      "location_desc": "WB JEO",
+      "area": "Central LA"
+    },
+    {
+      "id": "0116",
+      "time": "2:43 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr60 E Wo / Sr71",
+      "location_desc": "SR60 E EO SR71",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "0111",
+      "time": "2:31 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "E Avenue M / 50th St E",
+      "location_desc": "50TH JSO AVENUE M",
+      "area": "Antelope Valley"
     }
   ],
-  "last_updated": "2025-09-25T09:17:58.256397"
+  "last_updated": "2025-09-25T09:50:17.183024"
 }
