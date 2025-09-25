@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 190,
+  "total_incidents": 191,
   "incidents": [
     {
       "id": "0262",
@@ -2188,7 +2188,22 @@
       },
       "is_new": true,
       "is_relevant": true
+    },
+    {
+      "id": "0588",
+      "time": "4:51 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Sr76 So",
+      "location_desc": "I15 S SR76 SO",
+      "area": "Oceanside",
+      "details": "4:52 PM: 1 | 4:55 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T23:44:19.222402"
+  "last_updated": "2025-09-25T23:58:09.880206"
 }
