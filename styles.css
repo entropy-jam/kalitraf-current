@@ -530,7 +530,7 @@ body {
     font-size: 0.85em;
     color: var(--text-secondary);
     position: absolute;
-    bottom: 8px;
+    bottom: 12px;
     right: 8px;
     font-weight: 500;
     opacity: 1;
