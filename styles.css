@@ -332,11 +332,10 @@ body {
     margin-bottom: 0 !important;
 }
 
-/* Virtual scroll items - DEPRECATED (not in use) */
-.incidents-container .incident.virtual-scroll-item {
-    margin-bottom: 0 !important;
-    animation: none !important;
-    position: absolute !important;
+/* Remove deprecated virtual scroll positioning conflicts */
+.incidents-container .incident {
+    position: relative !important;
+    margin-bottom: 10px !important;
 }
 
 .incident:hover {
@@ -366,8 +365,8 @@ body {
     border-radius: 4px;
     transition: all 0.2s ease;
     opacity: 0.8;
-    position: relative;
-    z-index: 10;
+    position: static;
+    display: inline-block;
 }
 
 .copy-button:hover {
@@ -629,6 +628,8 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 8px;
+    margin-top: 4px;
+    clear: both;
 }
 
 .incident-status {
