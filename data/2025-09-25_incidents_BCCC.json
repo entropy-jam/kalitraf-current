@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 148,
+  "total_incidents": 152,
   "incidents": [
     {
       "id": "0262",
@@ -1558,7 +1558,67 @@
       },
       "is_new": true,
       "is_relevant": false
+    },
+    {
+      "id": "0185",
+      "time": "2:24 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I805 S / Orange (olympic)",
+      "location_desc": "",
+      "area": "South FSP",
+      "details": "2:21 PM: 3 | 2:21 PM: 2 | 2:21 PM: 1 | 2:24 PM: 2 | 2:24 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0437",
+      "time": "2:21 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I15 N / Temecula So (sr79)",
+      "location_desc": "I15 N TEMECULA SO (SR79)",
+      "area": "Temecula",
+      "details": "2:23 PM: 3 | 2:23 PM: 2 | 2:22 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0436",
+      "time": "2:20 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I805 S / Orange (olympic)",
+      "location_desc": "SB / JNO",
+      "area": "San Diego",
+      "details": "2:21 PM: 3 | 2:21 PM: 2 | 2:21 PM: 1 | 2:24 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0428",
+      "time": "2:14 PM",
+      "type": "ESCORT for Road Conditions",
+      "location": "Calexico",
+      "location_desc": "WIDE LOAD DETAIL TIL APPROX 0000",
+      "area": "",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T21:14:55.156031"
+  "last_updated": "2025-09-25T21:26:11.301436"
 }
