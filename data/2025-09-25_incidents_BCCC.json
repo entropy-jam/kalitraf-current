@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 158,
+  "total_incidents": 160,
   "incidents": [
     {
       "id": "0262",
@@ -1708,7 +1708,37 @@
       },
       "is_new": true,
       "is_relevant": true
+    },
+    {
+      "id": "0479",
+      "time": "3:07 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Ethanac Rd / I215 S",
+      "location_desc": "OCC'D I215 S / ETHANAC RD OFR",
+      "area": "Temecula",
+      "details": "3:10 PM: 2 | 3:09 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0470",
+      "time": "2:56 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I805 S / Orange Ave Ofr",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "3:04 PM: 4 | 3:00 PM: 3 | 2:59 PM: 2 | 2:59 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T21:55:26.922290"
+  "last_updated": "2025-09-25T22:12:09.977092"
 }

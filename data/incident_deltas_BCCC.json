@@ -1,16 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T21:55:26.921332",
+  "timestamp": "2025-09-25T22:12:09.976246",
   "new_incidents": [
     {
-      "id": "0466",
-      "time": "2:48 PM",
-      "type": "Traffic Hazard",
-      "location": "I8 W / College Eo",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "2:50 PM: 3 | 2:50 PM: 2",
+      "id": "0479",
+      "time": "3:07 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Ethanac Rd / I215 S",
+      "location_desc": "OCC'D I215 S / ETHANAC RD OFR",
+      "area": "Temecula",
+      "details": "3:10 PM: 2 | 3:09 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -19,13 +19,13 @@
       "is_relevant": true
     },
     {
-      "id": "0464",
-      "time": "2:45 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Nutmeg No",
+      "id": "0470",
+      "time": "2:56 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I805 S / Orange Ave Ofr",
       "location_desc": "",
-      "area": "Oceanside",
-      "details": "2:46 PM: 1 | 2:49 PM: 1",
+      "area": "San Diego",
+      "details": "3:04 PM: 4 | 3:00 PM: 3 | 2:59 PM: 2 | 2:59 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -41,21 +41,6 @@
       "location_desc": "",
       "area": "San Diego",
       "details": "2:47 PM: 2 | 2:41 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
-      "id": "0185",
-      "time": "2:24 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I805 S / Orange (olympic)",
-      "location_desc": "",
-      "area": "South FSP",
-      "details": "2:21 PM: 3 | 2:21 PM: 2 | 2:21 PM: 1 | 2:24 PM: 2 | 2:24 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -109,21 +94,6 @@
       "is_relevant": false
     },
     {
-      "id": "0423",
-      "time": "2:02 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 N / Cannon So",
-      "location_desc": "I5 N CANNON SO",
-      "area": "Oceanside",
-      "details": "2:07 PM: 9 | 2:06 PM: 8 | 2:06 PM: 7 | 2:04 PM: 6 | 2:04 PM: 5 | 2:04 PM: 4 | 2:03 PM: 3 | 2:03 PM: 2 | 2:02 PM: 1 | 2:10 PM: 3 | 2:10 PM: 2 | 2:05 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
       "id": "0421",
       "time": "1:59 PM",
       "type": "Trfc Collision-Unkn Inj",
@@ -165,7 +135,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -305,6 +275,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 20,
+  "new_count": 18,
   "removed_count": 0
 }
