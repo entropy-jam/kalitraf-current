@@ -1,8 +1,16 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-25T03:39:58.221708",
+  "timestamp": "2025-09-25T03:52:50.553719",
   "new_incidents": [
+    {
+      "id": "1102",
+      "time": "8:49 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr174 / Brunswick Rd",
+      "location_desc": "SB 174 AT",
+      "area": "Grass Valley"
+    },
     {
       "id": "1079",
       "time": "8:18 PM",
@@ -101,6 +109,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 12,
+  "new_count": 13,
   "removed_count": 0
 }
