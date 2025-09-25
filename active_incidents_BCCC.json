@@ -1,63 +1,87 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 16,
+  "incident_count": 13,
   "incidents": [
     {
-      "id": "0589",
-      "time": "4:16 PM",
+      "id": "0262",
+      "time": "5:39 PM",
       "type": "Traffic Hazard",
-      "location": "Sr56 W / Carmel Creek Eo",
-      "location_desc": "SR56 W CARMEL CREEK EO",
-      "area": "San Diego"
+      "location": "I15 S / OLD HWY 395",
+      "location_desc": "IN GP",
+      "area": "BCFSP"
     },
     {
-      "id": "0225",
-      "time": "4:14 PM",
+      "id": "0669",
+      "time": "5:36 PM",
       "type": "Traffic Hazard",
-      "location": "I5 S / S Curves (sdi)",
-      "location_desc": "I5 S S CURVES (SDI)",
-      "area": "South FSP"
-    },
-    {
-      "id": "0579",
-      "time": "4:14 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / S Curves (sdi)",
-      "location_desc": "I5 S S CURVES (SDI)",
-      "area": "San Diego"
-    },
-    {
-      "id": "0588",
-      "time": "4:11 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Valley Center Rd / N Lake Wohlford Rd",
-      "location_desc": "4637 VALLEY CENTER RD",
+      "location": "I15 S / Old Hwy 395",
+      "location_desc": "IN GP",
       "area": "Oceanside"
     },
     {
-      "id": "0574",
-      "time": "4:11 PM",
+      "id": "0667",
+      "time": "5:30 PM",
+      "type": "Provide Traffic Control",
+      "location": "I8 W / Fletcher Wo (baltimore)",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0655",
+      "time": "5:27 PM",
       "type": "Traffic Hazard",
-      "location": "I5 S / Dairy Mart No",
-      "location_desc": "I5 S DAIRY MART NO",
+      "location": "I5 N / Cesar E Chavez No",
+      "location_desc": "I5 N CESAR E CHAVEZ NO",
       "area": "San Diego"
     },
     {
-      "id": "0571",
-      "time": "4:09 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I15 N / BERNARDO CENTER (HOV)",
+      "id": "0649",
+      "time": "5:21 PM",
+      "type": "Report of Fire",
+      "location": "Sr15 N / University",
       "location_desc": "",
       "area": "San Diego"
     },
     {
-      "id": "0218",
-      "time": "4:08 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I15 N / BERNARDO CENTER (HOV)",
+      "id": "0654",
+      "time": "5:20 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "12170 Rockcrest Rd",
       "location_desc": "",
-      "area": "North FSP"
+      "area": "El Cajon"
+    },
+    {
+      "id": "0652",
+      "time": "5:20 PM",
+      "type": "Traffic Hazard",
+      "location": "I805 N / Orange So (olympic So)",
+      "location_desc": "I805 N ORANGE SO (OLYMPIC SO)",
+      "area": "San Diego"
+    },
+    {
+      "id": "0636",
+      "time": "5:09 PM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / Kitchen Creek Eo",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0614",
+      "time": "4:44 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I15 N / CITRACADO NO (FELICITA)",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0608",
+      "time": "4:24 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "6945 Linda Vista Rd",
+      "location_desc": "McDonald's",
+      "area": "San Diego"
     },
     {
       "id": "0564",
@@ -68,60 +92,12 @@
       "area": "BC"
     },
     {
-      "id": "0554",
-      "time": "3:52 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "9805 Carroll Canyon Rd",
-      "location_desc": "Carl's Jr.",
-      "area": "San Diego"
-    },
-    {
-      "id": "0538",
-      "time": "3:40 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "El Camino Del Norte / Del Dios Hwy",
-      "location_desc": "I/S",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0524",
-      "time": "3:16 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "De Luz Rd / Via Medeiros",
-      "location_desc": "WB DE LUZ RD JWO VIA MEDEIROS",
-      "area": "Temecula"
-    },
-    {
-      "id": "0452",
-      "time": "2:11 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "2055 Arnold Way",
-      "location_desc": "",
-      "area": "El Cajon"
-    },
-    {
-      "id": "0412",
-      "time": "1:29 PM",
+      "id": "0565",
+      "time": "3:59 PM",
       "type": "Hit and Run No Injuries",
-      "location": "I8 E / Mission Gorge Wo (fairmount)",
-      "location_desc": "",
-      "area": "San Diego"
-    },
-    {
-      "id": "0128",
-      "time": "7:19 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Ct",
-      "location_desc": "",
-      "area": ""
-    },
-    {
-      "id": "0033",
-      "time": "4:27 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Hwy 76",
-      "location_desc": "LAKE HENSHAW",
-      "area": "El Cajon"
+      "location": "I15 N / Winchester So (sr79)",
+      "location_desc": "I15 N WINCHESTER SO (SR79)",
+      "area": "Temecula"
     },
     {
       "id": "0002",
@@ -132,5 +108,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-24T23:24:25.018432"
+  "last_updated": "2025-09-25T00:40:20.704244"
 }

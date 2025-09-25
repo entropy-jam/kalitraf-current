@@ -1,7 +1,8 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 13,
+  "date": "2025-09-25",
+  "total_incidents": 13,
   "incidents": [
     {
       "id": "0262",
@@ -108,5 +109,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-25T00:40:20.704244"
+  "last_updated": "2025-09-25T00:40:20.705544"
 }
