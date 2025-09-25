@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 71,
+  "total_incidents": 77,
   "incidents": [
     {
       "id": "1878",
@@ -571,7 +571,55 @@
       "location": "2901 W Broadway",
       "location_desc": "SAN BERNARDINO TO PARAMOUNT",
       "area": "LA"
+    },
+    {
+      "id": "0104",
+      "time": "2:12 AM",
+      "type": "Report of Fire",
+      "location": "Sr110 N / Hill St Onr",
+      "location_desc": "",
+      "area": "Central LA"
+    },
+    {
+      "id": "0098",
+      "time": "1:49 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr170 S / Victory Blvd Onr",
+      "location_desc": "VICTORY ONR TO SB 170",
+      "area": "West Valley"
+    },
+    {
+      "id": "0094",
+      "time": "1:47 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I10 E / Garfield Ave",
+      "location_desc": "JEO",
+      "area": "East LA"
+    },
+    {
+      "id": "0083",
+      "time": "1:20 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "SR110 S / Stadium Way",
+      "location_desc": "SB 110 JSO STADIUM WAY",
+      "area": "Central LA"
+    },
+    {
+      "id": "0029",
+      "time": "12:15 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / I5 N Ca134 W Con",
+      "location_desc": "nb jso",
+      "area": "Altadena"
+    },
+    {
+      "id": "2128",
+      "time": "11:04 PM",
+      "type": "Assist with Construction",
+      "location": "I605 N / Beverly Blvd Ofr",
+      "location_desc": "",
+      "area": "LA"
     }
   ],
-  "last_updated": "2025-09-25T05:56:41.421476"
+  "last_updated": "2025-09-25T09:17:58.256397"
 }

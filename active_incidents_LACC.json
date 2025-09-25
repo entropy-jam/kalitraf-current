@@ -1,63 +1,63 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "incident_count": 30,
+  "incident_count": 21,
   "incidents": [
     {
-      "id": "2111",
-      "time": "10:36 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr60 W / N Diamond Bar Blvd",
-      "location_desc": "WB 60 JEO DIA BAR",
-      "area": "Baldwin Park"
+      "id": "0104",
+      "time": "2:12 AM",
+      "type": "Report of Fire",
+      "location": "Sr110 N / Hill St Onr",
+      "location_desc": "",
+      "area": "Central LA"
     },
     {
-      "id": "2113",
-      "time": "10:35 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "6150 N Paramount Blvd",
-      "location_desc": "POI * WB 91 EO LAKEWOOD BLVD",
-      "area": "Santa Fe Springs"
-    },
-    {
-      "id": "2110",
-      "time": "10:34 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "Nordhoff St Onr / I405 N",
-      "location_desc": "NORDHOFF ONR TO NB 405",
+      "id": "0098",
+      "time": "1:49 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr170 S / Victory Blvd Onr",
+      "location_desc": "VICTORY ONR TO SB 170",
       "area": "West Valley"
     },
     {
-      "id": "2107",
-      "time": "10:33 PM",
-      "type": "Traffic Hazard",
-      "location": "I10 W / I5 S",
-      "location_desc": "WB 10 AT 5",
+      "id": "0094",
+      "time": "1:47 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I10 E / Garfield Ave",
+      "location_desc": "JEO",
+      "area": "East LA"
+    },
+    {
+      "id": "0083",
+      "time": "1:20 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "SR110 S / Stadium Way",
+      "location_desc": "SB 110 JSO STADIUM WAY",
       "area": "Central LA"
     },
     {
-      "id": "2096",
-      "time": "10:19 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr60 W / Phillips Ranch Rd",
-      "location_desc": "WO",
-      "area": "Baldwin Park"
-    },
-    {
-      "id": "2094",
-      "time": "10:19 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I110 N / James M Wood Blvd",
-      "location_desc": "NB 110 JSO JAMES M WOOD",
-      "area": "Central LA"
-    },
-    {
-      "id": "2097",
-      "time": "10:17 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "800 N Central Ave",
-      "location_desc": "EMBASSY SUITES ROOM 918",
+      "id": "0029",
+      "time": "12:15 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / I5 N Ca134 W Con",
+      "location_desc": "nb jso",
       "area": "Altadena"
+    },
+    {
+      "id": "0001",
+      "time": "11:59 PM",
+      "type": "Road/Weather Conditions",
+      "location": "Media Log",
+      "location_desc": "LOS ANGELES COUNTY",
+      "area": "LA"
+    },
+    {
+      "id": "2128",
+      "time": "11:04 PM",
+      "type": "Assist with Construction",
+      "location": "I605 N / Beverly Blvd Ofr",
+      "location_desc": "",
+      "area": "LA"
     },
     {
       "id": "2087",
@@ -76,44 +76,12 @@
       "area": "Central LA"
     },
     {
-      "id": "2073",
-      "time": "9:58 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "4178 William Barnes Ave",
-      "location_desc": "4178-4751 WILLIAM BARNES",
-      "area": "LA"
-    },
-    {
       "id": "2069",
       "time": "9:58 PM",
       "type": "Hit and Run No Injuries",
       "location": "18506 Mescal St",
       "location_desc": "",
       "area": "Santa Fe Springs"
-    },
-    {
-      "id": "2065",
-      "time": "9:56 PM",
-      "type": "Assist CT with Maintenance",
-      "location": "1601 Corporate Center Dr",
-      "location_desc": "EAST LOS ANGELES CHP",
-      "area": "LA"
-    },
-    {
-      "id": "2054",
-      "time": "9:51 PM",
-      "type": "Assist with Construction",
-      "location": "1601 Corporate Center Dr",
-      "location_desc": "EAST LOS ANGELES CHP",
-      "area": "LA"
-    },
-    {
-      "id": "2045",
-      "time": "9:39 PM",
-      "type": "Traffic Hazard",
-      "location": "Stunt Rd / Mulholland Hwy",
-      "location_desc": "STUNT RD AT MULHOLLAND",
-      "area": "West Valley"
     },
     {
       "id": "2027",
@@ -164,14 +132,6 @@
       "area": "Newhall"
     },
     {
-      "id": "1963",
-      "time": "8:46 PM",
-      "type": "Assist CT with Maintenance",
-      "location": "I405 S / W Rosecrans Ave",
-      "location_desc": "",
-      "area": "West LA"
-    },
-    {
       "id": "1962",
       "time": "8:45 PM",
       "type": "Assist CT with Maintenance",
@@ -204,45 +164,13 @@
       "area": "West LA"
     },
     {
-      "id": "1803",
-      "time": "7:25 PM",
-      "type": "Assist with Construction",
-      "location": "US101 W / LIBERTY CANYON RD",
-      "location_desc": "WB 101 LIBERTY TO CHESEBORO",
-      "area": "West Valley"
-    },
-    {
       "id": "1675",
       "time": "6:03 PM",
       "type": "Assist with Construction",
       "location": "Sr14 S / Ave J",
       "location_desc": "SB 14 FRM AVE J TO AVE N",
       "area": "Antelope Valley"
-    },
-    {
-      "id": "0056",
-      "time": "1:06 AM",
-      "type": "Road/Weather Conditions",
-      "location": "2901 W Broadway",
-      "location_desc": "LACO ROAD WEATHER CONDITIONS",
-      "area": "LA"
-    },
-    {
-      "id": "0001",
-      "time": "11:59 PM",
-      "type": "Road/Weather Conditions",
-      "location": "Media Log",
-      "location_desc": "LOS ANGELES COUNTY",
-      "area": "LA"
-    },
-    {
-      "id": "2103",
-      "time": "9:13 PM",
-      "type": "Missing Elderly",
-      "location": "Lawndale",
-      "location_desc": "**DOUGLAS MINNER**",
-      "area": "LA"
     }
   ],
-  "last_updated": "2025-09-25T05:56:41.418984"
+  "last_updated": "2025-09-25T09:17:58.255126"
 }
