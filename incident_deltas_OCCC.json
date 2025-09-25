@@ -1,14 +1,14 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "timestamp": "2025-09-25T06:21:24.662308",
+  "timestamp": "2025-09-25T06:46:20.314837",
   "new_incidents": [
     {
       "id": "0603",
       "time": "11:13 PM",
       "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr91 E Wo / East St",
-      "location_desc": "EB 91 JWO EAST",
+      "location": "SR91 E WO / LEMON ST",
+      "location_desc": "EB 91 JWO LEMON",
       "area": "Westminster"
     },
     {
