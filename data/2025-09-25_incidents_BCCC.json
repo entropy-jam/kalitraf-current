@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 95,
+  "total_incidents": 97,
   "incidents": [
     {
       "id": "0262",
@@ -763,7 +763,37 @@
       "location": "I5 S / Civic Center No (front)",
       "location_desc": "I5 S CIVIC CENTER NO (FRONT)",
       "area": "San Diego"
+    },
+    {
+      "id": "0235",
+      "time": "9:52 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / Sr78 No (vista Wy)",
+      "location_desc": "I5 N SR78 NO (VISTA WY)",
+      "area": "Oceanside",
+      "details": "9:54 AM: 6 | 9:53 AM: 5 | 9:53 AM: 4 | 9:53 AM: 3 | 9:53 AM: 2 | 9:52 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0234",
+      "time": "9:48 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr905 W / Caliente Eo",
+      "location_desc": "SR905 W CALIENTE EO",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T16:43:36.860882"
+  "last_updated": "2025-09-25T16:54:54.723472"
 }

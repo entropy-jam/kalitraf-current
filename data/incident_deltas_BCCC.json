@@ -1,8 +1,38 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T12:44:01.409909",
+  "timestamp": "2025-09-25T16:54:54.722656",
   "new_incidents": [
+    {
+      "id": "0235",
+      "time": "9:52 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / Sr78 No (vista Wy)",
+      "location_desc": "I5 N SR78 NO (VISTA WY)",
+      "area": "Oceanside",
+      "details": "9:54 AM: 6 | 9:53 AM: 5 | 9:53 AM: 4 | 9:53 AM: 3 | 9:53 AM: 2 | 9:52 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0234",
+      "time": "9:48 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr905 W / Caliente Eo",
+      "location_desc": "SR905 W CALIENTE EO",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
     {
       "id": "0230",
       "time": "9:39 AM",
@@ -10,7 +40,7 @@
       "location": "I8 W / I805 Wo",
       "location_desc": "I8 W I805 WO",
       "area": "San Diego",
-      "details": "9:40 AM: 1",
+      "details": "9:40 AM: 1 | 9:43 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -25,22 +55,7 @@
       "location": "I5 N / Oceanside Blvd Ofr",
       "location_desc": "",
       "area": "Oceanside",
-      "details": "9:41 AM: 3 | 9:38 AM: 2 | 9:37 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0227",
-      "time": "9:34 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Civic Center No (front)",
-      "location_desc": "I5 S CIVIC CENTER NO (FRONT)",
-      "area": "San Diego",
-      "details": "9:36 AM: 1 | 9:38 AM: 1",
+      "details": "9:41 AM: 3 | 9:38 AM: 2 | 9:37 AM: 1 | 9:49 AM: 3 | 9:49 AM: 2 | 9:49 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -70,7 +85,7 @@
       "location": "I5 N / Las Pulgas So",
       "location_desc": "I5 N LAS PULGAS SO",
       "area": "Oceanside",
-      "details": "9:19 AM: 3 | 9:17 AM: 2 | 9:13 AM: 1 | 9:15 AM: 1",
+      "details": "9:47 AM: 4 | 9:19 AM: 3 | 9:17 AM: 2 | 9:13 AM: 1 | 9:49 AM: 4 | 9:47 AM: 3 | 9:47 AM: 2 | 9:15 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -85,12 +100,12 @@
       "location": "I5 S / Leucadia No",
       "location_desc": "I5 S LEUCADIA NO",
       "area": "Oceanside",
-      "details": "",
+      "details": "9:30 AM: 17 | 9:30 AM: 16 | 9:22 AM: 15 | 9:00 AM: 14 | 8:57 AM: 13 | 8:56 AM: 12 | 8:55 AM: 11 | 8:55 AM: 10 | 8:55 AM: 9 | 8:54 AM: 8 | 8:54 AM: 7 | 8:53 AM: 6 | 8:53 AM: 5 | 8:52 AM: 4 | 8:52 AM: 3 | 8:52 AM: 2 | 8:51 AM: 1 | 9:04 AM: 3 | 9:04 AM: 2 | 8:54 AM: 1",
       "lane_blockage": {
-        "status": "unknown",
+        "status": "no_blockage",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": true
     },
     {
@@ -105,22 +120,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
-      "is_relevant": false
-    },
-    {
-      "id": "0150",
-      "time": "8:00 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Alpine Blvd / E Victoria Dr",
-      "location_desc": "",
-      "area": "El Cajon",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -135,7 +135,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -150,7 +150,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -165,7 +165,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -180,7 +180,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -195,7 +195,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -210,7 +210,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -225,7 +225,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -240,7 +240,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -255,7 +255,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -270,7 +270,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -285,7 +285,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -300,7 +300,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -315,7 +315,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     },
     {
@@ -330,7 +330,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": false
     }
   ],
