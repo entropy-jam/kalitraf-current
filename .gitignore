@@ -48,3 +48,7 @@ Thumbs.db
 # Old data files (keep only current day)
 data/2025-09-22_incidents.json
 .vercel
+
+# Node.js dependencies
+node_modules/
+package-lock.json
