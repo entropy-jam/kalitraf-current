@@ -1,8 +1,53 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 24,
+  "incident_count": 25,
   "incidents": [
+    {
+      "id": "0521",
+      "time": "3:41 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "8502 Railroad Ave",
+      "location_desc": "VARIOUS LOC W/CALTRANS SANTEE",
+      "area": "El Cajon",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0519",
+      "time": "3:40 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Balboa (tierrasanta)",
+      "location_desc": "I15 S BALBOA (TIERRASANTA)",
+      "area": "San Diego",
+      "details": "3:44 PM: 2 | 3:40 PM: 1 | 3:45 PM: 4 | 3:40 PM: 3 | 3:40 PM: 2 | 3:40 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0518",
+      "time": "3:36 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 I5 N",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
     {
       "id": "0219",
       "time": "3:33 PM",
@@ -15,7 +60,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -30,7 +75,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -45,7 +90,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -60,7 +105,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -75,7 +120,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -90,7 +135,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -152,21 +197,6 @@
       },
       "is_new": false,
       "is_relevant": false
-    },
-    {
-      "id": "0437",
-      "time": "2:21 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I15 N / Temecula So (sr79)",
-      "location_desc": "I15 N TEMECULA SO (SR79)",
-      "area": "Temecula",
-      "details": "2:23 PM: 3 | 2:23 PM: 2 | 2:22 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
     },
     {
       "id": "0428",
@@ -233,24 +263,9 @@
       "time": "10:00 AM",
       "type": "Trfc Collision-No Inj",
       "location": "I5 N / Oceanside",
-      "location_desc": "I5 N OCEANSIDE",
+      "location_desc": "*180",
       "area": "Oceanside",
       "details": "11:26 AM: 8 | 11:16 AM: 7 | 10:17 AM: 6 | 10:15 AM: 5 | 10:07 AM: 4 | 10:05 AM: 3 | 10:03 AM: 2 | 10:00 AM: 1 | 11:39 AM: 7 | 10:13 AM: 6 | 10:13 AM: 5 | 10:13 AM: 4 | 10:00 AM: 3 | 10:00 AM: 2 | 10:00 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
-      "id": "0235",
-      "time": "9:52 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I5 N / Sr78 No (vista Wy)",
-      "location_desc": "I5 N SR78 NO (VISTA WY)",
-      "area": "Oceanside",
-      "details": "10:22 AM: 13 | 10:16 AM: 12 | 10:11 AM: 11 | 10:02 AM: 10 | 9:56 AM: 9 | 9:56 AM: 8 | 9:55 AM: 7 | 9:54 AM: 6 | 9:53 AM: 5 | 9:53 AM: 4 | 9:53 AM: 3 | 9:53 AM: 2 | 9:52 AM: 1 | 11:23 AM: 19 | 10:26 AM: 18 | 10:15 AM: 17 | 10:15 AM: 16 | 10:37 AM: 15 | 10:04 AM: 14 | 10:04 AM: 13 | 11:12 AM: 12 | 10:20 AM: 11 | 10:04 AM: 10 | 10:04 AM: 9 | 10:23 AM: 8 | 10:02 AM: 7 | 10:02 AM: 6 | 10:02 AM: 5 | 10:12 AM: 4 | 10:01 AM: 3 | 9:55 AM: 2 | 9:55 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -364,5 +379,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T22:39:06.547630"
+  "last_updated": "2025-09-25T22:45:50.321095"
 }
