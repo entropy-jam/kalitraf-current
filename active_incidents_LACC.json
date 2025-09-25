@@ -1,7 +1,7 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "incident_count": 13,
+  "incident_count": 12,
   "incidents": [
     {
       "id": "0176",
@@ -84,14 +84,6 @@
       "area": "LA"
     },
     {
-      "id": "2028",
-      "time": "9:30 PM",
-      "type": "Assist with Construction",
-      "location": "I405 S / Mulholland Dr",
-      "location_desc": "SB 405 FRM MULHOLLAND",
-      "area": "West LA"
-    },
-    {
       "id": "1973",
       "time": "8:58 PM",
       "type": "Assist with Construction",
@@ -108,5 +100,5 @@
       "area": "West LA"
     }
   ],
-  "last_updated": "2025-09-25T11:45:07.554886"
+  "last_updated": "2025-09-25T11:52:33.115295"
 }
