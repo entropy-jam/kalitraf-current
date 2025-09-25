@@ -1,8 +1,56 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "timestamp": "2025-09-25T04:49:06.493211",
+  "timestamp": "2025-09-25T04:55:52.675833",
   "new_incidents": [
+    {
+      "id": "2063",
+      "time": "9:53 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / Wilmington Ave Ofr",
+      "location_desc": "SB JNO",
+      "area": "South LA"
+    },
+    {
+      "id": "2054",
+      "time": "9:51 PM",
+      "type": "Assist with Construction",
+      "location": "1601 Corporate Center Dr",
+      "location_desc": "EAST LOS ANGELES CHP",
+      "area": "LA"
+    },
+    {
+      "id": "2055",
+      "time": "9:50 PM",
+      "type": "Animal Hazard",
+      "location": "I210 W / Fair Oaks Ave N Ofr",
+      "location_desc": "WB 210 JEO FAIR OAKS",
+      "area": "Altadena"
+    },
+    {
+      "id": "2053",
+      "time": "9:49 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I110 N / W 3rd St",
+      "location_desc": "I110 N / W 3RD ST",
+      "area": "Central LA"
+    },
+    {
+      "id": "2051",
+      "time": "9:48 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "SR60 W / GRAND AVE",
+      "location_desc": "WB 60 JEO GRAND",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "2050",
+      "time": "9:48 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / Rinaldi St",
+      "location_desc": "SB 405 JSO RINALDI",
+      "area": "Newhall"
+    },
     {
       "id": "2049",
       "time": "9:44 PM",
@@ -31,8 +79,8 @@
       "id": "2033",
       "time": "9:33 PM",
       "type": "Car Fire",
-      "location": "Sr14 N / Santiago Rd",
-      "location_desc": "NB 14 JNO SANTIAGO",
+      "location": "SR14 N / SOLEDAD CANYON RD - (89-31)",
+      "location_desc": "NB 14 JSO SOLEDAD",
       "area": "Antelope Valley"
     },
     {
@@ -47,9 +95,9 @@
       "id": "2027",
       "time": "9:31 PM",
       "type": "Assist with Construction",
-      "location": "1601 Corporate Center Dr",
+      "location": "SR110 S / YORK BLVD",
       "location_desc": "EAST LOS ANGELES CHP",
-      "area": "LA"
+      "area": "Central LA"
     },
     {
       "id": "2028",
@@ -114,14 +162,6 @@
       "location": "I405 S / Long Beach Blvd",
       "location_desc": "JSO",
       "area": "South LA"
-    },
-    {
-      "id": "1981",
-      "time": "8:59 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I210 E / N Vernon Ave",
-      "location_desc": "EB JWO",
-      "area": "Baldwin Park"
     },
     {
       "id": "1988",
@@ -237,6 +277,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 29,
+  "new_count": 34,
   "removed_count": 0
 }

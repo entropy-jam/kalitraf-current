@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 48,
+  "total_incidents": 54,
   "incidents": [
     {
       "id": "1878",
@@ -387,7 +387,55 @@
       "location": "I5 S / I405 S",
       "location_desc": "SB 5 AT 405 // GP",
       "area": "Newhall"
+    },
+    {
+      "id": "2063",
+      "time": "9:53 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / Wilmington Ave Ofr",
+      "location_desc": "SB JNO",
+      "area": "South LA"
+    },
+    {
+      "id": "2054",
+      "time": "9:51 PM",
+      "type": "Assist with Construction",
+      "location": "1601 Corporate Center Dr",
+      "location_desc": "EAST LOS ANGELES CHP",
+      "area": "LA"
+    },
+    {
+      "id": "2055",
+      "time": "9:50 PM",
+      "type": "Animal Hazard",
+      "location": "I210 W / Fair Oaks Ave N Ofr",
+      "location_desc": "WB 210 JEO FAIR OAKS",
+      "area": "Altadena"
+    },
+    {
+      "id": "2053",
+      "time": "9:49 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I110 N / W 3rd St",
+      "location_desc": "I110 N / W 3RD ST",
+      "area": "Central LA"
+    },
+    {
+      "id": "2051",
+      "time": "9:48 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "SR60 W / GRAND AVE",
+      "location_desc": "WB 60 JEO GRAND",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "2050",
+      "time": "9:48 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / Rinaldi St",
+      "location_desc": "SB 405 JSO RINALDI",
+      "area": "Newhall"
     }
   ],
-  "last_updated": "2025-09-25T04:49:06.493818"
+  "last_updated": "2025-09-25T04:55:52.676490"
 }
