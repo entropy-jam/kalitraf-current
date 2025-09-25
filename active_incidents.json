@@ -1,7 +1,7 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 17,
+  "incident_count": 14,
   "incidents": [
     {
       "id": "0577",
@@ -15,7 +15,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -30,7 +30,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -85,21 +85,6 @@
       "location": "15810 Rainbird Rd",
       "location_desc": "",
       "area": "El Cajon",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": false
-    },
-    {
-      "id": "0240",
-      "time": "4:11 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr78 W / Nordahl Rd Ofr",
-      "location_desc": "",
-      "area": "North FSP",
       "details": "",
       "lane_blockage": {
         "status": "unknown",
@@ -169,21 +154,6 @@
       "is_relevant": false
     },
     {
-      "id": "0483",
-      "time": "3:11 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "27698 Clinton Keith Rd",
-      "location_desc": "ARCO GAS STATION",
-      "area": "Temecula",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": false
-    },
-    {
       "id": "0428",
       "time": "2:14 PM",
       "type": "ESCORT for Road Conditions",
@@ -205,21 +175,6 @@
       "location": "Sr79 / Sage Rd",
       "location_desc": "PAUBA TILL 1600",
       "area": "Temecula",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": false
-    },
-    {
-      "id": "0062",
-      "time": "4:17 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "27174 SR79",
-      "location_desc": "CALTRANS LAKE HENSHAW STATION",
-      "area": "El Cajon",
       "details": "",
       "lane_blockage": {
         "status": "unknown",
@@ -259,5 +214,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T23:44:19.219871"
+  "last_updated": "2025-09-25T23:51:31.517461"
 }
