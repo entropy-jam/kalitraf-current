@@ -1,8 +1,24 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "incident_count": 4,
+  "incident_count": 6,
   "incidents": [
+    {
+      "id": "0080",
+      "time": "4:33 AM",
+      "type": "Traffic Hazard",
+      "location": "Us50 W / Forni Rd Ofr",
+      "location_desc": "WB 50 JEO FORNI",
+      "area": "Placerville"
+    },
+    {
+      "id": "0075",
+      "time": "4:13 AM",
+      "type": "Traffic Hazard",
+      "location": "S Watt Ave / Jackson Rd",
+      "location_desc": "NB JSO",
+      "area": "East Sac"
+    },
     {
       "id": "1025",
       "time": "7:17 PM",
@@ -36,5 +52,5 @@
       "area": ""
     }
   ],
-  "last_updated": "2025-09-25T11:01:18.627570"
+  "last_updated": "2025-09-25T11:38:33.815190"
 }
