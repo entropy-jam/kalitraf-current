@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 43,
+  "total_incidents": 46,
   "incidents": [
     {
       "id": "0262",
@@ -347,7 +347,31 @@
       "location": "4270 MM79 N SD 42.70",
       "location_desc": "",
       "area": "El Cajon"
+    },
+    {
+      "id": "0051",
+      "time": "2:21 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr94 E / 28th Wo",
+      "location_desc": "SR94 E 28TH WO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0049",
+      "time": "2:16 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr78 E / Barham Eo",
+      "location_desc": "SR78 E BARHAM EO",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0041",
+      "time": "1:47 AM",
+      "type": "Defective Traffic Signals",
+      "location": "I15 S / Murrieta Hot Springs Rd Ofr",
+      "location_desc": "",
+      "area": "Temecula"
     }
   ],
-  "last_updated": "2025-09-25T08:01:49.951988"
+  "last_updated": "2025-09-25T09:33:20.259518"
 }
