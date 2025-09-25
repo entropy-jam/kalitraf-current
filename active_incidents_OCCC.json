@@ -1,7 +1,7 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "incident_count": 5,
+  "incident_count": 4,
   "incidents": [
     {
       "id": "0002",
@@ -20,14 +20,6 @@
       "area": "OC"
     },
     {
-      "id": "0559",
-      "time": "9:07 PM",
-      "type": "Assist with Construction",
-      "location": "E Santa Clara Ave",
-      "location_desc": "- 55 -",
-      "area": "Santa Ana"
-    },
-    {
       "id": "0550",
       "time": "8:40 PM",
       "type": "Assist with Construction",
@@ -44,5 +36,5 @@
       "area": "Westminster"
     }
   ],
-  "last_updated": "2025-09-25T09:57:19.210530"
+  "last_updated": "2025-09-25T11:20:44.250957"
 }
