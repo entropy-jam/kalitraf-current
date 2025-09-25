@@ -1,23 +1,15 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "incident_count": 8,
+  "incident_count": 7,
   "incidents": [
     {
       "id": "0603",
       "time": "11:13 PM",
       "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr91 E Wo / East St",
-      "location_desc": "EB 91 JWO EAST",
+      "location": "SR91 E WO / LEMON ST",
+      "location_desc": "EB 91 JWO LEMON",
       "area": "Westminster"
-    },
-    {
-      "id": "0600",
-      "time": "11:08 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Tl91 W At / Sr55",
-      "location_desc": "WB AT 55- FT LNS",
-      "area": "Santa Ana"
     },
     {
       "id": "0594",
@@ -68,5 +60,5 @@
       "area": "OC"
     }
   ],
-  "last_updated": "2025-09-25T06:21:24.661859"
+  "last_updated": "2025-09-25T06:56:37.404360"
 }
