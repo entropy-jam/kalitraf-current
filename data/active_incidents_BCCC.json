@@ -1,8 +1,38 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 27,
+  "incident_count": 23,
   "incidents": [
+    {
+      "id": "0265",
+      "time": "10:30 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 E / Sunset Cliffs Eo (nimitz)",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "10:33 AM: 2 | 10:31 AM: 1 | 10:32 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0263",
+      "time": "10:25 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr15 S / Sr94 No",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
     {
       "id": "0260",
       "time": "10:22 AM",
@@ -64,36 +94,6 @@
       "is_relevant": false
     },
     {
-      "id": "0122",
-      "time": "10:11 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr15 S / I805 S Sr15 S Con",
-      "location_desc": "SB TO SB CON",
-      "area": "South FSP",
-      "details": "10:10 AM: 1 | 10:21 AM: 5 | 10:20 AM: 4 | 10:20 AM: 3 | 10:19 AM: 2 | 10:18 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0253",
-      "time": "10:08 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr15 S / I805 S Sr15 S Con",
-      "location_desc": "SB TO SB CON",
-      "area": "San Diego",
-      "details": "10:10 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
       "id": "0246",
       "time": "10:00 AM",
       "type": "Trfc Collision-No Inj",
@@ -109,64 +109,19 @@
       "is_relevant": true
     },
     {
-      "id": "0243",
-      "time": "9:54 AM",
-      "type": "Traffic Hazard",
-      "location": "I805 S / University No (north Park)",
-      "location_desc": "I805 S UNIVERSITY NO (NORTH PARK)",
-      "area": "San Diego",
-      "details": "9:56 AM: 2 | 9:56 AM: 1 | 9:59 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0239",
-      "time": "9:53 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr52 E / Genesee Wo",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": false
-    },
-    {
       "id": "0235",
       "time": "9:52 AM",
       "type": "Trfc Collision-1141 Enrt",
       "location": "I5 N / Sr78 No (vista Wy)",
       "location_desc": "I5 N SR78 NO (VISTA WY)",
       "area": "Oceanside",
-      "details": "10:22 AM: 13 | 10:16 AM: 12 | 10:11 AM: 11 | 10:02 AM: 10 | 9:56 AM: 9 | 9:56 AM: 8 | 9:55 AM: 7 | 9:54 AM: 6 | 9:53 AM: 5 | 9:53 AM: 4 | 9:53 AM: 3 | 9:53 AM: 2 | 9:52 AM: 1 | 10:26 AM: 16 | 10:15 AM: 15 | 10:15 AM: 14 | 10:04 AM: 13 | 10:04 AM: 12 | 10:20 AM: 11 | 10:04 AM: 10 | 10:04 AM: 9 | 10:23 AM: 8 | 10:02 AM: 7 | 10:02 AM: 6 | 10:02 AM: 5 | 10:12 AM: 4 | 10:01 AM: 3 | 9:55 AM: 2 | 9:55 AM: 1",
+      "details": "10:22 AM: 13 | 10:16 AM: 12 | 10:11 AM: 11 | 10:02 AM: 10 | 9:56 AM: 9 | 9:56 AM: 8 | 9:55 AM: 7 | 9:54 AM: 6 | 9:53 AM: 5 | 9:53 AM: 4 | 9:53 AM: 3 | 9:53 AM: 2 | 9:52 AM: 1 | 10:26 AM: 17 | 10:15 AM: 16 | 10:15 AM: 15 | 10:37 AM: 14 | 10:04 AM: 13 | 10:04 AM: 12 | 10:20 AM: 11 | 10:04 AM: 10 | 10:04 AM: 9 | 10:23 AM: 8 | 10:02 AM: 7 | 10:02 AM: 6 | 10:02 AM: 5 | 10:12 AM: 4 | 10:01 AM: 3 | 9:55 AM: 2 | 9:55 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
       },
       "is_new": true,
       "is_relevant": true
-    },
-    {
-      "id": "0214",
-      "time": "9:18 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "3956 Rogers Rd",
-      "location_desc": "",
-      "area": "El Cajon",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": false
     },
     {
       "id": "0206",
@@ -182,21 +137,6 @@
       },
       "is_new": true,
       "is_relevant": true
-    },
-    {
-      "id": "0179",
-      "time": "8:37 AM",
-      "type": "Trfc Collision-Minor Inj",
-      "location": "Sr56 W / Camino Del Sur Wo",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": false
     },
     {
       "id": "0137",
@@ -409,5 +349,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T17:27:30.670257"
+  "last_updated": "2025-09-25T17:38:20.223004"
 }
