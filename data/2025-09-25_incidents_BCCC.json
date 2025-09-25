@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 128,
+  "total_incidents": 133,
   "incidents": [
     {
       "id": "0262",
@@ -1258,7 +1258,82 @@
       },
       "is_new": true,
       "is_relevant": false
+    },
+    {
+      "id": "0383",
+      "time": "1:23 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Harbor Dr Ofr",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "1:25 PM: 3 | 1:24 PM: 2 | 1:23 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0380",
+      "time": "1:18 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Carmel Mountain No",
+      "location_desc": "ONE MILE NO",
+      "area": "San Diego",
+      "details": "1:19 PM: 1 | 1:19 PM: 2 | 1:19 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0374",
+      "time": "1:11 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr371 / Sr79",
+      "location_desc": "NB 371 2 MI JNO 79",
+      "area": "Temecula",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0367",
+      "time": "1:01 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 S / Sr76 Ofr",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "1:05 PM: 1 | 1:09 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0364",
+      "time": "1:00 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I15 N / Friars So",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "1:02 PM: 5 | 1:02 PM: 4 | 1:02 PM: 3 | 1:02 PM: 2 | 1:01 PM: 1 | 1:23 PM: 3 | 1:23 PM: 2 | 1:05 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T20:00:50.460462"
+  "last_updated": "2025-09-25T20:25:57.803418"
 }

@@ -4,12 +4,42 @@
   "incident_count": 21,
   "incidents": [
     {
-      "id": "0359",
-      "time": "12:54 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr94 W / Bancroft Wo",
+      "id": "0383",
+      "time": "1:23 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Harbor Dr Ofr",
       "location_desc": "",
-      "area": "El Cajon",
+      "area": "Oceanside",
+      "details": "1:25 PM: 3 | 1:24 PM: 2 | 1:23 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0380",
+      "time": "1:18 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Carmel Mountain No",
+      "location_desc": "ONE MILE NO",
+      "area": "San Diego",
+      "details": "1:19 PM: 1 | 1:19 PM: 2 | 1:19 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0374",
+      "time": "1:11 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr371 / Sr79",
+      "location_desc": "NB 371 2 MI JNO 79",
+      "area": "Temecula",
       "details": "",
       "lane_blockage": {
         "status": "unknown",
@@ -19,48 +49,33 @@
       "is_relevant": false
     },
     {
-      "id": "0337",
-      "time": "12:18 PM",
+      "id": "0367",
+      "time": "1:01 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 S / Sr76 Ofr",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "1:05 PM: 1 | 1:09 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0364",
+      "time": "1:00 PM",
       "type": "Trfc Collision-Unkn Inj",
-      "location": "I8 E / College Wo",
+      "location": "I15 N / Friars So",
       "location_desc": "",
       "area": "San Diego",
-      "details": "12:28 PM: 12 | 12:20 PM: 11 | 12:20 PM: 10 | 12:20 PM: 9 | 12:19 PM: 8 | 12:19 PM: 7 | 12:19 PM: 6 | 12:19 PM: 5 | 12:19 PM: 4 | 12:19 PM: 3 | 12:18 PM: 2 | 12:18 PM: 1 | 12:23 PM: 1",
+      "details": "1:02 PM: 5 | 1:02 PM: 4 | 1:02 PM: 3 | 1:02 PM: 2 | 1:01 PM: 1 | 1:23 PM: 3 | 1:23 PM: 2 | 1:05 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
       },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
-      "id": "0334",
-      "time": "12:17 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Carroll Canyon No",
-      "location_desc": "I15 S CARROLL CANYON NO",
-      "area": "San Diego",
-      "details": "12:27 PM: 3 | 12:25 PM: 2 | 12:18 PM: 1 | 12:21 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
-      "id": "0318",
-      "time": "11:41 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 N / Sr78 No (vista Wy)",
-      "location_desc": "I5 N SR78 NO (VISTA WY)",
-      "area": "Oceanside",
-      "details": "12:40 PM: 4 | 11:47 AM: 3 | 11:42 AM: 2 | 11:42 AM: 1 | 12:30 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
+      "is_new": true,
       "is_relevant": true
     },
     {
@@ -160,21 +175,6 @@
       "location": "I15 S / California Oaks (kalmia)",
       "location_desc": "TIL 1400",
       "area": "Temecula",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": false
-    },
-    {
-      "id": "0097",
-      "time": "6:33 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "5902 Kearny Villa Rd",
-      "location_desc": "SAN DIEGO CHP OFFICE",
-      "area": "San Diego",
       "details": "",
       "lane_blockage": {
         "status": "unknown",
@@ -319,5 +319,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T20:00:50.458152"
+  "last_updated": "2025-09-25T20:25:57.801217"
 }
