@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 46,
+  "total_incidents": 48,
   "incidents": [
     {
       "id": "0262",
@@ -371,7 +371,23 @@
       "location": "I15 S / Murrieta Hot Springs Rd Ofr",
       "location_desc": "",
       "area": "Temecula"
+    },
+    {
+      "id": "0062",
+      "time": "4:17 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Hwy 76",
+      "location_desc": "TIL 1700 15877",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0060",
+      "time": "4:11 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "78/15",
+      "location_desc": "ENCAMPMENT CLEANUPS",
+      "area": ""
     }
   ],
-  "last_updated": "2025-09-25T09:33:20.259518"
+  "last_updated": "2025-09-25T11:59:25.718260"
 }
