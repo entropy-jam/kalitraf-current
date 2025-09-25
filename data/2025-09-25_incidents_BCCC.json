@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 152,
+  "total_incidents": 154,
   "incidents": [
     {
       "id": "0262",
@@ -1618,7 +1618,37 @@
       },
       "is_new": true,
       "is_relevant": false
+    },
+    {
+      "id": "0188",
+      "time": "2:36 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Sr163",
+      "location_desc": "I15 S SR163",
+      "area": "North FSP",
+      "details": "2:36 PM: 1 | 2:36 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0450",
+      "time": "2:35 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Sr163",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "2:36 PM: 1 | 2:38 PM: 2 | 2:38 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T21:26:11.301436"
+  "last_updated": "2025-09-25T21:41:10.575568"
 }

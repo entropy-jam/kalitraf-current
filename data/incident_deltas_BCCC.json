@@ -1,8 +1,38 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T21:34:23.509795",
+  "timestamp": "2025-09-25T21:41:10.574788",
   "new_incidents": [
+    {
+      "id": "0188",
+      "time": "2:36 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Sr163",
+      "location_desc": "I15 S SR163",
+      "area": "North FSP",
+      "details": "2:36 PM: 1 | 2:36 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0450",
+      "time": "2:35 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Sr163",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "2:36 PM: 1 | 2:38 PM: 2 | 2:38 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
     {
       "id": "0185",
       "time": "2:24 PM",
@@ -71,21 +101,6 @@
       "location_desc": "I5 N CANNON SO",
       "area": "Oceanside",
       "details": "2:07 PM: 9 | 2:06 PM: 8 | 2:06 PM: 7 | 2:04 PM: 6 | 2:04 PM: 5 | 2:04 PM: 4 | 2:03 PM: 3 | 2:03 PM: 2 | 2:02 PM: 1 | 2:10 PM: 3 | 2:10 PM: 2 | 2:05 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
-    },
-    {
-      "id": "0422",
-      "time": "2:00 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Miramar Rd So (pomerado)",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "2:03 PM: 2 | 2:03 PM: 1 | 2:05 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -260,6 +275,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 17,
+  "new_count": 18,
   "removed_count": 0
 }
