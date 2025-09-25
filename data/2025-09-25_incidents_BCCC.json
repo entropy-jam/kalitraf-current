@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 119,
+  "total_incidents": 121,
   "incidents": [
     {
       "id": "0262",
@@ -1123,7 +1123,37 @@
       },
       "is_new": true,
       "is_relevant": true
+    },
+    {
+      "id": "0318",
+      "time": "11:41 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Sr78 No (vista Wy)",
+      "location_desc": "I5 N SR78 NO (VISTA WY)",
+      "area": "Oceanside",
+      "details": "11:47 AM: 3 | 11:42 AM: 2 | 11:42 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0314",
+      "time": "11:31 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Palomar Airport Rd / I5 S",
+      "location_desc": "OCC'D I5 S / PALOMAR AIRPORT RD OFR",
+      "area": "Oceanside",
+      "details": "11:34 AM: 2 | 11:33 AM: 1 | 11:47 AM: 3 | 11:47 AM: 2 | 11:39 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T18:28:57.096568"
+  "last_updated": "2025-09-25T18:48:46.928401"
 }

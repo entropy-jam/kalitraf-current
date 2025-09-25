@@ -1,16 +1,16 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T18:28:57.095691",
+  "timestamp": "2025-09-25T18:48:46.927463",
   "new_incidents": [
     {
-      "id": "0133",
-      "time": "11:01 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / I805 So (north)",
-      "location_desc": "I5 N I805 SO (NORTH)",
-      "area": "North FSP",
-      "details": "11:01 AM: 1 | 11:04 AM: 2 | 11:04 AM: 1",
+      "id": "0318",
+      "time": "11:41 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N / Sr78 No (vista Wy)",
+      "location_desc": "I5 N SR78 NO (VISTA WY)",
+      "area": "Oceanside",
+      "details": "11:47 AM: 3 | 11:42 AM: 2 | 11:42 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -19,13 +19,13 @@
       "is_relevant": true
     },
     {
-      "id": "0294",
-      "time": "11:00 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / I805 So (north)",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "11:01 AM: 1 | 11:02 AM: 1",
+      "id": "0314",
+      "time": "11:31 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Palomar Airport Rd / I5 S",
+      "location_desc": "OCC'D I5 S / PALOMAR AIRPORT RD OFR",
+      "area": "Oceanside",
+      "details": "11:34 AM: 2 | 11:33 AM: 1 | 11:47 AM: 3 | 11:47 AM: 2 | 11:39 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -55,22 +55,7 @@
       "location": "Sr78 W / I5 Eo",
       "location_desc": "SR78 W I5",
       "area": "Oceanside",
-      "details": "10:41 AM: 2 | 10:40 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0263",
-      "time": "10:25 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "SR15 S / I805",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "11:25 AM: 5 | 11:25 AM: 4 | 11:04 AM: 3 | 11:02 AM: 2 | 10:52 AM: 1 | 10:53 AM: 6 | 10:53 AM: 5 | 11:25 AM: 4 | 10:49 AM: 3 | 10:31 AM: 2 | 10:31 AM: 1",
+      "details": "10:41 AM: 2 | 10:40 AM: 1 | 11:46 AM: 3 | 11:39 AM: 2 | 11:38 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -100,7 +85,7 @@
       "location": "I5 N / Oceanside",
       "location_desc": "I5 N OCEANSIDE",
       "area": "Oceanside",
-      "details": "11:26 AM: 8 | 11:16 AM: 7 | 10:17 AM: 6 | 10:15 AM: 5 | 10:07 AM: 4 | 10:05 AM: 3 | 10:03 AM: 2 | 10:00 AM: 1 | 10:13 AM: 6 | 10:13 AM: 5 | 10:13 AM: 4 | 10:00 AM: 3 | 10:00 AM: 2 | 10:00 AM: 1",
+      "details": "11:26 AM: 8 | 11:16 AM: 7 | 10:17 AM: 6 | 10:15 AM: 5 | 10:07 AM: 4 | 10:05 AM: 3 | 10:03 AM: 2 | 10:00 AM: 1 | 11:39 AM: 7 | 10:13 AM: 6 | 10:13 AM: 5 | 10:13 AM: 4 | 10:00 AM: 3 | 10:00 AM: 2 | 10:00 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -350,6 +335,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 23,
+  "new_count": 22,
   "removed_count": 0
 }
