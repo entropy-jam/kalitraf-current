@@ -13,10 +13,12 @@ class AppController {
         this.incidentService = new IncidentService(this.storage, this.fetcher, this.config);
         this.multiCenterService = new MultiCenterService(this.fetcher, this.storage, this.config);
         this.deltaService = new DeltaService();
+        this.filterService = new FilterService();
         
         this.uiController = null;
         this.previousIncidents = null;
         this.isInitialized = false;
+        this.allIncidents = []; // Store all incidents for filtering
     }
 
     /**
@@ -43,6 +45,9 @@ class AppController {
 
             // Initialize UI
             this.uiController.initialize();
+
+            // Set up filter event listener
+            this.setupFilterListener();
 
             // Start delta monitoring for real-time updates
             this.deltaService.startDeltaMonitoring();
@@ -92,9 +97,11 @@ class AppController {
             // Update previous incidents
             this.previousIncidents = data.incidents;
 
-            // Render incidents
-            const container = document.getElementById('incidentsContainer');
-            this.renderer.renderIncidents(data.incidents, container, this.previousIncidents);
+            // Store all incidents for filtering
+            this.allIncidents = data.incidents || [];
+            
+            // Apply filters and render incidents
+            this.renderFilteredIncidents();
             
             // Initialize copy buttons after rendering
             if (window.copyToClipboard) {
@@ -231,6 +238,38 @@ class AppController {
                     <p>Please refresh the page and try again. If the problem persists, check the browser console for more details.</p>
                 </div>
             `;
+        }
+    }
+
+    /**
+     * Set up filter event listener
+     */
+    setupFilterListener() {
+        document.addEventListener('filterChanged', (event) => {
+            this.renderFilteredIncidents();
+        });
+    }
+
+    /**
+     * Render incidents based on current filters
+     */
+    renderFilteredIncidents() {
+        if (!this.allIncidents || this.allIncidents.length === 0) {
+            return;
+        }
+
+        // Filter incidents based on active filters
+        const filteredIncidents = this.allIncidents.filter(incident => 
+            this.filterService.shouldShowIncident(incident)
+        );
+
+        // Render filtered incidents
+        const container = document.getElementById('incidentsContainer');
+        this.renderer.renderIncidents(filteredIncidents, container, this.previousIncidents);
+        
+        // Initialize copy buttons after rendering
+        if (window.copyToClipboard) {
+            window.copyToClipboard.initializeCopyButtons();
         }
     }
 

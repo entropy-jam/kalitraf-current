@@ -112,6 +112,107 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* App Layout with Sidebar */
+.app-layout {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 40px);
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--text-primary);
+}
+
+.filter-section h4 {
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px 0;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.filter-item:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.filter-item input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.1);
+    accent-color: var(--accent-primary);
+}
+
+.filter-label {
+    font-size: 0.9em;
+    color: var(--text-primary);
+    user-select: none;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.filter-btn:hover {
+    background: var(--bg-hover);
+    transform: translateY(-1px);
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
 /* Custom scrollbar styling for dark theme */
 ::-webkit-scrollbar {
     width: 8px;
@@ -799,6 +900,25 @@ body {
 }
 
 /* Responsive Design for Enhanced Elements */
+@media (max-width: 1024px) {
+    .app-layout {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: static;
+        order: -1;
+    }
+    
+    .filter-checkboxes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 8px;
+    }
+}
+
 @media (max-width: 768px) {
     .incident-actions {
         justify-content: center;
@@ -818,6 +938,10 @@ body {
     
     .details-header {
         padding: 6px 8px;
+    }
+    
+    .filter-checkboxes {
+        grid-template-columns: 1fr;
     }
     
     .detail-timeline {

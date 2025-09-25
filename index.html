@@ -11,11 +11,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🚨 CHP Traffic Incidents Monitor</h1>
-            <p>Real-time traffic incident data from California Highway Patrol</p>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>🔍 Filter Incidents</h3>
+            </div>
+            <div class="filter-section">
+                <h4>Incident Types</h4>
+                <div class="filter-checkboxes">
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-collision" checked>
+                        <span class="filter-label">Traffic Collisions</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-hazard" checked>
+                        <span class="filter-label">Traffic Hazards</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-fire" checked>
+                        <span class="filter-label">Car Fires</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-break" checked>
+                        <span class="filter-label">Traffic Breaks</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-fatality" checked>
+                        <span class="filter-label">Fatalities</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-hitrun" checked>
+                        <span class="filter-label">Hit & Run</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-sigalert" checked>
+                        <span class="filter-label">SIG Alerts</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-fire-report" checked>
+                        <span class="filter-label">Fire Reports</span>
+                    </label>
+                </div>
+                <div class="filter-actions">
+                    <button id="selectAllFilters" class="filter-btn">Select All</button>
+                    <button id="clearAllFilters" class="filter-btn">Clear All</button>
+                </div>
+            </div>
         </div>
+        
+        <div class="main-content">
+            <div class="container">
+                <div class="header">
+                    <h1>🚨 CHP Traffic Incidents Monitor</h1>
+                    <p>Real-time traffic incident data from California Highway Patrol</p>
+                </div>
         
         <div class="controls">
             <label for="centerSelect">Communication Center:</label>
@@ -55,6 +104,8 @@
         <div class="incidents-container" id="incidentsContainer">
             <div class="loading">Loading incidents...</div>
         </div>
+            </div>
+        </div>
     </div>
 
     <!-- Load JavaScript modules in dependency order -->
@@ -77,6 +128,7 @@
         <script src="js/services/incident-service.js"></script>
         <script src="js/services/multi-center-service.js"></script>
         <script src="js/services/delta-service.js"></script>
+        <script src="js/services/filter-service.js"></script>
     
     <!-- Modules -->
     <script src="js/modules/copy-to-clipboard.js"></script>
