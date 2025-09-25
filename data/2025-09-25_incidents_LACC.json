@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 32,
+  "total_incidents": 48,
   "incidents": [
     {
       "id": "1878",
@@ -259,7 +259,135 @@
       "location": "Sr47 S / Sr103 S",
       "location_desc": "EB 47 JWO NEW DOCK ST, CD",
       "area": "South LA"
+    },
+    {
+      "id": "2049",
+      "time": "9:44 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr110 N / W 6th St",
+      "location_desc": "NB 110 JSO 6TH",
+      "area": "Central LA"
+    },
+    {
+      "id": "2045",
+      "time": "9:39 PM",
+      "type": "Traffic Hazard",
+      "location": "Stunt Rd / Mulholland Hwy",
+      "location_desc": "STUNT RD AT MULHOLLAND",
+      "area": "West Valley"
+    },
+    {
+      "id": "2039",
+      "time": "9:37 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr118 E / Woodley Ave",
+      "location_desc": "EB 118 JWO WOODLEY",
+      "area": "West Valley"
+    },
+    {
+      "id": "2033",
+      "time": "9:33 PM",
+      "type": "Car Fire",
+      "location": "Sr14 N / Santiago Rd",
+      "location_desc": "NB 14 JNO SANTIAGO",
+      "area": "Antelope Valley"
+    },
+    {
+      "id": "2031",
+      "time": "9:31 PM",
+      "type": "Report of Fire",
+      "location": "I105 E / Long Beach Blvd N Onr",
+      "location_desc": "NB LONG BEACH BLVD N ONR TO EB 105",
+      "area": "South LA"
+    },
+    {
+      "id": "2027",
+      "time": "9:31 PM",
+      "type": "Assist with Construction",
+      "location": "1601 Corporate Center Dr",
+      "location_desc": "EAST LOS ANGELES CHP",
+      "area": "LA"
+    },
+    {
+      "id": "2028",
+      "time": "9:30 PM",
+      "type": "Assist with Construction",
+      "location": "I405 S / Wilshire Blvd",
+      "location_desc": "I405 S / WILSHIRE BLVD",
+      "area": "West LA"
+    },
+    {
+      "id": "2024",
+      "time": "9:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Glenoaks Blvd",
+      "location_desc": "JSO",
+      "area": "Altadena"
+    },
+    {
+      "id": "2021",
+      "time": "9:26 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 N / Lakewood Blvd",
+      "location_desc": "LAKEWOOD BLVD ONR TO NB 405",
+      "area": "South LA"
+    },
+    {
+      "id": "2019",
+      "time": "9:22 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "750 W Doran St",
+      "location_desc": "POI NB 5 JSO 134 BT 98-50",
+      "area": "Altadena"
+    },
+    {
+      "id": "2005",
+      "time": "9:12 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "I5 N / I5 N Sr14 Con",
+      "location_desc": "",
+      "area": "Newhall"
+    },
+    {
+      "id": "2007",
+      "time": "9:11 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "W Washington Blvd / Sawtelle Blvd",
+      "location_desc": "7/11 P/LOT",
+      "area": "West LA"
+    },
+    {
+      "id": "1998",
+      "time": "9:08 PM",
+      "type": "Assist with Construction",
+      "location": "I5 N / 4th St",
+      "location_desc": "NB 5 AT 4TH ST",
+      "area": "Central LA"
+    },
+    {
+      "id": "1976",
+      "time": "8:59 PM",
+      "type": "Assist with Construction",
+      "location": "I405 S / Long Beach Blvd",
+      "location_desc": "JSO",
+      "area": "South LA"
+    },
+    {
+      "id": "1981",
+      "time": "8:59 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I210 E / N Vernon Ave",
+      "location_desc": "EB JWO",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "1988",
+      "time": "8:59 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / I405 S",
+      "location_desc": "SB 5 AT 405 // GP",
+      "area": "Newhall"
     }
   ],
-  "last_updated": "2025-09-25T03:59:47.650586"
+  "last_updated": "2025-09-25T04:49:06.493818"
 }
