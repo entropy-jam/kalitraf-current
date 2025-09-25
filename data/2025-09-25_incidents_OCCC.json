@@ -1,8 +1,9 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "timestamp": "2025-09-25T05:31:35.438800",
-  "new_incidents": [
+  "date": "2025-09-25",
+  "total_incidents": 5,
+  "incidents": [
     {
       "id": "0559",
       "time": "9:07 PM",
@@ -44,7 +45,5 @@
       "area": "OC"
     }
   ],
-  "removed_incidents": [],
-  "new_count": 5,
-  "removed_count": 0
+  "last_updated": "2025-09-25T05:31:35.439168"
 }
