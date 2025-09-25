@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 63,
+  "total_incidents": 71,
   "incidents": [
     {
       "id": "1878",
@@ -507,7 +507,71 @@
       "location": "1601 Corporate Center Dr",
       "location_desc": "EAST LOS ANGELES CHP",
       "area": "LA"
+    },
+    {
+      "id": "2111",
+      "time": "10:36 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr60 W / N Diamond Bar Blvd",
+      "location_desc": "WB 60 JEO DIA BAR",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "2113",
+      "time": "10:35 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "6150 N Paramount Blvd",
+      "location_desc": "POI * WB 91 EO LAKEWOOD BLVD",
+      "area": "Santa Fe Springs"
+    },
+    {
+      "id": "2110",
+      "time": "10:34 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Nordhoff St Onr / I405 N",
+      "location_desc": "NORDHOFF ONR TO NB 405",
+      "area": "West Valley"
+    },
+    {
+      "id": "2107",
+      "time": "10:33 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 W / I5 S",
+      "location_desc": "WB 10 AT 5",
+      "area": "Central LA"
+    },
+    {
+      "id": "2096",
+      "time": "10:19 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr60 W / Phillips Ranch Rd",
+      "location_desc": "WO",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "2094",
+      "time": "10:19 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I110 N / James M Wood Blvd",
+      "location_desc": "NB 110 JSO JAMES M WOOD",
+      "area": "Central LA"
+    },
+    {
+      "id": "2097",
+      "time": "10:17 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "800 N Central Ave",
+      "location_desc": "EMBASSY SUITES ROOM 918",
+      "area": "Altadena"
+    },
+    {
+      "id": "2087",
+      "time": "10:12 PM",
+      "type": "ESCORT for Road Conditions",
+      "location": "2901 W Broadway",
+      "location_desc": "SAN BERNARDINO TO PARAMOUNT",
+      "area": "LA"
     }
   ],
-  "last_updated": "2025-09-25T05:12:28.191202"
+  "last_updated": "2025-09-25T05:56:41.421476"
 }
