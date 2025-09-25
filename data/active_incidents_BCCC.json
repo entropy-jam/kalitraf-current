@@ -4,12 +4,27 @@
   "incident_count": 27,
   "incidents": [
     {
-      "id": "0250",
-      "time": "10:04 AM",
-      "type": "Request CalTrans Notify",
-      "location": "Sr78 W / El Camino Real Onr",
+      "id": "0260",
+      "time": "10:22 AM",
+      "type": "SIG Alert",
+      "location": "I5 N / Sr78 No (vista Wy)",
       "location_desc": "",
       "area": "Oceanside",
+      "details": "10:26 AM: 3 | 10:24 AM: 2 | 10:24 AM: 1 | 10:24 AM: 3 | 10:24 AM: 2 | 10:24 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0256",
+      "time": "10:18 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr75 W / Midspan Eo",
+      "location_desc": "",
+      "area": "San Diego",
       "details": "",
       "lane_blockage": {
         "status": "unknown",
@@ -19,45 +34,75 @@
       "is_relevant": false
     },
     {
+      "id": "0126",
+      "time": "10:16 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Oceanside Blvd Ofr",
+      "location_desc": "",
+      "area": "North FSP",
+      "details": "10:20 AM: 5 | 10:01 AM: 4 | 9:55 AM: 3 | 9:41 AM: 2 | 9:37 AM: 1 | 10:16 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0254",
+      "time": "10:12 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr163 S / Clairemont Mesa So",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0122",
+      "time": "10:11 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr15 S / I805 S Sr15 S Con",
+      "location_desc": "SB TO SB CON",
+      "area": "South FSP",
+      "details": "10:10 AM: 1 | 10:21 AM: 5 | 10:20 AM: 4 | 10:20 AM: 3 | 10:19 AM: 2 | 10:18 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0253",
+      "time": "10:08 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr15 S / I805 S Sr15 S Con",
+      "location_desc": "SB TO SB CON",
+      "area": "San Diego",
+      "details": "10:10 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
       "id": "0246",
       "time": "10:00 AM",
       "type": "Trfc Collision-No Inj",
       "location": "I5 N / Oceanside",
       "location_desc": "I5 N OCEANSIDE",
       "area": "Oceanside",
-      "details": "10:07 AM: 4 | 10:05 AM: 3 | 10:03 AM: 2 | 10:00 AM: 1 | 10:00 AM: 3 | 10:00 AM: 2 | 10:00 AM: 1",
+      "details": "10:17 AM: 6 | 10:15 AM: 5 | 10:07 AM: 4 | 10:05 AM: 3 | 10:03 AM: 2 | 10:00 AM: 1 | 10:13 AM: 6 | 10:13 AM: 5 | 10:13 AM: 4 | 10:00 AM: 3 | 10:00 AM: 2 | 10:00 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0247",
-      "time": "9:57 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I805 N / Balboa E Onr",
-      "location_desc": "I805 N BALBOA E ONR",
-      "area": "San Diego",
-      "details": "10:01 AM: 4 | 10:01 AM: 3 | 9:59 AM: 2 | 9:58 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0245",
-      "time": "9:57 AM",
-      "type": "Traffic Hazard",
-      "location": "I805 N / Balboa So",
-      "location_desc": "I805 N BALBOA SO",
-      "area": "San Diego",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
         "details": []
       },
       "is_new": true,
@@ -83,7 +128,7 @@
       "time": "9:53 AM",
       "type": "Traffic Hazard",
       "location": "Sr52 E / Genesee Wo",
-      "location_desc": "SR52 E GENESEE WO",
+      "location_desc": "",
       "area": "San Diego",
       "details": "",
       "lane_blockage": {
@@ -100,37 +145,7 @@
       "location": "I5 N / Sr78 No (vista Wy)",
       "location_desc": "I5 N SR78 NO (VISTA WY)",
       "area": "Oceanside",
-      "details": "10:02 AM: 10 | 9:56 AM: 9 | 9:56 AM: 8 | 9:55 AM: 7 | 9:54 AM: 6 | 9:53 AM: 5 | 9:53 AM: 4 | 9:53 AM: 3 | 9:53 AM: 2 | 9:52 AM: 1 | 10:04 AM: 10 | 10:04 AM: 9 | 10:04 AM: 8 | 10:04 AM: 7 | 10:02 AM: 6 | 10:02 AM: 5 | 10:02 AM: 4 | 10:01 AM: 3 | 9:55 AM: 2 | 9:55 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
-      "id": "0234",
-      "time": "9:48 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr905 W / Caliente Eo",
-      "location_desc": "SR905 W CALIENTE EO",
-      "area": "San Diego",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": false
-    },
-    {
-      "id": "0229",
-      "time": "9:36 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Oceanside Blvd Ofr",
-      "location_desc": "",
-      "area": "Oceanside",
-      "details": "10:01 AM: 5 | 9:55 AM: 4 | 9:41 AM: 3 | 9:38 AM: 2 | 9:37 AM: 1 | 10:00 AM: 4 | 9:49 AM: 3 | 9:49 AM: 2 | 9:49 AM: 1",
+      "details": "10:22 AM: 13 | 10:16 AM: 12 | 10:11 AM: 11 | 10:02 AM: 10 | 9:56 AM: 9 | 9:56 AM: 8 | 9:55 AM: 7 | 9:54 AM: 6 | 9:53 AM: 5 | 9:53 AM: 4 | 9:53 AM: 3 | 9:53 AM: 2 | 9:52 AM: 1 | 10:26 AM: 16 | 10:15 AM: 15 | 10:15 AM: 14 | 10:04 AM: 13 | 10:04 AM: 12 | 10:20 AM: 11 | 10:04 AM: 10 | 10:04 AM: 9 | 10:23 AM: 8 | 10:02 AM: 7 | 10:02 AM: 6 | 10:02 AM: 5 | 10:12 AM: 4 | 10:01 AM: 3 | 9:55 AM: 2 | 9:55 AM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
@@ -169,24 +184,9 @@
       "is_relevant": true
     },
     {
-      "id": "0192",
-      "time": "8:51 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 S / Leucadia No",
-      "location_desc": "I5 S LEUCADIA NO",
-      "area": "Oceanside",
-      "details": "9:30 AM: 17 | 9:30 AM: 16 | 9:22 AM: 15 | 9:00 AM: 14 | 8:57 AM: 13 | 8:56 AM: 12 | 8:55 AM: 11 | 8:55 AM: 10 | 8:55 AM: 9 | 8:54 AM: 8 | 8:54 AM: 7 | 8:53 AM: 6 | 8:53 AM: 5 | 8:52 AM: 4 | 8:52 AM: 3 | 8:52 AM: 2 | 8:51 AM: 1 | 9:55 AM: 4 | 9:04 AM: 3 | 9:04 AM: 2 | 8:54 AM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": true
-    },
-    {
       "id": "0179",
       "time": "8:37 AM",
-      "type": "Trfc Collision-1141 Enrt",
+      "type": "Trfc Collision-Minor Inj",
       "location": "Sr56 W / Camino Del Sur Wo",
       "location_desc": "",
       "area": "San Diego",
@@ -409,5 +409,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T17:08:51.150715"
+  "last_updated": "2025-09-25T17:27:30.670257"
 }

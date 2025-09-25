@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 103,
+  "total_incidents": 109,
   "incidents": [
     {
       "id": "0262",
@@ -883,7 +883,97 @@
       },
       "is_new": true,
       "is_relevant": false
+    },
+    {
+      "id": "0260",
+      "time": "10:22 AM",
+      "type": "SIG Alert",
+      "location": "I5 N / Sr78 No (vista Wy)",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "10:26 AM: 3 | 10:24 AM: 2 | 10:24 AM: 1 | 10:24 AM: 3 | 10:24 AM: 2 | 10:24 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0256",
+      "time": "10:18 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr75 W / Midspan Eo",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0126",
+      "time": "10:16 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Oceanside Blvd Ofr",
+      "location_desc": "",
+      "area": "North FSP",
+      "details": "10:20 AM: 5 | 10:01 AM: 4 | 9:55 AM: 3 | 9:41 AM: 2 | 9:37 AM: 1 | 10:16 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0254",
+      "time": "10:12 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr163 S / Clairemont Mesa So",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0122",
+      "time": "10:11 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr15 S / I805 S Sr15 S Con",
+      "location_desc": "SB TO SB CON",
+      "area": "South FSP",
+      "details": "10:10 AM: 1 | 10:21 AM: 5 | 10:20 AM: 4 | 10:20 AM: 3 | 10:19 AM: 2 | 10:18 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0253",
+      "time": "10:08 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr15 S / I805 S Sr15 S Con",
+      "location_desc": "SB TO SB CON",
+      "area": "San Diego",
+      "details": "10:10 AM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T17:08:51.153458"
+  "last_updated": "2025-09-25T17:27:30.672662"
 }
