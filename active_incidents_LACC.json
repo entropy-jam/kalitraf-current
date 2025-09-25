@@ -1,63 +1,135 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "incident_count": 17,
+  "incident_count": 22,
   "incidents": [
     {
-      "id": "1878",
-      "time": "8:01 PM",
-      "type": "Traffic Hazard",
-      "location": "I605 S / Valley Blvd",
-      "location_desc": "SB 605 JNO VALLEY",
-      "area": "East LA"
+      "id": "1973",
+      "time": "8:58 PM",
+      "type": "Assist with Construction",
+      "location": "I5 N / Vista Del Lago Rd",
+      "location_desc": "I5 N JSO VISTA DEL LAGO RD",
+      "area": "Newhall"
     },
     {
-      "id": "1872",
-      "time": "7:59 PM",
+      "id": "1969",
+      "time": "8:57 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I10 E / Robertson Blvd Ofr",
+      "location_desc": "EB 10 AT ROBERTSON OFR",
+      "area": "West LA"
+    },
+    {
+      "id": "1968",
+      "time": "8:56 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "W Imperial Hwy / S Normandie Ave",
+      "location_desc": "",
+      "area": "West LA"
+    },
+    {
+      "id": "1963",
+      "time": "8:46 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "I405 S / W Rosecrans Ave",
+      "location_desc": "",
+      "area": "West LA"
+    },
+    {
+      "id": "1962",
+      "time": "8:45 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "777 W Washington Blvd",
+      "location_desc": "CENTRAL LOS ANGELES CHP",
+      "area": "LA"
+    },
+    {
+      "id": "1959",
+      "time": "8:43 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "Caltrans-la (15th St)",
+      "location_desc": "1740 E 15TH ST",
+      "area": "Central LA"
+    },
+    {
+      "id": "1941",
+      "time": "8:34 PM",
+      "type": "Report of Fire",
+      "location": "I10 E / Robertson Blvd",
+      "location_desc": "EB 10 AT ROBERTSON R/S",
+      "area": "West LA"
+    },
+    {
+      "id": "1935",
+      "time": "8:33 PM",
+      "type": "Assist with Construction",
+      "location": "SR60 W / N Diamond Bar Blvd",
+      "location_desc": "WB 60 FRM DIAMOND BAR TO GRAND",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "1937",
+      "time": "8:33 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr110 S / Marmion Way",
+      "location_desc": "SB 110 JSO MARMION WAY - RAPID",
+      "area": "Central LA"
+    },
+    {
+      "id": "1951",
+      "time": "8:32 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 S / Barham Blvd Onr",
+      "location_desc": "BARHAM ONR TO SB 101",
+      "area": "Central LA"
+    },
+    {
+      "id": "1934",
+      "time": "8:27 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Roxford St / Encinitas Ave",
+      "location_desc": "",
+      "area": "Newhall"
+    },
+    {
+      "id": "1904",
+      "time": "8:17 PM",
+      "type": "Report of Fire",
+      "location": "Sr170 N / Magnolia Blvd Ofr",
+      "location_desc": "NB 170 JSO MAGNOLIA",
+      "area": "West Valley"
+    },
+    {
+      "id": "1901",
+      "time": "8:16 PM",
       "type": "Traffic Hazard",
-      "location": "Sr57 N / Tonner Canyon Rd",
-      "location_desc": "NB 57 JNO TONNER CANYON",
-      "area": "OCCC"
+      "location": "Sr91 W I710 Con / I710 S",
+      "location_desc": "WB 91 TO SB 710 CON",
+      "area": "South LA"
+    },
+    {
+      "id": "1893",
+      "time": "8:10 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Angeles Forest Hwy / Mm 23.46",
+      "location_desc": "ANGELES FOREST HWY / MM 23.46",
+      "area": "Altadena"
+    },
+    {
+      "id": "1898",
+      "time": "8:10 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr47 S / Sr103 S",
+      "location_desc": "EB 47 JWO NEW DOCK ST, CD",
+      "area": "South LA"
     },
     {
       "id": "1868",
       "time": "7:56 PM",
       "type": "Hit and Run No Injuries",
       "location": "I605 S To / I10 E",
-      "location_desc": "SB 605 JNO 10",
+      "location_desc": "SB 605 JSO 10",
       "area": "Baldwin Park"
-    },
-    {
-      "id": "1853",
-      "time": "7:48 PM",
-      "type": "Traffic Hazard",
-      "location": "I10 E I405 N Con / I405 N",
-      "location_desc": "EB 10 TRANS TO NB 405",
-      "area": "West LA"
-    },
-    {
-      "id": "1851",
-      "time": "7:47 PM",
-      "type": "Traffic Hazard",
-      "location": "I405 N / I405 N Us101 Con",
-      "location_desc": "NB 405 JNO 101",
-      "area": "West Valley"
-    },
-    {
-      "id": "1840",
-      "time": "7:42 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "S Gerhart Ave / E Beverly Blvd",
-      "location_desc": "",
-      "area": "East LA"
-    },
-    {
-      "id": "1833",
-      "time": "7:38 PM",
-      "type": "Hit and Run w/Injuries",
-      "location": "W 95th St / S Normandie Ave",
-      "location_desc": "JSO",
-      "area": "West LA"
     },
     {
       "id": "1817",
@@ -76,44 +148,12 @@
       "area": "West Valley"
     },
     {
-      "id": "1797",
-      "time": "7:24 PM",
-      "type": "Report of Fire",
-      "location": "I5 S / Fletcher Dr",
-      "location_desc": "SB 5 JNO FLETCHER",
-      "area": "Central LA"
-    },
-    {
-      "id": "1790",
-      "time": "7:19 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Workman Mill Rd / College Dr",
-      "location_desc": "",
-      "area": "Santa Fe Springs"
-    },
-    {
-      "id": "1774",
-      "time": "7:08 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Sr110 N I5 N Con",
-      "location_desc": "NB 5 JNO 110",
-      "area": "Central LA"
-    },
-    {
       "id": "1675",
       "time": "6:03 PM",
       "type": "Assist with Construction",
       "location": "Sr14 S / Ave J",
       "location_desc": "SB 14 FRM AVE J TO AVE N",
       "area": "Antelope Valley"
-    },
-    {
-      "id": "1652",
-      "time": "5:52 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I210 E / Lone Hill Ave Ofr",
-      "location_desc": "EB 210 JEO 57",
-      "area": "Baldwin Park"
     },
     {
       "id": "0056",
@@ -140,5 +180,5 @@
       "area": "LA"
     }
   ],
-  "last_updated": "2025-09-25T03:09:33.212281"
+  "last_updated": "2025-09-25T03:59:47.649459"
 }

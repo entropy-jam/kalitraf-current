@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-25",
-  "total_incidents": 17,
+  "total_incidents": 32,
   "incidents": [
     {
       "id": "1878",
@@ -139,7 +139,127 @@
       "location": "Lawndale",
       "location_desc": "**DOUGLAS MINNER**",
       "area": "LA"
+    },
+    {
+      "id": "1973",
+      "time": "8:58 PM",
+      "type": "Assist with Construction",
+      "location": "I5 N / Vista Del Lago Rd",
+      "location_desc": "I5 N JSO VISTA DEL LAGO RD",
+      "area": "Newhall"
+    },
+    {
+      "id": "1969",
+      "time": "8:57 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I10 E / Robertson Blvd Ofr",
+      "location_desc": "EB 10 AT ROBERTSON OFR",
+      "area": "West LA"
+    },
+    {
+      "id": "1968",
+      "time": "8:56 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "W Imperial Hwy / S Normandie Ave",
+      "location_desc": "",
+      "area": "West LA"
+    },
+    {
+      "id": "1963",
+      "time": "8:46 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "I405 S / W Rosecrans Ave",
+      "location_desc": "",
+      "area": "West LA"
+    },
+    {
+      "id": "1962",
+      "time": "8:45 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "777 W Washington Blvd",
+      "location_desc": "CENTRAL LOS ANGELES CHP",
+      "area": "LA"
+    },
+    {
+      "id": "1959",
+      "time": "8:43 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "Caltrans-la (15th St)",
+      "location_desc": "1740 E 15TH ST",
+      "area": "Central LA"
+    },
+    {
+      "id": "1941",
+      "time": "8:34 PM",
+      "type": "Report of Fire",
+      "location": "I10 E / Robertson Blvd",
+      "location_desc": "EB 10 AT ROBERTSON R/S",
+      "area": "West LA"
+    },
+    {
+      "id": "1935",
+      "time": "8:33 PM",
+      "type": "Assist with Construction",
+      "location": "SR60 W / N Diamond Bar Blvd",
+      "location_desc": "WB 60 FRM DIAMOND BAR TO GRAND",
+      "area": "Baldwin Park"
+    },
+    {
+      "id": "1937",
+      "time": "8:33 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr110 S / Marmion Way",
+      "location_desc": "SB 110 JSO MARMION WAY - RAPID",
+      "area": "Central LA"
+    },
+    {
+      "id": "1951",
+      "time": "8:32 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 S / Barham Blvd Onr",
+      "location_desc": "BARHAM ONR TO SB 101",
+      "area": "Central LA"
+    },
+    {
+      "id": "1934",
+      "time": "8:27 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Roxford St / Encinitas Ave",
+      "location_desc": "",
+      "area": "Newhall"
+    },
+    {
+      "id": "1904",
+      "time": "8:17 PM",
+      "type": "Report of Fire",
+      "location": "Sr170 N / Magnolia Blvd Ofr",
+      "location_desc": "NB 170 JSO MAGNOLIA",
+      "area": "West Valley"
+    },
+    {
+      "id": "1901",
+      "time": "8:16 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 W I710 Con / I710 S",
+      "location_desc": "WB 91 TO SB 710 CON",
+      "area": "South LA"
+    },
+    {
+      "id": "1893",
+      "time": "8:10 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Angeles Forest Hwy / Mm 23.46",
+      "location_desc": "ANGELES FOREST HWY / MM 23.46",
+      "area": "Altadena"
+    },
+    {
+      "id": "1898",
+      "time": "8:10 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr47 S / Sr103 S",
+      "location_desc": "EB 47 JWO NEW DOCK ST, CD",
+      "area": "South LA"
     }
   ],
-  "last_updated": "2025-09-25T03:09:33.213229"
+  "last_updated": "2025-09-25T03:59:47.650586"
 }
