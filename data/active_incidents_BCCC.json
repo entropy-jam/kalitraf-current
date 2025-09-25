@@ -1,22 +1,97 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 18,
+  "incident_count": 23,
   "incidents": [
     {
-      "id": "0479",
-      "time": "3:07 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Ethanac Rd / I215 S",
-      "location_desc": "OCC'D I215 S / ETHANAC RD OFR",
-      "area": "Temecula",
-      "details": "3:10 PM: 2 | 3:09 PM: 1",
+      "id": "0497",
+      "time": "3:23 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr52 W / Mast Eo",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0216",
+      "time": "3:21 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / Clairemont So (e Mission Bay)",
+      "location_desc": "I5 N CLAIREMONT SO (E MISSION BAY)",
+      "area": "North FSP",
+      "details": "3:24 PM: 6 | 3:24 PM: 5 | 3:23 PM: 4 | 3:22 PM: 3 | 3:21 PM: 2 | 3:21 PM: 1",
       "lane_blockage": {
         "status": "no_blockage",
         "details": []
       },
       "is_new": true,
       "is_relevant": true
+    },
+    {
+      "id": "0492",
+      "time": "3:20 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 N / Clairemont So (e Mission Bay)",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "3:24 PM: 5 | 3:23 PM: 4 | 3:22 PM: 3 | 3:21 PM: 2 | 3:21 PM: 1 | 3:26 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0487",
+      "time": "3:18 PM",
+      "type": "Traffic Hazard",
+      "location": "Promontory Pkwy / Pourroy Ave",
+      "location_desc": "EB AT",
+      "area": "Temecula",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0484",
+      "time": "3:17 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr78 W / Twin Oaks Valley Eo",
+      "location_desc": "SR78 W TWIN OAKS VALLEY EO",
+      "area": "Oceanside",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
+    },
+    {
+      "id": "0483",
+      "time": "3:11 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "27698 Clinton Keith Rd",
+      "location_desc": "ARCO GAS STATION",
+      "area": "Temecula",
+      "details": "",
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": false
     },
     {
       "id": "0470",
@@ -30,7 +105,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -66,7 +141,7 @@
     {
       "id": "0436",
       "time": "2:20 PM",
-      "type": "Trfc Collision-Unkn Inj",
+      "type": "Trfc Collision-No Inj",
       "location": "I805 S / Orange (olympic)",
       "location_desc": "SB / JNO",
       "area": "San Diego",
@@ -274,5 +349,5 @@
       "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T22:12:09.975039"
+  "last_updated": "2025-09-25T22:29:21.423346"
 }
