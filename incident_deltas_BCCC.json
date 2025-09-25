@@ -1,8 +1,48 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T15:32:40.644063",
+  "timestamp": "2025-09-25T15:51:59.602328",
   "new_incidents": [
+    {
+      "id": "0187",
+      "time": "8:45 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "3558 La Posta Truck Trl",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0189",
+      "time": "8:43 AM",
+      "type": "Request CalTrans Notify",
+      "location": "Sr163 S / 10th Ave Ofr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0179",
+      "time": "8:37 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr56 W / Camino Del Sur Wo",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0178",
+      "time": "8:36 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Carmel Mountain So (bypass)",
+      "location_desc": "NB 5 JSO CARMEL MTN - IN BYPASS",
+      "area": "San Diego"
+    },
+    {
+      "id": "0177",
+      "time": "8:35 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / H St",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0094",
       "time": "8:30 AM",
@@ -90,14 +130,6 @@
       "location": "I8 E / Williams",
       "location_desc": "WILLIAMS COUPLE OF HUNDRED YARDS JSO 8",
       "area": "El Cajon"
-    },
-    {
-      "id": "0069",
-      "time": "7:43 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 N / Clairemont So (e Mission Bay)",
-      "location_desc": "I5 N CLAIREMONT SO (E MISSION BAY)",
-      "area": "North FSP"
     },
     {
       "id": "0134",
@@ -213,6 +245,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 26,
+  "new_count": 30,
   "removed_count": 0
 }
