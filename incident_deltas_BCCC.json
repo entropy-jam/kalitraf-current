@@ -1,15 +1,31 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T07:14:21.007204",
+  "timestamp": "2025-09-25T08:01:49.950461",
   "new_incidents": [
     {
-      "id": "0006",
-      "time": "12:04 AM",
+      "id": "0028",
+      "time": "12:58 AM",
+      "type": "Report of Fire",
+      "location": "Sr125 S / Mission Gorge Rd",
+      "location_desc": "",
+      "area": "El Cajon"
+    },
+    {
+      "id": "0018",
+      "time": "12:33 AM",
       "type": "Traffic Hazard",
-      "location": "I15 N Sr78 E Con / I15 S Sr78 E Con",
-      "location_desc": "NB TO EB",
+      "location": "Sr78 E / Melrose Wo",
+      "location_desc": "EB JWO",
       "area": "Oceanside"
+    },
+    {
+      "id": "0017",
+      "time": "12:25 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "4270 MM79 N SD 42.70",
+      "location_desc": "",
+      "area": "El Cajon"
     },
     {
       "id": "0002",
@@ -18,22 +34,6 @@
       "location": "Media Log",
       "location_desc": "NEWSWORTHY INCIDENTS",
       "area": "BC"
-    },
-    {
-      "id": "0894",
-      "time": "11:08 PM",
-      "type": "Trfc Collision-Minor Inj",
-      "location": "I15 N / El Norte So",
-      "location_desc": "I15 N EL NORTE SO",
-      "area": "Oceanside"
-    },
-    {
-      "id": "0887",
-      "time": "10:46 PM",
-      "type": "Traffic Hazard",
-      "location": "Highland Valley Rd / Sr67",
-      "location_desc": "WB",
-      "area": "El Cajon"
     },
     {
       "id": "0881",
