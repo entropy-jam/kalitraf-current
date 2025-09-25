@@ -1,7 +1,8 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "incident_count": 17,
+  "date": "2025-09-25",
+  "total_incidents": 17,
   "incidents": [
     {
       "id": "1878",
@@ -140,5 +141,5 @@
       "area": "LA"
     }
   ],
-  "last_updated": "2025-09-25T03:09:33.212281"
+  "last_updated": "2025-09-25T03:09:33.213229"
 }
