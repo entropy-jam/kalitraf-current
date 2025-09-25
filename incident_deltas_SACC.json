@@ -1,8 +1,24 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-25T08:33:38.926132",
+  "timestamp": "2025-09-25T08:57:51.446109",
   "new_incidents": [
+    {
+      "id": "0044",
+      "time": "1:52 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr99 S / Twin Cities Rd",
+      "location_desc": "TWIN CITIES OFR",
+      "area": "South Sac"
+    },
+    {
+      "id": "0039",
+      "time": "1:44 AM",
+      "type": "Report of Fire",
+      "location": "Watt Ave / Roseville Rd",
+      "location_desc": "NB JNO",
+      "area": "North Sac"
+    },
     {
       "id": "1188",
       "time": "11:54 PM",
@@ -77,6 +93,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 9,
+  "new_count": 11,
   "removed_count": 0
 }
