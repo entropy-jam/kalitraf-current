@@ -176,22 +176,24 @@ COMMUNICATION_CENTER=BCCC python scrape_github.py
 
 ## 🗺️ Deployment & Migration
 
-### ✅ **Vercel Migration Complete**
+### ✅ **Phase 1: Vercel Migration Complete**
 - **Status**: Successfully migrated from GitHub Pages to Vercel
 - **Performance**: 10x faster delivery via global CDN
 - **Configuration**: Optimized `vercel.json` with smart caching
 - **Framework**: Static site deployment (no build process needed)
+- **Live URL**: https://chp-traffic-scraper-6iv6x4sns-entropy-jams-projects.vercel.app
 
-### 🚀 **Deployment Instructions**
-1. **Import Repository**: Connect GitHub repo to Vercel
-2. **Framework Selection**: Choose "Other" or "Static Site"
-3. **Auto-Deploy**: Vercel detects `vercel.json` configuration
-4. **Live**: Your site is instantly available with custom domain
+### 🚀 **Phase 2: WebSocket Real-Time Updates (NEXT)**
+- **Current**: 60-second update delay (GitHub Actions scraping)
+- **Target**: Sub-second real-time updates via WebSocket
+- **Implementation**: External WebSocket service integration
+- **Timeline**: 4-week development plan
+- **Details**: See [MIGRATION.md](MIGRATION.md) for comprehensive plan
 
-### 📈 **Future Enhancements**
-- **Phase 1**: API backend + WebSocket real-time updates
-- **Phase 2**: Advanced features + mobile app
-- **Benefits**: Sub-second updates, real-time notifications, infinite scalability
+### 📈 **Migration Benefits**
+- **Phase 1**: 10x faster static delivery
+- **Phase 2**: Real-time incident updates (<1 second)
+- **Future**: Push notifications, sound alerts, mobile app
 
 ## 📄 License
 
