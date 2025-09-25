@@ -14,8 +14,8 @@ class DataManager:
     def __init__(self, center_code="BCCC"):
         self.center_code = center_code
         self.data_dir = "data"
-        self.active_file = f"active_incidents_{center_code}.json"
-        self.delta_file = f"incident_deltas_{center_code}.json"
+        self.active_file = f"{self.data_dir}/active_incidents_{center_code}.json"
+        self.delta_file = f"{self.data_dir}/incident_deltas_{center_code}.json"
         self.previous_incidents = None
         
         # Ensure data directory exists

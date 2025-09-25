@@ -195,8 +195,6 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add data/
-        git add active_incidents_${{ matrix.center }}.json
-        git add incident_deltas_${{ matrix.center }}.json
         git add active_incidents.json  # For backward compatibility (BCCC only)
         git commit -m "Update traffic incidents for ${{ matrix.center }} - $(date '+%Y-%m-%d %H:%M:%S')"
         git push

@@ -17,6 +17,9 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 │   │   └── github_scraper.py    # GitHub Actions scraper
 │   └── utils/                   # Utility modules
 ├── data/                        # JSON data storage
+│   ├── active_incidents_[CENTER].json  # Current incidents per center
+│   ├── incident_deltas_[CENTER].json   # Change deltas per center
+│   └── YYYY-MM-DD_incidents_[CENTER].json  # Daily archives per center
 ├── scrape_local.py             # Local scraper entry point
 └── scrape_github.py           # GitHub Actions entry point
 ```
@@ -95,7 +98,7 @@ Configure email notifications by setting environment variables:
 
 ## 📊 Data Format
 
-### Active Incidents (`active_incidents.json`)
+### Active Incidents (`data/active_incidents_[CENTER].json`)
 ```json
 {
   "center_code": "BCCC",
@@ -106,7 +109,7 @@ Configure email notifications by setting environment variables:
 }
 ```
 
-### Daily Archive (`data/YYYY-MM-DD_incidents.json`)
+### Daily Archive (`data/YYYY-MM-DD_incidents_[CENTER].json`)
 ```json
 {
   "center_code": "BCCC", 
@@ -117,6 +120,9 @@ Configure email notifications by setting environment variables:
   "last_updated": "2025-09-23T17:45:19.641000"
 }
 ```
+
+### Backward Compatibility (`active_incidents.json`)
+The root-level `active_incidents.json` file is maintained for backward compatibility and contains BCCC data.
 
 ## 🌐 GitHub Pages
 

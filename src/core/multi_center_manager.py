@@ -17,7 +17,7 @@ class MultiCenterManager:
         
     def load_center_data(self, center_code: str) -> Dict[str, Any]:
         """Load data for a specific center"""
-        file_path = f"active_incidents_{center_code}.json"
+        file_path = f"data/active_incidents_{center_code}.json"
         
         if not os.path.exists(file_path):
             logging.warning(f"No data file found for center {center_code}")
@@ -120,7 +120,7 @@ class MultiCenterManager:
         
         return summary
     
-    def save_aggregated_data(self, aggregated_data: Dict[str, Any], filename: str = "aggregated_incidents.json") -> bool:
+    def save_aggregated_data(self, aggregated_data: Dict[str, Any], filename: str = "data/aggregated_incidents.json") -> bool:
         """Save aggregated data to file"""
         try:
             with open(filename, 'w') as f:

@@ -131,7 +131,7 @@ class MultiCenterService {
      * @returns {Promise<Object>} Center data
      */
     async fetchCenterData(centerCode) {
-        const filename = `active_incidents_${centerCode}.json`;
+        const filename = `data/active_incidents_${centerCode}.json`;
         
         try {
             return await this.fetcher.fetchJson(`${filename}?t=${Date.now()}`);
