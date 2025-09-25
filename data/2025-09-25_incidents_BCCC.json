@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 73,
+  "total_incidents": 80,
   "incidents": [
     {
       "id": "0262",
@@ -587,7 +587,63 @@
       "location": "8502 Railroad Ave",
       "location_desc": "CALTRANS SANTEE",
       "area": "El Cajon"
+    },
+    {
+      "id": "0094",
+      "time": "8:30 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / El Cajon No",
+      "location_desc": "I805 S EL CAJON NO",
+      "area": "South FSP"
+    },
+    {
+      "id": "0172",
+      "time": "8:30 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / El Cajon No",
+      "location_desc": "I805 S EL CAJON NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0174",
+      "time": "8:27 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "16055 Winecreek Rd",
+      "location_desc": "OAK VALLEY MIDDLE SCHOOL",
+      "area": "San Diego"
+    },
+    {
+      "id": "0167",
+      "time": "8:25 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I215 S / Clinton Keith So",
+      "location_desc": "I215 S CLINTON KEITH SO",
+      "area": "Temecula"
+    },
+    {
+      "id": "0089",
+      "time": "8:19 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Mira Mesa So (hov)",
+      "location_desc": "I15 S MIRA MESA SO (HOV)",
+      "area": "North FSP"
+    },
+    {
+      "id": "0163",
+      "time": "8:17 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Mira Mesa So (hov)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0088",
+      "time": "8:15 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr15 N / Sr15 N I805 N Con",
+      "location_desc": "",
+      "area": "North FSP"
     }
   ],
-  "last_updated": "2025-09-25T15:14:32.752834"
+  "last_updated": "2025-09-25T15:32:40.645767"
 }

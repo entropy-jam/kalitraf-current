@@ -1,22 +1,70 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 22,
+  "incident_count": 26,
   "incidents": [
+    {
+      "id": "0094",
+      "time": "8:30 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / El Cajon No",
+      "location_desc": "I805 S EL CAJON NO",
+      "area": "South FSP"
+    },
+    {
+      "id": "0172",
+      "time": "8:30 AM",
+      "type": "Traffic Hazard",
+      "location": "I805 S / El Cajon No",
+      "location_desc": "I805 S EL CAJON NO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0174",
+      "time": "8:27 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "16055 Winecreek Rd",
+      "location_desc": "OAK VALLEY MIDDLE SCHOOL",
+      "area": "San Diego"
+    },
+    {
+      "id": "0167",
+      "time": "8:25 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I215 S / Clinton Keith So",
+      "location_desc": "I215 S CLINTON KEITH SO",
+      "area": "Temecula"
+    },
+    {
+      "id": "0089",
+      "time": "8:19 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Mira Mesa So (hov)",
+      "location_desc": "I15 S MIRA MESA SO (HOV)",
+      "area": "North FSP"
+    },
+    {
+      "id": "0163",
+      "time": "8:17 AM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Mira Mesa So (hov)",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0088",
+      "time": "8:15 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr15 N / Sr15 N I805 N Con",
+      "location_desc": "",
+      "area": "North FSP"
+    },
     {
       "id": "0158",
       "time": "8:12 AM",
       "type": "Trfc Collision-No Inj",
       "location": "Sr15 N / Sr15 N I805 N Con",
-      "location_desc": "15 NB CON TO NB 805",
-      "area": "San Diego"
-    },
-    {
-      "id": "0156",
-      "time": "8:08 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / W Bernardo So (pomerado)",
-      "location_desc": "NB 15 JSO LAKE HODGES",
+      "location_desc": "",
       "area": "San Diego"
     },
     {
@@ -24,31 +72,15 @@
       "time": "8:00 AM",
       "type": "Trfc Collision-1141 Enrt",
       "location": "Alpine Blvd / E Victoria Dr",
-      "location_desc": "I/S",
+      "location_desc": "",
       "area": "El Cajon"
-    },
-    {
-      "id": "0144",
-      "time": "7:56 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sandia Creek Dr / Corte Vonnie",
-      "location_desc": "APPROX 500' JSO",
-      "area": "Temecula"
-    },
-    {
-      "id": "0142",
-      "time": "7:56 AM",
-      "type": "Traffic Break",
-      "location": "I15 S / CITRACADO (FELICITA)",
-      "location_desc": "Citracado Pkwy and Miller Ave",
-      "area": "Oceanside"
     },
     {
       "id": "0137",
       "time": "7:53 AM",
       "type": "Assist CT with Maintenance",
       "location": "I8 W / Johnson",
-      "location_desc": "TIL 1530",
+      "location_desc": "",
       "area": "El Cajon"
     },
     {
@@ -56,7 +88,7 @@
       "time": "7:51 AM",
       "type": "Trfc Collision-1141 Enrt",
       "location": "I8 E / Williams",
-      "location_desc": "EB 8 AT WILLIAMS",
+      "location_desc": "WILLIAMS COUPLE OF HUNDRED YARDS JSO 8",
       "area": "El Cajon"
     },
     {
@@ -144,7 +176,7 @@
       "time": "4:56 AM",
       "type": "Assist CT with Maintenance",
       "location": "6100 MM8 E SD R61.00",
-      "location_desc": "TIL 1730",
+      "location_desc": "",
       "area": "El Cajon"
     },
     {
@@ -180,5 +212,5 @@
       "area": "BC"
     }
   ],
-  "last_updated": "2025-09-25T15:14:32.750297"
+  "last_updated": "2025-09-25T15:32:40.642908"
 }
