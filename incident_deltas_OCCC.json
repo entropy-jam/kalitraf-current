@@ -1,8 +1,16 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "timestamp": "2025-09-25T07:29:59.629479",
+  "timestamp": "2025-09-25T07:40:30.441849",
   "new_incidents": [
+    {
+      "id": "0017",
+      "time": "12:21 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "2323 N Broadway",
+      "location_desc": "RANCHO SANTIAGO COMM COLLEGE PLOT",
+      "area": "Santa Ana"
+    },
     {
       "id": "0015",
       "time": "12:18 AM",
@@ -14,7 +22,7 @@
     {
       "id": "0010",
       "time": "12:08 AM",
-      "type": "Trfc Collision-No Inj",
+      "type": "Trfc Collision-1141 Enrt",
       "location": "30892 Trabuco Canyon Rd",
       "location_desc": "LIVE OAK/ ENTRANCE ONIELL PARK",
       "area": "Capistrano"
@@ -34,14 +42,6 @@
       "location": "6681 Marine Way",
       "location_desc": "OC MEDIA LOG",
       "area": "OC"
-    },
-    {
-      "id": "0594",
-      "time": "10:50 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr91 W To / Sr55 S Con",
-      "location_desc": "WB 91 AT 55",
-      "area": "Santa Ana"
     },
     {
       "id": "0559",
