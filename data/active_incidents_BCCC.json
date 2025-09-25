@@ -1,8 +1,38 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "incident_count": 18,
+  "incident_count": 17,
   "incidents": [
+    {
+      "id": "0577",
+      "time": "4:37 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr163 N / I5 No",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "4:41 PM: 7 | 4:41 PM: 6 | 4:40 PM: 5 | 4:40 PM: 4 | 4:40 PM: 3 | 4:40 PM: 2 | 4:39 PM: 1 | 4:43 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0575",
+      "time": "4:35 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Del Lago Dar No (hov)",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "4:37 PM: 1 | 4:37 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
     {
       "id": "0573",
       "time": "4:33 PM",
@@ -15,13 +45,13 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
       "id": "0574",
       "time": "4:33 PM",
-      "type": "Trfc Collision-Unkn Inj",
+      "type": "Trfc Collision-1141 Enrt",
       "location": "I15 S / Aero Dr Onr",
       "location_desc": "",
       "area": "San Diego",
@@ -30,23 +60,8 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
-    },
-    {
-      "id": "0569",
-      "time": "4:27 PM",
-      "type": "Report of Fire",
-      "location": "Plaza Bonita Center Way / Sweetwater Rd",
-      "location_desc": "BEHIND OUTBACK",
-      "area": "San Diego",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": true,
-      "is_relevant": false
     },
     {
       "id": "0568",
@@ -60,7 +75,7 @@
         "status": "no_blockage",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": true
     },
     {
@@ -75,7 +90,7 @@
         "status": "unknown",
         "details": []
       },
-      "is_new": true,
+      "is_new": false,
       "is_relevant": false
     },
     {
@@ -152,21 +167,6 @@
       },
       "is_new": false,
       "is_relevant": false
-    },
-    {
-      "id": "0492",
-      "time": "3:20 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I5 N / Clairemont So (e Mission Bay)",
-      "location_desc": "",
-      "area": "San Diego",
-      "details": "3:24 PM: 5 | 3:23 PM: 4 | 3:22 PM: 3 | 3:21 PM: 2 | 3:21 PM: 1 | 3:26 PM: 1",
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": true
     },
     {
       "id": "0483",
@@ -257,22 +257,7 @@
       },
       "is_new": false,
       "is_relevant": false
-    },
-    {
-      "id": "0818",
-      "time": "8:48 PM",
-      "type": "Request CalTrans Notify",
-      "location": "Sr75 / Adella Ave",
-      "location_desc": "NB SR-75 BTWN ADELLA and B ST",
-      "area": "BC",
-      "details": "",
-      "lane_blockage": {
-        "status": "unknown",
-        "details": []
-      },
-      "is_new": false,
-      "is_relevant": false
     }
   ],
-  "last_updated": "2025-09-25T23:37:34.319653"
+  "last_updated": "2025-09-25T23:44:19.219871"
 }

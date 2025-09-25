@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 188,
+  "total_incidents": 190,
   "incidents": [
     {
       "id": "0262",
@@ -2158,7 +2158,37 @@
       },
       "is_new": true,
       "is_relevant": false
+    },
+    {
+      "id": "0577",
+      "time": "4:37 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr163 N / I5 No",
+      "location_desc": "",
+      "area": "San Diego",
+      "details": "4:41 PM: 7 | 4:41 PM: 6 | 4:40 PM: 5 | 4:40 PM: 4 | 4:40 PM: 3 | 4:40 PM: 2 | 4:39 PM: 1 | 4:43 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
+    },
+    {
+      "id": "0575",
+      "time": "4:35 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Del Lago Dar No (hov)",
+      "location_desc": "",
+      "area": "Oceanside",
+      "details": "4:37 PM: 1 | 4:37 PM: 1",
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      },
+      "is_new": true,
+      "is_relevant": true
     }
   ],
-  "last_updated": "2025-09-25T23:37:34.322045"
+  "last_updated": "2025-09-25T23:44:19.222402"
 }
