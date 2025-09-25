@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 48,
+  "total_incidents": 52,
   "incidents": [
     {
       "id": "0262",
@@ -387,7 +387,39 @@
       "location": "78/15",
       "location_desc": "ENCAMPMENT CLEANUPS",
       "area": ""
+    },
+    {
+      "id": "0075",
+      "time": "5:33 AM",
+      "type": "Animal Hazard",
+      "location": "I805 S / Phyllis Pl",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0072",
+      "time": "5:21 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Sr76 / Pauma Valley Dr",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0073",
+      "time": "5:20 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 S / W Bernardo Dr Ofr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0071",
+      "time": "5:10 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / I15 Eo",
+      "location_desc": "",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-25T11:59:25.718260"
+  "last_updated": "2025-09-25T12:42:22.415892"
 }

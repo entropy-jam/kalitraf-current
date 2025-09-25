@@ -1,8 +1,40 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T11:59:25.717673",
+  "timestamp": "2025-09-25T12:42:22.415304",
   "new_incidents": [
+    {
+      "id": "0075",
+      "time": "5:33 AM",
+      "type": "Animal Hazard",
+      "location": "I805 S / Phyllis Pl",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0072",
+      "time": "5:21 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Sr76 / Pauma Valley Dr",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0073",
+      "time": "5:20 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 S / W Bernardo Dr Ofr",
+      "location_desc": "",
+      "area": "San Diego"
+    },
+    {
+      "id": "0071",
+      "time": "5:10 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / I15 Eo",
+      "location_desc": "",
+      "area": "San Diego"
+    },
     {
       "id": "0062",
       "time": "4:17 AM",
@@ -28,36 +60,12 @@
       "area": "BC"
     },
     {
-      "id": "0860",
-      "time": "9:49 PM",
-      "type": "Assist with Construction",
-      "location": "I15 N / Rancho California No",
-      "location_desc": "I15 N RANCHO CALIFORNIA NO",
-      "area": "Temecula"
-    },
-    {
       "id": "0834",
       "time": "9:14 PM",
       "type": "Defective Traffic Signals",
       "location": "I8 E / Lake Murray Eo (70th)",
       "location_desc": "I8 E LAKE MURRAY EO (70TH)",
       "area": "El Cajon"
-    },
-    {
-      "id": "0833",
-      "time": "9:13 PM",
-      "type": "Defective Traffic Signals",
-      "location": "Sr15 S / Main",
-      "location_desc": "NB",
-      "area": "San Diego"
-    },
-    {
-      "id": "0829",
-      "time": "9:11 PM",
-      "type": "Defective Traffic Signals",
-      "location": "I5 S / Main_division (national City)",
-      "location_desc": "I5 S MAIN_DIVISION (NATIONAL CITY)",
-      "area": "San Diego"
     },
     {
       "id": "0822",
@@ -76,31 +84,15 @@
       "area": "BC"
     },
     {
-      "id": "0794",
-      "time": "7:56 PM",
-      "type": "Assist with Construction",
-      "location": "I5 N / Las Pulgas Rd Onr",
-      "location_desc": "TIL 0530",
-      "area": "Oceanside"
-    },
-    {
       "id": "0780",
       "time": "7:37 PM",
       "type": "Assist with Construction",
       "location": "Sr76 / I15 Wo",
       "location_desc": "TIL 0500",
       "area": "Oceanside"
-    },
-    {
-      "id": "0746",
-      "time": "6:56 PM",
-      "type": "Assist with Construction",
-      "location": "32107 Sr74",
-      "location_desc": "LOOKOUT - ORTEGA",
-      "area": "Temecula"
     }
   ],
   "removed_incidents": [],
-  "new_count": 12,
+  "new_count": 11,
   "removed_count": 0
 }
