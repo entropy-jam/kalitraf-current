@@ -1,8 +1,32 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-25T16:24:51.868112",
+  "timestamp": "2025-09-25T16:43:36.859262",
   "new_incidents": [
+    {
+      "id": "0230",
+      "time": "9:39 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / I805 Wo",
+      "location_desc": "I8 W I805 WO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0229",
+      "time": "9:36 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Oceanside Blvd Ofr",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0227",
+      "time": "9:34 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Civic Center No (front)",
+      "location_desc": "I5 S CIVIC CENTER NO (FRONT)",
+      "area": "San Diego"
+    },
     {
       "id": "0214",
       "time": "9:18 AM",
@@ -20,36 +44,12 @@
       "area": "Oceanside"
     },
     {
-      "id": "0207",
-      "time": "9:12 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Central Ave Ofr",
-      "location_desc": "I15 N / CENTRAL AVE OFR",
-      "area": "Temecula"
-    },
-    {
-      "id": "0111",
-      "time": "9:12 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Rancho Bernardo",
-      "location_desc": "I15 N RANCHO BERNARDO SO",
-      "area": "North FSP"
-    },
-    {
       "id": "0192",
       "time": "8:51 AM",
-      "type": "Trfc Collision-Unkn Inj",
+      "type": "Trfc Collision-No Inj",
       "location": "I5 S / Leucadia No",
       "location_desc": "I5 S LEUCADIA NO",
       "area": "Oceanside"
-    },
-    {
-      "id": "0187",
-      "time": "8:45 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "La Posta Truck Trl / Old Highway 80",
-      "location_desc": "La Posta Truck Trl APPROX 2 MI JNO Old Highway 80",
-      "area": "El Cajon"
     },
     {
       "id": "0179",

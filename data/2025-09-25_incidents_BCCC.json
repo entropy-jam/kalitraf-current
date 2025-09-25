@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-25",
-  "total_incidents": 92,
+  "total_incidents": 95,
   "incidents": [
     {
       "id": "0262",
@@ -739,7 +739,31 @@
       "location": "I15 N / Rancho Bernardo",
       "location_desc": "I15 N RANCHO BERNARDO SO",
       "area": "North FSP"
+    },
+    {
+      "id": "0230",
+      "time": "9:39 AM",
+      "type": "Traffic Hazard",
+      "location": "I8 W / I805 Wo",
+      "location_desc": "I8 W I805 WO",
+      "area": "San Diego"
+    },
+    {
+      "id": "0229",
+      "time": "9:36 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Oceanside Blvd Ofr",
+      "location_desc": "",
+      "area": "Oceanside"
+    },
+    {
+      "id": "0227",
+      "time": "9:34 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Civic Center No (front)",
+      "location_desc": "I5 S CIVIC CENTER NO (FRONT)",
+      "area": "San Diego"
     }
   ],
-  "last_updated": "2025-09-25T16:24:51.869798"
+  "last_updated": "2025-09-25T16:43:36.860882"
 }
