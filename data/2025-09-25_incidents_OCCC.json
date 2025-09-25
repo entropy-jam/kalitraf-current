@@ -2,7 +2,7 @@
   "center_code": "OCCC",
   "center_name": "Orange",
   "date": "2025-09-25",
-  "total_incidents": 21,
+  "total_incidents": 24,
   "incidents": [
     {
       "id": "0559",
@@ -171,7 +171,31 @@
       "location": "I5 S / Ortega Hwy",
       "location_desc": "SB 5 AT ORTEGA",
       "area": "Capistrano"
+    },
+    {
+      "id": "0074",
+      "time": "7:30 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Newport Ave / Crawford Canyon Rd",
+      "location_desc": "",
+      "area": "Santa Ana"
+    },
+    {
+      "id": "0070",
+      "time": "7:25 AM",
+      "type": "Hit and Run w/Injuries",
+      "location": "I405 S / Warner Ave",
+      "location_desc": "SB 405 JNO WARNER - FT LANES",
+      "area": "Westminster"
+    },
+    {
+      "id": "0069",
+      "time": "7:25 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "2228 N Main St",
+      "location_desc": "",
+      "area": "Santa Ana"
     }
   ],
-  "last_updated": "2025-09-25T14:16:56.277619"
+  "last_updated": "2025-09-25T14:37:36.719803"
 }
