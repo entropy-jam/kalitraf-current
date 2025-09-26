@@ -78,6 +78,31 @@ class DefaultDependencyConfig {
         container.register('fetcher', () => new HttpFetcher(), true);
         container.register('renderer', () => new IncidentRenderer(), true);
         
+        // Register abstracted services first
+        container.register('incidentDataService', (container) => {
+            return new IncidentDataService(
+                container.get('storage'),
+                container.get('fetcher'),
+                container.get('config')
+            );
+        }, true);
+        
+        container.register('incidentTimeService', () => new IncidentTimeService(), true);
+        
+        container.register('incidentComparisonService', (container) => {
+            return new IncidentComparisonService(
+                container.get('incidentTimeService'),
+                container.get('config')
+            );
+        }, true);
+        
+        container.register('incidentRealtimeService', (container) => {
+            return new IncidentRealtimeService(
+                container.get('incidentDataService'),
+                container.get('config')
+            );
+        }, true);
+        
         // Register business services as singletons
         container.register('incidentService', (container) => {
             return new IncidentService(
@@ -96,7 +121,13 @@ class DefaultDependencyConfig {
         }, true);
         
         container.register('deltaService', () => new DeltaService(), true);
-        container.register('filterService', () => new FilterService(), true);
+        
+        // Register filter strategies
+        container.register('compositeFilterStrategy', () => new CompositeFilterStrategy(), true);
+        
+        container.register('filterService', (container) => {
+            return new FilterService(container.get('compositeFilterStrategy'));
+        }, true);
     }
 }
 

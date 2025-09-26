@@ -31,7 +31,7 @@ class DeltaService {
         if (this.isProcessing) return;
         
         try {
-            const response = await fetch(`incident_deltas.json?t=${Date.now()}`, { 
+            const response = await fetch(`data/incident_deltas.json?t=${Date.now()}`, { 
                 cache: 'no-store' 
             });
             
