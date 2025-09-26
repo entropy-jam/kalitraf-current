@@ -11,12 +11,6 @@
       "runtime": "nodejs18.x"
     }
   },
-  "crons": [
-    {
-      "path": "/api/cron-scrape",
-      "schedule": "*/2 * * * *"
-    }
-  ],
   "headers": [
     {
       "source": "/data/(.*)",

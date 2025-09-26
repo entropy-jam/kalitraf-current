@@ -1,0 +1,16 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "python src/scrapers/continuous_scraper.py"
+
+[services]
+- name: "chp-scraper"
+  source: "."
+  buildCommand: "pip install -r config/requirements.txt.python"
+  startCommand: "python src/scrapers/continuous_scraper.py"
+  
+- name: "chp-frontend"
+  source: "."
+  buildCommand: "npm install --prefix config"
+  startCommand: "python -m http.server 3000"

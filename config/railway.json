@@ -1,0 +1,28 @@
+{
+  "name": "chp-traffic-scraper",
+  "version": "3.0.0",
+  "description": "Real-time CHP Traffic Incident Monitor with Railway deployment",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "scraper": "python src/scrapers/continuous_scraper.py",
+    "dev": "python -m http.server 3000"
+  },
+  "dependencies": {
+    "ws": "^8.14.2"
+  },
+  "keywords": [
+    "chp",
+    "traffic",
+    "incidents",
+    "real-time",
+    "websocket",
+    "railway"
+  ],
+  "author": "entropy-jam",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.9.0"
+  }
+}
