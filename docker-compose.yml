@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  chp-scraper:
+    build: .
+    container_name: chp-traffic-scraper
+    ports:
+      - "8080:8080"  # WebSocket server
+      - "3000:3000"  # Frontend server
+    environment:
+      - COMMUNICATION_CENTER=BCCC
+      - ENABLE_EMAIL_NOTIFICATIONS=false
+      - GMAIL_SENDER_EMAIL=${GMAIL_SENDER_EMAIL:-}
+      - GMAIL_RECIPIENT_EMAIL=${GMAIL_RECIPIENT_EMAIL:-}
+      - GMAIL_APP_PASSWORD=${GMAIL_APP_PASSWORD:-}
+    volumes:
+      - ./data:/app/data  # Persist incident data
+      - ./logs:/app/logs  # Persist logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - chp-network
+
+networks:
+  chp-network:
+    driver: bridge

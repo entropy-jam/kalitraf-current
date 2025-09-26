@@ -1,0 +1,67 @@
+# Git and version control
+.git
+.gitignore
+
+# Documentation
+docs/
+README.md
+*.md
+
+# Node modules (will be installed in container)
+node_modules/
+npm-debug.log*
+.npm
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+venv/
+env/
+ENV/
+.venv/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+chp_scraper_debug.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Chrome driver cache
+.wdm/
+
+# Legacy and old files
+legacy/
+scripts/
+config/api.vercel/
+config/vercel.json.vercel
+config/package.json.nodejs
+
+# Old data files (keep current data)
+data/2025-09-22_incidents.json
+
+# Railway specific
+.railway/
