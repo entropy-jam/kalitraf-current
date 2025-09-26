@@ -9,7 +9,6 @@ import os
 import sys
 import json
 import aiohttp
-import websockets
 from aiohttp import web
 from datetime import datetime
 from typing import Dict, List, Any
@@ -52,7 +51,8 @@ class RailwayWebSocketServer:
         for client in self.clients:
             try:
                 await client.send(message)
-            except websockets.exceptions.ConnectionClosed:
+            except Exception as e:
+                print(f"📡 WebSocket send error: {e}")
                 disconnected.add(client)
         
         # Remove disconnected clients
