@@ -1,6 +1,6 @@
 # CHP Traffic Scraper Docker Container
-# Cache buster: 2025-01-25-v2
-FROM python:3.9-slim
+# Cache buster: 2025-01-25-v3 - Changed base image to force cache refresh
+FROM python:3.9-bullseye
 
 # Install system dependencies and Chrome in one step
 RUN apt-get update && apt-get install -y \
