@@ -26,10 +26,11 @@ class RailwayWebSocketService {
   async initialize() {
     try {
       // Get the current host (Railway will provide the domain)
-      // Try WSS first, fallback to WS if needed
-      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      // Force WSS for Railway HTTPS deployment
+      const protocol = 'wss:';
       const host = window.location.host;
-      const wsUrl = `${protocol}//${host}/ws`;
+      // Add Railway WebSocket parameters
+      const wsUrl = `${protocol}//${host}/ws?upgrade_wait=0s&first_msg_wait=0s`;
       
       console.log(`🔗 Connecting to Railway WebSocket: ${wsUrl}`);
       
@@ -74,10 +75,12 @@ class RailwayWebSocketService {
       }
     };
 
-    this.websocket.onerror = (error) => {
-      console.error('❌ WebSocket error:', error);
-      this.handleConnectionError(error);
-    };
+      this.websocket.onerror = (error) => {
+        console.error('❌ WebSocket error:', error);
+        console.error('❌ WebSocket URL attempted:', wsUrl);
+        console.error('❌ Current protocol:', window.location.protocol);
+        this.handleConnectionError(error);
+      };
   }
 
   /**
@@ -87,6 +90,14 @@ class RailwayWebSocketService {
     console.log('📡 Received WebSocket message:', data);
 
     switch (data.type) {
+      case 'welcome':
+        console.log('✅ WebSocket welcome message:', data.message);
+        console.log('🔧 Railway WebSocket parameters:', {
+          upgrade_wait: data.upgrade_wait,
+          first_msg_wait: data.first_msg_wait
+        });
+        break;
+        
       case 'incident_update':
         if (this.eventHandlers.onIncidentUpdate) {
           this.eventHandlers.onIncidentUpdate(data.data);

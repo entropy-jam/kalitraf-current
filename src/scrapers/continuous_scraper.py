@@ -7,7 +7,6 @@ import asyncio
 import logging
 import os
 import sys
-import websockets
 import json
 import aiohttp
 from aiohttp import web
@@ -97,12 +96,36 @@ class RailwayWebSocketServer:
         
         self.app.router.add_get('/health', health_check)
         
-        # WebSocket endpoint
+        # WebSocket endpoint - Railway format
         async def websocket_handler(request):
+            # Get Railway WebSocket parameters
+            upgrade_wait = request.query.get('upgrade_wait', '0s')
+            first_msg_wait = request.query.get('first_msg_wait', '0s')
+            
+            print(f"🔌 WebSocket upgrade request - upgrade_wait: {upgrade_wait}, first_msg_wait: {first_msg_wait}")
+            
             ws = web.WebSocketResponse()
             await ws.prepare(request)
             
             await self.register_client(ws)
+            
+            # Send initial message after first_msg_wait
+            if first_msg_wait != '0s':
+                try:
+                    wait_seconds = float(first_msg_wait.replace('s', ''))
+                    await asyncio.sleep(wait_seconds)
+                except:
+                    pass
+            
+            # Send welcome message
+            await ws.send_str(json.dumps({
+                'type': 'welcome',
+                'message': 'Connected to CHP Traffic Monitor WebSocket',
+                'timestamp': datetime.now().isoformat(),
+                'upgrade_wait': upgrade_wait,
+                'first_msg_wait': first_msg_wait
+            }))
+            
             try:
                 async for msg in ws:
                     if msg.type == aiohttp.WSMsgType.TEXT:

@@ -56,8 +56,7 @@ class ThemeManager {
 // Enhanced App Controller with Railway WebSocket Support
 class RealtimeAppController {
     constructor() {
-        // WebSocket service disabled for now
-        // this.websocketService = new RailwayWebSocketService();
+        this.websocketService = new RailwayWebSocketService();
         this.appController = null; // Will be initialized with existing AppController
         this.isInitialized = false;
         this.subscribedCenters = new Set();
@@ -72,14 +71,14 @@ class RealtimeAppController {
         this.appController = new AppController();
         await this.appController.initialize();
         
-        // WebSocket service disabled for now
-        // await this.setupWebSocketService();
+        // Set up Railway WebSocket service
+        await this.setupWebSocketService();
         
-        // WebSocket service disabled for now
-        // if (this.appController.incidentService) {
-        //     // Add WebSocket integration to incident service
-        //     this.appController.incidentService.setWebSocketService(this.websocketService);
-        // }
+        // Connect incident service to WebSocket service for real-time updates
+        if (this.appController.incidentService) {
+            // Add WebSocket integration to incident service
+            this.appController.incidentService.setWebSocketService(this.websocketService);
+        }
             
             // Set up UI enhancements
             this.setupRealtimeUI();
@@ -588,19 +587,19 @@ class RealtimeAppController {
     }
 
     enableRealtime() {
-        console.log('🔴 Real-time updates disabled for now');
-        // this.websocketService.initialize();
+        console.log('🔴 Enabling Railway WebSocket real-time updates');
+        this.websocketService.initialize();
     }
 
     disableRealtime() {
-        console.log('⚪ Real-time updates disabled');
-        // this.websocketService.disconnect();
+        console.log('⚪ Disabling real-time updates');
+        this.websocketService.disconnect();
     }
 
     destroy() {
-        // if (this.websocketService) {
-        //     this.websocketService.disconnect();
-        // }
+        if (this.websocketService) {
+            this.websocketService.disconnect();
+        }
         
         if (this.appController && this.appController.destroy) {
             this.appController.destroy();

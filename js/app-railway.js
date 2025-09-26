@@ -314,29 +314,7 @@ class RailwayAppController {
         const controlsDiv = document.querySelector('.controls');
         if (!controlsDiv) return;
 
-        // Add Railway status container
-        const statusContainer = document.createElement('div');
-        statusContainer.id = 'railway-status-container';
-        statusContainer.className = 'railway-status-container';
-        statusContainer.innerHTML = `
-            <h4>🚂 Railway Real-Time Status</h4>
-            <div class="railway-info">
-                <div class="info-item">
-                    <span class="label">Platform:</span>
-                    <span class="value">Railway</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Update Frequency:</span>
-                    <span class="value">5 seconds</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">WebSocket:</span>
-                    <span class="value">Built-in</span>
-                </div>
-            </div>
-        `;
-
-        controlsDiv.appendChild(statusContainer);
+        // Railway status container removed
     }
 
     addConnectionStatusStyles() {
@@ -379,43 +357,7 @@ class RailwayAppController {
                 background-color: #dc3545;
             }
 
-            .railway-status-container {
-                margin: 16px 0;
-                padding: 16px;
-                background: #f8f9fa;
-                border-radius: 8px;
-                border: 1px solid #dee2e6;
-            }
-
-            .railway-status-container h4 {
-                margin: 0 0 12px 0;
-                color: #495057;
-                font-size: 14px;
-                font-weight: 600;
-            }
-
-            .railway-info {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 8px;
-            }
-
-            .info-item {
-                display: flex;
-                justify-content: space-between;
-                padding: 4px 0;
-                font-size: 12px;
-            }
-
-            .info-item .label {
-                color: #6c757d;
-                font-weight: 500;
-            }
-
-            .info-item .value {
-                color: #495057;
-                font-weight: 600;
-            }
+            /* Railway status container CSS removed */
         `;
         document.head.appendChild(style);
     }
