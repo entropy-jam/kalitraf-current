@@ -119,9 +119,10 @@ class RealtimeAppController {
         // Set up real-time service
         await this.setupRealtimeService();
         
-        // Connect data manager to WebSocket service
-        if (this.appController.dataManager) {
-            this.appController.dataManager.setWebSocketService(this.realtimeService);
+        // Connect incident service to WebSocket service for real-time updates
+        if (this.appController.incidentService) {
+            // Add WebSocket integration to incident service
+            this.appController.incidentService.setWebSocketService(this.realtimeService);
         }
             
             // Set up UI enhancements
@@ -137,34 +138,60 @@ class RealtimeAppController {
     }
 
     async setupRealtimeService() {
-        // Set up event handlers
-        this.realtimeService.onIncidentUpdate((data) => {
-            console.log(`📡 [${data.center}] Real-time incident update received:`, data);
-            this.handleIncidentUpdate(data);
-        });
+        try {
+            // Set up event handlers
+            this.realtimeService.onIncidentUpdate((data) => {
+                console.log(`📡 [${data.center}] Real-time incident update received:`, data);
+                this.handleIncidentUpdate(data);
+            });
 
-        this.realtimeService.onError((error) => {
-            console.error(`❌ [${error.center || 'Unknown'}] Real-time service error:`, error);
-            this.connectionManager.showError(error.error || 'Connection error');
-        });
+            this.realtimeService.onError((error) => {
+                console.error(`❌ [${error.center || 'Unknown'}] Real-time service error:`, error);
+                this.connectionManager.showError(error.error || 'Connection error');
+            });
 
-        this.realtimeService.onConnectionChange((status) => {
-            console.log('🔗 Connection status changed:', status);
-            this.connectionManager.updateStatus(status.connected);
-        });
+            this.realtimeService.onConnectionChange((status) => {
+                console.log('🔗 Connection status changed:', status);
+                this.connectionManager.updateStatus(status.connected);
+            });
 
-        this.realtimeService.onCenterStatusChange((data) => {
-            console.log(`📊 [${data.center}] Center status update:`, data);
-            this.handleCenterStatusUpdate(data);
-        });
+            this.realtimeService.onCenterStatusChange((data) => {
+                console.log(`📊 [${data.center}] Center status update:`, data);
+                this.handleCenterStatusUpdate(data);
+            });
 
-        // Initialize the real-time service with all centers
-        const allCenters = getAllCenterCodes();
-        await this.realtimeService.initialize(allCenters);
-        
-        // Track subscribed centers
-        this.subscribedCenters = new Set(allCenters);
-        console.log(`📡 Subscribed to ${allCenters.length} communication centers:`, allCenters);
+            // Initialize the real-time service with all centers
+            const allCenters = getAllCenterCodes();
+            await this.realtimeService.initialize(allCenters);
+
+            // Track subscribed centers
+            this.subscribedCenters = new Set(allCenters);
+            console.log(`📡 Subscribed to ${allCenters.length} communication centers:`, allCenters);
+            
+        } catch (error) {
+            console.warn('⚠️ WebSocket initialization failed, falling back to file-based data:', error);
+            this.connectionManager.updateStatus(false, '⚪ WebSocket Disabled - Using File Data');
+            
+            // Fallback: Load data from files
+            await this.loadFallbackData();
+        }
+    }
+
+    /**
+     * Load data from files when WebSocket is not available
+     */
+    async loadFallbackData() {
+        try {
+            console.log('📁 Loading fallback data from files...');
+            
+            // Load data using the existing app controller
+            if (this.appController && this.appController.loadData) {
+                await this.appController.loadData(true); // Force refresh
+                console.log('✅ Fallback data loaded successfully');
+            }
+        } catch (error) {
+            console.error('❌ Failed to load fallback data:', error);
+        }
     }
 
     setupRealtimeUI() {
@@ -465,9 +492,9 @@ class RealtimeAppController {
             this.appController.updateIncidents(data);
         }
         
-        // Update data manager with real-time data
-        if (this.appController && this.appController.dataManager) {
-            this.appController.dataManager.handleRealtimeUpdate(data);
+        // Update incident service with real-time data
+        if (this.appController && this.appController.incidentService) {
+            this.appController.incidentService.handleRealtimeUpdate(data);
         }
         
         // Show notification

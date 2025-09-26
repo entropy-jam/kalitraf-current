@@ -10,6 +10,51 @@ class IncidentService {
         this.fetcher = fetcher;
         this.config = config;
         this.currentCenter = config.get('defaultCenter');
+        this.websocketService = null;
+        this.realtimeEnabled = false;
+    }
+
+    /**
+     * Set WebSocket service for real-time updates
+     * @param {Object} websocketService - WebSocket service instance
+     */
+    setWebSocketService(websocketService) {
+        this.websocketService = websocketService;
+        this.realtimeEnabled = true;
+        console.log('📡 IncidentService connected to WebSocket service');
+    }
+
+    /**
+     * Handle real-time WebSocket updates
+     * @param {Object} data - WebSocket update data
+     */
+    handleRealtimeUpdate(data) {
+        if (!this.realtimeEnabled || !data) return;
+        
+        console.log(`📡 IncidentService received real-time update for ${data.center}:`, data);
+        
+        // Update cache with new data
+        if (data.incidents) {
+            const cacheData = {
+                center_code: data.center,
+                center_name: data.centerName,
+                incident_count: data.incidentCount || data.incidents.length,
+                incidents: data.incidents,
+                last_updated: data.timestamp,
+                timestamp: Date.now()
+            };
+            
+            // Update cache for this center
+            const cacheKey = `incidents_${data.center}`;
+            this.storage.set(cacheKey, cacheData);
+            
+            // If this is the current center, trigger a refresh
+            if (data.center === this.currentCenter) {
+                console.log(`📡 Updating display for current center ${data.center}`);
+                // Trigger a refresh of the UI
+                this.loadIncidents(true);
+            }
+        }
     }
 
     /**
