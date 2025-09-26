@@ -63,7 +63,7 @@ class HTMLSanitizer {
      * @param {string} html - HTML content to set
      */
     static setInnerHTML(element, html) {
-        if (!element || !element.innerHTML !== undefined) {
+        if (!element || element.innerHTML === undefined) {
             return;
         }
         
