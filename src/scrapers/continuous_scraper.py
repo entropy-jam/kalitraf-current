@@ -9,6 +9,8 @@ import os
 import sys
 import websockets
 import json
+import aiohttp
+from aiohttp import web
 from datetime import datetime
 from typing import Dict, List, Any
 
@@ -27,6 +29,7 @@ class RailwayWebSocketServer:
         self.port = port
         self.clients = set()
         self.server = None
+        self.app = None
     
     async def register_client(self, websocket):
         """Register a new WebSocket client"""
@@ -58,19 +61,62 @@ class RailwayWebSocketServer:
         if self.clients:
             print(f"📡 Broadcasted to {len(self.clients)} clients")
     
-    async def start_server(self):
-        """Start the WebSocket server"""
-        print(f"🚀 Starting WebSocket server on port {self.port}")
+    def setup_http_routes(self):
+        """Set up HTTP routes for serving frontend"""
+        self.app = web.Application()
         
-        async def handle_client(websocket, path):
-            await self.register_client(websocket)
+        # Serve static files
+        self.app.router.add_static('/', path='.', name='static')
+        
+        # Health check endpoint
+        async def health_check(request):
+            return web.json_response({
+                'status': 'healthy',
+                'timestamp': datetime.now().isoformat(),
+                'websocket_clients': len(self.clients)
+            })
+        
+        self.app.router.add_get('/health', health_check)
+        
+        # WebSocket endpoint
+        async def websocket_handler(request):
+            ws = web.WebSocketResponse()
+            await ws.prepare(request)
+            
+            await self.register_client(ws)
             try:
-                await websocket.wait_closed()
+                async for msg in ws:
+                    if msg.type == aiohttp.WSMsgType.TEXT:
+                        # Handle incoming messages
+                        try:
+                            data = json.loads(msg.data)
+                            print(f"📨 Received message: {data}")
+                        except json.JSONDecodeError:
+                            print(f"📨 Received text: {msg.data}")
+                    elif msg.type == aiohttp.WSMsgType.ERROR:
+                        print(f"❌ WebSocket error: {ws.exception()}")
             finally:
-                await self.unregister_client(websocket)
+                await self.unregister_client(ws)
+            
+            return ws
         
-        self.server = await websockets.serve(handle_client, "0.0.0.0", self.port)
-        print(f"✅ WebSocket server running on ws://0.0.0.0:{self.port}")
+        self.app.router.add_get('/ws', websocket_handler)
+    
+    async def start_server(self):
+        """Start the HTTP and WebSocket server"""
+        print(f"🚀 Starting HTTP and WebSocket server on port {self.port}")
+        
+        # Set up HTTP routes
+        self.setup_http_routes()
+        
+        # Start the server
+        runner = web.AppRunner(self.app)
+        await runner.setup()
+        site = web.TCPSite(runner, "0.0.0.0", self.port)
+        await site.start()
+        
+        print(f"✅ HTTP server running on http://0.0.0.0:{self.port}")
+        print(f"✅ WebSocket server running on ws://0.0.0.0:{self.port}/ws")
 
 class ContinuousRailwayScraper:
     """Continuous scraper for Railway deployment"""

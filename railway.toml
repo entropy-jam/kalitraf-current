@@ -2,4 +2,4 @@
 builder = "dockerfile"
 
 [deploy]
-startCommand = "python src/scrapers/continuous_scraper.py"
+startCommand = "python -m http.server 8080 & python src/scrapers/continuous_scraper.py"

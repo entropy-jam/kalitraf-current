@@ -28,7 +28,7 @@ class RailwayWebSocketService {
       // Get the current host (Railway will provide the domain)
       const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
       const host = window.location.host;
-      const wsUrl = `${protocol}//${host}`;
+      const wsUrl = `${protocol}//${host}/ws`;
       
       console.log(`🔗 Connecting to Railway WebSocket: ${wsUrl}`);
       

@@ -51,3 +51,8 @@ data/2025-09-22_incidents.json
 
 # Node.js dependencies
 node_modules/
+
+# Railway tokens and secrets
+RAILWAY_TOKEN=*
+railway-token.txt
+.env
