@@ -230,4 +230,4 @@ class RailwayWebSocketService {
 }
 
 // Export for use in other modules
-export default RailwayWebSocketService;
+window.RailwayWebSocketService = RailwayWebSocketService;

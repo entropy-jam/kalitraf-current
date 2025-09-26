@@ -3,7 +3,7 @@
  * Handles all CHP Communication Centers: BCCC, LACC, OCCC, SACC
  */
 
-import { WEBSOCKET_CONFIG, getAllChannels, getCenterInfo } from '../config/websocket-config.js';
+// Import moved to window globals - no import needed
 
 class RealtimeIncidentService {
   constructor() {
@@ -11,8 +11,8 @@ class RealtimeIncidentService {
     this.channels = new Map(); // Map of center codes to channels
     this.isConnected = false;
     this.reconnectAttempts = 0;
-    this.maxReconnectAttempts = WEBSOCKET_CONFIG.reconnection.maxAttempts;
-    this.reconnectDelay = WEBSOCKET_CONFIG.reconnection.interval;
+    this.maxReconnectAttempts = window.WEBSOCKET_CONFIG.reconnection.maxAttempts;
+    this.reconnectDelay = window.WEBSOCKET_CONFIG.reconnection.interval;
     this.subscribedCenters = new Set();
     
     this.eventHandlers = {
@@ -31,9 +31,9 @@ class RealtimeIncidentService {
       // Dynamic import of Pusher to avoid loading issues
       const Pusher = await import('pusher-js');
       
-      this.pusher = new Pusher.default(WEBSOCKET_CONFIG.pusher.key, {
-        cluster: WEBSOCKET_CONFIG.pusher.cluster,
-        encrypted: WEBSOCKET_CONFIG.pusher.useTLS,
+      this.pusher = new Pusher.default(window.WEBSOCKET_CONFIG.pusher.key, {
+        cluster: window.WEBSOCKET_CONFIG.pusher.cluster,
+        encrypted: window.WEBSOCKET_CONFIG.pusher.useTLS,
         authEndpoint: '/api/pusher-auth' // Optional: for private channels
       });
 
@@ -61,7 +61,7 @@ class RealtimeIncidentService {
    */
   async subscribeToCenters(centers) {
     for (const centerCode of centers) {
-      const centerInfo = getCenterInfo(centerCode);
+      const centerInfo = window.getCenterInfo(centerCode);
       if (!centerInfo) {
         console.warn(`⚠️ Unknown center code: ${centerCode}`);
         continue;
@@ -110,10 +110,10 @@ class RealtimeIncidentService {
    * Set up message event handlers for a specific center
    */
   setupCenterMessageHandlers(centerCode, channel) {
-    const centerInfo = getCenterInfo(centerCode);
+    const centerInfo = window.getCenterInfo(centerCode);
     
     // Handle new incidents
-    channel.bind(WEBSOCKET_CONFIG.events.NEW_INCIDENT, (data) => {
+    channel.bind(window.WEBSOCKET_CONFIG.events.NEW_INCIDENT, (data) => {
       console.log(`📡 [${centerCode}] New incident:`, data);
       
       if (this.eventHandlers.onIncidentUpdate) {
@@ -127,7 +127,7 @@ class RealtimeIncidentService {
     });
 
     // Handle updated incidents
-    channel.bind(WEBSOCKET_CONFIG.events.UPDATED_INCIDENT, (data) => {
+    channel.bind(window.WEBSOCKET_CONFIG.events.UPDATED_INCIDENT, (data) => {
       console.log(`📡 [${centerCode}] Updated incident:`, data);
       
       if (this.eventHandlers.onIncidentUpdate) {
@@ -141,7 +141,7 @@ class RealtimeIncidentService {
     });
 
     // Handle resolved incidents
-    channel.bind(WEBSOCKET_CONFIG.events.RESOLVED_INCIDENT, (data) => {
+    channel.bind(window.WEBSOCKET_CONFIG.events.RESOLVED_INCIDENT, (data) => {
       console.log(`📡 [${centerCode}] Resolved incident:`, data);
       
       if (this.eventHandlers.onIncidentUpdate) {
@@ -155,7 +155,7 @@ class RealtimeIncidentService {
     });
 
     // Handle center status updates
-    channel.bind(WEBSOCKET_CONFIG.events.CENTER_STATUS, (data) => {
+    channel.bind(window.WEBSOCKET_CONFIG.events.CENTER_STATUS, (data) => {
       console.log(`📊 [${centerCode}] Center status:`, data);
       
       if (this.eventHandlers.onCenterStatusChange) {
@@ -209,7 +209,7 @@ class RealtimeIncidentService {
       return;
     }
 
-    const centerInfo = getCenterInfo(centerCode);
+    const centerInfo = window.getCenterInfo(centerCode);
     if (!centerInfo) {
       console.warn(`⚠️ Unknown center code: ${centerCode}`);
       return;
@@ -243,7 +243,7 @@ class RealtimeIncidentService {
       this.channels.delete(centerCode);
       this.subscribedCenters.delete(centerCode);
       
-      const centerInfo = getCenterInfo(centerCode);
+      const centerInfo = window.getCenterInfo(centerCode);
       console.log(`📡 Unsubscribed from ${centerInfo?.name} (${centerCode}) channel`);
     }
   }
@@ -390,4 +390,4 @@ class RealtimeIncidentService {
 }
 
 // Export for use in other modules
-export default RealtimeIncidentService;
+window.RealtimeIncidentService = RealtimeIncidentService;

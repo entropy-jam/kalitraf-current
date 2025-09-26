@@ -8,8 +8,6 @@ This directory contains tools and scripts for testing WebSocket connections in t
 - **`test-websocket-server.py`** - Simple WebSocket test server for debugging connections
 - **`start-websocket-server.py`** - Starts the actual Railway WebSocket server from the project
 - **`websocket-test.html`** - Interactive diagnostic page for testing WebSocket connections
-- **`app-diagnostic.js`** - Comprehensive application initialization diagnostic script
-- **`app-diagnostic-test.html`** - Interactive diagnostic page for testing application initialization
 
 ### Documentation
 - **`WEBSOCKET_TROUBLESHOOTING.md`** - Comprehensive troubleshooting guide for WebSocket issues
@@ -34,9 +32,6 @@ python start-websocket-server.py
 ### 3. Run Diagnostics
 Open `websocket-test.html` in your browser to run comprehensive WebSocket diagnostics.
 
-### 4. Test Application Initialization
-Open `app-diagnostic-test.html` in your browser to run comprehensive application initialization diagnostics.
-
 ## 🔧 Usage
 
 ### Test Server (`test-websocket-server.py`)
@@ -56,22 +51,6 @@ Open `app-diagnostic-test.html` in your browser to run comprehensive application
 - Environment analysis
 - Protocol detection
 - Connection status monitoring
-- Export diagnostic results
-
-### Application Diagnostic (`app-diagnostic.js`)
-- Comprehensive application initialization testing
-- Dependency checking
-- Service initialization testing
-- DOM element validation
-- Script loading verification
-- Application controller testing
-
-### Application Diagnostic Page (`app-diagnostic-test.html`)
-- Interactive application initialization testing
-- Visual dependency status
-- Service initialization results
-- Application controller status
-- Detailed error reporting
 - Export diagnostic results
 
 ## 📊 Diagnostic Results

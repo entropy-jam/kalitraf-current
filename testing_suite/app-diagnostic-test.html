@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Diagnostic Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        .log {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+        .environment-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .env-item {
+            padding: 8px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .env-label {
+            font-weight: bold;
+            color: #495057;
+        }
+        .env-value {
+            color: #6c757d;
+        }
+        .dependency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .dependency-item {
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .dependency-item.available {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .dependency-item.missing {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Application Diagnostic Tool</h1>
+        
+        <div class="test-section">
+            <h3>Environment Information</h3>
+            <div id="environment-info" class="environment-info">
+                <!-- Environment info will be populated here -->
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>Dependencies Check</h3>
+            <div id="dependencies-check">
+                <div class="status info">Click "Run Diagnostic" to check dependencies</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>Services Initialization</h3>
+            <div id="services-initialization">
+                <div class="status info">Click "Run Diagnostic" to test service initialization</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>Application Initialization</h3>
+            <div id="app-initialization">
+                <div class="status info">Click "Run Diagnostic" to test application initialization</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>Diagnostic Controls</h3>
+            <button id="run-diagnostic">Run Full Diagnostic</button>
+            <button id="test-dependencies">Test Dependencies Only</button>
+            <button id="test-services">Test Services Only</button>
+            <button id="test-app-init">Test App Initialization Only</button>
+            <button id="export-results">Export Results</button>
+            <button id="clear-log">Clear Log</button>
+        </div>
+
+        <div class="test-section">
+            <h3>Diagnostic Log</h3>
+            <div id="diagnostic-log" class="log">Application Diagnostic Tool Ready...\n</div>
+        </div>
+    </div>
+
+    <!-- Load the actual application scripts to test -->
+    <script src="../js/interfaces.js"></script>
+    <script src="../js/config-manager.js"></script>
+    <script src="../js/storage/local-storage.js"></script>
+    <script src="../js/fetchers/http-fetcher.js"></script>
+    <script src="../js/renderers/incident-renderer.js"></script>
+    <script src="../js/services/incident-service.js"></script>
+    <script src="../js/services/multi-center-service.js"></script>
+    <script src="../js/services/delta-service.js"></script>
+    <script src="../js/services/filter-service.js"></script>
+    <script src="../js/controllers/app-controller.js"></script>
+    <script src="../js/services/railway-websocket-service.js"></script>
+    <script src="../js/app-railway.js"></script>
+    
+    <!-- Load the diagnostic script -->
+    <script src="app-diagnostic.js"></script>
+    
+    <script>
+        // Enhanced diagnostic with UI integration
+        class EnhancedApplicationDiagnostic extends ApplicationDiagnostic {
+            constructor() {
+                super();
+                this.logElement = document.getElementById('diagnostic-log');
+                this.envElement = document.getElementById('environment-info');
+                this.depsElement = document.getElementById('dependencies-check');
+                this.servicesElement = document.getElementById('services-initialization');
+                this.appElement = document.getElementById('app-initialization');
+            }
+
+            log(message) {
+                const timestamp = new Date().toLocaleTimeString();
+                this.logElement.textContent += `[${timestamp}] ${message}\n`;
+                this.logElement.scrollTop = this.logElement.scrollHeight;
+                console.log(message);
+            }
+
+            async runDiagnostic() {
+                this.log('🔍 Starting Enhanced Application Diagnostic...');
+                
+                try {
+                    // Clear previous results
+                    this.clearResults();
+                    
+                    // Run base diagnostic
+                    await super.runDiagnostic();
+                    
+                    // Update UI with results
+                    this.updateEnvironmentUI();
+                    this.updateDependenciesUI();
+                    this.updateServicesUI();
+                    this.updateAppUI();
+                    
+                    this.log('✅ Diagnostic completed successfully!');
+                    
+                } catch (error) {
+                    this.log(`❌ Diagnostic failed: ${error.message}`);
+                    console.error('Diagnostic error:', error);
+                }
+            }
+
+            clearResults() {
+                this.depsElement.innerHTML = '<div class="status info">Running diagnostic...</div>';
+                this.servicesElement.innerHTML = '<div class="status info">Running diagnostic...</div>';
+                this.appElement.innerHTML = '<div class="status info">Running diagnostic...</div>';
+            }
+
+            updateEnvironmentUI() {
+                const env = this.results.environment;
+                this.envElement.innerHTML = `
+                    <div class="env-item">
+                        <div class="env-label">Browser:</div>
+                        <div class="env-value">${env.userAgent.split(' ')[0]}</div>
+                    </div>
+                    <div class="env-item">
+                        <div class="env-label">Platform:</div>
+                        <div class="env-value">${env.platform}</div>
+                    </div>
+                    <div class="env-item">
+                        <div class="env-label">Protocol:</div>
+                        <div class="env-value">${env.protocol}</div>
+                    </div>
+                    <div class="env-item">
+                        <div class="env-label">Online:</div>
+                        <div class="env-value">${env.onLine ? 'Yes' : 'No'}</div>
+                    </div>
+                    <div class="env-item">
+                        <div class="env-label">LocalStorage:</div>
+                        <div class="env-value">${env.localStorage.supported ? 'Supported' : 'Not Supported'}</div>
+                    </div>
+                    <div class="env-item">
+                        <div class="env-label">WebSocket:</div>
+                        <div class="env-value">${env.webSocket.supported ? 'Supported' : 'Not Supported'}</div>
+                    </div>
+                    <div class="env-item">
+                        <div class="env-label">Fetch:</div>
+                        <div class="env-value">${env.fetch.supported ? 'Supported' : 'Not Supported'}</div>
+                    </div>
+                    <div class="env-item">
+                        <div class="env-label">ES6:</div>
+                        <div class="env-value">${env.es6.supported ? 'Supported' : 'Not Supported'}</div>
+                    </div>
+                `;
+            }
+
+            updateDependenciesUI() {
+                const deps = this.results.dependencies;
+                const availableDeps = Object.entries(deps).filter(([name, info]) => info.available);
+                const missingDeps = Object.entries(deps).filter(([name, info]) => !info.available);
+                
+                let html = `<div class="status ${missingDeps.length === 0 ? 'success' : 'error'}">`;
+                html += `<strong>Dependencies Status:</strong> ${availableDeps.length}/${Object.keys(deps).length} available<br>`;
+                
+                if (missingDeps.length > 0) {
+                    html += `<br><strong>Missing Dependencies:</strong><ul>`;
+                    missingDeps.forEach(([name]) => {
+                        html += `<li>${name}</li>`;
+                    });
+                    html += '</ul>';
+                }
+                
+                html += '</div>';
+                
+                // Add dependency grid
+                html += '<div class="dependency-grid">';
+                Object.entries(deps).forEach(([name, info]) => {
+                    const statusClass = info.available ? 'available' : 'missing';
+                    const statusIcon = info.available ? '✅' : '❌';
+                    html += `<div class="dependency-item ${statusClass}">${statusIcon} ${name}</div>`;
+                });
+                html += '</div>';
+                
+                this.depsElement.innerHTML = html;
+            }
+
+            updateServicesUI() {
+                const services = this.results.services;
+                const successfulServices = Object.entries(services).filter(([name, info]) => info.initialized);
+                const failedServices = Object.entries(services).filter(([name, info]) => !info.initialized);
+                
+                let html = `<div class="status ${failedServices.length === 0 ? 'success' : 'error'}">`;
+                html += `<strong>Services Status:</strong> ${successfulServices.length}/${Object.keys(services).length} initialized<br>`;
+                
+                if (failedServices.length > 0) {
+                    html += '<br><strong>Failed Services:</strong><ul>';
+                    failedServices.forEach(([name, info]) => {
+                        html += `<li><strong>${name}:</strong> ${info.error}</li>`;
+                    });
+                    html += '</ul>';
+                }
+                
+                html += '</div>';
+                this.servicesElement.innerHTML = html;
+            }
+
+            updateAppUI() {
+                const init = this.results.initialization;
+                let html = '';
+                
+                // DOM Status
+                html += `<div class="status ${init.domReady ? 'success' : 'error'}">`;
+                html += `<strong>DOM Status:</strong> ${init.domReady ? 'Ready' : 'Not Ready'}<br>`;
+                html += `<strong>Body Exists:</strong> ${init.bodyExists ? 'Yes' : 'No'}`;
+                html += '</div>';
+                
+                // Required Elements
+                const missingElements = Object.entries(init.requiredElements)
+                    .filter(([name, info]) => !info.exists);
+                
+                html += `<div class="status ${missingElements.length === 0 ? 'success' : 'error'}">`;
+                html += `<strong>Required Elements:</strong> ${Object.keys(init.requiredElements).length - missingElements.length}/${Object.keys(init.requiredElements).length} present<br>`;
+                
+                if (missingElements.length > 0) {
+                    html += '<br><strong>Missing Elements:</strong><ul>';
+                    missingElements.forEach(([name]) => {
+                        html += `<li>${name}</li>`;
+                    });
+                    html += '</ul>';
+                }
+                html += '</div>';
+                
+                // Scripts
+                const missingScripts = Object.entries(init.scriptsLoaded)
+                    .filter(([name, info]) => !info.loaded);
+                
+                html += `<div class="status ${missingScripts.length === 0 ? 'success' : 'error'}">`;
+                html += `<strong>Scripts:</strong> ${Object.keys(init.scriptsLoaded).length - missingScripts.length}/${Object.keys(init.scriptsLoaded).length} loaded<br>`;
+                
+                if (missingScripts.length > 0) {
+                    html += '<br><strong>Missing Scripts:</strong><ul>';
+                    missingScripts.forEach(([name]) => {
+                        html += `<li>${name}</li>`;
+                    });
+                    html += '</ul>';
+                }
+                html += '</div>';
+                
+                // Application Controllers
+                if (init.appController) {
+                    const statusClass = init.appController.initialized ? 'success' : 'error';
+                    const statusIcon = init.appController.initialized ? '✅' : '❌';
+                    html += `<div class="status ${statusClass}">`;
+                    html += `<strong>${statusIcon} AppController:</strong> ${init.appController.initialized ? 'Initialized' : 'Failed'}`;
+                    if (init.appController.error) {
+                        html += `<br><strong>Error:</strong> ${init.appController.error}`;
+                    }
+                    html += '</div>';
+                }
+                
+                if (init.railwayAppController) {
+                    const statusClass = init.railwayAppController.initialized ? 'success' : 'error';
+                    const statusIcon = init.railwayAppController.initialized ? '✅' : '❌';
+                    html += `<div class="status ${statusClass}">`;
+                    html += `<strong>${statusIcon} RailwayAppController:</strong> ${init.railwayAppController.initialized ? 'Initialized' : 'Failed'}`;
+                    if (init.railwayAppController.error) {
+                        html += `<br><strong>Error:</strong> ${init.railwayAppController.error}`;
+                    }
+                    html += '</div>';
+                }
+                
+                this.appElement.innerHTML = html;
+            }
+
+            async testSpecificComponent(component) {
+                this.log(`🧪 Testing ${component}...`);
+                
+                switch (component) {
+                    case 'dependencies':
+                        await this.checkDependencies();
+                        this.updateDependenciesUI();
+                        break;
+                    case 'services':
+                        await this.testServiceInitialization();
+                        this.updateServicesUI();
+                        break;
+                    case 'app-init':
+                        await this.testApplicationInitialization();
+                        this.updateAppUI();
+                        break;
+                    default:
+                        this.log(`❌ Unknown component: ${component}`);
+                }
+            }
+        }
+
+        // Initialize enhanced diagnostic
+        let diagnostic = null;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            diagnostic = new EnhancedApplicationDiagnostic();
+            
+            // Set up event listeners
+            document.getElementById('run-diagnostic').addEventListener('click', () => {
+                diagnostic.runDiagnostic();
+            });
+            
+            document.getElementById('test-dependencies').addEventListener('click', () => {
+                diagnostic.testSpecificComponent('dependencies');
+            });
+            
+            document.getElementById('test-services').addEventListener('click', () => {
+                diagnostic.testSpecificComponent('services');
+            });
+            
+            document.getElementById('test-app-init').addEventListener('click', () => {
+                diagnostic.testSpecificComponent('app-init');
+            });
+            
+            document.getElementById('export-results').addEventListener('click', () => {
+                diagnostic.exportResults();
+            });
+            
+            document.getElementById('clear-log').addEventListener('click', () => {
+                document.getElementById('diagnostic-log').textContent = 'Log cleared...\n';
+            });
+            
+            // Auto-run diagnostic
+            setTimeout(() => {
+                diagnostic.runDiagnostic();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

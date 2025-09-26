@@ -1,7 +1,7 @@
 // js/config/websocket-config.js
 // WebSocket Configuration for Multi-Center Communication
 
-export const WEBSOCKET_CONFIG = {
+window.WEBSOCKET_CONFIG = {
     // Pusher Configuration
     pusher: {
         key: process.env.PUSHER_KEY || 'your-pusher-key',
@@ -59,16 +59,16 @@ export const WEBSOCKET_CONFIG = {
 };
 
 // Helper function to get center info by code
-export function getCenterInfo(centerCode) {
+window.getCenterInfo = function(centerCode) {
     return WEBSOCKET_CONFIG.centers[centerCode] || null;
 }
 
 // Helper function to get all center codes
-export function getAllCenterCodes() {
+window.getAllCenterCodes = function() {
     return Object.keys(WEBSOCKET_CONFIG.centers);
 }
 
 // Helper function to get all channels
-export function getAllChannels() {
+window.getAllChannels = function() {
     return Object.values(WEBSOCKET_CONFIG.centers).map(center => center.channel);
 }

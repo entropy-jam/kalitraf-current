@@ -104,6 +104,10 @@
         <div class="incidents-container" id="incidentsContainer">
             <div class="loading">Loading incidents...</div>
         </div>
+        
+        <!-- Required elements for application initialization -->
+        <div id="incident-list" style="display: none;"></div>
+        <div id="status-display" style="display: none;"></div>
             </div>
         </div>
     </div>
@@ -134,15 +138,12 @@
     <script src="js/modules/copy-to-clipboard.js"></script>
     
     <!-- Legacy modules for backward compatibility -->
-    <script src="js/cache.js"></script>
-    <script src="js/virtual-scroll-deprecated.js"></script>
-    <script src="js/data-manager.js"></script>
-    <script src="js/ui-controller.js"></script>
+    <script src="legacy/js/ui-controller.js"></script>
     
     <!-- Controllers -->
     <script src="js/controllers/app-controller.js"></script>
     
     <!-- Main application entry point -->
-    <script type="module" src="js/app-railway.js"></script>
+    <script src="js/app-railway.js"></script>
 </body>
 </html>
