@@ -26,8 +26,8 @@ class RailwayWebSocketService {
   async initialize() {
     try {
       // Get the current host (Railway will provide the domain)
-      // Always use WSS for Railway deployment (HTTPS)
-      const protocol = 'wss:';
+      // Try WSS first, fallback to WS if needed
+      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
       const host = window.location.host;
       const wsUrl = `${protocol}//${host}/ws`;
       

@@ -56,7 +56,8 @@ class ThemeManager {
 // Enhanced App Controller with Railway WebSocket Support
 class RealtimeAppController {
     constructor() {
-        this.websocketService = new RailwayWebSocketService();
+        // WebSocket service disabled for now
+        // this.websocketService = new RailwayWebSocketService();
         this.appController = null; // Will be initialized with existing AppController
         this.isInitialized = false;
         this.subscribedCenters = new Set();
@@ -71,14 +72,14 @@ class RealtimeAppController {
         this.appController = new AppController();
         await this.appController.initialize();
         
-        // Set up Railway WebSocket service
-        await this.setupWebSocketService();
+        // WebSocket service disabled for now
+        // await this.setupWebSocketService();
         
-        // Connect incident service to WebSocket service for real-time updates
-        if (this.appController.incidentService) {
-            // Add WebSocket integration to incident service
-            this.appController.incidentService.setWebSocketService(this.websocketService);
-        }
+        // WebSocket service disabled for now
+        // if (this.appController.incidentService) {
+        //     // Add WebSocket integration to incident service
+        //     this.appController.incidentService.setWebSocketService(this.websocketService);
+        // }
             
             // Set up UI enhancements
             this.setupRealtimeUI();
@@ -160,15 +161,7 @@ class RealtimeAppController {
         const controlsDiv = document.querySelector('.controls');
         if (!controlsDiv) return;
 
-        // Add real-time toggle
-        const realtimeToggle = document.createElement('label');
-        realtimeToggle.className = 'realtime-toggle';
-        realtimeToggle.innerHTML = `
-            <input type="checkbox" id="realtimeToggle" checked>
-            <span>🔴 Multi-Center Real-time</span>
-        `;
-        
-        controlsDiv.appendChild(realtimeToggle);
+        // Real-time toggle removed
 
         // Add center status container
         const statusContainer = document.createElement('div');
@@ -197,15 +190,7 @@ class RealtimeAppController {
         
         controlsDiv.appendChild(centerControls);
 
-        // Add event listeners
-        const toggle = realtimeToggle.querySelector('input');
-        toggle.addEventListener('change', (e) => {
-            if (e.target.checked) {
-                this.enableRealtime();
-            } else {
-                this.disableRealtime();
-            }
-        });
+        // Real-time toggle event listeners removed
 
         // Add center-specific button listeners
         document.getElementById('scrapeAllCenters')?.addEventListener('click', () => {
@@ -234,7 +219,7 @@ class RealtimeAppController {
         if (!refreshBtn) return;
 
         // Update button text and functionality
-        refreshBtn.textContent = '🔄 Refresh Now (Real-time)';
+        refreshBtn.textContent = '🔄 Refresh Now';
         
         refreshBtn.addEventListener('click', async () => {
             try {
@@ -244,14 +229,14 @@ class RealtimeAppController {
                 // Show feedback
                 refreshBtn.textContent = '✅ Scraping...';
                 setTimeout(() => {
-                    refreshBtn.textContent = '🔄 Refresh Now (Real-time)';
+                    refreshBtn.textContent = '🔄 Refresh Now';
                 }, 2000);
                 
             } catch (error) {
                 console.error('❌ Failed to trigger scraping:', error);
                 refreshBtn.textContent = '❌ Error';
                 setTimeout(() => {
-                    refreshBtn.textContent = '🔄 Refresh Now (Real-time)';
+                    refreshBtn.textContent = '🔄 Refresh Now';
                 }, 2000);
             }
         });
@@ -299,16 +284,7 @@ class RealtimeAppController {
                 background-color: #dc3545;
             }
             
-            .realtime-toggle {
-                display: flex;
-                align-items: center;
-                margin-left: 16px;
-                cursor: pointer;
-            }
-            
-            .realtime-toggle input {
-                margin-right: 8px;
-            }
+            /* Real-time toggle CSS removed */
             
             .center-status-container {
                 margin: 16px 0;
@@ -612,19 +588,19 @@ class RealtimeAppController {
     }
 
     enableRealtime() {
-        console.log('🔴 Enabling Railway WebSocket real-time updates');
-        this.websocketService.initialize();
+        console.log('🔴 Real-time updates disabled for now');
+        // this.websocketService.initialize();
     }
 
     disableRealtime() {
-        console.log('⚪ Disabling real-time updates');
-        this.websocketService.disconnect();
+        console.log('⚪ Real-time updates disabled');
+        // this.websocketService.disconnect();
     }
 
     destroy() {
-        if (this.websocketService) {
-            this.websocketService.disconnect();
-        }
+        // if (this.websocketService) {
+        //     this.websocketService.disconnect();
+        // }
         
         if (this.appController && this.appController.destroy) {
             this.appController.destroy();
