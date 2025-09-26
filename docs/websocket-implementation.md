@@ -18,33 +18,31 @@
 
 ### **Data Flow:**
 ```
-Python Scraper → Vercel API → Pusher → Frontend WebSocket Client
+Python Scraper → Railway WebSocket Server → Frontend WebSocket Client
 ```
 
 ### **Components:**
-1. **Vercel API Endpoint** (`/api/scrape`) - Triggers scraping
-2. **Pusher Service** - Real-time message delivery
+1. **Railway Continuous Scraper** (`src/scrapers/continuous_scraper.py`) - Runs scraping
+2. **Built-in WebSocket Server** (`RailwayWebSocketServer`) - Real-time message delivery
 3. **Frontend WebSocket Client** - Receives updates
-4. **Enhanced Python Scraper** - Publishes to Pusher
-
 ## 🔧 **Implementation Steps**
 
-### **Phase 1: Setup Pusher Service**
-- [ ] Create Pusher account
-- [ ] Get API keys
-- [ ] Install Pusher SDK
+### **Phase 1: Built-in WebSocket Server** ✅ **COMPLETE**
+- ✅ Railway WebSocket Server implemented
+- ✅ No external dependencies
+- ✅ Real-time broadcasting
 
-### **Phase 2: Create Vercel API Endpoint**
-- [ ] Create `/api/scrape` endpoint
-- [ ] Integrate with existing Python scraper
-- [ ] Add Pusher publishing
+### **Phase 2: Railway Continuous Scraper** ✅ **COMPLETE**
+- ✅ Continuous scraper with 5-second intervals
+- ✅ Integrated with existing Python scraper
+- ✅ Built-in WebSocket broadcasting
 
-### **Phase 3: Frontend WebSocket Client**
-- [ ] Install Pusher client
-- [ ] Replace file-based fetching with WebSocket
-- [ ] Add real-time UI updates
+### **Phase 3: Frontend WebSocket Client** ✅ **COMPLETE**
+- ✅ Railway WebSocket client implemented
+- ✅ Replaced file-based fetching with WebSocket
+- ✅ Real-time UI updates
 
-### **Phase 4: Testing & Optimization**
-- [ ] Test real-time performance
-- [ ] Add error handling
-- [ ] Optimize data transfer
+### **Phase 4: Testing & Optimization** ✅ **COMPLETE**
+- ✅ Real-time performance tested
+- ✅ Error handling implemented
+- ✅ Data transfer optimized

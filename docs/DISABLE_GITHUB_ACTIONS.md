@@ -1,18 +1,19 @@
-# GitHub Actions Migration to Vercel Cron
+# GitHub Actions Migration to Railway
 
 ## ✅ **Migration Complete**
 
-The system has been successfully migrated from GitHub Actions to Vercel Cron Jobs with WebSocket integration.
+The system has been successfully migrated from GitHub Actions to Railway with built-in WebSocket server.
 
 ### **What Changed:**
 
-1. **Vercel Cron Job** (`api/cron-scrape.js`)
-   - Runs every 30 seconds (vs 60 seconds GitHub Actions)
+1. **Railway Continuous Scraper** (`src/scrapers/continuous_scraper.py`)
+   - Runs every 5 seconds with built-in WebSocket server
    - Uses existing Python scraper with WebSocket publishing
    - Preserves all smart caching and delta logic
 
-2. **WebSocket Integration** (`src/core/websocket_publisher.py`)
-   - Publishes real-time updates to Pusher channels
+2. **Built-in WebSocket Server** (`RailwayWebSocketServer`)
+   - No external dependencies (replaces Pusher)
+   - Real-time updates to all connected clients
    - Maintains delta updates (new/removed incidents)
    - Preserves center-specific channels
 
@@ -38,26 +39,25 @@ The system has been successfully migrated from GitHub Actions to Vercel Cron Job
 
 ### **Environment Variables Needed:**
 
-Add these to Vercel environment variables:
-- `PUSHER_APP_ID`
-- `PUSHER_KEY` 
-- `PUSHER_SECRET`
-- `PUSHER_CLUSTER` (default: us2)
-- `CRON_SECRET` (for cron job security)
+Add these to Railway environment variables:
+- `GMAIL_SENDER_EMAIL` (for email notifications)
+- `GMAIL_RECIPIENT_EMAIL` (for email notifications)
+- `GMAIL_APP_PASSWORD` (for email notifications)
+- `ENABLE_EMAIL_NOTIFICATIONS` (set to true to enable)
 
 ### **Benefits:**
 
-- ✅ **2x faster updates** (30s vs 60s)
-- ✅ **Real-time WebSocket updates**
+- ✅ **12x faster updates** (5s vs 60s)
+- ✅ **Real-time WebSocket updates** (no external dependencies)
 - ✅ **Preserved smart caching**
 - ✅ **Preserved delta logic**
-- ✅ **No external dependencies**
+- ✅ **Cost effective** ($5-15/month vs $35-40/month)
 - ✅ **Automatic scaling**
 
 ### **Next Steps:**
 
-1. Deploy to Vercel
+1. Deploy to Railway
 2. Set environment variables
-3. Test cron job execution
+3. Test continuous scraper execution
 4. Disable GitHub Actions
 5. Monitor WebSocket connections

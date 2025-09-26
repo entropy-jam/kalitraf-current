@@ -17,13 +17,13 @@ class WebDriverManager:
     
     def get_driver(self):
         """Get configured WebDriver instance"""
-        if self.mode == "github_actions":
-            return self._get_github_actions_driver()
+        if self.mode == "railway":
+            return self._get_railway_driver()
         else:
             return self._get_local_driver()
     
-    def _get_github_actions_driver(self):
-        """Get Chrome driver optimized for GitHub Actions"""
+    def _get_railway_driver(self):
+        """Get Chrome driver optimized for Railway deployment"""
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")
         options.add_argument("--no-sandbox")
@@ -37,7 +37,7 @@ class WebDriverManager:
         options.add_argument("--remote-debugging-port=9222")
         
         driver = webdriver.Chrome(options=options)
-        logging.info("Chrome WebDriver initialized (GitHub Actions)")
+        logging.info("Chrome WebDriver initialized (Railway)")
         return driver
     
     def _get_local_driver(self):

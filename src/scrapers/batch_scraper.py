@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-GitHub Actions CHP Traffic Scraper
-Optimized for automated runs with email notifications
+Batch CHP Traffic Scraper
+Runs once for data collection and persistence (no continuous monitoring)
 """
 import os
 import logging
@@ -14,10 +14,10 @@ from core.webdriver_manager import WebDriverManager
 from core.incident_extractor import IncidentExtractor
 from core.data_manager import DataManager
 from core.email_notifier import EmailNotifier
-from core.websocket_publisher import WebSocketPublisher
+# WebSocket publishing now handled by Railway continuous scraper
 
 def setup_logging():
-    """Setup logging for GitHub Actions"""
+    """Setup logging for automated runs"""
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s'
@@ -57,10 +57,9 @@ def send_email_alert(changes, center_code, center_name):
         return False
 
 def scrape_incidents(center_code="BCCC"):
-    """Perform a single scrape for GitHub Actions/Vercel Cron with WebSocket publishing"""
-    webdriver_manager = WebDriverManager(mode="github_actions")
+    """Perform a single scrape with data persistence"""
+    webdriver_manager = WebDriverManager(mode="railway")
     data_manager = DataManager(center_code)
-    websocket_publisher = WebSocketPublisher()
     
     try:
         driver = webdriver_manager.get_driver()
@@ -103,18 +102,9 @@ def scrape_incidents(center_code="BCCC"):
                 center_name = data_manager._get_center_name(center_code)
                 send_email_alert(changes, center_code, center_name)
             
-            # Publish to WebSocket for real-time updates
+            # Note: WebSocket publishing is handled by Railway continuous scraper
             if file_updated or has_changes:
-                print("📡 Publishing to WebSocket...")
-                incidents_json = data_manager.incidents_to_json(incidents_data)
-                websocket_success = websocket_publisher.publish_incident_update(
-                    center_code, incidents_json, changes
-                )
-                
-                if websocket_success:
-                    print("✅ WebSocket update published successfully")
-                else:
-                    print("⚠️ WebSocket update failed (continuing anyway)")
+                print("📡 Data saved for Railway WebSocket server")
             
             # Update previous incidents for next comparison
             data_manager.update_previous_incidents(incidents_data)
@@ -130,7 +120,7 @@ def scrape_incidents(center_code="BCCC"):
         webdriver_manager.close()
 
 def main():
-    """Main function for GitHub Actions scraper"""
+    """Main function for batch scraper"""
     setup_logging()
     
     # Get center from environment variable
@@ -163,7 +153,7 @@ def main():
         "YKCC": "Yreka"
     }.get(center_code, center_code)
     
-    print(f"🚨 CHP {center_name} Traffic Monitor (GitHub Actions)")
+    print(f"🚨 CHP {center_name} Traffic Monitor (Batch Scraper)")
     print(f"📊 Scraping {center_code} center...")
     print("=" * 60)
     

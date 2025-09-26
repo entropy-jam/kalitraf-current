@@ -11,17 +11,29 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 │   │   ├── webdriver_manager.py # WebDriver management
 │   │   ├── incident_extractor.py # Data extraction
 │   │   ├── data_manager.py      # JSON storage & comparison
-│   │   └── email_notifier.py    # SMTP email notifications
+│   │   ├── email_notifier.py    # SMTP email notifications
+│   │   ├── multi_center_manager.py # Multi-center coordination
+│   │   └── websocket_publisher.py # WebSocket publishing
 │   ├── scrapers/                # Scraper implementations
 │   │   ├── local_scraper.py     # Local development scraper
-│   │   └── github_scraper.py    # GitHub Actions scraper
+│   │   ├── batch_scraper.py      # Batch data collection scraper
+│   │   └── continuous_scraper.py # Railway continuous scraper
 │   └── utils/                   # Utility modules
 ├── data/                        # JSON data storage
 │   ├── active_incidents_[CENTER].json  # Current incidents per center
 │   ├── incident_deltas_[CENTER].json   # Change deltas per center
-│   └── YYYY-MM-DD_incidents_[CENTER].json  # Daily archives per center
-├── scrape_local.py             # Local scraper entry point
-└── scrape_github.py           # GitHub Actions entry point
+│   ├── YYYY-MM-DD_incidents_[CENTER].json  # Daily archives per center
+│   └── timestamp.json          # Last update timestamp
+├── bin/                         # Entry point scripts
+│   ├── scrape_local.py         # Local scraper entry point
+│   └── scrape_batch.py         # Batch scraper entry point
+├── config/                      # Configuration files
+│   ├── railway.json            # Railway service configuration
+│   ├── railway.toml            # Railway deployment config
+│   └── requirements.txt.python # Python dependencies
+└── assets/                      # Static assets
+    ├── chromedriver-mac-arm64/  # Chrome driver for local dev
+    └── styles.css              # CSS styles
 ```
 
 ### Frontend (JavaScript - SOLID Architecture)
@@ -36,18 +48,28 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 │   ├── renderers/              # UI rendering implementations
 │   │   └── incident-renderer.js # Incident display logic
 │   ├── services/               # Business logic services
-│   │   └── incident-service.js # Incident data operations
+│   │   ├── incident-service.js # Incident data operations
+│   │   ├── delta-service.js    # Change detection service
+│   │   ├── filter-service.js   # Data filtering service
+│   │   ├── multi-center-service.js # Multi-center coordination
+│   │   └── realtime-service.js # Real-time WebSocket service
 │   ├── controllers/            # Application controllers
 │   │   └── app-controller.js   # Main application controller
-│   ├── cache.js               # Legacy cache module
-│   ├── virtual-scroll.js      # Virtual scrolling implementation
-│   ├── data-manager.js        # Legacy data management
-│   ├── ui-controller.js       # Legacy UI controller
-│   └── app.js                 # Application entry point
-├── styles.css                 # Separated CSS styles
-├── index.html                 # Clean HTML structure
-├── vercel.json                # Vercel deployment configuration
-└── .vercelignore              # Vercel build exclusions
+│   ├── config/                 # Configuration files
+│   │   └── websocket-config.js # WebSocket configuration
+│   ├── modules/                # Utility modules
+│   │   └── copy-to-clipboard.js # Clipboard functionality
+│   ├── app-railway.js         # Railway application entry point
+│   ├── app-realtime.js        # Real-time application entry point
+│   └── legacy/                 # Legacy modules (deprecated)
+│       ├── app.js             # Legacy application entry point
+│       ├── cache.js           # Legacy cache module
+│       ├── data-manager.js    # Legacy data management
+│       └── ui-controller.js   # Legacy UI controller
+├── assets/styles.css          # CSS styles
+├── index.html                 # Main HTML structure
+├── railway.toml               # Railway deployment configuration
+└── railway.json               # Railway service configuration
 ```
 
 ## 🚀 Quick Start
@@ -55,17 +77,30 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 ### Local Development
 ```bash
 # Install dependencies
-pip install -r requirements.txt
+pip install -r config/requirements.txt.python
 
 # Run local scraper (once)
-python scrape_local.py --once --center BCCC
+python bin/scrape_local.py --once --center BCCC
 
 # Run continuous monitoring
-python scrape_local.py --center BCCC --interval 60 --iterations 10
+python bin/scrape_local.py --center BCCC --interval 60 --iterations 10
+
+# Run Railway continuous scraper with WebSocket
+python src/scrapers/continuous_scraper.py
 ```
 
-### GitHub Actions
-The system automatically runs every minute via GitHub Actions, scraping incidents and sending email notifications when changes are detected.
+### Railway Deployment
+The system runs continuously on Railway with built-in WebSocket server for real-time updates:
+- **Scraper**: Runs every 5 seconds with WebSocket broadcasting
+- **Frontend**: Serves static files with WebSocket client
+- **WebSocket**: Built-in server (no external dependencies)
+
+### Batch Data Collection
+The system includes a batch scraper for one-time data collection:
+```bash
+# Run batch scraper for data collection
+COMMUNICATION_CENTER=BCCC python bin/scrape_batch.py
+```
 
 ## 📧 Email Notifications
 
@@ -76,12 +111,14 @@ Configure email notifications by setting environment variables:
 
 ## 🎯 Features
 
-- **Modular Design**: Clean separation of concerns
-- **Real-time Monitoring**: Scrapes every minute
+- **Modular Design**: Clean separation of concerns with SOLID architecture
+- **Real-time Monitoring**: Scrapes every 5 seconds with WebSocket broadcasting
+- **Built-in WebSocket**: No external dependencies (replaces Pusher)
 - **Email Alerts**: Instant notifications for new/resolved incidents
 - **Data Persistence**: JSON storage with historical tracking
-- **Multi-center Support**: BCCC, CCC, NCCC, SCCC
-- **GitHub Pages**: Live web dashboard
+- **Multi-center Support**: BCCC, LACC, OCCC, SACC
+- **Railway Deployment**: Live web dashboard with real-time updates
+- **Cost Effective**: $5-15/month (vs $35-40/month for Vercel Pro + Pusher)
 
 ## 🔧 Configuration
 
@@ -97,6 +134,70 @@ Configure email notifications by setting environment variables:
 - `GMAIL_SENDER_EMAIL`: Sender email address
 - `GMAIL_RECIPIENT_EMAIL`: Recipient email address
 - `GMAIL_APP_PASSWORD`: Gmail App Password
+
+## 🔧 Scraper Architecture
+
+### **Three Scraper Types:**
+
+1. **🚀 Continuous Scraper** (`src/scrapers/continuous_scraper.py`)
+   - **Primary production scraper** for Railway deployment
+   - Runs every 5 seconds with built-in WebSocket server
+   - Handles all 4 centers (BCCC, LACC, OCCC, SACC)
+   - Real-time broadcasting to frontend clients
+
+2. **🛠️ Local Scraper** (`src/scrapers/local_scraper.py`)
+   - **Development and testing** scraper
+   - Entry point: `bin/scrape_local.py`
+   - Good for local development and debugging
+   - Supports continuous monitoring with intervals
+
+3. **📦 Batch Scraper** (`src/scrapers/batch_scraper.py`)
+   - **One-time data collection** scraper
+   - Entry point: `bin/scrape_batch.py`
+   - Useful for manual data collection
+   - No continuous monitoring
+
+### **WebDriver Usage:**
+All scrapers use WebDriver to access CHP website data:
+- **CHP doesn't provide a public API** for traffic incidents
+- **WebDriver simulates browser** to scrape dynamic content
+- **WebSocket broadcasts** scraped data to frontend clients
+- **WebDriver + WebSocket work together** for real-time updates
+
+## 🌐 WebSocket Implementation
+
+### Built-in WebSocket Server
+The system uses a built-in WebSocket server (`RailwayWebSocketServer`) that eliminates external dependencies:
+
+```python
+# Built-in WebSocket server (no external Pusher needed)
+class RailwayWebSocketServer:
+    async def broadcast_incidents(self, incidents_data):
+        # Broadcast to all connected clients
+        for client in self.clients:
+            await client.send(json.dumps(incidents_data))
+```
+
+### Real-time Updates
+- **Scraping Interval**: Every 5 seconds
+- **WebSocket Broadcasting**: Immediate updates to all connected clients
+- **Message Types**: 
+  - `incident_update`: Individual center updates
+  - `scrape_summary`: Complete scraping results
+  - `delta_update`: New/removed incidents
+
+### Frontend Integration
+The frontend connects to the WebSocket server for real-time updates:
+
+```javascript
+// Railway WebSocket Service
+class RailwayWebSocketService {
+    connect() {
+        this.ws = new WebSocket(RAILWAY_CONFIG.websocket.url);
+        // Handle real-time incident updates
+    }
+}
+```
 
 ## 📊 Data Format
 
@@ -128,21 +229,21 @@ The root-level `active_incidents.json` file is maintained for backward compatibi
 
 ## 🌐 Live Deployment
 
-### Vercel (Primary) 🚀
-**Live dashboard**: [Deploy to Vercel](https://vercel.com/new/clone?repository-url=https://github.com/entropy-jam/chp-scraper)
+### Railway (Primary) 🚀
+**Live dashboard**: [Deploy to Railway](https://railway.app/template)
 
 **Features**:
-- ⚡ Ultra-fast CDN delivery
-- 🔄 Real-time incident display
+- ⚡ Real-time WebSocket updates
+- 🔄 Live incident display with sub-second updates
 - 📱 Communication center selection
-- 🔄 Auto-refresh every 30 seconds
+- 🔄 Built-in WebSocket server (no external dependencies)
 - 📱 Responsive design
-- 🎯 Optimized caching (30s for data, 1 year for assets)
+- 🎯 Cost-effective deployment ($5-15/month)
 
 ### GitHub Pages (Legacy)
 **Legacy dashboard**: https://entropy-jam.github.io/chp-scraper/
 
-**Migration Status**: ✅ **Complete** - Migrated to Vercel for better performance
+**Migration Status**: ✅ **Complete** - Migrated to Railway for real-time WebSocket support
 
 ## 🔒 Security
 
@@ -162,38 +263,46 @@ The root-level `active_incidents.json` file is maintained for backward compatibi
 ### Adding New Features
 1. Create new modules in `src/core/` or `src/utils/`
 2. Update scrapers in `src/scrapers/`
-3. Test locally with `scrape_local.py`
-4. Update GitHub Actions workflow if needed
+3. Test locally with `bin/scrape_local.py`
+4. Test Railway scraper with `src/scrapers/continuous_scraper.py`
+5. Update Railway configuration if needed
 
 ### Testing
 ```bash
 # Test local scraper
-python scrape_local.py --once --center BCCC
+python bin/scrape_local.py --once --center BCCC
 
-# Test GitHub scraper locally
-COMMUNICATION_CENTER=BCCC python scrape_github.py
+# Test batch scraper locally
+COMMUNICATION_CENTER=BCCC python bin/scrape_batch.py
+
+# Test Railway continuous scraper
+python src/scrapers/continuous_scraper.py
+
+# Test WebSocket server
+# Frontend will connect to ws://localhost:8080
 ```
 
 ## 🗺️ Deployment & Migration
 
-### ✅ **Phase 1: Vercel Migration Complete**
-- **Status**: Successfully migrated from GitHub Pages to Vercel
-- **Performance**: 10x faster delivery via global CDN
-- **Configuration**: Optimized `vercel.json` with smart caching
-- **Framework**: Static site deployment (no build process needed)
-- **Live URL**: https://chp-traffic-scraper-6iv6x4sns-entropy-jams-projects.vercel.app
+### ✅ **Migration Complete**
+- **Status**: Successfully migrated from GitHub Pages/Vercel to Railway
+- **Performance**: Real-time WebSocket updates every 5 seconds
+- **Configuration**: Optimized `railway.toml` and `railway.json`
+- **Framework**: Full-stack deployment with built-in WebSocket server
+- **Cost**: $5-15/month (vs $35-40/month for Vercel Pro + Pusher)
 
-### 🚀 **Phase 2: WebSocket Real-Time Updates (NEXT)**
-- **Current**: 60-second update delay (GitHub Actions scraping)
-- **Target**: Sub-second real-time updates via WebSocket
-- **Implementation**: External WebSocket service integration
-- **Timeline**: 4-week development plan
-- **Details**: See [MIGRATION.md](MIGRATION.md) for comprehensive plan
+### 🚀 **Current Architecture**
+- **Continuous Scraper**: Runs every 5 seconds with WebSocket broadcasting
+- **Built-in WebSocket**: No external dependencies (replaces Pusher)
+- **Real-time Updates**: Sub-second latency for frontend clients
+- **Multi-center Support**: BCCC, LACC, OCCC, SACC
 
-### 📈 **Migration Benefits**
-- **Phase 1**: 10x faster static delivery
-- **Phase 2**: Real-time incident updates (<1 second)
-- **Future**: Push notifications, sound alerts, mobile app
+### 📈 **Benefits Achieved**
+- **12x faster updates** (5s vs 60s intervals)
+- **No external dependencies** (built-in WebSocket server)
+- **Cost effective** ($5-15/month vs $35-40/month)
+- **Real-time updates** with sub-second latency
+- **Preserved functionality** (email notifications, data persistence)
 
 ## 📄 License
 

@@ -51,4 +51,3 @@ data/2025-09-22_incidents.json
 
 # Node.js dependencies
 node_modules/
-package-lock.json
