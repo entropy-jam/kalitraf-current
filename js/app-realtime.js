@@ -3,8 +3,8 @@
  * Integrates Pusher for real-time incident updates
  */
 
-// Import the real-time service and configuration
-import RealtimeIncidentService from './services/realtime-service.js';
+// Import the Railway WebSocket service and configuration
+import RailwayWebSocketService from './services/railway-websocket-service.js';
 import { WEBSOCKET_CONFIG, getAllCenterCodes } from './config/websocket-config.js';
 
 // Theme management
@@ -97,10 +97,10 @@ class ConnectionStatusManager {
     }
 }
 
-// Enhanced App Controller with Multi-Center Real-time Support
+// Enhanced App Controller with Railway WebSocket Support
 class RealtimeAppController {
     constructor() {
-        this.realtimeService = new RealtimeIncidentService();
+        this.websocketService = new RailwayWebSocketService();
         this.connectionManager = new ConnectionStatusManager();
         this.appController = null; // Will be initialized with existing AppController
         this.isInitialized = false;
@@ -116,13 +116,13 @@ class RealtimeAppController {
         this.appController = new AppController();
         await this.appController.initialize();
         
-        // Set up real-time service
-        await this.setupRealtimeService();
+        // Set up Railway WebSocket service
+        await this.setupWebSocketService();
         
         // Connect incident service to WebSocket service for real-time updates
         if (this.appController.incidentService) {
             // Add WebSocket integration to incident service
-            this.appController.incidentService.setWebSocketService(this.realtimeService);
+            this.appController.incidentService.setWebSocketService(this.websocketService);
         }
             
             // Set up UI enhancements
@@ -137,39 +137,39 @@ class RealtimeAppController {
         }
     }
 
-    async setupRealtimeService() {
+    async setupWebSocketService() {
         try {
             // Set up event handlers
-            this.realtimeService.onIncidentUpdate((data) => {
+            this.websocketService.onIncidentUpdate((data) => {
                 console.log(`📡 [${data.center}] Real-time incident update received:`, data);
                 this.handleIncidentUpdate(data);
             });
 
-            this.realtimeService.onError((error) => {
-                console.error(`❌ [${error.center || 'Unknown'}] Real-time service error:`, error);
+            this.websocketService.onError((error) => {
+                console.error(`❌ Railway WebSocket error:`, error);
                 this.connectionManager.showError(error.error || 'Connection error');
             });
 
-            this.realtimeService.onConnectionChange((status) => {
+            this.websocketService.onConnectionChange((status) => {
                 console.log('🔗 Connection status changed:', status);
                 this.connectionManager.updateStatus(status.connected);
             });
 
-            this.realtimeService.onCenterStatusChange((data) => {
-                console.log(`📊 [${data.center}] Center status update:`, data);
-                this.handleCenterStatusUpdate(data);
+            this.websocketService.onScrapeSummary((data) => {
+                console.log(`📊 Scrape summary received:`, data);
+                this.handleScrapeSummary(data);
             });
 
-            // Initialize the real-time service with all centers
-            const allCenters = getAllCenterCodes();
-            await this.realtimeService.initialize(allCenters);
+            // Initialize the Railway WebSocket service
+            await this.websocketService.initialize();
 
             // Track subscribed centers
+            const allCenters = getAllCenterCodes();
             this.subscribedCenters = new Set(allCenters);
-            console.log(`📡 Subscribed to ${allCenters.length} communication centers:`, allCenters);
+            console.log(`📡 Connected to Railway WebSocket server for ${allCenters.length} communication centers:`, allCenters);
             
         } catch (error) {
-            console.warn('⚠️ WebSocket initialization failed, falling back to file-based data:', error);
+            console.warn('⚠️ Railway WebSocket initialization failed, falling back to file-based data:', error);
             this.connectionManager.updateStatus(false, '⚪ WebSocket Disabled - Using File Data');
             
             // Fallback: Load data from files
@@ -288,7 +288,7 @@ class RealtimeAppController {
         refreshBtn.addEventListener('click', async () => {
             try {
                 const center = document.getElementById('centerSelect')?.value || 'BCCC';
-                await this.realtimeService.triggerScraping(center);
+                await this.triggerScrapingCenter(center);
                 
                 // Show feedback
                 refreshBtn.textContent = '✅ Scraping...';
@@ -514,6 +514,40 @@ class RealtimeAppController {
         this.updateCenterStatusIndicator(data);
     }
 
+    handleScrapeSummary(data) {
+        console.log('📊 Processing scrape summary:', data);
+        
+        // Update center statuses from summary
+        if (data.results) {
+            data.results.forEach(result => {
+                this.centerStatuses.set(result.center, {
+                    status: result.status,
+                    lastUpdate: result.timestamp,
+                    incidentCount: result.incidentCount || 0,
+                    health: result.status === 'success' ? 'active' : 'warning'
+                });
+                
+                // Update UI indicators
+                this.updateCenterStatusIndicator({
+                    center: result.center,
+                    centerName: result.centerName,
+                    status: result.status,
+                    lastUpdate: result.timestamp,
+                    incidentCount: result.incidentCount || 0
+                });
+            });
+        }
+        
+        // Show summary notification
+        this.showUpdateNotification({
+            center: 'ALL',
+            centerName: 'All Centers',
+            timestamp: data.timestamp,
+            eventType: 'scrape-summary',
+            totalIncidents: data.totalIncidents
+        });
+    }
+
     updateCenterStatusIndicator(data) {
         // Find or create center status indicator
         let indicator = document.getElementById(`center-status-${data.center}`);
@@ -585,56 +619,63 @@ class RealtimeAppController {
     async triggerScrapingAllCenters() {
         try {
             console.log('🔄 Triggering scraping for all centers...');
-            const results = await this.realtimeService.triggerScrapingAllCenters();
-            console.log('✅ All centers scraping completed:', results);
+            
+            // Send message to Railway WebSocket server to trigger scraping
+            this.websocketService.send({
+                type: 'trigger_scraping',
+                center: 'all'
+            });
             
             // Show notification
             this.showUpdateNotification({
                 center: 'ALL',
                 centerName: 'All Centers',
                 timestamp: new Date().toISOString(),
-                eventType: 'scrape-all-complete'
+                eventType: 'scrape-all-triggered'
             });
         } catch (error) {
-            console.error('❌ Failed to scrape all centers:', error);
-            this.connectionManager.showError(`Failed to scrape all centers: ${error.message}`);
+            console.error('❌ Failed to trigger scraping for all centers:', error);
+            this.connectionManager.showError(`Failed to trigger scraping: ${error.message}`);
         }
     }
 
     async triggerScrapingCenter(centerCode) {
         try {
             console.log(`🔄 Triggering scraping for ${centerCode}...`);
-            const result = await this.realtimeService.triggerScraping(centerCode);
-            console.log(`✅ ${centerCode} scraping completed:`, result);
+            
+            // Send message to Railway WebSocket server to trigger scraping
+            this.websocketService.send({
+                type: 'trigger_scraping',
+                center: centerCode
+            });
             
             // Show notification
             this.showUpdateNotification({
                 center: centerCode,
                 centerName: WEBSOCKET_CONFIG.centers[centerCode]?.name || centerCode,
                 timestamp: new Date().toISOString(),
-                eventType: 'scrape-complete'
+                eventType: 'scrape-triggered'
             });
         } catch (error) {
-            console.error(`❌ Failed to scrape ${centerCode}:`, error);
-            this.connectionManager.showError(`Failed to scrape ${centerCode}: ${error.message}`);
+            console.error(`❌ Failed to trigger scraping for ${centerCode}:`, error);
+            this.connectionManager.showError(`Failed to trigger scraping: ${error.message}`);
         }
     }
 
     enableRealtime() {
-        console.log('🔴 Enabling multi-center real-time updates');
-        const allCenters = getAllCenterCodes();
-        this.realtimeService.initialize(allCenters);
+        console.log('🔴 Enabling Railway WebSocket real-time updates');
+        this.websocketService.initialize();
     }
 
     disableRealtime() {
         console.log('⚪ Disabling real-time updates');
-        this.realtimeService.disconnect();
+        this.websocketService.disconnect();
         this.connectionManager.updateStatus(false, '⚪ Real-time Disabled');
     }
 
     destroy() {
-        if (this.realtimeService) {
-            this.realtimeService.disconnect();
+        if (this.websocketService) {
+            this.websocketService.disconnect();
         }
         
         if (this.appController && this.appController.destroy) {
