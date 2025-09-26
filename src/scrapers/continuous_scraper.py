@@ -65,8 +65,27 @@ class RailwayWebSocketServer:
         """Set up HTTP routes for serving frontend"""
         self.app = web.Application()
         
-        # Serve static files
-        self.app.router.add_static('/', path='.', name='static')
+        # Add explicit route for index.html
+        async def serve_index(request):
+            try:
+                print(f"📁 Serving index.html from {os.getcwd()}")
+                print(f"📁 Files in current directory: {os.listdir('.')}")
+                with open('index.html', 'r') as f:
+                    content = f.read()
+                return web.Response(text=content, content_type='text/html')
+            except FileNotFoundError as e:
+                print(f"❌ Index file not found: {e}")
+                return web.Response(text='Index file not found', status=404)
+            except Exception as e:
+                print(f"❌ Error serving index: {e}")
+                return web.Response(text=f'Error: {e}', status=500)
+        
+        self.app.router.add_get('/', serve_index)
+        
+        # Serve static files (JS, CSS, assets)
+        self.app.router.add_static('/js/', path='js/', name='js')
+        self.app.router.add_static('/assets/', path='assets/', name='assets')
+        self.app.router.add_static('/data/', path='data/', name='data')
         
         # Health check endpoint
         async def health_check(request):
