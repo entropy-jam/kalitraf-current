@@ -112,12 +112,17 @@ class RealtimeAppController {
         try {
             console.log('🚀 Initializing real-time CHP Traffic Monitor...');
             
-            // Initialize the existing app controller
-            this.appController = new AppController();
-            await this.appController.initialize();
-            
-            // Set up real-time service
-            await this.setupRealtimeService();
+        // Initialize the existing app controller
+        this.appController = new AppController();
+        await this.appController.initialize();
+        
+        // Set up real-time service
+        await this.setupRealtimeService();
+        
+        // Connect data manager to WebSocket service
+        if (this.appController.dataManager) {
+            this.appController.dataManager.setWebSocketService(this.realtimeService);
+        }
             
             // Set up UI enhancements
             this.setupRealtimeUI();
@@ -458,6 +463,11 @@ class RealtimeAppController {
         // Update the existing app with new data
         if (this.appController && this.appController.updateIncidents) {
             this.appController.updateIncidents(data);
+        }
+        
+        // Update data manager with real-time data
+        if (this.appController && this.appController.dataManager) {
+            this.appController.dataManager.handleRealtimeUpdate(data);
         }
         
         // Show notification

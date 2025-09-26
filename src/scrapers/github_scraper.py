@@ -14,6 +14,7 @@ from core.webdriver_manager import WebDriverManager
 from core.incident_extractor import IncidentExtractor
 from core.data_manager import DataManager
 from core.email_notifier import EmailNotifier
+from core.websocket_publisher import WebSocketPublisher
 
 def setup_logging():
     """Setup logging for GitHub Actions"""
@@ -56,9 +57,10 @@ def send_email_alert(changes, center_code, center_name):
         return False
 
 def scrape_incidents(center_code="BCCC"):
-    """Perform a single scrape for GitHub Actions"""
+    """Perform a single scrape for GitHub Actions/Vercel Cron with WebSocket publishing"""
     webdriver_manager = WebDriverManager(mode="github_actions")
     data_manager = DataManager(center_code)
+    websocket_publisher = WebSocketPublisher()
     
     try:
         driver = webdriver_manager.get_driver()
@@ -100,6 +102,19 @@ def scrape_incidents(center_code="BCCC"):
                 print("📧 Sending email alert for changes...")
                 center_name = data_manager._get_center_name(center_code)
                 send_email_alert(changes, center_code, center_name)
+            
+            # Publish to WebSocket for real-time updates
+            if file_updated or has_changes:
+                print("📡 Publishing to WebSocket...")
+                incidents_json = data_manager.incidents_to_json(incidents_data)
+                websocket_success = websocket_publisher.publish_incident_update(
+                    center_code, incidents_json, changes
+                )
+                
+                if websocket_success:
+                    print("✅ WebSocket update published successfully")
+                else:
+                    print("⚠️ WebSocket update failed (continuing anyway)")
             
             # Update previous incidents for next comparison
             data_manager.update_previous_incidents(incidents_data)

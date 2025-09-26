@@ -11,6 +11,73 @@ class DataManager {
         this.pendingRequest = null;
         this.isRefreshing = false;
         this.cacheManager = new CacheManager();
+        this.websocketService = null; // Will be set by realtime service
+        this.realtimeEnabled = false;
+    }
+
+    /**
+     * Set WebSocket service for real-time updates
+     * @param {Object} websocketService - WebSocket service instance
+     */
+    setWebSocketService(websocketService) {
+        this.websocketService = websocketService;
+        this.realtimeEnabled = true;
+        console.log('📡 DataManager connected to WebSocket service');
+    }
+
+    /**
+     * Handle real-time WebSocket updates
+     * @param {Object} data - WebSocket update data
+     */
+    handleRealtimeUpdate(data) {
+        if (!this.realtimeEnabled || !data) return;
+        
+        console.log(`📡 Received real-time update for ${data.center}:`, data);
+        
+        // Update cache with new data
+        if (data.incidents) {
+            const cacheData = {
+                center_code: data.center,
+                center_name: data.centerName,
+                incident_count: data.incidentCount || data.incidents.length,
+                incidents: data.incidents,
+                last_updated: data.timestamp,
+                timestamp: Date.now()
+            };
+            
+            this.cacheManager.setCachedData(data.center, cacheData);
+            
+            // Update display if this is the current center
+            if (data.center === this.currentCenter) {
+                this.displayIncidents(cacheData);
+                this.updateLastUpdated(data.timestamp);
+                this.showNotification(`Real-time update: ${data.incidentCount} incidents`, 'success');
+            }
+        }
+        
+        // Handle delta updates
+        if (data.eventType === 'delta-update') {
+            this.handleDeltaUpdate(data);
+        }
+    }
+
+    /**
+     * Handle delta updates (new/removed incidents)
+     * @param {Object} deltaData - Delta update data
+     */
+    handleDeltaUpdate(deltaData) {
+        if (deltaData.center !== this.currentCenter) return;
+        
+        const newCount = deltaData.newCount || 0;
+        const removedCount = deltaData.removedCount || 0;
+        
+        if (newCount > 0 || removedCount > 0) {
+            const message = `Changes detected: ${newCount} new, ${removedCount} removed`;
+            this.showNotification(message, 'info');
+            
+            // Refresh data to get latest state
+            this.loadData(true);
+        }
     }
 
     /**

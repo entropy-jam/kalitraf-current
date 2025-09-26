@@ -20,6 +20,24 @@
     {
       "src": "active_incidents.json",
       "use": "@vercel/static"
+    },
+    {
+      "src": "api/cron-scrape.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/scrape.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/scrape-*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron-scrape",
+      "schedule": "*/30 * * * * *"
     }
   ],
   "headers": [
