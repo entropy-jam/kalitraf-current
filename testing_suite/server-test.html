@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHP Traffic Monitor - Server Test Suite</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        .content {
+            padding: 30px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        .test-section h2 {
+            margin: 0 0 15px 0;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .test-results {
+            background: white;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-success { background: #4CAF50; }
+        .status-error { background: #f44336; }
+        .status-warning { background: #ff9800; }
+        .status-info { background: #2196F3; }
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 10px 10px 0;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #5a6fd8;
+        }
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        .info-box {
+            background: #e3f2fd;
+            border: 1px solid #2196F3;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .info-box h3 {
+            margin: 0 0 10px 0;
+            color: #1976d2;
+        }
+        .url-display {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-family: monospace;
+            font-size: 14px;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌐 Server Test Suite</h1>
+            <p>Comprehensive testing for CHP Traffic Monitor server-side functionality</p>
+        </div>
+        
+        <div class="content">
+            <div class="info-box">
+                <h3>📋 Test Overview</h3>
+                <p>This test suite validates server-side functionality including:</p>
+                <ul>
+                    <li><strong>Data Endpoints:</strong> Tests all incident data files (BCCC, LACC, SACC, OCCC)</li>
+                    <li><strong>WebSocket Connection:</strong> Validates real-time communication</li>
+                    <li><strong>Static Files:</strong> Ensures all JavaScript and CSS files are accessible</li>
+                    <li><strong>Server Performance:</strong> Measures response times and server headers</li>
+                </ul>
+            </div>
+
+            <div class="test-section">
+                <h2>🔧 Test Controls</h2>
+                <button class="btn" onclick="runAllTests()">Run All Tests</button>
+                <button class="btn btn-secondary" onclick="clearResults()">Clear Results</button>
+                <button class="btn btn-secondary" onclick="exportResults()">Export Results</button>
+                
+                <div class="url-display">
+                    <strong>Current URL:</strong> <span id="currentUrl"></span>
+                </div>
+            </div>
+
+            <div class="test-section">
+                <h2>📊 Data Endpoints Test</h2>
+                <p>Tests accessibility and data integrity of incident JSON files</p>
+                <button class="btn" onclick="testDataEndpoints()">Test Data Endpoints</button>
+                <div id="dataEndpointsResults" class="test-results" style="display: none;"></div>
+            </div>
+
+            <div class="test-section">
+                <h2>🔌 WebSocket Connection Test</h2>
+                <p>Validates WebSocket connectivity and message handling</p>
+                <button class="btn" onclick="testWebSocket()">Test WebSocket</button>
+                <div id="webSocketResults" class="test-results" style="display: none;"></div>
+            </div>
+
+            <div class="test-section">
+                <h2>📁 Static Files Test</h2>
+                <p>Ensures all application files are properly served</p>
+                <button class="btn" onclick="testStaticFiles()">Test Static Files</button>
+                <div id="staticFilesResults" class="test-results" style="display: none;"></div>
+            </div>
+
+            <div class="test-section">
+                <h2>⚡ Server Performance Test</h2>
+                <p>Measures server response times and analyzes headers</p>
+                <button class="btn" onclick="testServerPerformance()">Test Performance</button>
+                <div id="performanceResults" class="test-results" style="display: none;"></div>
+            </div>
+
+            <div class="test-section">
+                <h2>📋 Complete Diagnostic Report</h2>
+                <p>Runs comprehensive application diagnostic including server-side tests</p>
+                <button class="btn" onclick="runFullDiagnostic()">Run Full Diagnostic</button>
+                <div id="fullDiagnosticResults" class="test-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include the enhanced diagnostic script -->
+    <script src="app-diagnostic.js"></script>
+    
+    <script>
+        // Set current URL
+        document.getElementById('currentUrl').textContent = window.location.href;
+        
+        // Test functions
+        async function testDataEndpoints() {
+            const resultsDiv = document.getElementById('dataEndpointsResults');
+            resultsDiv.style.display = 'block';
+            resultsDiv.textContent = 'Testing data endpoints...';
+            
+            const diagnostic = new ApplicationDiagnostic();
+            const results = await diagnostic.testDataEndpoints();
+            
+            let output = `Data Endpoints Test Results\n`;
+            output += `==========================\n`;
+            output += `Summary: ${results.summary}\n\n`;
+            
+            results.results.forEach(result => {
+                const status = result.success ? '✅' : '❌';
+                output += `${status} ${result.endpoint}\n`;
+                output += `   Status: ${result.status}\n`;
+                if (result.success) {
+                    output += `   Incidents: ${result.incidentCount}\n`;
+                    output += `   Has Data: ${result.hasData ? 'Yes' : 'No'}\n`;
+                } else {
+                    output += `   Error: ${result.error || 'Unknown error'}\n`;
+                }
+                output += `\n`;
+            });
+            
+            resultsDiv.textContent = output;
+        }
+        
+        async function testWebSocket() {
+            const resultsDiv = document.getElementById('webSocketResults');
+            resultsDiv.style.display = 'block';
+            resultsDiv.textContent = 'Testing WebSocket connection...';
+            
+            const diagnostic = new ApplicationDiagnostic();
+            const results = await diagnostic.testWebSocketConnection();
+            
+            let output = `WebSocket Connection Test\n`;
+            output += `=========================\n`;
+            output += `URL: ${results.url}\n`;
+            output += `Status: ${results.success ? '✅ Connected' : '❌ Failed'}\n`;
+            
+            if (results.success) {
+                output += `Connected: ${results.connected ? 'Yes' : 'No'}\n`;
+                output += `Message Received: ${results.messageReceived ? 'Yes' : 'No'}\n`;
+            } else {
+                output += `Error: ${results.error}\n`;
+            }
+            
+            resultsDiv.textContent = output;
+        }
+        
+        async function testStaticFiles() {
+            const resultsDiv = document.getElementById('staticFilesResults');
+            resultsDiv.style.display = 'block';
+            resultsDiv.textContent = 'Testing static files...';
+            
+            const diagnostic = new ApplicationDiagnostic();
+            const results = await diagnostic.testStaticFiles();
+            
+            let output = `Static Files Test Results\n`;
+            output += `========================\n`;
+            output += `Summary: ${results.summary}\n\n`;
+            
+            results.results.forEach(result => {
+                const status = result.success ? '✅' : '❌';
+                output += `${status} ${result.file}\n`;
+                output += `   Status: ${result.status}\n`;
+                if (result.success) {
+                    output += `   Size: ${result.size}\n`;
+                } else {
+                    output += `   Error: ${result.error || 'Unknown error'}\n`;
+                }
+                output += `\n`;
+            });
+            
+            resultsDiv.textContent = output;
+        }
+        
+        async function testServerPerformance() {
+            const resultsDiv = document.getElementById('performanceResults');
+            resultsDiv.style.display = 'block';
+            resultsDiv.textContent = 'Testing server performance...';
+            
+            const diagnostic = new ApplicationDiagnostic();
+            const results = await diagnostic.testServerResponse();
+            
+            let output = `Server Performance Test\n`;
+            output += `======================\n`;
+            output += `Status: ${results.success ? '✅ Success' : '❌ Failed'}\n`;
+            output += `Response Time: ${results.responseTime}ms\n`;
+            output += `HTTP Status: ${results.status}\n\n`;
+            
+            if (results.success && results.headers) {
+                output += `Server Headers:\n`;
+                Object.entries(results.headers).forEach(([key, value]) => {
+                    if (value) {
+                        output += `   ${key}: ${value}\n`;
+                    }
+                });
+            } else if (results.error) {
+                output += `Error: ${results.error}\n`;
+            }
+            
+            resultsDiv.textContent = output;
+        }
+        
+        async function runAllTests() {
+            console.log('🚀 Running all server tests...');
+            
+            await testDataEndpoints();
+            await testWebSocket();
+            await testStaticFiles();
+            await testServerPerformance();
+            
+            console.log('✅ All server tests completed');
+        }
+        
+        async function runFullDiagnostic() {
+            const resultsDiv = document.getElementById('fullDiagnosticResults');
+            resultsDiv.style.display = 'block';
+            resultsDiv.textContent = 'Running full diagnostic...';
+            
+            const diagnostic = new ApplicationDiagnostic();
+            await diagnostic.runDiagnostic();
+            
+            // Capture console output
+            const originalLog = console.log;
+            let diagnosticOutput = '';
+            console.log = function(...args) {
+                diagnosticOutput += args.join(' ') + '\n';
+                originalLog.apply(console, args);
+            };
+            
+            // Re-run to capture output
+            await diagnostic.runDiagnostic();
+            
+            // Restore console.log
+            console.log = originalLog;
+            
+            resultsDiv.textContent = diagnosticOutput;
+        }
+        
+        function clearResults() {
+            const resultDivs = document.querySelectorAll('.test-results');
+            resultDivs.forEach(div => {
+                div.style.display = 'none';
+                div.textContent = '';
+            });
+        }
+        
+        function exportResults() {
+            const results = {
+                timestamp: new Date().toISOString(),
+                url: window.location.href,
+                userAgent: navigator.userAgent,
+                tests: {}
+            };
+            
+            // Collect all test results
+            const resultDivs = document.querySelectorAll('.test-results');
+            resultDivs.forEach(div => {
+                if (div.style.display !== 'none' && div.textContent.trim()) {
+                    const testName = div.id.replace('Results', '');
+                    results.tests[testName] = div.textContent;
+                }
+            });
+            
+            // Export as JSON
+            const blob = new Blob([JSON.stringify(results, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `server-test-results-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            console.log('📁 Server test results exported');
+        }
+        
+        // Auto-run basic tests on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🌐 Server Test Suite loaded');
+            console.log('Current URL:', window.location.href);
+        });
+    </script>
+</body>
+</html>

@@ -43,7 +43,7 @@ class IncidentRenderer extends IUIRenderer {
      */
     renderSingleIncident(incident, previousIncidents = []) {
         const typeClass = this.getTypeClass(incident.type);
-        const isNew = previousIncidents.length > 0 && 
+        const isNew = previousIncidents && previousIncidents.length > 0 && 
                      !previousIncidents.find(prev => prev.id === incident.id);
         const newClass = isNew ? ' new' : '';
 

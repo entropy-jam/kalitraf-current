@@ -450,6 +450,12 @@ class RailwayAppController {
     }
 }
 
+// Export classes to window for diagnostic access
+window.RailwayAppController = RailwayAppController;
+window.RailwayWebSocketService = RailwayWebSocketService;
+window.ConnectionStatusManager = ConnectionStatusManager;
+window.ThemeManager = ThemeManager;
+
 // Initialize Railway app when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
     try {

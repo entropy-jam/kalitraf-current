@@ -10,6 +10,7 @@ This directory contains tools and scripts for testing WebSocket connections in t
 - **`websocket-test.html`** - Interactive diagnostic page for testing WebSocket connections
 - **`app-diagnostic.js`** - Comprehensive application initialization diagnostic script
 - **`app-diagnostic-test.html`** - Interactive diagnostic page for testing application initialization
+- **`server-test.html`** - Comprehensive server-side functionality testing suite
 
 ### Documentation
 - **`WEBSOCKET_TROUBLESHOOTING.md`** - Comprehensive troubleshooting guide for WebSocket issues
@@ -36,6 +37,13 @@ Open `websocket-test.html` in your browser to run comprehensive WebSocket diagno
 
 ### 4. Test Application Initialization
 Open `app-diagnostic-test.html` in your browser to run comprehensive application initialization diagnostics.
+
+### 5. Test Server-Side Functionality
+Open `server-test.html` in your browser to run comprehensive server-side functionality tests including:
+- Data endpoints accessibility
+- WebSocket connection validation
+- Static file serving verification
+- Server performance measurement
 
 ## 🔧 Usage
 

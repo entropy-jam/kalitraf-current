@@ -35,7 +35,10 @@ class ApplicationDiagnostic {
             // 4. Application Initialization Test
             await this.testApplicationInitialization();
             
-            // 5. Generate Report
+            // 5. Server-Side Testing
+            await this.testServerSideFunctionality();
+            
+            // 6. Generate Report
             this.generateReport();
             
         } catch (error) {
@@ -217,7 +220,11 @@ class ApplicationDiagnostic {
             'UIController',
             'RailwayWebSocketService',
             'RailwayAppController',
-            'AppController'
+            'AppController',
+            'IConfigManager',
+            'IDataStorage',
+            'IDataFetcher',
+            'IUIRenderer'
         ];
 
         this.results.dependencies = {};
@@ -255,8 +262,18 @@ class ApplicationDiagnostic {
             { name: 'LocalStorageAdapter', test: () => new LocalStorageAdapter('test_') },
             { name: 'HttpFetcher', test: () => new HttpFetcher() },
             { name: 'IncidentRenderer', test: () => new IncidentRenderer() },
-            { name: 'IncidentService', test: () => new IncidentService(null, null, null) },
-            { name: 'MultiCenterService', test: () => new MultiCenterService(null, null, null) },
+            { name: 'IncidentService', test: () => {
+                const config = new ConfigManager();
+                const storage = new LocalStorageAdapter('test_');
+                const fetcher = new HttpFetcher();
+                return new IncidentService(storage, fetcher, config);
+            }},
+            { name: 'MultiCenterService', test: () => {
+                const config = new ConfigManager();
+                const storage = new LocalStorageAdapter('test_');
+                const fetcher = new HttpFetcher();
+                return new MultiCenterService(fetcher, storage, config);
+            }},
             { name: 'DeltaService', test: () => new DeltaService() },
             { name: 'FilterService', test: () => new FilterService() }
         ];
@@ -306,7 +323,7 @@ class ApplicationDiagnostic {
             domReady: document.readyState === 'complete',
             bodyExists: !!document.body,
             requiredElements: this.checkRequiredElements(),
-            scriptsLoaded: this.checkScriptsLoaded(),
+            scriptsLoaded: await this.checkScriptsLoaded(),
             stylesLoaded: this.checkStylesLoaded()
         };
 
@@ -381,9 +398,15 @@ class ApplicationDiagnostic {
     checkRequiredElements() {
         const requiredElements = [
             'incident-list',
-            'status-display',
+            'status-display', 
             'controls',
-            'themeToggle'
+            'themeToggle',
+            'incidentsContainer',
+            'incidentCount',
+            'lastUpdated',
+            'centerSelect',
+            'refreshBtn',
+            'autoRefresh'
         ];
 
         const results = {};
@@ -392,7 +415,8 @@ class ApplicationDiagnostic {
             results[elementId] = {
                 exists: !!element,
                 tagName: element ? element.tagName : null,
-                className: element ? element.className : null
+                className: element ? element.className : null,
+                innerHTML: element ? element.innerHTML.substring(0, 50) + '...' : null
             };
         }
 
@@ -402,7 +426,7 @@ class ApplicationDiagnostic {
     /**
      * Check if scripts are loaded
      */
-    checkScriptsLoaded() {
+    async checkScriptsLoaded() {
         const requiredScripts = [
             'js/config-manager.js',
             'js/storage/local-storage.js',
@@ -421,12 +445,37 @@ class ApplicationDiagnostic {
         const loadedScripts = Array.from(scripts).map(script => script.src);
 
         for (const script of requiredScripts) {
+            const foundScript = loadedScripts.find(src => src.includes(script));
             results[script] = {
-                loaded: loadedScripts.some(src => src.includes(script)),
-                url: loadedScripts.find(src => src.includes(script)) || null
+                loaded: !!foundScript,
+                url: foundScript || null,
+                accessible: false
             };
         }
 
+        // Test script accessibility
+        return await this.testScriptAccessibility(results);
+    }
+
+    /**
+     * Test if scripts are actually accessible
+     */
+    async testScriptAccessibility(results) {
+        for (const [scriptName, info] of Object.entries(results)) {
+            if (info.loaded && info.url) {
+                try {
+                    const response = await fetch(info.url, { method: 'HEAD' });
+                    info.accessible = response.ok;
+                    info.status = response.status;
+                    if (!response.ok) {
+                        info.error = `HTTP ${response.status}: ${response.statusText}`;
+                    }
+                } catch (error) {
+                    info.accessible = false;
+                    info.error = error.message;
+                }
+            }
+        }
         return results;
     }
 
@@ -496,6 +545,40 @@ class ApplicationDiagnostic {
         console.log('\n🚀 Initialization:');
         console.log(`   DOM Ready: ${this.results.initialization.domReady ? 'Yes' : 'No'}`);
         console.log(`   Body Exists: ${this.results.initialization.bodyExists ? 'Yes' : 'No'}`);
+
+        // Server-Side Analysis
+        if (this.results.serverSide) {
+            console.log('\n🌐 Server-Side Testing:');
+            
+            // Data Endpoints
+            if (this.results.serverSide.dataEndpoints) {
+                console.log(`   Data Endpoints: ${this.results.serverSide.dataEndpoints.summary}`);
+                this.results.serverSide.dataEndpoints.results.forEach(result => {
+                    const status = result.success ? '✅' : '❌';
+                    console.log(`      ${status} ${result.endpoint}: ${result.status} ${result.success ? `(${result.incidentCount} incidents)` : ''}`);
+                });
+            }
+            
+            // WebSocket
+            if (this.results.serverSide.websocketConnection) {
+                const ws = this.results.serverSide.websocketConnection;
+                const status = ws.success ? '✅' : '❌';
+                console.log(`   WebSocket: ${status} ${ws.success ? 'Connected' : ws.error}`);
+                console.log(`      URL: ${ws.url}`);
+            }
+            
+            // Static Files
+            if (this.results.serverSide.staticFiles) {
+                console.log(`   Static Files: ${this.results.serverSide.staticFiles.summary}`);
+            }
+            
+            // Server Response
+            if (this.results.serverSide.serverResponse) {
+                const sr = this.results.serverSide.serverResponse;
+                const status = sr.success ? '✅' : '❌';
+                console.log(`   Server Response: ${status} ${sr.responseTime}ms (${sr.status})`);
+            }
+        }
         
         // Required Elements
         const missingElements = Object.entries(this.results.initialization.requiredElements)
@@ -511,12 +594,22 @@ class ApplicationDiagnostic {
         // Scripts
         const missingScripts = Object.entries(this.results.initialization.scriptsLoaded)
             .filter(([name, info]) => !info.loaded);
+        const inaccessibleScripts = Object.entries(this.results.initialization.scriptsLoaded)
+            .filter(([name, info]) => info.loaded && !info.accessible);
         
-        if (missingScripts.length === 0) {
-            console.log('   ✅ All required scripts loaded');
+        if (missingScripts.length === 0 && inaccessibleScripts.length === 0) {
+            console.log('   ✅ All required scripts loaded and accessible');
         } else {
-            console.log(`   ❌ Missing scripts (${missingScripts.length}):`);
-            missingScripts.forEach(([name]) => console.log(`      - ${name}`));
+            if (missingScripts.length > 0) {
+                console.log(`   ❌ Missing scripts (${missingScripts.length}):`);
+                missingScripts.forEach(([name]) => console.log(`      - ${name}`));
+            }
+            if (inaccessibleScripts.length > 0) {
+                console.log(`   ❌ Inaccessible scripts (${inaccessibleScripts.length}):`);
+                inaccessibleScripts.forEach(([name, info]) => {
+                    console.log(`      - ${name}: ${info.error || 'Unknown error'}`);
+                });
+            }
         }
         
         // Application Controllers
@@ -685,6 +778,220 @@ class ApplicationDiagnostic {
         URL.revokeObjectURL(url);
         
         console.log('📁 Application diagnostic results exported to file');
+    }
+
+    /**
+     * Test server-side functionality
+     */
+    async testServerSideFunctionality() {
+        console.log('🌐 Testing server-side functionality...');
+        
+        const serverTests = {
+            dataEndpoints: await this.testDataEndpoints(),
+            websocketConnection: await this.testWebSocketConnection(),
+            staticFiles: await this.testStaticFiles(),
+            serverResponse: await this.testServerResponse()
+        };
+        
+        this.results.serverSide = serverTests;
+        
+        // Count successful tests
+        const totalTests = Object.keys(serverTests).length;
+        const successfulTests = Object.values(serverTests).filter(result => result.success).length;
+        
+        console.log(`🌐 Server-side tests: ${successfulTests}/${totalTests} passed`);
+    }
+
+    /**
+     * Test data endpoints
+     */
+    async testDataEndpoints() {
+        const endpoints = [
+            'data/active_incidents_BCCC.json',
+            'data/active_incidents_LACC.json', 
+            'data/active_incidents_SACC.json',
+            'data/active_incidents_OCCC.json',
+            'data/active_incidents.json'
+        ];
+        
+        const results = [];
+        
+        for (const endpoint of endpoints) {
+            try {
+                const response = await fetch(`${endpoint}?t=${Date.now()}`);
+                const success = response.ok;
+                const data = success ? await response.json() : null;
+                
+                results.push({
+                    endpoint,
+                    success,
+                    status: response.status,
+                    hasData: data && data.incidents && data.incidents.length > 0,
+                    incidentCount: data ? (data.incident_count || data.incidents?.length || 0) : 0
+                });
+                
+                console.log(`${success ? '✅' : '❌'} ${endpoint}: ${response.status} ${success ? `(${data.incident_count || 0} incidents)` : ''}`);
+                
+            } catch (error) {
+                results.push({
+                    endpoint,
+                    success: false,
+                    error: error.message
+                });
+                console.log(`❌ ${endpoint}: ${error.message}`);
+            }
+        }
+        
+        return {
+            success: results.some(r => r.success),
+            results,
+            summary: `${results.filter(r => r.success).length}/${results.length} endpoints accessible`
+        };
+    }
+
+    /**
+     * Test WebSocket connection
+     */
+    async testWebSocketConnection() {
+        return new Promise((resolve) => {
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const host = window.location.protocol === 'https:'
+                ? window.location.host
+                : `${window.location.hostname}:8080`;
+            
+            const wsUrl = window.location.protocol === 'https:'
+                ? `${protocol}//${host}/ws?upgrade_wait=0s&first_msg_wait=0s`
+                : `${protocol}//${host}`;
+            
+            console.log(`🔌 Testing WebSocket: ${wsUrl}`);
+            
+            const ws = new WebSocket(wsUrl);
+            let connected = false;
+            let messageReceived = false;
+            
+            const timeout = setTimeout(() => {
+                ws.close();
+                resolve({
+                    success: false,
+                    error: 'Connection timeout',
+                    url: wsUrl
+                });
+            }, 5000);
+            
+            ws.onopen = () => {
+                connected = true;
+                console.log('✅ WebSocket connected');
+            };
+            
+            ws.onmessage = (event) => {
+                messageReceived = true;
+                console.log('📡 WebSocket message received:', event.data);
+                clearTimeout(timeout);
+                ws.close();
+                resolve({
+                    success: true,
+                    connected,
+                    messageReceived,
+                    url: wsUrl
+                });
+            };
+            
+            ws.onerror = (error) => {
+                console.log('❌ WebSocket error:', error);
+                clearTimeout(timeout);
+                resolve({
+                    success: false,
+                    error: 'Connection failed',
+                    url: wsUrl
+                });
+            };
+            
+            ws.onclose = (event) => {
+                if (!messageReceived) {
+                    clearTimeout(timeout);
+                    resolve({
+                        success: false,
+                        error: `Connection closed: ${event.code}`,
+                        url: wsUrl
+                    });
+                }
+            };
+        });
+    }
+
+    /**
+     * Test static file serving
+     */
+    async testStaticFiles() {
+        const files = [
+            'index.html',
+            'js/app-railway.js',
+            'js/controllers/app-controller.js',
+            'js/ui-controller.js',
+            'js/renderers/incident-renderer.js',
+            'assets/styles.css'
+        ];
+        
+        const results = [];
+        
+        for (const file of files) {
+            try {
+                const response = await fetch(`${file}?t=${Date.now()}`);
+                results.push({
+                    file,
+                    success: response.ok,
+                    status: response.status,
+                    size: response.headers.get('content-length') || 'unknown'
+                });
+                
+                console.log(`${response.ok ? '✅' : '❌'} ${file}: ${response.status}`);
+                
+            } catch (error) {
+                results.push({
+                    file,
+                    success: false,
+                    error: error.message
+                });
+                console.log(`❌ ${file}: ${error.message}`);
+            }
+        }
+        
+        return {
+            success: results.every(r => r.success),
+            results,
+            summary: `${results.filter(r => r.success).length}/${results.length} files accessible`
+        };
+    }
+
+    /**
+     * Test server response and performance
+     */
+    async testServerResponse() {
+        const startTime = Date.now();
+        
+        try {
+            const response = await fetch(`index.html?t=${Date.now()}`);
+            const endTime = Date.now();
+            const responseTime = endTime - startTime;
+            
+            return {
+                success: response.ok,
+                status: response.status,
+                responseTime,
+                headers: {
+                    server: response.headers.get('server'),
+                    contentType: response.headers.get('content-type'),
+                    cacheControl: response.headers.get('cache-control')
+                }
+            };
+            
+        } catch (error) {
+            return {
+                success: false,
+                error: error.message,
+                responseTime: Date.now() - startTime
+            };
+        }
     }
 }
 

@@ -15,10 +15,11 @@ class AppController {
         this.deltaService = new DeltaService();
         this.filterService = new FilterService();
         
-        this.uiController = null;
         this.previousIncidents = null;
         this.isInitialized = false;
         this.allIncidents = []; // Store all incidents for filtering
+        this.autoRefreshTimer = null;
+        this.uiController = null; // Will be set by UIController
     }
 
     /**
@@ -26,38 +27,105 @@ class AppController {
      */
     async initialize() {
         try {
+            console.log('🔧 Starting AppController initialization...');
+            
             if (this.isInitialized) {
                 console.warn('Application already initialized');
                 return;
             }
 
+            console.log('🔧 Cleaning up old cache...');
             // Clean up old cache entries
             await this.cleanupOldCache();
 
-            // Initialize UI controller
+            console.log('🔧 Setting up UI...');
+            // Initialize UIController for UI management
             this.uiController = new UIController(this);
+            this.uiController.initialize();
             
-            // Virtual scroll removed - using regular rendering
-
+            console.log('🔧 Setting up global references...');
             // Set up global references for backward compatibility
             window.previousIncidents = null;
             window.refreshData = () => this.refreshData();
 
-            // Initialize UI
-            this.uiController.initialize();
-
+            console.log('🔧 Setting up filter listener...');
             // Set up filter event listener
             this.setupFilterListener();
 
+            console.log('🔧 Starting delta monitoring...');
             // Start delta monitoring for real-time updates
             this.deltaService.startDeltaMonitoring();
 
+            console.log('🔧 Setting up auto-refresh...');
+            // Start auto-refresh if enabled
+            const autoRefreshCheckbox = document.getElementById('autoRefresh');
+            if (autoRefreshCheckbox && autoRefreshCheckbox.checked) {
+                this.startAutoRefresh();
+            }
+
+            console.log('🔧 Loading initial data...');
+            // Load initial data
+            await this.loadData();
+
             this.isInitialized = true;
-            console.log('CHP Traffic Monitor initialized successfully');
+            console.log('✅ CHP Traffic Monitor initialized successfully');
         } catch (error) {
             console.error('Failed to initialize application:', error);
+            console.error('Error details:', error.message);
+            console.error('Error stack:', error.stack);
             this.showInitializationError();
         }
+    }
+
+    // setupUI method removed - UIController handles UI setup
+
+    /**
+     * Change communication center
+     * @param {string} centerCode - Center code to switch to
+     */
+    changeCenter(centerCode) {
+        console.log(`🔄 Switching to center: ${centerCode}`);
+        this.config.set('defaultCenter', centerCode);
+        this.refreshData(true);
+    }
+
+    /**
+     * Toggle auto-refresh functionality
+     * @param {boolean} enabled - Whether auto-refresh should be enabled
+     */
+    toggleAutoRefresh(enabled) {
+        if (enabled) {
+            this.startAutoRefresh();
+        } else {
+            this.stopAutoRefresh();
+        }
+    }
+
+    /**
+     * Start auto-refresh timer
+     */
+    startAutoRefresh() {
+        if (this.autoRefreshTimer) {
+            clearInterval(this.autoRefreshTimer);
+        }
+        
+        const interval = this.config.get('refreshInterval');
+        this.autoRefreshTimer = setInterval(() => {
+            this.refreshData();
+        }, interval);
+        
+        console.log(`🔄 Auto-refresh started (${interval}ms interval)`);
+    }
+
+    /**
+     * Stop auto-refresh timer
+     */
+    stopAutoRefresh() {
+        if (this.autoRefreshTimer) {
+            clearInterval(this.autoRefreshTimer);
+            this.autoRefreshTimer = null;
+        }
+        console.log('⏹️ Auto-refresh stopped');
     }
 
     /**
@@ -70,12 +138,25 @@ class AppController {
             // Load multi-center data
             const data = await this.multiCenterService.loadMultiCenterData(forceRefresh);
             
+            console.log('📊 Loaded data:', data);
+            console.log('📊 Incidents count:', data.incidents ? data.incidents.length : 'No incidents');
+            
             // Update status
             this.renderer.updateStatus({
                 count: data.total_incidents || 0,
                 lastUpdated: data.last_updated,
                 centers: data.centers
             });
+
+            // Render incidents to UI
+            const container = document.getElementById('incidentsContainer');
+            console.log('📊 Container found:', !!container);
+            if (container && data.incidents) {
+                console.log('🎨 Rendering incidents...');
+                this.renderer.renderIncidents(data.incidents, container, this.previousIncidents || []);
+            } else {
+                console.log('❌ Cannot render: container=', !!container, 'incidents=', !!data.incidents);
+            }
 
             // Check for differences
             if (this.previousIncidents) {
@@ -120,9 +201,31 @@ class AppController {
     /**
      * Refresh data with UI feedback
      */
-    async refreshData() {
-        if (this.uiController) {
-            this.uiController.refreshData();
+    async refreshData(forceRefresh = false) {
+        try {
+            // Show loading indicator
+            const refreshIndicator = document.getElementById('refreshIndicator');
+            if (refreshIndicator) {
+                refreshIndicator.style.display = 'inline';
+            }
+
+            // Load fresh data
+            await this.loadData(forceRefresh);
+
+            // Hide loading indicator
+            if (refreshIndicator) {
+                refreshIndicator.style.display = 'none';
+            }
+
+            console.log('✅ Data refreshed successfully');
+        } catch (error) {
+            console.error('❌ Failed to refresh data:', error);
+            
+            // Hide loading indicator on error
+            const refreshIndicator = document.getElementById('refreshIndicator');
+            if (refreshIndicator) {
+                refreshIndicator.style.display = 'none';
+            }
         }
     }
 
