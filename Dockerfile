@@ -1,17 +1,14 @@
 # CHP Traffic Scraper Docker Container
+# Cache buster: 2025-01-25-v2
 FROM python:3.9-slim
 
-# Install system dependencies
+# Install system dependencies and Chrome in one step
 RUN apt-get update && apt-get install -y \
     wget \
     curl \
     unzip \
     ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Chrome manually (more reliable than apt)
-RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-    && apt-get update \
+    && wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     && apt-get install -y ./google-chrome-stable_current_amd64.deb \
     && rm google-chrome-stable_current_amd64.deb \
     && rm -rf /var/lib/apt/lists/*
