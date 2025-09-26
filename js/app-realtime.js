@@ -51,57 +51,12 @@ class ThemeManager {
     }
 }
 
-// Real-time connection status manager
-class ConnectionStatusManager {
-    constructor() {
-        this.statusElement = this.createStatusElement();
-        this.isConnected = false;
-    }
-
-    createStatusElement() {
-        const statusDiv = document.createElement('div');
-        statusDiv.id = 'connection-status';
-        statusDiv.className = 'connection-status';
-        statusDiv.innerHTML = `
-            <span class="status-indicator"></span>
-            <span class="status-text">Connecting...</span>
-        `;
-        
-        // Insert after the header
-        const header = document.querySelector('.header');
-        if (header) {
-            header.insertAdjacentElement('afterend', statusDiv);
-        }
-        
-        return statusDiv;
-    }
-
-    updateStatus(connected, message = null) {
-        this.isConnected = connected;
-        const indicator = this.statusElement.querySelector('.status-indicator');
-        const text = this.statusElement.querySelector('.status-text');
-        
-        if (connected) {
-            indicator.className = 'status-indicator connected';
-            text.textContent = message || '🟢 Real-time Connected';
-            this.statusElement.className = 'connection-status connected';
-        } else {
-            indicator.className = 'status-indicator disconnected';
-            text.textContent = message || '🔴 Disconnected';
-            this.statusElement.className = 'connection-status disconnected';
-        }
-    }
-
-    showError(error) {
-        this.updateStatus(false, `❌ Error: ${error}`);
-    }
-}
+// Connection status manager removed - no longer needed
 
 // Enhanced App Controller with Railway WebSocket Support
 class RealtimeAppController {
     constructor() {
         this.websocketService = new RailwayWebSocketService();
-        this.connectionManager = new ConnectionStatusManager();
         this.appController = null; // Will be initialized with existing AppController
         this.isInitialized = false;
         this.subscribedCenters = new Set();
@@ -133,7 +88,6 @@ class RealtimeAppController {
             
         } catch (error) {
             console.error('❌ Failed to initialize real-time app:', error);
-            this.connectionManager.showError(error.message);
         }
     }
 
@@ -147,12 +101,10 @@ class RealtimeAppController {
 
             this.websocketService.onError((error) => {
                 console.error(`❌ Railway WebSocket error:`, error);
-                this.connectionManager.showError(error.error || 'Connection error');
             });
 
             this.websocketService.onConnectionChange((status) => {
                 console.log('🔗 Connection status changed:', status);
-                this.connectionManager.updateStatus(status.connected);
             });
 
             this.websocketService.onScrapeSummary((data) => {
@@ -170,7 +122,6 @@ class RealtimeAppController {
             
         } catch (error) {
             console.warn('⚠️ Railway WebSocket initialization failed, falling back to file-based data:', error);
-            this.connectionManager.updateStatus(false, '⚪ WebSocket Disabled - Using File Data');
             
             // Fallback: Load data from files
             await this.loadFallbackData();
@@ -635,7 +586,6 @@ class RealtimeAppController {
             });
         } catch (error) {
             console.error('❌ Failed to trigger scraping for all centers:', error);
-            this.connectionManager.showError(`Failed to trigger scraping: ${error.message}`);
         }
     }
 
@@ -658,7 +608,6 @@ class RealtimeAppController {
             });
         } catch (error) {
             console.error(`❌ Failed to trigger scraping for ${centerCode}:`, error);
-            this.connectionManager.showError(`Failed to trigger scraping: ${error.message}`);
         }
     }
 
@@ -670,7 +619,6 @@ class RealtimeAppController {
     disableRealtime() {
         console.log('⚪ Disabling real-time updates');
         this.websocketService.disconnect();
-        this.connectionManager.updateStatus(false, '⚪ Real-time Disabled');
     }
 
     destroy() {
