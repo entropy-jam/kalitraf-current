@@ -1,0 +1,134 @@
+{
+  "summary": {
+    "total_issues": 0,
+    "total_warnings": 19,
+    "total_recommendations": 0,
+    "risk_score": 3.8,
+    "risk_level": "Medium"
+  },
+  "issues": [],
+  "warnings": [
+    {
+      "type": "Input Validation",
+      "file": "diagnostics_suite/security-audit.py",
+      "line": 147,
+      "issue": "Potentially dangerous function: eval(",
+      "severity": "Medium"
+    },
+    {
+      "type": "Input Validation",
+      "file": "diagnostics_suite/security-audit.py",
+      "line": 147,
+      "issue": "Potentially dangerous function: exec(",
+      "severity": "Medium"
+    },
+    {
+      "type": "Input Validation",
+      "file": "diagnostics_suite/security-audit.py",
+      "line": 147,
+      "issue": "Potentially dangerous function: subprocess.run(",
+      "severity": "Medium"
+    },
+    {
+      "type": "Input Validation",
+      "file": "diagnostics_suite/security-audit.py",
+      "line": 147,
+      "issue": "Potentially dangerous function: os.system(",
+      "severity": "Medium"
+    },
+    {
+      "type": "Input Validation",
+      "file": "diagnostics_suite/security-audit.py",
+      "line": 148,
+      "issue": "Potentially dangerous function: shell=True",
+      "severity": "Medium"
+    },
+    {
+      "type": "Input Validation",
+      "file": "diagnostics_suite/security-audit.py",
+      "line": 148,
+      "issue": "Potentially dangerous function: input(",
+      "severity": "Medium"
+    },
+    {
+      "type": "Input Validation",
+      "file": "diagnostics_suite/security-audit.py",
+      "line": 148,
+      "issue": "Potentially dangerous function: raw_input(",
+      "severity": "Medium"
+    },
+    {
+      "type": "SQL Injection Risk",
+      "file": "diagnostics_suite/security-audit.py",
+      "issue": "SQL query found - ensure parameterized queries",
+      "severity": "Medium"
+    },
+    {
+      "type": "SQL Injection Risk",
+      "file": "diagnostics_suite/security-audit.py",
+      "issue": "SQL query found - ensure parameterized queries",
+      "severity": "Medium"
+    },
+    {
+      "type": "SQL Injection Risk",
+      "file": "diagnostics_suite/security-audit.py",
+      "issue": "SQL query found - ensure parameterized queries",
+      "severity": "Medium"
+    },
+    {
+      "type": "SQL Injection Risk",
+      "file": "diagnostics_suite/security-audit.py",
+      "issue": "SQL query found - ensure parameterized queries",
+      "severity": "Medium"
+    },
+    {
+      "type": "SQL Injection Risk",
+      "file": "diagnostics_suite/security-audit.py",
+      "issue": "SQL query found - ensure parameterized queries",
+      "severity": "Medium"
+    },
+    {
+      "type": "SQL Injection Risk",
+      "file": "js/services/multi-center-service.js",
+      "issue": "SQL query found - ensure parameterized queries",
+      "severity": "Medium"
+    },
+    {
+      "type": "XSS Risk",
+      "file": "diagnostics_suite/app-diagnostic.js",
+      "issue": "innerHTML usage without sanitization",
+      "severity": "Medium"
+    },
+    {
+      "type": "XSS Risk",
+      "file": "js/app-railway.js",
+      "issue": "innerHTML usage without sanitization",
+      "severity": "Medium"
+    },
+    {
+      "type": "XSS Risk",
+      "file": "js/websocket-diagnostic.js",
+      "issue": "innerHTML usage without sanitization",
+      "severity": "Medium"
+    },
+    {
+      "type": "XSS Risk",
+      "file": "js/renderers/incident-renderer.js",
+      "issue": "innerHTML usage without sanitization",
+      "severity": "Medium"
+    },
+    {
+      "type": "XSS Risk",
+      "file": "js/modules/copy-to-clipboard.js",
+      "issue": "innerHTML usage without sanitization",
+      "severity": "Medium"
+    },
+    {
+      "type": "Dependencies",
+      "file": "config/requirements.txt.python",
+      "issue": "Unpinned dependencies: asyncio",
+      "severity": "Medium"
+    }
+  ],
+  "recommendations": []
+}

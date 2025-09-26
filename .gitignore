@@ -56,3 +56,20 @@ node_modules/
 RAILWAY_TOKEN=*
 railway-token.txt
 .env
+
+# Security-sensitive files
+*.key
+*.pem
+*.p12
+*.pfx
+*.secret
+*.password
+*.crt
+*.cert
+id_rsa
+id_dsa
+.env.local
+.env.production
+.env.staging
+secrets.json
+credentials.json

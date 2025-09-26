@@ -280,7 +280,7 @@ class AppController {
             `;
         }).join('');
         
-        container.innerHTML = differencesHtml;
+        HTMLSanitizer.setInnerHTML(container, differencesHtml);
         section.style.display = 'block';
     }
 
@@ -336,12 +336,12 @@ class AppController {
     showInitializationError() {
         const container = document.getElementById('incidentsContainer');
         if (container) {
-            container.innerHTML = `
+            HTMLSanitizer.setInnerHTML(container, `
                 <div class="error">
                     <h3>Failed to initialize application</h3>
                     <p>Please refresh the page and try again. If the problem persists, check the browser console for more details.</p>
                 </div>
-            `;
+            `);
         }
     }
 

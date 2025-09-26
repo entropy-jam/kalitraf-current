@@ -4,18 +4,24 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 
 ## 🏗️ Project Structure
 
-### Backend (Python)
+### Backend (Python - SOLID Architecture)
 ```
 ├── src/
-│   ├── core/                    # Core modules
-│   │   ├── webdriver_manager.py # WebDriver management
-│   │   ├── incident_extractor.py # Data extraction
-│   │   ├── data_manager.py      # JSON storage & comparison
-│   │   ├── email_notifier.py    # SMTP email notifications
-│   │   ├── multi_center_manager.py # Multi-center coordination
-│   │   └── websocket_publisher.py # WebSocket publishing
+│   ├── core/                    # Core modules (SOLID principles)
+│   │   ├── interfaces.py         # Interface definitions (ISP)
+│   │   ├── webdriver_manager.py  # WebDriver management
+│   │   ├── incident_extractor.py # Data extraction orchestrator (SRP)
+│   │   ├── web_scraper.py        # Web scraping logic (SRP)
+│   │   ├── incident_parser.py    # Data parsing logic (SRP)
+│   │   ├── data_manager.py       # Data management orchestrator (ISP)
+│   │   ├── data_serializer.py    # Data serialization (SRP)
+│   │   ├── file_manager.py       # File operations (SRP)
+│   │   ├── data_comparator.py    # Data comparison (SRP)
+│   │   ├── center_mapper.py      # Center code mapping (SRP)
+│   │   ├── email_notifier.py     # SMTP email notifications
+│   │   └── multi_center_manager.py # Multi-center coordination
 │   ├── scrapers/                # Scraper implementations
-│   │   ├── local_scraper.py     # Local development scraper
+│   │   ├── local_scraper.py      # Local development scraper
 │   │   ├── batch_scraper.py      # Batch data collection scraper
 │   │   └── continuous_scraper.py # Railway continuous scraper
 │   └── utils/                   # Utility modules
@@ -45,31 +51,43 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 ### Frontend (JavaScript - SOLID Architecture)
 ```
 ├── js/
-│   ├── interfaces.js           # Interface definitions (SOLID)
-│   ├── config-manager.js       # Configuration management
-│   ├── storage/                # Storage implementations
-│   │   └── local-storage.js    # localStorage adapter
-│   ├── fetchers/               # Data fetching implementations
-│   │   └── http-fetcher.js     # HTTP client
-│   ├── renderers/              # UI rendering implementations
+│   ├── interfaces.js           # Base interface definitions
+│   ├── interfaces/              # SOLID interface definitions
+│   │   └── app-interfaces.js    # Application interfaces (DIP)
+│   ├── utils/                  # Utility classes
+│   │   └── cache-utils.js       # Shared cache utilities (SRP)
+│   ├── config-manager.js        # Configuration management
+│   ├── storage/                 # Storage implementations
+│   │   └── local-storage.js     # localStorage adapter
+│   ├── fetchers/                # Data fetching implementations
+│   │   └── http-fetcher.js      # HTTP client
+│   ├── renderers/               # UI rendering implementations
 │   │   └── incident-renderer.js # Incident display logic
-│   ├── services/               # Business logic services
-│   │   ├── incident-service.js # Incident data operations
-│   │   ├── delta-service.js    # Change detection service
-│   │   ├── filter-service.js   # Data filtering service
-│   │   ├── multi-center-service.js # Multi-center coordination
+│   ├── strategies/              # Strategy pattern implementations
+│   │   └── filter-strategies.js # Filter strategies (OCP)
+│   ├── services/                # Business logic services (SRP)
+│   │   ├── incident-data-service.js      # Data operations (SRP)
+│   │   ├── incident-comparison-service.js # Comparison logic (SRP)
+│   │   ├── incident-time-service.js     # Time parsing (SRP)
+│   │   ├── incident-realtime-service.js # WebSocket updates (SRP)
+│   │   ├── incident-service.js          # Service orchestrator (SRP)
+│   │   ├── delta-service.js             # Change detection service
+│   │   ├── filter-service.js            # Filter orchestrator (OCP)
+│   │   ├── multi-center-service.js      # Multi-center coordination
 │   │   └── railway-websocket-service.js # Railway WebSocket service
-│   ├── controllers/            # Application controllers
-│   │   └── app-controller.js   # Main application controller
-│   ├── config/                 # Configuration files
-│   │   └── websocket-config.js # WebSocket configuration
-│   ├── modules/                # Utility modules
+│   ├── containers/              # Dependency injection
+│   │   └── dependency-container.js # DI container (DIP)
+│   ├── controllers/             # Application controllers
+│   │   └── app-controller.js    # Main application controller (DIP)
+│   ├── config/                  # Configuration files
+│   │   └── websocket-config.js  # WebSocket configuration
+│   ├── modules/                  # Utility modules
 │   │   └── copy-to-clipboard.js # Clipboard functionality
-│   └── app-railway.js         # Railway application entry point
-├── assets/styles.css          # CSS styles
-├── index.html                 # Main HTML structure
-├── railway.toml               # Railway deployment configuration
-└── railway.json               # Railway service configuration
+│   └── app-railway.js          # Railway application entry point
+├── assets/styles.css           # CSS styles
+├── index.html                  # Main HTML structure
+├── railway.toml                # Railway deployment configuration
+└── railway.json                # Railway service configuration
 ```
 
 ## 🚀 Quick Start
@@ -111,7 +129,12 @@ Configure email notifications by setting environment variables:
 
 ## 🎯 Features
 
-- **Modular Design**: Clean separation of concerns with SOLID architecture
+- **SOLID Architecture**: Clean separation of concerns following SOLID principles
+  - **SRP**: Single responsibility classes (data, comparison, time, realtime services)
+  - **OCP**: Open/closed with Strategy pattern for extensible filtering
+  - **LSP**: Liskov substitution with proper interface implementations
+  - **ISP**: Interface segregation with focused, minimal interfaces
+  - **DIP**: Dependency inversion with injection container
 - **Real-time Monitoring**: Scrapes every 5 seconds with WebSocket broadcasting
 - **Built-in WebSocket**: No external dependencies (replaces Pusher)
 - **Email Alerts**: Instant notifications for new/resolved incidents
@@ -119,6 +142,7 @@ Configure email notifications by setting environment variables:
 - **Multi-center Support**: BCCC, LACC, OCCC, SACC
 - **Railway Deployment**: Live web dashboard with real-time updates
 - **Cost Effective**: $5-15/month (vs $35-40/month for Vercel Pro + Pusher)
+- **Zero Redundancy**: Eliminated all duplicate code across SOLID improvements
 
 ## 🔧 Configuration
 
@@ -134,6 +158,53 @@ Configure email notifications by setting environment variables:
 - `GMAIL_SENDER_EMAIL`: Sender email address
 - `GMAIL_RECIPIENT_EMAIL`: Recipient email address
 - `GMAIL_APP_PASSWORD`: Gmail App Password
+
+## 🏛️ SOLID Architecture Implementation
+
+### **Single Responsibility Principle (SRP)**
+Each class has one reason to change:
+- **`IncidentDataService`**: Handles data operations (fetching, caching, storage)
+- **`IncidentComparisonService`**: Handles incident comparison and difference detection
+- **`IncidentTimeService`**: Handles time parsing and formatting
+- **`IncidentRealtimeService`**: Handles WebSocket real-time updates
+- **`WebScraper`**: Handles browser navigation and scraping
+- **`IncidentParser`**: Handles data parsing and structuring
+- **`DataSerializer`**: Handles data serialization/deserialization
+- **`FileManager`**: Handles file operations
+- **`DataComparator`**: Handles data comparison operations
+- **`CenterMapper`**: Handles center code mapping
+
+### **Open/Closed Principle (OCP)**
+System is open for extension, closed for modification:
+- **Filter Strategy Pattern**: New filter types can be added without modifying existing code
+- **`IncidentTypeFilterStrategy`**: Filters by incident type keywords
+- **`LocationFilterStrategy`**: Filters by location keywords
+- **`TimeFilterStrategy`**: Filters by time window
+- **`SeverityFilterStrategy`**: Filters by incident severity
+- **`CompositeFilterStrategy`**: Combines multiple strategies
+
+### **Liskov Substitution Principle (LSP)**
+All implementations properly substitute their interfaces:
+- **`LocalStorageAdapter`** implements `IDataStorage`
+- **`HttpFetcher`** implements `IDataFetcher`
+- **`IncidentRenderer`** implements `IUIRenderer`
+- **`ConfigManager`** implements `IConfigManager`
+
+### **Interface Segregation Principle (ISP)**
+Clients don't depend on interfaces they don't use:
+- **`IDataSerializer`**: Only serialization methods
+- **`IFileManager`**: Only file operations
+- **`IDataComparator`**: Only comparison operations
+- **`ICenterMapper`**: Only center mapping
+- **`IDeltaProcessor`**: Only delta processing
+- **`ICacheManager`**: Only cache management
+
+### **Dependency Inversion Principle (DIP)**
+High-level modules don't depend on low-level modules:
+- **`AppController`**: Uses dependency injection with interfaces
+- **`DependencyContainer`**: Manages service registration and resolution
+- **`DefaultDependencyConfig`**: Provides default service configuration
+- **All services**: Depend on abstractions, not concrete implementations
 
 ## 🔧 Scraper Architecture
 
@@ -260,12 +331,22 @@ The root-level `active_incidents.json` file is maintained for backward compatibi
 
 ## 🛠️ Development
 
+### SOLID Architecture Guidelines
+When adding new features, follow SOLID principles:
+
+1. **Single Responsibility**: Create focused classes with one responsibility
+2. **Open/Closed**: Use Strategy pattern for extensible features
+3. **Liskov Substitution**: Implement interfaces properly
+4. **Interface Segregation**: Create minimal, focused interfaces
+5. **Dependency Inversion**: Use dependency injection
+
 ### Adding New Features
-1. Create new modules in `src/core/` or `src/utils/`
-2. Update scrapers in `src/scrapers/`
-3. Test locally with `bin/scrape_local.py`
-4. Test Railway scraper with `src/scrapers/continuous_scraper.py`
-5. Update Railway configuration if needed
+1. **Backend**: Create new modules in `src/core/` following SOLID principles
+2. **Frontend**: Add services in `js/services/` with proper interfaces
+3. **Strategies**: Add new strategies in `js/strategies/` for extensible features
+4. **Interfaces**: Define contracts in `js/interfaces/` for new services
+5. **Testing**: Test locally with `bin/scrape_local.py`
+6. **Deployment**: Test Railway scraper with `src/scrapers/continuous_scraper.py`
 
 ### Testing
 ```bash

@@ -138,7 +138,7 @@ class DeltaService {
         const div = document.createElement('div');
         div.className = 'incident new';
         div.setAttribute('data-incident-id', incident.id);
-        div.innerHTML = `
+        HTMLSanitizer.setInnerHTML(div, `
             <div class="incident-header">
                 <span class="incident-id">#${incident.id}</span>
                 <button class="copy-button" data-incident-id="${incident.id}" title="Copy incident details to clipboard">⧉</button>
@@ -148,7 +148,7 @@ class DeltaService {
             ${incident.location_desc ? `<div class="incident-location">${incident.location_desc}</div>` : ''}
             <div class="incident-area">${incident.area}</div>
             <div class="incident-time">${incident.time}</div>
-        `;
+        `);
         
         return div;
     }

@@ -24,7 +24,7 @@ class IncidentRenderer extends IUIRenderer {
      */
     renderIncidents(incidents, container, previousIncidents = []) {
         if (!incidents || incidents.length === 0) {
-            container.innerHTML = '<div class="loading">No incidents reported at this time.</div>';
+            HTMLSanitizer.setInnerHTML(container, '<div class="loading">No incidents reported at this time.</div>');
             return;
         }
 
@@ -32,7 +32,7 @@ class IncidentRenderer extends IUIRenderer {
             return this.renderSingleIncident(incident, previousIncidents);
         }).join('');
 
-        container.innerHTML = incidentsHtml;
+        HTMLSanitizer.setInnerHTML(container, incidentsHtml);
     }
 
     /**
