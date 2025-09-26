@@ -58,20 +58,14 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 │   │   ├── delta-service.js    # Change detection service
 │   │   ├── filter-service.js   # Data filtering service
 │   │   ├── multi-center-service.js # Multi-center coordination
-│   │   └── realtime-service.js # Real-time WebSocket service
+│   │   └── railway-websocket-service.js # Railway WebSocket service
 │   ├── controllers/            # Application controllers
 │   │   └── app-controller.js   # Main application controller
 │   ├── config/                 # Configuration files
 │   │   └── websocket-config.js # WebSocket configuration
 │   ├── modules/                # Utility modules
 │   │   └── copy-to-clipboard.js # Clipboard functionality
-│   ├── app-railway.js         # Railway application entry point
-│   ├── app-realtime.js        # Real-time application entry point
-│   └── legacy/                 # Legacy modules (deprecated)
-│       ├── app.js             # Legacy application entry point
-│       ├── cache.js           # Legacy cache module
-│       ├── data-manager.js    # Legacy data management
-│       └── ui-controller.js   # Legacy UI controller
+│   └── app-railway.js         # Railway application entry point
 ├── assets/styles.css          # CSS styles
 ├── index.html                 # Main HTML structure
 ├── railway.toml               # Railway deployment configuration

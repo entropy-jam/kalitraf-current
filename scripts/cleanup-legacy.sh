@@ -27,11 +27,8 @@ if [ -f "config/package.json.nodejs" ]; then
     echo "✅ Removed Node.js package configuration"
 fi
 
-# Remove legacy JavaScript files
-if [ -d "legacy" ]; then
-    rm -rf legacy/
-    echo "✅ Removed legacy JavaScript files"
-fi
+# Remove legacy JavaScript files (already cleaned up)
+echo "✅ Legacy JavaScript files already removed"
 
 # Remove Vercel debugging scripts
 if [ -f "scripts/debug-vercel.js" ]; then
@@ -44,11 +41,8 @@ if [ -f "scripts/debug-vercel.sh" ]; then
     echo "✅ Removed Vercel debug shell script"
 fi
 
-# Remove Vercel-specific app entry point
-if [ -f "js/app-realtime.js" ]; then
-    rm js/app-realtime.js
-    echo "✅ Removed Vercel real-time app entry point"
-fi
+# Remove Vercel-specific app entry point (already cleaned up)
+echo "✅ Vercel real-time app entry point already removed"
 
 # Remove Pusher dependencies from requirements
 if [ -f "config/requirements.txt.python" ]; then
