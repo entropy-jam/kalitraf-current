@@ -1,17 +1,19 @@
 # CHP Traffic Scraper Docker Container
 FROM python:3.9-slim
 
-# Install system dependencies and Chrome
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     wget \
-    gnupg \
     curl \
     unzip \
     ca-certificates \
-    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome-keyring.gpg \
-    && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Chrome manually (more reliable than apt)
+RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     && apt-get update \
-    && apt-get install -y google-chrome-stable \
+    && apt-get install -y ./google-chrome-stable_current_amd64.deb \
+    && rm google-chrome-stable_current_amd64.deb \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
