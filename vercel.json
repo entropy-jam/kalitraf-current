@@ -1,39 +1,16 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
+  "functions": {
+    "api/cron-scrape.js": {
+      "runtime": "nodejs18.x"
     },
-    {
-      "src": "styles.css",
-      "use": "@vercel/static"
+    "api/scrape.js": {
+      "runtime": "nodejs18.x"
     },
-    {
-      "src": "js/**/*.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "data/**/*.json",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "active_incidents.json",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "api/cron-scrape.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/scrape.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/scrape-*.js",
-      "use": "@vercel/node"
+    "api/scrape-*.js": {
+      "runtime": "nodejs18.x"
     }
-  ],
+  },
   "crons": [
     {
       "path": "/api/cron-scrape",
