@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 """
 Enhanced Incident Extractor with Smart Details Processing
-Implements new-incidents-only + category filtering + lane blockage parsing
+Uses Single Responsibility Principle with focused classes
 """
-import time
 import logging
 import re
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select, WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from typing import List, Dict, Optional
 
+from .web_scraper import WebScraper
+from .incident_parser import IncidentParser
+
 class IncidentExtractor:
-    """Enhanced incident extractor with smart details processing"""
+    """Orchestrates incident extraction using focused components"""
     
     # Relevant incident categories (mapped from plain English to actual CHP types)
     RELEVANT_CATEGORIES = [
@@ -59,30 +58,27 @@ class IncidentExtractor:
     ]
     
     def __init__(self, driver, center_code="BCCC", previous_incidents=None):
-        self.driver = driver
         self.center_code = center_code
-        self.url = "https://cad.chp.ca.gov/Traffic.aspx"
         self.previous_incidents = previous_incidents or []
+        self.web_scraper = WebScraper(driver, center_code)
+        self.incident_parser = IncidentParser()
         self.previous_ids = {inc.get('id', '') for inc in self.previous_incidents}
     
     def extract_incidents(self) -> List[Dict]:
         """Extract incidents with smart details processing"""
         try:
-            # Navigate to page
-            self.driver.get(self.url)
-            logging.info("Page loaded")
+            # Navigate to page and select center
+            if not self.web_scraper.navigate_to_page():
+                return []
             
-            # Select communication center
-            self._select_communication_center()
-            
-            # Wait for page update
-            time.sleep(2)
+            if not self.web_scraper.select_communication_center():
+                return []
             
             # Extract basic incident data
-            incidents_data = self._extract_from_table()
+            incidents_data = self.web_scraper.extract_table_data()
             
             # Convert to structured format
-            structured_incidents = self._convert_to_structured_format(incidents_data)
+            structured_incidents = self.incident_parser.convert_to_structured_format(incidents_data)
             
             # Apply smart filtering and details extraction
             enhanced_incidents = self._apply_smart_processing(structured_incidents)
@@ -94,104 +90,6 @@ class IncidentExtractor:
             logging.error(f"Error extracting incidents: {str(e)}")
             return []
     
-    def _select_communication_center(self):
-        """Select the communication center"""
-        wait = WebDriverWait(self.driver, 10)
-        center_dropdown = wait.until(EC.presence_of_element_located((By.ID, "ddlComCenter")))
-        select = Select(center_dropdown)
-        select.select_by_value(self.center_code)
-        
-        center_name = self._get_center_name(self.center_code)
-        logging.info(f"Selected '{center_name}' communications center ({self.center_code})")
-        
-        # Click OK button
-        ok_button = self.driver.find_element(By.ID, "btnCCGo")
-        ok_button.click()
-        logging.info("Clicked OK button")
-    
-    def _extract_from_table(self) -> List[List[str]]:
-        """Extract data from incidents table"""
-        try:
-            # Find the incidents table
-            table = self.driver.find_element(By.TAG_NAME, "table")
-            logging.info(f"Found table with class: {table.get_attribute('class')}")
-            
-            rows = table.find_elements(By.TAG_NAME, "tr")
-            logging.info(f"Found {len(rows)} rows in table")
-            
-            incidents_data = []
-            
-            for i, row in enumerate(rows):
-                cells = row.find_elements(By.TAG_NAME, "td")
-                if not cells:
-                    # Try th elements for headers
-                    cells = row.find_elements(By.TAG_NAME, "th")
-                
-                if cells and i > 0:  # Skip header row
-                    cell_texts = [cell.text.strip() for cell in cells]
-                    logging.info(f"Row {i}: {len(cell_texts)} cells - {cell_texts[:3]}...")
-                    
-                    if len(cell_texts) >= 7:  # Ensure we have all columns
-                        incidents_data.append(cell_texts)
-            
-            return incidents_data
-            
-        except Exception as e:
-            logging.error(f"Error extracting from table: {str(e)}")
-            return []
-    
-    def _get_center_name(self, center_code: str) -> str:
-        """Get human-readable center name"""
-        centers = {
-            "BFCC": "Bakersfield",
-            "BSCC": "Barstow", 
-            "BICC": "Bishop",
-            "BCCC": "Border",
-            "CCCC": "Capitol",
-            "CHCC": "Chico",
-            "ECCC": "El Centro",
-            "FRCC": "Fresno",
-            "GGCC": "Golden Gate",
-            "HMCC": "Humboldt",
-            "ICCC": "Indio",
-            "INCC": "Inland",
-            "LACC": "Los Angeles",
-            "MRCC": "Merced",
-            "MYCC": "Monterey",
-            "OCCC": "Orange",
-            "RDCC": "Redding",
-            "SACC": "Sacramento",
-            "SLCC": "San Luis Obispo",
-            "SKCCSTCC": "Stockton",
-            "SUCC": "Susanville",
-            "TKCC": "Truckee",
-            "UKCC": "Ukiah",
-            "VTCC": "Ventura",
-            "YKCC": "Yreka"
-        }
-        return centers.get(center_code, center_code)
-    
-    def _convert_to_structured_format(self, incidents_data: List[List[str]]) -> List[Dict]:
-        """Convert raw table data to structured format"""
-        structured = []
-        
-        for row in incidents_data:
-            if len(row) >= 7:
-                incident = {
-                    'id': row[1],
-                    'time': row[2],
-                    'type': row[3],
-                    'location': row[4],
-                    'location_desc': row[5],
-                    'area': row[6],
-                    'details': '',
-                    'lane_blockage': {'status': 'unknown', 'details': []},
-                    'is_new': False,
-                    'is_relevant': False
-                }
-                structured.append(incident)
-        
-        return structured
     
     def _apply_smart_processing(self, incidents: List[Dict]) -> List[Dict]:
         """Apply smart filtering and details extraction"""

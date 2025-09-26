@@ -5,15 +5,16 @@
  */
 
 class AppController {
-    constructor() {
-        this.config = new ConfigManager();
-        this.storage = new LocalStorageAdapter('chp_data_');
-        this.fetcher = new HttpFetcher();
-        this.renderer = new IncidentRenderer();
-        this.incidentService = new IncidentService(this.storage, this.fetcher, this.config);
-        this.multiCenterService = new MultiCenterService(this.fetcher, this.storage, this.config);
-        this.deltaService = new DeltaService();
-        this.filterService = new FilterService();
+    constructor(dependencies = {}) {
+        // Use dependency injection with defaults
+        this.config = dependencies.config || new ConfigManager();
+        this.storage = dependencies.storage || new LocalStorageAdapter('chp_data_');
+        this.fetcher = dependencies.fetcher || new HttpFetcher();
+        this.renderer = dependencies.renderer || new IncidentRenderer();
+        this.incidentService = dependencies.incidentService || new IncidentService(this.storage, this.fetcher, this.config);
+        this.multiCenterService = dependencies.multiCenterService || new MultiCenterService(this.fetcher, this.storage, this.config);
+        this.deltaService = dependencies.deltaService || new DeltaService();
+        this.filterService = dependencies.filterService || new FilterService();
         
         this.previousIncidents = null;
         this.isInitialized = false;

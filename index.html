@@ -115,6 +115,7 @@
     <!-- Load JavaScript modules in dependency order -->
     <!-- Interfaces and base classes -->
     <script src="js/interfaces.js"></script>
+    <script src="js/interfaces/app-interfaces.js"></script>
     
     <!-- Configuration and utilities -->
     <script src="js/config-manager.js"></script>
@@ -128,7 +129,14 @@
     <!-- Renderer implementations -->
     <script src="js/renderers/incident-renderer.js"></script>
     
+    <!-- Filter Strategies -->
+    <script src="js/strategies/filter-strategies.js"></script>
+    
     <!-- Services -->
+        <script src="js/services/incident-data-service.js"></script>
+        <script src="js/services/incident-comparison-service.js"></script>
+        <script src="js/services/incident-time-service.js"></script>
+        <script src="js/services/incident-realtime-service.js"></script>
         <script src="js/services/incident-service.js"></script>
         <script src="js/services/multi-center-service.js"></script>
         <script src="js/services/delta-service.js"></script>
@@ -137,12 +145,13 @@
     <!-- Modules -->
     <script src="js/modules/copy-to-clipboard.js"></script>
     
+    <!-- Dependency Injection -->
+    <script src="js/containers/dependency-container.js"></script>
     
     <!-- Controllers -->
-    <script src="js/controllers/app-controller.js?t=1735170000"></script>
-    <script src="js/ui-controller.js?t=1735170000"></script>
+    <script src="js/controllers/app-controller.js"></script>
     
     <!-- Main application entry point -->
-    <script src="js/app-railway.js?t=1735170000"></script>
+    <script src="js/app-railway.js"></script>
 </body>
 </html>

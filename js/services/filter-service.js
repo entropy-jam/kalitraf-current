@@ -1,34 +1,45 @@
 /**
- * Filter Service - Handles incident type filtering
+ * Filter Service - Uses Strategy Pattern for extensible filtering
+ * Open/Closed Principle: New filter strategies can be added without modifying this class
  */
 class FilterService {
     constructor() {
         this.activeFilters = new Set();
-        this.filterMappings = {
-            'filter-collision': ['Trfc Collision', 'Traffic Collision', 'Collision'],
-            'filter-hazard': ['Traffic Hazard', 'Hazard'],
-            'filter-fire': ['Car Fire', 'Vehicle Fire', 'Fire'],
-            'filter-break': ['Traffic Break', 'Road Blocked', 'Break'],
-            'filter-fatality': ['Fatality', 'Fatal'],
-            'filter-hitrun': ['Hit and Run', 'Hit & Run'],
-            'filter-sigalert': ['SIG Alert', 'Sig Alert'],
-            'filter-fire-report': ['Report of Fire', 'Fire Report']
-        };
+        this.filterStrategies = new Map();
+        this.compositeStrategy = new CompositeFilterStrategy();
         
+        this.initializeDefaultStrategies();
         this.initializeFilters();
         this.setupEventListeners();
     }
     
+    initializeDefaultStrategies() {
+        // Create default filter strategies
+        this.filterStrategies.set('filter-collision', new IncidentTypeFilterStrategy(['Trfc Collision', 'Traffic Collision', 'Collision']));
+        this.filterStrategies.set('filter-hazard', new IncidentTypeFilterStrategy(['Traffic Hazard', 'Hazard']));
+        this.filterStrategies.set('filter-fire', new IncidentTypeFilterStrategy(['Car Fire', 'Vehicle Fire', 'Fire']));
+        this.filterStrategies.set('filter-break', new IncidentTypeFilterStrategy(['Traffic Break', 'Road Blocked', 'Break']));
+        this.filterStrategies.set('filter-fatality', new IncidentTypeFilterStrategy(['Fatality', 'Fatal']));
+        this.filterStrategies.set('filter-hitrun', new IncidentTypeFilterStrategy(['Hit and Run', 'Hit & Run']));
+        this.filterStrategies.set('filter-sigalert', new IncidentTypeFilterStrategy(['SIG Alert', 'Sig Alert']));
+        this.filterStrategies.set('filter-fire-report', new IncidentTypeFilterStrategy(['Report of Fire', 'Fire Report']));
+        
+        // Add strategies to composite
+        this.filterStrategies.forEach(strategy => {
+            this.compositeStrategy.addStrategy(strategy);
+        });
+    }
+    
     initializeFilters() {
         // Set all filters as active by default
-        Object.keys(this.filterMappings).forEach(filterId => {
+        this.filterStrategies.forEach((strategy, filterId) => {
             this.activeFilters.add(filterId);
         });
     }
     
     setupEventListeners() {
         // Individual filter checkboxes
-        Object.keys(this.filterMappings).forEach(filterId => {
+        this.filterStrategies.forEach((strategy, filterId) => {
             const checkbox = document.getElementById(filterId);
             if (checkbox) {
                 checkbox.addEventListener('change', (e) => {
@@ -66,7 +77,7 @@ class FilterService {
     }
     
     selectAllFilters() {
-        Object.keys(this.filterMappings).forEach(filterId => {
+        this.filterStrategies.forEach((strategy, filterId) => {
             this.activeFilters.add(filterId);
             const checkbox = document.getElementById(filterId);
             if (checkbox) {
@@ -79,7 +90,7 @@ class FilterService {
     
     clearAllFilters() {
         this.activeFilters.clear();
-        Object.keys(this.filterMappings).forEach(filterId => {
+        this.filterStrategies.forEach((strategy, filterId) => {
             const checkbox = document.getElementById(filterId);
             if (checkbox) {
                 checkbox.checked = false;
@@ -95,14 +106,10 @@ class FilterService {
             return false;
         }
         
-        // Check if incident type matches any active filter
-        const incidentType = incident.type || '';
-        
+        // Use strategy pattern to check if incident should be shown
         for (const filterId of this.activeFilters) {
-            const keywords = this.filterMappings[filterId];
-            if (keywords.some(keyword => 
-                incidentType.toLowerCase().includes(keyword.toLowerCase())
-            )) {
+            const strategy = this.filterStrategies.get(filterId);
+            if (strategy && strategy.shouldInclude(incident)) {
                 return true;
             }
         }
@@ -115,7 +122,30 @@ class FilterService {
     }
     
     getTotalFilterCount() {
-        return Object.keys(this.filterMappings).length;
+        return this.filterStrategies.size;
+    }
+    
+    /**
+     * Add a new filter strategy (Open/Closed Principle)
+     * @param {string} filterId - Unique identifier for the filter
+     * @param {IFilterStrategy} strategy - Filter strategy implementation
+     */
+    addFilterStrategy(filterId, strategy) {
+        this.filterStrategies.set(filterId, strategy);
+        this.compositeStrategy.addStrategy(strategy);
+    }
+    
+    /**
+     * Remove a filter strategy
+     * @param {string} filterId - Filter identifier to remove
+     */
+    removeFilterStrategy(filterId) {
+        const strategy = this.filterStrategies.get(filterId);
+        if (strategy) {
+            this.filterStrategies.delete(filterId);
+            this.compositeStrategy.removeStrategy(strategy.getName());
+            this.activeFilters.delete(filterId);
+        }
     }
     
     dispatchFilterChange() {

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Data management for incidents (JSON storage, comparison, etc.)
+Uses Interface Segregation Principle with focused interfaces
 """
 import json
 import os
@@ -8,48 +9,41 @@ import logging
 from datetime import datetime
 from typing import List, Dict, Any
 
-class DataManager:
-    """Manages incident data storage and comparison"""
+from .interfaces import IDataSerializer, IFileManager, IDataComparator, ICenterMapper, IDeltaProcessor, ICacheManager
+from .data_serializer import DataSerializer
+from .file_manager import FileManager
+from .data_comparator import DataComparator
+from .center_mapper import CenterMapper
+
+class DataManager(IDeltaProcessor, ICacheManager):
+    """Manages incident data storage and comparison using focused interfaces"""
     
-    def __init__(self, center_code="BCCC"):
+    def __init__(self, center_code="BCCC", 
+                 serializer: IDataSerializer = None,
+                 file_manager: IFileManager = None,
+                 comparator: IDataComparator = None,
+                 center_mapper: ICenterMapper = None):
         self.center_code = center_code
         self.data_dir = "data"
         self.active_file = f"{self.data_dir}/active_incidents_{center_code}.json"
         self.delta_file = f"{self.data_dir}/incident_deltas_{center_code}.json"
         self.previous_incidents = None
         
-        # Ensure data directory exists
-        os.makedirs(self.data_dir, exist_ok=True)
+        # Use dependency injection with defaults
+        self.serializer = serializer or DataSerializer()
+        self.file_manager = file_manager or FileManager(self.data_dir)
+        self.comparator = comparator or DataComparator()
+        self.center_mapper = center_mapper or CenterMapper()
     
     def incidents_to_json(self, incidents_data: List[Dict]) -> Dict[str, Any]:
         """Convert incidents data to JSON format"""
-        # If incidents_data is already structured (Dict), use it directly
-        if incidents_data and isinstance(incidents_data[0], dict):
-            incidents = incidents_data
-        else:
-            # Convert from old format (List[List[str]]) to new format
-            incidents = []
-            for row in incidents_data:
-                if len(row) >= 7:
-                    incident = {
-                        "id": row[1],
-                        "time": row[2],
-                        "type": row[3],
-                        "location": row[4],
-                        "location_desc": row[5] if len(row) > 5 else "",
-                        "area": row[6] if len(row) > 6 else "",
-                        "details": "",
-                        "lane_blockage": {"status": "unknown", "details": []},
-                        "is_new": False,
-                        "is_relevant": False
-                    }
-                    incidents.append(incident)
+        json_data = self.serializer.incidents_to_json(incidents_data)
         
         return {
             "center_code": self.center_code,
-            "center_name": self._get_center_name(self.center_code),
-            "incident_count": len(incidents),
-            "incidents": incidents,
+            "center_name": self.center_mapper.get_center_name(self.center_code),
+            "incident_count": json_data["incident_count"],
+            "incidents": json_data["incidents"],
             "last_updated": datetime.now().isoformat()
         }
     
@@ -58,54 +52,29 @@ class DataManager:
         json_data = self.incidents_to_json(incidents_data)
         
         # Check if file exists and compare with existing data
-        if os.path.exists(self.active_file):
+        if self.file_manager.file_exists(self.active_file):
             try:
-                with open(self.active_file, 'r') as f:
-                    existing_data = json.load(f)
+                existing_data = self.file_manager.load_file(self.active_file)
                 
                 # Only write if data is different
-                if self._data_equals(existing_data, json_data):
+                if self.comparator.data_equals(existing_data, json_data):
                     logging.info("No changes detected - skipping active_incidents.json write")
                     return False
-            except (json.JSONDecodeError, KeyError) as e:
+            except Exception as e:
                 logging.warning(f"Error reading existing file, will overwrite: {e}")
         
         # Write only when different or file doesn't exist
-        with open(self.active_file, 'w') as f:
-            json.dump(json_data, f, indent=2)
+        success = self.file_manager.save_file(self.active_file, json_data)
         
         logging.info(f"Saved {len(incidents_data)} incidents to {self.active_file}")
         
         # Maintain backward compatibility: also save to active_incidents.json if this is BCCC
         if self.center_code == "BCCC":
-            with open("active_incidents.json", 'w') as f:
-                json.dump(json_data, f, indent=2)
+            self.file_manager.save_file("active_incidents.json", json_data)
             logging.info("Also saved to active_incidents.json for backward compatibility")
         
-        return True
+        return success
     
-    def _data_equals(self, data1: Dict, data2: Dict) -> bool:
-        """Compare two incident datasets for equality"""
-        if not data1 or not data2:
-            return False
-        
-        # Compare basic fields
-        if (data1.get('incident_count') != data2.get('incident_count') or
-            data1.get('center_code') != data2.get('center_code')):
-            return False
-        
-        # Compare incidents
-        incidents1 = data1.get('incidents', [])
-        incidents2 = data2.get('incidents', [])
-        
-        if len(incidents1) != len(incidents2):
-            return False
-        
-        # Create sets for comparison (using ID + time as unique identifier)
-        set1 = {f"{inc['id']}_{inc['time']}" for inc in incidents1}
-        set2 = {f"{inc['id']}_{inc['time']}" for inc in incidents2}
-        
-        return set1 == set2
     
     def save_delta_updates(self, changes: Dict[str, List]) -> bool:
         """Save only the changes (deltas) to a separate file"""
@@ -156,7 +125,7 @@ class DataManager:
         
         delta_data = {
             "center_code": self.center_code,
-            "center_name": self._get_center_name(self.center_code),
+            "center_name": self.center_mapper.get_center_name(self.center_code),
             "timestamp": datetime.now().isoformat(),
             "new_incidents": new_incidents_json,
             "removed_incidents": removed_incidents_json,
@@ -164,11 +133,10 @@ class DataManager:
             "removed_count": len(removed_incidents_json)
         }
         
-        with open(self.delta_file, 'w') as f:
-            json.dump(delta_data, f, indent=2)
+        success = self.file_manager.save_file(self.delta_file, delta_data)
         
         logging.info(f"Saved delta updates: {len(new_incidents_json)} new, {len(removed_incidents_json)} removed")
-        return True
+        return success
     
     def append_daily_incidents(self, incidents_data: List[List[str]]) -> None:
         """Append unique incidents to daily JSON file"""
@@ -177,9 +145,9 @@ class DataManager:
         
         # Load existing daily incidents
         existing_incidents = []
-        if os.path.exists(daily_file):
-            with open(daily_file, 'r') as f:
-                existing_data = json.load(f)
+        if self.file_manager.file_exists(daily_file):
+            existing_data = self.file_manager.load_file(daily_file)
+            if existing_data:
                 existing_incidents = existing_data.get('incidents', [])
         
         # Convert new incidents to JSON format
@@ -196,47 +164,20 @@ class DataManager:
             all_incidents = existing_incidents + unique_incidents
             daily_data = {
                 "center_code": self.center_code,
-                "center_name": self._get_center_name(self.center_code),
+                "center_name": self.center_mapper.get_center_name(self.center_code),
                 "date": today,
                 "total_incidents": len(all_incidents),
                 "incidents": all_incidents,
                 "last_updated": datetime.now().isoformat()
             }
             
-            with open(daily_file, 'w') as f:
-                json.dump(daily_data, f, indent=2)
+            self.file_manager.save_file(daily_file, daily_data)
             
             logging.info(f"Appended {len(unique_incidents)} unique incidents to {daily_file}")
     
     def compare_incidents(self, current_incidents: List[Dict]) -> Dict[str, List]:
         """Compare current incidents with previous ones"""
-        if self.previous_incidents is None:
-            return {"new_incidents": current_incidents, "removed_incidents": []}
-        
-        # Convert to sets for comparison (using incident ID + time as unique identifier)
-        if current_incidents and isinstance(current_incidents[0], dict):
-            # New structured format
-            current_set = {f"{incident['id']}_{incident['time']}" for incident in current_incidents}
-            previous_set = {f"{incident['id']}_{incident['time']}" for incident in self.previous_incidents}
-            
-            new_incidents = [incident for incident in current_incidents 
-                            if f"{incident['id']}_{incident['time']}" not in previous_set]
-            removed_incidents = [incident for incident in self.previous_incidents 
-                               if f"{incident['id']}_{incident['time']}" not in current_set]
-        else:
-            # Old format (List[List[str]])
-            current_set = {f"{incident[1]}_{incident[2]}" for incident in current_incidents}
-            previous_set = {f"{incident[1]}_{incident[2]}" for incident in self.previous_incidents}
-            
-            new_incidents = [incident for incident in current_incidents 
-                            if f"{incident[1]}_{incident[2]}" not in previous_set]
-            removed_incidents = [incident for incident in self.previous_incidents 
-                               if f"{incident[1]}_{incident[2]}" not in current_set]
-        
-        return {
-            "new_incidents": new_incidents,
-            "removed_incidents": removed_incidents
-        }
+        return self.comparator.compare_incidents(current_incidents, self.previous_incidents)
     
     def update_previous_incidents(self, incidents_data: List[Dict]) -> None:
         """Update the previous incidents for next comparison"""
@@ -244,10 +185,10 @@ class DataManager:
     
     def load_previous_incidents(self) -> List[Dict]:
         """Load previous incidents from active incidents file"""
-        if os.path.exists(self.active_file):
+        if self.file_manager.file_exists(self.active_file):
             try:
-                with open(self.active_file, 'r') as f:
-                    data = json.load(f)
+                data = self.file_manager.load_file(self.active_file)
+                if data:
                     incidents = data.get('incidents', [])
                     logging.info(f"Loaded {len(incidents)} previous incidents")
                     return incidents
@@ -256,33 +197,12 @@ class DataManager:
                 return []
         return []
     
-    def _get_center_name(self, center_code: str) -> str:
-        """Get human-readable center name"""
-        centers = {
-            "BFCC": "Bakersfield",
-            "BSCC": "Barstow", 
-            "BICC": "Bishop",
-            "BCCC": "Border",
-            "CCCC": "Capitol",
-            "CHCC": "Chico",
-            "ECCC": "El Centro",
-            "FRCC": "Fresno",
-            "GGCC": "Golden Gate",
-            "HMCC": "Humboldt",
-            "ICCC": "Indio",
-            "INCC": "Inland",
-            "LACC": "Los Angeles",
-            "MRCC": "Merced",
-            "MYCC": "Monterey",
-            "OCCC": "Orange",
-            "RDCC": "Redding",
-            "SACC": "Sacramento",
-            "SLCC": "San Luis Obispo",
-            "SKCCSTCC": "Stockton",
-            "SUCC": "Susanville",
-            "TKCC": "Truckee",
-            "UKCC": "Ukiah",
-            "VTCC": "Ventura",
-            "YKCC": "Yreka"
-        }
-        return centers.get(center_code, center_code)
+    def is_cache_valid(self, timestamp: float) -> bool:
+        """Check if cache is still valid"""
+        cache_duration = 5 * 60 * 1000  # 5 minutes
+        return (datetime.now().timestamp() * 1000) - timestamp < cache_duration
+    
+    def cleanup_old_cache(self) -> None:
+        """Clean up old cache entries"""
+        # This could be implemented to clean up old files
+        pass
