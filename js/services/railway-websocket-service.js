@@ -26,13 +26,19 @@ class RailwayWebSocketService {
   async initialize() {
     try {
       // Get the current host (Railway will provide the domain)
-      // Force WSS for Railway HTTPS deployment
-      const protocol = 'wss:';
-      const host = window.location.host;
+      // Use appropriate protocol based on current page protocol
+      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      const host = window.location.protocol === 'https:' 
+        ? window.location.host 
+        : `${window.location.hostname}:8080`;
+      
       // Add Railway WebSocket parameters
-      const wsUrl = `${protocol}//${host}/ws?upgrade_wait=0s&first_msg_wait=0s`;
+      const wsUrl = window.location.protocol === 'https:'
+        ? `${protocol}//${host}/ws?upgrade_wait=0s&first_msg_wait=0s`
+        : `${protocol}//${host}`;
       
       console.log(`🔗 Connecting to Railway WebSocket: ${wsUrl}`);
+      console.log(`🔧 Protocol: ${window.location.protocol}, Using: ${protocol}`);
       
       this.websocket = new WebSocket(wsUrl);
       

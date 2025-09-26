@@ -34,6 +34,12 @@ A modular, automated system for monitoring California Highway Patrol traffic inc
 └── assets/                      # Static assets
     ├── chromedriver-mac-arm64/  # Chrome driver for local dev
     └── styles.css              # CSS styles
+├── testing_suite/               # WebSocket testing tools
+    ├── test-websocket-server.py # Simple WebSocket test server
+    ├── start-websocket-server.py # Railway WebSocket server starter
+    ├── websocket-test.html      # Interactive diagnostic page
+    ├── WEBSOCKET_TROUBLESHOOTING.md # Troubleshooting guide
+    └── TESTING_SUITE.md         # Testing suite documentation
 ```
 
 ### Frontend (JavaScript - SOLID Architecture)
@@ -281,6 +287,27 @@ python src/scrapers/continuous_scraper.py
 # Test WebSocket server
 # Frontend will connect to ws://localhost:8080
 ```
+
+### WebSocket Testing Suite
+The `testing_suite/` directory contains comprehensive WebSocket testing tools:
+
+```bash
+# Start simple test WebSocket server
+python testing_suite/test-websocket-server.py
+
+# Start Railway WebSocket server
+python testing_suite/start-websocket-server.py
+
+# Open interactive diagnostic page
+open testing_suite/websocket-test.html
+```
+
+**Testing Tools:**
+- **`test-websocket-server.py`** - Simple WebSocket server for connection testing
+- **`start-websocket-server.py`** - Starts the actual Railway WebSocket server
+- **`websocket-test.html`** - Interactive diagnostic page with real-time testing
+- **`WEBSOCKET_TROUBLESHOOTING.md`** - Comprehensive troubleshooting guide
+- **`TESTING_SUITE.md`** - Complete testing suite documentation
 
 ## 🗺️ Deployment & Migration
 

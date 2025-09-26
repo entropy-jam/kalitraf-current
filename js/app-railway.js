@@ -6,7 +6,9 @@
 // Railway WebSocket configuration
 const RAILWAY_CONFIG = {
   websocket: {
-    url: `ws://${window.location.hostname}:8080`,
+    url: window.location.protocol === 'https:' 
+      ? `wss://${window.location.host}/ws?upgrade_wait=0s&first_msg_wait=0s`
+      : `ws://${window.location.hostname}:8080`,
     reconnectInterval: 5000,
     maxReconnectAttempts: 10
   },
@@ -404,7 +406,7 @@ class RailwayAppController {
         notification.className = 'update-notification';
         notification.innerHTML = `
             <div class="notification-content">
-                <span>🚂 Railway update: ${data.centerName}</span>
+                <span>📡 Update: ${data.centerName}</span>
                 <span class="timestamp">${new Date(data.timestamp).toLocaleTimeString()}</span>
             </div>
         `;
