@@ -11,6 +11,8 @@ from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from typing import List
 
+from .center_mapper import CenterMapper
+
 class WebScraper:
     """Handles browser navigation and basic scraping operations"""
     
@@ -18,6 +20,7 @@ class WebScraper:
         self.driver = driver
         self.center_code = center_code
         self.url = "https://cad.chp.ca.gov/Traffic.aspx"
+        self.center_mapper = CenterMapper()
     
     def navigate_to_page(self):
         """Navigate to the CHP traffic page"""
@@ -37,7 +40,7 @@ class WebScraper:
             select = Select(center_dropdown)
             select.select_by_value(self.center_code)
             
-            center_name = self._get_center_name(self.center_code)
+            center_name = self.center_mapper.get_center_name(self.center_code)
             logging.info(f"Selected '{center_name}' communications center ({self.center_code})")
             
             # Click OK button
@@ -83,33 +86,3 @@ class WebScraper:
             logging.error(f"Error extracting from table: {str(e)}")
             return []
     
-    def _get_center_name(self, center_code: str) -> str:
-        """Get human-readable center name"""
-        centers = {
-            "BFCC": "Bakersfield",
-            "BSCC": "Barstow", 
-            "BICC": "Bishop",
-            "BCCC": "Border",
-            "CCCC": "Capitol",
-            "CHCC": "Chico",
-            "ECCC": "El Centro",
-            "FRCC": "Fresno",
-            "GGCC": "Golden Gate",
-            "HMCC": "Humboldt",
-            "ICCC": "Indio",
-            "INCC": "Inland",
-            "LACC": "Los Angeles",
-            "MRCC": "Merced",
-            "MYCC": "Monterey",
-            "OCCC": "Orange",
-            "RDCC": "Redding",
-            "SACC": "Sacramento",
-            "SLCC": "San Luis Obispo",
-            "SKCCSTCC": "Stockton",
-            "SUCC": "Susanville",
-            "TKCC": "Truckee",
-            "UKCC": "Ukiah",
-            "VTCC": "Ventura",
-            "YKCC": "Yreka"
-        }
-        return centers.get(center_code, center_code)

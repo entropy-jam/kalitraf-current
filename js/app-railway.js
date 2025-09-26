@@ -259,8 +259,10 @@ class RailwayAppController {
         try {
             console.log('🚀 Initializing Railway CHP Traffic Monitor...');
 
-            // Initialize the existing app controller
-            this.appController = new AppController();
+            // Initialize the app controller with dependency injection
+            const container = new DependencyContainer();
+            DefaultDependencyConfig.configure(container);
+            this.appController = container.createAppController();
             await this.appController.initialize();
 
             // Set up Railway WebSocket service

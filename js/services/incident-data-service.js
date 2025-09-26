@@ -62,8 +62,7 @@ class IncidentDataService {
      * @returns {boolean} True if cache is valid
      */
     isCacheValid(timestamp) {
-        const cacheDuration = this.config.get('cacheDuration');
-        return Date.now() - timestamp < cacheDuration;
+        return CacheUtils.isCacheValid(timestamp, this.config, 'cacheDuration');
     }
 
     /**

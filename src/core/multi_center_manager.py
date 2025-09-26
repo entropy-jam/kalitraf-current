@@ -2,11 +2,12 @@
 """
 Multi-center data aggregation and management
 """
-import json
-import os
 import logging
 from datetime import datetime
 from typing import List, Dict, Any, Set
+
+from .center_mapper import CenterMapper
+from .file_manager import FileManager
 
 class MultiCenterManager:
     """Manages data aggregation from multiple communication centers"""
@@ -14,19 +15,20 @@ class MultiCenterManager:
     def __init__(self, centers: List[str] = None):
         self.centers = centers or ["BCCC", "LACC", "SACC", "OCCC"]
         self.data_dir = "data"
+        self.center_mapper = CenterMapper()
+        self.file_manager = FileManager(self.data_dir)
         
     def load_center_data(self, center_code: str) -> Dict[str, Any]:
         """Load data for a specific center"""
         file_path = f"data/active_incidents_{center_code}.json"
         
-        if not os.path.exists(file_path):
+        if not self.file_manager.file_exists(file_path):
             logging.warning(f"No data file found for center {center_code}")
             return None
             
         try:
-            with open(file_path, 'r') as f:
-                return json.load(f)
-        except (json.JSONDecodeError, IOError) as e:
+            return self.file_manager.load_file(file_path)
+        except Exception as e:
             logging.error(f"Error loading data for {center_code}: {e}")
             return None
     
@@ -60,7 +62,7 @@ class MultiCenterManager:
                 logging.info(f"Loaded {incident_count} incidents from {center_code}")
             else:
                 center_stats[center_code] = {
-                    'name': self._get_center_name(center_code),
+                    'name': self.center_mapper.get_center_name(center_code),
                     'count': 0,
                     'last_updated': None
                 }
@@ -112,7 +114,7 @@ class MultiCenterManager:
                 }
             else:
                 summary[center_code] = {
-                    'name': self._get_center_name(center_code),
+                    'name': self.center_mapper.get_center_name(center_code),
                     'incident_count': 0,
                     'last_updated': None,
                     'status': 'inactive'
@@ -123,41 +125,11 @@ class MultiCenterManager:
     def save_aggregated_data(self, aggregated_data: Dict[str, Any], filename: str = "data/aggregated_incidents.json") -> bool:
         """Save aggregated data to file"""
         try:
-            with open(filename, 'w') as f:
-                json.dump(aggregated_data, f, indent=2)
-            logging.info(f"Saved aggregated data to {filename}")
-            return True
-        except IOError as e:
+            success = self.file_manager.save_file(filename, aggregated_data)
+            if success:
+                logging.info(f"Saved aggregated data to {filename}")
+            return success
+        except Exception as e:
             logging.error(f"Error saving aggregated data: {e}")
             return False
     
-    def _get_center_name(self, center_code: str) -> str:
-        """Get human-readable center name"""
-        centers = {
-            "BFCC": "Bakersfield",
-            "BSCC": "Barstow", 
-            "BICC": "Bishop",
-            "BCCC": "Border",
-            "CCCC": "Capitol",
-            "CHCC": "Chico",
-            "ECCC": "El Centro",
-            "FRCC": "Fresno",
-            "GGCC": "Golden Gate",
-            "HMCC": "Humboldt",
-            "ICCC": "Indio",
-            "INCC": "Inland",
-            "LACC": "Los Angeles",
-            "MRCC": "Merced",
-            "MYCC": "Monterey",
-            "OCCC": "Orange",
-            "RDCC": "Redding",
-            "SACC": "Sacramento",
-            "SLCC": "San Luis Obispo",
-            "SKCCSTCC": "Stockton",
-            "SUCC": "Susanville",
-            "TKCC": "Truckee",
-            "UKCC": "Ukiah",
-            "VTCC": "Ventura",
-            "YKCC": "Yreka"
-        }
-        return centers.get(center_code, center_code)

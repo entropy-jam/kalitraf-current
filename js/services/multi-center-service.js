@@ -205,9 +205,7 @@ class MultiCenterService {
      * @returns {boolean} True if cache is valid
      */
     isCacheValid(timestamp) {
-        const cacheAge = Date.now() - timestamp;
-        const cacheTimeout = this.config.get('cacheTimeout', 300000); // 5 minutes default
-        return cacheAge < cacheTimeout;
+        return CacheUtils.isCacheValid(timestamp, this.config, 'cacheTimeout');
     }
 
     /**
