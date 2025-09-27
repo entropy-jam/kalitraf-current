@@ -147,8 +147,17 @@ class IncidentRenderer extends IUIRenderer {
             return '';
         }
 
-        // Split details by " | " and format as timeline
-        const detailLines = details.split(' | ').map(line => line.trim()).filter(line => line);
+        // Check if details contains timeline format (pipe-separated)
+        const hasTimelineFormat = details.includes(' | ');
+        
+        let detailLines;
+        if (hasTimelineFormat) {
+            // Split details by " | " and format as timeline
+            detailLines = details.split(' | ').map(line => line.trim()).filter(line => line);
+        } else {
+            // For simple details (like location names), create a single timeline item
+            detailLines = [details.trim()];
+        }
         
         if (detailLines.length === 0) {
             return '';
@@ -158,10 +167,12 @@ class IncidentRenderer extends IUIRenderer {
             `<li class="detail-timeline-item">${line}</li>`
         ).join('');
 
+        const timelineTitle = hasTimelineFormat ? 'Incident Timeline' : 'Incident Details';
+
         return `
             <div class="incident-details">
                 <div class="details-header" onclick="this.parentElement.classList.toggle('expanded')">
-                    <span class="details-title">Incident Timeline</span>
+                    <span class="details-title">${timelineTitle}</span>
                     <span class="details-toggle">▼</span>
                 </div>
                 <div class="details-content">
