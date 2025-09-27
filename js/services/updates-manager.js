@@ -16,9 +16,19 @@ class UpdatesManager {
         this.userTimeWindow = this.config.defaultTimeWindow;
         this.isRendering = false;
         this.renderTimeout = null;
+        this.uiInitialized = false;
         
-        this.initializeUI();
-        this.setupEventListeners();
+        // Delay UI initialization until DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.initializeUI();
+                this.setupEventListeners();
+            });
+        } else {
+            // DOM is already ready
+            this.initializeUI();
+            this.setupEventListeners();
+        }
     }
     
     initializeUI() {
@@ -29,6 +39,13 @@ class UpdatesManager {
             this.createUpdatesSection();
         } else {
             console.log('🔧 UpdatesManager: Updates section already exists');
+        }
+        this.uiInitialized = true;
+        
+        // Render any queued changes now that UI is ready
+        if (this.changes.length > 0) {
+            console.log('🔧 UpdatesManager: Rendering queued changes...');
+            this.throttledRender();
         }
     }
     
@@ -120,7 +137,13 @@ class UpdatesManager {
             
             this.changes.push(change);
             this.cleanOldChanges();
-            this.throttledRender();
+            
+            // Ensure UI is initialized before rendering
+            if (this.uiInitialized) {
+                this.throttledRender();
+            } else {
+                console.log('🔧 UpdatesManager: UI not yet initialized, change queued');
+            }
             
         } catch (error) {
             this.handleError('Failed to add change', error);

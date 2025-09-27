@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trace Data Flow - UpdatesManager Issue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .status.success { background-color: #d4edda; color: #155724; }
+        .status.error { background-color: #f8d7da; color: #721c24; }
+        .status.warning { background-color: #fff3cd; color: #856404; }
+        .status.info { background-color: #d1ecf1; color: #0c5460; }
+        .log-entry {
+            font-family: monospace;
+            background: #f8f9fa;
+            padding: 5px;
+            margin: 2px 0;
+            border-left: 3px solid #007bff;
+        }
+        .log-entry.error { border-left-color: #dc3545; }
+        .log-entry.warning { border-left-color: #ffc107; }
+        .log-entry.success { border-left-color: #28a745; }
+        .log-entry.info { border-left-color: #17a2b8; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #0056b3; }
+        .test-results {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: #f8f9fa;
+        }
+        .flow-step {
+            background: #e9ecef;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border-left: 4px solid #6c757d;
+        }
+        .flow-step.success { border-left-color: #28a745; }
+        .flow-step.error { border-left-color: #dc3545; }
+        .flow-step.warning { border-left-color: #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Trace Data Flow - UpdatesManager Issue</h1>
+        <p>This tool traces the complete data flow from change detection to UpdatesManager to find where the data drops off.</p>
+        
+        <div class="section">
+            <h3>Data Flow Trace</h3>
+            <button onclick="traceCompleteFlow()">Trace Complete Data Flow</button>
+            <button onclick="testUpdatesManagerCreation()">Test UpdatesManager Creation</button>
+            <button onclick="testChangeDetection()">Test Change Detection</button>
+            <button onclick="testIntegration()">Test Integration</button>
+            <button onclick="simulateRealScenario()">Simulate Real Scenario</button>
+            <button onclick="clearLogs()">Clear Logs</button>
+        </div>
+        
+        <div class="section">
+            <h3>Flow Steps</h3>
+            <div id="flowSteps" class="test-results">
+                <div class="log-entry info">Click "Trace Complete Data Flow" to start tracing...</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>Console Logs</h3>
+            <div id="consoleLogs" class="test-results">
+                <div class="log-entry info">Console logs will appear here...</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>DOM Elements Check</h3>
+            <div id="domCheck" class="test-results">
+                <div class="log-entry info">DOM elements will be checked here...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load the same scripts as the main app -->
+    <script src="../js/interfaces.js"></script>
+    <script src="../js/interfaces/app-interfaces.js"></script>
+    <script src="../js/config-manager.js"></script>
+    <script src="../js/utils/cache-utils.js"></script>
+    <script src="../js/utils/sanitizer.js"></script>
+    <script src="../js/storage/local-storage.js"></script>
+    <script src="../js/fetchers/http-fetcher.js"></script>
+    <script src="../js/renderers/incident-renderer.js"></script>
+    <script src="../js/strategies/filter-strategies.js"></script>
+    <script src="../js/services/incident-data-service.js"></script>
+    <script src="../js/services/incident-comparison-service.js"></script>
+    <script src="../js/services/incident-time-service.js"></script>
+    <script src="../js/services/incident-realtime-service.js"></script>
+    <script src="../js/services/incident-service.js"></script>
+    <script src="../js/services/multi-center-service.js"></script>
+    <script src="../js/services/delta-service.js"></script>
+    <script src="../js/services/filter-service.js"></script>
+    <script src="../js/services/updates-manager.js"></script>
+    <script src="../js/modules/copy-to-clipboard.js"></script>
+    <script src="../js/containers/dependency-container.js"></script>
+    <script src="../js/controllers/app-controller.js"></script>
+    <script src="../js/ui-controller.js"></script>
+
+    <script>
+        let updatesManager = null;
+        let deltaService = null;
+        let appController = null;
+        let originalConsoleLog = console.log;
+        let originalConsoleError = console.error;
+        let originalConsoleWarn = console.warn;
+        
+        // Capture console logs
+        function captureConsole() {
+            console.log = function(...args) {
+                originalConsoleLog.apply(console, args);
+                logToDisplay('LOG', args.join(' '));
+            };
+            console.error = function(...args) {
+                originalConsoleError.apply(console, args);
+                logToDisplay('ERROR', args.join(' '));
+            };
+            console.warn = function(...args) {
+                originalConsoleWarn.apply(console, args);
+                logToDisplay('WARN', args.join(' '));
+            };
+        }
+        
+        function logToDisplay(level, message) {
+            const logDiv = document.getElementById('consoleLogs');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${level.toLowerCase()}`;
+            entry.textContent = `[${level}] ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+        
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('flowSteps');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+        
+        function clearLogs() {
+            document.getElementById('flowSteps').innerHTML = '';
+            document.getElementById('consoleLogs').innerHTML = '';
+            document.getElementById('domCheck').innerHTML = '';
+        }
+        
+        function addFlowStep(step, status, details = '') {
+            const container = document.getElementById('flowSteps');
+            const stepDiv = document.createElement('div');
+            stepDiv.className = `flow-step ${status}`;
+            stepDiv.innerHTML = `
+                <strong>${step}</strong>
+                ${details ? `<br><small>${details}</small>` : ''}
+            `;
+            container.appendChild(stepDiv);
+        }
+        
+        async function traceCompleteFlow() {
+            clearLogs();
+            log('Starting complete data flow trace...', 'info');
+            captureConsole();
+            
+            try {
+                // Step 1: Test UpdatesManager Creation
+                addFlowStep('Step 1: UpdatesManager Creation', 'info');
+                await testUpdatesManagerCreation();
+                
+                // Step 2: Test Change Detection
+                addFlowStep('Step 2: Change Detection', 'info');
+                await testChangeDetection();
+                
+                // Step 3: Test Integration
+                addFlowStep('Step 3: Integration Test', 'info');
+                await testIntegration();
+                
+                // Step 4: Test DOM Elements
+                addFlowStep('Step 4: DOM Elements Check', 'info');
+                checkDOMElements();
+                
+                // Step 5: Simulate Real Scenario
+                addFlowStep('Step 5: Real Scenario Simulation', 'info');
+                await simulateRealScenario();
+                
+                log('Complete data flow trace finished', 'success');
+                
+            } catch (error) {
+                log(`Data flow trace failed: ${error.message}`, 'error');
+                addFlowStep('ERROR: Data flow trace failed', 'error', error.message);
+            }
+        }
+        
+        async function testUpdatesManagerCreation() {
+            log('Testing UpdatesManager creation...', 'info');
+            
+            try {
+                // Create a mock delta service
+                const mockDeltaService = {
+                    setUpdatesManager: function(manager) {
+                        this.updatesManager = manager;
+                        log('DeltaService.setUpdatesManager called', 'success');
+                    }
+                };
+                
+                updatesManager = new UpdatesManager(mockDeltaService);
+                log('UpdatesManager created successfully', 'success');
+                addFlowStep('UpdatesManager Creation', 'success', 'UpdatesManager instance created');
+                
+                // Check if updates section was created
+                const updatesSection = document.getElementById('updatesSection');
+                if (updatesSection) {
+                    log('Updates section found in DOM', 'success');
+                    addFlowStep('Updates Section Creation', 'success', 'Updates section found in DOM');
+                } else {
+                    log('Updates section NOT found in DOM', 'error');
+                    addFlowStep('Updates Section Creation', 'error', 'Updates section NOT found in DOM');
+                }
+                
+                return true;
+                
+            } catch (error) {
+                log(`UpdatesManager creation failed: ${error.message}`, 'error');
+                addFlowStep('UpdatesManager Creation', 'error', error.message);
+                return false;
+            }
+        }
+        
+        async function testChangeDetection() {
+            log('Testing change detection system...', 'info');
+            
+            try {
+                // Create test incidents
+                const oldIncidents = [
+                    {
+                        id: 'INC001',
+                        type: 'Traffic Collision',
+                        location: 'I-5 N at Main St',
+                        time: '2:30 PM'
+                    }
+                ];
+                
+                const newIncidents = [
+                    {
+                        id: 'INC001',
+                        type: 'Traffic Collision',
+                        location: 'I-5 N at Main St',
+                        time: '2:30 PM'
+                    },
+                    {
+                        id: 'INC002',
+                        type: 'Car Fire',
+                        location: 'I-405 S at Sunset Blvd',
+                        time: '3:00 PM'
+                    }
+                ];
+                
+                // Test comparison service
+                const config = new ConfigManager();
+                const timeService = new IncidentTimeService();
+                const comparisonService = new IncidentComparisonService(timeService, config);
+                
+                const comparison = comparisonService.compareIncidents(oldIncidents, newIncidents);
+                
+                log(`Change detection found ${comparison.differences.length} differences`, 'info');
+                
+                if (comparison.hasChanges) {
+                    log('Changes detected successfully', 'success');
+                    addFlowStep('Change Detection', 'success', `Found ${comparison.differences.length} changes`);
+                    return comparison.differences;
+                } else {
+                    log('No changes detected', 'warning');
+                    addFlowStep('Change Detection', 'warning', 'No changes detected');
+                    return [];
+                }
+                
+            } catch (error) {
+                log(`Change detection failed: ${error.message}`, 'error');
+                addFlowStep('Change Detection', 'error', error.message);
+                return [];
+            }
+        }
+        
+        async function testIntegration() {
+            log('Testing integration between change detection and UpdatesManager...', 'info');
+            
+            try {
+                if (!updatesManager) {
+                    log('UpdatesManager not available', 'error');
+                    addFlowStep('Integration Test', 'error', 'UpdatesManager not available');
+                    return false;
+                }
+                
+                // Simulate the AppController flow
+                const oldIncidents = [
+                    { id: 'OLD001', type: 'Test', location: 'Old Location', time: '2:00 PM' }
+                ];
+                
+                const newIncidents = [
+                    { id: 'OLD001', type: 'Test', location: 'Old Location', time: '2:00 PM' },
+                    { id: 'NEW001', type: 'New Incident', location: 'New Location', time: '3:00 PM' }
+                ];
+                
+                // This is what the fixed AppController now does
+                const config = new ConfigManager();
+                const incidentService = new IncidentService(null, null, config);
+                
+                const comparison = incidentService.compareIncidents(oldIncidents, newIncidents);
+                
+                if (comparison.hasChanges) {
+                    const recentDifferences = incidentService.filterRecentDifferences(comparison.differences);
+                    
+                    log(`Found ${recentDifferences.length} recent differences`, 'info');
+                    
+                    // This is the NEW code that was added to AppController
+                    if (updatesManager && recentDifferences.length > 0) {
+                        log('Notifying UpdatesManager about changes...', 'info');
+                        recentDifferences.forEach(diff => {
+                            updatesManager.addChange({
+                                type: diff.type,
+                                incident: diff.incident,
+                                timestamp: Date.now(),
+                                details: `Detected via change detection system`
+                            });
+                        });
+                        
+                        const changesCount = updatesManager.getChangesCount();
+                        log(`UpdatesManager now has ${changesCount} changes`, 'success');
+                        addFlowStep('Integration Test', 'success', `UpdatesManager received ${changesCount} changes`);
+                        return true;
+                    } else {
+                        log('UpdatesManager not available or no changes to process', 'error');
+                        addFlowStep('Integration Test', 'error', 'UpdatesManager not available or no changes');
+                        return false;
+                    }
+                } else {
+                    log('No changes to process', 'warning');
+                    addFlowStep('Integration Test', 'warning', 'No changes to process');
+                    return false;
+                }
+                
+            } catch (error) {
+                log(`Integration test failed: ${error.message}`, 'error');
+                addFlowStep('Integration Test', 'error', error.message);
+                return false;
+            }
+        }
+        
+        function checkDOMElements() {
+            log('Checking DOM elements...', 'info');
+            
+            const elements = [
+                'updatesSection',
+                'updatesContainer',
+                'differencesSection',
+                'differencesContainer',
+                'incidentsContainer',
+                'controls',
+                'status'
+            ];
+            
+            elements.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    log(`✅ Found element: ${id}`, 'success');
+                    addFlowStep(`DOM Element: ${id}`, 'success', 'Element found');
+                } else {
+                    log(`❌ Missing element: ${id}`, 'error');
+                    addFlowStep(`DOM Element: ${id}`, 'error', 'Element NOT found');
+                }
+            });
+            
+            // Check if updates section is visible
+            const updatesSection = document.getElementById('updatesSection');
+            if (updatesSection) {
+                const isVisible = updatesSection.style.display !== 'none' && updatesSection.offsetParent !== null;
+                log(`Updates section visible: ${isVisible}`, isVisible ? 'success' : 'warning');
+                addFlowStep('Updates Section Visibility', isVisible ? 'success' : 'warning', 
+                    isVisible ? 'Section is visible' : 'Section is hidden');
+            }
+        }
+        
+        async function simulateRealScenario() {
+            log('Simulating real scenario with multiple changes...', 'info');
+            
+            try {
+                if (!updatesManager) {
+                    log('UpdatesManager not available', 'error');
+                    addFlowStep('Real Scenario', 'error', 'UpdatesManager not available');
+                    return;
+                }
+                
+                // Simulate a realistic scenario
+                const oldIncidents = [
+                    { id: 'INC001', type: 'Traffic Collision', location: 'I-5 N at Main St', time: '2:30 PM' },
+                    { id: 'INC002', type: 'Traffic Hazard', location: 'I-10 E at Exit 15', time: '2:45 PM' }
+                ];
+                
+                const newIncidents = [
+                    { id: 'INC001', type: 'Traffic Collision', location: 'I-5 N at Main St', time: '2:30 PM' },
+                    { id: 'INC002', type: 'Traffic Hazard', location: 'I-10 E at Exit 15', time: '2:45 PM' },
+                    { id: 'INC003', type: 'Car Fire', location: 'I-405 S at Sunset Blvd', time: '3:00 PM' },
+                    { id: 'INC004', type: 'Traffic Collision', location: 'I-101 N at Ventura Blvd', time: '3:15 PM' }
+                ];
+                
+                // Simulate the AppController flow
+                const config = new ConfigManager();
+                const incidentService = new IncidentService(null, null, config);
+                
+                const comparison = incidentService.compareIncidents(oldIncidents, newIncidents);
+                
+                if (comparison.hasChanges) {
+                    const recentDifferences = incidentService.filterRecentDifferences(comparison.differences);
+                    
+                    log(`Detected ${recentDifferences.length} changes in real scenario`, 'info');
+                    
+                    // Apply the fix - notify UpdatesManager
+                    if (updatesManager && recentDifferences.length > 0) {
+                        log('Applying fix: Notifying UpdatesManager...', 'info');
+                        recentDifferences.forEach((diff, index) => {
+                            updatesManager.addChange({
+                                type: diff.type,
+                                incident: diff.incident,
+                                timestamp: Date.now() - (index * 30000), // Stagger timestamps
+                                details: `Detected via change detection system (fix applied)`
+                            });
+                            log(`Added ${diff.type} change: ${diff.incident.type}`, 'success');
+                        });
+                        
+                        const changesCount = updatesManager.getChangesCount();
+                        log(`UpdatesManager now has ${changesCount} total changes`, 'success');
+                        addFlowStep('Real Scenario', 'success', `UpdatesManager has ${changesCount} changes`);
+                        
+                        // Check if updates section is visible and populated
+                        const updatesSection = document.getElementById('updatesSection');
+                        if (updatesSection) {
+                            const updatesContainer = document.getElementById('updatesContainer');
+                            if (updatesContainer) {
+                                const updateItems = updatesContainer.querySelectorAll('.update-item');
+                                log(`Updates container has ${updateItems.length} update items`, 'success');
+                                addFlowStep('Updates Rendering', 'success', `${updateItems.length} update items rendered`);
+                            } else {
+                                log('Updates container not found', 'error');
+                                addFlowStep('Updates Rendering', 'error', 'Updates container not found');
+                            }
+                        } else {
+                            log('Updates section not found', 'error');
+                            addFlowStep('Updates Rendering', 'error', 'Updates section not found');
+                        }
+                    }
+                } else {
+                    log('No changes detected in real scenario', 'warning');
+                    addFlowStep('Real Scenario', 'warning', 'No changes detected');
+                }
+                
+            } catch (error) {
+                log(`Real scenario test failed: ${error.message}`, 'error');
+                addFlowStep('Real Scenario', 'error', error.message);
+            }
+        }
+        
+        // Initialize on page load
+        window.addEventListener('load', () => {
+            log('Data flow trace tool loaded successfully', 'success');
+        });
+    </script>
+</body>
+</html>
