@@ -55,6 +55,7 @@ class AppController {
             this.setupFilterListener();
 
             console.log('🔧 Setting up updates manager...');
+            console.log('🔧 UpdatesManager instance:', this.updatesManager);
             // Connect UpdatesManager to DeltaService
             this.deltaService.setUpdatesManager(this.updatesManager);
 

@@ -22,9 +22,13 @@ class UpdatesManager {
     }
     
     initializeUI() {
+        console.log('🔧 UpdatesManager: Initializing UI...');
         // Create updates section if it doesn't exist
         if (!document.getElementById('updatesSection')) {
+            console.log('🔧 UpdatesManager: Creating updates section...');
             this.createUpdatesSection();
+        } else {
+            console.log('🔧 UpdatesManager: Updates section already exists');
         }
     }
     
@@ -32,8 +36,14 @@ class UpdatesManager {
         const controlsDiv = document.querySelector('.controls');
         const statusDiv = document.querySelector('.status');
         
+        console.log('🔧 UpdatesManager: Looking for controls and status divs...');
+        console.log('🔧 Controls div found:', !!controlsDiv);
+        console.log('🔧 Status div found:', !!statusDiv);
+        
         if (!controlsDiv || !statusDiv) {
             console.error('Could not find controls or status div for updates section');
+            console.error('Controls div:', controlsDiv);
+            console.error('Status div:', statusDiv);
             return;
         }
         
