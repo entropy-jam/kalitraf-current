@@ -43,9 +43,19 @@ class FilterService {
     }
     
     initializeFilters() {
-        // Set all filters as active by default
+        // Set most filters as active by default, except for specified ones
+        const defaultUnchecked = [
+            'filter-animal-hazard',
+            'filter-weather', 
+            'filter-escort',
+            'filter-fire-report',
+            'filter-sigalert'
+        ];
+        
         this.filterStrategies.forEach((strategy, filterId) => {
-            this.activeFilters.add(filterId);
+            if (!defaultUnchecked.includes(filterId)) {
+                this.activeFilters.add(filterId);
+            }
         });
     }
     
