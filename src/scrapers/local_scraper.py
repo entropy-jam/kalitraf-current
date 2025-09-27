@@ -13,9 +13,8 @@ import os
 # Add src to path for imports
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from core.webdriver_manager import WebDriverManager
-from core.incident_extractor import IncidentExtractor
 from core.data_manager import DataManager
+from scrapers.http_scraper import HTTPScraper
 from core.email_notifier import EmailNotifier
 
 def setup_logging():
@@ -74,21 +73,19 @@ def send_email_alert(changes, center_code, center_name):
         return False
 
 def scrape_once(center_code="BCCC"):
-    """Perform a single scrape"""
-    webdriver_manager = WebDriverManager(mode="local")
+    """Perform a single scrape using HTTP requests"""
     data_manager = DataManager(center_code)
+    http_scraper = HTTPScraper(mode="local")
     
     try:
-        driver = webdriver_manager.get_driver()
-        
         # Load previous incidents for smart processing
         previous_incidents = data_manager.load_previous_incidents()
-        extractor = IncidentExtractor(driver, center_code, previous_incidents)
         
-        # Extract incidents
-        incidents_data = extractor.extract_incidents()
+        # Extract incidents using HTTP scraper
+        result = http_scraper.scrape_center_sync(center_code, previous_incidents)
         
-        if incidents_data:
+        if result['status'] == 'success' and result['incidents']:
+            incidents_data = result['incidents']
             # Compare with previous incidents
             changes = data_manager.compare_incidents(incidents_data)
             
@@ -139,9 +136,6 @@ def scrape_once(center_code="BCCC"):
             print(f"\n🕐 [{datetime.now().strftime('%H:%M:%S')}] No incidents found for {center_code} center.")
         
         return incidents_data
-        
-    finally:
-        webdriver_manager.close()
 
 def main():
     """Main function for local scraper"""

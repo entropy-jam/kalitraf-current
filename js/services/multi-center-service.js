@@ -8,7 +8,11 @@ class MultiCenterService {
         this.fetcher = fetcher;
         this.storage = storage;
         this.config = config;
-        this.availableCenters = ['BCCC', 'LACC', 'SACC', 'OCCC'];
+        this.availableCenters = [
+            'BFCC', 'BSCC', 'BICC', 'BCCC', 'CCCC', 'CHCC', 'ECCC', 'FRCC', 'GGCC', 'HMCC',
+            'ICCC', 'INCC', 'LACC', 'MRCC', 'MYCC', 'OCCC', 'RDCC', 'SACC', 'SLCC', 'SKCCSTCC',
+            'SUCC', 'TKCC', 'UKCC', 'VTCC', 'YKCC'
+        ];
         this.selectedCenters = ['BCCC']; // Default to BCCC for backward compatibility
     }
 
@@ -230,7 +234,7 @@ class MultiCenterService {
             "LACC": "Los Angeles",
             "MRCC": "Merced",
             "MYCC": "Monterey",
-            "OCCC": "Orange",
+            "OCCC": "Orange County",
             "RDCC": "Redding",
             "SACC": "Sacramento",
             "SLCC": "San Luis Obispo",

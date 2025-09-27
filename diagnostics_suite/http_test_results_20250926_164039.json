@@ -1,0 +1,199 @@
+{
+  "test_summary": {
+    "total_centers": 25,
+    "successful_tests": 25,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "total_incidents_found": 184,
+    "average_response_time": 1.1009956645965575,
+    "test_timestamp": "2025-09-26T16:40:39.726837"
+  },
+  "successful_centers": [
+    {
+      "center_code": "BFCC",
+      "center_name": "Bakersfield",
+      "incident_count": 1,
+      "response_time": 0.6345040798187256,
+      "details_links_working": true
+    },
+    {
+      "center_code": "BSCC",
+      "center_name": "Barstow",
+      "incident_count": 4,
+      "response_time": 0.5997447967529297,
+      "details_links_working": true
+    },
+    {
+      "center_code": "BICC",
+      "center_name": "Bishop",
+      "incident_count": 5,
+      "response_time": 0.642031192779541,
+      "details_links_working": true
+    },
+    {
+      "center_code": "BCCC",
+      "center_name": "Border",
+      "incident_count": 14,
+      "response_time": 0.6258358955383301,
+      "details_links_working": true
+    },
+    {
+      "center_code": "CCCC",
+      "center_name": "Capitol",
+      "incident_count": 0,
+      "response_time": 0.5832152366638184,
+      "details_links_working": false
+    },
+    {
+      "center_code": "CHCC",
+      "center_name": "Chico",
+      "incident_count": 4,
+      "response_time": 0.7928907871246338,
+      "details_links_working": true
+    },
+    {
+      "center_code": "ECCC",
+      "center_name": "El Centro",
+      "incident_count": 1,
+      "response_time": 0.8946781158447266,
+      "details_links_working": true
+    },
+    {
+      "center_code": "FRCC",
+      "center_name": "Fresno",
+      "incident_count": 3,
+      "response_time": 0.9063320159912109,
+      "details_links_working": true
+    },
+    {
+      "center_code": "GGCC",
+      "center_name": "Golden Gate",
+      "incident_count": 23,
+      "response_time": 0.9225668907165527,
+      "details_links_working": true
+    },
+    {
+      "center_code": "HMCC",
+      "center_name": "Humboldt",
+      "incident_count": 4,
+      "response_time": 0.9319119453430176,
+      "details_links_working": true
+    },
+    {
+      "center_code": "ICCC",
+      "center_name": "Indio",
+      "incident_count": 3,
+      "response_time": 1.0544230937957764,
+      "details_links_working": true
+    },
+    {
+      "center_code": "INCC",
+      "center_name": "Inland",
+      "incident_count": 10,
+      "response_time": 1.0956170558929443,
+      "details_links_working": true
+    },
+    {
+      "center_code": "LACC",
+      "center_name": "Los Angeles",
+      "incident_count": 53,
+      "response_time": 1.1634559631347656,
+      "details_links_working": true
+    },
+    {
+      "center_code": "MRCC",
+      "center_name": "Merced",
+      "incident_count": 7,
+      "response_time": 1.1229369640350342,
+      "details_links_working": true
+    },
+    {
+      "center_code": "MYCC",
+      "center_name": "Monterey",
+      "incident_count": 5,
+      "response_time": 1.1323039531707764,
+      "details_links_working": true
+    },
+    {
+      "center_code": "OCCC",
+      "center_name": "Orange",
+      "incident_count": 9,
+      "response_time": 1.2815051078796387,
+      "details_links_working": true
+    },
+    {
+      "center_code": "RDCC",
+      "center_name": "Redding",
+      "incident_count": 1,
+      "response_time": 1.2647502422332764,
+      "details_links_working": true
+    },
+    {
+      "center_code": "SACC",
+      "center_name": "Sacramento",
+      "incident_count": 16,
+      "response_time": 1.3107941150665283,
+      "details_links_working": true
+    },
+    {
+      "center_code": "SLCC",
+      "center_name": "San Luis Obispo",
+      "incident_count": 2,
+      "response_time": 1.3179359436035156,
+      "details_links_working": true
+    },
+    {
+      "center_code": "SKCCSTCC",
+      "center_name": "Stockton",
+      "incident_count": 3,
+      "response_time": 1.4169831275939941,
+      "details_links_working": true
+    },
+    {
+      "center_code": "SUCC",
+      "center_name": "Susanville",
+      "incident_count": 2,
+      "response_time": 1.5166339874267578,
+      "details_links_working": true
+    },
+    {
+      "center_code": "TKCC",
+      "center_name": "Truckee",
+      "incident_count": 3,
+      "response_time": 1.5245158672332764,
+      "details_links_working": true
+    },
+    {
+      "center_code": "UKCC",
+      "center_name": "Ukiah",
+      "incident_count": 4,
+      "response_time": 1.5872251987457275,
+      "details_links_working": true
+    },
+    {
+      "center_code": "VTCC",
+      "center_name": "Ventura",
+      "incident_count": 5,
+      "response_time": 1.5969879627227783,
+      "details_links_working": true
+    },
+    {
+      "center_code": "YKCC",
+      "center_name": "Yreka",
+      "incident_count": 2,
+      "response_time": 1.605112075805664,
+      "details_links_working": true
+    }
+  ],
+  "failed_centers": [],
+  "performance_analysis": {
+    "fastest_center": "CCCC",
+    "slowest_center": "YKCC",
+    "most_incidents": "LACC",
+    "least_incidents": "CCCC"
+  },
+  "details_links_analysis": {
+    "centers_with_working_details": 24,
+    "centers_without_working_details": 1
+  }
+}

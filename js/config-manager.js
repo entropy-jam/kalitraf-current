@@ -16,7 +16,12 @@ class ConfigManager extends IConfigManager {
             differencesTimeWindow: 5 * 60 * 1000, // 5 minutes
             notificationDuration: 3000, // 3 seconds
             debounceDelay: 300, // 300ms
-            defaultCenter: 'BCCC'
+            defaultCenter: 'BCCC',
+            availableCenters: [
+                'BFCC', 'BSCC', 'BICC', 'BCCC', 'CCCC', 'CHCC', 'ECCC', 'FRCC', 'GGCC', 'HMCC',
+                'ICCC', 'INCC', 'LACC', 'MRCC', 'MYCC', 'OCCC', 'RDCC', 'SACC', 'SLCC', 'SKCCSTCC',
+                'SUCC', 'TKCC', 'UKCC', 'VTCC', 'YKCC'
+            ]
         };
     }
 

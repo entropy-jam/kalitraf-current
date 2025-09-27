@@ -16,10 +16,9 @@ from typing import Dict, List, Any
 # Add src to path for imports
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from core.webdriver_manager import WebDriverManager
-from core.incident_extractor import IncidentExtractor
 from core.data_manager import DataManager
 from core.email_notifier import EmailNotifier
+from scrapers.http_scraper import HTTPScraper
 
 class RailwayWebSocketServer:
     """Built-in WebSocket server for Railway deployment"""
@@ -172,19 +171,46 @@ class RailwayWebSocketServer:
         print(f"✅ WebSocket server running on ws://0.0.0.0:{self.port}/ws")
 
 class ContinuousRailwayScraper:
-    """Continuous scraper for Railway deployment"""
+    """Continuous scraper for Railway deployment using HTTP requests"""
     
     def __init__(self):
-        self.centers = ['BCCC', 'LACC', 'OCCC', 'SACC']
+        # All 25 CHP communication centers
+        self.centers = [
+            'BFCC', 'BSCC', 'BICC', 'BCCC', 'CCCC', 'CHCC', 'ECCC', 'FRCC', 'GGCC', 'HMCC',
+            'ICCC', 'INCC', 'LACC', 'MRCC', 'MYCC', 'OCCC', 'RDCC', 'SACC', 'SLCC', 'SKCCSTCC',
+            'SUCC', 'TKCC', 'UKCC', 'VTCC', 'YKCC'
+        ]
         self.center_info = {
+            'BFCC': {'name': 'Bakersfield', 'channel': 'chp-incidents-bfcc'},
+            'BSCC': {'name': 'Barstow', 'channel': 'chp-incidents-bscc'},
+            'BICC': {'name': 'Bishop', 'channel': 'chp-incidents-bicc'},
             'BCCC': {'name': 'Border', 'channel': 'chp-incidents-bccc'},
+            'CCCC': {'name': 'Capitol', 'channel': 'chp-incidents-cccc'},
+            'CHCC': {'name': 'Chico', 'channel': 'chp-incidents-chcc'},
+            'ECCC': {'name': 'El Centro', 'channel': 'chp-incidents-eccc'},
+            'FRCC': {'name': 'Fresno', 'channel': 'chp-incidents-frcc'},
+            'GGCC': {'name': 'Golden Gate', 'channel': 'chp-incidents-ggcc'},
+            'HMCC': {'name': 'Humboldt', 'channel': 'chp-incidents-hmcc'},
+            'ICCC': {'name': 'Indio', 'channel': 'chp-incidents-iccc'},
+            'INCC': {'name': 'Inland', 'channel': 'chp-incidents-incc'},
             'LACC': {'name': 'Los Angeles', 'channel': 'chp-incidents-lacc'},
+            'MRCC': {'name': 'Merced', 'channel': 'chp-incidents-mrcc'},
+            'MYCC': {'name': 'Monterey', 'channel': 'chp-incidents-mycc'},
             'OCCC': {'name': 'Orange County', 'channel': 'chp-incidents-occc'},
-            'SACC': {'name': 'Sacramento', 'channel': 'chp-incidents-sacc'}
+            'RDCC': {'name': 'Redding', 'channel': 'chp-incidents-rdcc'},
+            'SACC': {'name': 'Sacramento', 'channel': 'chp-incidents-sacc'},
+            'SLCC': {'name': 'San Luis Obispo', 'channel': 'chp-incidents-slcc'},
+            'SKCCSTCC': {'name': 'Stockton', 'channel': 'chp-incidents-skccstcc'},
+            'SUCC': {'name': 'Susanville', 'channel': 'chp-incidents-succ'},
+            'TKCC': {'name': 'Truckee', 'channel': 'chp-incidents-tkcc'},
+            'UKCC': {'name': 'Ukiah', 'channel': 'chp-incidents-ukcc'},
+            'VTCC': {'name': 'Ventura', 'channel': 'chp-incidents-vtcc'},
+            'YKCC': {'name': 'Yreka', 'channel': 'chp-incidents-ykcc'}
         }
         self.websocket_server = RailwayWebSocketServer()
         self.scrape_interval = 5  # 5-second intervals
         self.is_running = False
+        self.http_scraper = HTTPScraper(mode="railway")
         
         # Setup logging
         logging.basicConfig(
@@ -193,22 +219,21 @@ class ContinuousRailwayScraper:
         )
     
     async def scrape_center(self, center_code: str) -> Dict[str, Any]:
-        """Scrape a single communication center"""
+        """Scrape a single communication center using HTTP requests"""
         try:
             print(f"🔄 Scraping {center_code} ({self.center_info[center_code]['name']})...")
             
-            # Initialize scraper components
-            webdriver_manager = WebDriverManager(mode="railway")
+            # Initialize data manager
             data_manager = DataManager(center_code)
-            
-            # Get driver and extract incidents
-            driver = webdriver_manager.get_driver()
             previous_incidents = data_manager.load_previous_incidents()
             
-            extractor = IncidentExtractor(driver, center_code, previous_incidents)
-            incidents_data = extractor.extract_incidents()
+            # Use HTTP scraper
+            result = self.http_scraper.scrape_center_sync(center_code, previous_incidents)
             
-            if incidents_data:
+            if result['status'] == 'success' and result['incidents']:
+                # Convert to the format expected by data_manager
+                incidents_data = result['incidents']
+                
                 # Compare with previous incidents
                 changes = data_manager.compare_incidents(incidents_data)
                 has_changes = (len(changes.get('new_incidents', [])) > 0 or 
@@ -259,36 +284,67 @@ class ContinuousRailwayScraper:
                 'timestamp': datetime.now().isoformat(),
                 'status': 'error'
             }
-        finally:
-            try:
-                driver.quit()
-            except:
-                pass
     
     async def scrape_all_centers(self) -> List[Dict[str, Any]]:
-        """Scrape all communication centers in parallel"""
-        print(f"🚀 Starting parallel scrape of {len(self.centers)} centers...")
+        """Scrape all communication centers using async HTTP requests"""
+        print(f"🚀 Starting parallel HTTP scrape of {len(self.centers)} centers...")
         
-        # Create tasks for parallel execution
-        tasks = [self.scrape_center(center) for center in self.centers]
+        # Use HTTP scraper for async parallel processing
+        results = await self.http_scraper.scrape_all_centers_async(self.centers)
         
-        # Execute all tasks in parallel
-        results = await asyncio.gather(*tasks, return_exceptions=True)
-        
-        # Process results
+        # Process results to match expected format
         processed_results = []
-        for i, result in enumerate(results):
-            if isinstance(result, Exception):
-                center = self.centers[i]
-                processed_results.append({
-                    'center': center,
-                    'centerName': self.center_info[center]['name'],
-                    'error': str(result),
+        for result in results:
+            if result['status'] == 'success':
+                # Convert to the format expected by data_manager
+                center_code = result['center']
+                data_manager = DataManager(center_code)
+                previous_incidents = data_manager.load_previous_incidents()
+                
+                incidents_data = result['incidents']
+                
+                # Compare with previous incidents
+                changes = data_manager.compare_incidents(incidents_data)
+                has_changes = (len(changes.get('new_incidents', [])) > 0 or 
+                              len(changes.get('removed_incidents', [])) > 0)
+                
+                # Save data
+                file_updated = data_manager.save_active_incidents(incidents_data)
+                data_manager.save_delta_updates(changes)
+                data_manager.append_daily_incidents(incidents_data)
+                
+                # Update previous incidents
+                data_manager.update_previous_incidents(incidents_data)
+                
+                # Prepare WebSocket data
+                incidents_json = data_manager.incidents_to_json(incidents_data)
+                
+                processed_result = {
+                    'center': center_code,
+                    'centerName': self.center_info[center_code]['name'],
+                    'incidents': incidents_json['incidents'],
+                    'incidentCount': incidents_json['incident_count'],
                     'timestamp': datetime.now().isoformat(),
-                    'status': 'error'
-                })
+                    'hasChanges': has_changes,
+                    'changes': changes,
+                    'status': 'success'
+                }
+                
+                print(f"✅ {center_code}: {len(incidents_data)} incidents, {len(changes.get('new_incidents', []))} new")
             else:
-                processed_results.append(result)
+                processed_result = {
+                    'center': result['center'],
+                    'centerName': self.center_info[result['center']]['name'],
+                    'incidents': [],
+                    'incidentCount': 0,
+                    'timestamp': datetime.now().isoformat(),
+                    'hasChanges': False,
+                    'status': 'error',
+                    'error': result.get('error', 'Unknown error')
+                }
+                print(f"❌ {result['center']}: {result.get('error', 'Unknown error')}")
+            
+            processed_results.append(processed_result)
         
         return processed_results
     
@@ -319,6 +375,7 @@ class ContinuousRailwayScraper:
         print("🚀 Starting Continuous Railway Scraper")
         print(f"📡 Scraping {len(self.centers)} centers every {self.scrape_interval} seconds")
         print(f"🌐 WebSocket server will run on port {self.websocket_server.port}")
+        print(f"🎯 Centers: {', '.join(self.centers)}")
         
         # Start WebSocket server
         await self.websocket_server.start_server()

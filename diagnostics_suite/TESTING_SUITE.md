@@ -1,6 +1,6 @@
-# WebSocket Testing Suite
+# WebSocket & HTTP Testing Suite
 
-This directory contains tools and scripts for testing WebSocket connections in the CHP Traffic Monitor project.
+This directory contains tools and scripts for testing WebSocket connections and HTTP-based scraping in the CHP Traffic Monitor project.
 
 ## 📁 Files
 
@@ -11,6 +11,9 @@ This directory contains tools and scripts for testing WebSocket connections in t
 - **`app-diagnostic.js`** - Comprehensive application initialization diagnostic script
 - **`app-diagnostic-test.html`** - Interactive diagnostic page for testing application initialization
 - **`server-test.html`** - Comprehensive server-side functionality testing suite
+- **`http-scraper-test.py`** - HTTP-based scraper testing for all 25 communication centers
+- **`http-server-test.py`** - Production-like server testing and load testing
+- **`railway-http-diagnostic.py`** - Railway-specific HTTP testing through actual Railway deployment
 
 ### Documentation
 - **`WEBSOCKET_TROUBLESHOOTING.md`** - Comprehensive troubleshooting guide for WebSocket issues
@@ -44,6 +47,18 @@ Open `server-test.html` in your browser to run comprehensive server-side functio
 - WebSocket connection validation
 - Static file serving verification
 - Server performance measurement
+
+### 6. Test HTTP-Based Scraping
+```bash
+# Test all 25 communication centers with HTTP requests
+python http-scraper-test.py
+
+# Test production-like server conditions
+python http-server-test.py
+
+# Test HTTP requests through Railway deployment
+python railway-http-diagnostic.py
+```
 
 ## 🔧 Usage
 
@@ -81,6 +96,33 @@ Open `server-test.html` in your browser to run comprehensive server-side functio
 - Application controller status
 - Detailed error reporting
 - Export diagnostic results
+
+### HTTP Scraper Test (`http-scraper-test.py`)
+- Tests all 25 CHP communication centers with HTTP requests
+- Synchronous and asynchronous testing modes
+- Comprehensive incident parsing and validation
+- Details link functionality testing
+- Performance benchmarking
+- Migration viability assessment
+- Detailed JSON report generation
+
+### HTTP Server Test (`http-server-test.py`)
+- Production-like load testing
+- 25-center scalability testing
+- Rate limiting detection
+- Connection pooling optimization
+- Resource requirement estimation
+- Production readiness assessment
+- Scaling recommendations
+
+### Railway HTTP Diagnostic (`railway-http-diagnostic.py`)
+- Tests HTTP requests through actual Railway deployment
+- Railway environment connectivity testing
+- Railway-specific network conditions
+- Railway IP address testing
+- Railway resource constraints validation
+- Production deployment readiness assessment
+- Railway CLI integration testing
 
 ## 📊 Diagnostic Results
 

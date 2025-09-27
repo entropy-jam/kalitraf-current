@@ -13,10 +13,31 @@ const RAILWAY_CONFIG = {
     maxReconnectAttempts: 10
   },
   centers: {
+    BFCC: { name: 'Bakersfield', channel: 'chp-incidents-bfcc' },
+    BSCC: { name: 'Barstow', channel: 'chp-incidents-bscc' },
+    BICC: { name: 'Bishop', channel: 'chp-incidents-bicc' },
     BCCC: { name: 'Border', channel: 'chp-incidents-bccc' },
+    CCCC: { name: 'Capitol', channel: 'chp-incidents-cccc' },
+    CHCC: { name: 'Chico', channel: 'chp-incidents-chcc' },
+    ECCC: { name: 'El Centro', channel: 'chp-incidents-eccc' },
+    FRCC: { name: 'Fresno', channel: 'chp-incidents-frcc' },
+    GGCC: { name: 'Golden Gate', channel: 'chp-incidents-ggcc' },
+    HMCC: { name: 'Humboldt', channel: 'chp-incidents-hmcc' },
+    ICCC: { name: 'Indio', channel: 'chp-incidents-iccc' },
+    INCC: { name: 'Inland', channel: 'chp-incidents-incc' },
     LACC: { name: 'Los Angeles', channel: 'chp-incidents-lacc' },
+    MRCC: { name: 'Merced', channel: 'chp-incidents-mrcc' },
+    MYCC: { name: 'Monterey', channel: 'chp-incidents-mycc' },
     OCCC: { name: 'Orange County', channel: 'chp-incidents-occc' },
-    SACC: { name: 'Sacramento', channel: 'chp-incidents-sacc' }
+    RDCC: { name: 'Redding', channel: 'chp-incidents-rdcc' },
+    SACC: { name: 'Sacramento', channel: 'chp-incidents-sacc' },
+    SLCC: { name: 'San Luis Obispo', channel: 'chp-incidents-slcc' },
+    SKCCSTCC: { name: 'Stockton', channel: 'chp-incidents-skccstcc' },
+    SUCC: { name: 'Susanville', channel: 'chp-incidents-succ' },
+    TKCC: { name: 'Truckee', channel: 'chp-incidents-tkcc' },
+    UKCC: { name: 'Ukiah', channel: 'chp-incidents-ukcc' },
+    VTCC: { name: 'Ventura', channel: 'chp-incidents-vtcc' },
+    YKCC: { name: 'Yreka', channel: 'chp-incidents-ykcc' }
   }
 };
 
