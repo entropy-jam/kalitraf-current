@@ -237,24 +237,6 @@ class SurfaceStreetFilterStrategy extends IFilterStrategy {
     }
 }
 
-// Area Filter Strategy
-class AreaFilterStrategy extends IFilterStrategy {
-    constructor(areas) {
-        super();
-        this.areas = areas || [];
-    }
-    
-    shouldInclude(incident) {
-        const area = incident.area || '';
-        return this.areas.some(targetArea => 
-            area.toLowerCase().includes(targetArea.toLowerCase())
-        );
-    }
-    
-    getName() {
-        return 'AreaFilter';
-    }
-}
 
 // Export strategies
 window.IFilterStrategy = IFilterStrategy;
@@ -265,4 +247,3 @@ window.SeverityFilterStrategy = SeverityFilterStrategy;
 window.CompositeFilterStrategy = CompositeFilterStrategy;
 window.HighwayFilterStrategy = HighwayFilterStrategy;
 window.SurfaceStreetFilterStrategy = SurfaceStreetFilterStrategy;
-window.AreaFilterStrategy = AreaFilterStrategy;
