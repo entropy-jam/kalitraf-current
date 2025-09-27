@@ -9,6 +9,7 @@ class DeltaService {
         this.lastDeltaTimestamp = null;
         this.deltaCheckInterval = 10000; // Check for deltas every 10 seconds
         this.isProcessing = false;
+        this.updatesManager = null; // Will be set by AppController
     }
 
     /**
@@ -109,6 +110,15 @@ class DeltaService {
                     element.remove();
                 }, 300);
             }
+            
+            // Notify UpdatesManager about removed incident
+            if (this.updatesManager) {
+                this.updatesManager.addChange({
+                    type: 'removed',
+                    incident: incident,
+                    timestamp: Date.now()
+                });
+            }
         });
     }
 
@@ -124,6 +134,15 @@ class DeltaService {
             const element = this.createIncidentElement(incident);
             element.classList.add('new'); // Mark as new for animation
             container.insertBefore(element, container.firstChild);
+            
+            // Notify UpdatesManager about new incident
+            if (this.updatesManager) {
+                this.updatesManager.addChange({
+                    type: 'new',
+                    incident: incident,
+                    timestamp: Date.now()
+                });
+            }
         });
     }
 
@@ -164,6 +183,14 @@ class DeltaService {
             const incidents = container.querySelectorAll('.incident:not(.virtual-scroll-item)');
             countElement.textContent = `${incidents.length} incidents`;
         }
+    }
+
+    /**
+     * Set the UpdatesManager reference
+     * @param {UpdatesManager} updatesManager - UpdatesManager instance
+     */
+    setUpdatesManager(updatesManager) {
+        this.updatesManager = updatesManager;
     }
 
     /**

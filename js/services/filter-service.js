@@ -23,6 +23,7 @@ class FilterService {
         this.filterStrategies.set('filter-hitrun', new IncidentTypeFilterStrategy(['Hit and Run', 'Hit & Run']));
         this.filterStrategies.set('filter-sigalert', new IncidentTypeFilterStrategy(['SIG Alert', 'Sig Alert']));
         this.filterStrategies.set('filter-fire-report', new IncidentTypeFilterStrategy(['Report of Fire', 'Fire Report']));
+        this.filterStrategies.set('filter-animal-hazard', new IncidentTypeFilterStrategy(['Animal Hazard', 'Animal', 'Wildlife']));
         
         // Add strategies to composite
         this.filterStrategies.forEach(strategy => {

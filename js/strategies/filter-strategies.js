@@ -138,7 +138,7 @@ class SeverityFilterStrategy extends IFilterStrategy {
         }
         
         // Medium severity incidents
-        if (type.includes('Hazard') || type.includes('Break') || type.includes('Hit and Run')) {
+        if (type.includes('Hazard') || type.includes('Break') || type.includes('Hit and Run') || type.includes('Animal')) {
             return 2;
         }
         

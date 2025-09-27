@@ -15,6 +15,7 @@ class AppController {
         this.multiCenterService = dependencies.multiCenterService || new MultiCenterService(this.fetcher, this.storage, this.config);
         this.deltaService = dependencies.deltaService || new DeltaService();
         this.filterService = dependencies.filterService || new FilterService();
+        this.updatesManager = dependencies.updatesManager || new UpdatesManager(this.deltaService);
         
         this.previousIncidents = null;
         this.isInitialized = false;
@@ -52,6 +53,10 @@ class AppController {
             console.log('🔧 Setting up filter listener...');
             // Set up filter event listener
             this.setupFilterListener();
+
+            console.log('🔧 Setting up updates manager...');
+            // Connect UpdatesManager to DeltaService
+            this.deltaService.setUpdatesManager(this.updatesManager);
 
             console.log('🔧 Starting delta monitoring...');
             // Start delta monitoring for real-time updates
