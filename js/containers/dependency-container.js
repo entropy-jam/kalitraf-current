@@ -62,7 +62,8 @@ class DependencyContainer {
             incidentService: this.get('incidentService'),
             multiCenterService: this.get('multiCenterService'),
             deltaService: this.get('deltaService'),
-            filterService: this.get('filterService')
+            filterService: this.get('filterService'),
+            updatesManager: this.get('updatesManager')
         });
     }
 }
@@ -121,6 +122,11 @@ class DefaultDependencyConfig {
         }, true);
         
         container.register('deltaService', () => new DeltaService(), true);
+        
+        // Register UpdatesManager
+        container.register('updatesManager', (container) => {
+            return new UpdatesManager(container.get('deltaService'));
+        }, true);
         
         // Register filter strategies
         container.register('compositeFilterStrategy', () => new CompositeFilterStrategy(), true);
