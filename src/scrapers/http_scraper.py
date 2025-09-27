@@ -230,15 +230,15 @@ class HTTPScraper:
         return incidents
     
     def apply_smart_processing(self, incidents: List[Dict[str, Any]], previous_ids: set) -> List[Dict[str, Any]]:
-        """Apply smart processing to incidents (relevance filtering, new detection)"""
+        """Apply smart processing to incidents (new detection, lane blockage parsing)"""
         processed_incidents = []
         
         for incident in incidents:
             # Check if incident is new
             incident['is_new'] = incident['id'] not in previous_ids
             
-            # Check if incident is relevant (basic filtering)
-            incident['is_relevant'] = self.is_relevant_incident(incident)
+            # Mark all incidents as relevant - filtering is now handled by frontend
+            incident['is_relevant'] = True
             
             # Add lane blockage parsing (simplified for HTTP)
             incident['lane_blockage'] = self.parse_lane_blockage(incident['details'])
@@ -247,35 +247,6 @@ class HTTPScraper:
         
         return processed_incidents
     
-    def is_relevant_incident(self, incident: Dict[str, Any]) -> bool:
-        """Check if incident is relevant based on category and location"""
-        incident_type = incident['type']
-        location = incident['location']
-        
-        # Relevant categories
-        relevant_categories = [
-            'Trfc Collision', 'Traffic Hazard', 'Car Fire', 'Vehicle Fire',
-            'Traffic Break', 'Road Blocked', 'Fatality', 'Hit and Run',
-            'Hit & Run', 'SIG Alert', 'Sig Alert', 'Report of Fire'
-        ]
-        
-        # Check if it's a relevant category
-        if not any(cat in incident_type for cat in relevant_categories):
-            return False
-        
-        # Highway indicators
-        highway_indicators = [
-            'I-', 'I5', 'I8', 'I10', 'I15', 'I40', 'I80', 'I805', 'I215',
-            'SR-', 'Sr', 'STATE ROUTE', 'STATE RT', 'US-', 'US ', 'US HIGHWAY',
-            'HWY', 'HIGHWAY', 'FREEWAY', 'INTERSTATE', 'CON', 'CONNECTOR', 'CONN'
-        ]
-        
-        # Check if it's on a highway
-        location_text = f"{location}".upper()
-        if not any(indicator in location_text for indicator in highway_indicators):
-            return False
-        
-        return True
     
     def parse_lane_blockage(self, details_text: str) -> Dict[str, Any]:
         """Parse lane blockage information from details"""

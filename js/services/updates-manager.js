@@ -32,6 +32,11 @@ class UpdatesManager {
         const controlsDiv = document.querySelector('.controls');
         const statusDiv = document.querySelector('.status');
         
+        if (!controlsDiv || !statusDiv) {
+            console.error('Could not find controls or status div for updates section');
+            return;
+        }
+        
         const updatesSection = document.createElement('div');
         updatesSection.id = 'updatesSection';
         updatesSection.className = 'updates-section';
@@ -60,7 +65,8 @@ class UpdatesManager {
             </div>
         `;
         
-        controlsDiv.insertAdjacentElement('afterend', updatesSection);
+        // Insert after controls div, before status div
+        statusDiv.parentNode.insertBefore(updatesSection, statusDiv);
     }
     
     setupEventListeners() {

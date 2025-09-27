@@ -184,6 +184,78 @@ class CompositeFilterStrategy extends IFilterStrategy {
     }
 }
 
+// Highway Filter Strategy
+class HighwayFilterStrategy extends IFilterStrategy {
+    constructor() {
+        super();
+        this.highwayIndicators = [
+            'I-', 'I5', 'I8', 'I10', 'I15', 'I40', 'I80', 'I805', 'I215',
+            'SR-', 'Sr', 'STATE ROUTE', 'STATE RT', 'US-', 'US ', 'US HIGHWAY',
+            'HWY', 'HIGHWAY', 'FREEWAY', 'INTERSTATE', 'CON', 'CONNECTOR', 'CONN'
+        ];
+    }
+    
+    shouldInclude(incident) {
+        const location = incident.location || '';
+        const locationDesc = incident.location_desc || '';
+        const locationText = `${location} ${locationDesc}`.toUpperCase();
+        
+        return this.highwayIndicators.some(indicator => 
+            locationText.includes(indicator)
+        );
+    }
+    
+    getName() {
+        return 'HighwayFilter';
+    }
+}
+
+// Surface Street Filter Strategy
+class SurfaceStreetFilterStrategy extends IFilterStrategy {
+    constructor() {
+        super();
+        this.highwayIndicators = [
+            'I-', 'I5', 'I8', 'I10', 'I15', 'I40', 'I80', 'I805', 'I215',
+            'SR-', 'Sr', 'STATE ROUTE', 'STATE RT', 'US-', 'US ', 'US HIGHWAY',
+            'HWY', 'HIGHWAY', 'FREEWAY', 'INTERSTATE', 'CON', 'CONNECTOR', 'CONN'
+        ];
+    }
+    
+    shouldInclude(incident) {
+        const location = incident.location || '';
+        const locationDesc = incident.location_desc || '';
+        const locationText = `${location} ${locationDesc}`.toUpperCase();
+        
+        // Include if it's NOT on a highway
+        return !this.highwayIndicators.some(indicator => 
+            locationText.includes(indicator)
+        );
+    }
+    
+    getName() {
+        return 'SurfaceStreetFilter';
+    }
+}
+
+// Area Filter Strategy
+class AreaFilterStrategy extends IFilterStrategy {
+    constructor(areas) {
+        super();
+        this.areas = areas || [];
+    }
+    
+    shouldInclude(incident) {
+        const area = incident.area || '';
+        return this.areas.some(targetArea => 
+            area.toLowerCase().includes(targetArea.toLowerCase())
+        );
+    }
+    
+    getName() {
+        return 'AreaFilter';
+    }
+}
+
 // Export strategies
 window.IFilterStrategy = IFilterStrategy;
 window.IncidentTypeFilterStrategy = IncidentTypeFilterStrategy;
@@ -191,3 +263,6 @@ window.LocationFilterStrategy = LocationFilterStrategy;
 window.TimeFilterStrategy = TimeFilterStrategy;
 window.SeverityFilterStrategy = SeverityFilterStrategy;
 window.CompositeFilterStrategy = CompositeFilterStrategy;
+window.HighwayFilterStrategy = HighwayFilterStrategy;
+window.SurfaceStreetFilterStrategy = SurfaceStreetFilterStrategy;
+window.AreaFilterStrategy = AreaFilterStrategy;

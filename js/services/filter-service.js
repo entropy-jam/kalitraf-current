@@ -25,6 +25,17 @@ class FilterService {
         this.filterStrategies.set('filter-fire-report', new IncidentTypeFilterStrategy(['Report of Fire', 'Fire Report']));
         this.filterStrategies.set('filter-animal-hazard', new IncidentTypeFilterStrategy(['Animal Hazard', 'Animal', 'Wildlife']));
         
+        // Location type filters
+        this.filterStrategies.set('filter-highways', new HighwayFilterStrategy());
+        this.filterStrategies.set('filter-surface-streets', new SurfaceStreetFilterStrategy());
+        
+        // Area filters
+        this.filterStrategies.set('filter-san-diego', new AreaFilterStrategy(['San Diego']));
+        this.filterStrategies.set('filter-oceanside', new AreaFilterStrategy(['Oceanside']));
+        this.filterStrategies.set('filter-el-cajon', new AreaFilterStrategy(['El Cajon']));
+        this.filterStrategies.set('filter-temecula', new AreaFilterStrategy(['Temecula']));
+        this.filterStrategies.set('filter-bc', new AreaFilterStrategy(['BC', 'BCFSP']));
+        
         // Add strategies to composite
         this.filterStrategies.forEach(strategy => {
             this.compositeStrategy.addStrategy(strategy);
