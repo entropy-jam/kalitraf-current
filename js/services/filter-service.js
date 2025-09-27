@@ -25,6 +25,13 @@ class FilterService {
         this.filterStrategies.set('filter-fire-report', new IncidentTypeFilterStrategy(['Report of Fire', 'Fire Report']));
         this.filterStrategies.set('filter-animal-hazard', new IncidentTypeFilterStrategy(['Animal Hazard', 'Animal', 'Wildlife']));
         
+        // New incident types from Border center
+        this.filterStrategies.set('filter-road-closure', new IncidentTypeFilterStrategy(['CLOSURE of a Road', 'Road Closure', 'Closure']));
+        this.filterStrategies.set('filter-escort', new IncidentTypeFilterStrategy(['ESCORT for Road Conditions', 'Escort', 'Escort Service']));
+        this.filterStrategies.set('filter-maintenance', new IncidentTypeFilterStrategy(['Assist CT with Maintenance', 'Maintenance', 'Assist with Maintenance']));
+        this.filterStrategies.set('filter-construction', new IncidentTypeFilterStrategy(['Assist with Construction', 'Construction', 'Construction Assistance']));
+        this.filterStrategies.set('filter-weather', new IncidentTypeFilterStrategy(['Road/Weather Conditions', 'Weather', 'Weather Conditions']));
+        
         // Location type filters
         this.filterStrategies.set('filter-highways', new HighwayFilterStrategy());
         this.filterStrategies.set('filter-surface-streets', new SurfaceStreetFilterStrategy());

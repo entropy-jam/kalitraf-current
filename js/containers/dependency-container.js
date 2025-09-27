@@ -125,7 +125,7 @@ class DefaultDependencyConfig {
         
         // Register UpdatesManager
         container.register('updatesManager', (container) => {
-            return new UpdatesManager(container.get('deltaService'));
+            return new UpdatesManager(container.get('deltaService'), {}, container.get('storage'));
         }, true);
         
         // Register filter strategies

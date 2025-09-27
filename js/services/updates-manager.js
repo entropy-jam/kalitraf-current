@@ -3,8 +3,9 @@
  * Integrates with DeltaService to show recent updates in a dedicated section
  */
 class UpdatesManager {
-    constructor(deltaService, config = {}) {
+    constructor(deltaService, config = {}, storage = null) {
         this.deltaService = deltaService;
+        this.storage = storage;
         this.config = {
             defaultTimeWindow: 5, // minutes
             renderThrottle: 300,  // ms
@@ -17,6 +18,7 @@ class UpdatesManager {
         this.isRendering = false;
         this.renderTimeout = null;
         this.uiInitialized = false;
+        this.currentCenter = 'BCCC'; // Will be set by AppController
         
         // Delay UI initialization until DOM is ready
         if (document.readyState === 'loading') {
@@ -41,6 +43,9 @@ class UpdatesManager {
             console.log('🔧 UpdatesManager: Updates section already exists');
         }
         this.uiInitialized = true;
+        
+        // Load persisted changes from storage
+        this.loadPersistedChanges();
         
         // Render any queued changes now that UI is ready
         if (this.changes.length > 0) {
@@ -137,6 +142,9 @@ class UpdatesManager {
             
             this.changes.push(change);
             this.cleanOldChanges();
+            
+            // Persist changes to storage
+            this.persistChanges();
             
             // Ensure UI is initialized before rendering
             if (this.uiInitialized) {
@@ -253,6 +261,7 @@ class UpdatesManager {
     
     clearUpdates() {
         this.changes = [];
+        this.clearPersistedChanges();
         this.renderUpdates();
     }
     
@@ -298,6 +307,86 @@ class UpdatesManager {
      */
     getChangesCount() {
         return this.changes.length;
+    }
+    
+    /**
+     * Set current center for persistence
+     * @param {string} center - Center code
+     */
+    setCurrentCenter(center) {
+        this.currentCenter = center;
+        // Load changes for new center
+        this.loadPersistedChanges();
+    }
+    
+    /**
+     * Load persisted changes from storage
+     */
+    async loadPersistedChanges() {
+        if (!this.storage) return;
+        
+        try {
+            const changesKey = `changes_${this.currentCenter}`;
+            const persistedData = await this.storage.get(changesKey);
+            
+            if (persistedData && persistedData.changes) {
+                // Check if data is still valid
+                const now = Date.now();
+                const maxAge = this.config.maxAgeMinutes * 60 * 1000;
+                
+                if (now - persistedData.timestamp < maxAge) {
+                    this.changes = persistedData.changes;
+                    console.log(`🔧 UpdatesManager: Loaded ${this.changes.length} persisted changes for ${this.currentCenter}`);
+                    
+                    // Clean old changes and render
+                    this.cleanOldChanges();
+                    if (this.uiInitialized) {
+                        this.throttledRender();
+                    }
+                } else {
+                    console.log('🔧 UpdatesManager: Persisted changes expired, clearing...');
+                    this.changes = [];
+                }
+            }
+        } catch (error) {
+            console.error('Failed to load persisted changes:', error);
+        }
+    }
+    
+    /**
+     * Persist changes to storage
+     */
+    async persistChanges() {
+        if (!this.storage) return;
+        
+        try {
+            const changesKey = `changes_${this.currentCenter}`;
+            const persistedData = {
+                changes: this.changes,
+                timestamp: Date.now(),
+                center: this.currentCenter
+            };
+            
+            await this.storage.set(changesKey, persistedData);
+            console.log(`🔧 UpdatesManager: Persisted ${this.changes.length} changes for ${this.currentCenter}`);
+        } catch (error) {
+            console.error('Failed to persist changes:', error);
+        }
+    }
+    
+    /**
+     * Clear persisted changes
+     */
+    async clearPersistedChanges() {
+        if (!this.storage) return;
+        
+        try {
+            const changesKey = `changes_${this.currentCenter}`;
+            await this.storage.remove(changesKey);
+            console.log(`🔧 UpdatesManager: Cleared persisted changes for ${this.currentCenter}`);
+        } catch (error) {
+            console.error('Failed to clear persisted changes:', error);
+        }
     }
 }
 

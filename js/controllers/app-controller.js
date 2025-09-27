@@ -58,6 +58,8 @@ class AppController {
             console.log('🔧 UpdatesManager instance:', this.updatesManager);
             // Connect UpdatesManager to DeltaService
             this.deltaService.setUpdatesManager(this.updatesManager);
+            // Set current center for persistence
+            this.updatesManager.setCurrentCenter(this.config.get('defaultCenter'));
 
             console.log('🔧 Starting delta monitoring...');
             // Start delta monitoring for real-time updates
@@ -93,6 +95,8 @@ class AppController {
     changeCenter(centerCode) {
         console.log(`🔄 Switching to center: ${centerCode}`);
         this.config.set('defaultCenter', centerCode);
+        // Update UpdatesManager with new center
+        this.updatesManager.setCurrentCenter(centerCode);
         this.refreshData(true);
     }
 

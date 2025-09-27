@@ -110,8 +110,12 @@ def scrape_incidents(center_code="BCCC"):
         else:
             print("⚠️ No incidents found or extracted.")
             logging.warning("No incidents found or extracted.")
+            return False
         
-        return incidents_data
+    except Exception as e:
+        logging.error(f"Error during scraping: {str(e)}")
+        print(f"❌ Scraping failed: {str(e)}")
+        return False
 
 def main():
     """Main function for batch scraper"""
