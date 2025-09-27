@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates System Diagnostic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .status.success { background-color: #d4edda; color: #155724; }
+        .status.error { background-color: #f8d7da; color: #721c24; }
+        .status.warning { background-color: #fff3cd; color: #856404; }
+        .status.info { background-color: #d1ecf1; color: #0c5460; }
+        .log-entry {
+            font-family: monospace;
+            background: #f8f9fa;
+            padding: 5px;
+            margin: 2px 0;
+            border-left: 3px solid #007bff;
+        }
+        .log-entry.error { border-left-color: #dc3545; }
+        .log-entry.warning { border-left-color: #ffc107; }
+        .log-entry.success { border-left-color: #28a745; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #0056b3; }
+        .test-results {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: #f8f9fa;
+        }
+        .incident-item {
+            background: #e9ecef;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border-left: 3px solid #6c757d;
+        }
+        .incident-item.new { border-left-color: #28a745; }
+        .incident-item.removed { border-left-color: #dc3545; }
+        .incident-item.updated { border-left-color: #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Updates System Diagnostic Tool</h1>
+        <p>This tool will help diagnose why the updates section isn't reflecting changes detected by the normal incidents section.</p>
+        
+        <div class="section">
+            <h3>System Status</h3>
+            <div id="systemStatus" class="status info">Initializing...</div>
+        </div>
+        
+        <div class="section">
+            <h3>Test Controls</h3>
+            <button onclick="runFullDiagnostic()">Run Full Diagnostic</button>
+            <button onclick="testUpdatesManager()">Test UpdatesManager</button>
+            <button onclick="testDeltaService()">Test DeltaService</button>
+            <button onclick="testChangeDetection()">Test Change Detection</button>
+            <button onclick="simulateChanges()">Simulate Test Changes</button>
+            <button onclick="clearLogs()">Clear Logs</button>
+        </div>
+        
+        <div class="section">
+            <h3>Diagnostic Log</h3>
+            <div id="diagnosticLog" class="test-results">
+                <div class="log-entry info">Diagnostic tool initialized. Click "Run Full Diagnostic" to begin.</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>Current Updates Manager State</h3>
+            <div id="updatesState" class="test-results">
+                <div class="log-entry info">UpdatesManager state will appear here after testing.</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>Recent Changes (Last 5 minutes)</h3>
+            <div id="recentChanges" class="test-results">
+                <div class="log-entry info">Recent changes will appear here after testing.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load the same scripts as the main app -->
+    <script src="../js/interfaces.js"></script>
+    <script src="../js/interfaces/app-interfaces.js"></script>
+    <script src="../js/config-manager.js"></script>
+    <script src="../js/utils/cache-utils.js"></script>
+    <script src="../js/utils/sanitizer.js"></script>
+    <script src="../js/storage/local-storage.js"></script>
+    <script src="../js/fetchers/http-fetcher.js"></script>
+    <script src="../js/renderers/incident-renderer.js"></script>
+    <script src="../js/strategies/filter-strategies.js"></script>
+    <script src="../js/services/incident-data-service.js"></script>
+    <script src="../js/services/incident-comparison-service.js"></script>
+    <script src="../js/services/incident-time-service.js"></script>
+    <script src="../js/services/incident-realtime-service.js"></script>
+    <script src="../js/services/incident-service.js"></script>
+    <script src="../js/services/multi-center-service.js"></script>
+    <script src="../js/services/delta-service.js"></script>
+    <script src="../js/services/filter-service.js"></script>
+    <script src="../js/services/updates-manager.js"></script>
+    <script src="../js/modules/copy-to-clipboard.js"></script>
+    <script src="../js/containers/dependency-container.js"></script>
+    <script src="../js/controllers/app-controller.js"></script>
+    <script src="../js/ui-controller.js"></script>
+
+    <script>
+        let updatesManager = null;
+        let deltaService = null;
+        let appController = null;
+        let testIncidents = [];
+        
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('diagnosticLog');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+        
+        function clearLogs() {
+            document.getElementById('diagnosticLog').innerHTML = '';
+            log('Logs cleared', 'info');
+        }
+        
+        function updateSystemStatus(message, type = 'info') {
+            const statusDiv = document.getElementById('systemStatus');
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+        }
+        
+        async function runFullDiagnostic() {
+            log('Starting full diagnostic...', 'info');
+            updateSystemStatus('Running diagnostic...', 'info');
+            
+            try {
+                // Test 1: Check if UpdatesManager can be created
+                await testUpdatesManager();
+                
+                // Test 2: Check if DeltaService can be created
+                await testDeltaService();
+                
+                // Test 3: Test change detection
+                await testChangeDetection();
+                
+                // Test 4: Test integration
+                await testIntegration();
+                
+                updateSystemStatus('Diagnostic completed successfully', 'success');
+                log('Full diagnostic completed', 'success');
+            } catch (error) {
+                updateSystemStatus('Diagnostic failed: ' + error.message, 'error');
+                log('Diagnostic failed: ' + error.message, 'error');
+            }
+        }
+        
+        async function testUpdatesManager() {
+            log('Testing UpdatesManager creation...', 'info');
+            
+            try {
+                // Create a mock delta service
+                const mockDeltaService = {
+                    setUpdatesManager: function(manager) {
+                        this.updatesManager = manager;
+                    }
+                };
+                
+                updatesManager = new UpdatesManager(mockDeltaService);
+                log('UpdatesManager created successfully', 'success');
+                
+                // Test adding a change
+                const testChange = {
+                    type: 'new',
+                    incident: {
+                        id: 'TEST001',
+                        type: 'Test Incident',
+                        location: 'Test Location',
+                        time: new Date().toLocaleTimeString()
+                    },
+                    timestamp: Date.now()
+                };
+                
+                updatesManager.addChange(testChange);
+                log('Test change added to UpdatesManager', 'success');
+                
+                // Display current state
+                displayUpdatesState();
+                
+            } catch (error) {
+                log('UpdatesManager test failed: ' + error.message, 'error');
+                throw error;
+            }
+        }
+        
+        async function testDeltaService() {
+            log('Testing DeltaService creation...', 'info');
+            
+            try {
+                deltaService = new DeltaService();
+                log('DeltaService created successfully', 'success');
+                
+                // Set up the connection
+                if (updatesManager) {
+                    deltaService.setUpdatesManager(updatesManager);
+                    log('UpdatesManager connected to DeltaService', 'success');
+                } else {
+                    log('Warning: UpdatesManager not available for connection', 'warning');
+                }
+                
+            } catch (error) {
+                log('DeltaService test failed: ' + error.message, 'error');
+                throw error;
+            }
+        }
+        
+        async function testChangeDetection() {
+            log('Testing change detection system...', 'info');
+            
+            try {
+                // Create test incidents
+                const oldIncidents = [
+                    {
+                        id: 'INC001',
+                        type: 'Traffic Collision',
+                        location: 'I-5 N at Main St',
+                        time: '2:30 PM'
+                    },
+                    {
+                        id: 'INC002',
+                        type: 'Traffic Hazard',
+                        location: 'I-10 E at Exit 15',
+                        time: '2:45 PM'
+                    }
+                ];
+                
+                const newIncidents = [
+                    {
+                        id: 'INC001',
+                        type: 'Traffic Collision',
+                        location: 'I-5 N at Main St',
+                        time: '2:30 PM'
+                    },
+                    {
+                        id: 'INC002',
+                        type: 'Traffic Hazard',
+                        location: 'I-10 E at Exit 15',
+                        time: '2:45 PM'
+                    },
+                    {
+                        id: 'INC003',
+                        type: 'Car Fire',
+                        location: 'I-405 S at Sunset Blvd',
+                        time: '3:00 PM'
+                    }
+                ];
+                
+                // Test comparison service
+                const config = new ConfigManager();
+                const timeService = new IncidentTimeService();
+                const comparisonService = new IncidentComparisonService(timeService, config);
+                
+                const comparison = comparisonService.compareIncidents(oldIncidents, newIncidents);
+                
+                log(`Change detection found ${comparison.differences.length} differences`, 'info');
+                
+                if (comparison.hasChanges) {
+                    log('Changes detected: ' + JSON.stringify(comparison.differences, null, 2), 'info');
+                    displayRecentChanges(comparison.differences);
+                } else {
+                    log('No changes detected', 'warning');
+                }
+                
+            } catch (error) {
+                log('Change detection test failed: ' + error.message, 'error');
+                throw error;
+            }
+        }
+        
+        async function testIntegration() {
+            log('Testing integration between change detection and updates...', 'info');
+            
+            try {
+                if (!updatesManager) {
+                    throw new Error('UpdatesManager not available');
+                }
+                
+                // Simulate the flow that should happen in AppController
+                const oldIncidents = [
+                    { id: 'OLD001', type: 'Test', location: 'Old Location', time: '2:00 PM' }
+                ];
+                
+                const newIncidents = [
+                    { id: 'OLD001', type: 'Test', location: 'Old Location', time: '2:00 PM' },
+                    { id: 'NEW001', type: 'New Incident', location: 'New Location', time: '3:00 PM' }
+                ];
+                
+                // This is what AppController should be doing
+                const config = new ConfigManager();
+                const timeService = new IncidentTimeService();
+                const comparisonService = new IncidentComparisonService(timeService, config);
+                const incidentService = new IncidentService(null, null, config);
+                
+                const comparison = incidentService.compareIncidents(oldIncidents, newIncidents);
+                
+                if (comparison.hasChanges) {
+                    const recentDifferences = incidentService.filterRecentDifferences(comparison.differences);
+                    
+                    // This is the missing piece - we need to notify UpdatesManager
+                    recentDifferences.forEach(diff => {
+                        updatesManager.addChange({
+                            type: diff.type,
+                            incident: diff.incident,
+                            timestamp: Date.now(),
+                            details: `Detected via change detection system`
+                        });
+                    });
+                    
+                    log(`Integration test: ${recentDifferences.length} changes sent to UpdatesManager`, 'success');
+                } else {
+                    log('Integration test: No changes to process', 'info');
+                }
+                
+                displayUpdatesState();
+                
+            } catch (error) {
+                log('Integration test failed: ' + error.message, 'error');
+                throw error;
+            }
+        }
+        
+        function simulateChanges() {
+            log('Simulating test changes...', 'info');
+            
+            if (!updatesManager) {
+                log('UpdatesManager not available. Run diagnostic first.', 'error');
+                return;
+            }
+            
+            // Simulate various types of changes
+            const changes = [
+                {
+                    type: 'new',
+                    incident: { id: 'SIM001', type: 'Simulated New', location: 'Test Location 1', time: new Date().toLocaleTimeString() },
+                    timestamp: Date.now() - 60000, // 1 minute ago
+                    details: 'Simulated new incident'
+                },
+                {
+                    type: 'removed',
+                    incident: { id: 'SIM002', type: 'Simulated Removed', location: 'Test Location 2', time: new Date().toLocaleTimeString() },
+                    timestamp: Date.now() - 120000, // 2 minutes ago
+                    details: 'Simulated removed incident'
+                },
+                {
+                    type: 'updated',
+                    incident: { id: 'SIM003', type: 'Simulated Updated', location: 'Test Location 3', time: new Date().toLocaleTimeString() },
+                    timestamp: Date.now() - 30000, // 30 seconds ago
+                    details: 'Simulated updated incident'
+                }
+            ];
+            
+            changes.forEach(change => {
+                updatesManager.addChange(change);
+            });
+            
+            log(`Simulated ${changes.length} test changes`, 'success');
+            displayUpdatesState();
+        }
+        
+        function displayUpdatesState() {
+            if (!updatesManager) {
+                document.getElementById('updatesState').innerHTML = '<div class="log-entry error">UpdatesManager not available</div>';
+                return;
+            }
+            
+            const changes = updatesManager.getChanges();
+            const container = document.getElementById('updatesState');
+            
+            if (changes.length === 0) {
+                container.innerHTML = '<div class="log-entry info">No changes in UpdatesManager</div>';
+                return;
+            }
+            
+            let html = `<div class="log-entry success">UpdatesManager has ${changes.length} changes:</div>`;
+            
+            changes.forEach((change, index) => {
+                const timeAgo = getTimeAgo(change.timestamp);
+                html += `
+                    <div class="incident-item ${change.type}">
+                        <strong>${change.type.toUpperCase()}</strong> - ${change.incident.type} at ${change.incident.location}
+                        <br><small>ID: ${change.incident.id} | ${timeAgo}</small>
+                        ${change.details ? `<br><small>Details: ${change.details}</small>` : ''}
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        function displayRecentChanges(differences) {
+            const container = document.getElementById('recentChanges');
+            
+            if (!differences || differences.length === 0) {
+                container.innerHTML = '<div class="log-entry info">No recent changes detected</div>';
+                return;
+            }
+            
+            let html = `<div class="log-entry success">Found ${differences.length} recent changes:</div>`;
+            
+            differences.forEach(diff => {
+                const timeAgo = getTimeAgo(diff.time);
+                html += `
+                    <div class="incident-item ${diff.type}">
+                        <strong>${diff.type.toUpperCase()}</strong> - ${diff.incident.type} at ${diff.incident.location}
+                        <br><small>ID: ${diff.incident.id} | ${timeAgo}</small>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        function getTimeAgo(timestamp) {
+            const now = Date.now();
+            const diff = now - timestamp;
+            const minutes = Math.floor(diff / 60000);
+            const seconds = Math.floor(diff / 1000);
+            
+            if (seconds < 60) return 'Just now';
+            if (minutes < 60) return `${minutes}m ago`;
+            const hours = Math.floor(minutes / 60);
+            return `${hours}h ago`;
+        }
+        
+        // Initialize on page load
+        window.addEventListener('load', () => {
+            log('Diagnostic tool loaded successfully', 'success');
+            updateSystemStatus('Ready to run diagnostics', 'success');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Diagnostic Tool</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section { 
+            margin: 20px 0; 
+            padding: 15px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px;
+        }
+        .incident { 
+            margin: 10px 0; 
+            padding: 10px; 
+            background: #f9f9f9; 
+            border-left: 4px solid #007bff;
+        }
+        .highway { border-left-color: #28a745; }
+        .surface { border-left-color: #ffc107; }
+        .results { 
+            margin-top: 10px; 
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 4px;
+        }
+        .filter-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .filter-item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        .filter-item input {
+            margin-right: 8px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .status.success { background: #d4edda; color: #155724; }
+        .status.error { background: #f8d7da; color: #721c24; }
+        .status.warning { background: #fff3cd; color: #856404; }
+        .button-group {
+            margin: 15px 0;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-danger { background: #dc3545; color: white; }
+        .log {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Filter Diagnostic Tool</h1>
+        <p>This tool tests the filter system behavior to identify any issues with the clear all functionality.</p>
+        
+        <div class="test-section">
+            <h3>Test Data</h3>
+            <div id="testIncidents"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Filter Controls</h3>
+            <div class="filter-controls">
+                <div class="filter-item">
+                    <input type="checkbox" id="filter-collision" checked>
+                    <label for="filter-collision">Traffic Collisions</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="filter-hazard" checked>
+                    <label for="filter-hazard">Traffic Hazards</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="filter-fire" checked>
+                    <label for="filter-fire">Car Fires</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="filter-highways" checked>
+                    <label for="filter-highways">Highways & Freeways</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="filter-surface-streets" checked>
+                    <label for="filter-surface-streets">Surface Streets</label>
+                </div>
+                <div class="filter-item">
+                    <input type="checkbox" id="filter-animal-hazard" checked>
+                    <label for="filter-animal-hazard">Animal Hazards</label>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="testFilters()">Test Current Filters</button>
+                <button class="btn btn-success" onclick="selectAllFilters()">Select All</button>
+                <button class="btn btn-danger" onclick="clearAllFilters()">Clear All</button>
+                <button class="btn btn-secondary" onclick="runDiagnostic()">Run Full Diagnostic</button>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Filter Status</h3>
+            <div id="filterStatus" class="status"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Filtered Results</h3>
+            <div id="filteredResults"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Diagnostic Log</h3>
+            <div id="diagnosticLog" class="log"></div>
+        </div>
+    </div>
+
+    <script src="../js/strategies/filter-strategies.js"></script>
+    <script>
+        // Test data with various incident types and locations
+        const testIncidents = [
+            {
+                id: "001",
+                type: "Traffic Hazard",
+                location: "I15 S / Sr76 So",
+                location_desc: "I15 S SR76 SO",
+                area: "Oceanside"
+            },
+            {
+                id: "002", 
+                type: "Hit and Run No Injuries",
+                location: "15810 Rainbird Rd",
+                location_desc: "",
+                area: "El Cajon"
+            },
+            {
+                id: "003",
+                type: "Traffic Hazard", 
+                location: "Sr94 E / College Ave Ofr",
+                location_desc: "EB 94 ON BROADWAY OFR",
+                area: "El Cajon"
+            },
+            {
+                id: "004",
+                type: "Trfc Collision-1141 Enrt",
+                location: "Main St / 1st Ave",
+                location_desc: "",
+                area: "San Diego"
+            },
+            {
+                id: "005",
+                type: "Animal Hazard",
+                location: "I805 S / Phyllis Pl",
+                location_desc: "",
+                area: "San Diego"
+            },
+            {
+                id: "006",
+                type: "Car Fire",
+                location: "I5 N / Harbor Dr",
+                location_desc: "I5 N HARBOR DR",
+                area: "Oceanside"
+            }
+        ];
+
+        // Initialize filter strategies
+        const filterStrategies = new Map();
+        filterStrategies.set('filter-collision', new IncidentTypeFilterStrategy(['Trfc Collision', 'Traffic Collision', 'Collision']));
+        filterStrategies.set('filter-hazard', new IncidentTypeFilterStrategy(['Traffic Hazard', 'Hazard']));
+        filterStrategies.set('filter-fire', new IncidentTypeFilterStrategy(['Car Fire', 'Vehicle Fire', 'Fire']));
+        filterStrategies.set('filter-highways', new HighwayFilterStrategy());
+        filterStrategies.set('filter-surface-streets', new SurfaceStreetFilterStrategy());
+        filterStrategies.set('filter-animal-hazard', new IncidentTypeFilterStrategy(['Animal Hazard', 'Animal', 'Wildlife']));
+
+        let activeFilters = new Set();
+        let diagnosticLog = [];
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = `[${timestamp}] ${type.toUpperCase()}: ${message}`;
+            diagnosticLog.push(logEntry);
+            document.getElementById('diagnosticLog').innerHTML = diagnosticLog.join('\n');
+            console.log(logEntry);
+        }
+
+        function shouldShowIncident(incident) {
+            // If no filters are active, show all incidents
+            if (activeFilters.size === 0) {
+                return true;
+            }
+            
+            // Use strategy pattern to check if incident should be shown
+            for (const filterId of activeFilters) {
+                const strategy = filterStrategies.get(filterId);
+                if (strategy && strategy.shouldInclude(incident)) {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+
+        function updateFilterStatus() {
+            const status = document.getElementById('filterStatus');
+            const activeCount = activeFilters.size;
+            const totalCount = filterStrategies.size;
+            
+            if (activeCount === 0) {
+                status.className = 'status success';
+                status.textContent = `No filters active - showing all ${testIncidents.length} incidents`;
+            } else {
+                status.className = 'status warning';
+                status.textContent = `${activeCount}/${totalCount} filters active - using OR logic`;
+            }
+        }
+
+        function displayIncidents() {
+            const container = document.getElementById('testIncidents');
+            container.innerHTML = testIncidents.map(incident => {
+                const isHighway = filterStrategies.get('filter-highways').shouldInclude(incident);
+                const isSurface = filterStrategies.get('filter-surface-streets').shouldInclude(incident);
+                const className = isHighway ? 'highway' : (isSurface ? 'surface' : '');
+                
+                return `
+                    <div class="incident ${className}">
+                        <strong>${incident.id}</strong> - ${incident.type}<br>
+                        Location: ${incident.location} ${incident.location_desc}<br>
+                        Area: ${incident.area}<br>
+                        <small>Highway: ${isHighway}, Surface: ${isSurface}</small>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function testFilters() {
+            log('Testing current filter configuration...');
+            
+            // Update active filters based on checkboxes
+            activeFilters.clear();
+            filterStrategies.forEach((strategy, filterId) => {
+                const checkbox = document.getElementById(filterId);
+                if (checkbox && checkbox.checked) {
+                    activeFilters.add(filterId);
+                }
+            });
+            
+            log(`Active filters: ${Array.from(activeFilters).join(', ')}`);
+            
+            const filtered = testIncidents.filter(incident => shouldShowIncident(incident));
+            
+            log(`Filtered results: ${filtered.length}/${testIncidents.length} incidents shown`);
+            
+            const container = document.getElementById('filteredResults');
+            container.innerHTML = `
+                <div class="results">
+                    <p><strong>Filtered Results (${filtered.length} incidents):</strong></p>
+                    ${filtered.map(incident => `
+                        <div class="incident">
+                            <strong>${incident.id}</strong> - ${incident.type}<br>
+                            Location: ${incident.location} ${incident.location_desc}<br>
+                            Area: ${incident.area}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            updateFilterStatus();
+        }
+
+        function selectAllFilters() {
+            log('Selecting all filters...');
+            filterStrategies.forEach((strategy, filterId) => {
+                const checkbox = document.getElementById(filterId);
+                if (checkbox) {
+                    checkbox.checked = true;
+                }
+            });
+            testFilters();
+        }
+
+        function clearAllFilters() {
+            log('Clearing all filters...');
+            filterStrategies.forEach((strategy, filterId) => {
+                const checkbox = document.getElementById(filterId);
+                if (checkbox) {
+                    checkbox.checked = false;
+                }
+            });
+            testFilters();
+        }
+
+        function runDiagnostic() {
+            log('=== RUNNING FULL DIAGNOSTIC ===');
+            
+            // Test 1: All filters active
+            log('Test 1: All filters active');
+            selectAllFilters();
+            
+            setTimeout(() => {
+                // Test 2: Clear all filters
+                log('Test 2: Clear all filters');
+                clearAllFilters();
+                
+                setTimeout(() => {
+                    // Test 3: Individual filter tests
+                    log('Test 3: Individual filter tests');
+                    
+                    // Test highways only
+                    log('Testing highways filter only...');
+                    clearAllFilters();
+                    document.getElementById('filter-highways').checked = true;
+                    testFilters();
+                    
+                    setTimeout(() => {
+                        // Test surface streets only
+                        log('Testing surface streets filter only...');
+                        clearAllFilters();
+                        document.getElementById('filter-surface-streets').checked = true;
+                        testFilters();
+                        
+                        setTimeout(() => {
+                            // Test animal hazards only
+                            log('Testing animal hazards filter only...');
+                            clearAllFilters();
+                            document.getElementById('filter-animal-hazard').checked = true;
+                            testFilters();
+                            
+                            log('=== DIAGNOSTIC COMPLETE ===');
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }
+
+        // Initialize
+        log('Filter diagnostic tool initialized');
+        displayIncidents();
+        testFilters();
+    </script>
+</body>
+</html>

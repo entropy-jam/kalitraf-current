@@ -177,6 +177,19 @@ class AppController {
                         comparison.differences
                     );
                     this.renderDifferences(recentDifferences);
+                    
+                    // Notify UpdatesManager about the changes
+                    if (this.updatesManager && recentDifferences.length > 0) {
+                        console.log('🔧 AppController: Notifying UpdatesManager about', recentDifferences.length, 'changes');
+                        recentDifferences.forEach(diff => {
+                            this.updatesManager.addChange({
+                                type: diff.type,
+                                incident: diff.incident,
+                                timestamp: Date.now(),
+                                details: `Detected via change detection system`
+                            });
+                        });
+                    }
                 } else {
                     this.hideDifferences();
                 }

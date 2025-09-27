@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Updates Fix</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .status.success { background-color: #d4edda; color: #155724; }
+        .status.error { background-color: #f8d7da; color: #721c24; }
+        .status.warning { background-color: #fff3cd; color: #856404; }
+        .status.info { background-color: #d1ecf1; color: #0c5460; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #0056b3; }
+        .log {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Updates Fix</h1>
+        <p>This page tests whether the UpdatesManager is properly receiving notifications from the change detection system.</p>
+        
+        <div class="test-section">
+            <h3>Test Controls</h3>
+            <button onclick="testUpdatesManager()">Test UpdatesManager Creation</button>
+            <button onclick="testChangeDetection()">Test Change Detection</button>
+            <button onclick="testIntegration()">Test Integration</button>
+            <button onclick="simulateRealScenario()">Simulate Real Scenario</button>
+        </div>
+        
+        <div class="test-section">
+            <h3>Test Results</h3>
+            <div id="testResults" class="log">Click a test button to run tests...</div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Updates Section (if created)</h3>
+            <div id="updatesSectionContainer">
+                <div class="status info">Updates section will appear here if UpdatesManager creates it successfully.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load the same scripts as the main app -->
+    <script src="../js/interfaces.js"></script>
+    <script src="../js/interfaces/app-interfaces.js"></script>
+    <script src="../js/config-manager.js"></script>
+    <script src="../js/utils/cache-utils.js"></script>
+    <script src="../js/utils/sanitizer.js"></script>
+    <script src="../js/storage/local-storage.js"></script>
+    <script src="../js/fetchers/http-fetcher.js"></script>
+    <script src="../js/renderers/incident-renderer.js"></script>
+    <script src="../js/strategies/filter-strategies.js"></script>
+    <script src="../js/services/incident-data-service.js"></script>
+    <script src="../js/services/incident-comparison-service.js"></script>
+    <script src="../js/services/incident-time-service.js"></script>
+    <script src="../js/services/incident-realtime-service.js"></script>
+    <script src="../js/services/incident-service.js"></script>
+    <script src="../js/services/multi-center-service.js"></script>
+    <script src="../js/services/delta-service.js"></script>
+    <script src="../js/services/filter-service.js"></script>
+    <script src="../js/services/updates-manager.js"></script>
+    <script src="../js/modules/copy-to-clipboard.js"></script>
+    <script src="../js/containers/dependency-container.js"></script>
+    <script src="../js/controllers/app-controller.js"></script>
+    <script src="../js/ui-controller.js"></script>
+
+    <script>
+        let updatesManager = null;
+        let deltaService = null;
+        let appController = null;
+        
+        function log(message) {
+            const logDiv = document.getElementById('testResults');
+            const timestamp = new Date().toLocaleTimeString();
+            logDiv.textContent += `[${timestamp}] ${message}\n`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+        
+        function clearLog() {
+            document.getElementById('testResults').textContent = '';
+        }
+        
+        async function testUpdatesManager() {
+            clearLog();
+            log('Testing UpdatesManager creation...');
+            
+            try {
+                // Create a mock delta service
+                const mockDeltaService = {
+                    setUpdatesManager: function(manager) {
+                        this.updatesManager = manager;
+                        log('DeltaService.setUpdatesManager called');
+                    }
+                };
+                
+                updatesManager = new UpdatesManager(mockDeltaService);
+                log('✅ UpdatesManager created successfully');
+                
+                // Check if updates section was created
+                const updatesSection = document.getElementById('updatesSection');
+                if (updatesSection) {
+                    log('✅ Updates section found in DOM');
+                    document.getElementById('updatesSectionContainer').innerHTML = updatesSection.outerHTML;
+                } else {
+                    log('❌ Updates section not found in DOM');
+                }
+                
+                // Test adding a change
+                const testChange = {
+                    type: 'new',
+                    incident: {
+                        id: 'TEST001',
+                        type: 'Test Incident',
+                        location: 'Test Location',
+                        time: new Date().toLocaleTimeString()
+                    },
+                    timestamp: Date.now()
+                };
+                
+                updatesManager.addChange(testChange);
+                log('✅ Test change added to UpdatesManager');
+                
+                // Check changes count
+                const changesCount = updatesManager.getChangesCount();
+                log(`✅ UpdatesManager has ${changesCount} changes`);
+                
+            } catch (error) {
+                log(`❌ UpdatesManager test failed: ${error.message}`);
+                console.error('UpdatesManager test error:', error);
+            }
+        }
+        
+        async function testChangeDetection() {
+            log('\nTesting change detection system...');
+            
+            try {
+                // Create test incidents
+                const oldIncidents = [
+                    {
+                        id: 'INC001',
+                        type: 'Traffic Collision',
+                        location: 'I-5 N at Main St',
+                        time: '2:30 PM'
+                    }
+                ];
+                
+                const newIncidents = [
+                    {
+                        id: 'INC001',
+                        type: 'Traffic Collision',
+                        location: 'I-5 N at Main St',
+                        time: '2:30 PM'
+                    },
+                    {
+                        id: 'INC002',
+                        type: 'Car Fire',
+                        location: 'I-405 S at Sunset Blvd',
+                        time: '3:00 PM'
+                    }
+                ];
+                
+                // Test comparison service
+                const config = new ConfigManager();
+                const timeService = new IncidentTimeService();
+                const comparisonService = new IncidentComparisonService(timeService, config);
+                
+                const comparison = comparisonService.compareIncidents(oldIncidents, newIncidents);
+                
+                log(`✅ Change detection found ${comparison.differences.length} differences`);
+                
+                if (comparison.hasChanges) {
+                    log('✅ Changes detected successfully');
+                    comparison.differences.forEach((diff, index) => {
+                        log(`  - ${diff.type}: ${diff.incident.type} at ${diff.incident.location}`);
+                    });
+                } else {
+                    log('❌ No changes detected');
+                }
+                
+            } catch (error) {
+                log(`❌ Change detection test failed: ${error.message}`);
+                console.error('Change detection test error:', error);
+            }
+        }
+        
+        async function testIntegration() {
+            log('\nTesting integration between change detection and UpdatesManager...');
+            
+            try {
+                if (!updatesManager) {
+                    log('❌ UpdatesManager not available. Run UpdatesManager test first.');
+                    return;
+                }
+                
+                // Simulate the AppController flow
+                const oldIncidents = [
+                    { id: 'OLD001', type: 'Test', location: 'Old Location', time: '2:00 PM' }
+                ];
+                
+                const newIncidents = [
+                    { id: 'OLD001', type: 'Test', location: 'Old Location', time: '2:00 PM' },
+                    { id: 'NEW001', type: 'New Incident', location: 'New Location', time: '3:00 PM' }
+                ];
+                
+                // This is what the fixed AppController now does
+                const config = new ConfigManager();
+                const timeService = new IncidentTimeService();
+                const comparisonService = new IncidentComparisonService(timeService, config);
+                const incidentService = new IncidentService(null, null, config);
+                
+                const comparison = incidentService.compareIncidents(oldIncidents, newIncidents);
+                
+                if (comparison.hasChanges) {
+                    const recentDifferences = incidentService.filterRecentDifferences(comparison.differences);
+                    
+                    log(`✅ Found ${recentDifferences.length} recent differences`);
+                    
+                    // This is the NEW code that was added to AppController
+                    if (updatesManager && recentDifferences.length > 0) {
+                        log('✅ Notifying UpdatesManager about changes...');
+                        recentDifferences.forEach(diff => {
+                            updatesManager.addChange({
+                                type: diff.type,
+                                incident: diff.incident,
+                                timestamp: Date.now(),
+                                details: `Detected via change detection system`
+                            });
+                        });
+                        
+                        const changesCount = updatesManager.getChangesCount();
+                        log(`✅ UpdatesManager now has ${changesCount} changes`);
+                    } else {
+                        log('❌ UpdatesManager not available or no changes to process');
+                    }
+                } else {
+                    log('❌ No changes to process');
+                }
+                
+            } catch (error) {
+                log(`❌ Integration test failed: ${error.message}`);
+                console.error('Integration test error:', error);
+            }
+        }
+        
+        async function simulateRealScenario() {
+            log('\nSimulating real scenario with multiple changes...');
+            
+            try {
+                if (!updatesManager) {
+                    log('❌ UpdatesManager not available. Run UpdatesManager test first.');
+                    return;
+                }
+                
+                // Simulate a realistic scenario
+                const oldIncidents = [
+                    { id: 'INC001', type: 'Traffic Collision', location: 'I-5 N at Main St', time: '2:30 PM' },
+                    { id: 'INC002', type: 'Traffic Hazard', location: 'I-10 E at Exit 15', time: '2:45 PM' }
+                ];
+                
+                const newIncidents = [
+                    { id: 'INC001', type: 'Traffic Collision', location: 'I-5 N at Main St', time: '2:30 PM' },
+                    { id: 'INC002', type: 'Traffic Hazard', location: 'I-10 E at Exit 15', time: '2:45 PM' },
+                    { id: 'INC003', type: 'Car Fire', location: 'I-405 S at Sunset Blvd', time: '3:00 PM' },
+                    { id: 'INC004', type: 'Traffic Collision', location: 'I-101 N at Ventura Blvd', time: '3:15 PM' }
+                ];
+                
+                // Simulate the AppController flow
+                const config = new ConfigManager();
+                const incidentService = new IncidentService(null, null, config);
+                
+                const comparison = incidentService.compareIncidents(oldIncidents, newIncidents);
+                
+                if (comparison.hasChanges) {
+                    const recentDifferences = incidentService.filterRecentDifferences(comparison.differences);
+                    
+                    log(`✅ Detected ${recentDifferences.length} changes in real scenario`);
+                    
+                    // Apply the fix - notify UpdatesManager
+                    if (updatesManager && recentDifferences.length > 0) {
+                        log('✅ Applying fix: Notifying UpdatesManager...');
+                        recentDifferences.forEach((diff, index) => {
+                            updatesManager.addChange({
+                                type: diff.type,
+                                incident: diff.incident,
+                                timestamp: Date.now() - (index * 30000), // Stagger timestamps
+                                details: `Detected via change detection system (fix applied)`
+                            });
+                            log(`  - Added ${diff.type} change: ${diff.incident.type}`);
+                        });
+                        
+                        const changesCount = updatesManager.getChangesCount();
+                        log(`✅ UpdatesManager now has ${changesCount} total changes`);
+                        
+                        // Check if updates section is visible
+                        const updatesSection = document.getElementById('updatesSection');
+                        if (updatesSection) {
+                            log('✅ Updates section is visible in DOM');
+                        } else {
+                            log('❌ Updates section not found in DOM');
+                        }
+                    }
+                } else {
+                    log('❌ No changes detected in real scenario');
+                }
+                
+            } catch (error) {
+                log(`❌ Real scenario test failed: ${error.message}`);
+                console.error('Real scenario test error:', error);
+            }
+        }
+        
+        // Initialize on page load
+        window.addEventListener('load', () => {
+            log('Test page loaded successfully');
+            log('Ready to test the UpdatesManager fix');
+        });
+    </script>
+</body>
+</html>
