@@ -106,9 +106,9 @@ class FilterService {
     }
     
     shouldShowIncident(incident) {
-        // If no filters are active, show nothing
+        // If no filters are active, show all incidents
         if (this.activeFilters.size === 0) {
-            return false;
+            return true;
         }
         
         // Use strategy pattern to check if incident should be shown
