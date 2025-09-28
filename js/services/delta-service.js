@@ -31,32 +31,9 @@ class DeltaService {
     async checkForDeltas() {
         if (this.isProcessing) return;
         
-        try {
-            const response = await fetch(`data/incident_deltas.json?t=${Date.now()}`, { 
-                cache: 'no-store' 
-            });
-            
-            if (!response.ok) {
-                // Delta file doesn't exist or error - this is normal
-                return;
-            }
-            
-            const deltaData = await response.json();
-            
-            // Check if this is a new delta
-            if (this.lastDeltaTimestamp && 
-                deltaData.timestamp === this.lastDeltaTimestamp) {
-                return; // Same delta, no need to process
-            }
-            
-            // Process the delta
-            await this.processDelta(deltaData);
-            this.lastDeltaTimestamp = deltaData.timestamp;
-            
-        } catch (error) {
-            // Delta file doesn't exist or other error - this is normal
-            console.log('No delta file available or error checking deltas:', error.message);
-        }
+        // Delta checking disabled - data comes from SSE only
+        console.log('📡 Delta checking disabled - data comes from SSE only');
+        return;
     }
 
     /**

@@ -1,15 +1,45 @@
 {
   "center_code": "SACC",
   "center_name": "Sacramento",
-  "timestamp": "2025-09-28T16:25:55.075079",
+  "timestamp": "2025-09-28T17:00:47.186154",
   "new_incidents": [
     {
-      "id": "0508",
-      "time": "1:17 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Stockton Blvd / Gerber Rd",
-      "area": "SB JNO",
-      "details": "South Sac",
+      "id": "0534",
+      "time": "1:47 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / Jno Garden Hwy",
+      "area": "5 S JNO GARDEN HWY",
+      "details": "North Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0529",
+      "time": "1:43 PM",
+      "type": "Provide Traffic Control",
+      "location": "Sr65 / Wheatland Rd",
+      "area": "SB SR65 JSO WHEATLAND",
+      "details": "Auburn",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0515",
+      "time": "1:25 PM",
+      "type": "Traffic Hazard",
+      "location": "3072 Taylor Rd",
+      "area": "",
+      "details": "Auburn",
       "center_code": "SACC",
       "is_new": true,
       "is_relevant": true,
@@ -51,40 +81,10 @@
     {
       "id": "0493",
       "time": "12:54 PM",
-      "type": "Trfc Collision-1141 Enrt",
+      "type": "Trfc Collision-Minor Inj",
       "location": "San Juan Ave / Fairway Two Ave",
-      "area": "NB SAN JUAN / PHEASANT",
+      "area": "NB JNO",
       "details": "North Sac",
-      "center_code": "SACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0477",
-      "time": "12:35 PM",
-      "type": "Traffic Hazard",
-      "location": "Us50 E / Pioneer Bridge",
-      "area": "EB 50 JEO",
-      "details": "Woodland",
-      "center_code": "SACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0431",
-      "time": "12:00 PM",
-      "type": "Traffic Hazard",
-      "location": "Grand Island Rd / Sr220",
-      "area": "",
-      "details": "South Sac",
       "center_code": "SACC",
       "is_new": true,
       "is_relevant": true,
@@ -96,7 +96,7 @@
     {
       "id": "0329",
       "time": "10:35 AM",
-      "type": "Trfc Collision-1141 Enrt",
+      "type": "Trfc Collision-Minor Inj",
       "location": "Douglas Blvd / Auburn Folsom Rd",
       "area": "IFO STARBUCKS",
       "details": "Auburn",

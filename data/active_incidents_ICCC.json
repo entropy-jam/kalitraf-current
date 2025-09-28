@@ -1,7 +1,7 @@
 {
   "center_code": "ICCC",
   "center_name": "Indio",
-  "incident_count": 3,
+  "incident_count": 2,
   "incidents": [
     {
       "id": "0082",
@@ -32,22 +32,7 @@
         "status": "no_blockage",
         "details": []
       }
-    },
-    {
-      "id": "0320",
-      "time": "12:50 PM",
-      "type": "Traffic Hazard",
-      "location": "I10 W EO / COUNTY LINE RD",
-      "area": "",
-      "details": "San Gorgonio Pass",
-      "center_code": "ICCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
     }
   ],
-  "last_updated": "2025-09-28T16:14:41.385861"
+  "last_updated": "2025-09-28T16:52:26.452432"
 }

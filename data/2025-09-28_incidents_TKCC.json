@@ -2,120 +2,15 @@
   "center_code": "TKCC",
   "center_name": "Truckee",
   "date": "2025-09-28",
-  "total_incidents": 13,
+  "total_incidents": 2,
   "incidents": [
     {
-      "id": "0061",
-      "time": "10:48 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr267 / N National Ave",
-      "area": "NB 267 JNO N NATIONAL AVE",
-      "details": "Truckee",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0062",
-      "time": "11:14 PM",
+      "id": "0030",
+      "time": "11:51 AM",
       "type": "Traffic Hazard",
-      "location": "I80 W / Sr20 Ofr",
-      "area": "WB 80 JEO 20",
-      "details": "Gold Run",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0008",
-      "time": "8:32 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "0 I80 W",
-      "area": "WB JWO 8TH MILE ATLA",
-      "details": "Gold Run",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0010",
-      "time": "8:42 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr88 / Wood Lake Rd",
-      "area": "EB JEO",
+      "location": "Sr89 / Lester Beach Rd",
+      "area": "SB JNO DL BLISS STATE PARK",
       "details": "South Lake",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0012",
-      "time": "9:30 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "0 Sr89",
-      "area": "JNO S UPPER TRUCKEE RD",
-      "details": "South Lake",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0015",
-      "time": "10:19 AM",
-      "type": "Traffic Hazard",
-      "location": "I80 E / Soda Springs Ofr",
-      "area": "EB JWO",
-      "details": "Truckee",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0021",
-      "time": "10:51 AM",
-      "type": "Traffic Hazard",
-      "location": "0 Hinton Rd",
-      "area": "WB JEO *1125R*",
-      "details": "Truckee",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0020",
-      "time": "10:50 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "3223 Sr28",
-      "area": "N LAKE BLVD",
-      "details": "Truckee",
       "center_code": "TKCC",
       "is_new": true,
       "is_relevant": true,
@@ -138,67 +33,7 @@
         "status": "no_blockage",
         "details": []
       }
-    },
-    {
-      "id": "0016",
-      "time": "10:42 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "8901-9323 Sr89",
-      "area": "JSO GRANITE FLAT CAMPGROUND",
-      "details": "Truckee",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0030",
-      "time": "11:51 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr89 / Lester Beach Rd",
-      "area": "SB JNO DL BLISS STATE PARK",
-      "details": "South Lake",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0042",
-      "time": "1:20 PM",
-      "type": "Animal Hazard",
-      "location": "Us50 / Fairway Ave",
-      "area": "",
-      "details": "TK",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0043",
-      "time": "1:19 PM",
-      "type": "Animal Hazard",
-      "location": "Us50 / Fairway Ave",
-      "area": "",
-      "details": "TK",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
     }
   ],
-  "last_updated": "2025-09-28T16:22:28.802394"
+  "last_updated": "2025-09-28T16:52:26.575696"
 }

@@ -1,42 +1,12 @@
 {
   "center_code": "SUCC",
   "center_name": "Susanville",
-  "timestamp": "2025-09-28T16:25:55.076762",
+  "timestamp": "2025-09-28T17:00:47.188655",
   "new_incidents": [
-    {
-      "id": "0020",
-      "time": "12:27 PM",
-      "type": "Animal Hazard",
-      "location": "36/fredonyer Summit",
-      "area": "WB 36 EO Fredonyer Summit",
-      "details": "Susanville",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0017",
-      "time": "11:44 AM",
-      "type": "Trfc Collision-Major Inj",
-      "location": "395/egan Ranch",
-      "area": "Egan Ranch",
-      "details": "Susanville",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
     {
       "id": "0014",
       "time": "10:45 AM",
-      "type": "Trfc Collision-1141 Enrt",
+      "type": "Trfc Collision-No Inj",
       "location": "520291-520999 Sr139",
       "area": "HWY 139 JSO SLATE CR",
       "details": "Susanville",
@@ -50,6 +20,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 3,
+  "new_count": 1,
   "removed_count": 0
 }

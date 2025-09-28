@@ -113,13 +113,7 @@ class DefaultDependencyConfig {
             );
         }, true);
         
-        container.register('multiCenterService', (container) => {
-            return new MultiCenterService(
-                container.get('fetcher'),
-                container.get('storage'),
-                container.get('config')
-            );
-        }, true);
+        // Multi-center service removed - data comes from SSE only
         
         container.register('deltaService', () => new DeltaService(), true);
         

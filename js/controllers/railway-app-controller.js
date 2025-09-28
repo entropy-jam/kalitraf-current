@@ -159,21 +159,9 @@ class RailwayAppController {
      * This method is called by UIController for compatibility
      */
     async loadData(forceRefresh = false) {
-        try {
-            console.log('📡 Loading data from SSE cache...');
-            
-            // In SSE mode, data comes from cache populated by SSE
-            if (this.incidentService) {
-                const data = await this.incidentService.loadIncidents(forceRefresh);
-                console.log('📊 Loaded data from SSE cache:', data);
-                return data;
-            }
-            
-            return null;
-        } catch (error) {
-            console.error('❌ Error loading data from SSE cache:', error);
-            return null;
-        }
+        // Data loading disabled - data comes from SSE only
+        console.log('📡 Data loading disabled - data comes from SSE only');
+        return null;
     }
 
     /**

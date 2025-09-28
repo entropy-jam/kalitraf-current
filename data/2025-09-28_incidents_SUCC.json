@@ -2,102 +2,12 @@
   "center_code": "SUCC",
   "center_name": "Susanville",
   "date": "2025-09-28",
-  "total_incidents": 10,
+  "total_incidents": 1,
   "incidents": [
-    {
-      "id": "0034",
-      "time": "8:39 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr36 / Riverside Dr",
-      "area": "",
-      "details": "SU",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0025",
-      "time": "7:14 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "California Pines Blvd / Cr72",
-      "area": "CR71 / CR72 IN CALPINES",
-      "details": "Alturas",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0036",
-      "time": "9:15 PM",
-      "type": "Animal Hazard",
-      "location": "395/the Mark",
-      "area": "AT",
-      "details": "Susanville",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0001",
-      "time": "2:11 AM",
-      "type": "SPINOUT",
-      "location": "29 Sr89",
-      "area": "89/ GRAEALGE FROSTY",
-      "details": "Quincy",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0002",
-      "time": "7:31 AM",
-      "type": "Animal Hazard",
-      "location": "1-542 Chandler Rd",
-      "area": "",
-      "details": "Quincy",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0003",
-      "time": "7:33 AM",
-      "type": "Live or Dead Animal",
-      "location": "3300 Mm395 N Las 33.00",
-      "area": "",
-      "details": "Susanville",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
     {
       "id": "0014",
       "time": "10:45 AM",
-      "type": "Trfc Collision-1141 Enrt",
+      "type": "Trfc Collision-No Inj",
       "location": "520291-520999 Sr139",
       "area": "HWY 139 JSO SLATE CR",
       "details": "Susanville",
@@ -108,52 +18,7 @@
         "status": "no_blockage",
         "details": []
       }
-    },
-    {
-      "id": "0017",
-      "time": "11:44 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "395/egan Ranch",
-      "area": "Egan Ranch",
-      "details": "Susanville",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0019",
-      "time": "12:13 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "China Grade Rd / Mount Hough Crystal Lake Rd",
-      "area": "",
-      "details": "Quincy",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0020",
-      "time": "12:27 PM",
-      "type": "Animal Hazard",
-      "location": "36/fredonyer Summit",
-      "area": "WB 36 EO Fredonyer Summit",
-      "details": "Susanville",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
     }
   ],
-  "last_updated": "2025-09-28T15:31:38.030301"
+  "last_updated": "2025-09-28T16:52:26.569387"
 }

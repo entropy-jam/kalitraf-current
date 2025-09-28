@@ -44,24 +44,35 @@ class SSEServer:
     
     async def broadcast_update(self, data: Dict[str, Any]):
         """Broadcast data to all connected SSE clients"""
+        print(f"📡 [BROADCAST] Starting broadcast to {len(self.clients)} clients")
+        print(f"📡 [BROADCAST] Data type: {data.get('type', 'unknown')}")
+        
         if not self.clients:
+            print(f"⚠️ [BROADCAST] No clients connected, skipping broadcast")
             return
         
         message = f"data: {json.dumps(data)}\n\n"
         disconnected = set()
+        successful_sends = 0
         
-        for client in self.clients:
+        for i, client in enumerate(self.clients):
             try:
+                print(f"📤 [BROADCAST] Sending to client {i+1}/{len(self.clients)}")
                 await client.write(message.encode())
+                successful_sends += 1
+                print(f"✅ [BROADCAST] Client {i+1} sent successfully")
             except Exception as e:
-                print(f"📡 SSE send error: {e}")
+                print(f"❌ [BROADCAST] Client {i+1} send error: {e}")
+                print(f"❌ [BROADCAST] Error type: {type(e).__name__}")
                 disconnected.add(client)
         
         # Remove disconnected clients
-        self.clients -= disconnected
+        if disconnected:
+            print(f"🔌 [BROADCAST] Removing {len(disconnected)} disconnected clients")
+            self.clients -= disconnected
         
-        if self.clients:
-            print(f"📡 Broadcasted to {len(self.clients)} SSE clients")
+        print(f"📡 [BROADCAST] Completed: {successful_sends} successful, {len(disconnected)} failed")
+        print(f"📡 [BROADCAST] Remaining clients: {len(self.clients)}")
     
     async def get_initial_incident_data(self):
         """Get current incident data for new SSE clients"""
@@ -72,20 +83,12 @@ class SSEServer:
             all_incidents = {}
             total_incidents = 0
             
-            # Read from active incident files
+            # Data loading disabled for SSE-only implementation
+            # All data comes from SSE, no file loading needed
             for center in ['BFCC', 'BSCC', 'BICC', 'BCCC', 'CCCC', 'CHCC', 'ECCC', 'FRCC', 'GGCC', 'HMCC',
                           'ICCC', 'INCC', 'LACC', 'MRCC', 'MYCC', 'OCCC', 'RDCC', 'SACC', 'SLCC', 'SKCCSTCC',
                           'SUCC', 'TKCC', 'UKCC', 'VTCC', 'YKCC']:
-                try:
-                    file_path = f"data/active_incidents_{center}.json"
-                    if os.path.exists(file_path):
-                        with open(file_path, 'r') as f:
-                            center_data = json.load(f)
-                            all_incidents[center] = center_data
-                            total_incidents += len(center_data)
-                except Exception as e:
-                    print(f"⚠️  Could not load data for {center}: {e}")
-                    all_incidents[center] = []
+                all_incidents[center] = []
             
             # Format as initial data message
             initial_data = {
@@ -147,10 +150,8 @@ class SSEServer:
         
         self.app.router.add_get('/', serve_index)
         
-        # Serve static files (JS, CSS, assets) - but not data files
-        self.app.router.add_static('/js/', path='js/', name='js')
-        self.app.router.add_static('/assets/', path='assets/', name='assets')
-        # Note: /data/ removed - frontend now uses SSE for all data
+        # Static file serving removed - SSE-only implementation
+        # All data comes from SSE, no file dependencies
         
         # Health check endpoint
         async def health_check(request):
@@ -164,6 +165,11 @@ class SSEServer:
         
         # SSE endpoint for real-time updates
         async def sse_endpoint(request):
+            connection_id = id(request)
+            print(f"🔗 [SSE-{connection_id}] New connection from {request.remote}")
+            print(f"🔗 [SSE-{connection_id}] User-Agent: {request.headers.get('User-Agent', 'Unknown')}")
+            print(f"🔗 [SSE-{connection_id}] Accept: {request.headers.get('Accept', 'Unknown')}")
+            
             response = web.StreamResponse()
             response.headers['Content-Type'] = 'text/event-stream'
             response.headers['Cache-Control'] = 'no-cache'
@@ -171,42 +177,81 @@ class SSEServer:
             response.headers['Access-Control-Allow-Origin'] = '*'
             response.headers['Access-Control-Allow-Headers'] = 'Cache-Control'
             
+            print(f"📡 [SSE-{connection_id}] Preparing response headers")
             await response.prepare(request)
-            await self.register_client(response)
+            print(f"📡 [SSE-{connection_id}] Response prepared successfully")
             
-            print(f"🔌 SSE client connected from {request.remote}")
+            print(f"🔌 [SSE-{connection_id}] Registering client")
+            await self.register_client(response)
+            print(f"✅ [SSE-{connection_id}] Client registered, total clients: {len(self.clients)}")
             
             try:
                 # Send welcome message
+                print(f"📤 [SSE-{connection_id}] Sending welcome message")
                 welcome_data = {
                     'type': 'welcome',
                     'message': 'Connected to CHP Traffic Monitor SSE',
-                    'timestamp': datetime.now().isoformat()
+                    'timestamp': datetime.now().isoformat(),
+                    'connection_id': connection_id
                 }
                 welcome_msg = f"data: {json.dumps(welcome_data)}\n\n"
                 await response.write(welcome_msg.encode())
+                print(f"✅ [SSE-{connection_id}] Welcome message sent")
                 
                 # Send initial data immediately
-                print("📡 Sending initial incident data to new SSE client")
-                initial_data = await self.get_initial_incident_data()
-                initial_msg = f"data: {json.dumps(initial_data)}\n\n"
-                await response.write(initial_msg.encode())
-                print(f"✅ Sent initial data: {len(initial_data.get('data', {}).get('results', []))} centers")
+                print(f"📡 [SSE-{connection_id}] Preparing initial incident data")
+                try:
+                    initial_data = await self.get_initial_incident_data()
+                    print(f"📊 [SSE-{connection_id}] Initial data prepared: {len(initial_data.get('data', {}).get('results', []))} centers")
+                    
+                    initial_msg = f"data: {json.dumps(initial_data)}\n\n"
+                    await response.write(initial_msg.encode())
+                    print(f"✅ [SSE-{connection_id}] Initial data sent successfully")
+                    
+                except Exception as initial_error:
+                    print(f"❌ [SSE-{connection_id}] Initial data failed: {initial_error}")
+                    import traceback
+                    print(f"❌ [SSE-{connection_id}] Initial data traceback: {traceback.format_exc()}")
+                    
+                    error_data = {
+                        'type': 'initial_data_error',
+                        'message': str(initial_error),
+                        'error_type': type(initial_error).__name__
+                    }
+                    error_msg = f"data: {json.dumps(error_data)}\n\n"
+                    await response.write(error_msg.encode())
                 
                 # Keep connection alive with heartbeat
+                heartbeat_count = 0
                 while True:
                     await asyncio.sleep(30)  # Send heartbeat every 30 seconds
-                    heartbeat_data = {
-                        'type': 'heartbeat',
-                        'timestamp': datetime.now().isoformat()
-                    }
-                    heartbeat_msg = f"data: {json.dumps(heartbeat_data)}\n\n"
-                    await response.write(heartbeat_msg.encode())
+                    heartbeat_count += 1
+                    print(f"💓 [SSE-{connection_id}] Sending heartbeat #{heartbeat_count}")
+                    
+                    try:
+                        heartbeat_data = {
+                            'type': 'heartbeat',
+                            'timestamp': datetime.now().isoformat(),
+                            'count': heartbeat_count,
+                            'connection_id': connection_id
+                        }
+                        heartbeat_msg = f"data: {json.dumps(heartbeat_data)}\n\n"
+                        await response.write(heartbeat_msg.encode())
+                        print(f"✅ [SSE-{connection_id}] Heartbeat #{heartbeat_count} sent")
+                        
+                    except Exception as heartbeat_error:
+                        print(f"❌ [SSE-{connection_id}] Heartbeat #{heartbeat_count} failed: {heartbeat_error}")
+                        break
                     
             except Exception as e:
-                print(f"❌ SSE connection error: {e}")
+                print(f"❌ [SSE-{connection_id}] Connection error: {e}")
+                print(f"❌ [SSE-{connection_id}] Error type: {type(e).__name__}")
+                import traceback
+                print(f"❌ [SSE-{connection_id}] Traceback: {traceback.format_exc()}")
             finally:
+                print(f"🔌 [SSE-{connection_id}] Unregistering client")
                 await self.unregister_client(response)
+                print(f"✅ [SSE-{connection_id}] Client unregistered, remaining clients: {len(self.clients)}")
             
             return response
         
@@ -347,15 +392,16 @@ class ContinuousRailwayScraper:
                 has_changes = (len(changes.get('new_incidents', [])) > 0 or 
                               len(changes.get('removed_incidents', [])) > 0)
                 
-                # Save data
-                file_updated = data_manager.save_active_incidents(incidents_data)
-                data_manager.save_delta_updates(changes)
-                data_manager.append_daily_incidents(incidents_data)
+                # Save data - DISABLED for SSE-only implementation
+                # file_updated = data_manager.save_active_incidents(incidents_data)
+                # data_manager.save_delta_updates(changes)
+                # data_manager.append_daily_incidents(incidents_data)
+                file_updated = True  # Always consider updated for SSE
                 
                 # Update previous incidents
                 data_manager.update_previous_incidents(incidents_data)
                 
-                # Prepare WebSocket data
+                # Prepare SSE data
                 incidents_json = data_manager.incidents_to_json(incidents_data)
                 
                 result = {
@@ -395,10 +441,23 @@ class ContinuousRailwayScraper:
     
     async def scrape_all_centers(self) -> List[Dict[str, Any]]:
         """Scrape all communication centers using async HTTP requests"""
-        print(f"🚀 Starting parallel HTTP scrape of {len(self.centers)} centers...")
+        print(f"🚀 [SCRAPE] Starting parallel HTTP scrape of {len(self.centers)} centers...")
+        print(f"🚀 [SCRAPE] Centers: {', '.join(self.centers[:5])}... (showing first 5)")
         
-        # Use HTTP scraper for async parallel processing
-        results = await self.http_scraper.scrape_all_centers_async(self.centers)
+        start_time = datetime.now()
+        
+        try:
+            # Use HTTP scraper for async parallel processing
+            print(f"📡 [SCRAPE] Calling http_scraper.scrape_all_centers_async()")
+            results = await self.http_scraper.scrape_all_centers_async(self.centers)
+            print(f"✅ [SCRAPE] HTTP scraper returned {len(results)} results")
+            
+        except Exception as scrape_error:
+            print(f"❌ [SCRAPE] HTTP scraper failed: {scrape_error}")
+            print(f"❌ [SCRAPE] Error type: {type(scrape_error).__name__}")
+            import traceback
+            print(f"❌ [SCRAPE] Traceback: {traceback.format_exc()}")
+            return []
         
         # Process results to match expected format
         processed_results = []
@@ -416,15 +475,16 @@ class ContinuousRailwayScraper:
                 has_changes = (len(changes.get('new_incidents', [])) > 0 or 
                               len(changes.get('removed_incidents', [])) > 0)
                 
-                # Save data
-                file_updated = data_manager.save_active_incidents(incidents_data)
-                data_manager.save_delta_updates(changes)
-                data_manager.append_daily_incidents(incidents_data)
+                # Save data - DISABLED for SSE-only implementation
+                # file_updated = data_manager.save_active_incidents(incidents_data)
+                # data_manager.save_delta_updates(changes)
+                # data_manager.append_daily_incidents(incidents_data)
+                file_updated = True  # Always consider updated for SSE
                 
                 # Update previous incidents
                 data_manager.update_previous_incidents(incidents_data)
                 
-                # Prepare WebSocket data
+                # Prepare SSE data
                 incidents_json = data_manager.incidents_to_json(incidents_data)
                 
                 processed_result = {
@@ -507,25 +567,40 @@ class ContinuousRailwayScraper:
         while self.is_running:
             try:
                 iteration += 1
-                print(f"\n🔄 Iteration {iteration} - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+                print(f"\n🔄 [MAIN-{iteration}] Starting iteration at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+                print(f"🔄 [MAIN-{iteration}] SSE clients connected: {len(self.sse_server.clients)}")
                 
                 # Scrape all centers
+                print(f"🔄 [MAIN-{iteration}] Starting scrape_all_centers()")
+                scrape_start = datetime.now()
                 results = await self.scrape_all_centers()
+                scrape_duration = (datetime.now() - scrape_start).total_seconds()
+                print(f"✅ [MAIN-{iteration}] Scraping completed in {scrape_duration:.2f}s")
                 
                 # Broadcast results
-                await self.broadcast_results(results)
+                if results:
+                    print(f"📡 [MAIN-{iteration}] Broadcasting {len(results)} results to {len(self.sse_server.clients)} clients")
+                    broadcast_start = datetime.now()
+                    await self.broadcast_results(results)
+                    broadcast_duration = (datetime.now() - broadcast_start).total_seconds()
+                    print(f"✅ [MAIN-{iteration}] Broadcasting completed in {broadcast_duration:.2f}s")
+                else:
+                    print(f"⚠️ [MAIN-{iteration}] No results to broadcast")
                 
                 # Wait for next iteration
-                print(f"⏳ Waiting {self.scrape_interval} seconds until next scrape...")
+                print(f"⏳ [MAIN-{iteration}] Waiting {self.scrape_interval}s until next iteration")
                 await asyncio.sleep(self.scrape_interval)
                 
             except KeyboardInterrupt:
-                print("\n🛑 Received interrupt signal, shutting down...")
+                print(f"\n🛑 [MAIN-{iteration}] Received interrupt signal, shutting down...")
                 self.is_running = False
                 break
             except Exception as e:
-                print(f"❌ Error in main loop: {e}")
-                print("⏳ Waiting 30 seconds before retry...")
+                print(f"❌ [MAIN-{iteration}] Error in main loop: {e}")
+                print(f"❌ [MAIN-{iteration}] Error type: {type(e).__name__}")
+                import traceback
+                print(f"❌ [MAIN-{iteration}] Traceback: {traceback.format_exc()}")
+                print(f"⏳ [MAIN-{iteration}] Waiting 30s before retry...")
                 await asyncio.sleep(30)
         
         # Cleanup

@@ -480,14 +480,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         const themeManager = new ThemeManager();
 
         // Initialize Railway app
+        console.log('🚀 [APP] Initializing Railway AppController...');
         const app = new RailwayAppController();
+        console.log('🚀 [APP] Railway AppController created');
+        
+        console.log('🚀 [APP] Calling app.initialize()...');
         await app.initialize();
+        console.log('✅ [APP] Railway app initialized successfully');
 
         // Clean up on page unload
         window.addEventListener('beforeunload', () => {
+            console.log('🔌 [APP] Page unloading, destroying app...');
             app.destroy();
         });
     } catch (error) {
-        console.error('Failed to start Railway application:', error);
+        console.error('❌ [APP] Failed to start Railway application:', error);
+        console.error('❌ [APP] Error type:', error.name);
+        console.error('❌ [APP] Error message:', error.message);
+        console.error('❌ [APP] Stack trace:', error.stack);
     }
 });

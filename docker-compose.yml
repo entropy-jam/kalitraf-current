@@ -5,7 +5,7 @@ services:
     build: .
     container_name: chp-traffic-scraper
     ports:
-      - "8080:8080"  # WebSocket server
+      - "8080:8080"  # HTTP server with SSE
       - "3000:3000"  # Frontend server
     environment:
       - COMMUNICATION_CENTER=BCCC
@@ -14,8 +14,8 @@ services:
       - GMAIL_RECIPIENT_EMAIL=${GMAIL_RECIPIENT_EMAIL:-}
       - GMAIL_APP_PASSWORD=${GMAIL_APP_PASSWORD:-}
     volumes:
-      - ./data:/app/data  # Persist incident data
       - ./logs:/app/logs  # Persist logs
+      # Note: data/ volume removed - SSE-only implementation
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]

@@ -4,12 +4,12 @@
   "incident_count": 6,
   "incidents": [
     {
-      "id": "0237",
-      "time": "1:09 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr57 S / Yorba Linda Blvd Yl",
-      "area": "SB 57 JNO YL",
-      "details": "Santa Ana",
+      "id": "0247",
+      "time": "1:40 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Disney Way",
+      "area": "SB 5 JNO DISNEY WAY",
+      "details": "Westminster",
       "center_code": "OCCC",
       "is_new": true,
       "is_relevant": true,
@@ -94,5 +94,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:23:15.293486"
+  "last_updated": "2025-09-28T16:58:46.471160"
 }

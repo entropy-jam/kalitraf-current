@@ -94,20 +94,7 @@ class IIncidentService {
     }
 }
 
-// Multi-Center Service Interface
-class IMultiCenterService {
-    async loadMultiCenterData(forceRefresh = false) {
-        throw new Error('IMultiCenterService.loadMultiCenterData() must be implemented');
-    }
-    
-    setSelectedCenters(centers) {
-        throw new Error('IMultiCenterService.setSelectedCenters() must be implemented');
-    }
-    
-    getSelectedCenters() {
-        throw new Error('IMultiCenterService.getSelectedCenters() must be implemented');
-    }
-}
+// Multi-Center Service Interface - REMOVED (not used in SSE implementation)
 
 // Filter Service Interface
 class IFilterService {
@@ -137,6 +124,6 @@ window.IDataStorage = IDataStorage;
 window.IDataFetcher = IDataFetcher;
 window.IUIRenderer = IUIRenderer;
 window.IIncidentService = IIncidentService;
-window.IMultiCenterService = IMultiCenterService;
+// window.IMultiCenterService = IMultiCenterService; // REMOVED (not used in SSE)
 window.IFilterService = IFilterService;
 window.IDeltaService = IDeltaService;

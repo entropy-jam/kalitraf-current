@@ -1,15 +1,15 @@
 {
   "center_code": "CHCC",
   "center_name": "Chico",
-  "timestamp": "2025-09-28T16:25:23.267643",
+  "timestamp": "2025-09-28T17:00:47.171113",
   "new_incidents": [
     {
-      "id": "0045",
-      "time": "12:14 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Las Plumas Ave / Lower Wyandotte Rd",
-      "area": "I/S",
-      "details": "Oroville",
+      "id": "0058",
+      "time": "1:59 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "N Beale Rd / Lindhurst Ave",
+      "area": "FOOD MAXX PLOT",
+      "details": "Yuba Sutter",
       "center_code": "CHCC",
       "is_new": true,
       "is_relevant": true,

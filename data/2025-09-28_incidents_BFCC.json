@@ -2,99 +2,14 @@
   "center_code": "BFCC",
   "center_name": "Bakersfield",
   "date": "2025-09-28",
-  "total_incidents": 37,
+  "total_incidents": 8,
   "incidents": [
     {
-      "id": "0267",
-      "time": "8:46 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "0 Sr58 W",
-      "area": "WB SR58 JEO MLK",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0264",
-      "time": "8:44 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "6500 Kimberly Ave",
-      "area": "5605 Ashland St",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0263",
-      "time": "8:36 PM",
+      "id": "0131",
+      "time": "1:48 PM",
       "type": "Traffic Hazard",
-      "location": "0 Sr178",
-      "area": "WB 178 JWO DEMOCRAT",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0260",
-      "time": "8:31 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Jewetta Ave W / Rosedale Hwy",
-      "area": "I/S",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0251",
-      "time": "8:02 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "0 Sr178",
-      "area": "EB SR178 JWO DEMOCRAT",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0230",
-      "time": "6:30 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "226 Shattuck Ave",
-      "area": "",
+      "location": "Sr43 / I5 N",
+      "area": "NB ENOS JNO 5",
       "details": "Buttonwillow",
       "center_code": "BFCC",
       "is_new": true,
@@ -105,12 +20,12 @@
       }
     },
     {
-      "id": "0002",
-      "time": "12:04 AM",
-      "type": "Traffic Advisory",
-      "location": "Bakersfield Traffic Advisories",
-      "area": "Bakersfield Traffic Advisories",
-      "details": "BF",
+      "id": "0130",
+      "time": "1:42 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Cuddy Valley Rd / Mil Potrero Hwy",
+      "area": "CUDDY VALLEY 1/4 MI JWO MIL POTRERO",
+      "details": "Fort Tejon",
       "center_code": "BFCC",
       "is_new": true,
       "is_relevant": true,
@@ -120,11 +35,45 @@
       }
     },
     {
-      "id": "0297",
-      "time": "11:51 PM",
-      "type": "Traffic Hazard",
-      "location": "SR65 / Lerdo Hwy",
-      "area": "JSO",
+      "id": "0121",
+      "time": "1:14 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Iron Oak Dr / Norris Rd",
+      "area": "SB IRON OAK DR AT NORRIS",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    },
+    {
+      "id": "0114",
+      "time": "12:59 PM",
+      "type": "Trfc Collision-Major Inj",
+      "location": "Meacham Rd / Samantha St",
+      "area": "",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    },
+    {
+      "id": "0070",
+      "time": "8:11 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr43 / Mccombs Ave",
+      "area": "NB JNO",
       "details": "Bakersfield",
       "center_code": "BFCC",
       "is_new": true,
@@ -152,111 +101,11 @@
       }
     },
     {
-      "id": "0008",
-      "time": "12:27 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "431 E Belle Ter",
-      "area": "Belle Terrace IFO",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0013",
-      "time": "12:53 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "South Union Ave / Buena Vista Blvd",
-      "area": "UNION / BUENA VISTA",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0011",
-      "time": "12:50 AM",
-      "type": "Wrong Way Driver",
-      "location": "Sr99 S / Ming Ave Ofr",
-      "area": "SB 99 JSO MING",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0010",
-      "time": "12:46 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "0 Sierra Way",
-      "area": "Dam Korner 2  9750 SIERRA",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0015",
-      "time": "1:07 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "South Union Ave / Buena Vista Blvd",
-      "area": "",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0030",
-      "time": "2:26 AM",
+      "id": "0132",
+      "time": "1:49 PM",
       "type": "Traffic Hazard",
-      "location": "Nb I5 At Frazier Mountain Park Rd",
-      "area": "NB I5 1 MILE JSO FMP",
-      "details": "Fort Tejon",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0029",
-      "time": "2:19 AM",
-      "type": "Car Fire",
-      "location": "S Edison Rd / Buena Vista Blvd",
-      "area": "1/2 MILE JSO",
+      "location": "Sr178 / Lake Isabella Blvd",
+      "area": "EB 178 APPRX 1/2 JEO",
       "details": "Bakersfield",
       "center_code": "BFCC",
       "is_new": true,
@@ -269,339 +118,11 @@
       }
     },
     {
-      "id": "0028",
-      "time": "2:16 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "25794 - 27921 Driver Rd",
-      "area": "35.7356,-119.2051",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0035",
-      "time": "2:58 AM",
-      "type": "Traffic Hazard",
-      "location": "0 I5 N",
-      "area": "NB I5 JSO FMP",
-      "details": "Fort Tejon",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0034",
-      "time": "2:56 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "0 I5 N",
-      "area": "NB I5 JNO GRAPEVINE RD",
-      "details": "Fort Tejon",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0043",
-      "time": "5:13 AM",
-      "type": "Live or Dead Animal",
-      "location": "Bakersfield Admin Log",
-      "area": "Bakersfield Admin Log",
-      "details": "BF",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0048",
-      "time": "5:41 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "420 Frontier Dr",
-      "area": "",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0052",
-      "time": "6:24 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Eb Sr58 Jwo Oswell St",
-      "area": "EB SR58 JWO Oswell St",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0056",
-      "time": "6:54 AM",
-      "type": "Animal Hazard",
-      "location": "Nb Sr99 Jso Olive Dr",
-      "area": "NB SR99 JSO Olive Dr",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0062",
-      "time": "7:15 AM",
-      "type": "Animal Hazard",
-      "location": "Nb Sr99 Jso Rosedale Hwy",
-      "area": "NB SR99 JSO Rosedale Hwy",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0070",
-      "time": "8:11 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr43 / Mccombs Ave",
-      "area": "NB JNO",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0072",
-      "time": "8:37 AM",
-      "type": "Traffic Hazard",
-      "location": "Wb Sr58 Jwo Edison Rd",
-      "area": "1125 STILL MOVING",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0081",
-      "time": "9:57 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "SR41 S / Fremont Ave",
-      "area": "OCCRD SB 41 JNO GV",
-      "details": "Hanford",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0082",
-      "time": "10:00 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr46 / Farnsworth Ave",
-      "area": "EB",
-      "details": "Buttonwillow",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0086",
-      "time": "10:25 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "10004 Primrose Ave",
-      "area": "",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0094",
-      "time": "11:07 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Chester Ave Onr / Loustalot Ln",
-      "area": "",
-      "details": "BF",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0093",
-      "time": "10:55 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "E White Ln / South Union Ave",
-      "area": "",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0096",
-      "time": "11:13 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Eb Sr58 Jeo S Union Ave",
-      "area": "EB SR58 JEO S Union Ave",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0107",
-      "time": "12:34 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Nord Ave / Palm Ave",
-      "area": "",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0110",
-      "time": "12:56 PM",
+      "id": "0133",
+      "time": "1:53 PM",
       "type": "Request CalTrans Notify",
-      "location": "Wb Sr178 Jwo Haley St",
-      "area": "WB SR178 JWO Haley St",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0114",
-      "time": "12:59 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Meacham Rd / Samantha St",
-      "area": "",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0115",
-      "time": "1:05 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "10509 Santa Ana St",
-      "area": "",
-      "details": "Bakersfield",
-      "center_code": "BFCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "blocking",
-        "details": [
-          "Bakersfield"
-        ]
-      }
-    },
-    {
-      "id": "0121",
-      "time": "1:14 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Iron Oak Dr / Norris Rd",
-      "area": "SB IRON OAK DR AT NORRIS",
+      "location": "Sr178 W / Haley St",
+      "area": "WB JWO",
       "details": "Bakersfield",
       "center_code": "BFCC",
       "is_new": true,
@@ -614,5 +135,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:17:42.722211"
+  "last_updated": "2025-09-28T16:54:13.060184"
 }

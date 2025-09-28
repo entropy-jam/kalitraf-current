@@ -1,23 +1,8 @@
 {
   "center_code": "TKCC",
   "center_name": "Truckee",
-  "timestamp": "2025-09-28T16:25:55.077146",
+  "timestamp": "2025-09-28T17:00:47.189592",
   "new_incidents": [
-    {
-      "id": "0030",
-      "time": "11:51 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr89 / Lester Beach Rd",
-      "area": "SB JNO DL BLISS STATE PARK",
-      "details": "South Lake",
-      "center_code": "TKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
     {
       "id": "0019",
       "time": "10:49 AM",
@@ -35,6 +20,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 2,
+  "new_count": 1,
   "removed_count": 0
 }

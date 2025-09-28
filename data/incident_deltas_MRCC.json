@@ -1,15 +1,15 @@
 {
   "center_code": "MRCC",
   "center_name": "Merced",
-  "timestamp": "2025-09-28T16:25:55.071799",
+  "timestamp": "2025-09-28T17:00:47.181446",
   "new_incidents": [
     {
-      "id": "0129",
-      "time": "1:01 PM",
+      "id": "0135",
+      "time": "1:45 PM",
       "type": "Traffic Hazard",
-      "location": "Sr99 N / Shanks Rd Ofr",
-      "area": "NB JSO",
-      "details": "Merced",
+      "location": "Tuolumne Rd N / Crow Bar Ln",
+      "area": "NB ****ROLLING",
+      "details": "Sonora",
       "center_code": "MRCC",
       "is_new": true,
       "is_relevant": true,

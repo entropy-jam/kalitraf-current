@@ -1,8 +1,23 @@
 {
   "center_code": "YKCC",
   "center_name": "Yreka",
-  "timestamp": "2025-09-28T16:25:55.078258",
+  "timestamp": "2025-09-28T17:00:47.191947",
   "new_incidents": [
+    {
+      "id": "0030",
+      "time": "1:42 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Exit 727",
+      "area": "5 N / CRAG VIEW DR",
+      "details": "Mount Shasta",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
     {
       "id": "0028",
       "time": "1:13 PM",
@@ -80,6 +95,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 5,
+  "new_count": 6,
   "removed_count": 0
 }

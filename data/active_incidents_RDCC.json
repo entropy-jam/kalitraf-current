@@ -1,30 +1,15 @@
 {
   "center_code": "RDCC",
   "center_name": "Redding",
-  "incident_count": 3,
+  "incident_count": 2,
   "incidents": [
     {
-      "id": "0039",
-      "time": "1:16 PM",
-      "type": "Live or Dead Animal",
-      "location": "I5 S / Sr151 Ofr",
-      "area": "SB JNO, 1/2 MILE",
-      "details": "Redding",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0034",
-      "time": "12:26 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr44 / Dandelion Dr",
-      "area": "EB",
-      "details": "Redding",
+      "id": "0042",
+      "time": "1:49 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Corning Rd Ofr",
+      "area": "SB I5, 4 MILES NO CORNING",
+      "details": "Red Bluff",
       "center_code": "RDCC",
       "is_new": true,
       "is_relevant": true,
@@ -49,5 +34,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:18:58.887252"
+  "last_updated": "2025-09-28T16:59:12.468133"
 }

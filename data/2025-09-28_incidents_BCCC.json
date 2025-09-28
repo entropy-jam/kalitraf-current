@@ -2,119 +2,14 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-28",
-  "total_incidents": 123,
+  "total_incidents": 18,
   "incidents": [
     {
-      "id": "0845",
-      "time": "8:49 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "5566 Olive Hill Rd",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0844",
-      "time": "8:42 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "14th St / Realty Rd",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0839",
-      "time": "8:37 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "12776-13355 Sr76",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0838",
-      "time": "8:37 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I15 N / Central Ave Ofr",
-      "area": "NB OFR",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0828",
-      "time": "8:27 PM",
+      "id": "0564",
+      "time": "1:45 PM",
       "type": "Traffic Hazard",
-      "location": "Sr74 / Greenwald Ave",
-      "area": "JSO",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0825",
-      "time": "8:23 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Rockwood Rd / Copper Canyon Rd",
+      "location": "Sr54 W / I805",
       "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0822",
-      "time": "8:15 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "5555 Mission Rd",
-      "area": "**22C     OCCRD SB 15/ SR76",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0818",
-      "time": "8:11 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "0 Sr125 N",
-      "area": "NB/ JNO SAN MIGUEL",
       "details": "San Diego",
       "center_code": "BCCC",
       "is_new": true,
@@ -125,10 +20,25 @@
       }
     },
     {
-      "id": "0780",
-      "time": "7:40 PM",
+      "id": "0553",
+      "time": "1:34 PM",
       "type": "Traffic Hazard",
-      "location": "I5 S / 8TH NO",
+      "location": "I5 N / I805 So (southbay)",
+      "area": "I5 N I805 SO (SOUTHBAY)",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0544",
+      "time": "1:19 PM",
+      "type": "Traffic Break",
+      "location": "Sr163 S / Washington So",
       "area": "",
       "details": "San Diego",
       "center_code": "BCCC",
@@ -140,1615 +50,10 @@
       }
     },
     {
-      "id": "0722",
-      "time": "6:12 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I805 S / MIRA MESA NO",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0002",
-      "time": "12:00 AM",
-      "type": "Road/Weather Conditions",
-      "location": "Media Log",
-      "area": "NEWSWORTHY INCIDENTS",
-      "details": "BC",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0895",
-      "time": "8:45 PM",
-      "type": "CLOSURE of a Road",
-      "location": "I5 N / Sea World (tecolote)",
-      "area": "NOELLE TO SR52",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0827",
-      "time": "7:06 PM",
-      "type": "CLOSURE of a Road",
-      "location": "Sr67 S I8 E Con / I8 E",
-      "area": "*WEEKEND CLSR*",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0860",
-      "time": "9:06 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr78 E / Emerald",
-      "area": "=33.1876/ -117.2794",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0865",
-      "time": "9:12 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I8 W / Rosecrans Eo",
-      "area": "I8 W ROSECRANS EO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0874",
-      "time": "9:21 PM",
+      "id": "0528",
+      "time": "1:07 PM",
       "type": "Traffic Hazard",
-      "location": "I15 S / Gopher Canyon (champagne) No",
-      "area": "SB NO",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0877",
-      "time": "9:23 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "25204-25271 Old Julian Hwy",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0879",
-      "time": "9:28 PM",
-      "type": "JUMPER",
-      "location": "I805 S / E J St",
-      "area": "SB AT BRIDGE",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0881",
-      "time": "9:30 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Honey Springs Rd / Sr94",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0906",
-      "time": "10:12 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Carmel Mountain Rd Ofr",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0898",
-      "time": "10:09 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr163 S / Sr163 S I5 S Con",
-      "area": "SB TO SB",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0899",
-      "time": "10:08 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Sorrento Valley Rd Onr",
-      "area": "IN THE GP",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0897",
-      "time": "10:08 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Temecula Pkwy Onr",
-      "area": "SB ONR",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0922",
-      "time": "10:33 PM",
-      "type": "Traffic Hazard",
-      "location": "16856 La Gracia",
-      "area": "*7C CPZ",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0920",
-      "time": "10:31 PM",
-      "type": "Traffic Hazard",
-      "location": "Sandia Creek Dr / De Luz Rd",
-      "area": "*NORCOMM CPZ     NB AT THE SPLIT",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0950",
-      "time": "10:56 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "I215 N / Murrieta Hot Springs",
-      "area": "I215 N MURRIETA HOT SPRINGS",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0940",
-      "time": "10:54 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I215 S / Ethanac No",
-      "area": "I215 S ETHANAC NO",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0939",
-      "time": "10:54 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "0 Sr94 W",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0931",
-      "time": "10:47 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 N / Gopher Canyon (champagne) So",
-      "area": "*23C      NB SO",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0952",
-      "time": "11:02 PM",
-      "type": "Traffic Hazard",
-      "location": "I805 N / Balboa So",
-      "area": "I805 N BALBOA SO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0975",
-      "time": "11:24 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I8 E / Sr163 Wo",
-      "area": "I8 E SR163 WO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0979",
-      "time": "11:37 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I5 N / Santa Margarita River So",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0977",
-      "time": "11:33 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "6th St / Main St",
-      "area": "PLOT JEO RAMONA MAIN STAGE",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0003",
-      "time": "12:00 AM",
-      "type": "Road/Weather Conditions",
-      "location": "Media Log",
-      "area": "NEWSWORTHY INCIDENTS",
-      "details": "BC",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0013",
-      "time": "11:57 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "38225 Sr74-ortega Hwy",
-      "area": "Ortega Hwy",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0015",
-      "time": "12:16 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "Benton Rd / Pourroy Rd",
-      "area": "",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0031",
-      "time": "12:52 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I8 E / Baltimore Eo",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0039",
-      "time": "1:11 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Imperial Ave",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0052",
-      "time": "1:27 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 S / Grape St Onr",
-      "area": "SB 5 / GRAPE",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0047",
-      "time": "1:20 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr905 E / Beyer Wo",
-      "area": "SR905 E BEYER WO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0057",
-      "time": "1:35 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr125 S / Sr94",
-      "area": "SR125 S SR94",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0080",
-      "time": "1:56 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "0 Canebrake Rd",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0068",
-      "time": "1:49 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I805 S / Clairemont Mesa No",
-      "area": "I805 S CLAIREMONT MESA NO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0064",
-      "time": "1:47 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr76 Old Hwy 395 - Pnr",
-      "area": "PNR SR76 OLD HWY 395",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0065",
-      "time": "1:46 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "12776-13355 Sr76",
-      "area": "WB",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0088",
-      "time": "2:23 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I15 N / Sr76 So",
-      "area": "NB JSO",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0087",
-      "time": "2:14 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "Sr125 S / Jamacha Rd",
-      "area": "SD125109",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0096",
-      "time": "2:38 AM",
-      "type": "Traffic Hazard",
-      "location": "2810 Kettner Blvd",
-      "area": "",
-      "details": "BC",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0100",
-      "time": "2:37 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I15 S / Rainbow Scales So (nb Scales)",
-      "area": "SB NO",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0108",
-      "time": "3:01 AM",
-      "type": "SIG Alert",
-      "location": "12776 Sr76",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0121",
-      "time": "3:47 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Via De La Valle / Via De Santa Fe",
-      "area": "JNO",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0138",
-      "time": "4:17 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr78 W / College Wo",
-      "area": "WB WO",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0137",
-      "time": "4:17 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I805 N / San Ysidro So",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0127",
-      "time": "4:06 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I5 S / Cesar E Chavez No",
-      "area": "I5 S CESAR E CHAVEZ NO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0145",
-      "time": "5:01 AM",
-      "type": "Traffic Hazard",
-      "location": "Old Highway 80 / I8 E",
-      "area": "JSO",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0151",
-      "time": "5:38 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "Sr78 W / College",
-      "area": "WB",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0156",
-      "time": "6:03 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I5 N / Tamarack So",
-      "area": "NB 5 JSO TAM",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0154",
-      "time": "5:49 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "5141 College Ave",
-      "area": "7-11",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0158",
-      "time": "6:32 AM",
-      "type": "Animal Hazard",
-      "location": "I5 N / Cristianitos So",
-      "area": "NB 1/4 MILE JSO",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0160",
-      "time": "6:49 AM",
-      "type": "Traffic Hazard",
-      "location": "I8 Bus / Lake Jennings Park Rd",
-      "area": "EB 1 MILE JEO",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0167",
-      "time": "7:01 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "3320 Oak Grove Way",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0171",
-      "time": "7:29 AM",
-      "type": "Report of Fire",
-      "location": "I5 N / Genesee",
-      "area": "I5 N GENESEE",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0153",
-      "time": "5:47 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "Sr78 W / College",
-      "area": "SR78 W COLLEGE (PLAZA)",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0172",
-      "time": "7:28 AM",
-      "type": "JUMPER",
-      "location": "I215 N / Mccall",
-      "area": "EB MCCALL OVER NB 215",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0178",
-      "time": "7:51 AM",
-      "type": "Live or Dead Animal",
-      "location": "I805 S / Murray Ridge No",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0188",
-      "time": "8:13 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr67 S / Woodside No",
-      "area": "SB SR67 JNO WOODSIDE",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0193",
-      "time": "8:18 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "13758 Willow Rd",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0201",
-      "time": "8:28 AM",
-      "type": "Defective Traffic Signals",
-      "location": "Sr67 N / Bradley Ave Ofr",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0197",
-      "time": "8:25 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Caminito Porta Delgada / Via De La Valle",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0195",
-      "time": "8:22 AM",
-      "type": "Report of Fire",
-      "location": "I5 N / Mission So",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0210",
-      "time": "8:45 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr125 N / I8 So",
-      "area": "NB SR125 JSO I8",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0208",
-      "time": "8:41 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Quarry Rd / Elkelton Blvd",
-      "area": "SPRING VALLEY SWAP MEET",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0216",
-      "time": "9:10 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr54 W / I805 N Con",
-      "area": "WB SR54 TRANS TO NB 805",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0218",
-      "time": "9:32 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "37853 Pourroy Rd",
-      "area": "",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0225",
-      "time": "9:41 AM",
-      "type": "Traffic Hazard",
-      "location": "I8 E / College Wo",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0241",
-      "time": "9:52 AM",
-      "type": "Request CalTrans Notify",
-      "location": "I5 S / Sr52 No (la Jolla Pkwy)",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0228",
-      "time": "9:50 AM",
-      "type": "Report of Fire",
-      "location": "I8 E / W Main St",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0252",
-      "time": "10:20 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / LAS FLORES DR OFR",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0251",
-      "time": "10:18 AM",
-      "type": "Report of Fire",
-      "location": "Sr15 N / Sr94 So (home)",
-      "area": "NB SR15 JSO SR94",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0260",
-      "time": "10:33 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr163 N / I805 So",
-      "area": "SR163 N I805 SO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0377",
-      "time": "11:10 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "39000-39087 Vista Del Bosque",
-      "area": "",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0014",
-      "time": "11:09 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I805 N / I8",
-      "area": "805 N / 8",
-      "details": "South FSP",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0372",
-      "time": "11:07 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I805 N / I8",
-      "area": "805 N / 8",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0334",
-      "time": "10:58 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Pacific Hwy So",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0325",
-      "time": "10:58 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr52 W / Santo Eo",
-      "area": "SR52 W SANTO EO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0298",
-      "time": "10:53 AM",
-      "type": "Report of Fire",
-      "location": "I8 E / El Cajon Blvd (el Cajon)",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0270",
-      "time": "10:44 AM",
-      "type": "JUMPER",
-      "location": "I805 N I8 W Con / I805 I8 W Con",
-      "area": "NB 805 TRANS TO WB I8",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0380",
-      "time": "11:23 AM",
-      "type": "ESCORT for Road Conditions",
-      "location": "Miramar",
-      "area": "MCAS MIRAMAR",
-      "details": "BC",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0393",
-      "time": "11:34 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I15 S / Murrieta Hot Springs",
-      "area": "I15 S MURRIETA HOT SPRINGS",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0399",
-      "time": "11:34 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Mesa Rd / Avenida Chapala",
-      "area": "SB MESA AT AVENIDA CHAPALA",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0018",
-      "time": "11:29 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Mira Mesa Blvd Ofr",
-      "area": "SB 15 ON MIRA MESA BLVD OFR",
-      "details": "North FSP",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0388",
-      "time": "11:26 AM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Mira Mesa Blvd Ofr",
-      "area": "SB 15 ON MIRA MESA BLVD OFR",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0382",
-      "time": "11:22 AM",
-      "type": "Traffic Hazard",
-      "location": "I215 N / Clinton Keith No",
-      "area": "",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0423",
-      "time": "11:55 AM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Balboa (garnet)",
-      "area": "I5 N BALBOA (GARNET)",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0026",
-      "time": "11:47 AM",
-      "type": "Trfc Collision-1141Enrt",
-      "location": "I8 E / Sr163 Wo",
-      "area": "I8 E SR163 WO",
-      "details": "South FSP",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0412",
-      "time": "11:47 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I8 E / Sr163 Wo",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0410",
-      "time": "11:44 AM",
-      "type": "Report of Fire",
-      "location": "Sr79 / Sr78",
-      "area": "SR79 SR78 (SANTA YSABEL - DUDLEYS)",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0442",
-      "time": "12:14 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Bear Valley Pkwy / Sunset Dr",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0444",
-      "time": "12:14 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Checkpoint No",
-      "area": "SB 1 MILE JNO",
-      "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0441",
-      "time": "12:11 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr78 W / Emerald",
-      "area": "SR78 W EMERALD",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0438",
-      "time": "12:06 PM",
-      "type": "Traffic Hazard",
-      "location": "La Cresta Rd / Forester Creek Rd",
-      "area": "EB",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0452",
-      "time": "12:23 PM",
-      "type": "Traffic Hazard",
-      "location": "I805 N / Murray Ridge So",
-      "area": "I805 N MURRAY RIDGE SO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0465",
-      "time": "12:29 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr75 E / Midspan Eo",
-      "area": "SR75 E MIDSPAN EO (BRIDGE)",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0471",
-      "time": "12:34 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr94 E / Spring Wo",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0480",
-      "time": "12:41 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr67 / Scripps Poway Pkwy",
-      "area": "NB AT",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0484",
-      "time": "12:44 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr163 S / I5 No (4th)",
-      "area": "SB 163 JNO I5",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0485",
-      "time": "12:46 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Carroll Canyon No",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0486",
-      "time": "12:47 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I805 N / H St So",
-      "area": "I805 N H ST SO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0040",
-      "time": "12:48 PM",
-      "type": "Trfc Collision-1141Enrt",
-      "location": "I805 N / H St So",
-      "area": "I805 N H ST SO",
-      "details": "South FSP",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0487",
-      "time": "12:49 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr163 N / Balboa So",
-      "area": "SR163 N BALBOA SO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0499",
-      "time": "12:54 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr52 W / Convoy",
-      "area": "SR52 W CONVOY",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0501",
-      "time": "12:52 PM",
-      "type": "Animal Hazard",
-      "location": "I805 S / Kearny Villa Rd Onr",
-      "area": "KEARNY VILLA RD ONR TO SB 805",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0502",
-      "time": "12:57 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Las Pulgas No",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0507",
-      "time": "1:00 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / Tamarack So",
-      "area": "NB 5 JSO TAMARACK",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0514",
-      "time": "1:02 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / Cannon Rd Ofr",
-      "area": "",
-      "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0515",
-      "time": "1:06 PM",
-      "type": "Trfc Collision-No Inj",
       "location": "I15 S / Carroll Canyon",
-      "area": "I15 S CARROLL CANYON",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0516",
-      "time": "1:06 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Pacific Hwy So",
       "area": "",
       "details": "San Diego",
       "center_code": "BCCC",
@@ -1775,10 +80,55 @@
       }
     },
     {
-      "id": "0520",
-      "time": "1:07 PM",
-      "type": "Report of Fire",
-      "location": "Sr79 / Sr76",
+      "id": "0516",
+      "time": "1:06 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Pacific Hwy So",
+      "area": "",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0507",
+      "time": "1:00 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N / CANNON NO",
+      "area": "",
+      "details": "Oceanside",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0486",
+      "time": "12:47 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I805 N / H St So",
+      "area": "NB 805 H ST OFR",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0471",
+      "time": "12:34 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr94 E / Spring Wo",
       "area": "",
       "details": "El Cajon",
       "center_code": "BCCC",
@@ -1790,57 +140,132 @@
       }
     },
     {
-      "id": "0524",
-      "time": "1:07 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "0 I215 N",
-      "area": "SB 215 JSO SR74",
+      "id": "0410",
+      "time": "11:44 AM",
+      "type": "Report of Fire",
+      "location": "Sr79 / Sr78",
+      "area": "SR79 SR78 (SANTA YSABEL - DUDLEYS)",
+      "details": "El Cajon",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0380",
+      "time": "11:23 AM",
+      "type": "ESCORT for Road Conditions",
+      "location": "Miramar",
+      "area": "MCAS MIRAMAR",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0270",
+      "time": "10:44 AM",
+      "type": "JUMPER",
+      "location": "I805 N I8 W Con / I805 I8 W Con",
+      "area": "NB 805 TRANS TO WB I8",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0201",
+      "time": "8:28 AM",
+      "type": "Defective Traffic Signals",
+      "location": "Sr67 N / Bradley Ave Ofr",
+      "area": "",
+      "details": "El Cajon",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0145",
+      "time": "5:01 AM",
+      "type": "Traffic Hazard",
+      "location": "Olde Highway 80 / Marina Springs Ln",
+      "area": "JEO",
+      "details": "El Cajon",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0065",
+      "time": "1:46 AM",
+      "type": "Fatality",
+      "location": "12776-13355 Sr76",
+      "area": "WB",
+      "details": "Oceanside",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0003",
+      "time": "12:00 AM",
+      "type": "Road/Weather Conditions",
+      "location": "Media Log",
+      "area": "NEWSWORTHY INCIDENTS",
+      "details": "BC",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0570",
+      "time": "1:50 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr125 N / Navajo So",
+      "area": "SR125 N NAVAJO SO",
+      "details": "El Cajon",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0571",
+      "time": "1:56 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr79 / Vail Lake Resort",
+      "area": "WB SR79 JWO VAIL LAKE",
       "details": "Temecula",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0528",
-      "time": "1:07 PM",
-      "type": "Traffic Hazard",
-      "location": "I15 S / Carroll Canyon",
-      "area": "",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0529",
-      "time": "1:09 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / Old Town So",
-      "area": "I5 N OLD TOWN SO",
-      "details": "San Diego",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0544",
-      "time": "1:19 PM",
-      "type": "Traffic Break",
-      "location": "Sr163 S / Washington So",
-      "area": "",
-      "details": "San Diego",
       "center_code": "BCCC",
       "is_new": true,
       "is_relevant": true,
@@ -1850,5 +275,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:25:11.660205"
+  "last_updated": "2025-09-28T16:58:32.060311"
 }

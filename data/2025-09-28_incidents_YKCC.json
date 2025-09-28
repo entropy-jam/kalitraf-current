@@ -2,29 +2,14 @@
   "center_code": "YKCC",
   "center_name": "Yreka",
   "date": "2025-09-28",
-  "total_incidents": 9,
+  "total_incidents": 6,
   "incidents": [
     {
-      "id": "0023",
-      "time": "3:04 PM",
+      "id": "0030",
+      "time": "1:42 PM",
       "type": "Traffic Hazard",
-      "location": "Cr123 / Cr120",
-      "area": "",
-      "details": "Yreka",
-      "center_code": "YKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0042",
-      "time": "10:40 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "N Old Stage Rd / Sugar Pine Rd",
-      "area": "",
+      "location": "I5 N / Exit 727",
+      "area": "5 N / CRAG VIEW DR",
       "details": "Mount Shasta",
       "center_code": "YKCC",
       "is_new": true,
@@ -35,11 +20,26 @@
       }
     },
     {
-      "id": "0003",
-      "time": "2:34 AM",
+      "id": "0028",
+      "time": "1:13 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / C Dunsmuir",
+      "area": "EXIT 730 I5 S / C Dunsmuir",
+      "details": "Mount Shasta",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0015",
+      "time": "11:53 AM",
       "type": "Trfc Collision-No Inj",
-      "location": "Oberlin Rd / Delphic Rd",
-      "area": "JWO EB",
+      "location": "I5 N Jno N Yreka",
+      "area": "I5 N JNO N Yreka",
       "details": "Yreka",
       "center_code": "YKCC",
       "is_new": true,
@@ -50,26 +50,11 @@
       }
     },
     {
-      "id": "0004",
-      "time": "6:39 AM",
-      "type": "Animal Hazard",
-      "location": "Breceda Ln / Montague Grenada Rd",
-      "area": "",
-      "details": "Yreka",
-      "center_code": "YKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0005",
-      "time": "8:11 AM",
-      "type": "Live or Dead Animal",
-      "location": "E Montague Rd / Fiock Rd",
-      "area": "JWO",
+      "id": "0008",
+      "time": "10:23 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / Exit 751",
+      "area": "5 S / EDGEWOOD RD",
       "details": "Yreka",
       "center_code": "YKCC",
       "is_new": true,
@@ -95,42 +80,12 @@
       }
     },
     {
-      "id": "0008",
-      "time": "10:23 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I5 S / Exit 751",
-      "area": "5 S / EDGEWOOD RD",
-      "details": "Yreka",
-      "center_code": "YKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0015",
-      "time": "11:53 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N Jno N Yreka",
-      "area": "I5 N JNO N Yreka",
-      "details": "Yreka",
-      "center_code": "YKCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0028",
-      "time": "1:13 PM",
+      "id": "0023",
+      "time": "3:04 PM",
       "type": "Traffic Hazard",
-      "location": "I5 S / C Dunsmuir",
-      "area": "EXIT 730 I5 S / C Dunsmuir",
-      "details": "Mount Shasta",
+      "location": "Cr123 / Cr120",
+      "area": "",
+      "details": "Yreka",
       "center_code": "YKCC",
       "is_new": true,
       "is_relevant": true,
@@ -140,5 +95,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:14:58.894299"
+  "last_updated": "2025-09-28T16:52:26.595759"
 }

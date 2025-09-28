@@ -24,30 +24,39 @@ class SSEService {
      */
     async connect() {
         try {
-            console.log('🔗 Connecting to SSE stream...');
+            console.log('🔗 [SSE-CLIENT] Connecting to SSE stream...');
             
             // Determine the correct URL based on environment
             const sseUrl = this.getSSEUrl();
+            console.log(`🔗 [SSE-CLIENT] SSE URL: ${sseUrl}`);
+            console.log(`🔗 [SSE-CLIENT] Current location: ${window.location.href}`);
+            
             this.eventSource = new EventSource(sseUrl);
+            console.log('🔗 [SSE-CLIENT] EventSource created');
             
             this.eventSource.onopen = () => {
-                console.log('✅ SSE connected');
+                console.log('✅ [SSE-CLIENT] SSE connection opened');
+                console.log('✅ [SSE-CLIENT] ReadyState:', this.eventSource.readyState);
                 this.isConnected = true;
                 this.reconnectAttempts = 0;
                 this.notifyConnectionChange(true);
             };
 
             this.eventSource.onmessage = (event) => {
+                console.log('📨 [SSE-CLIENT] Received message:', event.data.substring(0, 100) + '...');
                 try {
                     const data = JSON.parse(event.data);
+                    console.log('📨 [SSE-CLIENT] Parsed data type:', data.type);
                     this.handleMessage(data);
                 } catch (error) {
-                    console.error('❌ Error parsing SSE message:', error);
+                    console.error('❌ [SSE-CLIENT] Error parsing SSE message:', error);
+                    console.error('❌ [SSE-CLIENT] Raw data:', event.data);
                 }
             };
 
             this.eventSource.onerror = (error) => {
-                console.error('❌ SSE error:', error);
+                console.error('❌ [SSE-CLIENT] SSE error:', error);
+                console.error('❌ [SSE-CLIENT] ReadyState:', this.eventSource.readyState);
                 console.error('❌ EventSource readyState:', this.eventSource?.readyState);
                 console.error('❌ EventSource URL:', this.eventSource?.url);
                 this.isConnected = false;
@@ -83,17 +92,24 @@ class SSEService {
      * Handle incoming SSE messages
      */
     handleMessage(data) {
-        console.log('📡 Received SSE message:', data);
+        console.log('📡 [SSE-CLIENT] Received SSE message type:', data.type);
+        console.log('📡 [SSE-CLIENT] Message data keys:', Object.keys(data));
 
         switch (data.type) {
             case 'welcome':
-                console.log('👋 SSE welcome message:', data.message);
+                console.log('👋 [SSE-CLIENT] SSE welcome message:', data.message);
+                console.log('👋 [SSE-CLIENT] Connection ID:', data.connection_id);
                 break;
                 
             case 'initial_data':
-                console.log('📊 Received initial data:', data.data);
+                console.log('📊 [SSE-CLIENT] Received initial data');
+                console.log('📊 [SSE-CLIENT] Data centers:', Object.keys(data.data || {}));
+                console.log('📊 [SSE-CLIENT] Total incidents:', data.data?.results?.length || 0);
                 if (this.eventHandlers.onInitialData) {
+                    console.log('📊 [SSE-CLIENT] Calling onInitialData handler');
                     this.eventHandlers.onInitialData(data.data);
+                } else {
+                    console.warn('⚠️ [SSE-CLIENT] No onInitialData handler registered');
                 }
                 break;
                 

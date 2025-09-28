@@ -1,7 +1,23 @@
 {
   "center_code": "CHCC",
   "center_name": "Chico",
-  "incident_count": 0,
-  "incidents": [],
-  "last_updated": "2025-09-28T16:25:31.249695"
+  "incident_count": 1,
+  "incidents": [
+    {
+      "id": "0058",
+      "time": "1:59 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "N Beale Rd / Lindhurst Ave",
+      "area": "FOOD MAXX PLOT",
+      "details": "Yuba Sutter",
+      "center_code": "CHCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:59:32.836259"
 }

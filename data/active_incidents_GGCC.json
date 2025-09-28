@@ -4,12 +4,102 @@
   "incident_count": 13,
   "incidents": [
     {
-      "id": "0005",
-      "time": "1:21 PM",
+      "id": "0804",
+      "time": "1:46 PM",
       "type": "Traffic Hazard",
-      "location": "I580 W SR24 E CON / I580 E SR24 E CON",
-      "area": "WB 580 TO EB  24 CON",
+      "location": "I80 W / Sfobb Toll Plaza Rd",
+      "area": "WB 80 JWO TP",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0801",
+      "time": "1:45 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Rohnert Park Expy E Onr",
+      "area": "RPX ONR TO SB 101",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0799",
+      "time": "1:41 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Hellyer Ave Ofr",
+      "area": "NB 101 JSO HELLYER",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0792",
+      "time": "1:38 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S I280 S Con / I280 S",
+      "area": "SB 101 JNO  I280 S",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0006",
+      "time": "1:28 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 W / Powell St Ofr",
+      "area": "WB 80 JEO POWELL",
       "details": "Oakland FSP",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0782",
+      "time": "1:27 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 W / Powell St Ofr",
+      "area": "WB 80 JEO POWELL",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0783",
+      "time": "1:27 PM",
+      "type": "Animal Hazard",
+      "location": "Sr87 N / Alma Ave Onr",
+      "area": "NB 87 JNO ALMA AVE",
+      "details": "San Jose",
       "center_code": "GGCC",
       "is_new": true,
       "is_relevant": true,
@@ -22,23 +112,8 @@
       "id": "0761",
       "time": "1:17 PM",
       "type": "Trfc Collision-Unkn Inj",
-      "location": "Us101 S / West Railroad Ave",
-      "area": "SB 101 JNO W RAILROAD",
-      "details": "Santa Rosa",
-      "center_code": "GGCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0764",
-      "time": "1:16 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Adobe Rd / Casa Grande Rd",
-      "area": "ADOBE AT CASA GRANDE",
+      "location": "0 US101 N",
+      "area": "SB 101 JSO BRAKE CHECK",
       "details": "Santa Rosa",
       "center_code": "GGCC",
       "is_new": true,
@@ -55,81 +130,6 @@
       "location": "I580 W / North Flynn Rd Ofr",
       "area": "WB 580 JEO NORTH FLYNN",
       "details": "Dublin",
-      "center_code": "GGCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0753",
-      "time": "1:13 PM",
-      "type": "Traffic Hazard",
-      "location": "Us101 N / Sr37 W Us101 N Con",
-      "area": "NB 101 JSO 37",
-      "details": "Marin",
-      "center_code": "GGCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0730",
-      "time": "1:02 PM",
-      "type": "Traffic Hazard",
-      "location": "I580 W SR24 E CON / I580 E SR24 E CON",
-      "area": "WB 580 TO EB  24 CON",
-      "details": "Oakland",
-      "center_code": "GGCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0733",
-      "time": "12:58 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "I280 N / Stevens Creek Blvd Onr",
-      "area": "NB 280 AT STEVENS CREEK ONR",
-      "details": "San Jose",
-      "center_code": "GGCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0708",
-      "time": "12:41 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Us101 N / Oakland Rd Onr",
-      "area": "NB 101 JNO OAKLAND",
-      "details": "San Jose",
-      "center_code": "GGCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0650",
-      "time": "11:57 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "0 Sr92 W",
-      "area": "WB JWO 1ST TOLL",
-      "details": "Redwood City",
       "center_code": "GGCC",
       "is_new": true,
       "is_relevant": true,
@@ -199,5 +199,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:22:57.843015"
+  "last_updated": "2025-09-28T16:55:02.724106"
 }

@@ -1,5 +1,5 @@
-# CHP Traffic Scraper Docker Container (HTTP-based)
-# Cache buster: 2025-01-26-v1 - Migrated to HTTP requests, removed Chrome/WebDriver
+# CHP Traffic Scraper Docker Container (SSE-only)
+# Cache buster: 2025-01-26-v2 - SSE-only implementation, no file dependencies
 FROM python:3.9-bullseye
 
 # Install system dependencies and Node.js (no Chrome needed for HTTP requests)
@@ -23,13 +23,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy application source code
+# Copy application source code (SSE-only)
 COPY src/ ./src/
-COPY bin/ ./bin/
 COPY js/ ./js/
 COPY assets/ ./assets/
-COPY data/ ./data/
 COPY index.html ./
+# Note: data/ directory removed - SSE-only implementation
 
 # Create logs directory
 RUN mkdir -p logs

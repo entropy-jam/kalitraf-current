@@ -1,14 +1,48 @@
 {
   "center_code": "BSCC",
   "center_name": "Barstow",
-  "timestamp": "2025-09-28T16:25:55.063427",
+  "timestamp": "2025-09-28T17:00:47.167411",
   "new_incidents": [
     {
-      "id": "0107",
-      "time": "1:01 PM",
+      "id": "0118",
+      "time": "1:54 PM",
       "type": "Trfc Collision-No Inj",
-      "location": "Sr138 / Sr2",
-      "area": "EB",
+      "location": "13440 Mm15 S Sbd R134.40",
+      "area": "",
+      "details": "Barstow",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Barstow"
+        ]
+      }
+    },
+    {
+      "id": "0116",
+      "time": "1:49 PM",
+      "type": "Animal Hazard",
+      "location": "17500 Mm15 N Sbd 175.00",
+      "area": "",
+      "details": "Barstow",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Barstow"
+        ]
+      }
+    },
+    {
+      "id": "0112",
+      "time": "1:33 PM",
+      "type": "Car Fire",
+      "location": "Mojave Dr / Sheep Creek Rd",
+      "area": "",
       "details": "Victorville",
       "center_code": "BSCC",
       "is_new": true,
@@ -50,6 +84,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 3,
+  "new_count": 5,
   "removed_count": 0
 }

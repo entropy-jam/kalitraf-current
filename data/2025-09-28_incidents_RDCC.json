@@ -2,44 +2,14 @@
   "center_code": "RDCC",
   "center_name": "Redding",
   "date": "2025-09-28",
-  "total_incidents": 13,
+  "total_incidents": 4,
   "incidents": [
     {
-      "id": "0115",
-      "time": "8:01 PM",
-      "type": "Provide Traffic Control",
-      "location": "I5 S / Gas Point Rd Ofr",
-      "area": "SB I5/GAS POINT",
-      "details": "Redding",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0095",
-      "time": "5:17 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "4650 Mm44 E Sha 46.50",
-      "area": "JWO FOREST RTE 32N17",
-      "details": "Redding",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0128",
-      "time": "9:59 PM",
+      "id": "0042",
+      "time": "1:49 PM",
       "type": "Traffic Hazard",
-      "location": "Paskenta Rd / Boggs And Champlin Rd",
-      "area": "EB JEO",
+      "location": "I5 S / Corning Rd Ofr",
+      "area": "SB I5, 4 MILES NO CORNING",
       "details": "Red Bluff",
       "center_code": "RDCC",
       "is_new": true,
@@ -50,102 +20,12 @@
       }
     },
     {
-      "id": "0004",
-      "time": "12:54 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Black Ln / Balls Ferry Rd",
-      "area": "NEAR RXR TRACKS",
+      "id": "0040",
+      "time": "1:40 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr299 W / Churn Creek Rd Ofr",
+      "area": "WB 299 AT CHURN CRK",
       "details": "Redding",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0014",
-      "time": "4:29 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "5 S / RIVERSIDE AVE",
-      "area": "SB JNO",
-      "details": "Red Bluff",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0013",
-      "time": "4:22 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "0 I5 S",
-      "area": "",
-      "details": "Red Bluff",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0019",
-      "time": "5:05 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 S / GYLE RD OFR",
-      "area": "JNO",
-      "details": "Red Bluff",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0025",
-      "time": "7:41 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "9480 Lawson Ct",
-      "area": "IFO 9480 RAWSON CT",
-      "details": "Red Bluff",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0029",
-      "time": "10:26 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Brush Creek Rd / Sr44",
-      "area": "",
-      "details": "Redding",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0031",
-      "time": "11:27 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "20800-20975 Lake California Dr",
-      "area": "JWO GUARD SHACK",
-      "details": "Red Bluff",
       "center_code": "RDCC",
       "is_new": true,
       "is_relevant": true,
@@ -170,26 +50,11 @@
       }
     },
     {
-      "id": "0037",
-      "time": "12:59 PM",
-      "type": "Live or Dead Animal",
-      "location": "I5 N / Bridge Bay Rd Ofr",
-      "area": "NB I5 APPROX 2-3 MILES SO BRIDGE BAY",
-      "details": "Redding",
-      "center_code": "RDCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0039",
-      "time": "1:16 PM",
-      "type": "Live or Dead Animal",
-      "location": "I5 S / Sr151 Ofr",
-      "area": "SB JNO, 1/2 MILE",
+      "id": "0029",
+      "time": "10:26 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Brush Creek Rd / Sr44",
+      "area": "",
       "details": "Redding",
       "center_code": "RDCC",
       "is_new": true,
@@ -200,5 +65,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:18:58.887605"
+  "last_updated": "2025-09-28T16:52:26.535517"
 }

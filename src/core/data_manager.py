@@ -48,7 +48,7 @@ class DataManager(IDeltaProcessor, ICacheManager):
         }
     
     def save_active_incidents(self, incidents_data: List[Dict]) -> bool:
-        """Save current incidents to active_incidents.json only if data changed"""
+        """Save current incidents (disabled - SSE-only implementation)"""
         json_data = self.incidents_to_json(incidents_data)
         
         # Check if file exists and compare with existing data
@@ -68,10 +68,7 @@ class DataManager(IDeltaProcessor, ICacheManager):
         
         logging.info(f"Saved {len(incidents_data)} incidents to {self.active_file}")
         
-        # Maintain backward compatibility: also save to active_incidents.json if this is BCCC
-        if self.center_code == "BCCC":
-            self.file_manager.save_file("active_incidents.json", json_data)
-            logging.info("Also saved to active_incidents.json for backward compatibility")
+        # Backward compatibility removed - SSE-only implementation
         
         return success
     

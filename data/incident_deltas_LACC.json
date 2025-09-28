@@ -1,14 +1,119 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "timestamp": "2025-09-28T16:25:55.070384",
+  "timestamp": "2025-09-28T17:00:47.179026",
   "new_incidents": [
     {
-      "id": "0052",
-      "time": "1:22 PM",
+      "id": "1145",
+      "time": "1:58 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I210 E / Baldwin Ave Onr",
+      "area": "EB 210 JEO BALDWIN",
+      "details": "Altadena",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1142",
+      "time": "1:56 PM",
       "type": "Traffic Hazard",
-      "location": "Sr110 S / W Sunset Blvd",
-      "area": "JNO",
+      "location": "N Mcdonnell Ave / Hammel St",
+      "area": "MCDONNELL AT HAMMEL",
+      "details": "East LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1138",
+      "time": "1:55 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 E / Maple Ave Ofr",
+      "area": "EB JWO",
+      "details": "Central LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1137",
+      "time": "1:54 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 I10 E",
+      "area": "EB 10 AT PECK",
+      "details": "East LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1135",
+      "time": "1:52 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I710 S / I405 S I710 Con",
+      "area": "SB 710 JSO 405",
+      "details": "South LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1129",
+      "time": "1:50 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I110 N / W Martin Luther King Jr Blvd",
+      "area": "NB 110 JSO MARTIN LUTHER KING",
+      "details": "Central LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1127",
+      "time": "1:48 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Angeles Forest Hwy / Mm 12.45",
+      "area": "MM 12.5",
+      "details": "Antelope Valley",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0058",
+      "time": "1:46 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I110 S / W Gage Ave Ofr",
+      "area": "SB 110 AT GAGE",
       "details": "LAFSP",
       "center_code": "LACC",
       "is_new": true,
@@ -19,12 +124,147 @@
       }
     },
     {
-      "id": "1068",
-      "time": "1:21 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I405 S / I105 E",
-      "area": "SB 405 TRANS TO EB 105",
-      "details": "West LA",
+      "id": "1125",
+      "time": "1:46 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I710 N I10 Con / W Ramona Blvd",
+      "area": "NB 710 JSO RAMONA",
+      "details": "East LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1117",
+      "time": "1:45 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I210 E / Myrtle Ave Ofr",
+      "area": "JEO",
+      "details": "Baldwin Park",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0057",
+      "time": "1:45 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I210 E / Myrtle Ave Ofr",
+      "area": "JEO",
+      "details": "LAFSP",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1118",
+      "time": "1:43 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I110 S / W Gage Ave Ofr",
+      "area": "SB 110 AT GAGE",
+      "details": "Central LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1126",
+      "time": "1:42 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I5 N / Olive Ave Ofr",
+      "area": "POI NB 5 JSO WESTERN BT 98-50",
+      "details": "Altadena",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1113",
+      "time": "1:41 PM",
+      "type": "Report of Fire",
+      "location": "I5 S / 4th St",
+      "area": "SB I5 JNO 4TH ST",
+      "details": "Central LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1097",
+      "time": "1:37 PM",
+      "type": "Report of Fire",
+      "location": "I10 E / S Boyle Ave",
+      "area": "EB 10 JWO BOYLE",
+      "details": "Central LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1092",
+      "time": "1:35 PM",
+      "type": "Traffic Hazard",
+      "location": "I710 S / Florence Ave",
+      "area": "BTWN  FLORENCE AVE/ FIRESTONE",
+      "details": "East LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1080",
+      "time": "1:30 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "16921 E Avenue O",
+      "area": "",
+      "details": "Antelope Valley",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1077",
+      "time": "1:27 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Telegraph Rd / Imperial Hwy",
+      "area": "TELEGRAPH JWO WICKER",
+      "details": "LA",
       "center_code": "LACC",
       "is_new": true,
       "is_relevant": true,
@@ -49,51 +289,6 @@
       }
     },
     {
-      "id": "1060",
-      "time": "1:19 PM",
-      "type": "Animal Hazard",
-      "location": "I210 W / Roxford St Ofr",
-      "area": "WB 210 JEO",
-      "details": "Newhall",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0051",
-      "time": "1:19 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Lake Hughes Rd Onr",
-      "area": "SB 5 JNO LAKE HUGHES",
-      "details": "LAFSP",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "1057",
-      "time": "1:17 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I110 S / W Rosecrans Ave Ofr",
-      "area": "",
-      "details": "South LA",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
       "id": "1050",
       "time": "1:14 PM",
       "type": "Hit and Run No Injuries",
@@ -109,177 +304,12 @@
       }
     },
     {
-      "id": "1031",
+      "id": "1073",
       "time": "1:05 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I405 N / Inglewood Ave",
-      "area": "NB JSO INGLEWOOD",
-      "details": "South LA",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "1033",
-      "time": "1:04 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "E 135th St / S San Pedro St",
-      "area": "",
-      "details": "South LA",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "1027",
-      "time": "1:02 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Lake Hughes Rd Onr",
-      "area": "SB 5 JSO LAKE HUGHES",
-      "details": "Newhall",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "1004",
-      "time": "12:53 PM",
-      "type": "Traffic Hazard",
-      "location": "SR14 S / ANGELES FOREST HWY",
-      "area": "SB 14 JNO",
-      "details": "Antelope Valley",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "1009",
-      "time": "12:53 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr91 W / S Santa Fe Ave",
-      "area": "WB 91 AT SANTA FE",
-      "details": "South LA",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "1003",
-      "time": "12:52 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 S / Carmenita Rd Onr",
-      "area": "CARMENITA ONR TO SB 5",
-      "details": "Santa Fe Springs",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0993",
-      "time": "12:44 PM",
       "type": "Traffic Break",
-      "location": "I10 W / N Garey Ave",
-      "area": "WB 10 AT GAREY AVE",
-      "details": "Baldwin Park",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0992",
-      "time": "12:42 PM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I110 N / Alondra Blvd",
-      "area": "NB 110 JNO ALONDRA",
-      "details": "South LA",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0044",
-      "time": "12:40 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / The Old Rd",
-      "area": "NB 5 JSO THE OLD RD",
-      "details": "LAFSP",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0985",
-      "time": "12:39 PM",
-      "type": "Traffic Hazard",
-      "location": "I5 N / The Old Rd",
-      "area": "NB 5 JSO THE OLD RD",
-      "details": "Newhall",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0924",
-      "time": "12:07 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "734 E 135th St",
-      "area": "",
-      "details": "South LA",
-      "center_code": "LACC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0879",
-      "time": "11:43 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "I210 E / Buena Vista St Ofr",
-      "area": "EB 210 JWO BUENA VISTA",
-      "details": "Baldwin Park",
+      "location": "US101 E / WHITE OAK AVE",
+      "area": "EB 101 AT WHITE OAK AVE BRIDGE",
+      "details": "West Valley",
       "center_code": "LACC",
       "is_new": true,
       "is_relevant": true,
@@ -365,6 +395,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 24,
+  "new_count": 26,
   "removed_count": 0
 }

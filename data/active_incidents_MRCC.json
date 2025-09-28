@@ -4,12 +4,12 @@
   "incident_count": 1,
   "incidents": [
     {
-      "id": "0129",
-      "time": "1:01 PM",
+      "id": "0135",
+      "time": "1:45 PM",
       "type": "Traffic Hazard",
-      "location": "Sr99 N / Shanks Rd Ofr",
-      "area": "NB JSO",
-      "details": "Merced",
+      "location": "Tuolumne Rd N / Crow Bar Ln",
+      "area": "NB ****ROLLING",
+      "details": "Sonora",
       "center_code": "MRCC",
       "is_new": true,
       "is_relevant": true,
@@ -19,5 +19,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:18:12.291840"
+  "last_updated": "2025-09-28T16:52:26.488197"
 }

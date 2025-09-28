@@ -1,38 +1,8 @@
 {
   "center_code": "MYCC",
   "center_name": "Monterey",
-  "incident_count": 3,
+  "incident_count": 1,
   "incidents": [
-    {
-      "id": "0172",
-      "time": "1:12 PM",
-      "type": "Provide Traffic Control",
-      "location": "Sr17 / Crescent Dr",
-      "area": "NB AT",
-      "details": "Santa Cruz",
-      "center_code": "MYCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0153",
-      "time": "12:17 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "SR68 / Morse Dr",
-      "area": "WB JEO",
-      "details": "MY",
-      "center_code": "MYCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
     {
       "id": "0113",
       "time": "10:32 AM",
@@ -49,5 +19,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:21:59.814603"
+  "last_updated": "2025-09-28T16:52:26.505241"
 }

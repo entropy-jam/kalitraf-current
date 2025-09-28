@@ -1,14 +1,14 @@
 {
   "center_code": "INCC",
   "center_name": "Inland",
-  "timestamp": "2025-09-28T16:25:55.069599",
+  "timestamp": "2025-09-28T17:00:47.177805",
   "new_incidents": [
     {
-      "id": "0345",
-      "time": "1:20 PM",
-      "type": "Traffic Hazard",
-      "location": "Tl91 W Eo / Sr71",
-      "area": "TL91 W EO SR71",
+      "id": "0372",
+      "time": "1:56 PM",
+      "type": "Hit and Run w/Injuries",
+      "location": "I15 S So / Cantu Galleano Ranch Rd Exit 105",
+      "area": "I15 S SO CANTU GALLEANO RANCH RD",
       "details": "Riverside",
       "center_code": "INCC",
       "is_new": true,
@@ -21,19 +21,49 @@
       }
     },
     {
-      "id": "0012",
-      "time": "1:20 PM",
-      "type": "Traffic Hazard",
-      "location": "Tl91 W Eo / Sr71",
-      "area": "TL91 W EO SR71",
-      "details": "Riverside FSP",
+      "id": "0364",
+      "time": "1:55 PM",
+      "type": "Report of Fire",
+      "location": "I10 E Wo / Riverside Ave",
+      "area": "DUPES",
+      "details": "San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0370",
+      "time": "1:54 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "4155 University Pkwy",
+      "area": "OCCD  I215 N / UNIVERSITY PKWY OFR",
+      "details": "San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0354",
+      "time": "1:34 PM",
+      "type": "Animal Hazard",
+      "location": "Sr60 W / Moreno Beach Dr Onr",
+      "area": "",
+      "details": "Riverside",
       "center_code": "INCC",
       "is_new": true,
       "is_relevant": true,
       "lane_blockage": {
         "status": "blocking",
         "details": [
-          "Riverside FSP"
+          "Riverside"
         ]
       }
     },
@@ -44,36 +74,6 @@
       "location": "Pacific St / Conejo Dr",
       "area": "",
       "details": "San Bernardino",
-      "center_code": "INCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0339",
-      "time": "1:15 PM",
-      "type": "Traffic Hazard",
-      "location": "I210 E Wo / Pepper Ave",
-      "area": "I210 E WO PEPPER AVE",
-      "details": "San Bernardino",
-      "center_code": "INCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0309",
-      "time": "12:28 PM",
-      "type": "Hit and Run No Injuries",
-      "location": "Sr71 S / Ramona Ave",
-      "area": "SR71 S RAMONA AVE",
-      "details": "Rancho Cucamonga",
       "center_code": "INCC",
       "is_new": true,
       "is_relevant": true,

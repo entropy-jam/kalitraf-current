@@ -1,14 +1,14 @@
 {
   "center_code": "FRCC",
   "center_name": "Fresno",
-  "timestamp": "2025-09-28T16:25:55.066854",
+  "timestamp": "2025-09-28T17:00:47.172388",
   "new_incidents": [
     {
-      "id": "0191",
-      "time": "12:36 PM",
-      "type": "Traffic Hazard",
-      "location": "Sr99 S / Avenue 260 Ofr",
-      "area": "SB 99 JNO AVE 260",
+      "id": "0211",
+      "time": "1:46 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr245 / Drive 152",
+      "area": "SB 245 JNO DRIVE 152",
       "details": "Visalia",
       "center_code": "FRCC",
       "is_new": true,
@@ -19,11 +19,11 @@
       }
     },
     {
-      "id": "0178",
-      "time": "12:08 PM",
+      "id": "0201",
+      "time": "1:28 PM",
       "type": "Trfc Collision-No Inj",
-      "location": "Sr180 / George Smith Rd",
-      "area": "WB 180 JWO GEORGE SMITH RD",
+      "location": "Sr41 / E Adams Ave",
+      "area": "",
       "details": "Fresno",
       "center_code": "FRCC",
       "is_new": true,

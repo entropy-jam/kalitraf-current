@@ -1,7 +1,7 @@
 {
   "name": "chp-traffic-scraper",
   "version": "3.0.0",
-  "description": "Real-time CHP Traffic Incident Monitor with Railway deployment and built-in WebSocket",
+  "description": "Real-time CHP Traffic Incident Monitor with Railway deployment and SSE",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 3000",
@@ -9,14 +9,14 @@
     "dev": "python -m http.server 3000"
   },
   "dependencies": {
-    "ws": "^8.14.2"
+    // WebSocket dependency removed - using SSE only
   },
   "keywords": [
     "chp",
     "traffic",
     "incidents",
     "real-time",
-    "websocket",
+    "sse",
     "railway"
   ],
   "author": "entropy-jam",

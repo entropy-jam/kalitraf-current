@@ -21,7 +21,7 @@ class UIController {
         // Handle center selection change
         document.getElementById('centerSelect').addEventListener('change', (e) => {
             this.appController.setCurrentCenter(e.target.value);
-            this.appController.loadData();
+            // Data comes from SSE - no manual loading needed
         });
         
         // Handle auto-refresh checkbox
@@ -29,8 +29,7 @@ class UIController {
             this.startAutoRefresh();
         });
         
-        // Initial data load
-        this.appController.loadData();
+        // Data comes from SSE - no initial loading needed
         this.startAutoRefresh();
     }
 
@@ -69,8 +68,8 @@ class UIController {
         button.textContent = 'Refreshing...';
         
         try {
-            // Force refresh from server
-            await this.appController.loadData(true);
+            // Data comes from SSE - no manual refresh needed
+            console.log('📡 Data comes from SSE - no manual refresh needed');
             
             // Show success state
             button.classList.remove('loading');
@@ -117,7 +116,8 @@ class UIController {
         
         if (document.getElementById('autoRefresh').checked) {
             this.autoRefreshInterval = setInterval(() => {
-                this.appController.loadData();
+                // Data comes from SSE - no manual refresh needed
+                console.log('📡 Auto-refresh disabled - data comes from SSE');
             }, 30000); // 30 seconds
         }
     }
@@ -143,8 +143,8 @@ class UIController {
         window.addEventListener('online', () => {
             this.updateOnlineStatus();
             console.log('Connection restored');
-            // Try to refresh data when back online
-            this.appController.loadData();
+            // Data comes from SSE - no manual refresh needed
+            console.log('📡 Data comes from SSE - no manual refresh needed');
         });
         
         window.addEventListener('offline', () => {

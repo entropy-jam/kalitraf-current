@@ -14,7 +14,7 @@ case "$1" in
         echo "🚀 Running Docker container..."
         docker run -d -p 8080:8080 -p 3000:3000 --name chp-scraper chp-scraper
         echo "✅ Container running!"
-        echo "📡 WebSocket: ws://localhost:8080"
+        echo "📡 HTTP Server with SSE: http://localhost:8080"
         echo "🌐 Frontend: http://localhost:3000"
         ;;
     "stop")
