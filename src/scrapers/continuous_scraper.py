@@ -153,17 +153,35 @@ class SSEServer:
         """Start the HTTP and SSE server"""
         print(f"🚀 Starting HTTP and SSE server on port {self.port}")
         
-        # Set up HTTP routes
-        self.setup_http_routes()
-        
-        # Start the server
-        runner = web.AppRunner(self.app)
-        await runner.setup()
-        site = web.TCPSite(runner, "0.0.0.0", self.port)
-        await site.start()
-        
-        print(f"✅ HTTP server running on http://0.0.0.0:{self.port}")
-        print(f"✅ SSE server running on http://0.0.0.0:{self.port}/api/incidents/stream")
+        try:
+            # Set up HTTP routes
+            print("🔧 Setting up HTTP routes...")
+            self.setup_http_routes()
+            print("✅ HTTP routes configured")
+            
+            # Start the server
+            print("🔧 Creating web app runner...")
+            runner = web.AppRunner(self.app)
+            await runner.setup()
+            print("✅ Web app runner setup complete")
+            
+            print("🔧 Starting TCP site...")
+            site = web.TCPSite(runner, "0.0.0.0", self.port)
+            await site.start()
+            print("✅ TCP site started")
+            
+            # Store the runner for cleanup
+            self.server = runner
+            
+            print(f"✅ HTTP server running on http://0.0.0.0:{self.port}")
+            print(f"✅ SSE server running on http://0.0.0.0:{self.port}/api/incidents/stream")
+            
+        except Exception as e:
+            print(f"❌ Failed to start HTTP/SSE server: {e}")
+            print(f"❌ Error type: {type(e).__name__}")
+            import traceback
+            print(f"❌ Traceback: {traceback.format_exc()}")
+            raise
 
 class ContinuousRailwayScraper:
     """Continuous scraper for Railway deployment using HTTP requests"""
@@ -375,7 +393,16 @@ class ContinuousRailwayScraper:
         print(f"🎯 Centers: {', '.join(self.centers)}")
         
         # Start SSE server
-        await self.sse_server.start_server()
+        try:
+            print("🔧 Starting SSE server...")
+            await self.sse_server.start_server()
+            print("✅ SSE server started successfully")
+        except Exception as e:
+            print(f"❌ Failed to start SSE server: {e}")
+            print(f"❌ Error type: {type(e).__name__}")
+            import traceback
+            print(f"❌ Traceback: {traceback.format_exc()}")
+            raise
         
         self.is_running = True
         iteration = 0
