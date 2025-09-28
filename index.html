@@ -125,8 +125,12 @@
         <div class="main-content">
             <div class="container">
                 <div class="header">
-                    <h1>🚨 CHP Traffic Incidents Monitor</h1>
+                    <h1>🚨 CHP Traffic Monitor</h1>
                     <p>Real-time traffic incident data from California Highway Patrol</p>
+                    <div id="connection-status" class="connection-status">
+                        <span id="connection-indicator">●</span>
+                        <span id="connection-text">Connecting...</span>
+                    </div>
                 </div>
         
         <div class="controls" id="controls">
@@ -161,7 +165,7 @@
             
             <button id="refreshBtn">🔄 Refresh Now</button>
             
-            <button id="themeToggle" title="Toggle dark/light theme">🌙</button>
+            <button id="theme-toggle" title="Toggle dark/light theme">🌙</button>
             
             <div style="margin-left: auto;">
                 <label>
@@ -238,6 +242,9 @@
     <!-- Controllers -->
     <script src="js/controllers/app-controller.js"></script>
     <script src="js/ui-controller.js"></script>
+    
+    <!-- SSE Service -->
+    <script src="js/services/sse-service.js"></script>
     
     <!-- Main application entry point -->
     <script src="js/app-railway.js"></script>

@@ -1,4 +1,4 @@
-/* CHP Traffic Incidents Monitor - Styles */
+/* CHP Traffic Monitor - Styles */
 
 :root {
     /* Light theme colors (default) */
@@ -246,6 +246,36 @@ body {
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
+}
+
+.connection-status {
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#connection-indicator {
+    font-size: 12px;
+    color: var(--accent-warning);
+    animation: pulse 2s infinite;
+}
+
+#connection-indicator.connected {
+    color: var(--accent-success);
+    animation: none;
+}
+
+#connection-indicator.disconnected {
+    color: var(--accent-danger);
+    animation: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 .controls {

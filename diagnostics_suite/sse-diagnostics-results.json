@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-28T00:11:00.819727",
+  "timestamp": "2025-09-28T00:26:10.519879",
   "tests": {
     "sse_connection": {
       "name": "SSE Server Connection",
@@ -13,7 +13,7 @@
           {
             "type": "welcome",
             "message": "Connected to CHP Traffic Monitor SSE",
-            "timestamp": "2025-09-28T00:11:00.823870"
+            "timestamp": "2025-09-28T00:26:10.524300"
           },
           {
             "type": "incident_update",
@@ -27,23 +27,6 @@
                   "type": "Trfc Collision-No Inj",
                   "location": "SR58 W / MARTIN LUTHER KING BLVD OFR",
                   "area": "WB SR58 JEO MLK",
-                  "details": "Bakersfield",
-                  "center_code": "BFCC",
-                  "is_new": true,
-                  "is_relevant": true,
-                  "lane_blockage": {
-                    "status": "blocking",
-                    "details": [
-                      "Bakersfield"
-                    ]
-                  }
-                },
-                {
-                  "id": "0264",
-                  "time": "8:44 PM",
-                  "type": "Hit and Run No Injuries",
-                  "location": "6500 Kimberly Ave",
-                  "area": "5605 Ashland St",
                   "details": "Bakersfield",
                   "center_code": "BFCC",
                   "is_new": true,
@@ -137,8 +120,8 @@
                   }
                 }
               ],
-              "incidentCount": 7,
-              "timestamp": "2025-09-28T00:11:03.606947",
+              "incidentCount": 6,
+              "timestamp": "2025-09-28T00:26:12.393115",
               "hasChanges": true,
               "changes": {
                 "new_incidents": [
@@ -148,23 +131,6 @@
                     "type": "Trfc Collision-No Inj",
                     "location": "SR58 W / MARTIN LUTHER KING BLVD OFR",
                     "area": "WB SR58 JEO MLK",
-                    "details": "Bakersfield",
-                    "center_code": "BFCC",
-                    "is_new": true,
-                    "is_relevant": true,
-                    "lane_blockage": {
-                      "status": "blocking",
-                      "details": [
-                        "Bakersfield"
-                      ]
-                    }
-                  },
-                  {
-                    "id": "0264",
-                    "time": "8:44 PM",
-                    "type": "Hit and Run No Injuries",
-                    "location": "6500 Kimberly Ave",
-                    "area": "5605 Ashland St",
                     "details": "Bakersfield",
                     "center_code": "BFCC",
                     "is_new": true,
@@ -272,11 +238,11 @@
       "status": "success",
       "details": {
         "message_types_received": [
-          "welcome",
+          "scrape_summary",
           "incident_update",
-          "scrape_summary"
+          "welcome"
         ],
-        "monitoring_duration": 5.849416971206665
+        "monitoring_duration": 5.862135171890259
       },
       "errors": []
     },
@@ -298,7 +264,7 @@
           {
             "type": "welcome",
             "message": "Connected to CHP Traffic Monitor SSE",
-            "timestamp": "2025-09-28T00:11:09.472606"
+            "timestamp": "2025-09-28T00:26:18.267873"
           },
           {
             "type": "incident_update",
@@ -312,23 +278,6 @@
                   "type": "Trfc Collision-No Inj",
                   "location": "SR58 W / MARTIN LUTHER KING BLVD OFR",
                   "area": "WB SR58 JEO MLK",
-                  "details": "Bakersfield",
-                  "center_code": "BFCC",
-                  "is_new": true,
-                  "is_relevant": true,
-                  "lane_blockage": {
-                    "status": "blocking",
-                    "details": [
-                      "Bakersfield"
-                    ]
-                  }
-                },
-                {
-                  "id": "0264",
-                  "time": "8:44 PM",
-                  "type": "Hit and Run No Injuries",
-                  "location": "6500 Kimberly Ave",
-                  "area": "5605 Ashland St",
                   "details": "Bakersfield",
                   "center_code": "BFCC",
                   "is_new": true,
@@ -422,8 +371,8 @@
                   }
                 }
               ],
-              "incidentCount": 7,
-              "timestamp": "2025-09-28T00:11:15.362978",
+              "incidentCount": 6,
+              "timestamp": "2025-09-28T00:26:24.080073",
               "hasChanges": true,
               "changes": {
                 "new_incidents": [
@@ -433,23 +382,6 @@
                     "type": "Trfc Collision-No Inj",
                     "location": "SR58 W / MARTIN LUTHER KING BLVD OFR",
                     "area": "WB SR58 JEO MLK",
-                    "details": "Bakersfield",
-                    "center_code": "BFCC",
-                    "is_new": true,
-                    "is_relevant": true,
-                    "lane_blockage": {
-                      "status": "blocking",
-                      "details": [
-                        "Bakersfield"
-                      ]
-                    }
-                  },
-                  {
-                    "id": "0264",
-                    "time": "8:44 PM",
-                    "type": "Hit and Run No Injuries",
-                    "location": "6500 Kimberly Ave",
-                    "area": "5605 Ashland St",
                     "details": "Bakersfield",
                     "center_code": "BFCC",
                     "is_new": true,
@@ -555,20 +487,18 @@
               "centerName": "Barstow",
               "incidents": [
                 {
-                  "id": "0201",
-                  "time": "8:46 PM",
-                  "type": "Traffic Hazard",
-                  "location": "6100 Mm247 N Sbd 61.00",
-                  "area": "NB",
-                  "details": "Barstow",
+                  "id": "0208",
+                  "time": "9:18 PM",
+                  "type": "Trfc Collision-1141 Enrt",
+                  "location": "Sheep Creek Rd / El Mirage Rd",
+                  "area": "",
+                  "details": "Victorville",
                   "center_code": "BSCC",
                   "is_new": true,
                   "is_relevant": true,
                   "lane_blockage": {
-                    "status": "blocking",
-                    "details": [
-                      "Barstow"
-                    ]
+                    "status": "no_blockage",
+                    "details": []
                   }
                 },
                 {
@@ -699,25 +629,23 @@
                 }
               ],
               "incidentCount": 9,
-              "timestamp": "2025-09-28T00:11:15.363556",
+              "timestamp": "2025-09-28T00:26:24.080637",
               "hasChanges": true,
               "changes": {
                 "new_incidents": [
                   {
-                    "id": "0201",
-                    "time": "8:46 PM",
-                    "type": "Traffic Hazard",
-                    "location": "6100 Mm247 N Sbd 61.00",
-                    "area": "NB",
-                    "details": "Barstow",
+                    "id": "0208",
+                    "time": "9:18 PM",
+                    "type": "Trfc Collision-1141 Enrt",
+                    "location": "Sheep Creek Rd / El Mirage Rd",
+                    "area": "",
+                    "details": "Victorville",
                     "center_code": "BSCC",
                     "is_new": true,
                     "is_relevant": true,
                     "lane_blockage": {
-                      "status": "blocking",
-                      "details": [
-                        "Barstow"
-                      ]
+                      "status": "no_blockage",
+                      "details": []
                     }
                   },
                   {
@@ -861,9 +789,9 @@
       "status": "success",
       "details": {
         "total_messages": 10,
-        "total_time": 5.809337854385376,
-        "messages_per_second": 1.7213665740668123,
-        "average_interval": 0.6454810036553277
+        "total_time": 5.8230719566345215,
+        "messages_per_second": 1.717306616588602,
+        "average_interval": 0.6470071209801568
       },
       "errors": []
     },
@@ -900,7 +828,7 @@
             "sample_message": {
               "type": "welcome",
               "message": "Connected to CHP Traffic Monitor SSE",
-              "timestamp": "2025-09-28T00:11:21.185613"
+              "timestamp": "2025-09-28T00:26:29.920579"
             }
           }
         },
@@ -911,23 +839,16 @@
     },
     "frontend_rendering": {
       "name": "Frontend Rendering",
-      "status": "failed",
+      "status": "success",
       "details": {
-        "html_length": 11166,
-        "missing_elements": [
-          "CHP Traffic Monitor",
-          "theme-toggle",
-          "connection-status"
-        ],
+        "html_length": 11396,
+        "missing_elements": [],
         "missing_js_files": [],
         "css_present": true,
         "has_incidents_container": true,
         "has_controls": true
       },
-      "errors": [
-        "Missing HTML elements: ['CHP Traffic Monitor', 'theme-toggle', 'connection-status']",
-        "Missing JS files: []"
-      ]
+      "errors": []
     },
     "data_display": {
       "name": "Data Display",
@@ -940,17 +861,17 @@
             "BFCC",
             "BSCC"
           ],
-          "total_incidents": 27,
+          "total_incidents": 26,
           "incident_types": [
-            "CLOSURE of a Road",
-            "Trfc Collision-No Inj",
-            "Trfc Collision-Unkn Inj",
-            "Traffic Advisory",
+            "Roadway Flooding",
             "Traffic Hazard",
             "Hit and Run No Injuries",
-            "Road/Weather Conditions",
-            "Roadway Flooding",
-            "Trfc Collision-1141 Enrt"
+            "Trfc Collision-1141 Enrt",
+            "Trfc Collision-No Inj",
+            "CLOSURE of a Road",
+            "Traffic Advisory",
+            "Trfc Collision-Unkn Inj",
+            "Road/Weather Conditions"
           ],
           "has_lane_blockage_info": true,
           "has_timestamps": true,
@@ -1057,9 +978,9 @@
   },
   "summary": {
     "total_tests": 10,
-    "successful": 9,
-    "failed": 1,
+    "successful": 10,
+    "failed": 0,
     "partial": 0,
-    "success_rate": 90.0
+    "success_rate": 100.0
   }
 }
