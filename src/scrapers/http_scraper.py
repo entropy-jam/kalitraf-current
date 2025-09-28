@@ -376,34 +376,35 @@ async def scrape_all_centers_http_async(centers: List[str] = None, previous_inci
     scraper = HTTPScraper()
     return await scraper.scrape_all_centers_async(centers, previous_incidents_map)
 
-if __name__ == "__main__":
-    """Test the HTTP scraper"""
-    import argparse
-    
-    parser = argparse.ArgumentParser(description='CHP HTTP Traffic Scraper')
-    parser.add_argument('--center', default='BCCC', 
-                       choices=['BCCC', 'LACC', 'OCCC', 'SACC'] + [c for c in CenterMapper().get_available_centers() if c not in ['BCCC', 'LACC', 'OCCC', 'SACC']],
-                       help='Communication center to scrape')
-    parser.add_argument('--async-mode', action='store_true',
-                       help='Use asynchronous scraping')
-    parser.add_argument('--all', action='store_true',
-                       help='Scrape all production centers')
-    
-    args = parser.parse_args()
-    
-    scraper = HTTPScraper()
-    
-    if args.all:
-        if args.async_mode:
-            results = asyncio.run(scraper.scrape_all_centers_async())
-        else:
-            results = scraper.scrape_all_centers_sync()
-        
-        print(f"\n📊 Scraped {len(results)} centers:")
-        for result in results:
-            status = "✅" if result['status'] == 'success' else "❌"
-            print(f"  {status} {result['center']}: {result['incidentCount']} incidents")
-    else:
-        result = scraper.scrape_center_sync(args.center)
-        status = "✅" if result['status'] == 'success' else "❌"
-        print(f"{status} {result['center']}: {result['incidentCount']} incidents")
+# Main function disabled - this module is only meant to be imported
+# if __name__ == "__main__":
+#     """Test the HTTP scraper"""
+#     import argparse
+#     
+#     parser = argparse.ArgumentParser(description='CHP HTTP Traffic Scraper')
+#     parser.add_argument('--center', default='BCCC', 
+#                        choices=['BCCC', 'LACC', 'OCCC', 'SACC'] + [c for c in CenterMapper().get_available_centers() if c not in ['BCCC', 'LACC', 'OCCC', 'SACC']],
+#                        help='Communication center to scrape')
+#     parser.add_argument('--async-mode', action='store_true',
+#                        help='Use asynchronous scraping')
+#     parser.add_argument('--all', action='store_true',
+#                        help='Scrape all production centers')
+#     
+#     args = parser.parse_args()
+#     
+#     scraper = HTTPScraper()
+#     
+#     if args.all:
+#         if args.async_mode:
+#             results = asyncio.run(scraper.scrape_all_centers_async())
+#         else:
+#             results = scraper.scrape_all_centers_sync()
+#         
+#         print(f"\n📊 Scraped {len(results)} centers:")
+#         for result in results:
+#             status = "✅" if result['status'] == 'success' else "❌"
+#             print(f"  {status} {result['center']}: {result['incidentCount']} incidents")
+#     else:
+#         result = scraper.scrape_center_sync(args.center)
+#         status = "✅" if result['status'] == 'success' else "❌"
+#         print(f"{status} {result['center']}: {result['incidentCount']} incidents")
