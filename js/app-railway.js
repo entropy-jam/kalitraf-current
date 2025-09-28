@@ -1,14 +1,14 @@
 /**
- * Railway Main Application Entry Point with Built-in WebSocket Support
- * Uses Railway's built-in WebSocket server instead of external Pusher
+ * Railway Main Application Entry Point with SSE Support
+ * Uses Server-Sent Events instead of WebSocket for real-time updates
  */
 
-// Railway WebSocket configuration
+// Railway SSE configuration
 const RAILWAY_CONFIG = {
-  websocket: {
+  sse: {
     url: window.location.protocol === 'https:' 
-      ? `wss://${window.location.host}/ws?upgrade_wait=0s&first_msg_wait=0s`
-      : `ws://${window.location.hostname}:8080`,
+      ? `https://${window.location.host}/api/incidents/stream`
+      : `http://${window.location.hostname}:8081/api/incidents/stream`,
     reconnectInterval: 5000,
     maxReconnectAttempts: 10
   },
@@ -85,14 +85,10 @@ class ThemeManager {
     }
 }
 
-// Railway WebSocket Service
-class RailwayWebSocketService {
+// Railway SSE Service (using the SSEService class)
+class RailwaySSEService {
     constructor() {
-        this.ws = null;
-        this.isConnected = false;
-        this.reconnectAttempts = 0;
-        this.maxReconnectAttempts = RAILWAY_CONFIG.websocket.maxReconnectAttempts;
-        this.reconnectInterval = RAILWAY_CONFIG.websocket.reconnectInterval;
+        this.sseService = new SSEService();
         this.eventHandlers = {
             onIncidentUpdate: null,
             onError: null,
@@ -103,98 +99,52 @@ class RailwayWebSocketService {
 
     async connect() {
         try {
-            console.log('🔗 Connecting to Railway WebSocket...');
-            this.ws = new WebSocket(RAILWAY_CONFIG.websocket.url);
+            console.log('🔗 Connecting to Railway SSE...');
             
-            this.ws.onopen = () => {
-                console.log('✅ Railway WebSocket connected');
-                this.isConnected = true;
-                this.reconnectAttempts = 0;
-                this.notifyConnectionChange(true);
-            };
-
-            this.ws.onmessage = (event) => {
-                try {
-                    const data = JSON.parse(event.data);
-                    this.handleMessage(data);
-                } catch (error) {
-                    console.error('❌ Error parsing WebSocket message:', error);
+            // Set up event handlers
+            this.sseService.onIncidentUpdate((data) => {
+                if (this.eventHandlers.onIncidentUpdate) {
+                    this.eventHandlers.onIncidentUpdate(data);
                 }
-            };
+            });
 
-            this.ws.onclose = () => {
-                console.log('🔌 Railway WebSocket disconnected');
-                this.isConnected = false;
-                this.notifyConnectionChange(false);
-                this.attemptReconnect();
-            };
+            this.sseService.onError((error) => {
+                if (this.eventHandlers.onError) {
+                    this.eventHandlers.onError(error);
+                }
+            });
 
-            this.ws.onerror = (error) => {
-                console.error('❌ Railway WebSocket error:', error);
-                this.handleError(error);
-            };
+            this.sseService.onConnectionChange((status) => {
+                if (this.eventHandlers.onConnectionChange) {
+                    this.eventHandlers.onConnectionChange(status);
+                }
+            });
 
+            this.sseService.onScrapeSummary((data) => {
+                if (this.eventHandlers.onScrapeSummary) {
+                    this.eventHandlers.onScrapeSummary(data);
+                }
+            });
+
+            // Connect to SSE
+            await this.sseService.connect();
+            
         } catch (error) {
-            console.error('❌ Failed to connect to Railway WebSocket:', error);
+            console.error('❌ Failed to connect to Railway SSE:', error);
             this.handleError(error);
         }
-    }
-
-    handleMessage(data) {
-        console.log('📡 Received Railway WebSocket message:', data);
-
-        switch (data.type) {
-            case 'incident_update':
-                if (this.eventHandlers.onIncidentUpdate) {
-                    this.eventHandlers.onIncidentUpdate(data.data);
-                }
-                break;
-            case 'scrape_summary':
-                if (this.eventHandlers.onScrapeSummary) {
-                    this.eventHandlers.onScrapeSummary(data.data);
-                }
-                break;
-            default:
-                console.log('📡 Unknown message type:', data.type);
-        }
-    }
-
-    attemptReconnect() {
-        if (this.reconnectAttempts >= this.maxReconnectAttempts) {
-            console.error('❌ Max reconnection attempts reached');
-            return;
-        }
-
-        this.reconnectAttempts++;
-        const delay = this.reconnectInterval * Math.pow(2, this.reconnectAttempts - 1);
-
-        console.log(`🔄 Attempting reconnection ${this.reconnectAttempts}/${this.maxReconnectAttempts} in ${delay}ms`);
-
-        setTimeout(() => {
-            this.connect();
-        }, delay);
     }
 
     handleError(error) {
         if (this.eventHandlers.onError) {
             this.eventHandlers.onError({
-                type: 'websocket-error',
+                type: 'sse-error',
                 error: error.message || 'Unknown error',
                 timestamp: new Date().toISOString()
             });
         }
     }
 
-    notifyConnectionChange(connected) {
-        if (this.eventHandlers.onConnectionChange) {
-            this.eventHandlers.onConnectionChange({
-                connected,
-                timestamp: new Date().toISOString()
-            });
-        }
-    }
-
-    // Event handler setters
     onIncidentUpdate(handler) {
         this.eventHandlers.onIncidentUpdate = handler;
     }
@@ -212,12 +162,14 @@ class RailwayWebSocketService {
     }
 
     disconnect() {
-        if (this.ws) {
-            this.ws.close();
-            this.ws = null;
+        if (this.sseService) {
+            this.sseService.disconnect();
         }
-        this.isConnected = false;
-        console.log('🔌 Railway WebSocket disconnected');
+        console.log('🔌 Railway SSE disconnected');
+    }
+
+    isConnected() {
+        return this.sseService ? this.sseService.isSSEConnected() : false;
     }
 }
 
@@ -269,7 +221,7 @@ class ConnectionStatusManager {
 // Railway App Controller
 class RailwayAppController {
     constructor() {
-        this.websocketService = new RailwayWebSocketService();
+        this.sseService = new RailwaySSEService();
         this.connectionManager = new ConnectionStatusManager();
         this.appController = null;
         this.isInitialized = false;
@@ -286,8 +238,8 @@ class RailwayAppController {
             this.appController = container.createAppController();
             await this.appController.initialize();
 
-            // Set up Railway WebSocket service
-            await this.setupRailwayWebSocket();
+            // Set up Railway SSE service
+            await this.setupRailwaySSE();
 
             // Set up UI enhancements
             this.setupRailwayUI();
@@ -301,30 +253,36 @@ class RailwayAppController {
         }
     }
 
-    async setupRailwayWebSocket() {
+    async setupRailwaySSE() {
         // Set up event handlers
-        this.websocketService.onIncidentUpdate((data) => {
+        this.sseService.onIncidentUpdate((data) => {
             console.log(`📡 [${data.center}] Railway incident update:`, data);
             this.handleIncidentUpdate(data);
         });
 
-        this.websocketService.onError((error) => {
-            console.error(`❌ Railway WebSocket error:`, error);
+        this.sseService.onError((error) => {
+            console.error(`❌ Railway SSE error:`, error);
             this.connectionManager.showError(error.error || 'Connection error');
         });
 
-        this.websocketService.onConnectionChange((status) => {
+        this.sseService.onConnectionChange((status) => {
             console.log('🔗 Railway connection status changed:', status);
             this.connectionManager.updateStatus(status.connected);
         });
 
-        this.websocketService.onScrapeSummary((data) => {
+        this.sseService.onScrapeSummary((data) => {
             console.log('📊 Railway scrape summary:', data);
             this.handleScrapeSummary(data);
         });
 
-        // Connect to Railway WebSocket
-        await this.websocketService.connect();
+        // Wire up SSE service with incident service
+        if (this.appController && this.appController.incidentService) {
+            this.appController.incidentService.setSSEService(this.sseService.sseService);
+            console.log('📡 SSE service wired to incident service');
+        }
+
+        // Connect to Railway SSE
+        await this.sseService.connect();
     }
 
     setupRailwayUI() {
@@ -463,8 +421,8 @@ class RailwayAppController {
     }
 
     destroy() {
-        if (this.websocketService) {
-            this.websocketService.disconnect();
+        if (this.sseService) {
+            this.sseService.disconnect();
         }
 
         if (this.appController && this.appController.destroy) {
@@ -475,7 +433,7 @@ class RailwayAppController {
 
 // Export classes to window for diagnostic access
 window.RailwayAppController = RailwayAppController;
-window.RailwayWebSocketService = RailwayWebSocketService;
+window.RailwaySSEService = RailwaySSEService;
 window.ConnectionStatusManager = ConnectionStatusManager;
 window.ThemeManager = ThemeManager;
 

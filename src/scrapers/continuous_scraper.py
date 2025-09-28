@@ -20,45 +20,45 @@ from core.data_manager import DataManager
 from core.email_notifier import EmailNotifier
 from scrapers.http_scraper import HTTPScraper
 
-class RailwayWebSocketServer:
-    """Built-in WebSocket server for Railway deployment"""
+class SSEServer:
+    """Server-Sent Events server for Railway deployment"""
     
     def __init__(self, port=8080):
         self.port = port
-        self.clients = set()
+        self.clients = set()  # Store SSE response objects
         self.server = None
         self.app = None
     
-    async def register_client(self, websocket):
-        """Register a new WebSocket client"""
-        self.clients.add(websocket)
-        print(f"📡 Client connected. Total clients: {len(self.clients)}")
+    async def register_client(self, response):
+        """Register a new SSE client"""
+        self.clients.add(response)
+        print(f"📡 SSE client connected. Total clients: {len(self.clients)}")
     
-    async def unregister_client(self, websocket):
-        """Unregister a WebSocket client"""
-        self.clients.discard(websocket)
-        print(f"📡 Client disconnected. Total clients: {len(self.clients)}")
+    async def unregister_client(self, response):
+        """Unregister an SSE client"""
+        self.clients.discard(response)
+        print(f"📡 SSE client disconnected. Total clients: {len(self.clients)}")
     
-    async def broadcast_incidents(self, incidents_data: Dict[str, Any]):
-        """Broadcast incident data to all connected clients"""
+    async def broadcast_update(self, data: Dict[str, Any]):
+        """Broadcast data to all connected SSE clients"""
         if not self.clients:
             return
         
-        message = json.dumps(incidents_data)
+        message = f"data: {json.dumps(data)}\n\n"
         disconnected = set()
         
         for client in self.clients:
             try:
-                await client.send(message)
+                await client.write(message.encode())
             except Exception as e:
-                print(f"📡 WebSocket send error: {e}")
+                print(f"📡 SSE send error: {e}")
                 disconnected.add(client)
         
         # Remove disconnected clients
         self.clients -= disconnected
         
         if self.clients:
-            print(f"📡 Broadcasted to {len(self.clients)} clients")
+            print(f"📡 Broadcasted to {len(self.clients)} SSE clients")
     
     def setup_http_routes(self):
         """Set up HTTP routes for serving frontend"""
@@ -91,72 +91,67 @@ class RailwayWebSocketServer:
             return web.json_response({
                 'status': 'healthy',
                 'timestamp': datetime.now().isoformat(),
-                'websocket_clients': len(self.clients)
+                'sse_clients': len(self.clients)
             })
         
         self.app.router.add_get('/health', health_check)
         
-        # WebSocket endpoint - Railway format
-        async def websocket_handler(request):
-            # Get Railway WebSocket parameters
-            upgrade_wait = request.query.get('upgrade_wait', '0s')
-            first_msg_wait = request.query.get('first_msg_wait', '0s')
+        # SSE endpoint for real-time updates
+        async def sse_endpoint(request):
+            response = web.StreamResponse()
+            response.headers['Content-Type'] = 'text/event-stream'
+            response.headers['Cache-Control'] = 'no-cache'
+            response.headers['Connection'] = 'keep-alive'
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Headers'] = 'Cache-Control'
             
-            print(f"🔌 WebSocket upgrade request - upgrade_wait: {upgrade_wait}, first_msg_wait: {first_msg_wait}")
+            await response.prepare(request)
+            await self.register_client(response)
             
-            ws = web.WebSocketResponse()
-            await ws.prepare(request)
-            
-            await self.register_client(ws)
-            
-            # Send initial message after first_msg_wait
-            if first_msg_wait != '0s':
-                try:
-                    wait_seconds = float(first_msg_wait.replace('s', ''))
-                    await asyncio.sleep(wait_seconds)
-                except:
-                    pass
-            
-            # Send welcome message
-            await ws.send_str(json.dumps({
-                'type': 'welcome',
-                'message': 'Connected to CHP Traffic Monitor WebSocket',
-                'timestamp': datetime.now().isoformat(),
-                'upgrade_wait': upgrade_wait,
-                'first_msg_wait': first_msg_wait
-            }))
+            print(f"🔌 SSE client connected from {request.remote}")
             
             try:
-                async for msg in ws:
-                    if msg.type == aiohttp.WSMsgType.TEXT:
-                        # Handle incoming messages
-                        try:
-                            data = json.loads(msg.data)
-                            print(f"📨 Received message: {data}")
-                        except json.JSONDecodeError:
-                            print(f"📨 Received text: {msg.data}")
-                    elif msg.type == aiohttp.WSMsgType.ERROR:
-                        print(f"❌ WebSocket error: {ws.exception()}")
+                # Send welcome message
+                welcome_data = {
+                    'type': 'welcome',
+                    'message': 'Connected to CHP Traffic Monitor SSE',
+                    'timestamp': datetime.now().isoformat()
+                }
+                welcome_msg = f"data: {json.dumps(welcome_data)}\n\n"
+                await response.write(welcome_msg.encode())
+                
+                # Keep connection alive with heartbeat
+                while True:
+                    await asyncio.sleep(30)  # Send heartbeat every 30 seconds
+                    heartbeat_data = {
+                        'type': 'heartbeat',
+                        'timestamp': datetime.now().isoformat()
+                    }
+                    heartbeat_msg = f"data: {json.dumps(heartbeat_data)}\n\n"
+                    await response.write(heartbeat_msg.encode())
+                    
+            except Exception as e:
+                print(f"❌ SSE connection error: {e}")
             finally:
-                await self.unregister_client(ws)
+                await self.unregister_client(response)
             
-            return ws
+            return response
         
-        self.app.router.add_get('/ws', websocket_handler)
+        self.app.router.add_get('/api/incidents/stream', sse_endpoint)
         
-        # Enable CORS for WebSocket connections
+        # Enable CORS for SSE connections
         async def cors_handler(request):
             response = web.Response()
             response.headers['Access-Control-Allow-Origin'] = '*'
             response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
-            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Cache-Control'
             return response
         
-        self.app.router.add_options('/ws', cors_handler)
+        self.app.router.add_options('/api/incidents/stream', cors_handler)
     
     async def start_server(self):
-        """Start the HTTP and WebSocket server"""
-        print(f"🚀 Starting HTTP and WebSocket server on port {self.port}")
+        """Start the HTTP and SSE server"""
+        print(f"🚀 Starting HTTP and SSE server on port {self.port}")
         
         # Set up HTTP routes
         self.setup_http_routes()
@@ -168,7 +163,7 @@ class RailwayWebSocketServer:
         await site.start()
         
         print(f"✅ HTTP server running on http://0.0.0.0:{self.port}")
-        print(f"✅ WebSocket server running on ws://0.0.0.0:{self.port}/ws")
+        print(f"✅ SSE server running on http://0.0.0.0:{self.port}/api/incidents/stream")
 
 class ContinuousRailwayScraper:
     """Continuous scraper for Railway deployment using HTTP requests"""
@@ -207,7 +202,7 @@ class ContinuousRailwayScraper:
             'VTCC': {'name': 'Ventura', 'channel': 'chp-incidents-vtcc'},
             'YKCC': {'name': 'Yreka', 'channel': 'chp-incidents-ykcc'}
         }
-        self.websocket_server = RailwayWebSocketServer()
+        self.sse_server = SSEServer(port=8081)
         self.scrape_interval = 5  # 5-second intervals
         self.is_running = False
         self.http_scraper = HTTPScraper(mode="railway")
@@ -349,11 +344,11 @@ class ContinuousRailwayScraper:
         return processed_results
     
     async def broadcast_results(self, results: List[Dict[str, Any]]):
-        """Broadcast scraping results to WebSocket clients"""
+        """Broadcast scraping results to SSE clients"""
         for result in results:
             if result['status'] == 'success' and result.get('hasChanges', False):
                 # Broadcast individual center updates
-                await self.websocket_server.broadcast_incidents({
+                await self.sse_server.broadcast_update({
                     'type': 'incident_update',
                     'data': result
                 })
@@ -368,17 +363,17 @@ class ContinuousRailwayScraper:
                 'results': results
             }
         }
-        await self.websocket_server.broadcast_incidents(summary)
+        await self.sse_server.broadcast_update(summary)
     
     async def run_forever(self):
         """Main continuous scraping loop"""
         print("🚀 Starting Continuous Railway Scraper")
         print(f"📡 Scraping {len(self.centers)} centers every {self.scrape_interval} seconds")
-        print(f"🌐 WebSocket server will run on port {self.websocket_server.port}")
+        print(f"🌐 SSE server will run on port {self.sse_server.port}")
         print(f"🎯 Centers: {', '.join(self.centers)}")
         
-        # Start WebSocket server
-        await self.websocket_server.start_server()
+        # Start SSE server
+        await self.sse_server.start_server()
         
         self.is_running = True
         iteration = 0
@@ -408,9 +403,9 @@ class ContinuousRailwayScraper:
                 await asyncio.sleep(30)
         
         # Cleanup
-        if self.websocket_server.server:
-            self.websocket_server.server.close()
-            await self.websocket_server.server.wait_closed()
+        if self.sse_server.server:
+            self.sse_server.server.close()
+            await self.sse_server.server.wait_closed()
         
         print("✅ Continuous scraper stopped")
 

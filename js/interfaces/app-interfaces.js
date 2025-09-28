@@ -85,8 +85,8 @@ class IIncidentService {
         throw new Error('IIncidentService.filterRecentDifferences() must be implemented');
     }
     
-    setWebSocketService(websocketService) {
-        throw new Error('IIncidentService.setWebSocketService() must be implemented');
+    setSSEService(sseService) {
+        throw new Error('IIncidentService.setSSEService() must be implemented');
     }
     
     handleRealtimeUpdate(data) {

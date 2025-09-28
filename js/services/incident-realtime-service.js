@@ -1,29 +1,29 @@
 /**
  * Incident Real-time Service
- * Single Responsibility: Handles real-time WebSocket updates for incidents
+ * Single Responsibility: Handles real-time SSE updates for incidents
  */
 
 class IncidentRealtimeService {
     constructor(dataService, config) {
         this.dataService = dataService;
         this.config = config;
-        this.websocketService = null;
+        this.sseService = null;
         this.realtimeEnabled = false;
     }
 
     /**
-     * Set WebSocket service for real-time updates
-     * @param {Object} websocketService - WebSocket service instance
+     * Set SSE service for real-time updates
+     * @param {Object} sseService - SSE service instance
      */
-    setWebSocketService(websocketService) {
-        this.websocketService = websocketService;
+    setSSEService(sseService) {
+        this.sseService = sseService;
         this.realtimeEnabled = true;
-        console.log('📡 IncidentRealtimeService connected to WebSocket service');
+        console.log('📡 IncidentRealtimeService connected to SSE service');
     }
 
     /**
-     * Handle real-time WebSocket updates
-     * @param {Object} data - WebSocket update data
+     * Handle real-time SSE updates
+     * @param {Object} data - SSE update data
      */
     handleRealtimeUpdate(data) {
         if (!this.realtimeEnabled || !data) return;

@@ -16,16 +16,16 @@ class IncidentService {
     }
 
     /**
-     * Set WebSocket service for real-time updates
-     * @param {Object} websocketService - WebSocket service instance
+     * Set SSE service for real-time updates
+     * @param {Object} sseService - SSE service instance
      */
-    setWebSocketService(websocketService) {
-        this.realtimeService.setWebSocketService(websocketService);
+    setSSEService(sseService) {
+        this.realtimeService.setSSEService(sseService);
     }
 
     /**
-     * Handle real-time WebSocket updates
-     * @param {Object} data - WebSocket update data
+     * Handle real-time SSE updates
+     * @param {Object} data - SSE update data
      */
     handleRealtimeUpdate(data) {
         this.realtimeService.handleRealtimeUpdate(data);
