@@ -1,0 +1,714 @@
+{
+  "center_code": "MYCC",
+  "center_name": "Monterey",
+  "date": "2025-09-28",
+  "total_incidents": 47,
+  "incidents": [
+    {
+      "id": "0360",
+      "time": "8:35 PM",
+      "type": "Animal Hazard",
+      "location": "Crg16 / Panetta Rd",
+      "area": "EB CVR JWO PANETTA",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0354",
+      "time": "8:20 PM",
+      "type": "Traffic Hazard",
+      "location": "18828 Cachagua Rd",
+      "area": "",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0335",
+      "time": "7:55 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr1 / Bixby Brdg",
+      "area": "JSO",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0322",
+      "time": "7:10 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr156 / Sr25",
+      "area": "",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0312",
+      "time": "6:32 PM",
+      "type": "Animal Hazard",
+      "location": "801-1199 Maple Ave",
+      "area": "166 and NOB HILL AREA ?",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0285",
+      "time": "5:25 PM",
+      "type": "Hit and Run w/Injuries",
+      "location": "SR68 / San Benancio Rd",
+      "area": "AT LLG FIRE STATION",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0377",
+      "time": "9:26 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr17 S / Pasatiempo Dr Ofr",
+      "area": "SB JNO",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0380",
+      "time": "9:47 PM",
+      "type": "Animal Hazard",
+      "location": "Crg16 / 16th St",
+      "area": "WB ELM 100 YARDS JWO 16TH",
+      "details": "King City",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0393",
+      "time": "10:20 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr17 N / Vine Hill",
+      "area": "NB AT",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0395",
+      "time": "10:13 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "156 W Beach St",
+      "area": "OCCR'D OLD STAGE AT NATIVIDAD",
+      "details": "MY",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0405",
+      "time": "10:41 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Crazy Horse Canyon Rd Ofr",
+      "area": "SB JNO CH",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0402",
+      "time": "10:32 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr1 At Rio Del Mar Blvd",
+      "area": "SB 1 JNO EXIT 433B",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0411",
+      "time": "10:55 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "6746-6931 CRG16",
+      "area": "CVR",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0424",
+      "time": "11:43 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Castroville Blvd / Ormart Rd",
+      "area": "X",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0423",
+      "time": "11:36 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Old Stage Rd / Potter Rd",
+      "area": "",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0017",
+      "time": "12:35 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Old Stage Rd / Alta St",
+      "area": "AT",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0024",
+      "time": "1:55 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "492 Green Valley Rd",
+      "area": "",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0025",
+      "time": "2:10 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Porter Dr / San Juan Rd",
+      "area": "",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0028",
+      "time": "2:23 AM",
+      "type": "Wrong Way Driver",
+      "location": "McGowan Dr / S Sanborn Rd",
+      "area": "JEO //  CHEVRON PLOT",
+      "details": "MY",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0039",
+      "time": "3:14 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Sr1 S",
+      "area": "",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0036",
+      "time": "3:12 AM",
+      "type": "Wrong Way Driver",
+      "location": "Sr1 S / Mar Monte",
+      "area": "NB IN SB LNS",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0045",
+      "time": "4:30 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr152 / San Felipe Rd",
+      "area": "WB JWO",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0048",
+      "time": "4:36 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr152 / Lovers Ln",
+      "area": "WB 152 JWO LOVERS",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0051",
+      "time": "5:21 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "17530 Upper Zayante Rd",
+      "area": "IAO",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0055",
+      "time": "6:03 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr1 / Highland Dr",
+      "area": "NB",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0054",
+      "time": "6:00 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Us101 S / Us101 S Sr156 E Con",
+      "area": "SB JNO",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0061",
+      "time": "6:33 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr17 N / Granite Creek",
+      "area": "NB JSO",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0068",
+      "time": "7:31 AM",
+      "type": "Animal Hazard",
+      "location": "Us101 N / Crazy Horse Canyon Rd Ofr",
+      "area": "NB JSO",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0076",
+      "time": "7:44 AM",
+      "type": "Report of Fire",
+      "location": "Sr1 At 129/riverside Dr",
+      "area": "SB 101 JNO",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0080",
+      "time": "8:15 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Orchard Rd / Molen Dr",
+      "area": "",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0088",
+      "time": "8:37 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr1 N / Main St",
+      "area": "NB 1 FR MAIN",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0086",
+      "time": "8:33 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr17 S / Summit",
+      "area": "SB JSO",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0096",
+      "time": "9:10 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Laurel",
+      "area": "NB JNO",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0093",
+      "time": "8:45 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr9 / Sr9 E Sr35 S Con",
+      "area": "SB 1/2 JSO 35",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0100",
+      "time": "9:38 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr129 / Industrial Rd",
+      "area": "EB JWO INDUSTRIAL",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0101",
+      "time": "9:44 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Church",
+      "area": "ON CHURCH OVERPASS",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0104",
+      "time": "9:50 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Inter-garrison Rd / Crg17",
+      "area": "AT RESERVATION",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0113",
+      "time": "10:32 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "2001 Fremont Blvd",
+      "area": "CYCLE GEAR",
+      "details": "MY",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0112",
+      "time": "10:31 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr1 N / Freedom",
+      "area": "NB 1 JSO FRE",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0128",
+      "time": "11:08 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Crazy Horse Canyon Rd Ofr",
+      "area": "SB AT CRAZY HORSE",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0129",
+      "time": "11:14 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr1 N / Waddell Creek",
+      "area": "NB 1 AT WADDELL CREEK *1126",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0130",
+      "time": "11:14 AM",
+      "type": "Animal Hazard",
+      "location": "Llg / Hidden Hills",
+      "area": "AT",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0138",
+      "time": "11:51 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 N / Sala Rd",
+      "area": "NB 101 JNO SALA",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0153",
+      "time": "12:17 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sfb Morse Dr / Sr68",
+      "area": "SFB MORSE GATE",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0157",
+      "time": "12:26 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "1770 Sr152",
+      "area": "Pacheco Pass Hwy",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0159",
+      "time": "12:39 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr1 N / Soquel",
+      "area": "NB JSO SOQUEL DR",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0165",
+      "time": "12:54 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Tennant",
+      "area": "NB JSO TENNANT",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T15:56:14.459881"
+}

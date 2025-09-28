@@ -1,0 +1,68 @@
+{
+  "center_code": "SUCC",
+  "center_name": "Susanville",
+  "incident_count": 4,
+  "incidents": [
+    {
+      "id": "0020",
+      "time": "12:27 PM",
+      "type": "Animal Hazard",
+      "location": "36/fredonyer Summit",
+      "area": "WB 36 EO Fredonyer Summit",
+      "details": "Susanville",
+      "center_code": "SUCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0019",
+      "time": "12:13 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "China Grade Rd / Mount Hough Crystal Lake Rd",
+      "area": "",
+      "details": "Quincy",
+      "center_code": "SUCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0017",
+      "time": "11:44 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "395/egan Ranch",
+      "area": "Egan Ranch",
+      "details": "Susanville",
+      "center_code": "SUCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0014",
+      "time": "10:45 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "520291-520999 Sr139",
+      "area": "HWY 139 JSO SLATE CR",
+      "details": "Susanville",
+      "center_code": "SUCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T15:31:38.029623"
+}

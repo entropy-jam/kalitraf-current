@@ -1,0 +1,68 @@
+{
+  "center_code": "MYCC",
+  "center_name": "Monterey",
+  "incident_count": 4,
+  "incidents": [
+    {
+      "id": "0165",
+      "time": "12:54 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Tennant",
+      "area": "NB JSO TENNANT",
+      "details": "Hollister Gilroy",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0153",
+      "time": "12:17 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "SR68 / Morse Dr",
+      "area": "WB JEO",
+      "details": "MY",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0113",
+      "time": "10:32 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "2001 Fremont Blvd",
+      "area": "CYCLE GEAR",
+      "details": "MY",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0423",
+      "time": "11:36 PM",
+      "type": "Trfc Collision-Minor Inj",
+      "location": "Old Stage Rd / Potter Rd",
+      "area": "JSO",
+      "details": "Monterey",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:04:12.228406"
+}

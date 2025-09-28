@@ -1,136 +1,98 @@
 {
   "center_code": "OCCC",
   "center_name": "Orange",
-  "incident_count": 16,
+  "incident_count": 6,
   "incidents": [
     {
-      "id": "0023",
-      "time": "8:37 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr91 W Wo / Brookhurst St Bh",
-      "location_desc": "WB 91 JWO BH",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0022",
-      "time": "8:34 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr91 W Eo / Euclid St",
-      "location_desc": "SR91 W EO EUCLID ST",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0021",
-      "time": "8:25 AM",
-      "type": "Trfc Collision-1141Enrt",
-      "location": "I5 S / Yale Ave",
-      "location_desc": "SB 5 JNO YALE",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0102",
-      "time": "8:23 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I5 S / Yale Ave",
-      "location_desc": "SB 5 JNO YALE",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0018",
-      "time": "8:16 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr57 N At / Sr91",
-      "location_desc": "SR57 N AT / SR91",
-      "area": "Orange County FSP"
-    },
-    {
-      "id": "0094",
-      "time": "8:12 AM",
-      "type": "Car Fire",
-      "location": "Sr57 N At / Sr91",
-      "location_desc": "NB 57 AT 91, GP",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0092",
-      "time": "8:08 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "E Santa Clara Ave",
-      "location_desc": "SANTA ANA CHP",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0089",
-      "time": "8:03 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Sr91 E Wo / Brookhurst St Bh",
-      "location_desc": "SR91 E WO BROOKHURST ST BH",
-      "area": "Westminster"
-    },
-    {
-      "id": "0085",
-      "time": "7:56 AM",
+      "id": "0234",
+      "time": "12:59 PM",
       "type": "Trfc Collision-No Inj",
-      "location": "I405 S / I5",
-      "location_desc": "SB 405 JNO 5",
-      "area": "Santa Ana"
+      "location": "Sr57 S / Yorba Linda Blvd Yl",
+      "area": "SB 57 JNO YL",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0074",
+      "id": "0228",
+      "time": "12:52 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr73 S To / Sr55 S Con",
+      "area": "SB 73 TRANS TO SB 55",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0213",
+      "time": "12:29 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr57 N / Tonner Canyon Rd",
+      "area": "NB 57 JSO TONNER",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0101",
       "time": "7:30 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Newport Ave / Crawford Canyon Rd",
-      "location_desc": "",
-      "area": "Santa Ana"
+      "type": "CLOSURE of a Road",
+      "location": "Sr73 N To / Sr55 S Con",
+      "area": "NB 73 TO SB 55",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0070",
-      "time": "7:25 AM",
-      "type": "Hit and Run w/Injuries",
-      "location": "I405 S / Warner Ave",
-      "location_desc": "SB 405 JNO WARNER - FT LANES",
-      "area": "Westminster"
-    },
-    {
-      "id": "0069",
-      "time": "7:25 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "2228 N Main St",
-      "location_desc": "",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0057",
-      "time": "6:36 AM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I405 S / Brookhurst St Bh",
-      "location_desc": "SB 405 JNO BH",
-      "area": "Westminster"
-    },
-    {
-      "id": "0055",
-      "time": "6:29 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "E Santa Clara Ave",
-      "location_desc": "SANTA ANA CHP",
-      "area": "Santa Ana"
-    },
-    {
-      "id": "0002",
-      "time": "12:00 AM",
+      "id": "0004",
+      "time": "12:05 AM",
       "type": "CLOSURE of a Road",
       "location": "6681 Marine Way",
-      "location_desc": "OCCC",
-      "area": "OC"
+      "area": "OCCC",
+      "details": "OC",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0001",
-      "time": "12:00 AM",
+      "id": "0003",
+      "time": "12:05 AM",
       "type": "Road/Weather Conditions",
       "location": "6681 Marine Way",
-      "location_desc": "OC MEDIA LOG",
-      "area": "OC"
+      "area": "OC MEDIA LOG",
+      "details": "OC",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-25T15:44:36.294162"
+  "last_updated": "2025-09-28T16:04:12.229391"
 }

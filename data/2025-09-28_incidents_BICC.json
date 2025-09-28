@@ -1,0 +1,144 @@
+{
+  "center_code": "BICC",
+  "center_name": "Bishop",
+  "date": "2025-09-28",
+  "total_incidents": 9,
+  "incidents": [
+    {
+      "id": "0081",
+      "time": "9:55 PM",
+      "type": "Traffic Hazard",
+      "location": "9150 Sweet Water Rd",
+      "area": "TWS",
+      "details": "Mojave",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0078",
+      "time": "9:49 PM",
+      "type": "Traffic Hazard",
+      "location": "SR58 / KEENE",
+      "area": "EB EO KEENE",
+      "details": "Mojave",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0077",
+      "time": "9:47 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Tehachapi Willow Springs Rd / 110th St W",
+      "area": "TWS 2 MI SO",
+      "details": "Mojave",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0085",
+      "time": "10:09 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "13258-13487 Tehachapi Willow Springs Rd",
+      "area": "",
+      "details": "Mojave",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0007",
+      "time": "5:21 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "Inyokern Area",
+      "area": "",
+      "details": "",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    },
+    {
+      "id": "0018",
+      "time": "10:09 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "3756-3999 W Rosamond Blvd",
+      "area": "ROSAMOND / 40TH",
+      "details": "Mojave",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0020",
+      "time": "11:13 AM",
+      "type": "Animal Hazard",
+      "location": "Old Sherwin Grade Rd / Pine Creek Rd",
+      "area": "",
+      "details": "Bishop",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0023",
+      "time": "11:23 AM",
+      "type": "Car Fire",
+      "location": "SR58 E / MILL ST ONR",
+      "area": "58 EB  JWO",
+      "details": "Mojave",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0029",
+      "time": "12:48 PM",
+      "type": "Traffic Hazard",
+      "location": "0 Us395",
+      "area": "SB COLLINS",
+      "details": "Bishop",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T15:49:41.880287"
+}

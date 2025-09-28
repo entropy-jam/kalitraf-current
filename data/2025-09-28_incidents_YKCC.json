@@ -1,0 +1,129 @@
+{
+  "center_code": "YKCC",
+  "center_name": "Yreka",
+  "date": "2025-09-28",
+  "total_incidents": 8,
+  "incidents": [
+    {
+      "id": "0023",
+      "time": "3:04 PM",
+      "type": "Traffic Hazard",
+      "location": "Cr123 / Cr120",
+      "area": "",
+      "details": "Yreka",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0042",
+      "time": "10:40 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "N Old Stage Rd / Sugar Pine Rd",
+      "area": "",
+      "details": "Mount Shasta",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0003",
+      "time": "2:34 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Oberlin Rd / Delphic Rd",
+      "area": "JWO EB",
+      "details": "Yreka",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0004",
+      "time": "6:39 AM",
+      "type": "Animal Hazard",
+      "location": "Breceda Ln / Montague Grenada Rd",
+      "area": "",
+      "details": "Yreka",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0005",
+      "time": "8:11 AM",
+      "type": "Live or Dead Animal",
+      "location": "E Montague Rd / Fiock Rd",
+      "area": "JWO",
+      "details": "Yreka",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0007",
+      "time": "9:39 AM",
+      "type": "WIND Advisory",
+      "location": "Sr97 / Weed",
+      "area": "Weed",
+      "details": "Mount Shasta",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0008",
+      "time": "10:23 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I5 S / Exit 751",
+      "area": "5 S / EDGEWOOD RD",
+      "details": "Yreka",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0015",
+      "time": "11:53 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I5 N Jno N Yreka",
+      "area": "I5 N JNO N Yreka",
+      "details": "Yreka",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T14:57:18.454699"
+}

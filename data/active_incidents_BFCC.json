@@ -1,0 +1,74 @@
+{
+  "center_code": "BFCC",
+  "center_name": "Bakersfield",
+  "incident_count": 4,
+  "incidents": [
+    {
+      "id": "0115",
+      "time": "1:05 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "10509 Santa Ana St",
+      "area": "",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    },
+    {
+      "id": "0114",
+      "time": "12:59 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Meacham Rd / Samantha St",
+      "area": "",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    },
+    {
+      "id": "0070",
+      "time": "8:11 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr43 / Mccombs Ave",
+      "area": "NB JNO",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    },
+    {
+      "id": "0007",
+      "time": "12:30 AM",
+      "type": "Traffic Advisory",
+      "location": "Bakersfield Traffic Advisories",
+      "area": "Bakersfield Traffic Advisories",
+      "details": "BF",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:06:26.638354"
+}

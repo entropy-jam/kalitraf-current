@@ -1,0 +1,189 @@
+{
+  "center_code": "UKCC",
+  "center_name": "Ukiah",
+  "date": "2025-09-28",
+  "total_incidents": 12,
+  "incidents": [
+    {
+      "id": "0091",
+      "time": "10:10 PM",
+      "type": "Traffic Hazard",
+      "location": "1036 Mm20 E Lak 10.40",
+      "area": "EB JWO",
+      "details": "Clear Lake",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0001",
+      "time": "12:42 AM",
+      "type": "Traffic Hazard",
+      "location": "Store 24 Ksvl",
+      "area": "FOREST RD NEXT TO STORE 24 KSVL",
+      "details": "Clear Lake",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0008",
+      "time": "6:47 AM",
+      "type": "Animal Hazard",
+      "location": "17874-18593 Sr20",
+      "area": "WB APPROX 1/2 MI E/O ADDR 18981 SR20",
+      "details": "Clear Lake",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0009",
+      "time": "7:28 AM",
+      "type": "Animal Hazard",
+      "location": "3103 Mm101 N Men 31.00",
+      "area": "",
+      "details": "Ukiah",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0010",
+      "time": "7:33 AM",
+      "type": "Animal Hazard",
+      "location": "12800-13227 Sr1",
+      "area": "SB ON CASPAR BRIDGE",
+      "details": "Ukiah",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0016",
+      "time": "8:35 AM",
+      "type": "Live or Dead Animal",
+      "location": "29016 Sr20",
+      "area": "EB LN",
+      "details": "Ukiah",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0015",
+      "time": "8:26 AM",
+      "type": "Live or Dead Animal",
+      "location": "2650-2929 Sr20",
+      "area": "EB IFO 2380 SR20",
+      "details": "Clear Lake",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0020",
+      "time": "9:43 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "24572-25427 Sr29",
+      "area": "NB BY TWIN PINES CASINO",
+      "details": "Clear Lake",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0022",
+      "time": "10:12 AM",
+      "type": "Traffic Hazard",
+      "location": "6866 Pine Ave",
+      "area": "",
+      "details": "Clear Lake",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0030",
+      "time": "11:39 AM",
+      "type": "Traffic Hazard",
+      "location": "721 Mm253 W Men 7.20",
+      "area": "WB 253 AT MM 7.2",
+      "details": "Ukiah",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0032",
+      "time": "12:08 PM",
+      "type": "Traffic Hazard",
+      "location": "Soda Bay Rd / Riviera Heights Dr",
+      "area": "",
+      "details": "Clear Lake",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0035",
+      "time": "12:38 PM",
+      "type": "Traffic Hazard",
+      "location": "5390 Mm1 N Men R53.90",
+      "area": "ITA OF CB 1 539",
+      "details": "Ukiah",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T15:40:55.080920"
+}

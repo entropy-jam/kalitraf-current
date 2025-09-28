@@ -1,0 +1,53 @@
+{
+  "center_code": "BSCC",
+  "center_name": "Barstow",
+  "incident_count": 3,
+  "incidents": [
+    {
+      "id": "0107",
+      "time": "1:01 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr138 / Sr2",
+      "area": "EB",
+      "details": "Victorville",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0016",
+      "time": "2:13 AM",
+      "type": "Road/Weather Conditions",
+      "location": "I15 S / Ranchero Rd",
+      "area": "I15 S / RANCHERO RD",
+      "details": "Victorville",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0100",
+      "time": "12:55 PM",
+      "type": "Road/Weather Conditions",
+      "location": "300 E Mountain View St",
+      "area": "BARSTOW CHP",
+      "details": "BS",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:03:43.050812"
+}

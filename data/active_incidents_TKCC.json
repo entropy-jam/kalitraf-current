@@ -1,0 +1,38 @@
+{
+  "center_code": "TKCC",
+  "center_name": "Truckee",
+  "incident_count": 2,
+  "incidents": [
+    {
+      "id": "0030",
+      "time": "11:51 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr89 / Lester Beach Rd",
+      "area": "SB JNO DL BLISS STATE PARK",
+      "details": "South Lake",
+      "center_code": "TKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0019",
+      "time": "10:49 AM",
+      "type": "Car Fire",
+      "location": "0 I80 W",
+      "area": "WB JEO SODA SPRING",
+      "details": "Truckee",
+      "center_code": "TKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T15:59:55.954862"
+}

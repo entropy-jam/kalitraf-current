@@ -1,0 +1,40 @@
+{
+  "center_code": "ECCC",
+  "center_name": "El Centro",
+  "timestamp": "2025-09-28T16:08:40.247280",
+  "new_incidents": [
+    {
+      "id": "0043",
+      "time": "1:33 PM",
+      "type": "CLOSURE of a Road",
+      "location": "Sr186 / I8 W",
+      "area": "**ARAZ  RD FM I8 TO WINT DR**",
+      "details": "Winterhaven",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0041",
+      "time": "12:45 PM",
+      "type": "Roadway Flooding",
+      "location": "Ross Rd / Picacho Rd",
+      "area": "BTWN PICACHO AND BASELINE",
+      "details": "Winterhaven",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "removed_incidents": [],
+  "new_count": 2,
+  "removed_count": 0
+}

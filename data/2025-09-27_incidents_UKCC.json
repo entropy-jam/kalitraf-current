@@ -1,0 +1,24 @@
+{
+  "center_code": "UKCC",
+  "center_name": "Ukiah",
+  "date": "2025-09-27",
+  "total_incidents": 1,
+  "incidents": [
+    {
+      "id": "0065",
+      "time": "4:27 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr29 / Spruce Grove Rd",
+      "area": "MM 12.27",
+      "details": "4:27 PM: Incident reported | 4:27 PM: Clear Lake",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T19:49:29.328524"
+}

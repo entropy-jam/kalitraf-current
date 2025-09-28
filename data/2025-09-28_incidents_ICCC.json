@@ -1,0 +1,309 @@
+{
+  "center_code": "ICCC",
+  "center_name": "Indio",
+  "date": "2025-09-28",
+  "total_incidents": 20,
+  "incidents": [
+    {
+      "id": "0147",
+      "time": "7:22 PM",
+      "type": "Roadway Flooding",
+      "location": "Dillon Rd / Western Ave",
+      "area": "WO",
+      "details": "Indio",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0009",
+      "time": "1:23 AM",
+      "type": "Car Fire",
+      "location": "18th Ave / Langlois Rd",
+      "area": "WO -- PENDING VIN VERIFICATION MONDAY",
+      "details": "Indio",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0166",
+      "time": "10:58 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I10 E WO / SR62",
+      "area": "",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0175",
+      "time": "11:28 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr79 S No / Gilman Springs Rd",
+      "area": "SR79 S NO Gilman Springs Rd",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0173",
+      "time": "11:20 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Avenue 52 / Calhoun St",
+      "area": "",
+      "details": "Indio",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0001",
+      "time": "12:04 AM",
+      "type": "Traffic Hazard",
+      "location": "I10 W / Morongo Tr Ofr",
+      "area": "",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0002",
+      "time": "12:12 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "49500 Seminole Dr",
+      "area": "MORONGO/ OLD PLOT",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0004",
+      "time": "1:09 AM",
+      "type": "Traffic Hazard",
+      "location": "I10 W Wo / Haugen Lehmann  Mm 22",
+      "area": "I10 W WO Haugen Lehmann MM 22",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0010",
+      "time": "1:56 AM",
+      "type": "Wrong Way Driver",
+      "location": "Domenigoni Pkwy / Sanderson Ave",
+      "area": "WB IN EB",
+      "details": "IC",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0043",
+      "time": "8:51 AM",
+      "type": "Traffic Hazard",
+      "location": "I10 E Wo / Malki Rd Mm 16",
+      "area": "",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0039",
+      "time": "8:43 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "San Timoteo Canyon Rd / Redlands Blvd",
+      "area": "AT THE INTERSECTION",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0051",
+      "time": "9:27 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "33426-33612 San Timoteo Canyon Rd",
+      "area": "",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0053",
+      "time": "9:41 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Pennsylvania Ave Onr",
+      "area": "",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0055",
+      "time": "9:45 AM",
+      "type": "Traffic Hazard",
+      "location": "I10 W Eo / Whitewater Mm 28",
+      "area": "I10 W EO Whitewater MM 28",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0054",
+      "time": "9:43 AM",
+      "type": "Traffic Hazard",
+      "location": "I10 W / Main St Exit 106 Mm 19.3",
+      "area": "I10 W Main St Exit 106 MM 19.3",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0062",
+      "time": "11:02 AM",
+      "type": "Traffic Hazard",
+      "location": "I10 E Wo / Frontage Rd",
+      "area": "4-5 MILES JWO FRONTAGE",
+      "details": "Indio",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0064",
+      "time": "11:36 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr60 W Wo / Western Knolls   Mm 29.64",
+      "area": "SR60 W WO Western Knolls   MM 29.64",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0071",
+      "time": "12:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "27251-27499 Dartmouth St",
+      "area": "",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0320",
+      "time": "12:50 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 W EO / COUNTY LINE RD",
+      "area": "",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0075",
+      "time": "1:04 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Harrison St / 70th Ave",
+      "area": "NB JSO",
+      "details": "Indio",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:05:40.083579"
+}

@@ -1,0 +1,23 @@
+{
+  "center_code": "CHCC",
+  "center_name": "Chico",
+  "incident_count": 1,
+  "incidents": [
+    {
+      "id": "0045",
+      "time": "12:14 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Las Plumas Ave / Lower Wyandotte Rd",
+      "area": "I/S",
+      "details": "Oroville",
+      "center_code": "CHCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T15:22:09.931522"
+}

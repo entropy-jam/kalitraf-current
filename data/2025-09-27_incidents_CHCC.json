@@ -1,0 +1,114 @@
+{
+  "center_code": "CHCC",
+  "center_name": "Chico",
+  "date": "2025-09-27",
+  "total_incidents": 7,
+  "incidents": [
+    {
+      "id": "0083",
+      "time": "4:14 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr70 / Palermo Rd",
+      "area": "NB 70 AT  PALERMO",
+      "details": "4:14 PM: Incident reported | 4:14 PM: Oroville",
+      "center_code": "CHCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0074",
+      "time": "2:35 PM",
+      "type": "Car Fire",
+      "location": "Plumas Arboga Rd / Forty Mile Rd",
+      "area": "ITA",
+      "details": "2:35 PM: Incident reported | 2:35 PM: Yuba Sutter",
+      "center_code": "CHCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0094",
+      "time": "4:53 PM",
+      "type": "Traffic Hazard",
+      "location": "Lucretia Rd / Coutolenc Rd",
+      "area": "JWO",
+      "details": "4:53 PM: Incident reported | 4:53 PM: Chico",
+      "center_code": "CHCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0095",
+      "time": "4:59 PM",
+      "type": "Traffic Hazard",
+      "location": "2809 Oro Garden Ranch Rd",
+      "area": "",
+      "details": "4:59 PM: Incident reported | 4:59 PM: CH",
+      "center_code": "CHCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0132",
+      "time": "8:14 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "50 Sr99",
+      "area": "IFO 50 HWY 99",
+      "details": "Oroville",
+      "center_code": "CHCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0127",
+      "time": "7:44 PM",
+      "type": "Trfc Collision-Minor Inj",
+      "location": "5604 Pleasant Grove Rd",
+      "area": "BACK OF THE PROPERTY",
+      "details": "Yuba Sutter",
+      "center_code": "CHCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0119",
+      "time": "7:16 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Cr202 / Lindsay Ave",
+      "area": "NB JNO",
+      "details": "Willows",
+      "center_code": "CHCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T23:42:39.751171"
+}

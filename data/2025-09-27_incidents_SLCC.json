@@ -1,0 +1,54 @@
+{
+  "center_code": "SLCC",
+  "center_name": "San Luis Obispo",
+  "date": "2025-09-27",
+  "total_incidents": 3,
+  "incidents": [
+    {
+      "id": "0108",
+      "time": "4:40 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N",
+      "area": "NB US101 JNO SANTA MARIA RIVER BRDG",
+      "details": "4:40 PM: Incident reported | 4:40 PM: Santa Maria",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0150",
+      "time": "8:21 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 S / San Anselmo Rd Ofr",
+      "area": "SB US101 JSO SAN ANSELMO RD",
+      "details": "Templeton",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0152",
+      "time": "8:17 PM",
+      "type": "Traffic Hazard",
+      "location": "2325 Clark Valley Rd",
+      "area": "NR DEAD MANS CURVE",
+      "details": "San Luis Obispo",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T23:42:39.768523"
+}

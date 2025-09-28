@@ -1,0 +1,144 @@
+{
+  "center_code": "ECCC",
+  "center_name": "El Centro",
+  "date": "2025-09-28",
+  "total_incidents": 9,
+  "incidents": [
+    {
+      "id": "0061",
+      "time": "6:35 PM",
+      "type": "Roadway Flooding",
+      "location": "Sr111 / Hot Mineral Spa Rd",
+      "area": "BTWN HOT MINERAL SPA AND COUNTY LINE",
+      "details": "El Centro",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0043",
+      "time": "1:33 PM",
+      "type": "CLOSURE of a Road",
+      "location": "Sr186 / I8 W",
+      "area": "**ARAZ  RD FM I8 TO WINT DR**",
+      "details": "Winterhaven",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0042",
+      "time": "12:51 PM",
+      "type": "Roadway Flooding",
+      "location": "1620-1771 Imperial Rd",
+      "area": "JSO FERGUSON RD",
+      "details": "Winterhaven",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0041",
+      "time": "12:45 PM",
+      "type": "Roadway Flooding",
+      "location": "Ross Rd / Picacho Rd",
+      "area": "BTWN PICACHO AND BASELINE",
+      "details": "Winterhaven",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0033",
+      "time": "10:45 AM",
+      "type": "CLOSURE of a Road",
+      "location": "Sr186 / Sr186 Ofr",
+      "area": "SR186 JSO I8",
+      "details": "Winterhaven",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0027",
+      "time": "10:04 AM",
+      "type": "CLOSURE of a Road",
+      "location": "OGILBY RD OFR / I8 W",
+      "area": "OGILBY/BET SR78 AND I8",
+      "details": "Winterhaven",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0083",
+      "time": "9:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Wb 8 At Mets Rd Oc",
+      "area": "WB 8 AT METS RD OC",
+      "details": "El Centro",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0084",
+      "time": "9:32 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I8 W / Orchard Rd Ofr",
+      "area": "WB 8 AT ORCHARD",
+      "details": "El Centro",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0089",
+      "time": "11:36 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "SR98 / Holdridge Rd",
+      "area": "EB JEO",
+      "details": "El Centro",
+      "center_code": "ECCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T02:53:01.217438"
+}

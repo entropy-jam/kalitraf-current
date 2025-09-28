@@ -29,31 +29,50 @@ class IncidentDataService {
             }
         }
 
-        // Fetch from server
+        // Data now comes from SSE - check cache only
+        console.log('📡 Data now comes from SSE - checking cache only');
+        
         try {
-            const data = await this.fetcher.fetchJson(`active_incidents.json?t=${Date.now()}`);
-            
-            // Add timestamp and save to cache
-            const dataWithTimestamp = {
-                ...data,
-                timestamp: Date.now(),
-                center: this.currentCenter
-            };
-            
-            await this.storage.set(cacheKey, dataWithTimestamp);
-            return dataWithTimestamp;
-        } catch (error) {
-            console.error('Error fetching incidents:', error);
-            
-            // Try to fall back to cache on error
+            // Try to get from cache (populated by SSE)
             const cachedData = await this.storage.get(cacheKey);
             if (cachedData) {
-                console.log('Falling back to cache');
+                console.log('✅ Found cached data from SSE');
                 return cachedData;
             }
             
+            // If no cache, return empty data and wait for SSE
+            console.log('⏳ No cached data - waiting for SSE initial data');
+            return {
+                center_code: this.currentCenter,
+                center_name: this.getCenterName(this.currentCenter),
+                incident_count: 0,
+                incidents: [],
+                last_updated: new Date().toISOString(),
+                timestamp: Date.now(),
+                waiting_for_sse: true
+            };
+        } catch (error) {
+            console.error('Error accessing cache:', error);
+            
             throw error;
         }
+    }
+    
+    /**
+     * Get center name from center code
+     * @param {string} centerCode - Center code
+     * @returns {string} Center name
+     */
+    getCenterName(centerCode) {
+        const centerNames = {
+            'BFCC': 'Bakersfield', 'BSCC': 'Barstow', 'BICC': 'Bishop', 'BCCC': 'Border',
+            'CCCC': 'Capitol', 'CHCC': 'Chico', 'ECCC': 'El Centro', 'FRCC': 'Fresno',
+            'GGCC': 'Golden Gate', 'HMCC': 'Humboldt', 'ICCC': 'Indio', 'INCC': 'Inland',
+            'LACC': 'Los Angeles', 'MRCC': 'Merced', 'MYCC': 'Monterey', 'OCCC': 'Orange County',
+            'RDCC': 'Redding', 'SACC': 'Sacramento', 'SLCC': 'San Luis Obispo', 'SKCCSTCC': 'Stockton',
+            'SUCC': 'Susanville', 'TKCC': 'Truckee', 'UKCC': 'Ukiah', 'VTCC': 'Ventura', 'YKCC': 'Yreka'
+        };
+        return centerNames[centerCode] || centerCode;
     }
 
     /**

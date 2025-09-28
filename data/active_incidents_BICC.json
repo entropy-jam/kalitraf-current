@@ -1,0 +1,38 @@
+{
+  "center_code": "BICC",
+  "center_name": "Bishop",
+  "incident_count": 2,
+  "incidents": [
+    {
+      "id": "0029",
+      "time": "12:48 PM",
+      "type": "Traffic Hazard",
+      "location": "0 Us395",
+      "area": "SB COLLINS",
+      "details": "Bishop",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0007",
+      "time": "5:21 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "US395 / Garlock Rd",
+      "area": "",
+      "details": "Mojave",
+      "center_code": "BICC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T15:49:41.879839"
+}

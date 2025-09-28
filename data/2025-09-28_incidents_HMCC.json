@@ -1,0 +1,174 @@
+{
+  "center_code": "HMCC",
+  "center_name": "Humboldt",
+  "date": "2025-09-28",
+  "total_incidents": 11,
+  "incidents": [
+    {
+      "id": "0097",
+      "time": "7:34 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "777 Casino Way",
+      "area": "BLUE LAKE CASINO",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0100",
+      "time": "9:14 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 / Indianola Cutoff",
+      "area": "SB ITA",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0005",
+      "time": "12:42 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "0 Us101 S",
+      "area": "NB CHAPMANS GEM AND MINERAL",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0007",
+      "time": "1:11 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "800 E Washington Blvd",
+      "area": "IFO SUTTER COAST HOSPITAL",
+      "details": "Crescent City",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0015",
+      "time": "5:29 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "US101 / Shimmins Ridge Rd",
+      "area": "JNO MM 57",
+      "details": "Garberville",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0019",
+      "time": "6:11 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Sr299 W",
+      "area": "MM 3.6",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0023",
+      "time": "7:41 AM",
+      "type": "Live or Dead Animal",
+      "location": "Us101 S / Sr36 Ofr",
+      "area": "SB JSO",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0025",
+      "time": "7:49 AM",
+      "type": "Animal Hazard",
+      "location": "Giuntoli Ln Ofr / Us101 S",
+      "area": "",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0028",
+      "time": "8:09 AM",
+      "type": "Report of Fire",
+      "location": "Sr255 Ofr / Us101 S",
+      "area": "",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0031",
+      "time": "8:14 AM",
+      "type": "Live or Dead Animal",
+      "location": "Us101 N",
+      "area": "SB VAN DUZEN BRIDGE",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0046",
+      "time": "10:57 AM",
+      "type": "Traffic Hazard",
+      "location": "Briceland Thorn Rd / Seely Rd",
+      "area": "",
+      "details": "Garberville",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T14:11:45.693562"
+}

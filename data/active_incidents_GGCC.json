@@ -1,0 +1,158 @@
+{
+  "center_code": "GGCC",
+  "center_name": "Golden Gate",
+  "incident_count": 10,
+  "incidents": [
+    {
+      "id": "0730",
+      "time": "1:02 PM",
+      "type": "Traffic Hazard",
+      "location": "I580 E Sr24 E Con / Sr24 E",
+      "area": "EB 580 TO EB  24 CON",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0733",
+      "time": "12:58 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I280 N / Stevens Creek Blvd Onr",
+      "area": "NB 280 AT STEVENS CREEK ONR",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0708",
+      "time": "12:41 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 N / Oakland Rd Onr",
+      "area": "NB 101 JNO OAKLAND",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0707",
+      "time": "12:39 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr87 N / Taylor St Ofr",
+      "area": "SR 87 NEAR TAYLOR, UNKN DOT",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0650",
+      "time": "11:57 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "0 Sr92 W",
+      "area": "WB JWO 1ST TOLL",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0642",
+      "time": "11:50 AM",
+      "type": "Traffic Hazard",
+      "location": "I580 E / Regatta Blvd Ofr",
+      "area": "EB 580 JWO REGATTA BLVD",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0315",
+      "time": "7:03 AM",
+      "type": "ESCORT for Road Conditions",
+      "location": "4900 Marie P Debartolo Way",
+      "area": "49R'S ESCORT",
+      "details": "GG",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0284",
+      "time": "6:17 AM",
+      "type": "ESCORT for Road Conditions",
+      "location": "4900 Marie P Debartolo Way",
+      "area": "JACKSONVILLE JAGUARS ESCORT",
+      "details": "GG",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0008",
+      "time": "12:00 AM",
+      "type": "Traffic Advisory",
+      "location": "Media",
+      "area": "MEDIA",
+      "details": "",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    },
+    {
+      "id": "1825",
+      "time": "10:19 PM",
+      "type": "Missing Elderly",
+      "location": "Alameda County",
+      "area": "** SILVER ALERT**  SLN AREA",
+      "details": "",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:08:11.260161"
+}

@@ -1,0 +1,444 @@
+{
+  "center_code": "SACC",
+  "center_name": "Sacramento",
+  "date": "2025-09-27",
+  "total_incidents": 29,
+  "incidents": [
+    {
+      "id": "0768",
+      "time": "4:47 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Laguna Blvd",
+      "area": "SB 5 JNO LAGUNA",
+      "details": "4:47 PM: Incident reported | 4:47 PM: South Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0766",
+      "time": "4:41 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr113 S / Sr113 S I80 E Con",
+      "area": "SB JNO",
+      "details": "4:41 PM: Incident reported | 4:41 PM: Woodland",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0765",
+      "time": "4:41 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us50 W / Sunrise Blvd N Onr",
+      "area": "OCCD WB 50 JEO SUNRISE",
+      "details": "4:41 PM: Incident reported | 4:41 PM: East Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0760",
+      "time": "4:41 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Templeton Dr / Dewey Dr",
+      "area": "WB AT",
+      "details": "4:41 PM: Incident reported | 4:41 PM: North Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0758",
+      "time": "4:39 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Lavezzola Rd / Craycroft Rdg",
+      "area": "",
+      "details": "4:39 PM: Incident reported | 4:39 PM: Grass Valley",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0732",
+      "time": "4:14 PM",
+      "type": "Defective Traffic Signals",
+      "location": "Walerga Rd / Elkhorn Blvd",
+      "area": "NB",
+      "details": "4:14 PM: Incident reported | 4:14 PM: North Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0714",
+      "time": "3:57 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "2845 Bell Rd",
+      "area": "IFO CHIPOTLE",
+      "details": "3:57 PM: Incident reported | 3:57 PM: Auburn",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0700",
+      "time": "3:49 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "7104-7438 Gardner Ave",
+      "area": "",
+      "details": "3:49 PM: Incident reported | 3:49 PM: South Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0695",
+      "time": "3:48 PM",
+      "type": "Traffic Hazard",
+      "location": "US50 E / PONDEROSA RD",
+      "area": "EB JWO",
+      "details": "3:48 PM: Incident reported | 3:48 PM: Placerville",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0691",
+      "time": "3:37 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "23089 Hoyt Crossing Rd",
+      "area": "",
+      "details": "3:37 PM: Incident reported | 3:37 PM: Grass Valley",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0298",
+      "time": "10:03 AM",
+      "type": "Trfc Collision-Major Inj",
+      "location": "Ione Rd / Pony Brown Rd",
+      "area": "SB",
+      "details": "10:03 AM: Incident reported | 10:03 AM: East Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1061",
+      "time": "7:38 PM",
+      "type": "Assist with Construction",
+      "location": "55 Hour Closure",
+      "area": "55 HR CLOSURE",
+      "details": "",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    },
+    {
+      "id": "0772",
+      "time": "4:54 PM",
+      "type": "Animal Hazard",
+      "location": "Idaho Maryland Rd / Dobbins Dr",
+      "area": "WB JEO",
+      "details": "4:54 PM: Incident reported | 4:54 PM: Grass Valley",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0775",
+      "time": "4:58 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr51 S / H St Onr",
+      "area": "",
+      "details": "4:58 PM: Incident reported | 4:58 PM: South Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0777",
+      "time": "5:00 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Madison Ave / Hillsdale Blvd",
+      "area": "",
+      "details": "5:00 PM: Incident reported | 5:00 PM: North Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0781",
+      "time": "5:03 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Sr99 S",
+      "area": "",
+      "details": "5:03 PM: Incident reported | 5:03 PM: South Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0784",
+      "time": "5:04 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Cosumnes River Blvd",
+      "area": "SB JSO",
+      "details": "5:04 PM: Incident reported | 5:04 PM: South Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0789",
+      "time": "5:08 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "881 Fowler Rd",
+      "area": "",
+      "details": "5:08 PM: Incident reported | 5:08 PM: Auburn",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1000",
+      "time": "8:16 PM",
+      "type": "Traffic Hazard",
+      "location": "3925 Robertson Ave",
+      "area": "IFO",
+      "details": "North Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0996",
+      "time": "8:09 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Fulton Ave / Hurley Way",
+      "area": "GROCERY OUTLET PLOT",
+      "details": "North Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0990",
+      "time": "8:05 PM",
+      "type": "Assist with Construction",
+      "location": "50 Proj",
+      "area": "50 PROJ",
+      "details": "",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    },
+    {
+      "id": "0967",
+      "time": "7:49 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us50 E Sr99 S Con / Sr99 S",
+      "area": "EB 50 TO SB 99",
+      "details": "South Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0961",
+      "time": "7:41 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr51 S / Arden Way",
+      "area": "SB JNO",
+      "details": "North Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0923",
+      "time": "7:01 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "18031 Penn Valley Dr",
+      "area": "",
+      "details": "Grass Valley",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0798",
+      "time": "5:11 PM",
+      "type": "Hit and Run w/Injuries",
+      "location": "6295 Cavan Dr",
+      "area": "** OCCURD YESTERDAY **",
+      "details": "North Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1037",
+      "time": "8:45 PM",
+      "type": "Live or Dead Animal",
+      "location": "Us50 W / Smith Flat Rd Ofr",
+      "area": "JEO",
+      "details": "Placerville",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1038",
+      "time": "8:46 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Folsom Blvd / Bradshaw Rd",
+      "area": "UNK DOT",
+      "details": "East Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1040",
+      "time": "8:47 PM",
+      "type": "Traffic Hazard",
+      "location": "Jackson Rd / Bradshaw Rd",
+      "area": "BTWN BRADSHAW X EXCELSIOR",
+      "details": "East Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1043",
+      "time": "8:50 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "3367 Wood Ln",
+      "area": "",
+      "details": "Placerville",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T23:52:05.119787"
+}

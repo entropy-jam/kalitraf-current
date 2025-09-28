@@ -1,0 +1,99 @@
+{
+  "center_code": "HMCC",
+  "center_name": "Humboldt",
+  "date": "2025-09-27",
+  "total_incidents": 6,
+  "incidents": [
+    {
+      "id": "0083",
+      "time": "4:32 PM",
+      "type": "Live or Dead Animal",
+      "location": "8900 Mm101 N Men R89.00",
+      "area": "",
+      "details": "4:32 PM: Incident reported | 4:32 PM: Garberville",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0062",
+      "time": "1:36 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "76699 Sr162",
+      "area": "HIDDEN OAKS PARK",
+      "details": "1:36 PM: Incident reported | 1:36 PM: Garberville",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0085",
+      "time": "4:46 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Us199 / Elk Valley Cross Rd",
+      "area": "SB",
+      "details": "4:46 PM: Incident reported | 4:46 PM: Crescent City",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0087",
+      "time": "5:09 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Sr299 W Us101 S Con",
+      "area": "SB 101 JSO 299",
+      "details": "5:09 PM: Incident reported | 5:09 PM: Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0099",
+      "time": "8:23 PM",
+      "type": "Traffic Hazard",
+      "location": "40.989882434638815, -123.81092109377816",
+      "area": "DUNN RIDGE ON SAME RD AS TREE",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0097",
+      "time": "7:34 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "777 Casino Way",
+      "area": "BLUE LAKE CASINO",
+      "details": "Humboldt",
+      "center_code": "HMCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T23:42:39.756910"
+}

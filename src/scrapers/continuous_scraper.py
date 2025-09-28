@@ -63,6 +63,57 @@ class SSEServer:
         if self.clients:
             print(f"📡 Broadcasted to {len(self.clients)} SSE clients")
     
+    async def get_initial_incident_data(self):
+        """Get current incident data for new SSE clients"""
+        try:
+            print("🔍 Fetching initial incident data for SSE client")
+            
+            # Get the current incident data from all centers
+            all_incidents = {}
+            total_incidents = 0
+            
+            # Read from active incident files
+            for center in ['BFCC', 'BSCC', 'BICC', 'BCCC', 'CCCC', 'CHCC', 'ECCC', 'FRCC', 'GGCC', 'HMCC',
+                          'ICCC', 'INCC', 'LACC', 'MRCC', 'MYCC', 'OCCC', 'RDCC', 'SACC', 'SLCC', 'SKCCSTCC',
+                          'SUCC', 'TKCC', 'UKCC', 'VTCC', 'YKCC']:
+                try:
+                    file_path = f"data/active_incidents_{center}.json"
+                    if os.path.exists(file_path):
+                        with open(file_path, 'r') as f:
+                            center_data = json.load(f)
+                            all_incidents[center] = center_data
+                            total_incidents += len(center_data)
+                except Exception as e:
+                    print(f"⚠️  Could not load data for {center}: {e}")
+                    all_incidents[center] = []
+            
+            # Format as initial data message
+            initial_data = {
+                'type': 'initial_data',
+                'data': {
+                    'timestamp': datetime.now().isoformat(),
+                    'centers': len(all_incidents),
+                    'totalIncidents': total_incidents,
+                    'incidents': all_incidents
+                }
+            }
+            
+            print(f"✅ Prepared initial data: {len(all_incidents)} centers, {total_incidents} total incidents")
+            return initial_data
+            
+        except Exception as e:
+            print(f"❌ Error getting initial incident data: {e}")
+            return {
+                'type': 'initial_data',
+                'data': {
+                    'timestamp': datetime.now().isoformat(),
+                    'centers': 0,
+                    'totalIncidents': 0,
+                    'incidents': {},
+                    'error': str(e)
+                }
+            }
+    
     def setup_http_routes(self):
         """Set up HTTP routes for serving frontend"""
         print("🔧 setup_http_routes() called")
@@ -96,10 +147,10 @@ class SSEServer:
         
         self.app.router.add_get('/', serve_index)
         
-        # Serve static files (JS, CSS, assets)
+        # Serve static files (JS, CSS, assets) - but not data files
         self.app.router.add_static('/js/', path='js/', name='js')
         self.app.router.add_static('/assets/', path='assets/', name='assets')
-        self.app.router.add_static('/data/', path='data/', name='data')
+        # Note: /data/ removed - frontend now uses SSE for all data
         
         # Health check endpoint
         async def health_check(request):
@@ -134,6 +185,13 @@ class SSEServer:
                 }
                 welcome_msg = f"data: {json.dumps(welcome_data)}\n\n"
                 await response.write(welcome_msg.encode())
+                
+                # Send initial data immediately
+                print("📡 Sending initial incident data to new SSE client")
+                initial_data = await self.get_initial_incident_data()
+                initial_msg = f"data: {json.dumps(initial_data)}\n\n"
+                await response.write(initial_msg.encode())
+                print(f"✅ Sent initial data: {len(initial_data.get('data', {}).get('results', []))} centers")
                 
                 # Keep connection alive with heartbeat
                 while True:

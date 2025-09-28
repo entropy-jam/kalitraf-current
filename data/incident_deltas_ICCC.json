@@ -1,0 +1,40 @@
+{
+  "center_code": "ICCC",
+  "center_name": "Indio",
+  "timestamp": "2025-09-28T16:08:40.248943",
+  "new_incidents": [
+    {
+      "id": "0075",
+      "time": "1:04 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Harrison St / 70th Ave",
+      "area": "NB JSO",
+      "details": "Indio",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0320",
+      "time": "12:50 PM",
+      "type": "Traffic Hazard",
+      "location": "I10 W EO / COUNTY LINE RD",
+      "area": "",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "removed_incidents": [],
+  "new_count": 2,
+  "removed_count": 0
+}

@@ -2,7 +2,7 @@
   "center_code": "BCCC",
   "center_name": "Border",
   "date": "2025-09-27",
-  "total_incidents": 9,
+  "total_incidents": 25,
   "incidents": [
     {
       "id": "0401",
@@ -138,7 +138,247 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "0841",
+      "time": "8:40 PM",
+      "type": "Assist with Construction",
+      "location": "I5 S / Claire",
+      "area": "TIL 0230",
+      "details": "",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    },
+    {
+      "id": "0839",
+      "time": "8:37 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "12776-13355 Sr76",
+      "area": "",
+      "details": "Oceanside",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0838",
+      "time": "8:37 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I15 N / Central Ave Ofr",
+      "area": "NB OFR",
+      "details": "Temecula",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0829",
+      "time": "8:29 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 I5 S",
+      "area": "",
+      "details": "Oceanside",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0828",
+      "time": "8:27 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr74 / Greenwald Ave",
+      "area": "JSO",
+      "details": "Temecula",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0825",
+      "time": "8:23 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Rockwood Rd / Copper Canyon Rd",
+      "area": "",
+      "details": "Oceanside",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0822",
+      "time": "8:15 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "5555 Mission Rd",
+      "area": "**22C     OCCRD SB 15/ SR76",
+      "details": "Oceanside",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0818",
+      "time": "8:11 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Sr125 N",
+      "area": "NB/ JNO SAN MIGUEL",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0815",
+      "time": "8:03 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I15 N / Miramar Rd (pomerado)",
+      "area": "9393 KEANT",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0785",
+      "time": "7:44 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / H St So",
+      "area": "I5 N H ST SO",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0780",
+      "time": "7:40 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / 8TH NO",
+      "area": "",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0747",
+      "time": "6:49 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "17233 Paradise Mountain Rd",
+      "area": "",
+      "details": "Oceanside",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0722",
+      "time": "6:12 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I805 S / MIRA MESA NO",
+      "area": "",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0844",
+      "time": "8:42 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "14th St / Realty Rd",
+      "area": "",
+      "details": "El Cajon",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0812",
+      "time": "7:58 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / CASSIDY ST OFR",
+      "area": "",
+      "details": "Oceanside",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0845",
+      "time": "8:49 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "5566 Olive Hill Rd",
+      "area": "",
+      "details": "Oceanside",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-27T15:03:16.643853"
+  "last_updated": "2025-09-27T23:51:53.405900"
 }

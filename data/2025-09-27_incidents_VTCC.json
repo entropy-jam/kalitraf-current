@@ -1,0 +1,114 @@
+{
+  "center_code": "VTCC",
+  "center_name": "Ventura",
+  "date": "2025-09-27",
+  "total_incidents": 7,
+  "incidents": [
+    {
+      "id": "0107",
+      "time": "2:51 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "2052 Howard Rd",
+      "area": "CONEJO MTN FUNERAL HOME",
+      "details": "2:51 PM: Incident reported | 2:51 PM: Ventura",
+      "center_code": "VTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0125",
+      "time": "4:53 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Us101 N /  So Vineyard Ave",
+      "area": "NB 101 JSO VINEYARD",
+      "details": "4:53 PM: Incident reported | 4:53 PM: Ventura",
+      "center_code": "VTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0084",
+      "time": "1:12 PM",
+      "type": "Trfc Collision-Major Inj",
+      "location": "SR126 / Peres Ln",
+      "area": "EB 126 AT PERES",
+      "details": "1:12 PM: Incident reported | 1:12 PM: Ventura",
+      "center_code": "VTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0126",
+      "time": "5:01 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / No Milpas St",
+      "area": "SB 101 JNO MILPAS",
+      "details": "5:01 PM: Incident reported | 5:01 PM: Santa Barbara",
+      "center_code": "VTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0163",
+      "time": "8:38 PM",
+      "type": "Wrong Way Driver",
+      "location": "Us101 S / Hampshire",
+      "area": "NB IN SB LN",
+      "details": "Moorpark",
+      "center_code": "VTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0161",
+      "time": "8:25 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "US101 S / MOORPARK RD",
+      "area": "SB JSO",
+      "details": "Moorpark",
+      "center_code": "VTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0148",
+      "time": "7:04 PM",
+      "type": "Assist with Construction",
+      "location": "Us101 S / Rose Ave",
+      "area": "101 S /ROSE",
+      "details": "Ventura",
+      "center_code": "VTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T23:42:39.771477"
+}

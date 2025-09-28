@@ -1,330 +1,400 @@
 {
   "center_code": "LACC",
   "center_name": "Los Angeles",
-  "timestamp": "2025-09-25T13:41:14.202578",
+  "timestamp": "2025-09-28T16:08:40.249730",
   "new_incidents": [
     {
-      "id": "0023",
-      "time": "6:39 AM",
-      "type": "Traffic Hazard",
+      "id": "0047",
+      "time": "1:05 PM",
+      "type": "Trfc Collision-No Inj",
       "location": "I405 N / Inglewood Ave",
-      "location_desc": "JNO",
-      "area": "LAFSP"
+      "area": "JSO",
+      "details": "LAFSP",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0304",
-      "time": "6:38 AM",
-      "type": "Traffic Hazard",
+      "id": "1031",
+      "time": "1:05 PM",
+      "type": "Trfc Collision-No Inj",
       "location": "I405 N / Inglewood Ave",
-      "location_desc": "JNO",
-      "area": "South LA"
+      "area": "NB JSO INGLEWOOD",
+      "details": "South LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0302",
-      "time": "6:37 AM",
-      "type": "Assist with Construction",
-      "location": "Caltrans-la-riverside Dr",
-      "location_desc": "2187 RIVERSIDE DR",
-      "area": "Central LA"
+      "id": "1033",
+      "time": "1:04 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "E 135th St / S San Pedro St",
+      "area": "",
+      "details": "South LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0296",
-      "time": "6:33 AM",
+      "id": "1030",
+      "time": "1:03 PM",
       "type": "Traffic Hazard",
-      "location": "I110 S / W Florence Ave",
-      "location_desc": "AT",
-      "area": "Central LA"
+      "location": "I210 W / N Allen Ave",
+      "area": "WB 210 JEO ALLEN",
+      "details": "Altadena",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0022",
-      "time": "6:33 AM",
+      "id": "1027",
+      "time": "1:02 PM",
       "type": "Traffic Hazard",
-      "location": "I110 S / W Florence Ave",
-      "location_desc": "AT",
-      "area": "LAFSP"
+      "location": "I5 S / Lake Hughes Rd Onr",
+      "area": "SB 5 JNO LAKE HUGHES",
+      "details": "Newhall",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0294",
-      "time": "6:29 AM",
+      "id": "1007",
+      "time": "12:54 PM",
       "type": "Traffic Hazard",
-      "location": "I405 N / W Century Blvd",
-      "location_desc": "JNO",
-      "area": "West LA"
+      "location": "I10 W / S SAN PEDRO ST",
+      "area": "WB 10 JEO SAN PEDRO",
+      "details": "Central LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0288",
-      "time": "6:26 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-monrovia",
-      "location_desc": "850 E HUNTINGTON DR",
-      "area": "Baldwin Park"
+      "id": "1004",
+      "time": "12:53 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr14 S / Avenue S",
+      "area": "SB 14 JSO AVE S",
+      "details": "Antelope Valley",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0289",
-      "time": "6:26 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-downey-florence",
-      "location_desc": "10903 FLORENCE AVE",
-      "area": "Santa Fe Springs"
+      "id": "1009",
+      "time": "12:53 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 W / S Santa Fe Ave",
+      "area": "WB 91 AT SANTA FE",
+      "details": "South LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0018",
-      "time": "6:26 AM",
+      "id": "1003",
+      "time": "12:52 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Carmenita Rd Onr",
+      "area": "CARMENITA ONR TO SB 5",
+      "details": "Santa Fe Springs",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0993",
+      "time": "12:44 PM",
+      "type": "Traffic Break",
+      "location": "I10 W / N Garey Ave",
+      "area": "WB 10 AT GAREY AVE",
+      "details": "Baldwin Park",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0992",
+      "time": "12:42 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I110 N / Alondra Blvd",
+      "area": "NB 110 JNO ALONDRA",
+      "details": "South LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0044",
+      "time": "12:40 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / The Old Rd",
+      "area": "NB 5 JSO THE OLD RD",
+      "details": "LAFSP",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0985",
+      "time": "12:39 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / The Old Rd",
+      "area": "NB 5 JSO THE OLD RD",
+      "details": "Newhall",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0978",
+      "time": "12:37 PM",
       "type": "Trfc Collision-No Inj",
-      "location": "Us101 S / Santa Monica Blvd Onr",
-      "location_desc": "SB 101 AT SANTA MONICA ONR",
-      "area": "LAFSP"
+      "location": "Sr91 E / Norwalk Blvd",
+      "area": "AT",
+      "details": "Santa Fe Springs",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0285",
-      "time": "6:25 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "US101 W / LAUREL CANYON BLVD",
-      "location_desc": "JEO",
-      "area": "West Valley"
-    },
-    {
-      "id": "0286",
-      "time": "6:25 AM",
-      "type": "Live or Dead Animal",
-      "location": "US101 N / Melrose Ave",
-      "location_desc": "NB 101 1/2 MILE JSO MELROSE",
-      "area": "Central LA"
-    },
-    {
-      "id": "0292",
-      "time": "6:25 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I5 N / Indiana St Ofr",
-      "location_desc": "NB 5 JSO",
-      "area": "East LA"
-    },
-    {
-      "id": "0284",
-      "time": "6:21 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Us101 S / Santa Monica Blvd Onr",
-      "location_desc": "SB 101 AT SANTA MONICA ONR",
-      "area": "Central LA"
-    },
-    {
-      "id": "0016",
-      "time": "6:21 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I110 S / W 8th St",
-      "location_desc": "I110 S JNO W 8TH ST",
-      "area": "LAFSP"
-    },
-    {
-      "id": "0279",
-      "time": "6:20 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "1940 Workman Mill Rd",
-      "location_desc": "CALTRANS-WHITTIER 83-727",
-      "area": "Baldwin Park"
-    },
-    {
-      "id": "0274",
-      "time": "6:20 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "US101 W / CHESEBRO RD",
-      "location_desc": "WB JEO",
-      "area": "West Valley"
-    },
-    {
-      "id": "0276",
-      "time": "6:19 AM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I110 S / W 8th St",
-      "location_desc": "I110 S JNO W 8TH ST",
-      "area": "Central LA"
-    },
-    {
-      "id": "0272",
-      "time": "6:17 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-north Hills",
-      "location_desc": "11930 BLUCHER AVE",
-      "area": "Newhall"
-    },
-    {
-      "id": "0271",
-      "time": "6:15 AM",
+      "id": "0924",
+      "time": "12:07 PM",
       "type": "Trfc Collision-Unkn Inj",
-      "location": "SR2 S / Fern Ln",
-      "location_desc": "SB 2 JNO FERN",
-      "area": "Altadena"
+      "location": "734 E 135th St",
+      "area": "",
+      "details": "South LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0265",
-      "time": "6:13 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-north Hills",
-      "location_desc": "11930 BLUCHER AVE",
-      "area": "Newhall"
+      "id": "0036",
+      "time": "12:03 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I405 S / I10 E I405 N Con",
+      "area": "SB 405 JNO 10",
+      "details": "LAFSP",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0262",
-      "time": "6:12 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr91 W / Bellflower Ofr",
-      "location_desc": "WB 91 AT BELLFLOWER",
-      "area": "Santa Fe Springs"
-    },
-    {
-      "id": "0012",
-      "time": "6:11 AM",
-      "type": "Traffic Hazard",
-      "location": "Sr91 W / Bellflower Ofr",
-      "location_desc": "WB 91 AT BELLFLOWER",
-      "area": "LAFSP"
-    },
-    {
-      "id": "0263",
-      "time": "6:06 AM",
+      "id": "0919",
+      "time": "12:03 PM",
       "type": "Hit and Run No Injuries",
-      "location": "1141 W 2nd St",
-      "location_desc": "POI NB 5 JSO CALZONA BT 15-40",
-      "area": "Central LA"
+      "location": "I5 S / S Lorena St",
+      "area": "SB 5 JSO LORENA BT 15-41",
+      "details": "Central LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0252",
-      "time": "6:04 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-cerritos-studebaker",
-      "location_desc": "16849 STUDEBAKER RD",
-      "area": "Santa Fe Springs"
-    },
-    {
-      "id": "0008",
-      "time": "6:03 AM",
+      "id": "0896",
+      "time": "11:46 AM",
       "type": "Hit and Run No Injuries",
-      "location": "I5 S / Paramount Blvd",
-      "location_desc": "SB 5 JNO PARAMOUNT",
-      "area": "LAFSP"
+      "location": "N Hartley Ave / E Badillo St",
+      "area": "AT",
+      "details": "Baldwin Park",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0007",
-      "time": "6:02 AM",
+      "id": "0879",
+      "time": "11:43 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "I210 E / Buena Vista St Ofr",
+      "area": "EB 210 JWO BUENA VISTA",
+      "details": "Baldwin Park",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0870",
+      "time": "11:42 AM",
       "type": "Trfc Collision-1141 Enrt",
-      "location": "Us101 N / Liberty Canyon Rd",
-      "location_desc": "NB JSO",
-      "area": "LAFSP"
+      "location": "11029 S Vermont Ave",
+      "area": "",
+      "details": "West LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0247",
-      "time": "5:59 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "I5 S / Paramount Blvd",
-      "location_desc": "SB 5 JNO PARAMOUNT",
-      "area": "Santa Fe Springs"
+      "id": "0664",
+      "time": "9:01 AM",
+      "type": "ESCORT for Road Conditions",
+      "location": "1001 Stadium Dr",
+      "area": "SOFI STADIUM",
+      "details": "LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0245",
-      "time": "5:59 AM",
+      "id": "0473",
+      "time": "5:56 AM",
       "type": "Assist CT with Maintenance",
-      "location": "Caltrans-torrance (bailey Dr)",
-      "location_desc": "18101 BAILEY DR",
-      "area": "South LA"
+      "location": "CALTRANS-LA (HELIOTROPE)",
+      "area": "609 N HELIOTROPE DR",
+      "details": "Central LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0248",
-      "time": "5:58 AM",
-      "type": "Hit and Run No Injuries",
-      "location": "I110 N / W Vernon Ave",
-      "location_desc": "NB 110 JNO VERNON",
-      "area": "Central LA"
-    },
-    {
-      "id": "0240",
-      "time": "5:57 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "Us101 N / Liberty Canyon Rd",
-      "location_desc": "NB JSO",
-      "area": "West Valley"
-    },
-    {
-      "id": "0232",
-      "time": "5:44 AM",
+      "id": "0432",
+      "time": "5:26 AM",
       "type": "Assist CT with Maintenance",
-      "location": "194 E Artesia Blvd",
-      "location_desc": "",
-      "area": "LA"
+      "location": "I5 S / Ditman Ave",
+      "area": "SB 5 FRM DITMAN TO 710",
+      "details": "East LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0228",
-      "time": "5:36 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "CALTRANS-LA (APPLE ST)",
-      "location_desc": "5700 APPLE ST - *** 5700 ELECTRIC",
-      "area": "Central LA"
-    },
-    {
-      "id": "0225",
-      "time": "5:35 AM",
+      "id": "0412",
+      "time": "5:01 AM",
       "type": "Assist CT with Maintenance",
       "location": "Caltrans-long Beach (santa Fe)",
-      "location_desc": "22101 S SANTA FE AVE",
-      "area": "South LA"
+      "area": "22101 S SANTA FE AVE",
+      "details": "South LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0223",
-      "time": "5:34 AM",
-      "type": "Assist with Construction",
-      "location": "Caltrans-la (imperial Hwy)",
-      "location_desc": "5360 W IMPERIAL HWY",
-      "area": "West LA"
+      "id": "0044",
+      "time": "12:21 AM",
+      "type": "Road/Weather Conditions",
+      "location": "2901 W Broadway",
+      "area": "LACO ROAD WEATHER CONDITIONS",
+      "details": "LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     },
     {
-      "id": "0217",
-      "time": "5:25 AM",
-      "type": "Assist CT with Maintenance",
-      "location": "Caltrans-long Beach (santa Fe)",
-      "location_desc": "22101 S SANTA FE AVE",
-      "area": "South LA"
-    },
-    {
-      "id": "0001",
-      "time": "5:04 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "SR14 N / AGUA DULCE CANYON RD",
-      "location_desc": "NB 14 JNO AGUA DULCE",
-      "area": "LAFSP"
-    },
-    {
-      "id": "0185",
-      "time": "4:59 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "SR14 N / ESCONDIDO CANYON RD",
-      "location_desc": "JSO",
-      "area": "Newhall"
-    },
-    {
-      "id": "0169",
-      "time": "4:18 AM",
-      "type": "SIG Alert",
-      "location": "I10 W / I110 S Con",
-      "location_desc": "WB 10 TO 110",
-      "area": "Central LA"
-    },
-    {
-      "id": "0094",
-      "time": "1:47 AM",
-      "type": "Trfc Collision-1141 Enrt",
-      "location": "I10 E / Garfield Ave",
-      "location_desc": "JEO",
-      "area": "East LA"
-    },
-    {
-      "id": "0001",
+      "id": "0002",
       "time": "11:59 PM",
       "type": "Road/Weather Conditions",
       "location": "Media Log",
-      "location_desc": "LOS ANGELES COUNTY",
-      "area": "LA"
+      "area": "LOS ANGELES COUNTY",
+      "details": "LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
   "removed_incidents": [],
-  "new_count": 40,
+  "new_count": 26,
   "removed_count": 0
 }

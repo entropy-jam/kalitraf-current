@@ -1,0 +1,70 @@
+{
+  "center_code": "YKCC",
+  "center_name": "Yreka",
+  "timestamp": "2025-09-28T16:08:40.255663",
+  "new_incidents": [
+    {
+      "id": "0015",
+      "time": "11:53 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 N Jno N Yreka",
+      "area": "I5 N JNO N Yreka",
+      "details": "Yreka",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0008",
+      "time": "10:23 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / Exit 751",
+      "area": "5 S / EDGEWOOD RD",
+      "details": "Yreka",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0007",
+      "time": "9:39 AM",
+      "type": "WIND Advisory",
+      "location": "Sr97 / Weed",
+      "area": "Weed",
+      "details": "Mount Shasta",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0023",
+      "time": "3:04 PM",
+      "type": "Traffic Hazard",
+      "location": "Cr123 / Cr120",
+      "area": "",
+      "details": "Yreka",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "removed_incidents": [],
+  "new_count": 4,
+  "removed_count": 0
+}

@@ -1,0 +1,38 @@
+{
+  "center_code": "SLCC",
+  "center_name": "San Luis Obispo",
+  "incident_count": 2,
+  "incidents": [
+    {
+      "id": "0055",
+      "time": "12:50 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr41",
+      "area": "SB SR41 JNO  HALFWAY STATION",
+      "details": "San Luis Obispo",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0054",
+      "time": "12:47 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "W Tefft St / Bernita Pl",
+      "area": "",
+      "details": "San Luis Obispo",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T15:51:44.317978"
+}

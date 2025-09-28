@@ -1,0 +1,197 @@
+{
+  "center_code": "BSCC",
+  "center_name": "Barstow",
+  "date": "2025-09-27",
+  "total_incidents": 12,
+  "incidents": [
+    {
+      "id": "0143",
+      "time": "4:17 PM",
+      "type": "Roadway Flooding",
+      "location": "Sr247 / Sunnyslope Dr",
+      "area": "",
+      "details": "4:17 PM: Incident reported | 4:17 PM: BS",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0139",
+      "time": "3:59 PM",
+      "type": "Road/Weather Conditions",
+      "location": "63683 Sr62",
+      "area": "MORONGO CHP",
+      "details": "3:59 PM: Incident reported | 3:59 PM: Morongo Basin",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0107",
+      "time": "1:18 PM",
+      "type": "Roadway Flooding",
+      "location": "5600 Mm62 W Sbd 56.00",
+      "area": "",
+      "details": "1:18 PM: Incident reported | 1:18 PM: Morongo Basin",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0100",
+      "time": "12:55 PM",
+      "type": "Road/Weather Conditions",
+      "location": "300 E Mountain View St",
+      "area": "BARSTOW CHP",
+      "details": "12:55 PM: Incident reported | 12:55 PM: BS",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0083",
+      "time": "11:27 AM",
+      "type": "Road/Weather Conditions",
+      "location": "8500 Mm40 E Sbd R85.00",
+      "area": "I40 MM85  - KELBAKER",
+      "details": "11:27 AM: Incident reported | 11:27 AM: Needles",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0195",
+      "time": "8:35 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I15 S / Ranchero Rd",
+      "area": "I15 S / RANCHERO RD",
+      "details": "Victorville",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0184",
+      "time": "8:16 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Hodge Rd",
+      "area": "NB JNO",
+      "details": "Barstow",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Barstow"
+        ]
+      }
+    },
+    {
+      "id": "0185",
+      "time": "8:16 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N / Wild Wash Rd Ofr",
+      "area": "BTWN WW AND HODGE",
+      "details": "Victorville",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0177",
+      "time": "7:26 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "31150 Balsa Ave",
+      "area": "IFO",
+      "details": "Barstow",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Barstow"
+        ]
+      }
+    },
+    {
+      "id": "0167",
+      "time": "7:11 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I40 W / W Broadway Ofr",
+      "area": "",
+      "details": "Needles",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0201",
+      "time": "8:46 PM",
+      "type": "Traffic Hazard",
+      "location": "6100 Mm247 N Sbd 61.00",
+      "area": "NB",
+      "details": "Barstow",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Barstow"
+        ]
+      }
+    },
+    {
+      "id": "0200",
+      "time": "8:46 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I15 S / Yermo (calico) Exit 194",
+      "area": "I15 S / YERMO (CALICO) EXIT 194",
+      "details": "Barstow",
+      "center_code": "BSCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Barstow"
+        ]
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T23:48:05.017966"
+}

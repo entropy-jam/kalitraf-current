@@ -1,0 +1,139 @@
+{
+  "center_code": "BFCC",
+  "center_name": "Bakersfield",
+  "date": "2025-09-27",
+  "total_incidents": 8,
+  "incidents": [
+    {
+      "id": "0171",
+      "time": "2:57 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Mccombs Rd / Smith Ave",
+      "area": "MCCOMBS JWO SMITH",
+      "details": "2:57 PM: Incident reported | 2:57 PM: Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "2:57 PM: Bakersfield"
+        ]
+      }
+    },
+    {
+      "id": "0002",
+      "time": "12:04 AM",
+      "type": "Traffic Advisory",
+      "location": "Bakersfield Traffic Advisories",
+      "area": "Bakersfield Traffic Advisories",
+      "details": "12:04 AM: Incident reported | 12:04 AM: BF",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0263",
+      "time": "8:36 PM",
+      "type": "Traffic Hazard",
+      "location": "0 Sr178",
+      "area": "WB 178 JWO DEMOCRAT",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    },
+    {
+      "id": "0260",
+      "time": "8:31 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Jewetta Ave W / Rosedale Hwy",
+      "area": "I/S",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    },
+    {
+      "id": "0251",
+      "time": "8:02 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "0 Sr178",
+      "area": "EB SR178 JWO DEMOCRAT",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    },
+    {
+      "id": "0230",
+      "time": "6:30 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "226 Shattuck Ave",
+      "area": "",
+      "details": "Buttonwillow",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0264",
+      "time": "8:44 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "5605 Ashland St",
+      "area": "",
+      "details": "BF",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0267",
+      "time": "8:46 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "0 Sr58 W",
+      "area": "WB SR58 JEO MLK",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T23:53:38.601818"
+}

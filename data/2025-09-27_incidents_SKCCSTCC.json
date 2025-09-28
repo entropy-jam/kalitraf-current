@@ -1,0 +1,144 @@
+{
+  "center_code": "SKCCSTCC",
+  "center_name": "Stockton",
+  "date": "2025-09-27",
+  "total_incidents": 9,
+  "incidents": [
+    {
+      "id": "0264",
+      "time": "4:37 PM",
+      "type": "Traffic Hazard",
+      "location": "I205 E / Mountain House Pkwy Ofr",
+      "area": "EB JWO",
+      "details": "4:37 PM: Incident reported | 4:37 PM: Tracy",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0256",
+      "time": "4:27 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr4 W / Wilson Way Ofr",
+      "area": "JEO",
+      "details": "4:27 PM: Incident reported | 4:27 PM: Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0270",
+      "time": "5:08 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Pettinger Rd / Southworth Rd",
+      "area": "",
+      "details": "5:08 PM: Incident reported | 5:08 PM: San Andreas",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0350",
+      "time": "8:08 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Sr12 E Onr",
+      "area": "SB SR99 JSO KETTLEMAN",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0349",
+      "time": "8:03 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "3489 Muller Rd",
+      "area": "HRD FM",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0313",
+      "time": "7:02 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr26 / Country View Dr",
+      "area": "JEO IFO GOLD CREEK",
+      "details": "San Andreas",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0305",
+      "time": "6:44 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "12262 Jack Tone Rd",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0276",
+      "time": "5:36 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "E Liberty Rd / N Cherokee Ln",
+      "area": "WB AT",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0362",
+      "time": "8:53 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "N Wilson Way / N E St",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T23:56:22.705877"
+}

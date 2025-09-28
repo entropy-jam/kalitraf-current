@@ -1,0 +1,791 @@
+{
+  "center_code": "OCCC",
+  "center_name": "Orange",
+  "date": "2025-09-28",
+  "total_incidents": 52,
+  "incidents": [
+    {
+      "id": "0703",
+      "time": "8:45 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 E Wo / Green River (sna)",
+      "area": "EB 91 JWO GRR",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0697",
+      "time": "8:28 PM",
+      "type": "Assist with Construction",
+      "location": "13200 Goldenwest St",
+      "area": "WESTMINSTER CHP",
+      "details": "Westminster",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0694",
+      "time": "8:22 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / Cm De Estrella Ofr",
+      "area": "ESTRELLA OVER 5",
+      "details": "Capistrano",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0003",
+      "time": "12:00 AM",
+      "type": "CLOSURE of a Road",
+      "location": "6681 Marine Way",
+      "area": "OCCC",
+      "details": "OC",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0002",
+      "time": "12:00 AM",
+      "type": "Road/Weather Conditions",
+      "location": "6681 Marine Way",
+      "area": "OC MEDIA LOG",
+      "details": "OC",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0715",
+      "time": "9:06 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr133 N / Irvine Blvd",
+      "area": "NB 133 JSO IRVINE",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0727",
+      "time": "9:29 PM",
+      "type": "Wrong Way Driver",
+      "location": "Sr241 S / Sr91",
+      "area": "** NB IN SB LANES **",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0747",
+      "time": "9:50 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 W Eo / Imperial Hwy",
+      "area": "WB 91 JEO IMP FT",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0745",
+      "time": "9:48 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr91 W / Lakeview Ave Lv",
+      "area": "WB 91 JWO LV",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0756",
+      "time": "9:58 PM",
+      "type": "Assist with Construction",
+      "location": "E Santa Clara Ave",
+      "area": "405 PROJ",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0765",
+      "time": "10:21 PM",
+      "type": "Wrong Way Driver",
+      "location": "Coto De Caza Dr / Vista Del Verde",
+      "area": "COTO DE CAZA X VISTA DEL VERDE",
+      "details": "Capistrano",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0772",
+      "time": "10:52 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 E Wo / Green River Rd",
+      "area": "SR91 E WO GREEN RIVER RD",
+      "details": "Riverside",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Riverside"
+        ]
+      }
+    },
+    {
+      "id": "0782",
+      "time": "11:37 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Alton Pkwy",
+      "area": "SB 5 JNO ALTON",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0004",
+      "time": "12:05 AM",
+      "type": "CLOSURE of a Road",
+      "location": "6681 Marine Way",
+      "area": "OCCC",
+      "details": "OC",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0015",
+      "time": "12:37 AM",
+      "type": "Wrong Way Driver",
+      "location": "Sr241 S / Santiago Canyon Rd",
+      "area": "NB IN SB LNS",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0017",
+      "time": "12:36 AM",
+      "type": "Traffic Hazard",
+      "location": "La Paz Rd W Onr / I5 S",
+      "area": "WB LA PAZ ONR TO SB 5",
+      "details": "Capistrano",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0038",
+      "time": "1:57 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Sr57 S",
+      "area": "SB 57 JSO LINC",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0044",
+      "time": "2:28 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Jamboree Rd",
+      "area": "NB 5 JSO JAM",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0052",
+      "time": "2:57 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr91 W / Beach Blvd",
+      "area": "WB 91 JWO BEACH",
+      "details": "Westminster",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0049",
+      "time": "2:48 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Avery Pkwy Ofr",
+      "area": "SB 5 ON AVERY OFR",
+      "details": "Capistrano",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0075",
+      "time": "5:14 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr57 S / Lincoln",
+      "area": "SB 57 JNO LINC",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0080",
+      "time": "5:58 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr22 E / Magnolia",
+      "area": "EB 22 JEO MAG",
+      "details": "Westminster",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0086",
+      "time": "6:25 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr133 N / Pavona",
+      "area": "NB 133 JNO PAVONA",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0084",
+      "time": "6:16 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I5 S / El Toro Rd Et",
+      "area": "EL TORO X CARLOTA , CHEVRON",
+      "details": "Capistrano",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0090",
+      "time": "6:48 AM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / Macarthur Blvd Ofr",
+      "area": "SB 405 JNO MAC",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0101",
+      "time": "7:30 AM",
+      "type": "CLOSURE of a Road",
+      "location": "Sr73 N To / Sr55 S Con",
+      "area": "NB 73 TO SB 55",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0105",
+      "time": "8:04 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 N / Lincoln Ave",
+      "area": "NB 57 JSO LINC",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0110",
+      "time": "8:11 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 N / Ball Rd",
+      "area": "NB 57 IN BTWN BALL and LINC",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0123",
+      "time": "8:48 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 S / Orangethorpe Ave Ot",
+      "area": "SB 57 JNO OT",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0001",
+      "time": "9:39 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I405 N / I605",
+      "area": "NB 405 JSO 605 - FT",
+      "details": "Orange County FSP",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0144",
+      "time": "9:38 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I405 N / I605",
+      "area": "NB 405 JSO 605 - FT",
+      "details": "Westminster",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0142",
+      "time": "9:36 AM",
+      "type": "Animal Hazard",
+      "location": "Sr55 N / Sr55 N Sr73 S Con",
+      "area": "NB 55 JNO 73",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0141",
+      "time": "9:35 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 N / Lambert Rd",
+      "area": "NB 57 JSO LAMBERT RD",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0156",
+      "time": "9:54 AM",
+      "type": "Report of Fire",
+      "location": "I5 S / Avery Pkwy",
+      "area": "SB 5 JSO AVERY",
+      "details": "Capistrano",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0163",
+      "time": "10:21 AM",
+      "type": "Wrong Way Driver",
+      "location": "Sr241 S / Windy Ridge Toll Plaza Wr",
+      "area": "SB 241 JNO WR",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0176",
+      "time": "10:58 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / La Paz Rd Lp",
+      "area": "NB 5 JSO LA PAZ",
+      "details": "Capistrano",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0179",
+      "time": "11:08 AM",
+      "type": "Report of Fire",
+      "location": "I5 S / Junipero Serra Rd Js",
+      "area": "SB 5 JSO JS",
+      "details": "Capistrano",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0184",
+      "time": "11:22 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 E / Coal Canyon Rd",
+      "area": "EB 91 AT COAL *FT*",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0006",
+      "time": "11:22 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 E / Coal Canyon Rd",
+      "area": "EB 91 AT COAL *FT*",
+      "details": "Orange County FSP",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0183",
+      "time": "11:20 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 E Eo / Sr241",
+      "area": "SR91 E EO SR241",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0005",
+      "time": "11:20 AM",
+      "type": "Traffic Hazard",
+      "location": "I405 S Sr22 W Con / I605 S Sr22 W Con",
+      "area": "SB 405 JNO 605",
+      "details": "Orange County FSP",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0182",
+      "time": "11:20 AM",
+      "type": "Traffic Hazard",
+      "location": "I405 S Sr22 W Con / I605 S Sr22 W Con",
+      "area": "SB 405 JNO 605",
+      "details": "Westminster",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0190",
+      "time": "11:35 AM",
+      "type": "Animal Hazard",
+      "location": "I405 N / Bristol St",
+      "area": "NB 405 JSO BRISTOL ST",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0008",
+      "time": "11:34 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Sr133",
+      "area": "NB 5 JSO 133",
+      "details": "Orange County FSP",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0188",
+      "time": "11:33 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Sr133",
+      "area": "NB 5 JSO 133",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0187",
+      "time": "11:32 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I405 N / Culver Ave",
+      "area": "NB 405 JSO CULVER",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0213",
+      "time": "12:29 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr57 N / Tonner Canyon Rd",
+      "area": "NB 57 JSO TONNER",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0210",
+      "time": "12:24 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "12861 Browning Ave",
+      "area": "",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0220",
+      "time": "12:31 PM",
+      "type": "Traffic Hazard",
+      "location": "I405 S / Culver Dr Ofr",
+      "area": "SB 405 ON CULVER OFR",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0011",
+      "time": "12:41 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr91 E Wo / Sr241",
+      "area": "EB 91 JWO SR241",
+      "details": "Orange County FSP",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0228",
+      "time": "12:52 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr73 S To / Sr55 S Con",
+      "area": "SB 73 TRANS TO SB 55",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0234",
+      "time": "12:59 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr57 S / Yorba Linda Blvd Yl",
+      "area": "SB 57 JNO YL",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:04:12.230035"
+}

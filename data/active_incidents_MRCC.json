@@ -1,0 +1,53 @@
+{
+  "center_code": "MRCC",
+  "center_name": "Merced",
+  "incident_count": 3,
+  "incidents": [
+    {
+      "id": "0129",
+      "time": "1:01 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 N / Shanks Rd Ofr",
+      "area": "NB JSO",
+      "details": "Merced",
+      "center_code": "MRCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0121",
+      "time": "12:29 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 N / Plainsburg Rd",
+      "area": "",
+      "details": "Merced",
+      "center_code": "MRCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0040",
+      "time": "4:53 AM",
+      "type": "Assist CT with Maintenance",
+      "location": "1500 Bell Dr",
+      "area": "MERCED CHP",
+      "details": "MR",
+      "center_code": "MRCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:02:44.909881"
+}

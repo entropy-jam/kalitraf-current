@@ -1,0 +1,53 @@
+{
+  "center_code": "RDCC",
+  "center_name": "Redding",
+  "incident_count": 3,
+  "incidents": [
+    {
+      "id": "0037",
+      "time": "12:59 PM",
+      "type": "Live or Dead Animal",
+      "location": "I5 N / Bridge Bay Rd Ofr",
+      "area": "NB I5 APPROX 2-3 MILES SO BRIDGE BAY",
+      "details": "Redding",
+      "center_code": "RDCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0034",
+      "time": "12:26 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr44 / Dandelion Dr",
+      "area": "EB",
+      "details": "Redding",
+      "center_code": "RDCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0029",
+      "time": "10:26 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Brush Creek Rd / Sr44",
+      "area": "",
+      "details": "Redding",
+      "center_code": "RDCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:01:58.105259"
+}

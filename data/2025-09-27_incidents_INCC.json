@@ -1,0 +1,304 @@
+{
+  "center_code": "INCC",
+  "center_name": "Inland",
+  "date": "2025-09-27",
+  "total_incidents": 19,
+  "incidents": [
+    {
+      "id": "0557",
+      "time": "4:47 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I215 N No / Little League Dr",
+      "area": "I215 N NO LITTLE LEAGUE DR",
+      "details": "4:47 PM: Incident reported | 4:47 PM: San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0521",
+      "time": "4:05 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I10 E Wo / 4th St",
+      "area": "I10 E WO 4TH ST",
+      "details": "4:05 PM: Incident reported | 4:05 PM: Rancho Cucamonga",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0520",
+      "time": "4:02 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I15 N So / I210",
+      "area": "",
+      "details": "4:02 PM: Incident reported | 4:02 PM: Rancho Cucamonga",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0509",
+      "time": "3:52 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "TL91 W / GREEN RIVER RD",
+      "area": "",
+      "details": "3:52 PM: Incident reported | 3:52 PM: Riverside",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "3:52 PM: Riverside"
+        ]
+      }
+    },
+    {
+      "id": "0508",
+      "time": "3:48 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Montgomery Ave / Nuevo Rd",
+      "area": "1023 HANSEN / CONTOUR",
+      "details": "3:48 PM: Incident reported | 3:48 PM: Riverside",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "3:48 PM: Riverside"
+        ]
+      }
+    },
+    {
+      "id": "0566",
+      "time": "5:03 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "N Orange St / Oakley Ave",
+      "area": "",
+      "details": "5:03 PM: Incident reported | 5:03 PM: IN",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0568",
+      "time": "5:04 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr60 W Eo / Main St",
+      "area": "SR60 W EO MAIN ST",
+      "details": "5:04 PM: Incident reported | 5:04 PM: Riverside",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "5:04 PM: Riverside"
+        ]
+      }
+    },
+    {
+      "id": "0571",
+      "time": "5:09 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Main St / E Grand Blvd",
+      "area": "",
+      "details": "5:09 PM: Incident reported | 5:09 PM: IN",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0575",
+      "time": "5:11 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I15 N No / Sierra Ave",
+      "area": "I15 N NO SIERRA AVE",
+      "details": "5:11 PM: Incident reported | 5:11 PM: San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0727",
+      "time": "8:35 PM",
+      "type": "Traffic Hazard",
+      "location": "8544 Calabash Ave",
+      "area": "",
+      "details": "Rancho Cucamonga",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0698",
+      "time": "7:46 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 N So / I10",
+      "area": "",
+      "details": "Rancho Cucamonga",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0693",
+      "time": "7:41 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I10 E Wo / Tennessee St Tn",
+      "area": "I10 E WO TENNESSEE ST",
+      "details": "San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0675",
+      "time": "7:05 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr91 W Wo / Green River Rd",
+      "area": "SR91 W WO GREEN RIVER RD",
+      "details": "Riverside",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Riverside"
+        ]
+      }
+    },
+    {
+      "id": "0676",
+      "time": "7:04 PM",
+      "type": "Live or Dead Animal",
+      "location": "Oak Glen Rd / Potato Canyon Rd",
+      "area": "",
+      "details": "San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0733",
+      "time": "8:40 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I210 W Eo / Sr330",
+      "area": "I210 W EO SR330",
+      "details": "San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0735",
+      "time": "8:42 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 N / Sierra Ave Ofr",
+      "area": "",
+      "details": "Rancho Cucamonga",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0743",
+      "time": "8:50 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I15 S No / Lake St",
+      "area": "I15 S NO LAKE ST",
+      "details": "Riverside",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Riverside"
+        ]
+      }
+    },
+    {
+      "id": "0749",
+      "time": "8:57 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I15 S No / I10",
+      "area": "I15 S NO I10",
+      "details": "Rancho Cucamonga",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0750",
+      "time": "8:58 PM",
+      "type": "Traffic Hazard",
+      "location": "I215 S No / Baseline St",
+      "area": "I215 S NO BASELINE ST",
+      "details": "San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-27T23:59:36.215885"
+}

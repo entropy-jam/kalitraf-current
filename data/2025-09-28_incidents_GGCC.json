@@ -1,0 +1,2454 @@
+{
+  "center_code": "GGCC",
+  "center_name": "Golden Gate",
+  "date": "2025-09-28",
+  "total_incidents": 163,
+  "incidents": [
+    {
+      "id": "1692",
+      "time": "8:50 PM",
+      "type": "Report of Fire",
+      "location": "Us101 S / Story Rd Ofr",
+      "area": "SB 101 JNO STORY",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1668",
+      "time": "8:33 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I280 S / Trousdale Dr Ofr",
+      "area": "SB JNO",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1664",
+      "time": "8:28 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I680 N / Sycamore Valley Rd Ofr",
+      "area": "NB 680 JSO SYCAMORE",
+      "details": "Dublin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1661",
+      "time": "8:26 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "1846 Hull Ave",
+      "area": "HULL AVE X SANTIAGO, 1864",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1660",
+      "time": "8:24 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 E / University Ave Ofr",
+      "area": "EB 80 JEO UNIVERSITY AVE",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1638",
+      "time": "8:12 PM",
+      "type": "Traffic Hazard",
+      "location": "I680 N / Sycamore Valley Rd Ofr",
+      "area": "NB 680 JSO SYCAMORE",
+      "details": "Dublin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1595",
+      "time": "7:49 PM",
+      "type": "Traffic Hazard",
+      "location": "0 Sr84 E",
+      "area": "EB 84 AT MIDSPAN",
+      "details": "Hayward",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1572",
+      "time": "7:33 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I880 N / Auto Mall Pkwy Ofr",
+      "area": "NB 880 JSO AUTO MALL",
+      "details": "Hayward",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1532",
+      "time": "7:15 PM",
+      "type": "Assist with Construction",
+      "location": "SR116 / SR121",
+      "area": "NAPA AREA",
+      "details": "Napa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0379",
+      "time": "7:45 AM",
+      "type": "CLOSURE of a Road",
+      "location": "Sr85 S / Winchester Blvd Ofr",
+      "area": "SB 85 JNO WINCHESTER",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0001",
+      "time": "12:00 AM",
+      "type": "Traffic Advisory",
+      "location": "Media",
+      "area": "MEDIA",
+      "details": "",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    },
+    {
+      "id": "1685",
+      "time": "8:20 PM",
+      "type": "Assist with Construction",
+      "location": "Sr116 / Sr121",
+      "area": "",
+      "details": "Napa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1716",
+      "time": "9:01 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "964 57th St",
+      "area": "57TH X LOWELL ST, 964",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1881",
+      "time": "10:38 PM",
+      "type": "Hit and Run w/Injuries",
+      "location": "Sr92 W / Toll Plaza (tp)",
+      "area": "WB 92 JWO TOLL PLAZA",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1730",
+      "time": "9:18 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Vermont St Ofr",
+      "area": "NB 101 JSO VERMONT, EXIT 433",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1742",
+      "time": "9:24 PM",
+      "type": "Traffic Hazard",
+      "location": "I80 E / Treasure Island Ofr",
+      "area": "EB 80 JWO TREASURE ISLAND OFR",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1748",
+      "time": "9:27 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr92 W / W Hillsdale Blvd Ofr",
+      "area": "WB 92 JEO HILLSDALE",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1749",
+      "time": "9:30 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Cesar Chavez St Ofr",
+      "area": "NB 101 JNO CESAR CHAVEZ OFR",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1751",
+      "time": "9:33 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Cesar Chavez St W Onr",
+      "area": "NB 101 JSO CESAR CHAVEZ",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1762",
+      "time": "9:40 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 N / Rohnert Park Expy Ofr",
+      "area": "NB 101 ON RPX OFR",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1755",
+      "time": "9:31 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I880 S / West Grand Ave Ofr",
+      "area": "SB 880  JNO WEST GRAND OFR",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1769",
+      "time": "9:45 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Marsh Creek Rd / John Marsh Rd",
+      "area": ".WB MARSH CREEK JWO JOHN MUIR",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1780",
+      "time": "9:55 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Mankas Corner Rd / Abernathy Rd",
+      "area": "MANKAS CORNER X ABERNATHY",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1777",
+      "time": "9:55 PM",
+      "type": "Report of Fire",
+      "location": "I80 W / I80 W Sr37 W Con",
+      "area": "WB JEO",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1774",
+      "time": "9:46 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I80 W / I580 W I80 W Con",
+      "area": "WB 80 TO EB 580 CON",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1821",
+      "time": "10:22 PM",
+      "type": "Assist CT with Maintenance",
+      "location": "Us101 N / 9th St Ofr",
+      "area": "9TH OFR / 10TH ONR",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1825",
+      "time": "10:19 PM",
+      "type": "Missing Elderly",
+      "location": "Alameda County",
+      "area": "** SILVER ALERT**  SLN AREA",
+      "details": "",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    },
+    {
+      "id": "1840",
+      "time": "10:39 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 I680 N Con / I680 N",
+      "area": "NB 101 TRANS NB 680",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1835",
+      "time": "10:34 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I680 N / Ygnacio Valley Rd Ofr",
+      "area": "NB 680 JNO YGNACIO VALLEY, PER RAPID",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1832",
+      "time": "10:33 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr12 / Merced Ave",
+      "area": "EB 12 AT MERCED AVE",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1856",
+      "time": "10:49 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "4731 Castilla Ave",
+      "area": "4731 CASTILLA X S 47TH",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1855",
+      "time": "10:48 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "23rd Ave Onr / I880 N",
+      "area": "23RD ONR TO NB 880",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1858",
+      "time": "10:46 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "2001 Dwight Way",
+      "area": "ALTA BATES - Herrick Campus",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1897",
+      "time": "11:30 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "3105 Northfield Ct",
+      "area": "OCCD 80 W JEO MACE // 47-10",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1891",
+      "time": "11:25 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr12 / Scally Rd",
+      "area": "WB SR12 JEO SCALLY",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1887",
+      "time": "11:20 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Us101 S I80 E Con",
+      "area": "SB 101 TO EB 80 ON THE CON",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1913",
+      "time": "11:41 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr24 W / Broadway Ofr",
+      "area": "WB 24 JWO BWAY, JEO TUNNEL RD",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1925",
+      "time": "11:57 PM",
+      "type": "Wrong Way Driver",
+      "location": "I880 S / Stevens Creek Blvd Ofr",
+      "area": "SB 880 JSO STEVENS CREEK",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1928",
+      "time": "11:57 PM",
+      "type": "Wrong Way Driver",
+      "location": "I880 S / Coleman Ave S Onr",
+      "area": "SB 880 JNO COLMAN",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0019",
+      "time": "12:03 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "0 Spencer Ave Ofr",
+      "area": "NB 101 JNO",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0008",
+      "time": "12:00 AM",
+      "type": "Traffic Advisory",
+      "location": "Media",
+      "area": "MEDIA",
+      "details": "",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    },
+    {
+      "id": "0007",
+      "time": "11:58 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I580 W / SR24 E",
+      "area": "WB 580 JEO 24  , MAIN LINE",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0021",
+      "time": "11:58 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr4 E / Marsh Creek Rd",
+      "area": "EB 4 JWO MARSH CREEK",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0041",
+      "time": "12:26 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Us101 S / E Blithedale Onr",
+      "area": "SB JSO",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0040",
+      "time": "12:23 AM",
+      "type": "Traffic Hazard",
+      "location": "0 I580 E",
+      "area": "EB 580 JWO MIDSPAN",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0054",
+      "time": "12:33 AM",
+      "type": "Traffic Hazard",
+      "location": "I580 E / Airway Blvd Ofr",
+      "area": "EB 580 JWO AIRWAY",
+      "details": "Dublin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0046",
+      "time": "12:24 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "833 S San Tomas Aquino Rd",
+      "area": "S SAN TOMAS AQUINO RD X HAZEL, 833",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0069",
+      "time": "12:58 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr221 / Kaiser Rd",
+      "area": "221 X KAISER RD",
+      "details": "Napa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0080",
+      "time": "1:13 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I80 W / Davis St Ofr",
+      "area": "WB JEO",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0074",
+      "time": "1:07 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sir Francis Drake Blvd / Railroad Ave",
+      "area": "SIR FRANCIS DRAKE X RAILROAD",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0099",
+      "time": "1:29 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I880 N / Stevenson Blvd E Onr",
+      "area": "NB 880 JSO STEVENSON",
+      "details": "Hayward",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0114",
+      "time": "1:40 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Silverado Trl / Hardman Ave",
+      "area": "NB SILVERADO TRAIL JSO HARDMAN",
+      "details": "Napa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0133",
+      "time": "2:00 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr12 W / Fulton Rd",
+      "area": "WB 12 JEO FULTON",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0127",
+      "time": "1:59 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I80 E / Treasure Island Ofr",
+      "area": "EB 80 JWO TREASURE ISLAND",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0131",
+      "time": "1:58 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "7102-7205 Sr1",
+      "area": "",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0126",
+      "time": "1:56 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr130 / Clayton Rd",
+      "area": "ON MT HAMILTON",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0122",
+      "time": "1:53 AM",
+      "type": "Traffic Hazard",
+      "location": "Carolyn St / Foothill Blvd",
+      "area": "CAROLYN ST X FOOTHILL BLVD",
+      "details": "Hayward",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0137",
+      "time": "2:03 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I280 S / Virginia St Ofr",
+      "area": "SB 280 JNO VIRGINIA ST",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0134",
+      "time": "2:02 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I80 W / I505 S I80 Con",
+      "area": "WB 80 JEO 505",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0174",
+      "time": "2:43 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "I80 E / I80 E Sr37 W Con",
+      "area": "EB JWO",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0171",
+      "time": "2:41 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I80 E / POMONA ST OFR",
+      "area": "Eb 80 Jeo Pomona",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0178",
+      "time": "2:35 AM",
+      "type": "Hit and Run w/Injuries",
+      "location": "2575 Corby Ave",
+      "area": "CORBY AVE X HEARN, 2575 SHELL GS",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0169",
+      "time": "2:34 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr12 E / Sr12 E Us101 Con",
+      "area": "EB 12 JEO 101",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0198",
+      "time": "3:16 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I280 S / Alemany Blvd Ofr",
+      "area": "SB 280 JNO ALEMANY",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0195",
+      "time": "3:15 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us101 N / Anza Blvd Ofr",
+      "area": "NB JSO",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0184",
+      "time": "2:56 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Us101 I680 N Con / Us101 N I280 N Con",
+      "area": "NB 680 TO NB  101 CON",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0182",
+      "time": "2:53 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Us101 S / Blossom Hill Rd Ofr",
+      "area": "SB 101 JNO BLOSSOM HILL",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0208",
+      "time": "3:30 AM",
+      "type": "Report of Fire",
+      "location": "Sr87 N / W Capitol Expy Ofr",
+      "area": "NB 87 JSO CAPITOL EXPY",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0200",
+      "time": "3:21 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Us101 S / Sierra Point Pkwy Ofr",
+      "area": "SB JNO",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0224",
+      "time": "4:15 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "US101 S / I580 E",
+      "area": "SB JSO 580",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0244",
+      "time": "5:02 AM",
+      "type": "Traffic Hazard",
+      "location": "I80 W / Hunter Hill Safety Rest Area Ofr",
+      "area": "WB 80 JEO HUNTER HILL",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0243",
+      "time": "4:58 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "0 I880 S Sr237 W Con",
+      "area": "SB 880 JNO WB 237 CON",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0240",
+      "time": "4:57 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I880 S / Dixon Landing Rd Ofr",
+      "area": "SB 880 JNO DIXON LANDING",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0241",
+      "time": "4:57 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us101 N / Vista Point Onr",
+      "area": "NB 101 JNO VISTA POINT",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0242",
+      "time": "4:57 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us101 N / Sf Intl Airport Ofr",
+      "area": "NB 101 JNO SFO",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0239",
+      "time": "4:52 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I880 S / Dixon Landing Rd Ofr",
+      "area": "SB 880 JNO DIXON LANDING",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0249",
+      "time": "5:21 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Us101 S / Sr12 Us101 S Con",
+      "area": "SB 101 JNO 12",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0265",
+      "time": "5:49 AM",
+      "type": "Report of Fire",
+      "location": "Sr4 E / Bailey Rd S Ofr",
+      "area": "EB 4 JEO BAILEY",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0256",
+      "time": "5:41 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr17 S / Summit Rd Ofr",
+      "area": "SB 17 JNO SUMMIT",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0255",
+      "time": "5:41 AM",
+      "type": "Report of Fire",
+      "location": "Sr4 E / Railroad Ave Ofr",
+      "area": "EB 4 JWO RAILROAD",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0277",
+      "time": "5:57 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr29 / S Kelly Rd",
+      "area": "NB 29 JSO S KELLY",
+      "details": "Napa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0291",
+      "time": "6:21 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 N Sr37 E Con / Sr37 E",
+      "area": "NB JSO 37",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0285",
+      "time": "6:17 AM",
+      "type": "Traffic Hazard",
+      "location": "Pleasants Valley Rd / Cantelow Rd",
+      "area": "NB PLESANTS VALLEY JNO CANTELOW",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0284",
+      "time": "6:17 AM",
+      "type": "ESCORT for Road Conditions",
+      "location": "4900 Marie P Debartolo Way",
+      "area": "LEVI'S STADIUM",
+      "details": "GG",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0282",
+      "time": "6:14 AM",
+      "type": "Report of Fire",
+      "location": "Us101 N / I280 S Us101 N Con",
+      "area": "NB 101 JSO 280",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0283",
+      "time": "6:12 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I280 N / Race St Ofr",
+      "area": "NB 280 ON RACE ST OFR",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0304",
+      "time": "6:42 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr17 N / Bear Creek Rd Ofr",
+      "area": "NB 17 JSO BEAR CREEK RD, 3/4",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0307",
+      "time": "6:47 AM",
+      "type": "Animal Hazard",
+      "location": "Stony Point Rd / Todd Rd",
+      "area": "NB STONY POINT JSO TODD",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0319",
+      "time": "7:08 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 S / Tully Rd W Onr",
+      "area": "SB 101 JSO TULLY",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0315",
+      "time": "7:03 AM",
+      "type": "ESCORT for Road Conditions",
+      "location": "4900 Marie P Debartolo Way",
+      "area": "49R'S ESCORT",
+      "details": "GG",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0316",
+      "time": "7:03 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr24 W / Sr24 W I580 W Con",
+      "area": "WB 24 TO WB 580 CON",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0327",
+      "time": "7:31 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr17 N / Redwood Estates Rd",
+      "area": "NB 17 JNO REDWOOD ESTATES",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0330",
+      "time": "7:34 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr17 N / Idylwild Rd",
+      "area": "NB AT",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0332",
+      "time": "7:38 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr17 N / Idylwild Rd",
+      "area": "NB 17 AT IDLYWILD",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0334",
+      "time": "7:39 AM",
+      "type": "Animal Hazard",
+      "location": "I280 S / Sand Hill Rd Ofr",
+      "area": "SB 280 JNO SAND HILL RD",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0341",
+      "time": "7:46 AM",
+      "type": "Live or Dead Animal",
+      "location": "Sr85 N Sr87 N Con / Sr85 S Sr87 N Con",
+      "area": "NB 85 JSO SR87",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0346",
+      "time": "8:00 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I880 N / Stevens Creek Blvd Onr",
+      "area": "NB 880 JNO STEVENS CREEK BLVD",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0350",
+      "time": "8:05 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 N / Francisco Blvd Ofr",
+      "area": "NB JSO FRANCISCO",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0353",
+      "time": "8:08 AM",
+      "type": "Traffic Hazard",
+      "location": "I880 N / Mowry Ave Ofr",
+      "area": "NB JNO CENTRAL",
+      "details": "Hayward",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0355",
+      "time": "8:13 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Sierra Point Pkwy Ofr",
+      "area": "JSO",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0357",
+      "time": "8:14 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Sierra Point Pkwy Onr",
+      "area": "SB JNO",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0362",
+      "time": "8:13 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Cesar Chavez St Ofr",
+      "area": "SB 101 JSO CESAR CHAVEZ",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0363",
+      "time": "8:17 AM",
+      "type": "Traffic Hazard",
+      "location": "I880 N / The Alameda Ofr",
+      "area": "NB 880 JSO ALAMEDA",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0364",
+      "time": "8:19 AM",
+      "type": "Animal Hazard",
+      "location": "I680 N / Rudgear Rd Ofr",
+      "area": "NB 680 JSO RUDGEAR",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0367",
+      "time": "8:21 AM",
+      "type": "Traffic Hazard",
+      "location": "Wb 580 Jwo Sr",
+      "area": "",
+      "details": "",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "unknown",
+        "details": []
+      }
+    },
+    {
+      "id": "0377",
+      "time": "8:33 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr87 S / Sr87 S Sr85 S Con",
+      "area": "SB 87 AT 85",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0372",
+      "time": "8:28 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr17 S / Summit Rd Onr",
+      "area": "SB 17 JNO SUMMIT",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0369",
+      "time": "8:22 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I580 W / Francisco Blvd Ofr",
+      "area": "WB 580 JEO BELLAM OFR",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0371",
+      "time": "7:53 AM",
+      "type": "Traffic Hazard",
+      "location": "0 Us101 N",
+      "area": "NB AT THE END OF GG BRDGE",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0400",
+      "time": "9:04 AM",
+      "type": "Live or Dead Animal",
+      "location": "25361 2nd St",
+      "area": "2ND X RICK, 25361",
+      "details": "Hayward",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0394",
+      "time": "8:57 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Vasco Rd / Sr4",
+      "area": "SB VASCO RD JSO SR4/MARSH CREEK",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0417",
+      "time": "9:24 AM",
+      "type": "JUMPER",
+      "location": "Sr37 E / Sr37 E I80 W Con",
+      "area": "HWY 37 OVER 80",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0410",
+      "time": "9:17 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "12599 Sr92",
+      "area": "San Mateo Rd X DIGGES CANYON",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0411",
+      "time": "9:15 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Alhambra Ave Onr / Sr4 E",
+      "area": "ALHAMBRA ONR TO EB 4",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0408",
+      "time": "9:12 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / N San Pedro Rd Ofr",
+      "area": "SB 101 JNO N SAN PEDRO EXIT 454B",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0441",
+      "time": "9:41 AM",
+      "type": "Wrong Way Driver",
+      "location": "Us101 S / Cow Palace Ofr",
+      "area": "SB 101 JNO COW PLACE",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0430",
+      "time": "9:39 AM",
+      "type": "Car Fire",
+      "location": "I580 W / Bayview Ave Ofr",
+      "area": "WB 580 JEO BAYVIEW",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0462",
+      "time": "9:47 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr84 / La Honda Rd",
+      "area": "EB JWO",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0461",
+      "time": "9:46 AM",
+      "type": "Traffic Hazard",
+      "location": "I580 E Jeo Midspan",
+      "area": "EB MID SPAN",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0457",
+      "time": "9:45 AM",
+      "type": "Traffic Hazard",
+      "location": "I580 E",
+      "area": "EB 580 MID SPAN OF BRIDGE",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0498",
+      "time": "10:00 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 S / Broadway Ofr",
+      "area": "SB JSO",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0494",
+      "time": "9:57 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Sr24 E",
+      "area": "EB 24 JEO CAMINO PABLO, PER RAPID",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0491",
+      "time": "9:56 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Marsh Rd Ofr",
+      "area": "NB JNO",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0486",
+      "time": "9:55 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Us101 S / Broadway Onr",
+      "area": "SB JNO - AT PENNINSULA",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0487",
+      "time": "9:54 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 S / Sierra Point Pkwy Onr",
+      "area": "SB 101 JNO SIERRA POINT PKWY",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0469",
+      "time": "9:50 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "24572-25427 SR29",
+      "area": "NB BY TWIN PINES CASINO",
+      "details": "UKCC",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0504",
+      "time": "10:05 AM",
+      "type": "Animal Hazard",
+      "location": "Sr17 S / Redwood Estates Onr",
+      "area": "SB 17 JSO REDWOOD ESTATES",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0500",
+      "time": "10:00 AM",
+      "type": "Traffic Hazard",
+      "location": "I580 W / N Greenville Rd Ofr",
+      "area": "WB 580 JEO N GREENVILLE",
+      "details": "Dublin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0499",
+      "time": "10:00 AM",
+      "type": "Traffic Hazard",
+      "location": "I80 W / Treasure Island Onr",
+      "area": "WB 80 JEO TI",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0518",
+      "time": "10:20 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I80 W / Carlson Blvd Ofr",
+      "area": "WB 80 JEO CARSLON",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0524",
+      "time": "10:21 AM",
+      "type": "Car Fire",
+      "location": "Sr12 E / Stony Point Rd Ofr",
+      "area": "EB 12 JWO STONY POINT",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0542",
+      "time": "10:36 AM",
+      "type": "Animal Hazard",
+      "location": "I680 N / Mckee Rd Onr",
+      "area": "MCKEE RD ONR TO NB 680",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0538",
+      "time": "10:34 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Us101 S / Alameda Del Prado",
+      "area": "SB 101 JSO ALAMEDA DEL PRADO",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0531",
+      "time": "10:28 AM",
+      "type": "Traffic Hazard",
+      "location": "I880 N / Whipple Rd Ofr",
+      "area": "NB 880 JSO WHIPPLE",
+      "details": "Hayward",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0582",
+      "time": "11:08 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr92 / Pilarcitos Creek Rd",
+      "area": "WB JEO",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0579",
+      "time": "11:04 AM",
+      "type": "Traffic Hazard",
+      "location": "0 I80 W",
+      "area": "WB 80 JEO METERING LIGHTS",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0578",
+      "time": "11:04 AM",
+      "type": "Animal Hazard",
+      "location": "Us101 N / Rodeo Ave Ofr",
+      "area": "NB 101 JSO RODEO",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0573",
+      "time": "11:00 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr4 W / Somersville Rd Ofr",
+      "area": "WB 4 JEO SOMERSVILLE",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0549",
+      "time": "10:40 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "5301 Orwood Rd",
+      "area": "ORWOOD X FALLMAN, 5301",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0592",
+      "time": "11:19 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 S / Hellyer Ave Ofr",
+      "area": "SB 101 JNO  HELLYER",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0589",
+      "time": "11:12 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "1028 Deltaview Ln",
+      "area": "DELTAVIEW X SHOREVIEW CT, 1028",
+      "details": "Contra Costa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0628",
+      "time": "11:37 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I80 W / Sfobb Toll Plaza Ofr",
+      "area": "WB 80 JEO TOLL PLAZA",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0624",
+      "time": "11:34 AM",
+      "type": "Traffic Hazard",
+      "location": "I580 E / Fruitvale Ave Ofr",
+      "area": "EB 580 JWO FRUITVALE AVE",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0623",
+      "time": "11:33 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "Us101 S / S San Francisco Ofr",
+      "area": "SB 101 JNO S SAN FRANCISCO",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0615",
+      "time": "11:31 AM",
+      "type": "Report of Fire",
+      "location": "Us101 N / Woodside Rd Onr",
+      "area": "NB ONR",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0603",
+      "time": "11:29 AM",
+      "type": "Traffic Hazard",
+      "location": "0 I80 W",
+      "area": "WB 80 ON INCLINE",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0607",
+      "time": "11:27 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I80 E / Buchanan St Ofr",
+      "area": "EB 80 JWO BUCHANAN ST",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0604",
+      "time": "11:26 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us101 S / Third St Onr",
+      "area": "THIRD ONR TO SB 101",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0611",
+      "time": "11:26 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Bayshore Blvd Onr",
+      "area": "NB 101 ON BAYSHORE OFR",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0597",
+      "time": "11:24 AM",
+      "type": "Animal Hazard",
+      "location": "4318 Stony Point Rd",
+      "area": "NB STONY POINT AT SCENIC AVE , 4318",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0647",
+      "time": "11:55 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "0 Sr92 W",
+      "area": "",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0642",
+      "time": "11:50 AM",
+      "type": "Traffic Hazard",
+      "location": "I580 E / Regatta Blvd Ofr",
+      "area": "EB 580 JWO REGATTA BLVD",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0640",
+      "time": "11:49 AM",
+      "type": "Traffic Hazard",
+      "location": "I780 W / Columbus Pkwy Ofr",
+      "area": "JEO",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0631",
+      "time": "11:39 AM",
+      "type": "Traffic Hazard",
+      "location": "I880 N / High St Ofr",
+      "area": "NB 880 JSO HIGH",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0685",
+      "time": "12:15 PM",
+      "type": "Traffic Hazard",
+      "location": "I280 S / Monterey Blvd Ofr",
+      "area": "SB 280 ON MONTEREY OFR",
+      "details": "San Francisco",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0674",
+      "time": "12:11 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "22076-22471 Sr116",
+      "area": "SR116 JEO LAUREL DELL AVE",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0663",
+      "time": "12:02 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I80 W / Toll Plaza (tp)",
+      "area": "WB 80 JEO TP",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0650",
+      "time": "11:57 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "0 Sr92 W",
+      "area": "WB JWO 1ST TOLL",
+      "details": "Redwood City",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0701",
+      "time": "12:34 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr12 / Sr113",
+      "area": "WB 12 AT 113",
+      "details": "Solano",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0707",
+      "time": "12:39 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr87 N / Taylor St Ofr",
+      "area": "SR 87 NEAR TAYLOR, UNKN DOT",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0708",
+      "time": "12:41 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 N / Oakland Rd Onr",
+      "area": "NB 101 JNO OAKLAND",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0730",
+      "time": "1:02 PM",
+      "type": "Traffic Hazard",
+      "location": "I580 E Sr24 E Con / Sr24 E",
+      "area": "EB 580 TO EB  24 CON",
+      "details": "Oakland",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0733",
+      "time": "12:58 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "I280 N / Stevens Creek Blvd Onr",
+      "area": "NB 280 AT STEVENS CREEK ONR",
+      "details": "San Jose",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:05:45.856518"
+}

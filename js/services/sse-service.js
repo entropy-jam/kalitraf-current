@@ -14,7 +14,8 @@ class SSEService {
             onIncidentUpdate: null,
             onError: null,
             onConnectionChange: null,
-            onScrapeSummary: null
+            onScrapeSummary: null,
+            onInitialData: null
         };
     }
 
@@ -80,6 +81,13 @@ class SSEService {
         switch (data.type) {
             case 'welcome':
                 console.log('👋 SSE welcome message:', data.message);
+                break;
+                
+            case 'initial_data':
+                console.log('📊 Received initial data:', data.data);
+                if (this.eventHandlers.onInitialData) {
+                    this.eventHandlers.onInitialData(data.data);
+                }
                 break;
                 
             case 'incident_update':

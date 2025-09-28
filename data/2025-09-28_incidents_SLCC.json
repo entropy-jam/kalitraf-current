@@ -1,0 +1,219 @@
+{
+  "center_code": "SLCC",
+  "center_name": "San Luis Obispo",
+  "date": "2025-09-28",
+  "total_incidents": 14,
+  "incidents": [
+    {
+      "id": "0163",
+      "time": "9:55 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Sr166 E Onr",
+      "area": "SB US101 AT SR166 EAST - SMA CHP",
+      "details": "Santa Maria",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0171",
+      "time": "10:55 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us101 N / San Anselmo Rd Ofr",
+      "area": "NB US101 JNO SAN ANSELMO",
+      "details": "Templeton",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0169",
+      "time": "10:48 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Us101 S / San Luis Bay Dr Ofr",
+      "area": "SB 101 JNO SLB",
+      "details": "San Luis Obispo",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0173",
+      "time": "11:12 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Foxen Canyon Rd / Johnson Dr",
+      "area": "",
+      "details": "Santa Maria",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0005",
+      "time": "12:02 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "430 Mercury Dr",
+      "area": "",
+      "details": "San Luis Obispo",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0012",
+      "time": "2:20 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr1 N / Santa Lucia Canyon Rd",
+      "area": "NB SR1 JNO SLC",
+      "details": "Buellton",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0021",
+      "time": "7:35 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Sr135 Ofr",
+      "area": "SB 101 JSO LOS ALAMOS* 1 MILE",
+      "details": "Santa Maria",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0023",
+      "time": "7:43 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Sr135 / E Waller Ln",
+      "area": "NB 135 JSO WALLER",
+      "details": "Santa Maria",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0030",
+      "time": "9:33 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / San Anselmo Rd Ofr",
+      "area": "NB JSO SAN ANSELMO",
+      "details": "Templeton",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0035",
+      "time": "10:31 AM",
+      "type": "Live or Dead Animal",
+      "location": "Drum Canyon Rd / Sr246",
+      "area": "",
+      "details": "Buellton",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0038",
+      "time": "11:42 AM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Stowell Rd Ofr",
+      "area": "SB 101 JNO STOWELL",
+      "details": "Santa Maria",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0048",
+      "time": "12:25 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 S / Donovan Rd Ofr",
+      "area": "SB 101 JNO DONOVAN * 1/4 MILE",
+      "details": "Santa Maria",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0054",
+      "time": "12:47 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "W Tefft St / Bernita Pl",
+      "area": "",
+      "details": "San Luis Obispo",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0055",
+      "time": "12:50 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr41",
+      "area": "SB SR41 JNO  HALFWAY STATION",
+      "details": "San Luis Obispo",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T15:51:44.318658"
+}

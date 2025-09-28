@@ -1,0 +1,669 @@
+{
+  "center_code": "SKCCSTCC",
+  "center_name": "Stockton",
+  "date": "2025-09-28",
+  "total_incidents": 44,
+  "incidents": [
+    {
+      "id": "0362",
+      "time": "8:53 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "N Wilson Way / N E St",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0350",
+      "time": "8:08 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Sr12 E Onr",
+      "area": "SB SR99 JSO KETTLEMAN",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0349",
+      "time": "8:03 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "3489 Muller Rd",
+      "area": "HRD FM",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0313",
+      "time": "7:02 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr26 / Country View Dr",
+      "area": "JEO IFO GOLD CREEK",
+      "details": "San Andreas",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0305",
+      "time": "6:44 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "12262 Jack Tone Rd",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0276",
+      "time": "5:36 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "E Liberty Rd / N Cherokee Ln",
+      "area": "WB AT",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0365",
+      "time": "9:02 PM",
+      "type": "Assist with Construction",
+      "location": "I5 S / Eight Mile Rd Ofr",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0371",
+      "time": "9:37 PM",
+      "type": "Wrong Way Driver",
+      "location": "Sr99 S / Lathrop Rd Ofr",
+      "area": "NB IN SB",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0384",
+      "time": "10:29 PM",
+      "type": "Traffic Hazard",
+      "location": "Wilson Way Ofr / Sr99 S",
+      "area": "WB JWO",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0382",
+      "time": "10:22 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Eight Mile Rd Ofr",
+      "area": "SB JNO **ROLLING",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0386",
+      "time": "10:37 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "S Union Rd / Peach Rd",
+      "area": "JSO",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0385",
+      "time": "10:30 PM",
+      "type": "Traffic Hazard",
+      "location": "S Manteca Rd / W Ripon Rd",
+      "area": "NB JSO",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0390",
+      "time": "10:56 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "4900 N Hwy-99",
+      "area": "OCCD HAMMER AT E FRNTG",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0392",
+      "time": "11:02 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "N Macarthur Dr Ofr / I205 E",
+      "area": "CHEVRON",
+      "details": "Tracy",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0395",
+      "time": "11:22 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "E Collier Rd / N Cherokee Ln",
+      "area": "I/S",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0005",
+      "time": "12:09 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Woodbridge Rd Ofr",
+      "area": "SB JNO",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0004",
+      "time": "12:08 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "W Byron Rd / Von Sosten Rd",
+      "area": "JSO",
+      "details": "Tracy",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0008",
+      "time": "12:18 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Morada Ln Onr / Sr99 N",
+      "area": "ONR",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0025",
+      "time": "1:01 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "N Broadway Ave / N Windsor Ave",
+      "area": "NEAR RR TRACKS",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0022",
+      "time": "12:56 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "2211-2638 N Wilson Way",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0019",
+      "time": "12:54 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "2360 N Wilson Way",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0016",
+      "time": "12:53 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Pine Grove Volcano Rd / Aqueduct Rd",
+      "area": "JEO",
+      "details": "Amador",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0033",
+      "time": "1:40 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "W Woodbridge Rd / N Van Exel Rd",
+      "area": "WOODBRIDGE JWO I5",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0039",
+      "time": "2:04 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "1617 W Fremont St",
+      "area": "",
+      "details": "ST",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0038",
+      "time": "2:02 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr99 S / Hammer Ln Ofr",
+      "area": "SB JNO",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0048",
+      "time": "2:26 AM",
+      "type": "Report of Fire",
+      "location": "Sr99 S / Wilson Way Ofr",
+      "area": "SB SR99 JNO WILSON",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0059",
+      "time": "3:16 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr99 S / Arch Rd Ofr",
+      "area": "SB JNO",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0064",
+      "time": "4:33 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr88 E Onr / Sr99 S",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0068",
+      "time": "5:49 AM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Thornton Rd / N Devries Rd",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0066",
+      "time": "5:41 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Mackville Rd / Jahant Rd",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0070",
+      "time": "6:12 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I205 E / Mountain House Pkwy N Onr",
+      "area": "EB JEO",
+      "details": "Tracy",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0072",
+      "time": "6:33 AM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "I205 E / I205 E I5 N Con",
+      "area": "EB 205 TO NB 5",
+      "details": "Tracy",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0081",
+      "time": "7:17 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Mathews Rd Ofr",
+      "area": "SB JNO",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0082",
+      "time": "7:24 AM",
+      "type": "Traffic Hazard",
+      "location": "Harney Ln Ofr / Sr99 S",
+      "area": "OFR FM SB",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0092",
+      "time": "9:47 AM",
+      "type": "Defective Traffic Signals",
+      "location": "N Alexandria Pl / W Benjamin Holt Dr",
+      "area": "",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0093",
+      "time": "9:47 AM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Kasson Rd Onr",
+      "area": "SB 5 BTWN KASSON and HWY 33",
+      "details": "Tracy",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0110",
+      "time": "11:04 AM",
+      "type": "Traffic Hazard",
+      "location": "Sr12 / Messing Rd",
+      "area": "",
+      "details": "San Andreas",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0118",
+      "time": "11:53 AM",
+      "type": "Hit and Run No Injuries",
+      "location": "I5 S / French Camp Rd Ofr",
+      "area": "SB JNO FC ** WIT ONLY **",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0117",
+      "time": "11:46 AM",
+      "type": "Trfc Collision-No Inj",
+      "location": "10770-10851 Sr4",
+      "area": "WB SR4 JEO COTTAGE SPRINGS",
+      "details": "San Andreas",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0122",
+      "time": "12:12 PM",
+      "type": "Traffic Hazard",
+      "location": "I205 E / N Macarthur Dr Onr",
+      "area": "EB JEO",
+      "details": "Tracy",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0128",
+      "time": "12:33 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr26 / Sr12",
+      "area": "IFO OREILLY AUTO PARTS",
+      "details": "San Andreas",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0130",
+      "time": "12:47 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I205 W / N Macarthur Dr Ofr",
+      "area": "WB JEO",
+      "details": "Tracy",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0131",
+      "time": "12:42 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "19971-20250 Sr88",
+      "area": "",
+      "details": "Amador",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0136",
+      "time": "1:05 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr99 N / S Golden Gate Ave Ofr",
+      "area": "NB UNDER GG",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "last_updated": "2025-09-28T16:07:13.229342"
+}

@@ -1,0 +1,25 @@
+{
+  "center_code": "UKCC",
+  "center_name": "Ukiah",
+  "timestamp": "2025-09-28T16:08:40.255175",
+  "new_incidents": [
+    {
+      "id": "0035",
+      "time": "12:38 PM",
+      "type": "Traffic Hazard",
+      "location": "5390 Mm1 N Men R53.90",
+      "area": "ITA OF CB 1 539",
+      "details": "Ukiah",
+      "center_code": "UKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "removed_incidents": [],
+  "new_count": 1,
+  "removed_count": 0
+}

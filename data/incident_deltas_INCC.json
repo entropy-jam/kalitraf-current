@@ -1,0 +1,40 @@
+{
+  "center_code": "INCC",
+  "center_name": "Inland",
+  "timestamp": "2025-09-28T16:08:40.249259",
+  "new_incidents": [
+    {
+      "id": "0322",
+      "time": "12:51 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I15 S / 4th St Rc",
+      "area": "I15 S 4TH ST RC",
+      "details": "Rancho Cucamonga",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0309",
+      "time": "12:28 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "Sr71 S / Ramona Ave",
+      "area": "SR71 S RAMONA AVE",
+      "details": "Rancho Cucamonga",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "removed_incidents": [],
+  "new_count": 2,
+  "removed_count": 0
+}

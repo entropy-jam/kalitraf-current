@@ -1,0 +1,40 @@
+{
+  "center_code": "SKCCSTCC",
+  "center_name": "Stockton",
+  "timestamp": "2025-09-28T16:08:40.254385",
+  "new_incidents": [
+    {
+      "id": "0136",
+      "time": "1:05 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "Sr99 N / S Golden Gate Ave Ofr",
+      "area": "NB UNDER GG",
+      "details": "Stockton",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0130",
+      "time": "12:47 PM",
+      "type": "Trfc Collision-No Inj",
+      "location": "I205 W / N Macarthur Dr Ofr",
+      "area": "WB JEO",
+      "details": "Tracy",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    }
+  ],
+  "removed_incidents": [],
+  "new_count": 2,
+  "removed_count": 0
+}
