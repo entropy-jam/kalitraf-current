@@ -24,10 +24,13 @@ class SSEServer:
     """Server-Sent Events server for Railway deployment"""
     
     def __init__(self, port=8080):
+        print(f"🔧 SSEServer.__init__() called with port={port}")
         self.port = port
         self.clients = set()  # Store SSE response objects
         self.server = None
-        self.app = None
+        print("🔧 Creating web.Application()...")
+        self.app = web.Application()
+        print(f"✅ SSEServer initialized successfully. App type: {type(self.app)}")
     
     async def register_client(self, response):
         """Register a new SSE client"""
@@ -62,7 +65,19 @@ class SSEServer:
     
     def setup_http_routes(self):
         """Set up HTTP routes for serving frontend"""
-        self.app = web.Application()
+        print("🔧 setup_http_routes() called")
+        print(f"🔧 App object before: {self.app}")
+        print(f"🔧 App type: {type(self.app)}")
+        
+        # Don't recreate the app - use the one from __init__
+        if self.app is None:
+            print("⚠️  App is None, creating new web.Application()")
+            self.app = web.Application()
+        else:
+            print("✅ Using existing web.Application()")
+        
+        print(f"🔧 App object after: {self.app}")
+        print(f"🔧 App router: {self.app.router}")
         
         # Add explicit route for index.html
         async def serve_index(request):
@@ -152,21 +167,30 @@ class SSEServer:
     async def start_server(self):
         """Start the HTTP and SSE server"""
         print(f"🚀 Starting HTTP and SSE server on port {self.port}")
+        print(f"🔧 Current working directory: {os.getcwd()}")
+        print(f"🔧 Files in current directory: {os.listdir('.')}")
         
         try:
             # Set up HTTP routes
             print("🔧 Setting up HTTP routes...")
+            print(f"🔧 App before setup: {self.app}")
             self.setup_http_routes()
             print("✅ HTTP routes configured")
+            print(f"🔧 App after setup: {self.app}")
             
             # Start the server
             print("🔧 Creating web app runner...")
+            print(f"🔧 App for runner: {self.app}")
+            print(f"🔧 App type: {type(self.app)}")
             runner = web.AppRunner(self.app)
+            print("🔧 AppRunner created, calling setup()...")
             await runner.setup()
             print("✅ Web app runner setup complete")
             
             print("🔧 Starting TCP site...")
+            print(f"🔧 Binding to 0.0.0.0:{self.port}")
             site = web.TCPSite(runner, "0.0.0.0", self.port)
+            print("🔧 TCPSite created, calling start()...")
             await site.start()
             print("✅ TCP site started")
             
@@ -175,6 +199,7 @@ class SSEServer:
             
             print(f"✅ HTTP server running on http://0.0.0.0:{self.port}")
             print(f"✅ SSE server running on http://0.0.0.0:{self.port}/api/incidents/stream")
+            print("🎉 Server startup completed successfully!")
             
         except Exception as e:
             print(f"❌ Failed to start HTTP/SSE server: {e}")
@@ -187,12 +212,14 @@ class ContinuousRailwayScraper:
     """Continuous scraper for Railway deployment using HTTP requests"""
     
     def __init__(self):
+        print("🔧 ContinuousRailwayScraper.__init__() called")
         # All 25 CHP communication centers
         self.centers = [
             'BFCC', 'BSCC', 'BICC', 'BCCC', 'CCCC', 'CHCC', 'ECCC', 'FRCC', 'GGCC', 'HMCC',
             'ICCC', 'INCC', 'LACC', 'MRCC', 'MYCC', 'OCCC', 'RDCC', 'SACC', 'SLCC', 'SKCCSTCC',
             'SUCC', 'TKCC', 'UKCC', 'VTCC', 'YKCC'
         ]
+        print(f"✅ Centers initialized: {len(self.centers)} centers")
         self.center_info = {
             'BFCC': {'name': 'Bakersfield', 'channel': 'chp-incidents-bfcc'},
             'BSCC': {'name': 'Barstow', 'channel': 'chp-incidents-bscc'},
@@ -222,16 +249,24 @@ class ContinuousRailwayScraper:
         }
         # Use Railway's PORT environment variable, fallback to 8081 for local development
         port = int(os.environ.get('PORT', 8081))
+        print(f"🔧 Using port: {port} (from PORT env var: {os.environ.get('PORT', 'not set')})")
+        print("🔧 Creating SSEServer...")
         self.sse_server = SSEServer(port=port)
+        print("✅ SSEServer created")
         self.scrape_interval = 5  # 5-second intervals
         self.is_running = False
+        print("🔧 Creating HTTPScraper...")
         self.http_scraper = HTTPScraper(mode="railway")
+        print("✅ HTTPScraper created")
         
         # Setup logging
+        print("🔧 Setting up logging...")
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s'
         )
+        print("✅ Logging configured")
+        print("🎉 ContinuousRailwayScraper initialization completed!")
     
     async def scrape_center(self, center_code: str) -> Dict[str, Any]:
         """Scrape a single communication center using HTTP requests"""
@@ -391,10 +426,13 @@ class ContinuousRailwayScraper:
         print(f"📡 Scraping {len(self.centers)} centers every {self.scrape_interval} seconds")
         print(f"🌐 SSE server will run on port {self.sse_server.port}")
         print(f"🎯 Centers: {', '.join(self.centers)}")
+        print(f"🔧 SSE server object: {self.sse_server}")
+        print(f"🔧 SSE server type: {type(self.sse_server)}")
         
         # Start SSE server
         try:
             print("🔧 Starting SSE server...")
+            print(f"🔧 About to call start_server() on {self.sse_server}")
             await self.sse_server.start_server()
             print("✅ SSE server started successfully")
         except Exception as e:
@@ -402,7 +440,8 @@ class ContinuousRailwayScraper:
             print(f"❌ Error type: {type(e).__name__}")
             import traceback
             print(f"❌ Traceback: {traceback.format_exc()}")
-            raise
+            print("❌ Continuing without SSE server...")
+            # Don't raise - continue with scraping only
         
         self.is_running = True
         iteration = 0
@@ -440,8 +479,14 @@ class ContinuousRailwayScraper:
 
 async def main():
     """Main entry point"""
+    print("🚀 Starting main() function")
+    print("🔧 Creating ContinuousRailwayScraper...")
     scraper = ContinuousRailwayScraper()
+    print("✅ ContinuousRailwayScraper created")
+    print("🔧 Starting run_forever()...")
     await scraper.run_forever()
 
 if __name__ == "__main__":
+    print("🚀 Script started - __name__ == '__main__'")
+    print("🔧 Running asyncio.run(main())...")
     asyncio.run(main())
