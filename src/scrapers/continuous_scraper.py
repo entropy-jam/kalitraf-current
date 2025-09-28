@@ -169,10 +169,44 @@ class SSEServer:
                 return web.Response(text=f'Error: {e}', status=500)
         
         self.app.router.add_get('/', serve_index)
-        
-        # Static file serving removed - SSE-only implementation
-        # All data comes from SSE, no file dependencies
-        
+
+        # Add static file serving for CSS and assets
+        async def serve_static(request):
+            try:
+                # Get the requested file path
+                file_path = request.match_info['path']
+                print(f"📁 Serving static file: {file_path}")
+
+                # Security check - prevent directory traversal
+                if '..' in file_path or file_path.startswith('/'):
+                    return web.Response(text='Forbidden', status=403)
+
+                # Try to serve the file
+                full_path = os.path.join(os.getcwd(), file_path)
+                if os.path.exists(full_path) and os.path.isfile(full_path):
+                    with open(full_path, 'rb') as f:
+                        content = f.read()
+
+                    # Determine content type
+                    content_type = 'text/plain'
+                    if file_path.endswith('.css'):
+                        content_type = 'text/css'
+                    elif file_path.endswith('.js'):
+                        content_type = 'application/javascript'
+                    elif file_path.endswith('.html'):
+                        content_type = 'text/html'
+                    elif file_path.endswith('.json'):
+                        content_type = 'application/json'
+
+                    return web.Response(body=content, content_type=content_type)
+                else:
+                    print(f"❌ Static file not found: {full_path}")
+                    return web.Response(text='File not found', status=404)
+
+            except Exception as e:
+                print(f"❌ Error serving static file: {e}")
+                return web.Response(text=f'Error: {e}', status=500)
+
         # Health check endpoint
         async def health_check(request):
             return web.json_response({
@@ -180,9 +214,9 @@ class SSEServer:
                 'timestamp': datetime.now().isoformat(),
                 'sse_clients': len(self.clients)
             })
-        
+
         self.app.router.add_get('/health', health_check)
-        
+
         # SSE endpoint for real-time updates
         async def sse_endpoint(request):
             connection_id = id(request)
@@ -286,6 +320,9 @@ class SSEServer:
             return response
         
         self.app.router.add_options('/api/incidents/stream', cors_handler)
+
+        # Add route for static files (CSS, JS, etc.) - MUST be last to avoid conflicts
+        self.app.router.add_get('/{path:.*}', serve_static)
     
     async def start_server(self):
         """Start the HTTP and SSE server"""
