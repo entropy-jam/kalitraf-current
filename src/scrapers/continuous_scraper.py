@@ -202,7 +202,9 @@ class ContinuousRailwayScraper:
             'VTCC': {'name': 'Ventura', 'channel': 'chp-incidents-vtcc'},
             'YKCC': {'name': 'Yreka', 'channel': 'chp-incidents-ykcc'}
         }
-        self.sse_server = SSEServer(port=8081)
+        # Use Railway's PORT environment variable, fallback to 8081 for local development
+        port = int(os.environ.get('PORT', 8081))
+        self.sse_server = SSEServer(port=port)
         self.scrape_interval = 5  # 5-second intervals
         self.is_running = False
         self.http_scraper = HTTPScraper(mode="railway")

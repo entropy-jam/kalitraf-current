@@ -83,9 +83,10 @@ class SSEDiagnostics:
         }
         
         try:
-            # Test local SSE endpoint
+            # Test local SSE endpoint (use PORT env var if available, fallback to 8081)
+            port = os.environ.get('PORT', '8081')
             async with aiohttp.ClientSession() as session:
-                async with session.get('http://localhost:8081/api/incidents/stream') as response:
+                async with session.get(f'http://localhost:{port}/api/incidents/stream') as response:
                     if response.status == 200:
                         test_result['status'] = 'success'
                         test_result['details']['status_code'] = response.status
@@ -133,8 +134,9 @@ class SSEDiagnostics:
         
         try:
             # Connect to SSE stream
+            port = os.environ.get('PORT', '8081')
             async with aiohttp.ClientSession() as session:
-                async with session.get('http://localhost:8081/api/incidents/stream') as response:
+                async with session.get(f'http://localhost:{port}/api/incidents/stream') as response:
                     if response.status == 200:
                         # Monitor for different message types
                         message_types = set()
@@ -196,9 +198,10 @@ class SSEDiagnostics:
             connections = []
             async with aiohttp.ClientSession() as session:
                 # Create multiple connections
+                port = os.environ.get('PORT', '8081')
                 for i in range(3):
                     try:
-                        response = await session.get('http://localhost:8081/api/incidents/stream')
+                        response = await session.get(f'http://localhost:{port}/api/incidents/stream')
                         if response.status == 200:
                             connections.append(response)
                     except Exception as e:
@@ -236,8 +239,9 @@ class SSEDiagnostics:
         }
         
         try:
+            port = os.environ.get('PORT', '8081')
             async with aiohttp.ClientSession() as session:
-                async with session.get('http://localhost:8081/api/incidents/stream') as response:
+                async with session.get(f'http://localhost:{port}/api/incidents/stream') as response:
                     if response.status == 200:
                         messages = []
                         start_time = time.time()
@@ -309,8 +313,9 @@ class SSEDiagnostics:
         }
         
         try:
+            port = os.environ.get('PORT', '8081')
             async with aiohttp.ClientSession() as session:
-                async with session.get('http://localhost:8081/api/incidents/stream') as response:
+                async with session.get(f'http://localhost:{port}/api/incidents/stream') as response:
                     if response.status == 200:
                         message_times = []
                         start_time = time.time()
@@ -377,6 +382,7 @@ class SSEDiagnostics:
         
         try:
             # Test endpoints
+            port = os.environ.get('PORT', '8081')
             endpoints_to_test = [
                 ('/', 'text/html', 'Frontend serving'),
                 ('/health', 'application/json', 'Health check'),
@@ -387,7 +393,7 @@ class SSEDiagnostics:
             async with aiohttp.ClientSession() as session:
                 for endpoint, expected_content_type, description in endpoints_to_test:
                     try:
-                        url = f'http://localhost:8081{endpoint}'
+                        url = f'http://localhost:{port}{endpoint}'
                         async with session.get(url) as response:
                             content_type = response.headers.get('content-type', '').split(';')[0]
                             
@@ -465,9 +471,10 @@ class SSEDiagnostics:
         }
         
         try:
+            port = os.environ.get('PORT', '8081')
             async with aiohttp.ClientSession() as session:
                 # Test main page rendering
-                async with session.get('http://localhost:8081/') as response:
+                async with session.get(f'http://localhost:{port}/') as response:
                     if response.status == 200:
                         html_content = await response.text()
                         
@@ -551,9 +558,10 @@ class SSEDiagnostics:
         
         try:
             # Get sample incident data from SSE
+            port = os.environ.get('PORT', '8081')
             sample_incidents = []
             async with aiohttp.ClientSession() as session:
-                async with session.get('http://localhost:8081/api/incidents/stream') as response:
+                async with session.get(f'http://localhost:{port}/api/incidents/stream') as response:
                     if response.status == 200:
                         async for line in response.content:
                             if line:
@@ -641,6 +649,7 @@ class SSEDiagnostics:
         
         try:
             # Test JavaScript file availability
+            port = os.environ.get('PORT', '8081')
             js_files_to_test = [
                 'js/app-railway.js',
                 'js/services/sse-service.js',
@@ -654,7 +663,7 @@ class SSEDiagnostics:
             async with aiohttp.ClientSession() as session:
                 for js_file in js_files_to_test:
                     try:
-                        url = f'http://localhost:8081/{js_file}'
+                        url = f'http://localhost:{port}/{js_file}'
                         async with session.get(url) as response:
                             if response.status == 200:
                                 content = await response.text()
@@ -683,7 +692,7 @@ class SSEDiagnostics:
             css_availability = {}
             for css_file in css_files_to_test:
                 try:
-                    url = f'http://localhost:8081/{css_file}'
+                    url = f'http://localhost:{port}/{css_file}'
                     async with session.get(url) as response:
                         if response.status == 200:
                             content = await response.text()
@@ -754,9 +763,10 @@ class SSEDiagnostics:
         
         try:
             # Get sample incident data and validate rendering requirements
+            port = os.environ.get('PORT', '8081')
             sample_incidents = []
             async with aiohttp.ClientSession() as session:
-                async with session.get('http://localhost:8081/api/incidents/stream') as response:
+                async with session.get(f'http://localhost:{port}/api/incidents/stream') as response:
                     if response.status == 200:
                         async for line in response.content:
                             if line:
