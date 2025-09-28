@@ -48,6 +48,8 @@ class SSEService {
 
             this.eventSource.onerror = (error) => {
                 console.error('❌ SSE error:', error);
+                console.error('❌ EventSource readyState:', this.eventSource?.readyState);
+                console.error('❌ EventSource URL:', this.eventSource?.url);
                 this.isConnected = false;
                 this.notifyConnectionChange(false);
                 this.attemptReconnect();
@@ -66,6 +68,11 @@ class SSEService {
         // For local development
         if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
             return 'http://localhost:8081/api/incidents/stream';
+        }
+        
+        // For file:// protocol (local testing) or production (Railway)
+        if (window.location.protocol === 'file:' || !window.location.host) {
+            return 'https://kalitraf-production.up.railway.app/api/incidents/stream';
         }
         
         // For production (Railway)
@@ -181,6 +188,13 @@ class SSEService {
      */
     onScrapeSummary(handler) {
         this.eventHandlers.onScrapeSummary = handler;
+    }
+
+    /**
+     * Set initial data handler
+     */
+    onInitialData(handler) {
+        this.eventHandlers.onInitialData = handler;
     }
 
     /**

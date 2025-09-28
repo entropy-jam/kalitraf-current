@@ -2,7 +2,7 @@
   "center_code": "INCC",
   "center_name": "Inland",
   "date": "2025-09-28",
-  "total_incidents": 93,
+  "total_incidents": 97,
   "incidents": [
     {
       "id": "0750",
@@ -1460,7 +1460,71 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "0339",
+      "time": "1:15 PM",
+      "type": "Traffic Hazard",
+      "location": "I210 E Wo / Pepper Ave",
+      "area": "I210 E WO PEPPER AVE",
+      "details": "San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0340",
+      "time": "1:17 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Pacific St / Conejo Dr",
+      "area": "",
+      "details": "San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0345",
+      "time": "1:20 PM",
+      "type": "Traffic Hazard",
+      "location": "Tl91 W Eo / Sr71",
+      "area": "TL91 W EO SR71",
+      "details": "Riverside",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Riverside"
+        ]
+      }
+    },
+    {
+      "id": "0012",
+      "time": "1:20 PM",
+      "type": "Traffic Hazard",
+      "location": "Tl91 W Eo / Sr71",
+      "area": "TL91 W EO SR71",
+      "details": "Riverside FSP",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Riverside FSP"
+        ]
+      }
     }
   ],
-  "last_updated": "2025-09-28T15:55:27.801295"
+  "last_updated": "2025-09-28T16:21:01.609880"
 }

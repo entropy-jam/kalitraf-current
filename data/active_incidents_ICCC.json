@@ -1,8 +1,23 @@
 {
   "center_code": "ICCC",
   "center_name": "Indio",
-  "incident_count": 2,
+  "incident_count": 3,
   "incidents": [
+    {
+      "id": "0082",
+      "time": "1:13 PM",
+      "type": "Animal Hazard",
+      "location": "I10 E Eo / 22nd Mm 12",
+      "area": "I10 E EO 22nd MM 12",
+      "details": "San Gorgonio Pass",
+      "center_code": "ICCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
     {
       "id": "0075",
       "time": "1:04 PM",
@@ -34,5 +49,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:06:55.729359"
+  "last_updated": "2025-09-28T16:14:41.385861"
 }

@@ -1,8 +1,53 @@
 {
   "center_code": "BCCC",
   "center_name": "Border",
-  "timestamp": "2025-09-28T16:08:40.246095",
+  "timestamp": "2025-09-28T16:25:55.064293",
   "new_incidents": [
+    {
+      "id": "0544",
+      "time": "1:19 PM",
+      "type": "Traffic Break",
+      "location": "Sr163 S / Washington So",
+      "area": "",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0529",
+      "time": "1:09 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 N / Old Town So",
+      "area": "I5 N OLD TOWN SO",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0528",
+      "time": "1:07 PM",
+      "type": "Traffic Hazard",
+      "location": "I15 S / Carroll Canyon",
+      "area": "",
+      "details": "San Diego",
+      "center_code": "BCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
     {
       "id": "0518",
       "time": "1:07 PM",
@@ -52,8 +97,8 @@
       "id": "0507",
       "time": "1:00 PM",
       "type": "Trfc Collision-Unkn Inj",
-      "location": "I5 N / Tamarack So",
-      "area": "NB 5 JSO TAMARACK",
+      "location": "I5 N / CANNON NO",
+      "area": "",
       "details": "Oceanside",
       "center_code": "BCCC",
       "is_new": true,
@@ -70,21 +115,6 @@
       "location": "I5 S / Las Pulgas No",
       "area": "",
       "details": "Oceanside",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0501",
-      "time": "12:52 PM",
-      "type": "Animal Hazard",
-      "location": "I805 S / Kearny Villa Rd Onr",
-      "area": "KEARNY VILLA RD ONR TO SB 805",
-      "details": "San Diego",
       "center_code": "BCCC",
       "is_new": true,
       "is_relevant": true,
@@ -184,21 +214,6 @@
       }
     },
     {
-      "id": "0298",
-      "time": "10:53 AM",
-      "type": "Report of Fire",
-      "location": "I8 E / El Cajon Blvd (el Cajon)",
-      "area": "",
-      "details": "El Cajon",
-      "center_code": "BCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
       "id": "0270",
       "time": "10:44 AM",
       "type": "JUMPER",
@@ -275,6 +290,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 18,
+  "new_count": 19,
   "removed_count": 0
 }

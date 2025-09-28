@@ -2,7 +2,7 @@
   "center_code": "MYCC",
   "center_name": "Monterey",
   "date": "2025-09-28",
-  "total_incidents": 47,
+  "total_incidents": 48,
   "incidents": [
     {
       "id": "0360",
@@ -708,7 +708,22 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "0172",
+      "time": "1:12 PM",
+      "type": "Provide Traffic Control",
+      "location": "Sr17 / Crescent Dr",
+      "area": "NB AT",
+      "details": "Santa Cruz",
+      "center_code": "MYCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-28T15:56:14.459881"
+  "last_updated": "2025-09-28T16:13:42.999651"
 }

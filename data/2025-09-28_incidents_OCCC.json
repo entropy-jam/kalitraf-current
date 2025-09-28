@@ -2,7 +2,7 @@
   "center_code": "OCCC",
   "center_name": "Orange",
   "date": "2025-09-28",
-  "total_incidents": 52,
+  "total_incidents": 56,
   "incidents": [
     {
       "id": "0703",
@@ -785,7 +785,67 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "0236",
+      "time": "1:07 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Tustin Ranch Rd Trr",
+      "area": "SB 5 JNO TRR",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0237",
+      "time": "1:09 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 S / Yorba Linda Blvd Yl",
+      "area": "SB 57 JNO YL",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0012",
+      "time": "1:11 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr57 S / Yorba Linda Blvd Yl",
+      "area": "SB 57 JNO YL",
+      "details": "Orange County FSP",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0240",
+      "time": "1:10 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr57 S / Yorba Linda Blvd Yl",
+      "area": "SB 57 JNO YL",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-28T16:04:12.230035"
+  "last_updated": "2025-09-28T16:14:29.605437"
 }

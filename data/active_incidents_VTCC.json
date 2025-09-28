@@ -1,38 +1,8 @@
 {
   "center_code": "VTCC",
   "center_name": "Ventura",
-  "incident_count": 3,
+  "incident_count": 1,
   "incidents": [
-    {
-      "id": "0111",
-      "time": "1:01 PM",
-      "type": "Traffic Hazard",
-      "location": "619 Sabado Tarde Rd",
-      "area": "",
-      "details": "Santa Barbara",
-      "center_code": "VTCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0106",
-      "time": "12:45 PM",
-      "type": "Provide Traffic Control",
-      "location": "Sr1 / Sycamore Cove Main Entrance Rd",
-      "area": "",
-      "details": "Ventura",
-      "center_code": "VTCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
     {
       "id": "0039",
       "time": "8:21 AM",
@@ -49,5 +19,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:04:12.234149"
+  "last_updated": "2025-09-28T16:15:57.899178"
 }

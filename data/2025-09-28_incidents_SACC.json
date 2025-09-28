@@ -2,7 +2,7 @@
   "center_code": "SACC",
   "center_name": "Sacramento",
   "date": "2025-09-28",
-  "total_incidents": 93,
+  "total_incidents": 95,
   "incidents": [
     {
       "id": "1043",
@@ -1398,7 +1398,37 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "0508",
+      "time": "1:17 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Stockton Blvd / Gerber Rd",
+      "area": "SB JNO",
+      "details": "South Sac",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0511",
+      "time": "1:16 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "220 Salmon Creek Rd",
+      "area": "LAT/LONG - 35.6684695, -118.3228867",
+      "details": "Grass Valley",
+      "center_code": "SACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-28T16:08:40.253024"
+  "last_updated": "2025-09-28T16:21:59.816130"
 }

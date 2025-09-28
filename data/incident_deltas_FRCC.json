@@ -1,23 +1,8 @@
 {
   "center_code": "FRCC",
   "center_name": "Fresno",
-  "timestamp": "2025-09-28T16:08:40.247633",
+  "timestamp": "2025-09-28T16:25:55.066854",
   "new_incidents": [
-    {
-      "id": "0197",
-      "time": "12:52 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "Sr41 S / North Ave Ofr",
-      "area": "RAPID SHOWING POSS SB 41 OVER NORTH",
-      "details": "Fresno",
-      "center_code": "FRCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
     {
       "id": "0191",
       "time": "12:36 PM",
@@ -47,24 +32,9 @@
         "status": "no_blockage",
         "details": []
       }
-    },
-    {
-      "id": "0174",
-      "time": "12:02 PM",
-      "type": "Live or Dead Animal",
-      "location": "I5 N / Derrick Ave Ofr",
-      "area": "NB 5 JSO DERRICK",
-      "details": "Coalinga",
-      "center_code": "FRCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
     }
   ],
   "removed_incidents": [],
-  "new_count": 4,
+  "new_count": 2,
   "removed_count": 0
 }

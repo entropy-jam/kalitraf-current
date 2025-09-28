@@ -4,11 +4,11 @@
   "incident_count": 3,
   "incidents": [
     {
-      "id": "0037",
-      "time": "12:59 PM",
+      "id": "0039",
+      "time": "1:16 PM",
       "type": "Live or Dead Animal",
-      "location": "I5 N / Bridge Bay Rd Ofr",
-      "area": "NB I5 APPROX 2-3 MILES SO BRIDGE BAY",
+      "location": "I5 S / Sr151 Ofr",
+      "area": "SB JNO, 1/2 MILE",
       "details": "Redding",
       "center_code": "RDCC",
       "is_new": true,
@@ -49,5 +49,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:01:58.105259"
+  "last_updated": "2025-09-28T16:18:58.887252"
 }

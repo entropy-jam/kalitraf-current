@@ -2,7 +2,7 @@
   "center_code": "TKCC",
   "center_name": "Truckee",
   "date": "2025-09-28",
-  "total_incidents": 11,
+  "total_incidents": 13,
   "incidents": [
     {
       "id": "0061",
@@ -168,7 +168,37 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "0042",
+      "time": "1:20 PM",
+      "type": "Animal Hazard",
+      "location": "Us50 / Fairway Ave",
+      "area": "",
+      "details": "TK",
+      "center_code": "TKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0043",
+      "time": "1:19 PM",
+      "type": "Animal Hazard",
+      "location": "Us50 / Fairway Ave",
+      "area": "",
+      "details": "TK",
+      "center_code": "TKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-28T14:57:18.453114"
+  "last_updated": "2025-09-28T16:22:28.802394"
 }

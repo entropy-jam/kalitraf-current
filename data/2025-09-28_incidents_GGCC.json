@@ -2,7 +2,7 @@
   "center_code": "GGCC",
   "center_name": "Golden Gate",
   "date": "2025-09-28",
-  "total_incidents": 163,
+  "total_incidents": 169,
   "incidents": [
     {
       "id": "1692",
@@ -2448,7 +2448,97 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "0744",
+      "time": "1:08 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 N / Petaluma Blvd S Onr",
+      "area": "NB 101 JNO PETALUMA BLVD S",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0753",
+      "time": "1:13 PM",
+      "type": "Traffic Hazard",
+      "location": "Us101 N / Sr37 W Us101 N Con",
+      "area": "NB 101 JSO 37",
+      "details": "Marin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0761",
+      "time": "1:17 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Us101 S / West Railroad Ave",
+      "area": "SB 101 JNO RAILROAD",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0764",
+      "time": "1:16 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "Adobe Rd / Casa Grande Rd",
+      "area": "ADOBE AT CASA GRANDE",
+      "details": "Santa Rosa",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0766",
+      "time": "1:16 PM",
+      "type": "Animal Hazard",
+      "location": "I580 W / North Flynn Rd Ofr",
+      "area": "WB 580 JEO NORTH FLYNN",
+      "details": "Dublin",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0005",
+      "time": "1:21 PM",
+      "type": "Traffic Hazard",
+      "location": "I580 W SR24 E CON / I580 E SR24 E CON",
+      "area": "WB 580 TO EB  24 CON",
+      "details": "Oakland FSP",
+      "center_code": "GGCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-28T16:05:45.856518"
+  "last_updated": "2025-09-28T16:21:59.809120"
 }

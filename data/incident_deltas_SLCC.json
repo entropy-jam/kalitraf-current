@@ -1,8 +1,38 @@
 {
   "center_code": "SLCC",
   "center_name": "San Luis Obispo",
-  "timestamp": "2025-09-28T16:08:40.254137",
+  "timestamp": "2025-09-28T16:25:55.075753",
   "new_incidents": [
+    {
+      "id": "0059",
+      "time": "1:18 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr1 / S Halcyon Rd",
+      "area": "SB SR1 AT LOWER HALCYON",
+      "details": "San Luis Obispo",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0058",
+      "time": "1:17 PM",
+      "type": "Request CalTrans Notify",
+      "location": "Us101 N",
+      "area": "NB AT NIBLICK",
+      "details": "Templeton",
+      "center_code": "SLCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
     {
       "id": "0055",
       "time": "12:50 PM",
@@ -35,6 +65,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 2,
+  "new_count": 4,
   "removed_count": 0
 }

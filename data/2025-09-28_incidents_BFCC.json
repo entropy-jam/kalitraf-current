@@ -2,7 +2,7 @@
   "center_code": "BFCC",
   "center_name": "Bakersfield",
   "date": "2025-09-28",
-  "total_incidents": 36,
+  "total_incidents": 37,
   "incidents": [
     {
       "id": "0267",
@@ -595,7 +595,24 @@
           "Bakersfield"
         ]
       }
+    },
+    {
+      "id": "0121",
+      "time": "1:14 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Iron Oak Dr / Norris Rd",
+      "area": "SB IRON OAK DR AT NORRIS",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
     }
   ],
-  "last_updated": "2025-09-28T16:06:26.638926"
+  "last_updated": "2025-09-28T16:17:42.722211"
 }

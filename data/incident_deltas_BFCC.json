@@ -1,8 +1,25 @@
 {
   "center_code": "BFCC",
   "center_name": "Bakersfield",
-  "timestamp": "2025-09-28T16:08:40.244916",
+  "timestamp": "2025-09-28T16:25:55.062772",
   "new_incidents": [
+    {
+      "id": "0121",
+      "time": "1:14 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Iron Oak Dr / Norris Rd",
+      "area": "SB IRON OAK DR AT NORRIS",
+      "details": "Bakersfield",
+      "center_code": "BFCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Bakersfield"
+        ]
+      }
+    },
     {
       "id": "0115",
       "time": "1:05 PM",
@@ -23,7 +40,7 @@
     {
       "id": "0114",
       "time": "12:59 PM",
-      "type": "Trfc Collision-1141 Enrt",
+      "type": "Trfc Collision-Major Inj",
       "location": "Meacham Rd / Samantha St",
       "area": "",
       "details": "Bakersfield",
@@ -71,6 +88,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 4,
+  "new_count": 5,
   "removed_count": 0
 }

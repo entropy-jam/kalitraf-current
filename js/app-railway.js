@@ -192,6 +192,9 @@ class ConnectionStatusManager {
         const header = document.querySelector('.header');
         if (header) {
             header.insertAdjacentElement('afterend', statusDiv);
+        } else {
+            // If no header found, append to body
+            document.body.appendChild(statusDiv);
         }
 
         return statusDiv;
@@ -199,17 +202,17 @@ class ConnectionStatusManager {
 
     updateStatus(connected, message = null) {
         this.isConnected = connected;
-        const indicator = this.statusElement.querySelector('.status-indicator');
-        const text = this.statusElement.querySelector('.status-text');
+        const indicator = this.statusElement?.querySelector('.status-indicator');
+        const text = this.statusElement?.querySelector('.status-text');
 
         if (connected) {
-            indicator.className = 'status-indicator connected';
-            text.textContent = message || '🟢 Railway Connected';
-            this.statusElement.className = 'connection-status connected';
+            if (indicator) indicator.className = 'status-indicator connected';
+            if (text) text.textContent = message || '🟢 Railway Connected';
+            if (this.statusElement) this.statusElement.className = 'connection-status connected';
         } else {
-            indicator.className = 'status-indicator disconnected';
-            text.textContent = message || '🔴 Disconnected';
-            this.statusElement.className = 'connection-status disconnected';
+            if (indicator) indicator.className = 'status-indicator disconnected';
+            if (text) text.textContent = message || '🔴 Disconnected';
+            if (this.statusElement) this.statusElement.className = 'connection-status disconnected';
         }
     }
 
@@ -232,9 +235,9 @@ class RailwayAppController {
         try {
             console.log('🚀 Initializing Railway CHP Traffic Monitor...');
 
-            // Initialize the app controller with dependency injection
+            // Initialize the app controller with dependency injection (SSE-only)
             const container = new DependencyContainer();
-            DefaultDependencyConfig.configure(container);
+            RailwayDependencyConfig.configure(container);
             this.appController = container.createAppController();
             await this.appController.initialize();
 
@@ -275,11 +278,23 @@ class RailwayAppController {
             this.handleScrapeSummary(data);
         });
 
+        // CRITICAL FIX: Add missing onInitialData handler
+        this.sseService.sseService.onInitialData((data) => {
+            console.log('📊 Railway received initial data:', data);
+            this.handleInitialData(data);
+        });
+
         // Wire up SSE service with incident service
         if (this.appController && this.appController.incidentService) {
             this.appController.incidentService.setSSEService(this.sseService.sseService);
             console.log('📡 SSE service wired to incident service');
         }
+
+        // CRITICAL FIX: Add event listener for incidentDataUpdated events
+        window.addEventListener('incidentDataUpdated', (event) => {
+            console.log('📡 Received incidentDataUpdated event:', event.detail);
+            this.handleIncidentDataUpdated(event.detail);
+        });
 
         // Connect to Railway SSE
         await this.sseService.connect();
@@ -343,6 +358,27 @@ class RailwayAppController {
             /* Railway status container CSS removed */
         `;
         document.head.appendChild(style);
+    }
+
+    handleInitialData(data) {
+        console.log('📊 Handling initial data from SSE:', data);
+        
+        // Process initial data through the realtime service
+        if (this.appController && this.appController.incidentService) {
+            this.appController.incidentService.handleInitialData(data);
+        }
+        
+        // Update connection status to show data is loaded
+        this.connectionManager.updateStatus(true, `🟢 Connected - ${data.centers} centers, ${data.totalIncidents} incidents`);
+    }
+
+    handleIncidentDataUpdated(eventDetail) {
+        console.log('📡 Handling incident data updated event:', eventDetail);
+        
+        // Trigger a refresh of the current center's data
+        if (this.appController && this.appController.incidentService) {
+            this.appController.incidentService.loadIncidents(true);
+        }
     }
 
     handleIncidentUpdate(data) {

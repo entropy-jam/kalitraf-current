@@ -1,15 +1,15 @@
 {
   "center_code": "UKCC",
   "center_name": "Ukiah",
-  "timestamp": "2025-09-28T16:08:40.255175",
+  "timestamp": "2025-09-28T16:23:50.213812",
   "new_incidents": [
     {
-      "id": "0035",
-      "time": "12:38 PM",
-      "type": "Traffic Hazard",
-      "location": "5390 Mm1 N Men R53.90",
-      "area": "ITA OF CB 1 539",
-      "details": "Ukiah",
+      "id": "0038",
+      "time": "1:22 PM",
+      "type": "Report of Fire",
+      "location": "7284-7433 Sr20",
+      "area": "",
+      "details": "Clear Lake",
       "center_code": "UKCC",
       "is_new": true,
       "is_relevant": true,

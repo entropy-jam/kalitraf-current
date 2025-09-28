@@ -2,7 +2,7 @@
   "center_code": "RDCC",
   "center_name": "Redding",
   "date": "2025-09-28",
-  "total_incidents": 12,
+  "total_incidents": 13,
   "incidents": [
     {
       "id": "0115",
@@ -183,7 +183,22 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "0039",
+      "time": "1:16 PM",
+      "type": "Live or Dead Animal",
+      "location": "I5 S / Sr151 Ofr",
+      "area": "SB JNO, 1/2 MILE",
+      "details": "Redding",
+      "center_code": "RDCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-28T16:01:58.105603"
+  "last_updated": "2025-09-28T16:18:58.887605"
 }

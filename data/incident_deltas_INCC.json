@@ -1,15 +1,64 @@
 {
   "center_code": "INCC",
   "center_name": "Inland",
-  "timestamp": "2025-09-28T16:08:40.249259",
+  "timestamp": "2025-09-28T16:25:55.069599",
   "new_incidents": [
     {
-      "id": "0322",
-      "time": "12:51 PM",
-      "type": "Trfc Collision-Unkn Inj",
-      "location": "I15 S / 4th St Rc",
-      "area": "I15 S 4TH ST RC",
-      "details": "Rancho Cucamonga",
+      "id": "0345",
+      "time": "1:20 PM",
+      "type": "Traffic Hazard",
+      "location": "Tl91 W Eo / Sr71",
+      "area": "TL91 W EO SR71",
+      "details": "Riverside",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Riverside"
+        ]
+      }
+    },
+    {
+      "id": "0012",
+      "time": "1:20 PM",
+      "type": "Traffic Hazard",
+      "location": "Tl91 W Eo / Sr71",
+      "area": "TL91 W EO SR71",
+      "details": "Riverside FSP",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "blocking",
+        "details": [
+          "Riverside FSP"
+        ]
+      }
+    },
+    {
+      "id": "0340",
+      "time": "1:17 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Pacific St / Conejo Dr",
+      "area": "",
+      "details": "San Bernardino",
+      "center_code": "INCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0339",
+      "time": "1:15 PM",
+      "type": "Traffic Hazard",
+      "location": "I210 E Wo / Pepper Ave",
+      "area": "I210 E WO PEPPER AVE",
+      "details": "San Bernardino",
       "center_code": "INCC",
       "is_new": true,
       "is_relevant": true,
@@ -35,6 +84,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 2,
+  "new_count": 5,
   "removed_count": 0
 }

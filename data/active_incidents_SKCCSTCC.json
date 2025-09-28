@@ -4,6 +4,21 @@
   "incident_count": 2,
   "incidents": [
     {
+      "id": "0139",
+      "time": "1:17 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "2100-2248 Obyrnes Ferry Rd",
+      "area": "",
+      "details": "San Andreas",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
       "id": "0136",
       "time": "1:05 PM",
       "type": "Trfc Collision-No Inj",
@@ -17,22 +32,7 @@
         "status": "no_blockage",
         "details": []
       }
-    },
-    {
-      "id": "0130",
-      "time": "12:47 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "I205 W / N Macarthur Dr Ofr",
-      "area": "WB JEO",
-      "details": "Tracy",
-      "center_code": "SKCCSTCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
     }
   ],
-  "last_updated": "2025-09-28T16:07:42.312559"
+  "last_updated": "2025-09-28T16:21:13.296216"
 }

@@ -1,15 +1,15 @@
 {
   "center_code": "MYCC",
   "center_name": "Monterey",
-  "timestamp": "2025-09-28T16:08:40.251491",
+  "timestamp": "2025-09-28T16:25:55.072347",
   "new_incidents": [
     {
-      "id": "0165",
-      "time": "12:54 PM",
-      "type": "Traffic Hazard",
-      "location": "Us101 N / Tennant",
-      "area": "NB JSO TENNANT",
-      "details": "Hollister Gilroy",
+      "id": "0172",
+      "time": "1:12 PM",
+      "type": "Provide Traffic Control",
+      "location": "Sr17 / Crescent Dr",
+      "area": "NB AT",
+      "details": "Santa Cruz",
       "center_code": "MYCC",
       "is_new": true,
       "is_relevant": true,
@@ -47,24 +47,9 @@
         "status": "no_blockage",
         "details": []
       }
-    },
-    {
-      "id": "0423",
-      "time": "11:36 PM",
-      "type": "Trfc Collision-Minor Inj",
-      "location": "Old Stage Rd / Potter Rd",
-      "area": "JSO",
-      "details": "Monterey",
-      "center_code": "MYCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
     }
   ],
   "removed_incidents": [],
-  "new_count": 4,
+  "new_count": 3,
   "removed_count": 0
 }

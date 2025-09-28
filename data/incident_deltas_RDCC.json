@@ -1,14 +1,14 @@
 {
   "center_code": "RDCC",
   "center_name": "Redding",
-  "timestamp": "2025-09-28T16:08:40.252298",
+  "timestamp": "2025-09-28T16:25:55.074233",
   "new_incidents": [
     {
-      "id": "0037",
-      "time": "12:59 PM",
+      "id": "0039",
+      "time": "1:16 PM",
       "type": "Live or Dead Animal",
-      "location": "I5 N / Bridge Bay Rd Ofr",
-      "area": "NB I5 APPROX 2-3 MILES SO BRIDGE BAY",
+      "location": "I5 S / Sr151 Ofr",
+      "area": "SB JNO, 1/2 MILE",
       "details": "Redding",
       "center_code": "RDCC",
       "is_new": true,

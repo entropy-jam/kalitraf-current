@@ -95,7 +95,7 @@ class UIController {
             button.classList.remove('loading');
             button.classList.add('error');
             button.textContent = '✗ Failed';
-            this.dataManager.showNotification('Failed to refresh data. Please try again.', 'error');
+            console.error('Failed to refresh data. Please try again.');
             
             // Reset after 2 seconds
             setTimeout(() => {
@@ -117,7 +117,7 @@ class UIController {
         
         if (document.getElementById('autoRefresh').checked) {
             this.autoRefreshInterval = setInterval(() => {
-                this.dataManager.loadData();
+                this.appController.loadData();
             }, 30000); // 30 seconds
         }
     }
@@ -142,14 +142,14 @@ class UIController {
         // Listen for online/offline events
         window.addEventListener('online', () => {
             this.updateOnlineStatus();
-            this.dataManager.showNotification('Connection restored', 'success');
+            console.log('Connection restored');
             // Try to refresh data when back online
-            this.dataManager.loadData();
+            this.appController.loadData();
         });
         
         window.addEventListener('offline', () => {
             this.updateOnlineStatus();
-            this.dataManager.showNotification('You are offline - using cached data', 'info');
+            console.log('You are offline - using cached data');
         });
     }
 
@@ -174,9 +174,7 @@ class UIController {
         if (this.refreshTimeout) {
             clearTimeout(this.refreshTimeout);
         }
-        if (this.dataManager.pendingRequest) {
-            this.dataManager.pendingRequest.abort();
-        }
+        // No pending requests in SSE mode
     }
 }
 

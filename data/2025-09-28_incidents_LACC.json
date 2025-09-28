@@ -2,7 +2,7 @@
   "center_code": "LACC",
   "center_name": "Los Angeles",
   "date": "2025-09-28",
-  "total_incidents": 284,
+  "total_incidents": 292,
   "incidents": [
     {
       "id": "2395",
@@ -4263,7 +4263,127 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "1046",
+      "time": "1:12 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr2 S / Mountain St Ofr",
+      "area": "MOUNTAIN OFR  TO SB 2",
+      "details": "Altadena",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1050",
+      "time": "1:14 PM",
+      "type": "Hit and Run No Injuries",
+      "location": "18409 Colima Rd",
+      "area": "",
+      "details": "Santa Fe Springs",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1057",
+      "time": "1:17 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I110 S / W Rosecrans Ave Ofr",
+      "area": "",
+      "details": "South LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0051",
+      "time": "1:19 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / Lake Hughes Rd Onr",
+      "area": "SB 5 JNO LAKE HUGHES",
+      "details": "LAFSP",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1060",
+      "time": "1:19 PM",
+      "type": "Animal Hazard",
+      "location": "I210 W / Roxford St Ofr",
+      "area": "WB 210 JEO",
+      "details": "Newhall",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1065",
+      "time": "1:20 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Angeles Forest Hwy / Monte Cristo Campground",
+      "area": "2 MI JSO MONTE CRISTO CAMPGROUND",
+      "details": "Antelope Valley",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "0052",
+      "time": "1:22 PM",
+      "type": "Traffic Hazard",
+      "location": "Sr110 S / W Sunset Blvd",
+      "area": "SR110 S / W SUNSET BLVD",
+      "details": "LAFSP",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
+      "id": "1068",
+      "time": "1:21 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "I405 S / I105 E",
+      "area": "SB 405 TRANS TO EB 105",
+      "details": "West LA",
+      "center_code": "LACC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-28T16:05:57.453468"
+  "last_updated": "2025-09-28T16:24:31.087147"
 }

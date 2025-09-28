@@ -4,6 +4,21 @@
   "incident_count": 6,
   "incidents": [
     {
+      "id": "0237",
+      "time": "1:09 PM",
+      "type": "Trfc Collision-1141 Enrt",
+      "location": "Sr57 S / Yorba Linda Blvd Yl",
+      "area": "SB 57 JNO YL",
+      "details": "Santa Ana",
+      "center_code": "OCCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
+    {
       "id": "0234",
       "time": "12:59 PM",
       "type": "Trfc Collision-No Inj",
@@ -24,21 +39,6 @@
       "type": "Traffic Hazard",
       "location": "Sr73 S To / Sr55 S Con",
       "area": "SB 73 TRANS TO SB 55",
-      "details": "Santa Ana",
-      "center_code": "OCCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0213",
-      "time": "12:29 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "Sr57 N / Tonner Canyon Rd",
-      "area": "NB 57 JSO TONNER",
       "details": "Santa Ana",
       "center_code": "OCCC",
       "is_new": true,
@@ -94,5 +94,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T16:04:12.229391"
+  "last_updated": "2025-09-28T16:23:15.293486"
 }

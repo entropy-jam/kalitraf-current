@@ -1,7 +1,7 @@
 {
   "center_code": "SUCC",
   "center_name": "Susanville",
-  "incident_count": 4,
+  "incident_count": 3,
   "incidents": [
     {
       "id": "0020",
@@ -10,21 +10,6 @@
       "location": "36/fredonyer Summit",
       "area": "WB 36 EO Fredonyer Summit",
       "details": "Susanville",
-      "center_code": "SUCC",
-      "is_new": true,
-      "is_relevant": true,
-      "lane_blockage": {
-        "status": "no_blockage",
-        "details": []
-      }
-    },
-    {
-      "id": "0019",
-      "time": "12:13 PM",
-      "type": "Trfc Collision-No Inj",
-      "location": "China Grade Rd / Mount Hough Crystal Lake Rd",
-      "area": "",
-      "details": "Quincy",
       "center_code": "SUCC",
       "is_new": true,
       "is_relevant": true,
@@ -64,5 +49,5 @@
       }
     }
   ],
-  "last_updated": "2025-09-28T15:31:38.029623"
+  "last_updated": "2025-09-28T16:10:13.411170"
 }

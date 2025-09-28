@@ -2,7 +2,7 @@
   "center_code": "SKCCSTCC",
   "center_name": "Stockton",
   "date": "2025-09-28",
-  "total_incidents": 44,
+  "total_incidents": 45,
   "incidents": [
     {
       "id": "0362",
@@ -663,7 +663,22 @@
         "status": "no_blockage",
         "details": []
       }
+    },
+    {
+      "id": "0139",
+      "time": "1:17 PM",
+      "type": "Trfc Collision-Unkn Inj",
+      "location": "2100-2248 Obyrnes Ferry Rd",
+      "area": "",
+      "details": "San Andreas",
+      "center_code": "SKCCSTCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
     }
   ],
-  "last_updated": "2025-09-28T16:07:13.229342"
+  "last_updated": "2025-09-28T16:20:26.080876"
 }

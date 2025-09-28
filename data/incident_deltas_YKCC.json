@@ -1,8 +1,23 @@
 {
   "center_code": "YKCC",
   "center_name": "Yreka",
-  "timestamp": "2025-09-28T16:08:40.255663",
+  "timestamp": "2025-09-28T16:25:55.078258",
   "new_incidents": [
+    {
+      "id": "0028",
+      "time": "1:13 PM",
+      "type": "Traffic Hazard",
+      "location": "I5 S / C Dunsmuir",
+      "area": "EXIT 730 I5 S / C Dunsmuir",
+      "details": "Mount Shasta",
+      "center_code": "YKCC",
+      "is_new": true,
+      "is_relevant": true,
+      "lane_blockage": {
+        "status": "no_blockage",
+        "details": []
+      }
+    },
     {
       "id": "0015",
       "time": "11:53 AM",
@@ -65,6 +80,6 @@
     }
   ],
   "removed_incidents": [],
-  "new_count": 4,
+  "new_count": 5,
   "removed_count": 0
 }

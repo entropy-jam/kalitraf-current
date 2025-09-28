@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple SSE Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .connected { background-color: #d4edda; color: #155724; }
+        .disconnected { background-color: #f8d7da; color: #721c24; }
+        .log { background-color: #f8f9fa; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; white-space: pre-wrap; max-height: 400px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+    <h1>Simple SSE Test</h1>
+    <div id="status" class="status disconnected">Connecting...</div>
+    <div id="log" class="log"></div>
+
+    <script>
+        // Simple SSE test without the full app
+        const log = document.getElementById('log');
+        const status = document.getElementById('status');
+        
+        function addLog(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            log.textContent += `${timestamp}: ${message}\n`;
+            log.scrollTop = log.scrollHeight;
+        }
+
+        addLog('Starting simple SSE test...');
+        addLog('URL: ' + window.location.href);
+        addLog('Protocol: ' + window.location.protocol);
+        
+        // Test direct SSE connection
+        const sseUrl = 'https://kalitraf-production.up.railway.app/api/incidents/stream';
+        addLog('Connecting to: ' + sseUrl);
+        
+        try {
+            const eventSource = new EventSource(sseUrl);
+            
+            eventSource.onopen = () => {
+                addLog('✅ SSE connection opened');
+                status.textContent = 'Connected!';
+                status.className = 'status connected';
+            };
+            
+            eventSource.onmessage = (event) => {
+                try {
+                    const data = JSON.parse(event.data);
+                    addLog('📡 Received: ' + data.type + ' - ' + JSON.stringify(data).substring(0, 100) + '...');
+                    
+                    if (data.type === 'initial_data') {
+                        addLog('✅ Initial data received! Centers: ' + data.data.centers + ', Incidents: ' + data.data.totalIncidents);
+                        status.textContent = `Connected - ${data.data.centers} centers, ${data.data.totalIncidents} incidents`;
+                        status.className = 'status connected';
+                    }
+                } catch (error) {
+                    addLog('❌ Error parsing message: ' + error.message);
+                }
+            };
+            
+            eventSource.onerror = (error) => {
+                addLog('❌ SSE error: ' + error.type);
+                addLog('❌ ReadyState: ' + eventSource.readyState);
+                status.textContent = 'Error: ' + error.type;
+                status.className = 'status disconnected';
+            };
+            
+        } catch (error) {
+            addLog('❌ Failed to create EventSource: ' + error.message);
+            status.textContent = 'Failed: ' + error.message;
+            status.className = 'status disconnected';
+        }
+    </script>
+</body>
+</html>
