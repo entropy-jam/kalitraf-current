@@ -8,9 +8,7 @@
     "scraper": "python src/scrapers/continuous_scraper.py",
     "dev": "python -m http.server 3000"
   },
-  "dependencies": {
-    // WebSocket dependency removed - using SSE only
-  },
+  "dependencies": {},
   "keywords": [
     "chp",
     "traffic",
