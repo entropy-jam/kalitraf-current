@@ -54,17 +54,7 @@ class DependencyContainer {
      * @returns {AppController} Configured AppController
      */
     createAppController() {
-        return new AppController({
-            config: this.get('config'),
-            storage: this.get('storage'),
-            fetcher: this.get('fetcher'),
-            renderer: this.get('renderer'),
-            incidentService: this.get('incidentService'),
-            multiCenterService: this.get('multiCenterService'),
-            deltaService: this.get('deltaService'),
-            filterService: this.get('filterService'),
-            updatesManager: this.get('updatesManager')
-        });
+        return this.get('appController');
     }
 }
 

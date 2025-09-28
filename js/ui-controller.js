@@ -167,6 +167,127 @@ class UIController {
     }
 
     /**
+     * Update incidents display
+     * @param {Object} data - Incident data
+     */
+    updateIncidents(data) {
+        console.log('📡 UIController updating incidents:', data);
+        
+        if (data && data.incidents) {
+            this.displayIncidents(data.incidents, data.center);
+        }
+    }
+
+    /**
+     * Display incidents in the UI
+     * @param {Array} incidents - Array of incidents
+     * @param {string} center - Center code
+     */
+    displayIncidents(incidents, center) {
+        const container = document.getElementById('incidentsContainer');
+        if (!container) {
+            console.error('❌ Incidents container not found');
+            return;
+        }
+
+        if (!incidents || incidents.length === 0) {
+            container.innerHTML = '<div class="loading">No incidents reported at this time.</div>';
+            return;
+        }
+
+        // Use the incident renderer
+        const renderer = new IncidentRenderer();
+        renderer.renderIncidents(incidents, container);
+
+        // Update status
+        this.updateStatus({
+            count: incidents.length,
+            lastUpdated: new Date().toISOString()
+        });
+
+        console.log(`✅ Displayed ${incidents.length} incidents for ${center}`);
+    }
+
+    /**
+     * Refresh display (called by SSE updates)
+     */
+    async refreshDisplay() {
+        console.log('🔄 UIController refreshing display...');
+        
+        if (this.appController && this.appController.incidentService) {
+            try {
+                const data = await this.appController.incidentService.loadIncidents();
+                if (data && data.incidents) {
+                    this.displayIncidents(data.incidents, data.center_code);
+                }
+            } catch (error) {
+                console.error('❌ Error refreshing display:', error);
+            }
+        }
+    }
+
+    /**
+     * Update status display
+     * @param {Object} status - Status information
+     */
+    updateStatus(status) {
+        const countElement = document.getElementById('incidentCount');
+        if (countElement) {
+            countElement.textContent = `${status.count} incidents`;
+        }
+
+        const lastUpdatedElement = document.getElementById('lastUpdated');
+        if (lastUpdatedElement && status.lastUpdated) {
+            lastUpdatedElement.textContent = `Last updated: ${this.formatTimestamp(status.lastUpdated)}`;
+        }
+    }
+
+    /**
+     * Format timestamp for display
+     * @param {string} timestamp - ISO timestamp
+     * @returns {string} Formatted timestamp
+     */
+    formatTimestamp(timestamp) {
+        const date = new Date(timestamp);
+        const timeString = date.toLocaleString("en-US", {
+            timeZone: "America/Los_Angeles",
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        });
+        return `${timeString} PST`;
+    }
+
+    /**
+     * Set current center
+     * @param {string} center - Center code
+     */
+    setCurrentCenter(center) {
+        console.log(`📡 UIController setting current center to ${center}`);
+        
+        if (this.appController && this.appController.incidentService) {
+            this.appController.incidentService.setCurrentCenter(center);
+            // Trigger a refresh to show data for the new center
+            this.refreshDisplay();
+        }
+    }
+
+    /**
+     * Apply filters to incidents
+     * @param {Object} filters - Active filters
+     */
+    applyFilters(filters) {
+        console.log('🔍 UIController applying filters:', filters);
+        // Filter logic would go here
+        // For now, just refresh the display
+        this.refreshDisplay();
+    }
+
+    /**
      * Clean up resources
      */
     destroy() {

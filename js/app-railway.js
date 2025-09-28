@@ -6,9 +6,9 @@
 // Railway SSE configuration
 const RAILWAY_CONFIG = {
   sse: {
-    url: window.location.protocol === 'https:' 
+    url: window.location.protocol === 'https:'
       ? `https://${window.location.host}/api/incidents/stream`
-      : `http://${window.location.hostname}:8081/api/incidents/stream`,
+      : `http://${window.location.hostname}:8082/api/incidents/stream`,
     reconnectInterval: 5000,
     maxReconnectAttempts: 10
   },
@@ -93,7 +93,8 @@ class RailwaySSEService {
             onIncidentUpdate: null,
             onError: null,
             onConnectionChange: null,
-            onScrapeSummary: null
+            onScrapeSummary: null,
+            onInitialData: null
         };
     }
 
@@ -123,6 +124,12 @@ class RailwaySSEService {
             this.sseService.onScrapeSummary((data) => {
                 if (this.eventHandlers.onScrapeSummary) {
                     this.eventHandlers.onScrapeSummary(data);
+                }
+            });
+
+            this.sseService.onInitialData((data) => {
+                if (this.eventHandlers.onInitialData) {
+                    this.eventHandlers.onInitialData(data);
                 }
             });
 
@@ -159,6 +166,10 @@ class RailwaySSEService {
 
     onScrapeSummary(handler) {
         this.eventHandlers.onScrapeSummary = handler;
+    }
+
+    onInitialData(handler) {
+        this.eventHandlers.onInitialData = handler;
     }
 
     disconnect() {
@@ -278,13 +289,13 @@ class RailwayAppController {
             this.handleScrapeSummary(data);
         });
 
-        // CRITICAL FIX: Add missing onInitialData handler
-        this.sseService.sseService.onInitialData((data) => {
+        // CRITICAL FIX: Add missing onInitialData handler (remove double nesting)
+        this.sseService.onInitialData((data) => {
             console.log('📊 Railway received initial data:', data);
             this.handleInitialData(data);
         });
 
-        // Wire up SSE service with incident service
+        // Wire up SSE service with incident service (pass inner SSE service)
         if (this.appController && this.appController.incidentService) {
             this.appController.incidentService.setSSEService(this.sseService.sseService);
             console.log('📡 SSE service wired to incident service');
@@ -294,6 +305,12 @@ class RailwayAppController {
         window.addEventListener('incidentDataUpdated', (event) => {
             console.log('📡 Received incidentDataUpdated event:', event.detail);
             this.handleIncidentDataUpdated(event.detail);
+        });
+
+        // Add event listener for initial data loaded
+        window.addEventListener('initialDataLoaded', (event) => {
+            console.log('📡 Received initialDataLoaded event:', event.detail);
+            this.handleInitialDataLoaded(event.detail);
         });
 
         // Connect to Railway SSE
@@ -362,14 +379,21 @@ class RailwayAppController {
 
     handleInitialData(data) {
         console.log('📊 Handling initial data from SSE:', data);
-        
-        // Process initial data through the realtime service
+
+        // Process initial data through the realtime service - pass data.data to match expected format
         if (this.appController && this.appController.incidentService) {
-            this.appController.incidentService.handleInitialData(data);
+            this.appController.incidentService.handleInitialData(data.data || data);
         }
-        
+
         // Update connection status to show data is loaded
-        this.connectionManager.updateStatus(true, `🟢 Connected - ${data.centers} centers, ${data.totalIncidents} incidents`);
+        const dataInfo = data.data || data;
+        this.connectionManager.updateStatus(true, `🟢 Connected - ${dataInfo.centers} centers, ${dataInfo.totalIncidents} incidents`);
+
+        // Trigger UI update with the initial data
+        if (this.appController && this.appController.uiController) {
+            console.log('📡 Triggering UI update with initial data');
+            this.appController.uiController.refreshDisplay();
+        }
     }
 
     handleIncidentDataUpdated(eventDetail) {
@@ -378,6 +402,16 @@ class RailwayAppController {
         // Trigger a refresh of the current center's data
         if (this.appController && this.appController.incidentService) {
             this.appController.incidentService.loadIncidents(true);
+        }
+    }
+
+    handleInitialDataLoaded(eventDetail) {
+        console.log('📡 Handling initial data loaded event:', eventDetail);
+        
+        // Force a UI refresh to display the initial data
+        if (this.appController && this.appController.uiController) {
+            console.log('📡 Triggering UI refresh after initial data loaded');
+            this.appController.uiController.refreshDisplay();
         }
     }
 

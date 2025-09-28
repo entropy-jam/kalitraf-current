@@ -74,6 +74,18 @@ class SSEServer:
         print(f"📡 [BROADCAST] Completed: {successful_sends} successful, {len(disconnected)} failed")
         print(f"📡 [BROADCAST] Remaining clients: {len(self.clients)}")
     
+    def get_center_name(self, center_code):
+        """Get center name from center code"""
+        center_names = {
+            'BFCC': 'Bakersfield', 'BSCC': 'Barstow', 'BICC': 'Bishop', 'BCCC': 'Border',
+            'CCCC': 'Capitol', 'CHCC': 'Chico', 'ECCC': 'El Centro', 'FRCC': 'Fresno',
+            'GGCC': 'Golden Gate', 'HMCC': 'Humboldt', 'ICCC': 'Indio', 'INCC': 'Inland',
+            'LACC': 'Los Angeles', 'MRCC': 'Merced', 'MYCC': 'Monterey', 'OCCC': 'Orange County',
+            'RDCC': 'Redding', 'SACC': 'Sacramento', 'SLCC': 'San Luis Obispo', 'SKCCSTCC': 'Stockton',
+            'SUCC': 'Susanville', 'TKCC': 'Truckee', 'UKCC': 'Ukiah', 'VTCC': 'Ventura', 'YKCC': 'Yreka'
+        }
+        return center_names.get(center_code, center_code)
+
     async def get_initial_incident_data(self):
         """Get current incident data for new SSE clients"""
         try:
@@ -83,21 +95,29 @@ class SSEServer:
             all_incidents = {}
             total_incidents = 0
             
-            # Data loading disabled for SSE-only implementation
-            # All data comes from SSE, no file loading needed
+            # Load actual incident data from files for initial display
             for center in ['BFCC', 'BSCC', 'BICC', 'BCCC', 'CCCC', 'CHCC', 'ECCC', 'FRCC', 'GGCC', 'HMCC',
                           'ICCC', 'INCC', 'LACC', 'MRCC', 'MYCC', 'OCCC', 'RDCC', 'SACC', 'SLCC', 'SKCCSTCC',
                           'SUCC', 'TKCC', 'UKCC', 'VTCC', 'YKCC']:
-                all_incidents[center] = []
+                try:
+                    # Try to load from active incidents file
+                    data_manager = DataManager(center)
+                    incidents = data_manager.load_previous_incidents()
+                    all_incidents[center] = incidents
+                    total_incidents += len(incidents)
+                    print(f"📊 Loaded {len(incidents)} incidents for {center}")
+                except Exception as e:
+                    print(f"⚠️ Could not load incidents for {center}: {e}")
+                    all_incidents[center] = []
             
-            # Format as initial data message
+            # Format as initial data message with correct structure for frontend
             initial_data = {
                 'type': 'initial_data',
                 'data': {
                     'timestamp': datetime.now().isoformat(),
                     'centers': len(all_incidents),
                     'totalIncidents': total_incidents,
-                    'incidents': all_incidents
+                    'incidents': all_incidents  # Direct access for frontend
                 }
             }
             
@@ -350,8 +370,8 @@ class ContinuousRailwayScraper:
             'VTCC': {'name': 'Ventura', 'channel': 'chp-incidents-vtcc'},
             'YKCC': {'name': 'Yreka', 'channel': 'chp-incidents-ykcc'}
         }
-        # Use Railway's PORT environment variable, fallback to 8081 for local development
-        port = int(os.environ.get('PORT', 8081))
+        # Use Railway's PORT environment variable, fallback to 8082 for local development
+        port = int(os.environ.get('PORT', 8082))
         print(f"🔧 Using port: {port} (from PORT env var: {os.environ.get('PORT', 'not set')})")
         print("🔧 Creating SSEServer...")
         self.sse_server = SSEServer(port=port)

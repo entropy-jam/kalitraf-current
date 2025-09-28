@@ -34,9 +34,9 @@ class IncidentRealtimeService {
      */
     handleInitialData(data) {
         console.log('📊 IncidentRealtimeService received initial data:', data);
-        
-        if (!data.incidents) {
-            console.warn('⚠️  Initial data missing incidents');
+
+        if (!data || !data.incidents) {
+            console.warn('⚠️ Initial data missing incidents', data);
             return;
         }
         
@@ -55,6 +55,7 @@ class IncidentRealtimeService {
             // Store in cache
             const cacheKey = `incidents_${centerCode}`;
             this.dataService.storage.set(cacheKey, cacheData);
+            console.log(`📊 Cached ${centerData.length} incidents for ${centerCode}`);
         });
         
         console.log(`✅ Processed initial data for ${Object.keys(data.incidents).length} centers`);
@@ -64,7 +65,23 @@ class IncidentRealtimeService {
         if (currentCenter && data.incidents[currentCenter]) {
             console.log(`📡 Updating display with initial data for ${currentCenter}`);
             this.triggerDisplayUpdate(currentCenter, data.incidents[currentCenter]);
+        } else {
+            // If no current center, try to set one and update display
+            const firstCenter = Object.keys(data.incidents)[0];
+            if (firstCenter) {
+                console.log(`📡 Setting current center to ${firstCenter} and updating display`);
+                this.dataService.setCurrentCenter(firstCenter);
+                this.triggerDisplayUpdate(firstCenter, data.incidents[firstCenter]);
+            }
         }
+        
+        // Also trigger a general UI refresh to make sure everything updates
+        setTimeout(() => {
+            console.log('📡 Triggering general UI refresh after initial data');
+            window.dispatchEvent(new CustomEvent('initialDataLoaded', {
+                detail: { data: data }
+            }));
+        }, 100);
     }
     
     /**

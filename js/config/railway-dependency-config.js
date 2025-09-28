@@ -60,16 +60,9 @@ class RailwayDependencyConfig {
         // Register incident comparison service
         container.register('incidentComparisonService', () => new IncidentComparisonService(), true);
         
-        // Register UI controller (without multiCenterService - SSE only)
+        // Register UI controller (SSE-only - simplified constructor)
         container.register('uiController', (container) => {
-            return new UIController(
-                container.get('incidentService'),
-                container.get('filterService'),
-                container.get('incidentRenderer'),
-                null, // multiCenterService removed - data comes from SSE
-                container.get('incidentComparisonService'),
-                container.get('config')
-            );
+            return new UIController();
         }, true);
         
         // Register Railway app controller (SSE-only)

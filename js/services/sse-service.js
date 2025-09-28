@@ -76,15 +76,15 @@ class SSEService {
     getSSEUrl() {
         // For local development
         if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-            return 'http://localhost:8081/api/incidents/stream';
+            return 'http://localhost:8082/api/incidents/stream';
         }
         
-        // For file:// protocol (local testing) or production (Railway)
-        if (window.location.protocol === 'file:' || !window.location.host) {
+        // For file:// protocol (local testing)
+        if (window.location.protocol === 'file:') {
             return 'https://kalitraf-production.up.railway.app/api/incidents/stream';
         }
         
-        // For production (Railway)
+        // For production (Railway) - use the current host
         return `${window.location.protocol}//${window.location.host}/api/incidents/stream`;
     }
 
