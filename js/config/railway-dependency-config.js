@@ -8,12 +8,12 @@ class RailwayDependencyConfig {
         console.log('🔧 Configuring Railway dependencies (SSE-only)');
         
         // Register core services (no static file dependencies)
-        container.register('storage', () => new LocalStorage(), true);
+        container.register('storage', () => new LocalStorageAdapter(), true);
         
         container.register('config', () => new ConfigManager(), true);
         
         // Register HTTP fetcher (not used in SSE mode, but required by interface)
-        container.register('httpFetcher', () => new HTTPFetcher(), true);
+        container.register('httpFetcher', () => new HttpFetcher(), true);
         
         // Register incident data service (SSE-only)
         container.register('incidentDataService', (container) => {
