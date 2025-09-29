@@ -426,6 +426,8 @@ class ContinuousRailwayScraper:
         # Use Railway's PORT environment variable, fallback to 8082 for local development
         port = int(os.environ.get('PORT', 8082))
         print(f"🔧 Using port: {port} (from PORT env var: {os.environ.get('PORT', 'not set')})")
+        print(f"🔧 Railway automatically assigns PORT - current value: {port}")
+        print(f"🔧 All environment variables: {dict(os.environ)}")
         print("🔧 Creating SSEServer...")
         self.sse_server = SSEServer(port=port)
         print("✅ SSEServer created")
