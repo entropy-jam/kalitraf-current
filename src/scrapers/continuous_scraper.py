@@ -176,6 +176,13 @@ class SSEServer:
                 # Get the requested file path
                 file_path = request.match_info['path']
                 print(f"📁 Serving static file: {file_path}")
+                print(f"📁 Current working directory: {os.getcwd()}")
+                print(f"📁 Full path: {os.path.join(os.getcwd(), file_path)}")
+
+                # Strip query parameters (like ?v=1.0.2) from file path
+                if '?' in file_path:
+                    file_path = file_path.split('?')[0]
+                    print(f"📁 Cleaned file path (removed query params): {file_path}")
 
                 # Security check - prevent directory traversal
                 if '..' in file_path or file_path.startswith('/'):
@@ -198,9 +205,18 @@ class SSEServer:
                     elif file_path.endswith('.json'):
                         content_type = 'application/json'
 
-                    return web.Response(body=content, content_type=content_type)
+                    # Create response with proper headers
+                    response = web.Response(body=content, content_type=content_type)
+                    # Add cache headers for better performance
+                    response.headers['Cache-Control'] = 'public, max-age=3600'
+                    # Add CORS headers to ensure cross-origin requests work
+                    response.headers['Access-Control-Allow-Origin'] = '*'
+                    response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+                    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+                    return response
                 else:
                     print(f"❌ Static file not found: {full_path}")
+                    print(f"📁 Files in directory: {os.listdir(os.path.dirname(full_path)) if os.path.exists(os.path.dirname(full_path)) else 'directory does not exist'}")
                     return web.Response(text='File not found', status=404)
 
             except Exception as e:
@@ -416,8 +432,16 @@ class ContinuousRailwayScraper:
         self.scrape_interval = 5  # 5-second intervals
         self.is_running = False
         print("🔧 Creating HTTPScraper...")
-        self.http_scraper = HTTPScraper(mode="railway")
-        print("✅ HTTPScraper created")
+        try:
+            self.http_scraper = HTTPScraper(mode="railway")
+            print("✅ HTTPScraper created")
+        except Exception as e:
+            print(f"❌ CRITICAL: Failed to create HTTPScraper: {e}")
+            print(f"❌ Error type: {type(e).__name__}")
+            import traceback
+            print(f"❌ Traceback: {traceback.format_exc()}")
+            raise
+        print("✅ ContinuousRailwayScraper initialization completed successfully")
         
         # Setup logging
         print("🔧 Setting up logging...")
@@ -603,7 +627,7 @@ class ContinuousRailwayScraper:
         print(f"🎯 Centers: {', '.join(self.centers)}")
         print(f"🔧 SSE server object: {self.sse_server}")
         print(f"🔧 SSE server type: {type(self.sse_server)}")
-        
+
         # Start SSE server
         try:
             print("🔧 Starting SSE server...")
@@ -671,12 +695,28 @@ async def main():
     """Main entry point"""
     print("🚀 Starting main() function")
     print("🔧 Creating ContinuousRailwayScraper...")
-    scraper = ContinuousRailwayScraper()
-    print("✅ ContinuousRailwayScraper created")
-    print("🔧 Starting run_forever()...")
-    await scraper.run_forever()
+    try:
+        scraper = ContinuousRailwayScraper()
+        print("✅ ContinuousRailwayScraper created")
+        print("🔧 Starting run_forever()...")
+        await scraper.run_forever()
+    except Exception as e:
+        print(f"❌ CRITICAL ERROR in main(): {e}")
+        print(f"❌ Error type: {type(e).__name__}")
+        import traceback
+        print(f"❌ Traceback: {traceback.format_exc()}")
+        raise
 
 if __name__ == "__main__":
     print("🚀 Script started - __name__ == '__main__'")
     print("🔧 Running asyncio.run(main())...")
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+        print("✅ asyncio.run(main()) completed successfully")
+    except Exception as e:
+        print(f"❌ CRITICAL ERROR in asyncio.run(main()): {e}")
+        print(f"❌ Error type: {type(e).__name__}")
+        import traceback
+        print(f"❌ Traceback: {traceback.format_exc()}")
+        exit(1)
+    print("🎯 Script execution finished")
